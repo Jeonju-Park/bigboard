@@ -37,6 +37,10 @@ jobs:
       - name: 토큰·카피 검사
         run: node scripts/check-tokens.mjs
 
+      # app 과 pipeline 의 types.ts 가 어긋나면 화면이 조용히 깨진다
+      - name: 스키마 일치 검사
+        run: node scripts/check-schema.mjs
+
       - run: npm --prefix app run build
 
       - uses: actions/configure-pages@v5
