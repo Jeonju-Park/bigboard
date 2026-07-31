@@ -1,0 +1,102 @@
+/* 공시 카드 — §5 가 인정하는 **유일한 카드**.
+   조건: ①독립적으로 탭 되는 단위 ②공유/캡처되는 단위 — 둘 다 충족한다.
+   그림자 없음, gray-200 보더 + radius 12px. */
+
+.card {
+  display: block;
+  width: 100%;
+  text-align: start;
+  padding: var(--space-4);
+  border: var(--hairline);
+  border-radius: var(--radius-card);
+  background: var(--surface-card);
+  color: inherit;
+  cursor: pointer;
+  transition: transform var(--motion-press);
+}
+
+.card:hover {
+  text-decoration: none;
+  color: inherit;
+  border-color: var(--gray-300);
+}
+
+.card:active {
+  transform: scale(0.995);
+}
+
+/* 헤더 — 인물·회사 (관련 요소라 8px 이내) */
+.head {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.person {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.company {
+  margin: 0;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.badges {
+  display: flex;
+  gap: var(--space-1);
+  margin-inline-start: auto;
+  flex-shrink: 0;
+}
+
+/* 방향 태그 — 시맨틱 색은 숫자·태그에만 (§2). 배경 면으로 쓰지 않는다 */
+.direction {
+  font-weight: 600;
+}
+
+.buy {
+  color: var(--semantic-buy);
+}
+
+.sell {
+  color: var(--semantic-sell);
+}
+
+.flag {
+  border: var(--hairline);
+  border-radius: var(--radius-chip);
+  padding: 0 var(--space-2);
+  color: var(--text-caption);
+  white-space: nowrap;
+}
+
+/* 거래 요약 줄 — 단가 x 수량 = 총액 */
+.trade {
+  margin: var(--space-3) 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-1) var(--space-2);
+}
+
+.amount {
+  margin-inline-start: auto;
+}
+
+.meta {
+  margin: var(--space-2) 0 0;
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+/* micro 자막 — 위트가 허용되는 유일한 레이어 (§3 L5) */
+.micro {
+  margin: var(--space-2) 0 0;
+}

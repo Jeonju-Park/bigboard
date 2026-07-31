@@ -1,0 +1,140 @@
+/* 리스트 행들 — borderless 기본. 구분은 헤어라인과 여백으로만 (§5 "카드를 줄이고 지면처럼") */
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+  min-height: var(--touch-min);
+  padding-block: var(--space-3);
+  border: 0;
+  border-bottom: var(--hairline);
+  background: none;
+  color: inherit;
+  text-align: start;
+  cursor: pointer;
+}
+
+.row:last-child {
+  border-bottom: 0;
+}
+
+.row:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.grow {
+  flex: 1;
+  min-width: 0;
+}
+
+.ellipsis {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 인물 유형 배지 — 내부자 / 공직자 */
+.badge {
+  flex: none;
+  border: var(--hairline);
+  border-radius: var(--radius-chip);
+  padding: 0 var(--space-2);
+  color: var(--text-caption);
+}
+
+/* ── RankingRow — 레이스 바 ── */
+.rankRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding-block: var(--space-3);
+  border-bottom: var(--hairline);
+}
+
+.rankNo {
+  flex: none;
+  width: var(--space-6);
+  text-align: end;
+}
+
+/* 1~3위는 weight 700 */
+.rankTop {
+  font-weight: 700;
+}
+
+.raceWrap {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.raceTrack {
+  height: var(--space-2);
+  background: var(--gray-100);
+  border-radius: var(--radius-chip);
+  overflow: hidden;
+}
+
+/* 1위는 coral-300(데이터 전용), 2위 이하 gray-300.
+   coral-500 은 매수 레드와 dE 18.7 로 뭉쳐서 데이터 그래픽에 쓰지 않는다(§2). */
+.raceBar {
+  height: 100%;
+  border-radius: var(--radius-chip);
+  background: var(--gray-300);
+  transform-origin: left center;
+  transition: width var(--motion-race);
+}
+
+.raceBarFirst {
+  background: var(--brand-data);
+}
+
+/* ── FollowChip ── */
+.followChip {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  min-height: var(--touch-min);
+  padding-inline: var(--space-3);
+  border: var(--hairline);
+  border-radius: var(--radius-chip);
+  background: var(--bg-primary);
+  color: var(--ink);
+  cursor: pointer;
+  transition: transform var(--motion-press);
+}
+
+.followChip:active {
+  transform: scale(0.97);
+}
+
+.followChip[aria-pressed='true'] {
+  background: var(--brand-surface);
+  border-color: var(--brand-surface);
+  color: var(--on-brand);
+  font-weight: 600;
+}
+
+/* ── StockInfoList — 값이 null 인 행은 아예 렌더하지 않는다 ── */
+.infoList {
+  margin: 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-2) var(--space-4);
+}
+
+.infoTerm {
+  margin: 0;
+  color: var(--text-caption);
+}
+
+.infoValue {
+  margin: 0;
+  text-align: end;
+}

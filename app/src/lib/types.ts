@@ -5,6 +5,7 @@
  * 이 파일과 pipeline 의 출력이 어긋나면 화면이 조용히 깨지므로,
  * pipeline 쪽 변환 로직을 고칠 때 반드시 여기도 같이 고친다.
  *
+ * ⚠️ 이 파일은 pipeline/src/types.ts 와 **같은 모양**이어야 한다. 한쪽만 고치면 화면이 조용히 깨진다.
  * ⚠️ 실명 공시 데이터다. 가공·추정값을 넣지 않는다 — 원문 그대로 + dartUrl 원문 링크가 원칙.
  *    확보되지 않는 값은 임의 채우기 대신 null 로 두고 화면에서 행을 숨긴다.
  */
@@ -77,20 +78,24 @@ export interface Sparkline {
   y1: number[]
 }
 
+/**
+ * 시세 항목은 전부 nullable 이다.
+ * 공공데이터포털 키가 없는 동안 pipeline 이 null 을 채우며, 화면은 **해당 행을 숨긴다**.
+ * 0 이나 '-' 로 대체하지 않는다(규칙 2 데이터 정직성).
+ */
 export interface Stock {
   code: string
   name: string
-  prevClose: number
+  prevClose: number | null
   /** 전일 대비 등락률(%) */
-  change: number
-  marketCap: number
-  volume: number
-  /** 공공 소스로 확보되지 않으면 null — 화면에서 해당 행을 숨긴다 */
+  change: number | null
+  marketCap: number | null
+  volume: number | null
   per: number | null
   pbr: number | null
   divYield: number | null
-  high52: number
-  low52: number
+  high52: number | null
+  low52: number | null
   sparkline: Sparkline
 }
 
@@ -124,4 +129,8 @@ export interface Meta {
     persons: number
     stocks: number
   }
+  /** 시세 소스 연결 여부 — 화면이 "준비 중"을 정직하게 표시할 수 있게 한다 */
+  priceDataAvailable: boolean
+  /** 수집 시 건너뛴 건수와 사유 — 조용한 누락을 만들지 않는다 */
+  skipped: { total: number; reasons: Record<string, number> }
 }

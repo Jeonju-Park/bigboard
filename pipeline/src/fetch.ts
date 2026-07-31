@@ -139,7 +139,15 @@ function buildFromOwnership(item: DartListItem, xml: string, ele?: ElestockItem)
     return null
   }
   const direction: Direction = signedQty > 0 ? 'buy' : 'sell'
-  if (sawBuyRow && sawSellRow) mixedReports++
+
+  // 매수·매도가 한 보고서에 섞이면 quantity(순증감)와 totalAmount(총 거래대금)의 단위가 어긋난다.
+  // 예: 순증감 55,530주인데 총액 1,774억 → 주당 320만원처럼 읽힌다.
+  // 이런 건은 대표 금액·단가를 만들지 않고 null 로 두고, 화면이 세부변동내역을 보여준다.
+  const isMixed = sawBuyRow && sawSellRow
+  if (isMixed) {
+    mixedReports++
+    totalAmount = null
+  }
 
   const totalRow = rows.find((r) => 'AFR_STK_SUM' in r)
   const holdingAfter = num(totalRow?.AFR_STK_SUM) ?? num(dataRows.at(-1)!.AFR_STK_CNT) ?? 0
@@ -147,7 +155,7 @@ function buildFromOwnership(item: DartListItem, xml: string, ele?: ElestockItem)
 
   // 단가는 모든 행이 같은 값일 때만 확정값으로 쓴다.
   // 여러 단가가 섞이면 평균을 만들어내지 않고 null 로 두고 화면이 세부내역을 보여준다.
-  const unitPrice = prices.size === 1 ? [...prices][0] : null
+  const unitPrice = !isMixed && prices.size === 1 ? [...prices][0] : null
 
   // elestock 요약과 교차검증 — 어긋나면 로그만 남기고 원문 값을 신뢰한다
   if (ele) {

@@ -18,7 +18,9 @@ export default function TabBar() {
         <NavLink key={tab.to} to={tab.to} className={styles.tab}>
           {({ isActive }) => (
             <>
-              <Icon name={tab.icon} filled={isActive} />
+              <span className={styles.iconSlot}>
+                <Icon name={tab.icon} size="sm" filled={isActive} />
+              </span>
               <span className={styles.label}>{tab.label}</span>
             </>
           )}

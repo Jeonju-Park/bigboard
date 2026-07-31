@@ -13,6 +13,7 @@ import StockScreen from '@/screens/StockScreen'
 import LandingScreen from '@/screens/LandingScreen'
 import OnboardingScreen from '@/screens/OnboardingScreen'
 import NotFoundScreen from '@/screens/NotFoundScreen'
+import DevGalleryScreen from '@/screens/DevGalleryScreen'
 
 /**
  * 라우트 진입점.
@@ -59,6 +60,9 @@ export default function App() {
           <Route path="/feed/:id" element={<FeedDetailScreen />} />
           <Route path="/person/:id" element={<PersonScreen />} />
           <Route path="/stock/:code" element={<StockScreen />} />
+
+          {/* 개발용 — 탭에 노출하지 않는다 */}
+          <Route path="/dev-gallery" element={<DevGalleryScreen />} />
 
           <Route path="*" element={<NotFoundScreen />} />
         </Routes>

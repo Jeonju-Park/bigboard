@@ -1,0 +1,90 @@
+/* 섹션 헤더 · 신선도 라벨 · 상태 4종 (§7) */
+
+.sectionHeader {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.sectionTitle {
+  margin: 0;
+}
+
+.sectionNote {
+  margin: 0;
+  margin-inline-start: auto;
+}
+
+/* 신선도 라벨 — 모든 데이터 블록에 기준시점을 붙인다 (규칙 2) */
+.freshness {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--text-caption);
+}
+
+.stale {
+  color: var(--semantic-sell);
+}
+
+/* 상태 화면 */
+.state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  padding-block: var(--space-12);
+  text-align: center;
+}
+
+.stateIcon {
+  color: var(--icon-muted);
+}
+
+.stateText {
+  margin: 0;
+}
+
+/* 스켈레톤 — 애니메이션은 미약하게 (§7). 일괄 fade-in 은 금지(§8) */
+.skeletonList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.skeletonCard {
+  border: var(--hairline);
+  border-radius: var(--radius-card);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.bar {
+  height: var(--space-3);
+  border-radius: var(--radius-field);
+  background: var(--gray-100);
+  animation: pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}
+
+/* 지연 배너 — meta.lastUpdated 가 오래됐을 때 */
+.banner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-field);
+}

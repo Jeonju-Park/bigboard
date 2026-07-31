@@ -320,6 +320,10 @@ export const layout = {
   gapSection: '40px',
   /** 모바일 뷰포트 최대폭 — 이보다 넓으면 중앙 정렬하고 바깥은 bg-secondary */
   appMaxWidth: '480px',
+  /** 활성 상태 표시선 두께 — 세그먼트 탭 밑줄, 온보딩 진행바, 예고 배너 좌측 바 */
+  underlineActive: '2px',
+  /** 예고·강조 블록의 좌측 바 (IA: 캘린더·예고 배너의 4px ink 바) */
+  accentBar: '4px',
 } as const
 
 /**
@@ -422,6 +426,8 @@ export const cssVariables: Record<string, string> = {
   '--gap-group': layout.gapGroup,
   '--gap-section': layout.gapSection,
   '--app-max-width': layout.appMaxWidth,
+  '--underline-active': layout.underlineActive,
+  '--accent-bar': layout.accentBar,
 
   '--icon-size-sm': iconSize.sm,
   '--icon-size-md': iconSize.md,
