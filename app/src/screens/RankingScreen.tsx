@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import Screen from '@/shared/components/Screen'
-import DevStateToggle from '@/shared/components/DevStateToggle'
 import { SegmentTab, FilterChips } from '@/shared/components/Controls'
 import { RankingRow } from '@/shared/components/Rows'
 import {
@@ -12,7 +11,7 @@ import {
   SectionHeader,
 } from '@/shared/components/Feedback'
 import { getMeta, getRankings } from '@/lib/data'
-import { useAsync, useForcedState } from '@/lib/useData'
+import { useAsync } from '@/lib/useData'
 import type { RankingKind, RankingPeriod } from '@/lib/types'
 import styles from './HomeScreen.module.css'
 
@@ -34,7 +33,6 @@ const PERIODS = [
  * 단가가 없어 금액을 모르는 공시는 집계에서 제외했다 — 0 으로 넣으면 순위가 거짓이 된다.
  */
 export default function RankingScreen() {
-  const [forced, setForced] = useForcedState()
   const [kind, setKind] = useState<RankingKind>('netBuy')
   const [period, setPeriod] = useState<RankingPeriod>('30')
 
@@ -43,13 +41,13 @@ export default function RankingScreen() {
     return { rankings, meta }
   })
 
-  const effectiveState = forced === 'loading' ? 'loading' : forced === 'error' ? 'error' : state
+  const effectiveState = state
   const entries = data ? (data.rankings[kind][period] ?? []) : []
-  const isEmpty = forced === 'empty' || (effectiveState === 'ready' && entries.length === 0)
+  const isEmpty = effectiveState === 'ready' && entries.length === 0
   const max = entries[0]?.amount ?? 0
 
   return (
-    <Screen title="랭킹" actions={<DevStateToggle value={forced} onChange={setForced} />}>
+    <Screen title="랭킹" tight>
       <div className={styles.controls}>
         <SegmentTab label="랭킹 종류" options={KINDS} value={kind} onChange={setKind} />
         <FilterChips label="집계 기간" options={PERIODS} selected={[period]} onToggle={setPeriod} />

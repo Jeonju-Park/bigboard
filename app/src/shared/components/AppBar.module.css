@@ -1,4 +1,4 @@
-/* 앱바 — 플로우 레이아웃 + sticky. absolute 금지(§4)이므로 position:absolute 를 쓰지 않는다.
+/* 앱바(GNB) — 전 화면 높이 56pt 고정. absolute 금지(§4)라 sticky 로 붙인다.
    그림자 대신 헤어라인으로 경계를 만든다(§5 그림자 금지). */
 
 .bar {
@@ -8,42 +8,69 @@
   display: flex;
   align-items: center;
   gap: var(--space-2);
-  min-height: var(--touch-min);
+  height: var(--appbar-height);
   padding-inline: var(--gutter-screen);
-  padding-block: var(--space-3);
-  /* 노치·상태바 영역 확보 */
-  padding-top: calc(var(--space-3) + env(safe-area-inset-top));
+  /* 노치·상태바 영역은 56pt 위에 더한다 */
+  padding-top: env(safe-area-inset-top);
+  box-sizing: content-box;
   background: var(--bg-primary);
   border-bottom: var(--hairline);
 }
 
-.back {
+/* 아이콘 버튼(뒤로가기·검색·설정) — 좌우 거터와 시각 정렬되도록 안쪽 여백만큼 당긴다 */
+.iconButton {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-width: var(--touch-min);
   min-height: var(--touch-min);
-  /* 좌측 거터와 시각 정렬 — 아이콘 버튼의 내부 여백만큼 당긴다 */
-  margin-inline-start: calc(var(--space-3) * -1);
   border: 0;
   background: none;
   color: var(--icon-default);
   cursor: pointer;
+  text-decoration: none;
+  flex: none;
 }
 
-.back:active {
+.iconButton:hover {
+  color: var(--icon-default);
+  text-decoration: none;
+}
+
+.iconButton:active {
   color: var(--interactive-pressed);
+}
+
+.leading {
+  margin-inline-start: calc(var(--space-3) * -1);
+}
+
+.trailing {
+  margin-inline-end: calc(var(--space-3) * -1);
 }
 
 .title {
   margin: 0;
-  /* 긴 제목이 앱바를 밀어내지 않게 */
   min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
+/* 로고를 제목 자리에 놓을 때 — 세로 중앙 정렬만 담당 */
+.logo {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
 .spacer {
   flex: 1;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  flex: none;
 }

@@ -154,6 +154,8 @@ export const fontSize = {
   display: '24px',
   /** 문장 밖으로 '승격'된 값 전용 (§3) — 예: 총액을 별도 줄에 */
   promote: '22px',
+  /** 리스트에서 '그 행의 주인공'인 금액 (§3 최대 24px 안에서 가장 큰 단계) */
+  amount: '19px',
 } as const
 
 export const fontWeight = {
@@ -270,6 +272,19 @@ export const textStyle = {
     lineHeight: lineHeight.numeric,
     letterSpacing: '-0.02em',
   },
+  /**
+   * 리스트 행·카드의 주인공 금액. Numeric 700 + ink.
+   * 카드에서 사용자가 가장 먼저 찾는 값이 금액인데 본문과 같은 크기라
+   * 위계가 없어 보였다. 승격(22px)보다 한 단계 작게 두어 상세와 구분한다.
+   */
+  amount: {
+    fontFamily: font.numeric,
+    fontSize: fontSize.amount,
+    fontWeight: fontWeight.bold,
+    color: ink,
+    lineHeight: lineHeight.numeric,
+    letterSpacing: '-0.02em',
+  },
   /** 더 강조할 값은 문장 안에서 키우지 말고 **문장 밖으로 승격**시킨다 (§3) */
   promote: {
     fontFamily: font.numeric,
@@ -320,8 +335,12 @@ export const layout = {
   gapSection: '40px',
   /** 모바일 뷰포트 최대폭 — 이보다 넓으면 중앙 정렬하고 바깥은 bg-secondary */
   appMaxWidth: '480px',
-  /** 활성 상태 표시선 두께 — 세그먼트 탭 밑줄, 온보딩 진행바, 예고 배너 좌측 바 */
+  /** 활성 상태 표시선 두께 — 세그먼트 탭 밑줄, 온보딩 진행바 */
   underlineActive: '2px',
+  /** 앱바(GNB) 높이 — 전 화면 통일. safe-area 는 이 위에 더해진다 */
+  appBarHeight: '56px',
+  /** 리스트 행 최소 높이 — 캘린더 예고 행처럼 시원하게 보여야 하는 곳 */
+  rowTall: '80px',
   /** 예고·강조 블록의 좌측 바 (IA: 캘린더·예고 배너의 4px ink 바) */
   accentBar: '4px',
 } as const
@@ -426,6 +445,8 @@ export const cssVariables: Record<string, string> = {
   '--gap-group': layout.gapGroup,
   '--gap-section': layout.gapSection,
   '--app-max-width': layout.appMaxWidth,
+  '--appbar-height': layout.appBarHeight,
+  '--row-tall': layout.rowTall,
   '--underline-active': layout.underlineActive,
   '--accent-bar': layout.accentBar,
 

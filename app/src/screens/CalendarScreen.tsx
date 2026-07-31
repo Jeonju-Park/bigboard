@@ -1,7 +1,6 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router'
 import Screen from '@/shared/components/Screen'
-import DevStateToggle from '@/shared/components/DevStateToggle'
 import { Num } from '@/shared/components/Num'
 import {
   Disclaimer,
@@ -12,7 +11,7 @@ import {
   SectionHeader,
 } from '@/shared/components/Feedback'
 import { getDisclosures, getMeta } from '@/lib/data'
-import { useAsync, useForcedState } from '@/lib/useData'
+import { useAsync } from '@/lib/useData'
 import { formatAmountShort, formatDate } from '@/lib/format'
 import homeStyles from './HomeScreen.module.css'
 import styles from './CalendarScreen.module.css'
@@ -24,7 +23,6 @@ const WEEKDAYS = ['일', '월', '화', '수', '목', '금', '토']
  * 예고 = 거래계획 사전공시(isPlanned). 좌측 4px ink 바로 구분한다(IA).
  */
 export default function CalendarScreen() {
-  const [forced, setForced] = useForcedState()
   const [selected, setSelected] = useState<string | null>(null)
 
   const { state, data, error, retry } = useAsync(async () => {
@@ -53,11 +51,11 @@ export default function CalendarScreen() {
   }, [planned])
 
   const list = selected ? planned.filter((p) => p.tradeDate === selected) : planned
-  const effectiveState = forced === 'loading' ? 'loading' : forced === 'error' ? 'error' : state
-  const isEmpty = forced === 'empty' || (effectiveState === 'ready' && list.length === 0)
+  const effectiveState = state
+  const isEmpty = effectiveState === 'ready' && list.length === 0
 
   return (
-    <Screen title="캘린더" actions={<DevStateToggle value={forced} onChange={setForced} />}>
+    <Screen title="캘린더" tight>
       <div className={styles.strip} role="group" aria-label="예고 날짜 선택">
         {days.map((d) => (
           <button

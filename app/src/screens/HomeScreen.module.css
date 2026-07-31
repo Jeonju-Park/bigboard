@@ -6,6 +6,27 @@
   gap: var(--space-3);
 }
 
+/* 기간 드롭다운 + 토글 칩이 한 줄에 나란히 스크롤된다 */
+.chipRow {
+  display: flex;
+  gap: var(--space-2);
+  overflow-x: auto;
+  padding-inline: var(--gutter-screen);
+  margin-inline: calc(var(--gutter-screen) * -1);
+  scrollbar-width: none;
+}
+
+.chipRow::-webkit-scrollbar {
+  display: none;
+}
+
+/* 정렬 바 + 그룹들을 한 덩어리로 묶어 섹션 간격이 중복되지 않게 한다 */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-group);
+}
+
 .group {
   display: flex;
   flex-direction: column;

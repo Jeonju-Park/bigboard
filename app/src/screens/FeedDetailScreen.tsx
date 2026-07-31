@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link, useParams } from 'react-router'
 import Screen from '@/shared/components/Screen'
-import DevStateToggle from '@/shared/components/DevStateToggle'
 import { Button } from '@/shared/components/Controls'
 import { FollowChip, StockInfoList } from '@/shared/components/Rows'
 import { Emph, Promote } from '@/shared/components/Num'
@@ -15,7 +14,7 @@ import {
 } from '@/shared/components/Feedback'
 import Icon from '@/shared/components/Icon'
 import { getDisclosures, getMeta, getStocks } from '@/lib/data'
-import { useAsync, useForcedState } from '@/lib/useData'
+import { useAsync } from '@/lib/useData'
 import { BROKERS, pushRecent, toggleFollowPerson, useBroker, useFollowedPersons } from '@/lib/follow'
 import { personKey } from '@/lib/keys'
 import {
@@ -36,7 +35,6 @@ import styles from './FeedDetailScreen.module.css'
  */
 export default function FeedDetailScreen() {
   const { id } = useParams()
-  const [forced, setForced] = useForcedState()
   const [openDetails, setOpenDetails] = useState(false)
   const followed = useFollowedPersons()
   const brokerId = useBroker()
@@ -67,25 +65,25 @@ export default function FeedDetailScreen() {
     if (d) pushRecent({ kind: 'stock', id: d.stockCode, label: d.company })
   }, [d])
 
-  const effectiveState = forced === 'loading' ? 'loading' : forced === 'error' ? 'error' : state
+  const effectiveState = state
 
   if (effectiveState === 'loading') {
     return (
-      <Screen title="공시 상세" showBack actions={<DevStateToggle value={forced} onChange={setForced} />}>
+      <Screen title="공시 상세" showBack>
         <LoadingState rows={3} />
       </Screen>
     )
   }
   if (effectiveState === 'error') {
     return (
-      <Screen title="공시 상세" showBack actions={<DevStateToggle value={forced} onChange={setForced} />}>
+      <Screen title="공시 상세" showBack>
         <ErrorState message={error?.message} onRetry={retry} />
       </Screen>
     )
   }
-  if (!d || forced === 'empty') {
+  if (!d) {
     return (
-      <Screen title="공시 상세" showBack actions={<DevStateToggle value={forced} onChange={setForced} />}>
+      <Screen title="공시 상세" showBack>
         <EmptyState
           icon="search_off"
           title="이 공시를 찾을 수 없습니다"
@@ -102,7 +100,7 @@ export default function FeedDetailScreen() {
   const broker = BROKERS.find((b) => b.id === brokerId) ?? BROKERS[0]
 
   return (
-    <Screen title="공시 상세" showBack actions={<DevStateToggle value={forced} onChange={setForced} />}>
+    <Screen title="공시 상세" showBack>
       {/* ⑥ 예고 배너 — 해당 건일 때만, 좌측 4px ink 바 */}
       {d.isPlanned && (
         <div className={styles.banner}>

@@ -1,4 +1,4 @@
-/* 화면 공통 골격. 스크롤 영역은 여기 하나뿐이라 sticky 앱바/탭바가 예측 가능하게 동작한다. */
+/* 화면 공통 골격. 스크롤 영역이 여기 하나뿐이라 sticky 앱바/탭바가 예측 가능하게 동작한다. */
 
 .main {
   flex: 1;
@@ -6,12 +6,13 @@
   padding-block: var(--space-6);
   display: flex;
   flex-direction: column;
-  gap: var(--gap-group);
+  gap: var(--gap-section);
 }
 
-/* STEP 1 뼈대 전용 자리표시 — STEP 4 에서 실제 내용으로 교체된다 */
-.placeholder {
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap-intra);
+/*
+ * 세그먼트 탭·날짜 스트립이 본문 맨 위에 오는 화면(홈·랭킹·캘린더).
+ * 그 컨트롤들이 이미 자체 여백을 갖고 있어 24 를 그대로 두면 헤더와 뜬다.
+ */
+.tight {
+  padding-block-start: var(--space-2);
 }

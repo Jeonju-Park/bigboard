@@ -1,6 +1,9 @@
 /* 하단 탭 — sticky(플로우)로 붙인다. absolute·fixed 금지(§4).
-   활성 표시는 **coral 면 위 ink 아이콘**이다(디자인 시스템 ICONOGRAPHY).
-   coral 을 아이콘·텍스트 색으로 직접 쓰면 흰 배경 위 대비 2.68 이라 WCAG 1.4.11 위반이다. */
+ *
+ * 활성 표시는 **아이콘 채움(FILL 1) + 두께(wght 600) + ink 색**으로만 준다.
+ * coral 면(pill)을 쓰면 작은 영역에 브랜드색이 반복돼 12% 면적 예산을 잡아먹고,
+ * 다섯 칸 중 하나만 색이 튀어 위계가 아니라 장식처럼 읽힌다.
+ */
 
 .bar {
   position: sticky;
@@ -24,9 +27,11 @@
   padding-block: var(--space-2);
   border: 0;
   background: none;
+  /* 비활성 — 흐린 회색 아이콘 */
   color: var(--icon-muted);
   text-decoration: none;
   cursor: pointer;
+  transition: color var(--motion-press);
 }
 
 .tab:hover {
@@ -34,23 +39,16 @@
   color: var(--icon-muted);
 }
 
-/* coral '면' — 아이콘을 감싸는 pill. 그 위 아이콘은 ink(on-brand) */
-.iconSlot {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: var(--space-1) var(--space-4);
-  border-radius: var(--radius-chip);
-  transition: background var(--motion-press);
+/* 활성 — ink 색 + 아이콘 채움(TSX 의 filled) + 굵은 획 */
+.tab[aria-current='page'] {
+  color: var(--ink);
 }
 
-.tab[aria-current='page'] .iconSlot {
-  background: var(--brand-surface);
-  color: var(--on-brand);
+.tab[aria-current='page'] .icon {
+  font-variation-settings: 'FILL' 1, 'wght' 600, 'GRAD' 0, 'opsz' 24;
 }
 
 .tab[aria-current='page'] .label {
-  color: var(--ink);
   font-weight: 600;
 }
 

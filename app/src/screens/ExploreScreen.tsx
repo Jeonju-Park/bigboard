@@ -1,7 +1,6 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router'
 import Screen from '@/shared/components/Screen'
-import DevStateToggle from '@/shared/components/DevStateToggle'
 import { FilterChips } from '@/shared/components/Controls'
 import { FollowChip, PersonRow } from '@/shared/components/Rows'
 import { Num } from '@/shared/components/Num'
@@ -15,7 +14,7 @@ import {
 } from '@/shared/components/Feedback'
 import Icon from '@/shared/components/Icon'
 import { getMeta, getPersons, getStocks } from '@/lib/data'
-import { useAsync, useForcedState } from '@/lib/useData'
+import { useAsync } from '@/lib/useData'
 import { toggleFollowPerson, useFollowedPersons, useRecent } from '@/lib/follow'
 import { formatAmountShort } from '@/lib/format'
 import homeStyles from './HomeScreen.module.css'
@@ -30,7 +29,6 @@ type TypeFilter = (typeof TYPES)[number]['value']
 
 /** S5 탐색 — 통합검색(클라이언트 필터) + 인기 큰손 + 최근 본 항목 */
 export default function ExploreScreen() {
-  const [forced, setForced] = useForcedState()
   const [q, setQ] = useState('')
   const [type, setType] = useState<TypeFilter>('all')
 
@@ -65,12 +63,12 @@ export default function ExploreScreen() {
       .slice(0, 20)
   }, [data, type])
 
-  const effectiveState = forced === 'loading' ? 'loading' : forced === 'error' ? 'error' : state
+  const effectiveState = state
   const noResults = query && results && results.persons.length === 0 && results.stocks.length === 0
-  const isEmpty = forced === 'empty' || (effectiveState === 'ready' && !query && popular.length === 0)
+  const isEmpty = effectiveState === 'ready' && !query && popular.length === 0
 
   return (
-    <Screen title="탐색" actions={<DevStateToggle value={forced} onChange={setForced} />}>
+    <Screen title="탐색">
       <label className={styles.search}>
         <Icon name="search" size="sm" />
         <input

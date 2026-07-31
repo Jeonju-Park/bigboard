@@ -1,7 +1,6 @@
 import { useEffect, useMemo } from 'react'
 import { Link, useParams } from 'react-router'
 import Screen from '@/shared/components/Screen'
-import DevStateToggle from '@/shared/components/DevStateToggle'
 import DisclosureCard from '@/shared/components/DisclosureCard'
 import { Button } from '@/shared/components/Controls'
 import { FollowChip, StockInfoList } from '@/shared/components/Rows'
@@ -9,7 +8,7 @@ import {
   Disclaimer, EmptyState, ErrorState, FreshnessLabel, LoadingState, SectionHeader,
 } from '@/shared/components/Feedback'
 import { getDisclosures, getMeta, getStocks } from '@/lib/data'
-import { useAsync, useForcedState } from '@/lib/useData'
+import { useAsync } from '@/lib/useData'
 import { BROKERS, pushRecent, toggleFollowStock, useBroker, useFollowedStocks } from '@/lib/follow'
 import { formatAmountShort, formatDate } from '@/lib/format'
 import homeStyles from './HomeScreen.module.css'
@@ -18,7 +17,6 @@ import styles from './FeedDetailScreen.module.css'
 /** S4 종목 — 종목 정보 + 이 종목 전체 내부자 거래 + 예고 + 팔로우 + 거래 바로가기 */
 export default function StockScreen() {
   const { code } = useParams()
-  const [forced, setForced] = useForcedState()
   const followedStocks = useFollowedStocks()
   const brokerId = useBroker()
 
@@ -39,22 +37,21 @@ export default function StockScreen() {
     if (stock) pushRecent({ kind: 'stock', id: stock.code, label: stock.name })
   }, [stock])
 
-  const effectiveState = forced === 'loading' ? 'loading' : forced === 'error' ? 'error' : state
-  const actions = <DevStateToggle value={forced} onChange={setForced} />
+  const effectiveState = state
   const broker = BROKERS.find((b) => b.id === brokerId) ?? BROKERS[0]
 
-  if (effectiveState === 'loading') return <Screen title="종목" showBack actions={actions}><LoadingState /></Screen>
+  if (effectiveState === 'loading') return <Screen title="종목" showBack><LoadingState /></Screen>
   if (effectiveState === 'error')
-    return <Screen title="종목" showBack actions={actions}><ErrorState message={error?.message} onRetry={retry} /></Screen>
-  if (!stock || forced === 'empty')
+    return <Screen title="종목" showBack><ErrorState message={error?.message} onRetry={retry} /></Screen>
+  if (!stock)
     return (
-      <Screen title="종목" showBack actions={actions}>
+      <Screen title="종목" showBack>
         <EmptyState icon="search_off" title="이 종목을 찾을 수 없습니다" micro="최근 30일 공시에 등장한 종목만 있습니다" actionLabel="탐색으로" actionTo="/explore" />
       </Screen>
     )
 
   return (
-    <Screen title="종목" showBack actions={actions}>
+    <Screen title="종목" showBack>
       <section>
         <div className={styles.head}>
           <div>

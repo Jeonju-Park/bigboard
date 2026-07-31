@@ -1,7 +1,6 @@
 import { useEffect, useMemo } from 'react'
 import { Link, useParams } from 'react-router'
 import Screen from '@/shared/components/Screen'
-import DevStateToggle from '@/shared/components/DevStateToggle'
 import Placeholder from '@/shared/components/Placeholder'
 import { FollowChip, PersonTypeBadge, StockInfoList } from '@/shared/components/Rows'
 import { Num } from '@/shared/components/Num'
@@ -9,7 +8,7 @@ import {
   Disclaimer, EmptyState, ErrorState, FreshnessLabel, LoadingState, SectionHeader,
 } from '@/shared/components/Feedback'
 import { getDisclosures, getMeta, getPersons } from '@/lib/data'
-import { useAsync, useForcedState } from '@/lib/useData'
+import { useAsync } from '@/lib/useData'
 import { pushRecent, toggleFollowPerson, useFollowedPersons } from '@/lib/follow'
 import { personKey } from '@/lib/keys'
 import { formatAmountShort, formatDate, formatQuantity } from '@/lib/format'
@@ -19,7 +18,6 @@ import styles from './FeedDetailScreen.module.css'
 /** S3 인물 프로필 — 유형 배지 + 보유 현황 + 거래 타임라인 */
 export default function PersonScreen() {
   const { id } = useParams()
-  const [forced, setForced] = useForcedState()
   const followed = useFollowedPersons()
 
   const { state, data, error, retry } = useAsync(async () => {
@@ -39,21 +37,20 @@ export default function PersonScreen() {
     if (person) pushRecent({ kind: 'person', id: person.id, label: person.name })
   }, [person])
 
-  const effectiveState = forced === 'loading' ? 'loading' : forced === 'error' ? 'error' : state
-  const actions = <DevStateToggle value={forced} onChange={setForced} />
+  const effectiveState = state
 
-  if (effectiveState === 'loading') return <Screen title="인물" showBack actions={actions}><LoadingState /></Screen>
+  if (effectiveState === 'loading') return <Screen title="인물" showBack><LoadingState /></Screen>
   if (effectiveState === 'error')
-    return <Screen title="인물" showBack actions={actions}><ErrorState message={error?.message} onRetry={retry} /></Screen>
-  if (!person || forced === 'empty')
+    return <Screen title="인물" showBack><ErrorState message={error?.message} onRetry={retry} /></Screen>
+  if (!person)
     return (
-      <Screen title="인물" showBack actions={actions}>
+      <Screen title="인물" showBack>
         <EmptyState icon="person_off" title="이 인물을 찾을 수 없습니다" micro="수집 범위를 벗어났을 수 있습니다" actionLabel="탐색으로" actionTo="/explore" />
       </Screen>
     )
 
   return (
-    <Screen title="인물" showBack actions={actions}>
+    <Screen title="인물" showBack>
       <section>
         <div className={styles.head}>
           <div style={{ display: 'flex', gap: 'var(--space-3)', alignItems: 'center', minWidth: 0 }}>
