@@ -1,0 +1,73 @@
+/* 설정형 리스트 — 마이·설정 화면의 공통 골격.
+   같은 모양의 행이 반복되면 화면 사이 통일감이 생기고, 새 항목을 추가할 때 판단이 필요 없다. */
+
+.group {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+  min-height: var(--touch-min);
+  padding-block: var(--space-4);
+  border: 0;
+  border-bottom: var(--hairline);
+  background: none;
+  color: var(--text-body);
+  text-align: start;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.group > .row:last-child {
+  border-bottom: 0;
+}
+
+.row:hover {
+  color: var(--text-body);
+  text-decoration: none;
+}
+
+.row:disabled {
+  color: var(--disabled-fg);
+  cursor: not-allowed;
+}
+
+.icon {
+  flex: none;
+  color: var(--icon-muted);
+}
+
+.row:disabled .icon {
+  color: var(--disabled-fg);
+}
+
+.body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.body p {
+  margin: 0;
+}
+
+.value {
+  flex: none;
+  color: var(--text-caption);
+}
+
+.chevron {
+  flex: none;
+  color: var(--gray-300);
+}
+
+/* 정보만 담는 행 — 탭 되지 않으므로 커서를 바꾸지 않는다 */
+.static {
+  cursor: default;
+}

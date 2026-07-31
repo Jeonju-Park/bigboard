@@ -1,0 +1,5 @@
+.disclaimerBox {
+  padding: var(--space-4);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-field);
+}

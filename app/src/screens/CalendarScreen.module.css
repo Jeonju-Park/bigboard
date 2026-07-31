@@ -1,69 +1,122 @@
-/* S6 캘린더 — 주간 스트립 + 예고 리스트 */
+/* S6 캘린더 — 월 달력 + 선택일 예고 리스트 */
 
-.strip {
+.calendar {
   display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.monthNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.navBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--touch-min);
+  min-height: var(--touch-min);
+  border: 0;
+  background: none;
+  color: var(--icon-default);
+  cursor: pointer;
+}
+
+.weekHead,
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
   gap: var(--space-1);
-  overflow-x: auto;
-  padding-inline: var(--gutter-screen);
-  margin-inline: calc(var(--gutter-screen) * -1);
-  scrollbar-width: none;
 }
 
-.strip::-webkit-scrollbar {
-  display: none;
+.weekHead {
+  text-align: center;
 }
 
-.day {
-  flex: none;
+.cell {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: var(--space-1);
-  min-width: var(--touch-min);
   min-height: var(--touch-min);
-  padding: var(--space-2) var(--space-1);
+  padding-block: var(--space-2);
   border: 0;
-  background: none;
-  color: var(--text-caption);
-  cursor: pointer;
   border-radius: var(--radius-field);
+  background: none;
+  color: var(--text-body);
+  cursor: pointer;
 }
 
-/* 선택은 ink 밑줄로 — coral 은 면 전용이라 작은 요소의 강조엔 쓰지 않는다 */
-.day[aria-pressed='true'] {
-  color: var(--ink);
+.cell:disabled {
+  color: var(--disabled-fg);
+  cursor: default;
+}
+
+/* 오늘 — 얇은 링.
+   밑줄(inset 0 -2px)로 하면 셀의 border-radius 를 따라 휘어서 곡선 잔상이 생긴다.
+   링은 radius 를 그대로 따라가므로 깔끔하다. coral 은 면 전용이라 여기 쓰지 않는다(§2). */
+.todayCell {
+  box-shadow: inset 0 0 0 1px var(--gray-400);
+}
+
+/* 선택 — coral 면 + ink 글자 (§2 면 전용 규칙을 지키는 사용처) */
+.cell[aria-selected='true'] {
+  background: var(--brand-surface);
+  color: var(--on-brand);
   font-weight: 600;
-  box-shadow: inset 0 calc(var(--underline-active) * -1) 0 0 var(--ink);
 }
 
-.count {
-  color: var(--text-micro);
-  min-height: 1em;
+/* 예고 건수 — 셀 안 작은 카운트 */
+.dot {
+  min-width: var(--space-4);
+  border-radius: var(--radius-chip);
+  background: var(--bg-secondary);
+  color: var(--text-caption);
 }
 
-.day[aria-pressed='true'] .count {
+.cell[aria-selected='true'] .dot {
+  background: var(--bg-primary);
   color: var(--ink);
 }
 
-/* 예고 항목 — 좌측 4px ink 바 (IA S6) */
+/* ── 선택일 예고 리스트 ── */
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* 행 높이 80pt — 시원하게 (요청 11번) */
 .item {
   display: flex;
-  align-items: stretch;
-  gap: var(--space-3);
+  align-items: center;
+  gap: var(--space-4);
+  min-height: var(--row-tall);
   padding-block: var(--space-3);
   border-bottom: var(--hairline);
   color: inherit;
   text-decoration: none;
 }
 
-.item:hover {
-  text-decoration: none;
-  color: inherit;
+.list li:last-child .item {
+  border-bottom: 0;
 }
 
+.item:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 좌측 4px ink 바 (IA S6) */
 .bar {
   flex: none;
+  align-self: stretch;
   width: var(--accent-bar);
+  margin-block: var(--space-2);
   border-radius: var(--radius-chip);
   background: var(--ink);
 }
@@ -76,8 +129,30 @@
   gap: var(--space-1);
 }
 
+.itemHead {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin: 0;
+}
+
+.buy {
+  color: var(--semantic-buy);
+}
+
+.sell {
+  color: var(--semantic-sell);
+}
+
 .dday {
-  align-self: center;
-  flex: none;
-  font-weight: 600;
+  border: var(--hairline);
+  border-radius: var(--radius-chip);
+  padding: 0 var(--space-2);
+  color: var(--text-caption);
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

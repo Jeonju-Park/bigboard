@@ -1,0 +1,177 @@
+/* S3 인물 프로필 — 위계: 정체성 → 요약 수치 → 보유 → 타임라인 */
+
+/* ── 정체성 ── */
+.identity {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.identityBody {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* 배지 → 이름 4pt, 이름 → 소속 4pt (요청 10번) */
+  gap: var(--space-1);
+}
+
+.name {
+  margin: 0;
+}
+
+.affiliation {
+  margin: 0;
+  color: var(--text-caption);
+}
+
+/* ── 요약 수치 — 화면에서 가장 먼저 읽혀야 하는 블록 ── */
+.summary {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-card);
+}
+
+.statRow {
+  display: flex;
+  gap: var(--space-6);
+  margin: 0;
+  padding-top: var(--space-4);
+  border-top: var(--hairline);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.stat dt,
+.stat dd {
+  margin: 0;
+}
+
+.stat dd {
+  font-size: var(--size-title-s);
+  font-weight: 600;
+}
+
+.buy {
+  color: var(--semantic-buy);
+}
+
+.sell {
+  color: var(--semantic-sell);
+}
+
+/* 공직자 안내 — 기준일을 눈에 띄게 (규칙 2) */
+.noticeBox {
+  padding: var(--space-4);
+  background: var(--coral-50);
+  border-radius: var(--radius-field);
+}
+
+/* ── 보유 현황 ── */
+.holdings,
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.holdingRow {
+  border-bottom: var(--hairline);
+}
+
+.holdingRow:last-child {
+  border-bottom: 0;
+}
+
+.holdingLink,
+.timelineRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: var(--touch-min);
+  padding-block: var(--space-3);
+  color: inherit;
+  text-decoration: none;
+}
+
+.holdingLink:hover,
+.timelineRow:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.holdingBody {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.holdingBody p {
+  margin: 0;
+}
+
+/* ── 타임라인 — 날짜 열을 고정폭으로 두어 세로로 읽히게 ── */
+.timelineRow {
+  border-bottom: var(--hairline);
+  align-items: flex-start;
+}
+
+.timeline li:last-child .timelineRow {
+  border-bottom: 0;
+}
+
+/* 'YYYY.MM.DD' 가 mono 로 들어가는 폭. 토큰 조합으로 만든다(하드코딩 금지) */
+.timelineDate {
+  flex: none;
+  width: calc(var(--space-12) + var(--space-6));
+  padding-top: var(--space-1);
+}
+
+.timelineBody {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.timelineHead {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin: 0;
+  min-width: 0;
+}
+
+.flag {
+  flex: none;
+  border: var(--hairline);
+  border-radius: var(--radius-chip);
+  padding: 0 var(--space-2);
+  color: var(--text-caption);
+}
+
+.ellipsis {
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding-top: var(--space-6);
+  border-top: var(--hairline);
+}
