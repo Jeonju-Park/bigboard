@@ -86,3 +86,64 @@
   color: var(--icon-default);
   cursor: pointer;
 }
+
+/* 선택 UI (STEP 4에서 추가) */
+.search {
+  width: 100%;
+  min-height: var(--touch-min);
+  padding-inline: var(--space-3);
+  border: 0;
+  border-radius: var(--radius-field);
+  background: var(--bg-secondary);
+  color: var(--text-body);
+}
+
+.chipGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  overflow-y: auto;
+}
+
+/* 선택 시 coral 면 + ink 글자 (§2 면 전용) */
+.selectChip {
+  border: var(--hairline);
+  border-radius: var(--radius-chip);
+  background: var(--bg-primary);
+  color: var(--text-sub);
+  padding: var(--space-2) var(--space-3);
+  min-height: var(--touch-min);
+  cursor: pointer;
+  transition: transform var(--motion-press);
+}
+
+.selectChip:active {
+  transform: scale(0.97);
+}
+
+.selectChip[aria-pressed='true'] {
+  background: var(--brand-surface);
+  border-color: var(--brand-surface);
+  color: var(--on-brand);
+  font-weight: 600;
+}
+
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio {
+  min-height: var(--touch-min);
+  border: 0;
+  border-bottom: var(--hairline);
+  background: none;
+  color: var(--text-body);
+  text-align: start;
+  cursor: pointer;
+}
+
+.radio[aria-checked='true'] {
+  color: var(--ink);
+  font-weight: 600;
+}
