@@ -5,7 +5,8 @@ import { OptionSheet } from '@/shared/components/BottomSheet'
 import { ErrorState, LoadingState, SectionHeader, Disclaimer } from '@/shared/components/Feedback'
 import { getMeta } from '@/lib/data'
 import { useAsync } from '@/lib/useData'
-import { BROKERS, clearAll, setBroker, useBroker, type BrokerId } from '@/lib/follow'
+import { clearAll, setBroker, useBroker, type BrokerId } from '@/lib/follow'
+import { BROKERS, brokerStoreUrl, detectPlatform } from '@/lib/broker'
 import { resetOnboarding } from '@/lib/visit'
 import { formatDate, formatDateTime } from '@/lib/format'
 import styles from './SettingsScreen.module.css'
@@ -25,6 +26,8 @@ export default function SettingsScreen() {
   const { state, data, error, retry } = useAsync(getMeta)
 
   const broker = BROKERS.find((b) => b.id === brokerId) ?? BROKERS[0]
+  const platform = detectPlatform()
+  const storeUrl = brokerStoreUrl(broker, platform)
 
   if (state === 'loading') return <Screen title="설정" showBack><LoadingState rows={2} /></Screen>
   if (state === 'error')
@@ -49,14 +52,24 @@ export default function SettingsScreen() {
           <ListRow
             icon="account_balance"
             label="증권사"
-            note="거래 바로가기가 열리는 곳"
+            note={broker.appName ? `${broker.appName} 앱을 엽니다` : '거래 바로가기가 열리는 곳'}
             value={broker.name}
             onClick={() => setSheet('broker')}
           />
         </ListGroup>
         <p className="ty-micro" style={{ marginTop: 'var(--space-2)' }}>
-          빅보드는 주문을 대신 넣지 않습니다. 앱 딥링크는 검증 전이라 각 사 공식 웹페이지로 연결합니다.
+          빅보드는 주문을 대신 넣지 않습니다. 종목이나 주문 정보를 넘기지 않고 앱만 엽니다.
+          {platform === 'android'
+            ? ' 앱이 설치돼 있으면 앱이, 없으면 증권사 웹페이지가 열립니다.'
+            : ' 앱이 설치돼 있으면 앱이, 없으면 증권사 웹페이지가 열립니다. (iOS 는 증권사가 앱 연결을 등록해 둔 경우에만 앱이 열립니다)'}
         </p>
+        {storeUrl && (
+          <p className="ty-micro" style={{ marginTop: 'var(--space-1)' }}>
+            <a href={storeUrl} target="_blank" rel="noopener noreferrer" className="tap-safe">
+              {broker.appName} 앱 설치하기
+            </a>
+          </p>
+        )}
       </section>
 
       <section>
@@ -134,7 +147,11 @@ export default function SettingsScreen() {
       <OptionSheet
         open={sheet === 'broker'}
         title="증권사"
-        options={BROKERS.map((b) => ({ value: b.id as BrokerId, label: b.name }))}
+        options={BROKERS.map((b) => ({
+          value: b.id as BrokerId,
+          label: b.name,
+          note: b.appName ?? undefined,
+        }))}
         value={brokerId}
         onSelect={setBroker}
         onClose={() => setSheet(null)}

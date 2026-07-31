@@ -5,6 +5,9 @@
  * 노션 오픈이슈 O5(팔로우 저장 방식)가 정해지면 여기가 마이그레이션 지점이 된다.
  */
 import { useSyncExternalStore } from 'react'
+import type { BrokerId } from './broker'
+
+export type { BrokerId }
 
 const KEYS = {
   persons: 'bigboard.follow.persons.v1',
@@ -118,19 +121,9 @@ export function pushRecent(item: RecentItem): void {
 // ── 증권사 설정 (S8 마이 · S2 거래 바로가기) ──────────────────────────────────
 
 /**
- * 증권사 목록과 딥링크는 **오픈이슈 O2(증권사 3사 + 딥링크 검증) 미해소** 상태다.
- * 검증되지 않은 스킴을 넣으면 앱이 안 열리거나 엉뚱한 곳으로 가므로,
- * 지금은 각 사의 공식 웹 페이지로만 연결한다. 딥링크는 O2 확정 후 추가한다.
+ * 선택된 증권사 id 저장만 담당한다.
+ * 목록·딥링크 생성은 lib/broker.ts 로 분리했다 (플랫폼 분기 로직이 붙어서).
  */
-export const BROKERS = [
-  { id: 'none', name: '선택 안 함', webUrl: null },
-  { id: 'kiwoom', name: '키움증권', webUrl: 'https://www.kiwoom.com' },
-  { id: 'mirae', name: '미래에셋증권', webUrl: 'https://securities.miraeasset.com' },
-  { id: 'samsung', name: '삼성증권', webUrl: 'https://www.samsungpop.com' },
-] as const
-
-export type BrokerId = (typeof BROKERS)[number]['id']
-
 export function useBroker(): BrokerId {
   return useSyncExternalStore(
     subscribe,

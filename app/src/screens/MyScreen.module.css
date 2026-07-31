@@ -1,6 +1,48 @@
 /* S8 마이 */
 
-.stockRow {
+/* ── 프로필 ── */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-card);
+}
+
+.avatar {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--space-12);
+  height: var(--space-12);
+  border-radius: var(--radius-chip);
+  background: var(--bg-primary);
+  color: var(--icon-muted);
+}
+
+.profileBody {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+/* ── 저장한 항목 ── */
+.savedGroups {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-group);
+}
+
+.subHead {
+  margin: 0 0 var(--space-2);
+}
+
+.stockRow,
+.brokerRow {
   display: flex;
   align-items: center;
   gap: var(--space-3);
@@ -11,13 +53,32 @@
   text-decoration: none;
 }
 
-.stockRow:last-of-type {
+.brokerRow {
+  min-height: var(--touch-min);
+  padding-block: var(--space-4);
+}
+
+.stockRow:last-of-type,
+.brokerRow {
   border-bottom: 0;
 }
 
-.stockRow:hover {
+.stockRow:hover,
+.brokerRow:hover {
   color: inherit;
   text-decoration: none;
+}
+
+.stockAvatar {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--space-10);
+  height: var(--space-10);
+  border-radius: var(--radius-chip);
+  background: var(--bg-secondary);
+  color: var(--icon-muted);
 }
 
 .stockBody {
@@ -30,6 +91,16 @@
 
 .stockBody p {
   margin: 0;
+}
+
+.brokerIcon {
+  flex: none;
+  color: var(--icon-muted);
+}
+
+.chevron {
+  flex: none;
+  color: var(--gray-300);
 }
 
 .footer {

@@ -9,7 +9,8 @@ import {
 } from '@/shared/components/Feedback'
 import { getDisclosures, getMeta, getStocks } from '@/lib/data'
 import { useAsync } from '@/lib/useData'
-import { BROKERS, pushRecent, toggleFollowStock, useBroker, useFollowedStocks } from '@/lib/follow'
+import { pushRecent, toggleFollowStock, useBroker, useFollowedStocks } from '@/lib/follow'
+import { brokerActionLabel, brokerHref, findBroker } from '@/lib/broker'
 import { formatAmountShort, formatDate } from '@/lib/format'
 import homeStyles from './HomeScreen.module.css'
 import styles from './FeedDetailScreen.module.css'
@@ -38,7 +39,8 @@ export default function StockScreen() {
   }, [stock])
 
   const effectiveState = state
-  const broker = BROKERS.find((b) => b.id === brokerId) ?? BROKERS[0]
+  const broker = findBroker(brokerId)
+  const brokerLink = brokerHref(broker)
 
   if (effectiveState === 'loading') return <Screen title="종목" showBack><LoadingState /></Screen>
   if (effectiveState === 'error')
@@ -113,10 +115,10 @@ export default function StockScreen() {
       </section>
 
       <section className={styles.actions}>
-        {broker.webUrl ? (
-          <Button block href={broker.webUrl}>{broker.name}으로 이동</Button>
+        {brokerLink ? (
+          <Button block href={brokerLink}>{brokerActionLabel(broker)}</Button>
         ) : (
-          <Button block to="/my">거래할 증권사 선택하기</Button>
+          <Button block to="/settings">거래할 증권사 선택하기</Button>
         )}
         <Disclaimer />
       </section>

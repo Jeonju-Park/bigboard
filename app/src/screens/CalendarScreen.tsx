@@ -5,7 +5,7 @@ import Icon from '@/shared/components/Icon'
 import { SortBar } from '@/shared/components/Controls'
 import { OptionSheet } from '@/shared/components/BottomSheet'
 import {
-  Disclaimer, EmptyState, ErrorState, FreshnessLabel, LoadingState, SectionHeader,
+  Disclaimer, ErrorState, FreshnessLabel, LoadingState, SectionHeader,
 } from '@/shared/components/Feedback'
 import { getDisclosures, getMeta } from '@/lib/data'
 import { useAsync } from '@/lib/useData'
@@ -130,7 +130,7 @@ export default function CalendarScreen() {
             </div>
 
             <p className="ty-caption" style={{ margin: 0 }}>
-              이 달 예고 {monthCount}건 · 날짜를 누르면 상세가 열립니다
+              이 달 예고 {monthCount}건{monthCount > 0 ? ' · 숫자가 붙은 날을 누르세요' : ''}
             </p>
           </section>
 
@@ -167,11 +167,14 @@ export default function CalendarScreen() {
               </section>
             ) : null
           ) : (
-            <EmptyState
-              icon="event_note"
-              title="날짜를 선택하세요"
-              micro={monthCount > 0 ? '숫자가 붙은 날에 예고가 있습니다' : '이 달에는 예고된 거래가 없습니다'}
-            />
+            /* 날짜를 안 골랐을 때는 큰 빈 상태 대신 섹션 헤더만 둔다 —
+               달력이 이미 화면을 채우고 있어 안내 블록이 중복이었다 */
+            <section>
+              <SectionHeader
+                title="날짜 선택"
+                note={monthCount > 0 ? '예고가 있는 날을 눌러주세요' : '이 달에는 예고가 없습니다'}
+              />
+            </section>
           )}
         </>
       )}

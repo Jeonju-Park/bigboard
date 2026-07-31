@@ -6,9 +6,10 @@ import { LoadingState } from '@/shared/components/Feedback'
 import { getDisclosures, getPersons, getStocks } from '@/lib/data'
 import { useAsync } from '@/lib/useData'
 import {
-  BROKERS, setBroker, toggleFollowPerson, toggleFollowStock,
+  setBroker, toggleFollowPerson, toggleFollowStock,
   useBroker, useFollowedPersons, useFollowedStocks, type BrokerId,
 } from '@/lib/follow'
+import { BROKERS } from '@/lib/broker'
 import { markOnboarded } from '@/lib/visit'
 import { formatAmountShort } from '@/lib/format'
 import styles from './OnboardingScreen.module.css'
