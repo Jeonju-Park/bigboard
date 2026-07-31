@@ -91,6 +91,11 @@ export interface Meta {
   lastUpdated: string | null
   sources: string[]
   counts: { disclosures: number; persons: number; stocks: number }
+  /**
+   * 공직자 재산공개 기준일 (ISO). 연 1회 공개라 '언제 시점의 자료인지'를
+   * 화면 어디서든 붙일 수 있어야 한다(규칙 2). 데이터가 없으면 null.
+   */
+  officialsAsOf: string | null
   /** 시세 소스 미연결 상태를 화면이 알 수 있게 — 값을 추정하지 않고 사실을 노출한다 */
   priceDataAvailable: boolean
   /** 수집 시 건너뛴 건수와 사유 — 조용한 누락을 만들지 않는다 */

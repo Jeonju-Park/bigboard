@@ -153,3 +153,52 @@ a.grow:hover {
   margin: 0;
   text-align: end;
 }
+
+/* ── PersonRow (재설계) — 아바타 | 배지·이름·소속 | 금액 | 북마크 ── */
+.personRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+  min-height: var(--row-tall);
+  padding-block: var(--space-3);
+  border-bottom: var(--hairline);
+  color: inherit;
+  text-decoration: none;
+}
+
+.personRow:last-child {
+  border-bottom: 0;
+}
+
+.personRow:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.personRow .grow {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* 배지→이름 4, 이름→소속 2 — 관련 요소는 8 이내 (§4) */
+  gap: var(--space-1);
+}
+
+.name {
+  margin: 0;
+}
+
+/* 금액 블록 — 행에서 두 번째로 중요한 정보라 오른쪽 끝에 세로로 정렬 */
+.amountBlock {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0;
+  margin-inline-start: auto;
+  text-align: end;
+}
+
+.amountNote {
+  white-space: nowrap;
+}

@@ -1,0 +1,26 @@
+.button {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--touch-min);
+  min-height: var(--touch-min);
+  /* 우측 거터와 시각 정렬 */
+  margin-inline-end: calc(var(--space-3) * -1);
+  border: 0;
+  background: none;
+  cursor: pointer;
+  transition: transform var(--motion-press);
+}
+
+.button:active {
+  transform: scale(0.9);
+}
+
+.off {
+  color: var(--gray-300);
+}
+
+.on {
+  color: var(--brand-surface);
+}

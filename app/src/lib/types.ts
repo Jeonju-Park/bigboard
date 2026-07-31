@@ -35,7 +35,12 @@ export interface Disclosure {
   /** 무상증여·상속 등 단가가 공시에 없는 경우 null */
   unitPrice: number | null
   quantity: number
-  totalAmount: number
+  /**
+   * 단가x수량 합. **null 이 흔하다** — 단가 미기재(무상증여·권리행사)이거나
+   * 한 보고서에 매수·매도가 섞여 순증감 수량과 단위가 안 맞는 경우.
+   * 0 으로 대체하면 정렬·집계가 거짓이 되므로 화면이 null 을 그대로 다뤄야 한다.
+   */
+  totalAmount: number | null
   /** 실제 거래일 */
   tradeDate: string
   /** 공시일 — 거래일과의 시차가 S2 의 정보 포인트다 */
@@ -51,7 +56,7 @@ export interface Disclosure {
   /** DART 원문 링크 — 모든 상세에 필수 (실명 데이터 책임) */
   dartUrl: string
   /** 정정공시로 대체된 건이면 true. upsert 시 표시용 */
-  isAmended?: boolean
+  isAmended: boolean
 }
 
 export interface PersonHolding {
@@ -129,6 +134,11 @@ export interface Meta {
     persons: number
     stocks: number
   }
+  /**
+   * 공직자 재산공개 기준일 (ISO). 연 1회 공개라 '언제 시점의 자료인지'를
+   * 화면 어디서든 붙일 수 있어야 한다(규칙 2). 데이터가 없으면 null.
+   */
+  officialsAsOf: string | null
   /** 시세 소스 연결 여부 — 화면이 "준비 중"을 정직하게 표시할 수 있게 한다 */
   priceDataAvailable: boolean
   /** 수집 시 건너뛴 건수와 사유 — 조용한 누락을 만들지 않는다 */

@@ -14,6 +14,7 @@ import LandingScreen from '@/screens/LandingScreen'
 import OnboardingScreen from '@/screens/OnboardingScreen'
 import NotFoundScreen from '@/screens/NotFoundScreen'
 import DevGalleryScreen from '@/screens/DevGalleryScreen'
+import SearchScreen from '@/screens/SearchScreen'
 
 /**
  * 라우트 진입점.
@@ -55,6 +56,9 @@ export default function App() {
             <Route path="/ranking" element={<RankingScreen />} />
             <Route path="/my" element={<MyScreen />} />
           </Route>
+
+          {/* 검색 — 탭 없이 앱바가 입력창이 된다 */}
+          <Route path="/search" element={<SearchScreen />} />
 
           {/* 상세 — 탭 없이 뒤로가기 */}
           <Route path="/feed/:id" element={<FeedDetailScreen />} />

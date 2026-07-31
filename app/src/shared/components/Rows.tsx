@@ -1,26 +1,60 @@
+import type { ReactNode } from 'react'
 import { Link } from 'react-router'
 import type { Person, PersonType, RankingEntry } from '@/lib/types'
 import { Num } from './Num'
 import Icon from './Icon'
+import PersonAvatar from './PersonAvatar'
+import BookmarkButton from './BookmarkButton'
 import { formatAmountShort } from '@/lib/format'
 import styles from './Rows.module.css'
 
-/** 인물 유형 배지 — 공직자 데이터는 연 1회 공개라 신선도 라벨이 따라붙어야 한다(규칙 2) */
+/** 인물 유형 배지 — 공직자 데이터는 연 1회 공개라 기준일 라벨이 따라붙어야 한다(규칙 2) */
 export function PersonTypeBadge({ type }: { type: PersonType }) {
   return <span className={`ty-micro ${styles.badge}`}>{type === 'official' ? '공직자' : '내부자'}</span>
 }
 
-export function PersonRow({ person, right }: { person: Person; right?: React.ReactNode }) {
+/**
+ * PersonRow — 탐색·마이·검색 결과의 인물 행.
+ *
+ * 위계: 배지(유형) → 이름 → 소속 을 세로로 쌓고, 좌측에 유형 아바타, 우측에 금액과 북마크.
+ * 이전에는 이름·소속만 있고 금액이 작아 "누가 얼마나 움직였는지"가 안 읽혔다.
+ */
+export function PersonRow({
+  person,
+  amount,
+  amountNote,
+  bookmarked,
+  onToggleBookmark,
+  right,
+}: {
+  person: Person
+  /** 이 행의 대표 금액 (없으면 숨김) */
+  amount?: number | null
+  /** 금액 아래 작은 설명 — 공직자의 '기준일' 등 */
+  amountNote?: string | null
+  bookmarked?: boolean
+  onToggleBookmark?: () => void
+  right?: ReactNode
+}) {
+  const amountText = amount === undefined ? null : formatAmountShort(amount ?? null)
   return (
-    <Link to={`/person/${encodeURIComponent(person.id)}`} className={styles.row}>
+    <Link to={`/person/${encodeURIComponent(person.id)}`} className={styles.personRow}>
+      <PersonAvatar type={person.type} />
       <div className={styles.grow}>
-        <p className={`ty-label ${styles.ellipsis}`}>{person.name}</p>
+        <PersonTypeBadge type={person.type} />
+        <p className={`ty-label ${styles.ellipsis} ${styles.name}`}>{person.name}</p>
         <p className={`ty-caption ${styles.ellipsis}`}>
           {person.company}
           {person.title ? ` · ${person.title}` : ''}
         </p>
       </div>
-      <PersonTypeBadge type={person.type} />
+      {(amountText || amountNote) && (
+        <div className={styles.amountBlock}>
+          {amountText && <span className="ty-amount">{amountText}</span>}
+          {amountNote && <span className={`ty-micro ${styles.amountNote}`}>{amountNote}</span>}
+        </div>
+      )}
+      {onToggleBookmark && <BookmarkButton active={Boolean(bookmarked)} onToggle={onToggleBookmark} />}
       {right}
     </Link>
   )
@@ -58,6 +92,9 @@ export function FollowChip({
  * 1위 바만 coral-300, 2위 이하 gray-300 (§2 데이터 그래픽 규칙).
  * 파생 집계이므로 화면 어딘가에 "집계 기준"을 반드시 병기한다.
  */
+export { default as BookmarkButton } from './BookmarkButton'
+export { default as PersonAvatar } from './PersonAvatar'
+
 export function RankingRow({ entry, max }: { entry: RankingEntry; max: number }) {
   const pct = max > 0 ? Math.max(2, Math.round((entry.amount / max) * 100)) : 0
   const isFirst = entry.rank === 1

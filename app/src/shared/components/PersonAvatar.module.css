@@ -1,0 +1,31 @@
+/* 유형 아바타 — 원형 면 위 아이콘.
+   내부자/공직자를 색이 아니라 아이콘 모양으로 구분한다.
+   면은 회색조로 둔다 — coral 은 브랜드 면 전용이라 리스트마다 반복하면 예산을 넘긴다(§2). */
+
+.avatar {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--space-10);
+  height: var(--space-10);
+  border-radius: var(--radius-chip);
+  background: var(--bg-secondary);
+  color: var(--icon-muted);
+}
+
+.lg {
+  width: var(--space-12);
+  height: var(--space-12);
+}
+
+/* 공직자는 한 단계 진하게 — 연 1회 공개라 성격이 다름을 시각적으로도 구분 */
+.official {
+  background: var(--coral-50);
+  color: var(--gray-600);
+}
+
+.insider {
+  background: var(--bg-secondary);
+  color: var(--icon-muted);
+}

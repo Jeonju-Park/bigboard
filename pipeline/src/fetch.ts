@@ -489,6 +489,7 @@ async function main() {
       '금융감독원 전자공시시스템(DART) OpenAPI — 임원·주요주주 특정증권등 소유상황보고서, 거래계획보고서',
     ],
     counts: { disclosures: disclosures.length, persons: persons.length, stocks: stocks.length },
+    officialsAsOf: null, // pipeline/src/officials.ts 가 채운다 (소스 확보 전까지 null)
     priceDataAvailable: Boolean(process.env.DATA_GO_KR_KEY),
     skipped,
   }
