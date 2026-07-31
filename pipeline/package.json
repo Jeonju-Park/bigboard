@@ -10,7 +10,8 @@
   "scripts": {
     "fetch": "node --env-file=.env src/fetch.ts",
     "stocks": "node --env-file=.env src/stocks.ts",
-    "explore": "node --env-file=.env src/explore.ts"
+    "explore": "node --env-file=.env src/explore.ts",
+    "verify": "node --env-file=.env src/verify.ts"
   },
   "dependencies": {},
   "devDependencies": {}

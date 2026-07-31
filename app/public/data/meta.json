@@ -1,5 +1,20 @@
 {
-  "lastUpdated": null,
-  "sources": [],
-  "counts": { "disclosures": 0, "persons": 0, "stocks": 0 }
+ "lastUpdated": "2026-07-31T13:56:52.381Z",
+ "sources": [
+  "금융감독원 전자공시시스템(DART) OpenAPI — 임원·주요주주 특정증권등 소유상황보고서, 거래계획보고서"
+ ],
+ "counts": {
+  "disclosures": 2714,
+  "persons": 2221,
+  "stocks": 692
+ },
+ "priceDataAvailable": false,
+ "skipped": {
+  "total": 19,
+  "reasons": {
+   "순증감 0 (매수·매도 상쇄)": 12,
+   "변동일 파싱 실패": 3,
+   "거래계획 철회됨": 4
+  }
+ }
 }

@@ -107,7 +107,9 @@ if (targets.length === 0) {
         }
       }
 
-      if (EMOJI.test(code)) {
+      // 이모지 금지(§6)는 **화면 UI** 규칙이다. pipeline 은 터미널로만 말하는 Node 스크립트라
+      // 로그의 ⚠ 같은 기호까지 막을 이유가 없다. 규칙 적용을 app/src 로 한정한다.
+      if (file.startsWith('app/') && EMOJI.test(code)) {
         add('error', 'emoji', file, ln, raw, '이모지 금지 — Material Symbols(.msr)을 쓰세요')
       }
       for (const re of BANNED) {

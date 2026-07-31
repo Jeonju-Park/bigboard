@@ -1,1 +1,978 @@
-{"netBuy":{"7":[],"30":[],"90":[]},"netSell":{"7":[],"30":[],"90":[]}}
+{
+ "netBuy": {
+  "7": [
+   {
+    "rank": 1,
+    "personId": "두올-모트렉스이에프엠",
+    "personName": "모트렉스이에프엠",
+    "personType": "insider",
+    "company": "두올",
+    "amount": 145204488342
+   },
+   {
+    "rank": 2,
+    "personId": "넷마블-권영식",
+    "personName": "권영식",
+    "personType": "insider",
+    "company": "넷마블",
+    "amount": 11910255420
+   },
+   {
+    "rank": 3,
+    "personId": "동서-김종희",
+    "personName": "김종희",
+    "personType": "insider",
+    "company": "동서",
+    "amount": 11848305456
+   },
+   {
+    "rank": 4,
+    "personId": "플라즈맵-드림텍",
+    "personName": "드림텍",
+    "personType": "insider",
+    "company": "플라즈맵",
+    "amount": 7000001280
+   },
+   {
+    "rank": 5,
+    "personId": "한미반도체-곽동신",
+    "personName": "곽동신",
+    "personType": "insider",
+    "company": "한미반도체",
+    "amount": 5003694840
+   },
+   {
+    "rank": 6,
+    "personId": "유니켐-제이에이치사람들",
+    "personName": "제이에이치사람들",
+    "personType": "insider",
+    "company": "유니켐",
+    "amount": 5000000000
+   },
+   {
+    "rank": 7,
+    "personId": "SK하이닉스-최태원",
+    "personName": "최태원",
+    "personType": "insider",
+    "company": "SK하이닉스",
+    "amount": 4900310740
+   },
+   {
+    "rank": 8,
+    "personId": "에코글로우-크리스밸류",
+    "personName": "크리스밸류",
+    "personType": "insider",
+    "company": "에코글로우",
+    "amount": 4807949220
+   },
+   {
+    "rank": 9,
+    "personId": "한국특강-하람로지스",
+    "personName": "하람로지스",
+    "personType": "insider",
+    "company": "한국특강",
+    "amount": 3879416280
+   },
+   {
+    "rank": 10,
+    "personId": "아가방컴퍼니-랑시코리아",
+    "personName": "랑시코리아",
+    "personType": "insider",
+    "company": "아가방컴퍼니",
+    "amount": 3261729972
+   },
+   {
+    "rank": 11,
+    "personId": "핑거스토리-문양근",
+    "personName": "문양근",
+    "personType": "insider",
+    "company": "핑거스토리",
+    "amount": 3010011841
+   },
+   {
+    "rank": 12,
+    "personId": "옴니시스템-바이오스마트",
+    "personName": "바이오스마트",
+    "personType": "insider",
+    "company": "옴니시스템",
+    "amount": 2934658419
+   },
+   {
+    "rank": 13,
+    "personId": "미코-TheMiriStrategicEmergingMarketsFundLP",
+    "personName": "TheMiriStrategicEmergingMarketsFundLP",
+    "personType": "insider",
+    "company": "미코",
+    "amount": 2483391200
+   },
+   {
+    "rank": 14,
+    "personId": "윈하이텍-에스앤글로벌",
+    "personName": "에스앤글로벌",
+    "personType": "insider",
+    "company": "윈하이텍",
+    "amount": 2000001363
+   },
+   {
+    "rank": 15,
+    "personId": "스모트로닉-오트로닉",
+    "personName": "오트로닉",
+    "personType": "insider",
+    "company": "스모트로닉",
+    "amount": 1562982076
+   },
+   {
+    "rank": 16,
+    "personId": "웹젠-김병관",
+    "personName": "김병관",
+    "personType": "insider",
+    "company": "웹젠",
+    "amount": 1521857000
+   },
+   {
+    "rank": 17,
+    "personId": "한국알콜-TheMiriStrategicEmergingMarketsFundLP",
+    "personName": "TheMiriStrategicEmergingMarketsFundLP",
+    "personType": "insider",
+    "company": "한국알콜",
+    "amount": 1454437300
+   },
+   {
+    "rank": 18,
+    "personId": "평화산업-평화홀딩스",
+    "personName": "평화홀딩스",
+    "personType": "insider",
+    "company": "평화산업",
+    "amount": 1264153503
+   },
+   {
+    "rank": 19,
+    "personId": "한중엔시에스-김상균",
+    "personName": "김상균",
+    "personType": "insider",
+    "company": "한중엔시에스",
+    "amount": 1060640000
+   },
+   {
+    "rank": 20,
+    "personId": "케이엠제약-BAIKBRIANSEUNGWON(백승원)",
+    "personName": "BAIK BRIAN SEUNG WON(백승원)",
+    "personType": "insider",
+    "company": "케이엠제약",
+    "amount": 999999765
+   }
+  ],
+  "30": [
+   {
+    "rank": 1,
+    "personId": "두올-모트렉스이에프엠",
+    "personName": "모트렉스이에프엠",
+    "personType": "insider",
+    "company": "두올",
+    "amount": 145204488342
+   },
+   {
+    "rank": 2,
+    "personId": "셀트리온-셀트리온홀딩스",
+    "personName": "셀트리온홀딩스",
+    "personType": "insider",
+    "company": "셀트리온",
+    "amount": 67916059965
+   },
+   {
+    "rank": 3,
+    "personId": "한양증권-케이씨지아이제2호사모투자",
+    "personName": "케이씨지아이제2호사모투자",
+    "personType": "insider",
+    "company": "한양증권",
+    "amount": 49999992000
+   },
+   {
+    "rank": 4,
+    "personId": "NHN-제이엘씨파트너스",
+    "personName": "제이엘씨파트너스",
+    "personType": "insider",
+    "company": "NHN",
+    "amount": 34606150000
+   },
+   {
+    "rank": 5,
+    "personId": "엔피-컴투스",
+    "personName": "컴투스",
+    "personType": "insider",
+    "company": "엔피",
+    "amount": 29241490214
+   },
+   {
+    "rank": 6,
+    "personId": "모티브링크-동양이엔피",
+    "personName": "동양이엔피",
+    "personType": "insider",
+    "company": "모티브링크",
+    "amount": 29048517000
+   },
+   {
+    "rank": 7,
+    "personId": "세종텔레콤-세종",
+    "personName": "세종",
+    "personType": "insider",
+    "company": "세종텔레콤",
+    "amount": 28000000000
+   },
+   {
+    "rank": 8,
+    "personId": "삼부토건-한국자산신탁",
+    "personName": "한국자산신탁",
+    "personType": "insider",
+    "company": "삼부토건",
+    "amount": 24262365000
+   },
+   {
+    "rank": 9,
+    "personId": "신세계푸드-이마트",
+    "personName": "이마트",
+    "personType": "insider",
+    "company": "신세계푸드",
+    "amount": 23188292191
+   },
+   {
+    "rank": 10,
+    "personId": "토박스코리아-꿈비",
+    "personName": "꿈비",
+    "personType": "insider",
+    "company": "토박스코리아",
+    "amount": 13532045780
+   },
+   {
+    "rank": 11,
+    "personId": "케이엔더블유-BGF에코머티리얼즈",
+    "personName": "BGF에코머티리얼즈",
+    "personType": "insider",
+    "company": "케이엔더블유",
+    "amount": 13408034157
+   },
+   {
+    "rank": 12,
+    "personId": "넷마블-권영식",
+    "personName": "권영식",
+    "personType": "insider",
+    "company": "넷마블",
+    "amount": 11910255420
+   },
+   {
+    "rank": 13,
+    "personId": "동서-김종희",
+    "personName": "김종희",
+    "personType": "insider",
+    "company": "동서",
+    "amount": 11848305456
+   },
+   {
+    "rank": 14,
+    "personId": "아틀라스링크-미래산업",
+    "personName": "미래산업",
+    "personType": "insider",
+    "company": "아틀라스링크",
+    "amount": 11191984000
+   },
+   {
+    "rank": 15,
+    "personId": "스페코-넥사코리아",
+    "personName": "넥사코리아",
+    "personType": "insider",
+    "company": "스페코",
+    "amount": 8604874250
+   },
+   {
+    "rank": 16,
+    "personId": "케일럼-그린테크시스템",
+    "personName": "그린테크시스템",
+    "personType": "insider",
+    "company": "케일럼",
+    "amount": 7215624668
+   },
+   {
+    "rank": 17,
+    "personId": "플라즈맵-드림텍",
+    "personName": "드림텍",
+    "personType": "insider",
+    "company": "플라즈맵",
+    "amount": 7000001280
+   },
+   {
+    "rank": 18,
+    "personId": "현대백화점-현대지에프홀딩스",
+    "personName": "현대지에프홀딩스",
+    "personType": "insider",
+    "company": "현대백화점",
+    "amount": 6514187928
+   },
+   {
+    "rank": 19,
+    "personId": "경남제약-엑스",
+    "personName": "엑스",
+    "personType": "insider",
+    "company": "경남제약",
+    "amount": 6499999962
+   },
+   {
+    "rank": 20,
+    "personId": "삼성전자-노태문",
+    "personName": "노태문",
+    "personType": "insider",
+    "company": "삼성전자",
+    "amount": 6471901000
+   }
+  ],
+  "90": [
+   {
+    "rank": 1,
+    "personId": "NH투자증권-농협금융지주",
+    "personName": "농협금융지주",
+    "personType": "insider",
+    "company": "NH투자증권",
+    "amount": 399999989600
+   },
+   {
+    "rank": 2,
+    "personId": "DL이앤씨-국민연금공단",
+    "personName": "국민연금공단",
+    "personType": "insider",
+    "company": "DL이앤씨",
+    "amount": 228001654481
+   },
+   {
+    "rank": 3,
+    "personId": "CJ-국민연금공단",
+    "personName": "국민연금공단",
+    "personType": "insider",
+    "company": "CJ",
+    "amount": 221004126127
+   },
+   {
+    "rank": 4,
+    "personId": "삼성증권-국민연금공단",
+    "personName": "국민연금공단",
+    "personType": "insider",
+    "company": "삼성증권",
+    "amount": 210417028000
+   },
+   {
+    "rank": 5,
+    "personId": "롯데쇼핑-국민연금공단",
+    "personName": "국민연금공단",
+    "personType": "insider",
+    "company": "롯데쇼핑",
+    "amount": 196475080002
+   },
+   {
+    "rank": 6,
+    "personId": "한국금융지주-국민연금공단",
+    "personName": "국민연금공단",
+    "personType": "insider",
+    "company": "한국금융지주",
+    "amount": 189660831370
+   },
+   {
+    "rank": 7,
+    "personId": "LIG디펜스앤에어로스페이스-국민연금공단",
+    "personName": "국민연금공단",
+    "personType": "insider",
+    "company": "LIG디펜스앤에어로스페이스",
+    "amount": 177378860874
+   },
+   {
+    "rank": 8,
+    "personId": "NC-국민연금공단",
+    "personName": "국민연금공단",
+    "personType": "insider",
+    "company": "NC",
+    "amount": 148022785955
+   },
+   {
+    "rank": 9,
+    "personId": "두올-모트렉스이에프엠",
+    "personName": "모트렉스이에프엠",
+    "personType": "insider",
+    "company": "두올",
+    "amount": 145204488342
+   },
+   {
+    "rank": 10,
+    "personId": "코스맥스-국민연금공단",
+    "personName": "국민연금공단",
+    "personType": "insider",
+    "company": "코스맥스",
+    "amount": 130563170227
+   },
+   {
+    "rank": 11,
+    "personId": "코오롱인더-국민연금공단",
+    "personName": "국민연금공단",
+    "personType": "insider",
+    "company": "코오롱인더",
+    "amount": 122192103911
+   },
+   {
+    "rank": 12,
+    "personId": "한국콜마-국민연금공단",
+    "personName": "국민연금공단",
+    "personType": "insider",
+    "company": "한국콜마",
+    "amount": 101825488672
+   },
+   {
+    "rank": 13,
+    "personId": "한올바이오파마-국민연금공단",
+    "personName": "국민연금공단",
+    "personType": "insider",
+    "company": "한올바이오파마",
+    "amount": 91431762230
+   },
+   {
+    "rank": 14,
+    "personId": "삼양식품-국민연금공단",
+    "personName": "국민연금공단",
+    "personType": "insider",
+    "company": "삼양식품",
+    "amount": 83034874758
+   },
+   {
+    "rank": 15,
+    "personId": "현대백화점-국민연금공단",
+    "personName": "국민연금공단",
+    "personType": "insider",
+    "company": "현대백화점",
+    "amount": 74807513669
+   },
+   {
+    "rank": 16,
+    "personId": "SK시그넷-SK",
+    "personName": "SK",
+    "personType": "insider",
+    "company": "SK시그넷",
+    "amount": 69999996556
+   },
+   {
+    "rank": 17,
+    "personId": "셀트리온-셀트리온홀딩스",
+    "personName": "셀트리온홀딩스",
+    "personType": "insider",
+    "company": "셀트리온",
+    "amount": 67916059965
+   },
+   {
+    "rank": 18,
+    "personId": "비에이치-국민연금공단",
+    "personName": "국민연금공단",
+    "personType": "insider",
+    "company": "비에이치",
+    "amount": 67591105437
+   },
+   {
+    "rank": 19,
+    "personId": "HL만도-국민연금공단",
+    "personName": "국민연금공단",
+    "personType": "insider",
+    "company": "HL만도",
+    "amount": 58420983003
+   },
+   {
+    "rank": 20,
+    "personId": "한양증권-케이씨지아이제2호사모투자",
+    "personName": "케이씨지아이제2호사모투자",
+    "personType": "insider",
+    "company": "한양증권",
+    "amount": 49999992000
+   }
+  ]
+ },
+ "netSell": {
+  "7": [
+   {
+    "rank": 1,
+    "personId": "기가비스-이재곤",
+    "personName": "이재곤",
+    "personType": "insider",
+    "company": "기가비스",
+    "amount": 38301440000
+   },
+   {
+    "rank": 2,
+    "personId": "두올-프리미어성장전략엠앤에이사모투자",
+    "personName": "프리미어성장전략엠앤에이사모투자",
+    "personType": "insider",
+    "company": "두올",
+    "amount": 33373200000
+   },
+   {
+    "rank": 3,
+    "personId": "두올-조인회",
+    "personName": "조인회",
+    "personType": "insider",
+    "company": "두올",
+    "amount": 26981545800
+   },
+   {
+    "rank": 4,
+    "personId": "선광-심충식",
+    "personName": "심충식",
+    "personType": "insider",
+    "company": "선광",
+    "amount": 12635823750
+   },
+   {
+    "rank": 5,
+    "personId": "HS애드-카벤디쉬스퀘어홀딩비.브이.",
+    "personName": "카벤디쉬스퀘어홀딩비.브이.",
+    "personType": "insider",
+    "company": "HS애드",
+    "amount": 6997341165
+   },
+   {
+    "rank": 6,
+    "personId": "SK리츠-미래에셋자산운용",
+    "personName": "미래에셋자산운용",
+    "personType": "insider",
+    "company": "SK리츠",
+    "amount": 4575361617
+   },
+   {
+    "rank": 7,
+    "personId": "한국특강-매직홀딩스",
+    "personName": "매직홀딩스",
+    "personType": "insider",
+    "company": "한국특강",
+    "amount": 3879416280
+   },
+   {
+    "rank": 8,
+    "personId": "에코글로우-더편한",
+    "personName": "더편한",
+    "personType": "insider",
+    "company": "에코글로우",
+    "amount": 2821200000
+   },
+   {
+    "rank": 9,
+    "personId": "금호석유화학-국민연금공단",
+    "personName": "국민연금공단",
+    "personType": "insider",
+    "company": "금호석유화학",
+    "amount": 2002104094
+   },
+   {
+    "rank": 10,
+    "personId": "두올-조승회",
+    "personName": "조승회",
+    "personType": "insider",
+    "company": "두올",
+    "amount": 1558525100
+   },
+   {
+    "rank": 11,
+    "personId": "파인엠텍-홍준기",
+    "personName": "홍준기",
+    "personType": "insider",
+    "company": "파인엠텍",
+    "amount": 683000000
+   },
+   {
+    "rank": 12,
+    "personId": "셀트리온-이경훈",
+    "personName": "이경훈",
+    "personType": "insider",
+    "company": "셀트리온",
+    "amount": 606775339
+   },
+   {
+    "rank": 13,
+    "personId": "디앤디플랫폼리츠-미래에셋자산운용",
+    "personName": "미래에셋자산운용",
+    "personType": "insider",
+    "company": "디앤디플랫폼리츠",
+    "amount": 211779900
+   },
+   {
+    "rank": 14,
+    "personId": "삼성전자-이종민",
+    "personName": "이종민",
+    "personType": "insider",
+    "company": "삼성전자",
+    "amount": 80581500
+   },
+   {
+    "rank": 15,
+    "personId": "코난테크놀로지-김태형",
+    "personName": "김태형",
+    "personType": "insider",
+    "company": "코난테크놀로지",
+    "amount": 52309400
+   },
+   {
+    "rank": 16,
+    "personId": "아이티엠반도체-황호석",
+    "personName": "황호석",
+    "personType": "insider",
+    "company": "아이티엠반도체",
+    "amount": 33161100
+   },
+   {
+    "rank": 17,
+    "personId": "토마토시스템-박성준",
+    "personName": "박성준",
+    "personType": "insider",
+    "company": "토마토시스템",
+    "amount": 32400000
+   },
+   {
+    "rank": 18,
+    "personId": "백산-김한성",
+    "personName": "김한성",
+    "personType": "insider",
+    "company": "백산",
+    "amount": 21401140
+   },
+   {
+    "rank": 19,
+    "personId": "링네트-김대화",
+    "personName": "김대화",
+    "personType": "insider",
+    "company": "링네트",
+    "amount": 19861050
+   },
+   {
+    "rank": 20,
+    "personId": "신흥-이용익",
+    "personName": "이용익",
+    "personType": "insider",
+    "company": "신흥",
+    "amount": 15411000
+   }
+  ],
+  "30": [
+   {
+    "rank": 1,
+    "personId": "서진시스템-전동규",
+    "personName": "전동규",
+    "personType": "insider",
+    "company": "서진시스템",
+    "amount": 129250000000
+   },
+   {
+    "rank": 2,
+    "personId": "효성중공업-국민연금공단",
+    "personName": "국민연금공단",
+    "personType": "insider",
+    "company": "효성중공업",
+    "amount": 124299042960
+   },
+   {
+    "rank": 3,
+    "personId": "기가비스-이재곤",
+    "personName": "이재곤",
+    "personType": "insider",
+    "company": "기가비스",
+    "amount": 38301440000
+   },
+   {
+    "rank": 4,
+    "personId": "두올-프리미어성장전략엠앤에이사모투자",
+    "personName": "프리미어성장전략엠앤에이사모투자",
+    "personType": "insider",
+    "company": "두올",
+    "amount": 33373200000
+   },
+   {
+    "rank": 5,
+    "personId": "파라다이스-국민연금공단",
+    "personName": "국민연금공단",
+    "personType": "insider",
+    "company": "파라다이스",
+    "amount": 31928717537
+   },
+   {
+    "rank": 6,
+    "personId": "두올-조인회",
+    "personName": "조인회",
+    "personType": "insider",
+    "company": "두올",
+    "amount": 26981545800
+   },
+   {
+    "rank": 7,
+    "personId": "모티브링크-에스디와이",
+    "personName": "에스디와이",
+    "personType": "insider",
+    "company": "모티브링크",
+    "amount": 15503815800
+   },
+   {
+    "rank": 8,
+    "personId": "모티브링크-신동양홀딩스",
+    "personName": "신동양홀딩스",
+    "personType": "insider",
+    "company": "모티브링크",
+    "amount": 13544701200
+   },
+   {
+    "rank": 9,
+    "personId": "코리아써키트-국민연금공단",
+    "personName": "국민연금공단",
+    "personType": "insider",
+    "company": "코리아써키트",
+    "amount": 12956666585
+   },
+   {
+    "rank": 10,
+    "personId": "롯데관광개발-국민연금공단",
+    "personName": "국민연금공단",
+    "personType": "insider",
+    "company": "롯데관광개발",
+    "amount": 12729042625
+   },
+   {
+    "rank": 11,
+    "personId": "유진로봇-시만",
+    "personName": "시만",
+    "personType": "insider",
+    "company": "유진로봇",
+    "amount": 12703427730
+   },
+   {
+    "rank": 12,
+    "personId": "선광-심충식",
+    "personName": "심충식",
+    "personType": "insider",
+    "company": "선광",
+    "amount": 12635823750
+   },
+   {
+    "rank": 13,
+    "personId": "HB테크놀러지-에이치비콥",
+    "personName": "에이치비콥",
+    "personType": "insider",
+    "company": "HB테크놀러지",
+    "amount": 10999998240
+   },
+   {
+    "rank": 14,
+    "personId": "HS애드-카벤디쉬스퀘어홀딩비.브이.",
+    "personName": "카벤디쉬스퀘어홀딩비.브이.",
+    "personType": "insider",
+    "company": "HS애드",
+    "amount": 10699208045
+   },
+   {
+    "rank": 15,
+    "personId": "아이에이-최동철",
+    "personName": "최동철",
+    "personType": "insider",
+    "company": "아이에이",
+    "amount": 10009245268
+   },
+   {
+    "rank": 16,
+    "personId": "심텍-심텍홀딩스",
+    "personName": "심텍홀딩스",
+    "personType": "insider",
+    "company": "심텍",
+    "amount": 9999949360
+   },
+   {
+    "rank": 17,
+    "personId": "스페코-김종섭",
+    "personName": "김종섭",
+    "personType": "insider",
+    "company": "스페코",
+    "amount": 8604874250
+   },
+   {
+    "rank": 18,
+    "personId": "토박스코리아-이선근",
+    "personName": "이선근",
+    "personType": "insider",
+    "company": "토박스코리아",
+    "amount": 8380000000
+   },
+   {
+    "rank": 19,
+    "personId": "대한광통신-티에프오인더스트리",
+    "personName": "티에프오인더스트리",
+    "personType": "insider",
+    "company": "대한광통신",
+    "amount": 8336676878
+   },
+   {
+    "rank": 20,
+    "personId": "케일럼-티엠씨",
+    "personName": "티엠씨",
+    "personType": "insider",
+    "company": "케일럼",
+    "amount": 7215624668
+   }
+  ],
+  "90": [
+   {
+    "rank": 1,
+    "personId": "LG이노텍-국민연금공단",
+    "personName": "국민연금공단",
+    "personType": "insider",
+    "company": "LG이노텍",
+    "amount": 925007856510
+   },
+   {
+    "rank": 2,
+    "personId": "HD건설기계-국민연금공단",
+    "personName": "국민연금공단",
+    "personType": "insider",
+    "company": "HD건설기계",
+    "amount": 401404812269
+   },
+   {
+    "rank": 3,
+    "personId": "키움증권-국민연금공단",
+    "personName": "국민연금공단",
+    "personType": "insider",
+    "company": "키움증권",
+    "amount": 284780932577
+   },
+   {
+    "rank": 4,
+    "personId": "OCI홀딩스-국민연금공단",
+    "personName": "국민연금공단",
+    "personType": "insider",
+    "company": "OCI홀딩스",
+    "amount": 272271262595
+   },
+   {
+    "rank": 5,
+    "personId": "LS-국민연금공단",
+    "personName": "국민연금공단",
+    "personType": "insider",
+    "company": "LS",
+    "amount": 271065358624
+   },
+   {
+    "rank": 6,
+    "personId": "대덕전자-국민연금공단",
+    "personName": "국민연금공단",
+    "personType": "insider",
+    "company": "대덕전자",
+    "amount": 213129924161
+   },
+   {
+    "rank": 7,
+    "personId": "아이에이-디씨이",
+    "personName": "디씨이",
+    "personType": "insider",
+    "company": "아이에이",
+    "amount": 184004412115
+   },
+   {
+    "rank": 8,
+    "personId": "서진시스템-전동규",
+    "personName": "전동규",
+    "personType": "insider",
+    "company": "서진시스템",
+    "amount": 129250000000
+   },
+   {
+    "rank": 9,
+    "personId": "한전기술-국민연금공단",
+    "personName": "국민연금공단",
+    "personType": "insider",
+    "company": "한전기술",
+    "amount": 128012347495
+   },
+   {
+    "rank": 10,
+    "personId": "한솔케미칼-국민연금공단",
+    "personName": "국민연금공단",
+    "personType": "insider",
+    "company": "한솔케미칼",
+    "amount": 111128085280
+   },
+   {
+    "rank": 11,
+    "personId": "신세계-국민연금공단",
+    "personName": "국민연금공단",
+    "personType": "insider",
+    "company": "신세계",
+    "amount": 82484186781
+   },
+   {
+    "rank": 12,
+    "personId": "기가비스-이재곤",
+    "personName": "이재곤",
+    "personType": "insider",
+    "company": "기가비스",
+    "amount": 38301440000
+   },
+   {
+    "rank": 13,
+    "personId": "두올-프리미어성장전략엠앤에이사모투자",
+    "personName": "프리미어성장전략엠앤에이사모투자",
+    "personType": "insider",
+    "company": "두올",
+    "amount": 33373200000
+   },
+   {
+    "rank": 14,
+    "personId": "두올-조인회",
+    "personName": "조인회",
+    "personType": "insider",
+    "company": "두올",
+    "amount": 26981545800
+   },
+   {
+    "rank": 15,
+    "personId": "신한서부티엔디리츠-이지스자산운용",
+    "personName": "이지스자산운용",
+    "personType": "insider",
+    "company": "신한서부티엔디리츠",
+    "amount": 22172979413
+   },
+   {
+    "rank": 16,
+    "personId": "효성티앤씨-국민연금공단",
+    "personName": "국민연금공단",
+    "personType": "insider",
+    "company": "효성티앤씨",
+    "amount": 18380404297
+   },
+   {
+    "rank": 17,
+    "personId": "모티브링크-에스디와이",
+    "personName": "에스디와이",
+    "personType": "insider",
+    "company": "모티브링크",
+    "amount": 15503815800
+   },
+   {
+    "rank": 18,
+    "personId": "모티브링크-신동양홀딩스",
+    "personName": "신동양홀딩스",
+    "personType": "insider",
+    "company": "모티브링크",
+    "amount": 13544701200
+   },
+   {
+    "rank": 19,
+    "personId": "롯데관광개발-국민연금공단",
+    "personName": "국민연금공단",
+    "personType": "insider",
+    "company": "롯데관광개발",
+    "amount": 12729042625
+   },
+   {
+    "rank": 20,
+    "personId": "유진로봇-시만",
+    "personName": "시만",
+    "personType": "insider",
+    "company": "유진로봇",
+    "amount": 12703427730
+   }
+  ]
+ }
+}
