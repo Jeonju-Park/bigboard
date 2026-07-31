@@ -11,6 +11,7 @@ import { getDisclosures, getMeta, getPersons } from '@/lib/data'
 import { useAsync } from '@/lib/useData'
 import { toggleFollowPerson, useFollowedPersons } from '@/lib/follow'
 import { formatAmountShort, formatDate } from '@/lib/format'
+import { daysAgoKey, todayKey } from '@/lib/date'
 import homeStyles from './HomeScreen.module.css'
 import styles from './ExploreScreen.module.css'
 
@@ -32,8 +33,8 @@ export default function ExploreScreen() {
 
   const insight = useMemo(() => {
     if (!data) return null
-    const today = new Date().toISOString().slice(0, 10)
-    const cutoff30 = new Date(Date.now() - 30 * 86400000).toISOString().slice(0, 10)
+    const today = todayKey()
+    const cutoff30 = daysAgoKey(30)
     const actual = data.disclosures.filter((d) => !d.isPlanned)
 
     // ① 내부자 거래가 잦은 종목 — 공시 '건수' 기준 (거래량이 아니다)

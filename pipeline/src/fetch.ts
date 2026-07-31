@@ -49,8 +49,36 @@ const argv = process.argv.slice(2)
 const incremental = argv.includes('--incremental')
 const days = incremental ? 3 : Number(argv[argv.indexOf('--days') + 1]) || 30
 
-function ymd(d: Date) {
-  return d.toISOString().slice(0, 10).replace(/-/g, '')
+
+/**
+ * 날짜 유틸 — DART 공시일·거래일은 전부 **한국 날짜**다.
+ * toISOString 은 UTC 기준이라 서버(Actions 러너)가 UTC 로 돌면 조회 범위가 하루 어긋난다.
+ * 그래서 한국 시각으로 옮긴 뒤 날짜 부품을 읽는다.
+ */
+const KST_OFFSET_MIN = 9 * 60
+
+function kstDate(base: Date = new Date()): Date {
+  // 로컬 시간대와 무관하게 KST 벽시계 시각을 담은 Date 를 만든다
+  return new Date(base.getTime() + (KST_OFFSET_MIN + base.getTimezoneOffset()) * 60000)
+}
+
+const pad = (n: number) => String(n).padStart(2, '0')
+
+/** 'YYYY-MM-DD' (한국 날짜) */
+function dateKey(d: Date = kstDate()): string {
+  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`
+}
+
+/** n일 전 한국 날짜 'YYYY-MM-DD' */
+function daysAgoKey(days: number): string {
+  const d = kstDate()
+  d.setDate(d.getDate() - days)
+  return dateKey(d)
+}
+
+/** DART 조회용 'YYYYMMDD' (한국 날짜) */
+function ymd(d: Date = kstDate()) {
+  return dateKey(d).replace(/-/g, '')
 }
 
 // ── 방향 판정 ─────────────────────────────────────────────────────────────────
@@ -292,7 +320,7 @@ function personId(name: string, company: string): string {
 
 function derivePersons(list: Disclosure[]): Person[] {
   const map = new Map<string, Person>()
-  const cutoff = new Date(Date.now() - 365 * 86400000).toISOString().slice(0, 10)
+  const cutoff = daysAgoKey(365)
 
   for (const d of list) {
     if (d.isPlanned) continue // 계획은 아직 일어난 거래가 아니다
@@ -329,7 +357,7 @@ function deriveRankings(list: Disclosure[]): Rankings {
   const out: Rankings = { netBuy: { 7: [], 30: [], 90: [] }, netSell: { 7: [], 30: [], 90: [] } } as Rankings
 
   for (const period of periods) {
-    const cutoff = new Date(Date.now() - Number(period) * 86400000).toISOString().slice(0, 10)
+    const cutoff = daysAgoKey(Number(period))
     const net = new Map<string, { d: Disclosure; amount: number }>()
 
     for (const d of list) {
@@ -401,10 +429,9 @@ function deriveStocks(list: Disclosure[]): Stock[] {
 
 async function main() {
   requireKey()
-  const today = new Date()
-  const todayIso = today.toISOString().slice(0, 10)
-  const bgn = ymd(new Date(today.getTime() - days * 86400000))
-  const end = ymd(today)
+  const todayIso = dateKey()
+  const bgn = daysAgoKey(days).replace(/-/g, '')
+  const end = ymd()
 
   console.log(`\n빅보드 수집 — ${bgn} ~ ${end} (${days}일${incremental ? ', 증분' : ''})\n`)
 

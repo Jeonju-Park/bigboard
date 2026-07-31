@@ -1,13 +1,14 @@
 {
- "lastUpdated": "2026-07-31T14:05:17.651Z",
+ "lastUpdated": "2026-07-31T17:32:09.637Z",
  "sources": [
   "금융감독원 전자공시시스템(DART) OpenAPI — 임원·주요주주 특정증권등 소유상황보고서, 거래계획보고서"
  ],
  "counts": {
-  "disclosures": 2714,
-  "persons": 2221,
-  "stocks": 692
+  "disclosures": 2624,
+  "persons": 2154,
+  "stocks": 672
  },
+ "officialsAsOf": null,
  "priceDataAvailable": false,
  "skipped": {
   "total": 19,
@@ -16,6 +17,5 @@
    "변동일 파싱 실패": 3,
    "거래계획 철회됨": 4
   }
- },
- "officialsAsOf": null
+ }
 }

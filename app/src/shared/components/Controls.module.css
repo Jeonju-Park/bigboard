@@ -154,25 +154,26 @@
   font-weight: 600;
 }
 
-/* ── 정렬 바 — 리스트 바로 위에 건수 + 정렬 드롭다운 ──
-   바 자체는 얇게 둔다. 44pt 터치 타깃은 안쪽 버튼이 책임지고,
-   버튼의 위아래 여백은 음수 마진으로 흡수해 바 높이를 키우지 않는다. */
+/* ── 정렬 바 — 필터 칩 줄과 같은 묶음에 들어간다.
+   행 자체는 글자 높이만큼만 차지하고, 44pt 터치 타깃은 안쪽 버튼이 책임진다.
+   버튼이 넘치는 만큼은 음수 마진으로 흡수해 줄 간격을 키우지 않는다. */
 .sortBar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: var(--space-3);
-  min-height: var(--space-6);
-  /* 버튼이 넘치는 만큼(양쪽 10px) 되당겨 실제 차지 높이를 24px 로 맞춘다 */
-  margin-block: calc((var(--touch-min) - var(--space-6)) / -2);
+  /* 글자 높이만큼만 차지한다. 부모(.controls)의 12px 간격이 그대로 살아 있어야 하므로
+     음수 마진은 바가 아니라 **버튼**에 준다 — 바에 주면 부모 gap 을 상쇄해 버린다. */
+  min-height: var(--space-5);
 }
 
 .sortButton {
   display: inline-flex;
   align-items: center;
   gap: var(--space-1);
-  /* 터치 타깃은 유지하되 바 높이에는 반영되지 않는다 */
+  /* 44pt 터치 타깃은 유지하되, 넘치는 높이는 음수 마진으로 흡수해 줄을 밀지 않는다 */
   min-height: var(--touch-min);
+  margin-block: calc((var(--touch-min) - var(--space-5)) / -2);
   padding-inline: var(--space-2);
   margin-inline-end: calc(var(--space-2) * -1);
   border: 0;

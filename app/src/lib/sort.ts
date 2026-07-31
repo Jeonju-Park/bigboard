@@ -6,6 +6,7 @@
  *    금액을 모르는 건은 **항상 뒤로** 보낸다.
  */
 import type { Disclosure } from './types'
+import { daysAgoKey } from './date'
 
 export const SORT_OPTIONS = [
   { value: 'recent', label: '최신순', note: '공시일 기준' },
@@ -36,7 +37,7 @@ export function sortLabel(s: SortKey): string {
 export function filterByPeriod<T extends { discloseDate: string }>(list: T[], period: PeriodKey): T[] {
   if (period === 'all') return list
   const days = Number(period)
-  const cutoff = new Date(Date.now() - (days - 1) * 86400000).toISOString().slice(0, 10)
+  const cutoff = daysAgoKey(days - 1)
   return list.filter((d) => d.discloseDate >= cutoff)
 }
 

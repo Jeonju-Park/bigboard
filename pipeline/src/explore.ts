@@ -33,8 +33,11 @@ function save(name: string, data: unknown) {
 }
 
 /** yyyymmdd */
+/** DART 조회용 'YYYYMMDD' (한국 날짜). UTC 로 만들면 하루 어긋난다 */
 function ymd(d: Date): string {
-  return d.toISOString().slice(0, 10).replace(/-/g, '')
+  const k = new Date(d.getTime() + (9 * 60 + d.getTimezoneOffset()) * 60000)
+  const p = (n: number) => String(n).padStart(2, '0')
+  return `${k.getFullYear()}${p(k.getMonth() + 1)}${p(k.getDate())}`
 }
 
 const today = new Date()

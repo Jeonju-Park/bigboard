@@ -18,6 +18,7 @@ import { useAsync } from '@/lib/useData'
 import { pushRecent, toggleFollowPerson, useBroker, useFollowedPersons } from '@/lib/follow'
 import { brokerActionLabel, brokerHref, findBroker } from '@/lib/broker'
 import { personKey } from '@/lib/keys'
+import { daysAgoKey } from '@/lib/date'
 import {
   daysBetween,
   formatAmountFull,
@@ -50,7 +51,7 @@ export default function FeedDetailScreen() {
   // 같은 인물의 다른 거래 / 같은 종목의 내부자 동향
   const context = useMemo(() => {
     if (!data || !d) return null
-    const cutoff90 = new Date(Date.now() - 90 * 86400000).toISOString().slice(0, 10)
+    const cutoff90 = daysAgoKey(90)
     const samePerson = data.disclosures.filter(
       (x) => x.personName === d.personName && x.company === d.company && x.id !== d.id,
     )

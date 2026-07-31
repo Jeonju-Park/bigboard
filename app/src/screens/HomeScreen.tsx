@@ -17,6 +17,7 @@ import {
   unknownAmountCount, type PeriodKey, type SortKey,
 } from '@/lib/sort'
 import type { Disclosure } from '@/lib/types'
+import { todayKey } from '@/lib/date'
 import styles from './HomeScreen.module.css'
 
 const SEGMENTS = [
@@ -80,7 +81,7 @@ export default function HomeScreen() {
    */
   const groups = useMemo(() => {
     if (sort !== 'recent') return [{ date: 'all', label: null as string | null, items: visible }]
-    const todayIso = new Date().toISOString().slice(0, 10)
+    const todayIso = todayKey()
     const map = new Map<string, Disclosure[]>()
     for (const d of visible) {
       if (!map.has(d.discloseDate)) map.set(d.discloseDate, [])
@@ -112,6 +113,9 @@ export default function HomeScreen() {
             bare
           />
         </div>
+        {state === 'ready' && !isEmpty && (
+          <SortBar count={filtered.length} sortLabel={sortLabel(sort)} onOpenSort={() => setSheet('sort')} />
+        )}
       </div>
 
       {data?.meta && <StaleBanner lastUpdated={data.meta.lastUpdated} />}
@@ -139,8 +143,6 @@ export default function HomeScreen() {
 
       {state === 'ready' && !isEmpty && (
         <div className={styles.list}>
-          <SortBar count={filtered.length} sortLabel={sortLabel(sort)} onOpenSort={() => setSheet('sort')} />
-
           {unknownCount > 0 && (
             <p className="ty-micro" style={{ margin: 0 }}>
               단가가 공시되지 않은 {unknownCount.toLocaleString()}건은 금액을 알 수 없어 맨 뒤에 두었습니다

@@ -25,6 +25,31 @@
   cursor: pointer;
 }
 
+/* 안내 문구 — 월 달력에서만. 격자 바로 위에 붙인다 */
+.hint {
+  margin: 0;
+}
+
+/* 접힌 상태의 주간 스트립 — 월 격자와 같은 셀을 7칸으로 */
+.strip {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--space-1);
+}
+
+/* 월 제목을 눌러 월 달력으로 되돌아간다 */
+.monthTitle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  min-height: var(--touch-min);
+  padding-inline: var(--space-2);
+  border: 0;
+  background: none;
+  color: var(--ink);
+  cursor: pointer;
+}
+
 .weekHead,
 .grid {
   display: grid;
