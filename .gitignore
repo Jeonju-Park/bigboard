@@ -20,3 +20,6 @@ pipeline/.explore/
 
 # 원문 캐시 (재실행 비용을 0으로 만들지만 커밋하진 않는다)
 pipeline/.cache/
+
+# 공직자 원본 자료 (유저가 내려받아 넣는 파일 — 커밋하지 않는다)
+pipeline/data/

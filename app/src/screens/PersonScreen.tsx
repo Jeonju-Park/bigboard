@@ -4,6 +4,7 @@ import Screen from '@/shared/components/Screen'
 import PersonAvatar from '@/shared/components/PersonAvatar'
 import BookmarkButton from '@/shared/components/BookmarkButton'
 import { PersonTypeBadge } from '@/shared/components/Rows'
+import AssetHistory from '@/shared/components/AssetHistory'
 import { Promote } from '@/shared/components/Num'
 import {
   Disclaimer, EmptyState, ErrorState, FreshnessLabel, LoadingState, SectionHeader,
@@ -109,11 +110,26 @@ export default function PersonScreen() {
       )}
 
       {isOfficial && (
-        <section className={styles.noticeBox}>
-          <p className="ty-body-s" style={{ margin: 0 }}>
-            고위공직자 재산은 <b>연 1회</b>만 공개됩니다. 실시간 거래 내역이 아니라{' '}
-            {asOf ? <b>{formatDate(asOf)}</b> : '공개 시점'} 기준의 신고 자료입니다.
-          </p>
+        <section>
+          <SectionHeader
+            title="재산공개 연혁"
+            note={person.officialAssets?.length ? `${person.officialAssets.length}개 연도` : undefined}
+          />
+          {person.officialAssets?.length ? (
+            <AssetHistory years={person.officialAssets} />
+          ) : (
+            <p className="ty-body-s" style={{ margin: 0 }}>공개된 재산 자료가 아직 없습니다.</p>
+          )}
+          <div className={styles.noticeBox} style={{ marginTop: 'var(--space-4)' }}>
+            <p className="ty-body-s" style={{ margin: 0 }}>
+              고위공직자 재산은 <b>연 1회</b>만 공개됩니다. 실시간 거래 내역이 아니라{' '}
+              {asOf ? <b>{formatDate(asOf)} 기준</b> : '공개 시점 기준'}의 신고 자료이며, 그 사이의
+              매매 시점은 공개되지 않습니다.
+            </p>
+            {person.sourceNote && (
+              <p className="ty-micro" style={{ margin: 'var(--space-2) 0 0' }}>출처: {person.sourceNote}</p>
+            )}
+          </div>
         </section>
       )}
 

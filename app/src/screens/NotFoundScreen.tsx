@@ -7,7 +7,7 @@ export default function NotFoundScreen() {
       <p className="ty-body" style={{ margin: 0 }}>
         요청하신 화면이 없습니다.
       </p>
-      <Link to="/home" className="ty-label">
+      <Link to="/home" className="ty-label tap-safe">
         홈으로 가기
       </Link>
     </Screen>

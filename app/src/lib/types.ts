@@ -65,6 +65,18 @@ export interface PersonHolding {
   quantity: number
 }
 
+/** 공직자 재산공개 1개 연도 — 연 1회 공개라 연도가 곧 기준시점이다 */
+export interface OfficialAssetYear {
+  /** 공개 연도 (예: 2026) */
+  year: number
+  /** 재산 신고 기준일 (ISO). 보통 전년 12월 31일 */
+  asOf: string
+  /** 신고 총재산(원) */
+  totalAssets: number
+  /** 그 중 주식 평가액(원). 자료에 없으면 null */
+  stockValue: number | null
+}
+
 export interface Person {
   id: string
   name: string
@@ -72,6 +84,15 @@ export interface Person {
   title: string
   company: string
   holdings: PersonHolding[]
+  /**
+   * 공직자만 채워진다. 재산공개는 **연 1회**이므로 화면은 반드시 기준일을 함께 보여준다(규칙 2).
+   * 내부자는 빈 배열.
+   */
+  officialAssets?: OfficialAssetYear[]
+  /** 공직자의 직위·소속기관 (예: 국회의원, OO부 장관) */
+  officialOffice?: string
+  /** 이 인물 자료의 출처 표기 — 실명 데이터라 개인 단위로 추적 가능해야 한다 */
+  sourceNote?: string
   /** 최근 12개월 누적 순매수(원). 파생 집계이므로 화면에 "집계 기준" 문구를 병기한다 */
   totalNetBuy12m: number
 }

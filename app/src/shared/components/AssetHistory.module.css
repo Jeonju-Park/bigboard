@@ -1,0 +1,79 @@
+/* 재산공개 연혁 — 연 1회 관측이라 막대로 '점'을 찍는다(선으로 잇지 않는다) */
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.bars {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-3);
+  /* 막대 높이 — 토큰 조합 */
+  height: calc(var(--space-12) * 3);
+}
+
+.col {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  height: 100%;
+}
+
+.value {
+  white-space: nowrap;
+}
+
+.track {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* 데이터 그래픽에는 coral-300 만 쓴다 — coral-500 은 매수 레드와 뭉친다(§2) */
+.total {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  background: var(--gray-200);
+  border-radius: var(--radius-field);
+  overflow: hidden;
+}
+
+.stock {
+  width: 100%;
+  background: var(--brand-data);
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.swatchTotal,
+.swatchStock {
+  display: inline-block;
+  width: var(--space-3);
+  height: var(--space-2);
+  border-radius: var(--radius-field);
+}
+
+.swatchTotal {
+  background: var(--gray-200);
+}
+
+.swatchStock {
+  background: var(--brand-data);
+  margin-inline-start: var(--space-2);
+}

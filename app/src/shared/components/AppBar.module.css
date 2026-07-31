@@ -8,11 +8,12 @@
   display: flex;
   align-items: center;
   gap: var(--space-2);
-  height: var(--appbar-height);
-  padding-inline: var(--gutter-screen);
-  /* 노치·상태바 영역은 56pt 위에 더한다 */
+  /* 56pt 는 헤어라인을 **포함한** 높이다(border-box).
+     노치·상태바 영역은 그 위에 더한다 — 안전영역이 0 인 데스크톱에서 정확히 56 이 된다. */
+  box-sizing: border-box;
+  height: calc(var(--appbar-height) + env(safe-area-inset-top));
   padding-top: env(safe-area-inset-top);
-  box-sizing: content-box;
+  padding-inline: var(--gutter-screen);
   background: var(--bg-primary);
   border-bottom: var(--hairline);
 }
