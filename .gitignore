@@ -14,3 +14,9 @@ assets/figma-exports/raw/
 
 # 생성물 — tokens.ts 에서 자동 생성되므로 커밋하지 않는다
 app/src/theme/tokens.generated.css
+
+# 탐색 단계의 원본 샘플 (커밋하지 않음)
+pipeline/.explore/
+
+# 원문 캐시 (재실행 비용을 0으로 만들지만 커밋하진 않는다)
+pipeline/.cache/
