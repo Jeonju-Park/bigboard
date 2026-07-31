@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>빅보드 — 코랄 시안</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy.css" type="text/css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --white:#FFFFFF; --sec:#F6F7F8;
+  --g200:#E9EBED; --g300:#D6DADD; --g400:#B0B6BC; --g500:#8A9199;
+  --g600:#5F666E; --g700:#3F454C; --g800:#26292E; --ink:#17191C;
+  --c50:#FFF1ED; --c100:#FFE2DA; --c200:#FFCCBE; --c300:#FFAC98; --c400:#FF8F74; --c500:#FF7355;
+  --buy:#D93B3B; --sell:#2563A8;
+  --fd:'Paperlogy','Pretendard',sans-serif;
+  --fb:'Pretendard',-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo',sans-serif;
+  --fn:'IBM Plex Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-font-smoothing:antialiased}
+body{font-family:var(--fb);background:#fff;color:var(--g800);font-size:15px;line-height:1.5}
+.page{max-width:1280px;margin:0 auto;padding:44px 20px 100px}
+h1.t{font-family:var(--fd);font-size:24px;font-weight:800;color:var(--ink);letter-spacing:-.02em;line-height:1.25}
+.sub{font-size:13px;color:var(--g500);margin-top:6px}
+.sec{margin-top:52px}
+.st{font-size:17px;font-weight:600;color:var(--ink)}
+.sd{font-size:13px;color:var(--g500);margin-top:5px;margin-bottom:20px;max-width:850px;line-height:1.75}
+.hr{height:1px;background:var(--g200);margin-top:44px}
+.note{font-size:11px;color:var(--g400);margin-top:12px;line-height:1.75}
+.pill{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:999px;background:var(--c500);color:var(--ink)}
+
+.scale{display:grid;grid-template-columns:repeat(8,1fr);gap:6px}
+@media(max-width:900px){.scale{grid-template-columns:repeat(4,1fr)}}
+.sw{border-radius:10px;overflow:hidden;border:1px solid var(--g200)}
+.sw b{display:block;height:66px}
+.sw .m{padding:8px 9px}
+.sw .n{font-size:10px;font-weight:700;color:var(--ink)}
+.sw .h{font-size:9px;color:var(--g500);font-family:var(--fn);margin-top:2px}
+.sw .u{font-size:9px;color:var(--g400);margin-top:3px;line-height:1.4}
+.ratio{display:flex;height:36px;border-radius:8px;overflow:hidden;margin-top:16px;font-size:10px}
+.ratio div{display:flex;align-items:center;justify-content:center}
+
+.phones{display:flex;gap:22px;flex-wrap:wrap;align-items:flex-start}
+.ph{width:332px;flex:none;border-radius:26px;overflow:hidden;border:1px solid var(--g200);background:#fff}
+.cap{font-size:11px;color:var(--g500);margin-top:9px;text-align:center;width:332px}
+
+.bar{display:flex;align-items:center;gap:9px;padding:15px 18px 11px;background:#fff}
+.wm{font-family:var(--fd);font-weight:800;font-size:18px;color:var(--ink);letter-spacing:-.02em;line-height:1}
+.bar .sp{margin-left:auto;display:flex;gap:8px}
+.bar .ic{width:28px;height:28px;border-radius:999px;background:var(--sec)}
+
+.hero{background:var(--c500);margin:4px 12px 0;border-radius:20px;padding:18px 18px 20px;color:var(--ink)}
+.hero .k{font-size:11px;font-weight:700;letter-spacing:.06em;opacity:.68;text-transform:uppercase}
+.hero .big{font-family:var(--fn);font-weight:700;font-size:58px;line-height:.94;letter-spacing:-.045em;margin-top:8px;font-variant-numeric:tabular-nums}
+.hero .u{font-size:13px;margin-top:9px;line-height:1.55;opacity:.82}
+.hero .row{display:flex;gap:7px;margin-top:15px}
+.hero .kpi{flex:1;background:rgba(255,255,255,.55);border-radius:12px;padding:9px 10px}
+.hero .kpi .l{font-size:10px;color:var(--g700)}
+.hero .kpi .v{font-family:var(--fn);font-size:16px;font-weight:600;margin-top:3px;color:var(--ink)}
+
+.tick{background:var(--sec);margin:12px 12px 0;border-radius:999px;padding:8px 14px;display:flex;align-items:center;gap:8px;white-space:nowrap;overflow:hidden}
+.tick .d{width:5px;height:5px;border-radius:50%;background:var(--c500);flex:none}
+.tick .t{font-family:var(--fn);font-size:11px;color:var(--g600);font-variant-numeric:tabular-nums}
+
+.seg{display:flex;gap:6px;padding:15px 18px 0}
+.seg span{font-size:13px;font-weight:600;color:var(--g500);padding:7px 14px;border-radius:999px;background:var(--sec)}
+.seg span.on{background:var(--c500);color:var(--ink)}
+.chips{display:flex;gap:6px;padding:11px 18px 2px}
+.chips span{font-size:12px;padding:5px 11px;border-radius:999px;border:1px solid var(--g200);color:var(--g600);white-space:nowrap}
+.chips span.on{background:var(--c100);border-color:var(--c200);color:var(--ink);font-weight:600}
+
+.feed{padding:12px 18px 8px}
+.card{padding:15px 0;border-bottom:1px solid var(--g200)}
+.card:last-child{border-bottom:0}
+.card .top{display:flex;align-items:center;gap:9px}
+.av{width:34px;height:34px;border-radius:999px;background:var(--c100);color:var(--ink);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex:none}
+.card .nm{font-size:15px;font-weight:600;color:var(--ink)}
+.card .mt{font-size:12px;color:var(--g500);margin-top:2px}
+.tag{margin-left:auto;font-size:11px;font-weight:600;padding:4px 9px;border-radius:999px}
+.tag.s{background:#EDF3F9;color:var(--sell)}
+.tag.b{background:#FBEEEE;color:var(--buy)}
+.card .ln{font-size:15px;color:var(--g800);margin-top:11px;line-height:1.6}
+.card .ln b{font-family:var(--fn);font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums;font-size:14px}
+.sum{display:flex;align-items:baseline;gap:6px;margin-top:10px}
+.sum .v{font-family:var(--fn);font-size:22px;font-weight:700;color:var(--ink);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.sum .l{font-size:11px;color:var(--g500)}
+.card .ft{display:flex;align-items:center;margin-top:11px}
+.mi{font-size:11px;color:var(--g400)}
+.card .wh{margin-left:auto;font-family:var(--fn);font-size:11px;color:var(--g400)}
+
+.tab{display:flex;padding:8px 10px 13px;border-top:1px solid var(--g200);background:#fff}
+.tab .i{flex:1;text-align:center;font-size:10px;color:var(--g400)}
+.tab .i i{display:block;width:34px;height:24px;border-radius:999px;margin:0 auto 5px;position:relative}
+.tab .i i::after{content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:16px;height:16px;border-radius:5px;background:var(--g300)}
+.tab .i.on{color:var(--ink);font-weight:700}
+.tab .i.on i{background:var(--c500)}
+.tab .i.on i::after{background:var(--ink)}
+
+.rh{padding:16px 18px 2px}
+.rh .k{font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--g500);text-transform:uppercase}
+.rh .h{font-family:var(--fd);font-size:24px;font-weight:800;color:var(--ink);letter-spacing:-.02em;margin-top:6px;line-height:1.2}
+.win{background:var(--c500);border-radius:18px;margin:14px 12px 0;padding:15px 16px;color:var(--ink)}
+.win .l{font-size:11px;font-weight:700;opacity:.66}
+.win .n{font-size:16px;font-weight:700;margin-top:5px}
+.win .v{font-family:var(--fn);font-size:36px;font-weight:700;letter-spacing:-.035em;line-height:1;margin-top:6px;font-variant-numeric:tabular-nums}
+.rt{display:flex;gap:6px;padding:14px 18px 4px}
+.rt span{font-size:12px;font-weight:600;padding:6px 13px;border-radius:999px;background:var(--sec);color:var(--g600)}
+.rt span.on{background:var(--c500);color:var(--ink)}
+.rl{padding:6px 18px 12px}
+.rr{display:flex;align-items:center;gap:10px;padding:11px 0;border-bottom:1px solid var(--g200)}
+.rr:last-child{border-bottom:0}
+.rn{width:16px;font-family:var(--fn);font-size:13px;font-weight:700;color:var(--g400)}
+.rn.one{color:var(--ink)}
+.rnm{flex:0 0 74px;font-size:13px;color:var(--g800);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rb{flex:1;height:16px;background:var(--sec);border-radius:3px;overflow:hidden}
+.rb i{display:block;height:100%;background:var(--g300)}
+.rb.w i{background:var(--c300)}
+.ra{flex:0 0 62px;text-align:right;font-family:var(--fn);font-size:13px;font-weight:600}
+.ra.b{color:var(--buy)} .ra.s{color:var(--sell)}
+
+.lh{background:var(--c500);padding:24px 20px 26px;min-height:292px;display:flex;flex-direction:column;color:var(--ink)}
+.lh .w{font-family:var(--fd);font-weight:800;font-size:19px;letter-spacing:-.02em}
+.lh .cl{font-family:var(--fd);font-size:33px;font-weight:800;line-height:1.16;letter-spacing:-.03em;margin-top:auto}
+.lh .sb{font-size:14px;margin-top:12px;line-height:1.6;opacity:.82}
+.cta{margin-top:18px;background:var(--ink);color:#fff;border-radius:999px;padding:14px;text-align:center;font-size:15px;font-weight:700}
+.lb{padding:18px 20px}
+.lr{display:flex;gap:12px;padding:13px 0;border-bottom:1px solid var(--g200)}
+.lr:last-child{border-bottom:0}
+.lr .n{font-family:var(--fn);font-size:12px;font-weight:700;color:var(--c500);flex:0 0 22px}
+.lr .tt{font-size:14px;font-weight:600;color:var(--ink)}
+.lr .ss{font-size:12px;color:var(--g500);margin-top:2px}
+
+.icons{display:flex;gap:18px;align-items:flex-end;flex-wrap:wrap}
+.ai{width:64px;height:64px;border-radius:15px;display:flex;align-items:center;justify-content:center}
+.icl{font-size:10px;color:var(--g400);text-align:center;margin-top:6px;font-family:var(--fn)}
+
+table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
+th,td{text-align:left;padding:9px;border-bottom:1px solid var(--g200)}
+th{font-size:11px;color:var(--g500);font-weight:600}
+td.n{font-family:var(--fn);font-variant-numeric:tabular-nums}
+.good{color:#1F7A4D;font-weight:700} .bad{color:var(--buy);font-weight:700}
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:820px){.cmp{grid-template-columns:1fr}}
+.box{border:1px solid var(--g200);border-radius:12px;padding:16px 18px}
+.box h4{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:10px}
+.old .ln2{font-size:15px;color:var(--g800);line-height:2}
+.old .mkold{background:#FFD0BD;color:var(--ink);font-weight:600;padding:2px 5px;border-radius:4px;font-family:var(--fn);font-size:14px}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div style="display:flex;align-items:center;gap:11px">
+    <svg width="32" height="32" viewBox="0 0 40 40"><rect x="2" y="7" width="36" height="26" rx="6" fill="#FF7355"/><rect x="7" y="13" width="9" height="6" rx="1.5" fill="#17191C"/><rect x="19" y="13" width="9" height="6" rx="1.5" fill="#17191C" opacity=".3"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#17191C" opacity=".3"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#17191C" opacity=".3"/></svg>
+    <div><h1 class="t">빅보드 — 코랄 #FF7355</h1>
+    <div class="sub">2026-07-31 · 텍스트 하이라이트 전면 제거 · ink는 글자 색으로만</div></div>
+  </div>
+
+  <!-- 하이라이트 제거 -->
+  <div class="sec">
+    <div class="st">1. 하이라이트를 없앤 자리 — 강조 체계 교체</div>
+    <p class="sd">마커가 사라지면 bx §3의 강조 규칙("weight 600 + marker 하이라이트")이 절반만 남는다. 대신 <b>총액을 별도 줄로 승격</b>시키고 숫자는 IBM Plex Mono의 굵기와 크기로만 세운다. 문장 안에서는 색도 배경도 쓰지 않는다.</p>
+    <div class="cmp">
+      <div class="box old">
+        <h4 style="color:var(--g500)">이전 — 문장 안 하이라이트</h4>
+        <div class="ln2">보통주 <span class="mkold">12,000주</span>를 주당 <span class="mkold">61,200원</span>에, 총 <span class="mkold">7억 3,440만원</span>.</div>
+        <p class="note">한 문장에 강조가 셋. 시선이 세 번 끊기고, 정작 제일 중요한 총액이 나머지와 같은 무게다.</p>
+      </div>
+      <div class="box">
+        <h4>확정 — 승격 + 서체 대비</h4>
+        <div class="ln">보통주 <b>12,000주</b>를 주당 <b>61,200원</b>에 매도.</div>
+        <div class="sum"><span class="v">7억 3,440만원</span><span class="l">총액</span></div>
+        <p class="note">본문 숫자는 Mono 600 + ink로만 구분한다. 총액은 문장에서 빼내 22px Mono 700으로 세운다. 색은 하나도 쓰지 않았는데 위계가 더 명확하다.</p>
+      </div>
+    </div>
+    <p class="note">새 강조 규칙 — <b>본문 안에서는 Numeric 서체 + weight 600 + ink</b>가 최대치다. 배경·색·밑줄·크기 키우기 전부 금지. 더 강조해야 하면 그 값은 문장 밖으로 승격시킨다.</p>
+  </div>
+
+  <div class="hr"></div>
+
+  <!-- 팔레트 -->
+  <div class="sec">
+    <div class="st">2. 팔레트</div>
+    <p class="sd"><b>coral-500 #FF7355</b>가 브랜드 기본이다. 면으로만 쓰고 그 위에 ink를 얹는다 — 흰 배경 위 대비가 2.68이라 선·아이콘·테두리로는 쓸 수 없다. ink는 브랜드 컬러가 아니라 글자·아이콘 색이다.</p>
+    <div class="scale">
+      <div class="sw"><b style="background:var(--c50)"></b><div class="m"><div class="n">coral-50</div><div class="h">#FFF1ED</div><div class="u">아주 연한 면</div></div></div>
+      <div class="sw"><b style="background:var(--c100)"></b><div class="m"><div class="n">coral-100</div><div class="h">#FFE2DA</div><div class="u">칩·아바타</div></div></div>
+      <div class="sw"><b style="background:var(--c200)"></b><div class="m"><div class="n">coral-200</div><div class="h">#FFCCBE</div><div class="u">선택 상태</div></div></div>
+      <div class="sw"><b style="background:var(--c300)"></b><div class="m"><div class="n">coral-300</div><div class="h">#FFAC98</div><div class="u">★ 1위 바 (데이터)</div></div></div>
+      <div class="sw"><b style="background:var(--c400)"></b><div class="m"><div class="n">coral-400</div><div class="h">#FF8F74</div><div class="u">호버</div></div></div>
+      <div class="sw" style="border-color:var(--ink);border-width:2px"><b style="background:var(--c500)"></b><div class="m"><div class="n">coral-500 ★</div><div class="h">#FF7355</div><div class="u">브랜드 기본</div></div></div>
+      <div class="sw"><b style="background:var(--ink)"></b><div class="m"><div class="n">ink</div><div class="h">#17191C</div><div class="u">글자·아이콘</div></div></div>
+      <div class="sw"><b style="background:var(--buy);height:33px"></b><b style="background:var(--sell);height:33px"></b><div class="m"><div class="n">시맨틱</div><div class="h">#D93B3B / #2563A8</div><div class="u">매수 / 매도</div></div></div>
+    </div>
+    <div class="ratio">
+      <div style="background:#FFFFFF;flex:60;border:1px solid var(--g200);color:var(--g500)">bg-primary 60</div>
+      <div style="background:#F6F7F8;flex:28;color:var(--g500)">secondary 28</div>
+      <div style="background:#FF7355;flex:12;color:var(--ink)">coral 12</div>
+    </div>
+    <p class="note">coral-500 위 ink 텍스트 대비 6.57 — 본문 크기까지 AA 통과. 흰 글자는 2.68이라 <b>coral 면 위에 흰 글자를 쓰지 않는다.</b></p>
+  </div>
+
+  <div class="hr"></div>
+
+  <!-- 충돌 -->
+  <div class="sec">
+    <div class="st">3. 짚어둘 충돌 — 매수 레드</div>
+    <p class="sd">#FF7355와 매수 레드 #D93B3B의 색차는 <b>dE 18.7</b>이다. 진한 탠저린(22.9)보다도 가깝다. 하이라이트가 사라져 본문에서는 문제가 없지만, 랭킹 화면에서 1위 바와 매수 금액이 한 행에 서면 뭉친다.</p>
+    <table>
+      <tr><th>해법</th><th>내용</th><th>dE</th><th>비고</th></tr>
+      <tr><td><b>채택 — 데이터 그래픽은 coral-300</b></td><td>1위 바에 coral-500 대신 <b>coral-300 #FFAC98</b>을 쓴다. coral-500은 히어로·CTA·로고·활성 상태 등 <b>브랜드 면에만</b>.</td><td class="n good">45.4</td><td>시맨틱 레드를 건드리지 않는다</td></tr>
+      <tr><td>대안 A</td><td>매수 레드를 와인 #A31B3C로 교체</td><td class="n good">38.9</td><td>국장 관습은 유지되나 어두워진다</td></tr>
+      <tr><td>대안 B</td><td>랭킹 금액을 ink로 통일하고 부호로만 방향 표시</td><td>—</td><td>시맨틱 규칙(§2)을 화면별로 예외 처리해야 함</td></tr>
+    </table>
+    <p class="note">아래 목업은 채택안을 적용했다 — <b>코랄은 브랜드 색, 데이터 그래픽은 그 연한 단계</b>라는 분리가 규칙이 된다.</p>
+  </div>
+
+  <div class="hr"></div>
+
+  <!-- 화면 -->
+  <div class="sec">
+    <div class="st">4. 적용 화면 <span class="pill">하이라이트 0 · 검은 면 0</span></div>
+    <div class="phones">
+
+      <div>
+      <div class="ph">
+        <div class="bar"><svg width="22" height="22" viewBox="0 0 40 40"><rect x="2" y="7" width="36" height="26" rx="6" fill="#FF7355"/><rect x="7" y="13" width="9" height="6" rx="1.5" fill="#17191C"/><rect x="19" y="13" width="9" height="6" rx="1.5" fill="#17191C" opacity=".3"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#17191C" opacity=".3"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#17191C" opacity=".3"/></svg><span class="wm">빅보드</span><span class="sp"><span class="ic"></span><span class="ic"></span></span></div>
+        <div class="hero">
+          <div class="k">오늘 공시</div>
+          <div class="big">37</div>
+          <div class="u">내부자 거래 37건이 오늘 판에 올랐습니다.</div>
+          <div class="row">
+            <div class="kpi"><div class="l">매수</div><div class="v">14건</div></div>
+            <div class="kpi"><div class="l">매도</div><div class="v">23건</div></div>
+            <div class="kpi"><div class="l">예고</div><div class="v">D-6</div></div>
+          </div>
+        </div>
+        <div class="tick"><span class="d"></span><span class="t">09:41 OO전자 김OO 매도 7.3억 · OO바이오 이OO 매수 2.1억</span></div>
+        <div class="seg"><span class="on">속보</span><span>팔로우</span></div>
+        <div class="chips"><span class="on">전체</span><span>매수</span><span>매도</span><span>대형</span><span>예고</span></div>
+        <div class="feed">
+          <div class="card">
+            <div class="top"><span class="av">김</span><div><div class="nm">김OO · 대표이사</div><div class="mt">OO전자</div></div><span class="tag s">매도</span></div>
+            <div class="ln">보통주 <b>12,000주</b>를 주당 <b>61,200원</b>에 매도.</div>
+            <div class="sum"><span class="v">7억 3,440만원</span><span class="l">총액</span></div>
+            <div class="ft"><span class="mi">3거래일 만인데 말이죠,</span><span class="wh">07.31</span></div>
+          </div>
+          <div class="card">
+            <div class="top"><span class="av">이</span><div><div class="nm">이OO · 사내이사</div><div class="mt">OO바이오</div></div><span class="tag b">매수</span></div>
+            <div class="ln">보통주 <b>4,500주</b>를 주당 <b>47,800원</b>에 매수.</div>
+            <div class="sum"><span class="v">2억 1,510만원</span><span class="l">총액</span></div>
+            <div class="ft"><span class="mi">취임 후 첫 장내 매수입니다,</span><span class="wh">07.31</span></div>
+          </div>
+        </div>
+        <div class="tab"><div class="i on"><i></i>속보</div><div class="i"><i></i>탐색</div><div class="i"><i></i>예고</div><div class="i"><i></i>보드</div><div class="i"><i></i>마이</div></div>
+      </div>
+      <div class="cap">S1 속보 — 총액 승격, 문장 안 강조 없음</div>
+      </div>
+
+      <div>
+      <div class="ph">
+        <div class="rh"><div class="k">7일 순매수</div><div class="h">이번 주 보드</div></div>
+        <div class="win"><div class="l">1위</div><div class="n">OO전자</div><div class="v">+842억</div></div>
+        <div class="rt"><span class="on">7일</span><span>30일</span><span>90일</span></div>
+        <div class="rl">
+          <div class="rr"><div class="rn one">1</div><div class="rnm">OO전자</div><div class="rb w"><i style="width:100%"></i></div><div class="ra b">+842억</div></div>
+          <div class="rr"><div class="rn">2</div><div class="rnm">OO바이오</div><div class="rb"><i style="width:61%"></i></div><div class="ra b">+514억</div></div>
+          <div class="rr"><div class="rn">3</div><div class="rnm">OO화학</div><div class="rb"><i style="width:44%"></i></div><div class="ra b">+371억</div></div>
+          <div class="rr"><div class="rn">4</div><div class="rnm">OO건설</div><div class="rb"><i style="width:38%"></i></div><div class="ra s">-322억</div></div>
+          <div class="rr"><div class="rn">5</div><div class="rnm">OO에너지</div><div class="rb"><i style="width:29%"></i></div><div class="ra s">-244억</div></div>
+          <div class="rr"><div class="rn">6</div><div class="rnm">OO소재</div><div class="rb"><i style="width:21%"></i></div><div class="ra s">-178억</div></div>
+        </div>
+        <div style="padding:0 18px 14px"><span class="mi">1위는 아직 개표 중입니다만,</span></div>
+        <div class="tab"><div class="i"><i></i>속보</div><div class="i"><i></i>탐색</div><div class="i"><i></i>예고</div><div class="i on"><i></i>보드</div><div class="i"><i></i>마이</div></div>
+      </div>
+      <div class="cap">S7 보드 — 1위 바는 coral-300(데이터), 히어로는 coral-500(브랜드)</div>
+      </div>
+
+      <div>
+      <div class="ph">
+        <div class="lh">
+          <div class="w">빅보드</div>
+          <div class="cl">내부자보다<br>늦게 알지 말자</div>
+          <div class="sb">임원이 사고팔면 5일 안에, 대형 거래는 30일 전에.<br>전광판에 다 뜹니다.</div>
+          <div class="cta">사전예약하기</div>
+        </div>
+        <div class="lb">
+          <div class="lr"><span class="n">01</span><div><div class="tt">공시 원문을 한 장 카드로</div><div class="ss">누가 · 얼마에 · 몇 주 · 총 얼마</div></div></div>
+          <div class="lr"><span class="n">02</span><div><div class="tt">30일 사전공시 캘린더</div><div class="ss">예고된 대량 거래를 미리 본다</div></div></div>
+          <div class="lr"><span class="n">03</span><div><div class="tt">종목이 아니라 사람을 팔로우</div><div class="ss">내부자 · 주요주주 · 고위공직자</div></div></div>
+          <div class="lr"><span class="n">04</span><div><div class="tt">투자자문이 아닙니다</div><div class="ss">공시 정보를 재가공한 참고 자료</div></div></div>
+        </div>
+      </div>
+      <div class="cap">W0 랜딩 — CTA만 ink 면 예외</div>
+      </div>
+
+    </div>
+
+    <div style="margin-top:26px">
+      <div class="st" style="font-size:14px">앱 아이콘</div>
+      <div class="icons" style="margin-top:12px">
+        <div><div class="ai" style="background:var(--c500)"><svg width="40" height="40" viewBox="0 0 40 40"><rect x="3" y="8" width="34" height="24" rx="5" fill="none" stroke="#17191C" stroke-width="2.6"/><rect x="8" y="14" width="8" height="5" rx="1.4" fill="#17191C"/><rect x="20" y="14" width="8" height="5" rx="1.4" fill="#17191C" opacity=".32"/><rect x="8" y="22" width="8" height="5" rx="1.4" fill="#17191C" opacity=".32"/><rect x="20" y="22" width="10" height="5" rx="1.4" fill="#17191C" opacity=".32"/></svg></div><div class="icl">coral-500</div></div>
+        <div><div class="ai" style="background:var(--c500);width:32px;height:32px;border-radius:8px"><svg width="21" height="21" viewBox="0 0 40 40"><rect x="3" y="8" width="34" height="24" rx="5" fill="none" stroke="#17191C" stroke-width="3"/><rect x="8" y="14" width="8" height="5" rx="1.4" fill="#17191C"/><rect x="20" y="14" width="8" height="5" rx="1.4" fill="#17191C" opacity=".32"/><rect x="8" y="22" width="8" height="5" rx="1.4" fill="#17191C" opacity=".32"/><rect x="20" y="22" width="10" height="5" rx="1.4" fill="#17191C" opacity=".32"/></svg></div><div class="icl">32px</div></div>
+        <div><div class="ai" style="background:var(--c500);width:16px;height:16px;border-radius:4px"><svg width="11" height="11" viewBox="0 0 40 40"><rect x="3" y="8" width="34" height="24" rx="5" fill="none" stroke="#17191C" stroke-width="4"/><rect x="8" y="14" width="8" height="5" rx="1.4" fill="#17191C"/><rect x="20" y="14" width="8" height="5" rx="1.4" fill="#17191C" opacity=".38"/><rect x="8" y="22" width="8" height="5" rx="1.4" fill="#17191C" opacity=".38"/><rect x="20" y="22" width="10" height="5" rx="1.4" fill="#17191C" opacity=".38"/></svg></div><div class="icl">16px</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hr"></div>
+
+  <div class="sec">
+    <div class="st">5. 확정 규칙 요약</div>
+    <table>
+      <tr><th>항목</th><th>규칙</th></tr>
+      <tr><td>브랜드 기본</td><td><b>coral-500 #FF7355</b> — 히어로 면, CTA 면, 활성 세그먼트·탭, 로고, 앱 아이콘. <b>면으로만</b> 쓴다</td></tr>
+      <tr><td>데이터 그래픽</td><td><b>coral-300 #FFAC98</b> — 랭킹 1위 바. 매수 레드와 dE 45.4로 분리 확보</td></tr>
+      <tr><td>금지</td><td>coral을 선·아이콘·테두리·텍스트 색으로 사용 (흰 배경 위 2.68로 3:1 미달). coral 면 위 흰 글자 (2.68)</td></tr>
+      <tr><td>텍스트 강조</td><td>본문 안: Numeric 서체 + weight 600 + ink가 최대치. <b>하이라이트·배경·밑줄·크기 키우기 전면 금지</b>. 더 강조할 값은 문장 밖으로 승격</td></tr>
+      <tr><td>ink</td><td>브랜드 컬러가 아니다. 글자·아이콘 색, 그리고 랜딩 CTA 면 1곳만 예외</td></tr>
+      <tr><td>시맨틱</td><td>매수 #D93B3B · 매도 #2563A8 — 변경 없음. 숫자·태그에만</td></tr>
+    </table>
+  </div>
+
+</div>
+</body>
+</html>

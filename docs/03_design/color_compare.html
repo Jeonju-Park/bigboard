@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>빅보드 — 메인 컬러 3후보 비교</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-primary:#FFFFFF; --bg-secondary:#F6F7F8;
+    --gray-200:#E9EBED; --gray-300:#D6DADD; --gray-400:#B0B6BC;
+    --gray-500:#8A9199; --gray-700:#3F454C; --gray-800:#26292E; --ink:#17191C;
+    --buy:#D93B3B; --sell:#2563A8;
+    --c-yellow:#FFD338; --c-mint:#3ECFB2; --c-orange:#FF7A3D;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+    background:var(--bg-primary); color:var(--gray-800);
+    font-size:15px; line-height:1.5; padding:40px 20px 80px;
+  }
+  .wrap{max-width:1180px;margin:0 auto}
+  h1{font-size:24px;font-weight:800;color:var(--ink);line-height:1.25;margin-bottom:8px}
+  .sub{font-size:13px;color:var(--gray-500);margin-bottom:40px}
+  h2{font-size:17px;font-weight:600;color:var(--ink);line-height:1.25;margin-bottom:4px}
+  .h2note{font-size:12px;color:var(--gray-500);margin-bottom:20px}
+  section{margin-bottom:48px;padding-bottom:40px;border-bottom:1px solid var(--gray-200)}
+  section:last-child{border-bottom:0}
+  .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  @media(max-width:860px){.cols{grid-template-columns:1fr}}
+  .col{min-width:0}
+  .cap{font-size:11px;color:var(--gray-400);margin-top:8px}
+  .name{font-size:12px;font-weight:600;color:var(--gray-700);margin-bottom:12px;display:flex;align-items:center;gap:6px}
+  .dot{width:12px;height:12px;border-radius:3px;display:inline-block}
+  .mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+
+  /* 1. 마커 하이라이트 */
+  .card{padding:16px 0;border-bottom:1px solid var(--gray-200)}
+  .card:last-child{border-bottom:0}
+  .who{font-size:15px;font-weight:600;color:var(--ink)}
+  .meta{font-size:12px;color:var(--gray-500);margin-top:4px}
+  .line{font-size:15px;color:var(--gray-800);margin-top:12px;line-height:1.9}
+  mark{background:transparent;color:var(--ink);font-weight:600;padding:1px 3px;
+       box-shadow:inset 0 -9px 0 var(--mk)}
+  .micro{font-size:11px;color:var(--gray-400);margin-top:10px}
+
+  /* 2. 랭킹 1위 */
+  .rowr{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--gray-200)}
+  .rank{width:20px;font-size:13px;font-weight:700;color:var(--gray-400);font-family:"IBM Plex Mono",monospace}
+  .rank.one{color:var(--ink)}
+  .rname{flex:0 0 92px;font-size:13px;color:var(--gray-800);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .bar{flex:1;height:14px;background:var(--bg-secondary);border-radius:2px;overflow:hidden;position:relative}
+  .bar i{display:block;height:100%;background:var(--gray-300)}
+  .bar.win i{background:var(--mk)}
+  .amt{flex:0 0 68px;text-align:right;font-size:13px;font-weight:600;font-family:"IBM Plex Mono",monospace;color:var(--gray-800)}
+  .amt.buy{color:var(--buy)} .amt.sell{color:var(--sell)}
+
+  /* 3. 로고 포인트 */
+  .logobox{background:var(--bg-primary);border:1px solid var(--gray-200);border-radius:12px;padding:28px;display:flex;flex-direction:column;align-items:center;gap:22px}
+  .logobox.sec{background:var(--bg-secondary);border-color:var(--gray-200)}
+  .lg{display:flex;align-items:center;gap:10px}
+  .wordmark{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.02em}
+  .sizes{display:flex;align-items:flex-end;gap:16px}
+  .sizes .s{display:flex;flex-direction:column;align-items:center;gap:6px}
+  .sizes .s span{font-size:10px;color:var(--gray-400);font-family:"IBM Plex Mono",monospace}
+
+  /* semantic 간섭 */
+  .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+  .chip{font-size:12px;padding:5px 10px;border-radius:999px;border:1px solid var(--gray-200);color:var(--gray-700)}
+  .chip.mk{background:var(--mk);color:var(--ink);border-color:transparent;font-weight:600}
+  .chip.b{color:#fff;background:var(--buy);border-color:transparent}
+  .chip.s{color:#fff;background:var(--sell);border-color:transparent}
+
+  table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
+  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--gray-200)}
+  th{font-size:12px;color:var(--gray-500);font-weight:600}
+  td.n{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums}
+  .ok{color:#1F7A4D;font-weight:600}
+  .no{color:var(--buy);font-weight:600}
+  .warn{color:#A8681F;font-weight:600}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>빅보드 — 메인 컬러(brand-marker) 3후보 비교</h1>
+  <p class="sub">2026-07-31 · bx_designsystem_source §9-1 미결정 항목 · 배경은 전부 실제 토큰값(#FFFFFF / #F6F7F8), 시맨틱은 매수 #D93B3B · 매도 #2563A8 고정</p>
+
+  <!-- 맥락 1 -->
+  <section>
+    <h2>맥락 1. 마커 하이라이트 — 공시 카드 본문</h2>
+    <p class="h2note">형광펜은 텍스트 하단 9px만 덮는 inset 방식. 마커 위 텍스트는 ink(#17191C)만 허용.</p>
+    <div class="cols">
+      <div class="col" style="--mk:var(--c-yellow)">
+        <div class="name"><i class="dot" style="background:var(--c-yellow)"></i>방송 옐로우 #FFD338</div>
+        <div class="card">
+          <div class="who">김OO · 대표이사</div>
+          <div class="meta">OO전자 · 거래일 07.28 · 공시일 07.31</div>
+          <div class="line">보통주 <mark>12,000주</mark>를 주당 <mark>61,200원</mark>에 매도, 총 <mark>7억 3,440만원</mark>.</div>
+          <div class="micro">3거래일 만인데 말이죠,</div>
+        </div>
+      </div>
+      <div class="col" style="--mk:var(--c-mint)">
+        <div class="name"><i class="dot" style="background:var(--c-mint)"></i>민트 #3ECFB2</div>
+        <div class="card">
+          <div class="who">김OO · 대표이사</div>
+          <div class="meta">OO전자 · 거래일 07.28 · 공시일 07.31</div>
+          <div class="line">보통주 <mark>12,000주</mark>를 주당 <mark>61,200원</mark>에 매도, 총 <mark>7억 3,440만원</mark>.</div>
+          <div class="micro">3거래일 만인데 말이죠,</div>
+        </div>
+      </div>
+      <div class="col" style="--mk:var(--c-orange)">
+        <div class="name"><i class="dot" style="background:var(--c-orange)"></i>오렌지 #FF7A3D</div>
+        <div class="card">
+          <div class="who">김OO · 대표이사</div>
+          <div class="meta">OO전자 · 거래일 07.28 · 공시일 07.31</div>
+          <div class="line">보통주 <mark>12,000주</mark>를 주당 <mark>61,200원</mark>에 매도, 총 <mark>7억 3,440만원</mark>.</div>
+          <div class="micro">3거래일 만인데 말이죠,</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 맥락 2 -->
+  <section>
+    <h2>맥락 2. 랭킹 1위 강조 — S7 보드(레이스 바)</h2>
+    <p class="h2note">1위 바만 마커 색. 2위 이하는 gray-300. 금액은 시맨틱 컬러(매수 레드·매도 블루)와 같은 행에 놓인다 — 여기서 간섭이 드러난다.</p>
+    <div class="cols">
+      <div class="col" style="--mk:var(--c-yellow)">
+        <div class="name"><i class="dot" style="background:var(--c-yellow)"></i>방송 옐로우</div>
+        <div class="rowr"><div class="rank one">1</div><div class="rname">OO전자</div><div class="bar win"><i style="width:100%"></i></div><div class="amt buy">+842억</div></div>
+        <div class="rowr"><div class="rank">2</div><div class="rname">OO바이오</div><div class="bar"><i style="width:61%"></i></div><div class="amt buy">+514억</div></div>
+        <div class="rowr"><div class="rank">3</div><div class="rname">OO화학</div><div class="bar"><i style="width:38%"></i></div><div class="amt sell">-322억</div></div>
+      </div>
+      <div class="col" style="--mk:var(--c-mint)">
+        <div class="name"><i class="dot" style="background:var(--c-mint)"></i>민트</div>
+        <div class="rowr"><div class="rank one">1</div><div class="rname">OO전자</div><div class="bar win"><i style="width:100%"></i></div><div class="amt buy">+842억</div></div>
+        <div class="rowr"><div class="rank">2</div><div class="rname">OO바이오</div><div class="bar"><i style="width:61%"></i></div><div class="amt buy">+514억</div></div>
+        <div class="rowr"><div class="rank">3</div><div class="rname">OO화학</div><div class="bar"><i style="width:38%"></i></div><div class="amt sell">-322억</div></div>
+      </div>
+      <div class="col" style="--mk:var(--c-orange)">
+        <div class="name"><i class="dot" style="background:var(--c-orange)"></i>오렌지</div>
+        <div class="rowr"><div class="rank one">1</div><div class="rname">OO전자</div><div class="bar win"><i style="width:100%"></i></div><div class="amt buy">+842억</div></div>
+        <div class="rowr"><div class="rank">2</div><div class="rname">OO바이오</div><div class="bar"><i style="width:61%"></i></div><div class="amt buy">+514억</div></div>
+        <div class="rowr"><div class="rank">3</div><div class="rname">OO화학</div><div class="bar"><i style="width:38%"></i></div><div class="amt sell">-322억</div></div>
+      </div>
+    </div>
+
+    <h2 style="margin-top:32px">시맨틱 인접 배치 — 필터 칩이 나란히 설 때</h2>
+    <p class="h2note">마커 칩과 매수/매도 칩이 같은 줄에 놓이는 최악의 경우.</p>
+    <div class="cols">
+      <div class="col" style="--mk:var(--c-yellow)"><div class="chips"><span class="chip mk">전체</span><span class="chip b">매수</span><span class="chip s">매도</span><span class="chip">예고</span></div></div>
+      <div class="col" style="--mk:var(--c-mint)"><div class="chips"><span class="chip mk">전체</span><span class="chip b">매수</span><span class="chip s">매도</span><span class="chip">예고</span></div></div>
+      <div class="col" style="--mk:var(--c-orange)"><div class="chips"><span class="chip mk">전체</span><span class="chip b">매수</span><span class="chip s">매도</span><span class="chip">예고</span></div></div>
+    </div>
+  </section>
+
+  <!-- 맥락 3 -->
+  <section>
+    <h2>맥락 3. 로고 포인트 — 흰 배경 / secondary 배경</h2>
+    <p class="h2note">심볼은 전광판 그리드(빅보드). ink 단색 + 셀 1개만 마커 색. 32px·16px 축소 내성 동시 확인.</p>
+    <div class="cols">
+      <div class="col" style="--mk:var(--c-yellow)">
+        <div class="name"><i class="dot" style="background:var(--c-yellow)"></i>방송 옐로우</div>
+        <div class="logobox">
+          <div class="lg">
+            <svg width="40" height="40" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="var(--mk)"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#FFFFFF" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#FFFFFF" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#FFFFFF" opacity=".28"/></svg>
+            <span class="wordmark">빅보드</span>
+          </div>
+          <div class="sizes">
+            <div class="s"><svg width="32" height="32" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="var(--mk)"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#FFFFFF" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#FFFFFF" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#FFFFFF" opacity=".28"/></svg><span>32</span></div>
+            <div class="s"><svg width="16" height="16" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="var(--mk)"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#FFFFFF" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#FFFFFF" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#FFFFFF" opacity=".28"/></svg><span>16</span></div>
+          </div>
+        </div>
+        <div class="logobox sec" style="margin-top:12px">
+          <div class="lg">
+            <svg width="40" height="40" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="var(--mk)"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#FFFFFF" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#FFFFFF" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#FFFFFF" opacity=".28"/></svg>
+            <span class="wordmark">빅보드</span>
+          </div>
+          <div class="cap">bg-secondary #F6F7F8</div>
+        </div>
+      </div>
+
+      <div class="col" style="--mk:var(--c-mint)">
+        <div class="name"><i class="dot" style="background:var(--c-mint)"></i>민트</div>
+        <div class="logobox">
+          <div class="lg">
+            <svg width="40" height="40" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="var(--mk)"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#FFFFFF" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#FFFFFF" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#FFFFFF" opacity=".28"/></svg>
+            <span class="wordmark">빅보드</span>
+          </div>
+          <div class="sizes">
+            <div class="s"><svg width="32" height="32" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="var(--mk)"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#FFFFFF" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#FFFFFF" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#FFFFFF" opacity=".28"/></svg><span>32</span></div>
+            <div class="s"><svg width="16" height="16" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="var(--mk)"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#FFFFFF" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#FFFFFF" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#FFFFFF" opacity=".28"/></svg><span>16</span></div>
+          </div>
+        </div>
+        <div class="logobox sec" style="margin-top:12px">
+          <div class="lg">
+            <svg width="40" height="40" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="var(--mk)"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#FFFFFF" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#FFFFFF" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#FFFFFF" opacity=".28"/></svg>
+            <span class="wordmark">빅보드</span>
+          </div>
+          <div class="cap">bg-secondary #F6F7F8</div>
+        </div>
+      </div>
+
+      <div class="col" style="--mk:var(--c-orange)">
+        <div class="name"><i class="dot" style="background:var(--c-orange)"></i>오렌지</div>
+        <div class="logobox">
+          <div class="lg">
+            <svg width="40" height="40" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="var(--mk)"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#FFFFFF" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#FFFFFF" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#FFFFFF" opacity=".28"/></svg>
+            <span class="wordmark">빅보드</span>
+          </div>
+          <div class="sizes">
+            <div class="s"><svg width="32" height="32" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="var(--mk)"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#FFFFFF" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#FFFFFF" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#FFFFFF" opacity=".28"/></svg><span>32</span></div>
+            <div class="s"><svg width="16" height="16" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="var(--mk)"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#FFFFFF" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#FFFFFF" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#FFFFFF" opacity=".28"/></svg><span>16</span></div>
+          </div>
+        </div>
+        <div class="logobox sec" style="margin-top:12px">
+          <div class="lg">
+            <svg width="40" height="40" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="var(--mk)"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#FFFFFF" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#FFFFFF" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#FFFFFF" opacity=".28"/></svg>
+            <span class="wordmark">빅보드</span>
+          </div>
+          <div class="cap">bg-secondary #F6F7F8</div>
+        </div>
+      </div>
+    </div>
+    <p class="cap" style="margin-top:14px">위 심볼은 색 비교용 임시 형태다. 실제 로고 3안은 STEP 5에서 별도 제작한다.</p>
+  </section>
+
+  <!-- 수치 -->
+  <section>
+    <h2>측정값</h2>
+    <p class="h2note">WCAG 2.1 상대휘도 공식 직접 계산. dE는 CIE76 색차 — 값이 작을수록 두 색이 가깝다(간섭 위험).</p>
+    <table>
+      <tr><th>후보</th><th>HSL</th><th>마커 위 ink 대비</th><th>흰 배경 위 대비</th><th>secondary 위 대비</th><th>dE 매수레드</th><th>dE 매도블루</th></tr>
+      <tr>
+        <td>방송 옐로우 #FFD338</td><td class="n">H47 S100 L61</td>
+        <td class="n"><span class="ok">12.27</span> AAA</td><td class="n"><span class="no">1.44</span></td><td class="n"><span class="no">1.34</span></td>
+        <td class="n"><span class="ok">80.1</span></td><td class="n"><span class="ok">127.2</span></td>
+      </tr>
+      <tr>
+        <td>민트 #3ECFB2</td><td class="n">H168 S60 L53</td>
+        <td class="n"><span class="ok">9.04</span> AAA</td><td class="n"><span class="no">1.95</span></td><td class="n"><span class="no">1.82</span></td>
+        <td class="n"><span class="ok">113.7</span></td><td class="n"><span class="warn">76.0</span></td>
+      </tr>
+      <tr>
+        <td>오렌지 #FF7A3D</td><td class="n">H19 S100 L62</td>
+        <td class="n"><span class="warn">6.80</span> AA</td><td class="n"><span class="no">2.59</span></td><td class="n"><span class="no">2.42</span></td>
+        <td class="n"><span class="no">28.2</span></td><td class="n"><span class="ok">109.5</span></td>
+      </tr>
+    </table>
+    <p class="cap">참고 — ink on white 17.61 · 매수레드 on white 4.53 · 매도블루 on white 6.12 · 매수레드 H0 · 매도블루 H212</p>
+    <p class="cap">흰 배경 위 대비는 세 후보 모두 WCAG 1.4.11(비텍스트 3:1) 미달. 마커 색을 흰 배경에 단독 그래픽으로 쓸 수 없다는 뜻이며, 로고에서 항상 ink와 짝지어야 하는 근거다.</p>
+  </section>
+
+</div>
+</body>
+</html>

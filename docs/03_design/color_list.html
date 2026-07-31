@@ -1,0 +1,362 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>빅보드 — 메인 컬러 후보 리스트업</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--g100:#F6F7F8;--g200:#E9EBED;--g300:#D6DADD;--g400:#B0B6BC;--g500:#8A9199;--g700:#3F454C;--g800:#26292E;--ink:#17191C;--buy:#D93B3B;--sell:#2563A8}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;background:#fff;color:var(--g800);font-size:15px;line-height:1.5;padding:36px 20px 80px}
+.wrap{max-width:1280px;margin:0 auto}
+h1{font-size:24px;font-weight:800;color:var(--ink);line-height:1.25;margin-bottom:8px}
+.sub{font-size:13px;color:var(--g500);margin-bottom:14px}
+.legend{font-size:12px;color:var(--g700);background:var(--g100);padding:12px 14px;border-radius:8px;margin-bottom:32px;line-height:1.7}
+h2{font-size:17px;font-weight:600;color:var(--ink);margin:34px 0 16px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:1080px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.grid{grid-template-columns:1fr}}
+.opt{border:1px solid var(--g200);border-radius:12px;padding:16px}
+.head{display:flex;align-items:center;gap:8px;margin-bottom:14px}
+.sw,.swd{width:18px;height:18px;border-radius:4px;flex:none}
+.sw{background:var(--mk)} .swd{background:var(--dp)}
+.nm{font-size:14px;font-weight:700;color:var(--ink)}
+.hex{font-size:10px;color:var(--g500);font-family:"IBM Plex Mono",monospace}
+.tag{margin-left:auto;font-size:10px;text-align:right}
+.p{color:#1F7A4D;font-weight:600} .w{color:#A8681F;font-weight:600}
+.card{border-top:1px solid var(--g200);padding-top:12px}
+.who{font-size:14px;font-weight:600;color:var(--ink)}
+.meta{font-size:11px;color:var(--g500);margin-top:3px}
+.line{font-size:14px;color:var(--g800);margin-top:9px;line-height:1.95}
+mark{background:transparent;color:var(--ink);font-weight:600;padding:1px 3px;box-shadow:inset 0 -8px 0 var(--mk)}
+.micro{font-size:11px;color:var(--g400);margin-top:8px}
+.rk{margin-top:14px;border-top:1px solid var(--g200);padding-top:6px}
+.rowr{display:flex;align-items:center;gap:8px;padding:7px 0}
+.rank{width:12px;font-size:11px;font-weight:700;color:var(--g400);font-family:"IBM Plex Mono",monospace}
+.rank.one{color:var(--ink)}
+.rname{flex:0 0 58px;font-size:11px;color:var(--g800);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar{flex:1;height:12px;background:var(--g100);border-radius:2px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--g300)}
+.bar.win i{background:var(--dp)}
+.amt{flex:0 0 52px;text-align:right;font-size:11px;font-weight:600;font-family:"IBM Plex Mono",monospace}
+.amt.buy{color:var(--buy)} .amt.sell{color:var(--sell)}
+.btm{margin-top:12px;border-top:1px solid var(--g200);padding-top:12px}
+.icons{display:flex;align-items:center;gap:12px}
+.ai{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center}
+.nums{font-size:10px;color:var(--g400);font-family:"IBM Plex Mono",monospace;margin-top:9px}
+table{width:100%;border-collapse:collapse;font-size:12px;margin-top:10px}
+th,td{text-align:left;padding:8px 8px;border-bottom:1px solid var(--g200)}
+th{font-size:11px;color:var(--g500);font-weight:600}
+td.n{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums}
+.sm{font-size:9px;color:var(--g400)}
+.cap{font-size:11px;color:var(--g400);margin-top:10px;line-height:1.7}
+</style></head><body><div class="wrap">
+<h1>빅보드 — 메인 컬러 후보 리스트업 (민트 외)</h1>
+<p class="sub">2026-07-31 · 마커는 형광펜 면(밝은 tint), 딥은 1위 바·활성·앱 아이콘용. 같은 색상(H) 위 두 단계.</p>
+<div class="legend">
+<b>필터 기준</b> — 마커 위 ink 텍스트 대비 7:1 이상(AAA) · <b>현역 정당색</b>(국민의힘 빨강 · 더불어민주 파랑 · 정의/노무현 노랑 · 개혁신당 주황 · 진보 보라)과 dE 35 이상 · 매수레드/매도블루와 dE 45 이상 · C* 25~58(25 미만 칙칙, 58 초과 형광) · 보라·인디고 계열 제외(bx §8)<br>
+<b>소멸 정당색</b>(바른정당 하늘 · 미래통합 핑크 · 국민의당 초록)은 참고로만 표기. 현재 존재하지 않는 정당의 색이라 정치적 연상이 사실상 없다고 판단했다 — 이 판단에 동의하지 않으시면 해당 계열을 빼면 된다.
+</div>
+<h2>후보 카드 — 마커 · 1위 바 · 로고/앱아이콘 동시 확인</h2>
+<div class="grid">
+    <div class="opt" style="--mk:#FF9E8E;--dp:#C14035">
+      <div class="head">
+        <span class="sw"></span><span class="swd"></span>
+        <div><div class="nm">코랄</div><div class="hex">#FF9E8E / #C14035</div></div>
+        <div class="tag"><span class="w">주의 · 매수간섭</span></div>
+      </div>
+      <div class="card">
+        <div class="who">김OO · 대표이사</div><div class="meta">OO전자 · 07.28 거래 · 07.31 공시</div>
+        <div class="line">보통주 <mark>12,000주</mark>를 주당 <mark>61,200원</mark>에 매도, 총 <mark>7억 3,440만원</mark>.</div>
+        <div class="micro">3거래일 만인데 말이죠,</div>
+      </div>
+      <div class="rk">
+        <div class="rowr"><div class="rank one">1</div><div class="rname">OO전자</div><div class="bar win"><i style="width:100%"></i></div><div class="amt buy">+842억</div></div>
+        <div class="rowr"><div class="rank">2</div><div class="rname">OO바이오</div><div class="bar"><i style="width:61%"></i></div><div class="amt buy">+514억</div></div>
+        <div class="rowr"><div class="rank">3</div><div class="rname">OO화학</div><div class="bar"><i style="width:38%"></i></div><div class="amt sell">-322억</div></div>
+      </div>
+      <div class="btm">
+        <div class="icons">
+          <svg width="30" height="30" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="#FF9E8E"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#fff" opacity=".28"/></svg>
+          <div class="ai" style="background:#C14035"><svg width="28" height="28" viewBox="0 0 40 40"><rect x="4" y="9" width="32" height="22" rx="3" fill="none" stroke="#fff" stroke-width="2.5"/><rect x="9" y="14" width="8" height="4.5" rx="1" fill="#fff"/><rect x="20" y="14" width="8" height="4.5" rx="1" fill="#fff" opacity=".4"/><rect x="9" y="22" width="8" height="4.5" rx="1" fill="#fff" opacity=".4"/><rect x="20" y="22" width="8" height="4.5" rx="1" fill="#fff" opacity=".4"/></svg></div>
+          <svg width="16" height="16" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="#FF9E8E"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#fff" opacity=".28"/></svg>
+        </div>
+        <div class="nums">C* 41.7 · ink 8.83 · 현역정당 dE 49.8 · 매수 38.7 · 매도 79.7</div>
+      </div>
+    </div>
+    <div class="opt" style="--mk:#FFAD8F;--dp:#B94A22">
+      <div class="head">
+        <span class="sw"></span><span class="swd"></span>
+        <div><div class="nm">살몬 피치</div><div class="hex">#FFAD8F / #B94A22</div></div>
+        <div class="tag"><span class="p">통과</span></div>
+      </div>
+      <div class="card">
+        <div class="who">김OO · 대표이사</div><div class="meta">OO전자 · 07.28 거래 · 07.31 공시</div>
+        <div class="line">보통주 <mark>12,000주</mark>를 주당 <mark>61,200원</mark>에 매도, 총 <mark>7억 3,440만원</mark>.</div>
+        <div class="micro">3거래일 만인데 말이죠,</div>
+      </div>
+      <div class="rk">
+        <div class="rowr"><div class="rank one">1</div><div class="rname">OO전자</div><div class="bar win"><i style="width:100%"></i></div><div class="amt buy">+842억</div></div>
+        <div class="rowr"><div class="rank">2</div><div class="rname">OO바이오</div><div class="bar"><i style="width:61%"></i></div><div class="amt buy">+514억</div></div>
+        <div class="rowr"><div class="rank">3</div><div class="rname">OO화학</div><div class="bar"><i style="width:38%"></i></div><div class="amt sell">-322억</div></div>
+      </div>
+      <div class="btm">
+        <div class="icons">
+          <svg width="30" height="30" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="#FFAD8F"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#fff" opacity=".28"/></svg>
+          <div class="ai" style="background:#B94A22"><svg width="28" height="28" viewBox="0 0 40 40"><rect x="4" y="9" width="32" height="22" rx="3" fill="none" stroke="#fff" stroke-width="2.5"/><rect x="9" y="14" width="8" height="4.5" rx="1" fill="#fff"/><rect x="20" y="14" width="8" height="4.5" rx="1" fill="#fff" opacity=".4"/><rect x="9" y="22" width="8" height="4.5" rx="1" fill="#fff" opacity=".4"/><rect x="20" y="22" width="8" height="4.5" rx="1" fill="#fff" opacity=".4"/></svg></div>
+          <svg width="16" height="16" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="#FFAD8F"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#fff" opacity=".28"/></svg>
+        </div>
+        <div class="nums">C* 38.4 · ink 9.75 · 현역정당 dE 50.0 · 매수 45.3 · 매도 82.1</div>
+      </div>
+    </div>
+    <div class="opt" style="--mk:#FFB77A;--dp:#A65900">
+      <div class="head">
+        <span class="sw"></span><span class="swd"></span>
+        <div><div class="nm">탠저린</div><div class="hex">#FFB77A / #A65900</div></div>
+        <div class="tag"><span class="p">통과</span></div>
+      </div>
+      <div class="card">
+        <div class="who">김OO · 대표이사</div><div class="meta">OO전자 · 07.28 거래 · 07.31 공시</div>
+        <div class="line">보통주 <mark>12,000주</mark>를 주당 <mark>61,200원</mark>에 매도, 총 <mark>7억 3,440만원</mark>.</div>
+        <div class="micro">3거래일 만인데 말이죠,</div>
+      </div>
+      <div class="rk">
+        <div class="rowr"><div class="rank one">1</div><div class="rname">OO전자</div><div class="bar win"><i style="width:100%"></i></div><div class="amt buy">+842억</div></div>
+        <div class="rowr"><div class="rank">2</div><div class="rname">OO바이오</div><div class="bar"><i style="width:61%"></i></div><div class="amt buy">+514억</div></div>
+        <div class="rowr"><div class="rank">3</div><div class="rname">OO화학</div><div class="bar"><i style="width:38%"></i></div><div class="amt sell">-322억</div></div>
+      </div>
+      <div class="btm">
+        <div class="icons">
+          <svg width="30" height="30" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="#FFB77A"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#fff" opacity=".28"/></svg>
+          <div class="ai" style="background:#A65900"><svg width="28" height="28" viewBox="0 0 40 40"><rect x="4" y="9" width="32" height="22" rx="3" fill="none" stroke="#fff" stroke-width="2.5"/><rect x="9" y="14" width="8" height="4.5" rx="1" fill="#fff"/><rect x="20" y="14" width="8" height="4.5" rx="1" fill="#fff" opacity=".4"/><rect x="9" y="22" width="8" height="4.5" rx="1" fill="#fff" opacity=".4"/><rect x="20" y="22" width="8" height="4.5" rx="1" fill="#fff" opacity=".4"/></svg></div>
+          <svg width="16" height="16" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="#FFB77A"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#fff" opacity=".28"/></svg>
+        </div>
+        <div class="nums">C* 45.5 · ink 10.32 · 현역정당 dE 44.5 · 매수 51.3 · 매도 93.3</div>
+      </div>
+    </div>
+    <div class="opt" style="--mk:#FFC77E;--dp:#966200">
+      <div class="head">
+        <span class="sw"></span><span class="swd"></span>
+        <div><div class="nm">앰버</div><div class="hex">#FFC77E / #966200</div></div>
+        <div class="tag"><span class="p">통과</span></div>
+      </div>
+      <div class="card">
+        <div class="who">김OO · 대표이사</div><div class="meta">OO전자 · 07.28 거래 · 07.31 공시</div>
+        <div class="line">보통주 <mark>12,000주</mark>를 주당 <mark>61,200원</mark>에 매도, 총 <mark>7억 3,440만원</mark>.</div>
+        <div class="micro">3거래일 만인데 말이죠,</div>
+      </div>
+      <div class="rk">
+        <div class="rowr"><div class="rank one">1</div><div class="rname">OO전자</div><div class="bar win"><i style="width:100%"></i></div><div class="amt buy">+842억</div></div>
+        <div class="rowr"><div class="rank">2</div><div class="rname">OO바이오</div><div class="bar"><i style="width:61%"></i></div><div class="amt buy">+514억</div></div>
+        <div class="rowr"><div class="rank">3</div><div class="rname">OO화학</div><div class="bar"><i style="width:38%"></i></div><div class="amt sell">-322억</div></div>
+      </div>
+      <div class="btm">
+        <div class="icons">
+          <svg width="30" height="30" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="#FFC77E"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#fff" opacity=".28"/></svg>
+          <div class="ai" style="background:#966200"><svg width="28" height="28" viewBox="0 0 40 40"><rect x="4" y="9" width="32" height="22" rx="3" fill="none" stroke="#fff" stroke-width="2.5"/><rect x="9" y="14" width="8" height="4.5" rx="1" fill="#fff"/><rect x="20" y="14" width="8" height="4.5" rx="1" fill="#fff" opacity=".4"/><rect x="9" y="22" width="8" height="4.5" rx="1" fill="#fff" opacity=".4"/><rect x="20" y="22" width="8" height="4.5" rx="1" fill="#fff" opacity=".4"/></svg></div>
+          <svg width="16" height="16" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="#FFC77E"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#fff" opacity=".28"/></svg>
+        </div>
+        <div class="nums">C* 45.4 · ink 11.51 · 현역정당 dE 43.6 · 매수 60.3 · 매도 96.6</div>
+      </div>
+    </div>
+    <div class="opt" style="--mk:#86DFA2;--dp:#007E42">
+      <div class="head">
+        <span class="sw"></span><span class="swd"></span>
+        <div><div class="nm">스프링그린</div><div class="hex">#86DFA2 / #007E42</div></div>
+        <div class="tag"><span class="p">통과</span></div>
+      </div>
+      <div class="card">
+        <div class="who">김OO · 대표이사</div><div class="meta">OO전자 · 07.28 거래 · 07.31 공시</div>
+        <div class="line">보통주 <mark>12,000주</mark>를 주당 <mark>61,200원</mark>에 매도, 총 <mark>7억 3,440만원</mark>.</div>
+        <div class="micro">3거래일 만인데 말이죠,</div>
+      </div>
+      <div class="rk">
+        <div class="rowr"><div class="rank one">1</div><div class="rname">OO전자</div><div class="bar win"><i style="width:100%"></i></div><div class="amt buy">+842억</div></div>
+        <div class="rowr"><div class="rank">2</div><div class="rname">OO바이오</div><div class="bar"><i style="width:61%"></i></div><div class="amt buy">+514억</div></div>
+        <div class="rowr"><div class="rank">3</div><div class="rname">OO화학</div><div class="bar"><i style="width:38%"></i></div><div class="amt sell">-322억</div></div>
+      </div>
+      <div class="btm">
+        <div class="icons">
+          <svg width="30" height="30" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="#86DFA2"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#fff" opacity=".28"/></svg>
+          <div class="ai" style="background:#007E42"><svg width="28" height="28" viewBox="0 0 40 40"><rect x="4" y="9" width="32" height="22" rx="3" fill="none" stroke="#fff" stroke-width="2.5"/><rect x="9" y="14" width="8" height="4.5" rx="1" fill="#fff"/><rect x="20" y="14" width="8" height="4.5" rx="1" fill="#fff" opacity=".4"/><rect x="9" y="22" width="8" height="4.5" rx="1" fill="#fff" opacity=".4"/><rect x="20" y="22" width="8" height="4.5" rx="1" fill="#fff" opacity=".4"/></svg></div>
+          <svg width="16" height="16" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="#86DFA2"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#fff" opacity=".28"/></svg>
+        </div>
+        <div class="nums">C* 45.3 · ink 10.98 · 현역정당 dE 73.6 · 매수 106.6 · 매도 88.4</div>
+      </div>
+    </div>
+    <div class="opt" style="--mk:#4FD8D8;--dp:#007A7A">
+      <div class="head">
+        <span class="sw"></span><span class="swd"></span>
+        <div><div class="nm">터쿼이즈</div><div class="hex">#4FD8D8 / #007A7A</div></div>
+        <div class="tag"><span class="p">통과</span></div>
+      </div>
+      <div class="card">
+        <div class="who">김OO · 대표이사</div><div class="meta">OO전자 · 07.28 거래 · 07.31 공시</div>
+        <div class="line">보통주 <mark>12,000주</mark>를 주당 <mark>61,200원</mark>에 매도, 총 <mark>7억 3,440만원</mark>.</div>
+        <div class="micro">3거래일 만인데 말이죠,</div>
+      </div>
+      <div class="rk">
+        <div class="rowr"><div class="rank one">1</div><div class="rname">OO전자</div><div class="bar win"><i style="width:100%"></i></div><div class="amt buy">+842억</div></div>
+        <div class="rowr"><div class="rank">2</div><div class="rname">OO바이오</div><div class="bar"><i style="width:61%"></i></div><div class="amt buy">+514억</div></div>
+        <div class="rowr"><div class="rank">3</div><div class="rname">OO화학</div><div class="bar"><i style="width:38%"></i></div><div class="amt sell">-322억</div></div>
+      </div>
+      <div class="btm">
+        <div class="icons">
+          <svg width="30" height="30" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="#4FD8D8"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#fff" opacity=".28"/></svg>
+          <div class="ai" style="background:#007A7A"><svg width="28" height="28" viewBox="0 0 40 40"><rect x="4" y="9" width="32" height="22" rx="3" fill="none" stroke="#fff" stroke-width="2.5"/><rect x="9" y="14" width="8" height="4.5" rx="1" fill="#fff"/><rect x="20" y="14" width="8" height="4.5" rx="1" fill="#fff" opacity=".4"/><rect x="9" y="22" width="8" height="4.5" rx="1" fill="#fff" opacity=".4"/><rect x="20" y="22" width="8" height="4.5" rx="1" fill="#fff" opacity=".4"/></svg></div>
+          <svg width="16" height="16" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="#4FD8D8"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#fff" opacity=".28"/></svg>
+        </div>
+        <div class="nums">C* 37.8 · ink 10.19 · 현역정당 dE 88.5 · 매수 112.2 · 매도 64.6</div>
+      </div>
+    </div>
+    <div class="opt" style="--mk:#5CD3E6;--dp:#007887">
+      <div class="head">
+        <span class="sw"></span><span class="swd"></span>
+        <div><div class="nm">아쿠아</div><div class="hex">#5CD3E6 / #007887</div></div>
+        <div class="tag"><span class="p">통과</span></div>
+      </div>
+      <div class="card">
+        <div class="who">김OO · 대표이사</div><div class="meta">OO전자 · 07.28 거래 · 07.31 공시</div>
+        <div class="line">보통주 <mark>12,000주</mark>를 주당 <mark>61,200원</mark>에 매도, 총 <mark>7억 3,440만원</mark>.</div>
+        <div class="micro">3거래일 만인데 말이죠,</div>
+      </div>
+      <div class="rk">
+        <div class="rowr"><div class="rank one">1</div><div class="rname">OO전자</div><div class="bar win"><i style="width:100%"></i></div><div class="amt buy">+842억</div></div>
+        <div class="rowr"><div class="rank">2</div><div class="rname">OO바이오</div><div class="bar"><i style="width:61%"></i></div><div class="amt buy">+514억</div></div>
+        <div class="rowr"><div class="rank">3</div><div class="rname">OO화학</div><div class="bar"><i style="width:38%"></i></div><div class="amt sell">-322억</div></div>
+      </div>
+      <div class="btm">
+        <div class="icons">
+          <svg width="30" height="30" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="#5CD3E6"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#fff" opacity=".28"/></svg>
+          <div class="ai" style="background:#007887"><svg width="28" height="28" viewBox="0 0 40 40"><rect x="4" y="9" width="32" height="22" rx="3" fill="none" stroke="#fff" stroke-width="2.5"/><rect x="9" y="14" width="8" height="4.5" rx="1" fill="#fff"/><rect x="20" y="14" width="8" height="4.5" rx="1" fill="#fff" opacity=".4"/><rect x="9" y="22" width="8" height="4.5" rx="1" fill="#fff" opacity=".4"/><rect x="20" y="22" width="8" height="4.5" rx="1" fill="#fff" opacity=".4"/></svg></div>
+          <svg width="16" height="16" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="#5CD3E6"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#fff" opacity=".28"/></svg>
+        </div>
+        <div class="nums">C* 33.9 · ink 9.99 · 현역정당 dE 79.0 · 매수 109.0 · 매도 55.0</div>
+      </div>
+    </div>
+    <div class="opt" style="--mk:#FFA0B4;--dp:#C83063">
+      <div class="head">
+        <span class="sw"></span><span class="swd"></span>
+        <div><div class="nm">로즈</div><div class="hex">#FFA0B4 / #C83063</div></div>
+        <div class="tag"><span class="p">통과</span></div>
+      </div>
+      <div class="card">
+        <div class="who">김OO · 대표이사</div><div class="meta">OO전자 · 07.28 거래 · 07.31 공시</div>
+        <div class="line">보통주 <mark>12,000주</mark>를 주당 <mark>61,200원</mark>에 매도, 총 <mark>7억 3,440만원</mark>.</div>
+        <div class="micro">3거래일 만인데 말이죠,</div>
+      </div>
+      <div class="rk">
+        <div class="rowr"><div class="rank one">1</div><div class="rname">OO전자</div><div class="bar win"><i style="width:100%"></i></div><div class="amt buy">+842억</div></div>
+        <div class="rowr"><div class="rank">2</div><div class="rname">OO바이오</div><div class="bar"><i style="width:61%"></i></div><div class="amt buy">+514억</div></div>
+        <div class="rowr"><div class="rank">3</div><div class="rname">OO화학</div><div class="bar"><i style="width:38%"></i></div><div class="amt sell">-322억</div></div>
+      </div>
+      <div class="btm">
+        <div class="icons">
+          <svg width="30" height="30" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="#FFA0B4"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#fff" opacity=".28"/></svg>
+          <div class="ai" style="background:#C83063"><svg width="28" height="28" viewBox="0 0 40 40"><rect x="4" y="9" width="32" height="22" rx="3" fill="none" stroke="#fff" stroke-width="2.5"/><rect x="9" y="14" width="8" height="4.5" rx="1" fill="#fff"/><rect x="20" y="14" width="8" height="4.5" rx="1" fill="#fff" opacity=".4"/><rect x="9" y="22" width="8" height="4.5" rx="1" fill="#fff" opacity=".4"/><rect x="20" y="22" width="8" height="4.5" rx="1" fill="#fff" opacity=".4"/></svg></div>
+          <svg width="16" height="16" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="#FFA0B4"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#fff" opacity=".28"/></svg>
+        </div>
+        <div class="nums">C* 38.0 · ink 9.18 · 현역정당 dE 50.8 · 매수 47.7 · 매도 66.9</div>
+      </div>
+    </div>
+    <div class="opt" style="--mk:#FF9FD0;--dp:#BD3686">
+      <div class="head">
+        <span class="sw"></span><span class="swd"></span>
+        <div><div class="nm">핑크</div><div class="hex">#FF9FD0 / #BD3686</div></div>
+        <div class="tag"><span class="p">통과</span></div>
+      </div>
+      <div class="card">
+        <div class="who">김OO · 대표이사</div><div class="meta">OO전자 · 07.28 거래 · 07.31 공시</div>
+        <div class="line">보통주 <mark>12,000주</mark>를 주당 <mark>61,200원</mark>에 매도, 총 <mark>7억 3,440만원</mark>.</div>
+        <div class="micro">3거래일 만인데 말이죠,</div>
+      </div>
+      <div class="rk">
+        <div class="rowr"><div class="rank one">1</div><div class="rname">OO전자</div><div class="bar win"><i style="width:100%"></i></div><div class="amt buy">+842억</div></div>
+        <div class="rowr"><div class="rank">2</div><div class="rname">OO바이오</div><div class="bar"><i style="width:61%"></i></div><div class="amt buy">+514억</div></div>
+        <div class="rowr"><div class="rank">3</div><div class="rname">OO화학</div><div class="bar"><i style="width:38%"></i></div><div class="amt sell">-322억</div></div>
+      </div>
+      <div class="btm">
+        <div class="icons">
+          <svg width="30" height="30" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="#FF9FD0"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#fff" opacity=".28"/></svg>
+          <div class="ai" style="background:#BD3686"><svg width="28" height="28" viewBox="0 0 40 40"><rect x="4" y="9" width="32" height="22" rx="3" fill="none" stroke="#fff" stroke-width="2.5"/><rect x="9" y="14" width="8" height="4.5" rx="1" fill="#fff"/><rect x="20" y="14" width="8" height="4.5" rx="1" fill="#fff" opacity=".4"/><rect x="9" y="22" width="8" height="4.5" rx="1" fill="#fff" opacity=".4"/><rect x="20" y="22" width="8" height="4.5" rx="1" fill="#fff" opacity=".4"/></svg></div>
+          <svg width="16" height="16" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="#FF9FD0"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#fff" opacity=".28"/></svg>
+        </div>
+        <div class="nums">C* 43.3 · ink 9.33 · 현역정당 dE 41.4 · 매수 57.2 · 매도 60.5</div>
+      </div>
+    </div>
+    <div class="opt" style="--mk:#F58FE0;--dp:#AF419C">
+      <div class="head">
+        <span class="sw"></span><span class="swd"></span>
+        <div><div class="nm">푸시아</div><div class="hex">#F58FE0 / #AF419C</div></div>
+        <div class="tag"><span class="w">주의 · 현역정당색</span></div>
+      </div>
+      <div class="card">
+        <div class="who">김OO · 대표이사</div><div class="meta">OO전자 · 07.28 거래 · 07.31 공시</div>
+        <div class="line">보통주 <mark>12,000주</mark>를 주당 <mark>61,200원</mark>에 매도, 총 <mark>7억 3,440만원</mark>.</div>
+        <div class="micro">3거래일 만인데 말이죠,</div>
+      </div>
+      <div class="rk">
+        <div class="rowr"><div class="rank one">1</div><div class="rname">OO전자</div><div class="bar win"><i style="width:100%"></i></div><div class="amt buy">+842억</div></div>
+        <div class="rowr"><div class="rank">2</div><div class="rname">OO바이오</div><div class="bar"><i style="width:61%"></i></div><div class="amt buy">+514억</div></div>
+        <div class="rowr"><div class="rank">3</div><div class="rname">OO화학</div><div class="bar"><i style="width:38%"></i></div><div class="amt sell">-322억</div></div>
+      </div>
+      <div class="btm">
+        <div class="icons">
+          <svg width="30" height="30" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="#F58FE0"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#fff" opacity=".28"/></svg>
+          <div class="ai" style="background:#AF419C"><svg width="28" height="28" viewBox="0 0 40 40"><rect x="4" y="9" width="32" height="22" rx="3" fill="none" stroke="#fff" stroke-width="2.5"/><rect x="9" y="14" width="8" height="4.5" rx="1" fill="#fff"/><rect x="20" y="14" width="8" height="4.5" rx="1" fill="#fff" opacity=".4"/><rect x="9" y="22" width="8" height="4.5" rx="1" fill="#fff" opacity=".4"/><rect x="20" y="22" width="8" height="4.5" rx="1" fill="#fff" opacity=".4"/></svg></div>
+          <svg width="16" height="16" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="#F58FE0"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#fff" opacity=".28"/></svg>
+        </div>
+        <div class="nums">C* 55.4 · ink 8.29 · 현역정당 dE 32.5 · 매수 66.9 · 매도 57.0</div>
+      </div>
+    </div>
+    <div class="opt" style="--mk:#7FCEBE;--dp:#007B6B">
+      <div class="head">
+        <span class="sw"></span><span class="swd"></span>
+        <div><div class="nm">(참고)민트T2</div><div class="hex">#7FCEBE / #007B6B</div></div>
+        <div class="tag"><span class="p">통과</span></div>
+      </div>
+      <div class="card">
+        <div class="who">김OO · 대표이사</div><div class="meta">OO전자 · 07.28 거래 · 07.31 공시</div>
+        <div class="line">보통주 <mark>12,000주</mark>를 주당 <mark>61,200원</mark>에 매도, 총 <mark>7억 3,440만원</mark>.</div>
+        <div class="micro">3거래일 만인데 말이죠,</div>
+      </div>
+      <div class="rk">
+        <div class="rowr"><div class="rank one">1</div><div class="rname">OO전자</div><div class="bar win"><i style="width:100%"></i></div><div class="amt buy">+842억</div></div>
+        <div class="rowr"><div class="rank">2</div><div class="rname">OO바이오</div><div class="bar"><i style="width:61%"></i></div><div class="amt buy">+514억</div></div>
+        <div class="rowr"><div class="rank">3</div><div class="rname">OO화학</div><div class="bar"><i style="width:38%"></i></div><div class="amt sell">-322억</div></div>
+      </div>
+      <div class="btm">
+        <div class="icons">
+          <svg width="30" height="30" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="#7FCEBE"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#fff" opacity=".28"/></svg>
+          <div class="ai" style="background:#007B6B"><svg width="28" height="28" viewBox="0 0 40 40"><rect x="4" y="9" width="32" height="22" rx="3" fill="none" stroke="#fff" stroke-width="2.5"/><rect x="9" y="14" width="8" height="4.5" rx="1" fill="#fff"/><rect x="20" y="14" width="8" height="4.5" rx="1" fill="#fff" opacity=".4"/><rect x="9" y="22" width="8" height="4.5" rx="1" fill="#fff" opacity=".4"/><rect x="20" y="22" width="8" height="4.5" rx="1" fill="#fff" opacity=".4"/></svg></div>
+          <svg width="16" height="16" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="#7FCEBE"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#fff" opacity=".28"/></svg>
+        </div>
+        <div class="nums">C* 28.0 · ink 9.62 · 현역정당 dE 84.4 · 매수 100.0 · 매도 65.2</div>
+      </div>
+    </div>
+    <div class="opt" style="--mk:#FFD338;--dp:#846A00">
+      <div class="head">
+        <span class="sw"></span><span class="swd"></span>
+        <div><div class="nm">(탈락)옐로우</div><div class="hex">#FFD338 / #846A00</div></div>
+        <div class="tag"><span class="w">주의 · 현역정당색,형광</span></div>
+      </div>
+      <div class="card">
+        <div class="who">김OO · 대표이사</div><div class="meta">OO전자 · 07.28 거래 · 07.31 공시</div>
+        <div class="line">보통주 <mark>12,000주</mark>를 주당 <mark>61,200원</mark>에 매도, 총 <mark>7억 3,440만원</mark>.</div>
+        <div class="micro">3거래일 만인데 말이죠,</div>
+      </div>
+      <div class="rk">
+        <div class="rowr"><div class="rank one">1</div><div class="rname">OO전자</div><div class="bar win"><i style="width:100%"></i></div><div class="amt buy">+842억</div></div>
+        <div class="rowr"><div class="rank">2</div><div class="rname">OO바이오</div><div class="bar"><i style="width:61%"></i></div><div class="amt buy">+514억</div></div>
+        <div class="rowr"><div class="rank">3</div><div class="rname">OO화학</div><div class="bar"><i style="width:38%"></i></div><div class="amt sell">-322억</div></div>
+      </div>
+      <div class="btm">
+        <div class="icons">
+          <svg width="30" height="30" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="#FFD338"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#fff" opacity=".28"/></svg>
+          <div class="ai" style="background:#846A00"><svg width="28" height="28" viewBox="0 0 40 40"><rect x="4" y="9" width="32" height="22" rx="3" fill="none" stroke="#fff" stroke-width="2.5"/><rect x="9" y="14" width="8" height="4.5" rx="1" fill="#fff"/><rect x="20" y="14" width="8" height="4.5" rx="1" fill="#fff" opacity=".4"/><rect x="9" y="22" width="8" height="4.5" rx="1" fill="#fff" opacity=".4"/><rect x="20" y="22" width="8" height="4.5" rx="1" fill="#fff" opacity=".4"/></svg></div>
+          <svg width="16" height="16" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="#FFD338"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#fff" opacity=".28"/></svg>
+        </div>
+        <div class="nums">C* 76.4 · ink 12.27 · 현역정당 dE 9.6 · 매수 80.1 · 매도 127.2</div>
+      </div>
+    </div></div>
+<h2>측정값</h2>
+<table><tr><th>이름</th><th>marker</th><th>deep</th><th>LCh</th><th>ink대비</th><th>현역정당 dE</th><th>소멸정당 dE</th><th>dE매수</th><th>dE매도</th><th>dE gray300</th></tr><tr><td>코랄</td><td class=n>#FF9E8E</td><td class=n>#C14035</td><td class=n>L75 C41.7 H35</td><td class=n>8.83</td><td class=n>49.8 <span class=sm>개혁신당 주황</span></td><td class=n>35.2 <span class=sm>미래통합 핑크(소멸)</span></td><td class=n>38.7</td><td class=n>79.7</td><td class=n>45.2</td></tr><tr><td>살몬 피치</td><td class=n>#FFAD8F</td><td class=n>#B94A22</td><td class=n>L78 C38.4 H46</td><td class=n>9.75</td><td class=n>50.0 <span class=sm>개혁신당 주황</span></td><td class=n>44.3 <span class=sm>미래통합 핑크(소멸)</span></td><td class=n>45.3</td><td class=n>82.1</td><td class=n>41.3</td></tr><tr><td>탠저린</td><td class=n>#FFB77A</td><td class=n>#A65900</td><td class=n>L80 C45.5 H65</td><td class=n>10.32</td><td class=n>44.5 <span class=sm>개혁신당 주황</span></td><td class=n>58.2 <span class=sm>미래통합 핑크(소멸)</span></td><td class=n>51.3</td><td class=n>93.3</td><td class=n>48.2</td></tr><tr><td>앰버</td><td class=n>#FFC77E</td><td class=n>#966200</td><td class=n>L84 C45.4 H75</td><td class=n>11.51</td><td class=n>43.6 <span class=sm>정의·노무현 노랑</span></td><td class=n>66.9 <span class=sm>미래통합 핑크(소멸)</span></td><td class=n>60.3</td><td class=n>96.6</td><td class=n>47.6</td></tr><tr><td>스프링그린</td><td class=n>#86DFA2</td><td class=n>#007E42</td><td class=n>L82 C45.3 H151</td><td class=n>10.98</td><td class=n>73.6 <span class=sm>정의·노무현 노랑</span></td><td class=n>31.7 <span class=sm>국민의당 초록(소멸)</span></td><td class=n>106.6</td><td class=n>88.4</td><td class=n>45.8</td></tr><tr><td>터쿼이즈</td><td class=n>#4FD8D8</td><td class=n>#007A7A</td><td class=n>L79 C37.8 H197</td><td class=n>10.19</td><td class=n>88.5 <span class=sm>진보 보라</span></td><td class=n>31.5 <span class=sm>바른정당 하늘(소멸)</span></td><td class=n>112.2</td><td class=n>64.6</td><td class=n>37.3</td></tr><tr><td>아쿠아</td><td class=n>#5CD3E6</td><td class=n>#007887</td><td class=n>L79 C33.9 H215</td><td class=n>9.99</td><td class=n>79.0 <span class=sm>진보 보라</span></td><td class=n>20.9 <span class=sm>바른정당 하늘(소멸)</span></td><td class=n>109.0</td><td class=n>55.0</td><td class=n>33.1</td></tr><tr><td>로즈</td><td class=n>#FFA0B4</td><td class=n>#C83063</td><td class=n>L76 C38.0 H7</td><td class=n>9.18</td><td class=n>50.8 <span class=sm>진보 보라</span></td><td class=n>26.7 <span class=sm>미래통합 핑크(소멸)</span></td><td class=n>47.7</td><td class=n>66.9</td><td class=n>40.6</td></tr><tr><td>핑크</td><td class=n>#FF9FD0</td><td class=n>#BD3686</td><td class=n>L76 C43.3 H347</td><td class=n>9.33</td><td class=n>41.4 <span class=sm>진보 보라</span></td><td class=n>27.2 <span class=sm>미래통합 핑크(소멸)</span></td><td class=n>57.2</td><td class=n>60.5</td><td class=n>44.9</td></tr><tr><td>푸시아</td><td class=n>#F58FE0</td><td class=n>#AF419C</td><td class=n>L73 C55.4 H334</td><td class=n>8.29</td><td class=n>32.5 <span class=sm>진보 보라</span></td><td class=n>32.2 <span class=sm>미래통합 핑크(소멸)</span></td><td class=n>66.9</td><td class=n>57.0</td><td class=n>57.1</td></tr><tr><td>(참고)민트T2</td><td class=n>#7FCEBE</td><td class=n>#007B6B</td><td class=n>L78 C28.0 H179</td><td class=n>9.62</td><td class=n>84.4 <span class=sm>진보 보라</span></td><td class=n>37.9 <span class=sm>바른정당 하늘(소멸)</span></td><td class=n>100.0</td><td class=n>65.2</td><td class=n>28.8</td></tr><tr><td>(탈락)옐로우</td><td class=n>#FFD338</td><td class=n>#846A00</td><td class=n>L86 C76.4 H89</td><td class=n>12.27</td><td class=n>9.6 <span class=sm>정의·노무현 노랑</span></td><td class=n>68.1 <span class=sm>국민의당 초록(소멸)</span></td><td class=n>80.1</td><td class=n>127.2</td><td class=n>78.4</td></tr></table>
+<p class="cap">dE는 CIE76 색차 — 10 미만은 같은 색으로 인지, 30~50이면 명확히 구분. C*는 CIE LCh 채도로 형광끼 지표(기존 옐로우 76.4, 라임 85.0, 무채색 2.1). dE gray300은 1위 바가 2·3위 회색 바와 얼마나 벌어지는지를 본 값이다. 로고 심볼은 색 비교용 임시 형태이며 실제 3안은 STEP 5에서 제작한다.</p>
+</div></body></html>

@@ -1,0 +1,13 @@
+node_modules/
+dist/
+build/
+# API 키 — 절대 커밋 금지 (CLAUDE.md 규칙 5). 하위 폴더의 pipeline/.env 도 이 패턴에 걸린다
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log
+.expo/
+coverage/
+# 대용량 원본 애셋은 git 제외 (내보내기 결과물만 커밋)
+assets/figma-exports/raw/

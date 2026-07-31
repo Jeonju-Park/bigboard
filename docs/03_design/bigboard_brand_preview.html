@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>빅보드 — 브랜드 확정 시안</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy.css" type="text/css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg-primary:#FFFFFF; --bg-secondary:#F6F7F8;
+  --gray-50:#FAFBFC; --gray-100:#F6F7F8; --gray-200:#E9EBED; --gray-300:#D6DADD;
+  --gray-400:#B0B6BC; --gray-500:#8A9199; --gray-600:#5F666E; --gray-700:#3F454C;
+  --gray-800:#26292E; --ink:#17191C;
+  --accent-50:#DDF7E3; --accent-100:#C3F0CE; --accent-200:#A1E7B5; --accent-300:#86DFA2;
+  --accent-500:#46AB6C; --accent-600:#018346; --accent-700:#006D38;
+  --buy:#D93B3B; --sell:#2563A8;
+  --f-display:'Paperlogy','Pretendard',sans-serif;
+  --f-body:'Pretendard',-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo',sans-serif;
+  --f-num:'IBM Plex Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-font-smoothing:antialiased}
+body{font-family:var(--f-body);background:var(--gray-100);color:var(--gray-800);font-size:15px;line-height:1.5}
+.page{max-width:1240px;margin:0 auto;padding:48px 20px 96px;background:#fff}
+.num{font-family:var(--f-num);font-variant-numeric:tabular-nums}
+
+/* 문서용 헤더 */
+.doc-h1{font-family:var(--f-display);font-size:24px;font-weight:800;color:var(--ink);line-height:1.25;letter-spacing:-.01em}
+.doc-sub{font-size:13px;color:var(--gray-500);margin-top:6px}
+.sec{margin-top:56px}
+.sec-t{font-size:17px;font-weight:600;color:var(--ink);line-height:1.25}
+.sec-d{font-size:13px;color:var(--gray-500);margin-top:5px;margin-bottom:20px;max-width:760px;line-height:1.7}
+.hr{height:1px;background:var(--gray-200);margin:44px 0 0}
+.note{font-size:11px;color:var(--gray-400);margin-top:10px;line-height:1.7}
+
+/* 1. 로고 */
+.logo-row{display:flex;flex-wrap:wrap;gap:16px;align-items:stretch}
+.logo-box{flex:1 1 240px;border:1px solid var(--gray-200);border-radius:12px;padding:28px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;min-height:150px}
+.logo-box.dark{background:var(--ink);border-color:var(--ink)}
+.logo-box.sec{background:var(--bg-secondary)}
+.lockup{display:flex;align-items:center;gap:9px}
+.wm{font-family:var(--f-display);font-weight:800;font-size:24px;letter-spacing:-.02em;color:var(--ink);line-height:1}
+.wm.on-dark{color:#fff}
+.wm-en{font-family:var(--f-display);font-weight:700;font-size:11px;letter-spacing:.14em;color:var(--gray-500);text-transform:uppercase;margin-top:5px}
+.wm-en.on-dark{color:var(--accent-300)}
+.lbl{font-size:11px;color:var(--gray-400)}
+.lbl.on-dark{color:var(--gray-500)}
+
+/* 2. 팔레트 */
+.pal{display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:10px}
+.sw{border:1px solid var(--gray-200);border-radius:8px;overflow:hidden}
+.sw b{display:block;height:58px}
+.sw .m{padding:8px 9px}
+.sw .n{font-size:11px;font-weight:600;color:var(--ink)}
+.sw .h{font-size:10px;color:var(--gray-500);font-family:var(--f-num);margin-top:2px}
+.sw .u{font-size:10px;color:var(--gray-400);margin-top:4px;line-height:1.4}
+.ratio{display:flex;height:34px;border-radius:6px;overflow:hidden;margin-top:14px;font-size:10px;color:var(--gray-500)}
+.ratio div{display:flex;align-items:center;justify-content:center}
+
+/* 3. 타이포 */
+.type-tbl{width:100%;border-collapse:collapse}
+.type-tbl td{padding:14px 10px;border-bottom:1px solid var(--gray-200);vertical-align:baseline}
+.type-tbl td:first-child{width:150px}
+.tk{font-size:11px;color:var(--gray-500);font-family:var(--f-num)}
+.tf{font-size:10px;margin-top:3px;font-weight:600}
+.tf.pp{color:var(--accent-600)}
+.tf.pr{color:var(--gray-400)}
+.tf.mo{color:var(--gray-400)}
+
+/* 4. 앱 목업 */
+.phones{display:flex;gap:24px;flex-wrap:wrap}
+.phone{width:340px;border:1px solid var(--gray-200);border-radius:20px;overflow:hidden;background:#fff;flex:none}
+.appbar{display:flex;align-items:center;gap:8px;padding:14px 20px 12px}
+.appbar .wm{font-size:19px}
+.ticker{background:var(--bg-secondary);padding:7px 20px;display:flex;align-items:center;gap:8px;overflow:hidden;white-space:nowrap}
+.ticker .dot{width:5px;height:5px;border-radius:50%;background:var(--accent-600);flex:none}
+.ticker .t{font-family:var(--f-num);font-size:11px;color:var(--gray-600);font-variant-numeric:tabular-nums}
+.seg{display:flex;gap:20px;padding:16px 20px 0}
+.seg span{font-size:15px;font-weight:600;color:var(--gray-400);padding-bottom:9px;border-bottom:2px solid transparent}
+.seg span.on{color:var(--ink);border-color:var(--ink)}
+.chips{display:flex;gap:6px;padding:12px 20px 4px;overflow:hidden}
+.chip{font-size:12px;padding:5px 11px;border-radius:999px;border:1px solid var(--gray-200);color:var(--gray-600);white-space:nowrap}
+.chip.on{background:var(--accent-50);border-color:var(--accent-200);color:var(--accent-700);font-weight:600}
+.feed{padding:4px 20px 16px}
+.dcard{padding:16px 0;border-bottom:1px solid var(--gray-200)}
+.dcard:last-child{border-bottom:0}
+.drow{display:flex;align-items:center;gap:8px}
+.avatar{width:32px;height:32px;border-radius:50%;background:var(--gray-100);flex:none;display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--gray-500);font-weight:600}
+.dname{font-size:15px;font-weight:600;color:var(--ink)}
+.dmeta{font-size:12px;color:var(--gray-500);margin-top:2px}
+.badge{margin-left:auto;font-size:11px;font-weight:600;padding:3px 8px;border-radius:4px}
+.badge.sell{color:var(--sell);background:#EDF3F9}
+.badge.buy{color:var(--buy);background:#FBEEEE}
+.dline{font-size:15px;color:var(--gray-800);margin-top:11px;line-height:2}
+.mk{background:var(--ink);color:#fff;font-weight:600;padding:2px 5px;border-radius:3px;font-family:var(--f-num);font-variant-numeric:tabular-nums;font-size:14px}
+.dfoot{display:flex;align-items:center;gap:6px;margin-top:11px}
+.micro{font-size:11px;color:var(--gray-400)}
+.dfoot .when{font-size:11px;color:var(--gray-400);margin-left:auto;font-family:var(--f-num)}
+.tabbar{display:flex;border-top:1px solid var(--gray-200);padding:9px 0 12px;background:#fff}
+.tb{flex:1;text-align:center;font-size:10px;color:var(--gray-400)}
+.tb i{display:block;width:20px;height:20px;border-radius:5px;background:var(--gray-300);margin:0 auto 5px}
+.tb.on{color:var(--accent-700);font-weight:600}
+.tb.on i{background:var(--accent-600)}
+
+/* 랭킹 */
+.rk-h{padding:18px 20px 6px}
+.rk-t{font-family:var(--f-display);font-size:24px;font-weight:800;color:var(--ink);line-height:1.25;letter-spacing:-.02em}
+.rk-s{font-size:12px;color:var(--gray-500);margin-top:5px}
+.rk-tabs{display:flex;gap:6px;padding:14px 20px 8px}
+.rk-tabs span{font-size:12px;padding:5px 11px;border-radius:999px;background:var(--gray-100);color:var(--gray-600)}
+.rk-tabs span.on{background:var(--ink);color:#fff;font-weight:600}
+.rk-list{padding:6px 20px 16px}
+.rrow{display:flex;align-items:center;gap:10px;padding:11px 0;border-bottom:1px solid var(--gray-200)}
+.rrow:last-child{border-bottom:0}
+.rno{width:16px;font-family:var(--f-num);font-size:13px;font-weight:700;color:var(--gray-400)}
+.rno.one{color:var(--ink)}
+.rnm{flex:0 0 76px;font-size:13px;color:var(--gray-800);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rbar{flex:1;height:14px;background:var(--gray-100);border-radius:2px;overflow:hidden}
+.rbar i{display:block;height:100%;background:var(--gray-300)}
+.rbar.win i{background:var(--accent-600)}
+.ramt{flex:0 0 64px;text-align:right;font-family:var(--f-num);font-size:13px;font-weight:600}
+.ramt.buy{color:var(--buy)} .ramt.sell{color:var(--sell)}
+
+/* 예고 */
+.cal-h{padding:18px 20px 4px}
+.week{display:flex;gap:4px;padding:12px 20px 8px}
+.day{flex:1;text-align:center;padding:8px 0;border-radius:8px;background:var(--gray-100)}
+.day.on{background:var(--ink)}
+.day .d{font-size:10px;color:var(--gray-500)}
+.day .n{font-family:var(--f-num);font-size:14px;font-weight:600;color:var(--gray-700);margin-top:3px}
+.day.on .d{color:var(--gray-400)} .day.on .n{color:#fff}
+.day .pip{width:4px;height:4px;border-radius:50%;background:var(--accent-600);margin:4px auto 0}
+.evt{padding:6px 20px 16px}
+.erow{display:flex;gap:12px;padding:13px 0;border-bottom:1px solid var(--gray-200)}
+.erow:last-child{border-bottom:0}
+.ebar{width:4px;border-radius:2px;background:var(--ink);flex:none}
+.eday{font-family:var(--f-num);font-size:12px;font-weight:700;color:var(--accent-700);flex:0 0 34px}
+.ett{font-size:14px;color:var(--ink);font-weight:600}
+.esub{font-size:12px;color:var(--gray-500);margin-top:3px}
+
+/* 규칙 박스 */
+.rules{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:820px){.rules{grid-template-columns:1fr}}
+.rule{border:1px solid var(--gray-200);border-radius:12px;padding:18px 20px}
+.rule h4{font-size:14px;font-weight:600;color:var(--ink);margin-bottom:9px}
+.rule p{font-size:13px;color:var(--gray-700);line-height:1.75}
+.rule .ok{color:var(--accent-700);font-weight:600}
+.rule .no{color:var(--buy);font-weight:600}
+.spec{font-family:var(--f-num);font-size:11px;color:var(--gray-500);margin-top:9px;line-height:1.8}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="lockup" style="margin-bottom:26px">
+    <svg width="30" height="30" viewBox="0 0 40 40" aria-hidden="true"><rect x="2" y="7" width="36" height="26" rx="4" fill="#17191C"/><rect x="7" y="13" width="9" height="6" rx="1.5" fill="#86DFA2"/><rect x="19" y="13" width="9" height="6" rx="1.5" fill="#fff" opacity=".3"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#fff" opacity=".3"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#fff" opacity=".3"/></svg>
+    <div>
+      <div class="doc-h1">빅보드 브랜드 확정 시안</div>
+      <div class="doc-sub">2026-07-31 · 이름 · 색 · 서체 확정값 적용 · 로고 심볼은 임시(STEP 5에서 3안 제작)</div>
+    </div>
+  </div>
+
+  <!-- 이름 -->
+  <div class="sec">
+    <div class="sec-t">1. 이름 — 빅보드 / Big Board</div>
+    <p class="sec-d">국문 <b>빅보드</b>가 1순위 표기. 영문 병기는 <b>Big Board</b>(두 단어, 각각 대문자). BigBoard · BIGBOARD · 빅 보드 표기는 금지. 워드마크에만 Paperlogy를 쓴다.</p>
+    <div class="logo-row">
+      <div class="logo-box">
+        <div class="lockup">
+          <svg width="34" height="34" viewBox="0 0 40 40"><rect x="2" y="7" width="36" height="26" rx="4" fill="#17191C"/><rect x="7" y="13" width="9" height="6" rx="1.5" fill="#86DFA2"/><rect x="19" y="13" width="9" height="6" rx="1.5" fill="#fff" opacity=".3"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#fff" opacity=".3"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#fff" opacity=".3"/></svg>
+          <div><div class="wm">빅보드</div><div class="wm-en">Big Board</div></div>
+        </div>
+        <div class="lbl">기본 — 흰 배경</div>
+      </div>
+      <div class="logo-box sec">
+        <div class="lockup">
+          <svg width="34" height="34" viewBox="0 0 40 40"><rect x="2" y="7" width="36" height="26" rx="4" fill="#17191C"/><rect x="7" y="13" width="9" height="6" rx="1.5" fill="#86DFA2"/><rect x="19" y="13" width="9" height="6" rx="1.5" fill="#fff" opacity=".3"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#fff" opacity=".3"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#fff" opacity=".3"/></svg>
+          <div><div class="wm">빅보드</div><div class="wm-en">Big Board</div></div>
+        </div>
+        <div class="lbl">bg-secondary</div>
+      </div>
+      <div class="logo-box dark">
+        <div class="lockup">
+          <svg width="34" height="34" viewBox="0 0 40 40"><rect x="2" y="7" width="36" height="26" rx="4" fill="none" stroke="#86DFA2" stroke-width="2"/><rect x="7" y="13" width="9" height="6" rx="1.5" fill="#86DFA2"/><rect x="19" y="13" width="9" height="6" rx="1.5" fill="#fff" opacity=".35"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#fff" opacity=".35"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#fff" opacity=".35"/></svg>
+          <div><div class="wm on-dark">빅보드</div><div class="wm-en on-dark">Big Board</div></div>
+        </div>
+        <div class="lbl on-dark">ink 배경 — 앱 아이콘·스플래시</div>
+      </div>
+    </div>
+    <p class="note">세 겹의 뜻: Big Board = 뉴욕증권거래소 별칭 / Board = 이사회(추적 대상) / Board = 개표방송 전광판. 한국어로 읽으면 "큰 손들의 판".</p>
+  </div>
+
+  <div class="hr"></div>
+
+  <!-- 색 -->
+  <div class="sec">
+    <div class="sec-t">2. 색 — 메인 ink 무채색, 액센트 스프링그린</div>
+    <p class="sec-d">마커 하이라이트는 색면이 아니라 <b>ink 면 + 흰 글자</b>다. 화면에서 색을 가진 요소는 액센트(≤3%)와 매수·매도 시맨틱뿐이다. 액센트를 등락·손익·수치에 쓰지 않는다 — 초록은 미국식 상승색이라 국장 관습과 충돌한다.</p>
+
+    <div class="pal">
+      <div class="sw"><b style="background:#FFFFFF;border-bottom:1px solid var(--gray-200)"></b><div class="m"><div class="n">bg-primary</div><div class="h">#FFFFFF</div><div class="u">기본 배경 60%</div></div></div>
+      <div class="sw"><b style="background:#F6F7F8"></b><div class="m"><div class="n">bg-secondary</div><div class="h">#F6F7F8</div><div class="u">그룹 면 30%</div></div></div>
+      <div class="sw"><b style="background:#17191C"></b><div class="m"><div class="n">ink · 메인</div><div class="h">#17191C</div><div class="u">마커·버튼·텍스트 10%</div></div></div>
+      <div class="sw"><b style="background:#018346"></b><div class="m"><div class="n">accent-600</div><div class="h">#018346</div><div class="u">1위 바·활성 3%</div></div></div>
+      <div class="sw"><b style="background:#86DFA2"></b><div class="m"><div class="n">accent-300</div><div class="h">#86DFA2</div><div class="u">ink 면 위 심볼</div></div></div>
+      <div class="sw"><b style="background:#DDF7E3"></b><div class="m"><div class="n">accent-50</div><div class="h">#DDF7E3</div><div class="u">칩·배지 면</div></div></div>
+      <div class="sw"><b style="background:#D93B3B"></b><div class="m"><div class="n">semantic-buy</div><div class="h">#D93B3B</div><div class="u">매수·상승 숫자</div></div></div>
+      <div class="sw"><b style="background:#2563A8"></b><div class="m"><div class="n">semantic-sell</div><div class="h">#2563A8</div><div class="u">매도·하락 숫자</div></div></div>
+      <div class="sw"><b style="background:#8A9199"></b><div class="m"><div class="n">gray-500</div><div class="h">#8A9199</div><div class="u">캡션</div></div></div>
+      <div class="sw"><b style="background:#D6DADD"></b><div class="m"><div class="n">gray-300</div><div class="h">#D6DADD</div><div class="u">비강조 바</div></div></div>
+    </div>
+
+    <div class="ratio">
+      <div style="background:#FFFFFF;flex:60;border:1px solid var(--gray-200);color:var(--gray-500)">bg-primary 60</div>
+      <div style="background:#F6F7F8;flex:30;color:var(--gray-500)">bg-secondary 30</div>
+      <div style="background:#17191C;flex:7;color:#fff">ink 7</div>
+      <div style="background:#018346;flex:3;color:#fff">3</div>
+    </div>
+    <p class="note">마커 대비 17.61:1 (흰 글자 on ink) · accent-600 흰 배경 위 4.84:1 · accent-600 대비 매수 dE 106.9 / 매도 dE 84.4 — 시맨틱 간섭 없음.</p>
+  </div>
+
+  <div class="hr"></div>
+
+  <!-- 서체 -->
+  <div class="sec">
+    <div class="sec-t">3. 서체 — Paperlogy 최소, Pretendard 주력</div>
+    <p class="sec-d">Paperlogy는 <b>로고 워드마크와 화면당 최대 1회의 display(24px)</b>에만 쓴다. 그 외 모든 텍스트는 Pretendard, 모든 숫자는 IBM Plex Mono다. 아래 표에서 왼쪽 라벨의 색이 어느 서체인지를 표시한다.</p>
+    <table class="type-tbl">
+      <tr><td><div class="tk">display 24 / 800</div><div class="tf pp">Paperlogy</div></td>
+        <td><span style="font-family:var(--f-display);font-size:24px;font-weight:800;color:var(--ink);line-height:1.25;letter-spacing:-.02em">이번 주 순매수 보드</span></td></tr>
+      <tr><td><div class="tk">title 20 / 700</div><div class="tf pr">Pretendard</div></td>
+        <td><span style="font-size:20px;font-weight:700;color:var(--ink);line-height:1.25">내부자 순매수 상위</span></td></tr>
+      <tr><td><div class="tk">title-s 17 / 600</div><div class="tf pr">Pretendard</div></td>
+        <td><span style="font-size:17px;font-weight:600;color:var(--ink);line-height:1.25">거래 요약</span></td></tr>
+      <tr><td><div class="tk">label 15 / 600</div><div class="tf pr">Pretendard</div></td>
+        <td><span style="font-size:15px;font-weight:600;color:var(--ink)">김OO · 대표이사</span></td></tr>
+      <tr><td><div class="tk">body 15 / 400</div><div class="tf pr">Pretendard</div></td>
+        <td><span style="font-size:15px;color:var(--gray-800)">보통주를 장내에서 매도했다고 공시했습니다.</span></td></tr>
+      <tr><td><div class="tk">numeric 15 / 600</div><div class="tf mo">IBM Plex Mono</div></td>
+        <td><span class="num" style="font-size:15px;font-weight:600;color:var(--ink)">61,200원 × 12,000주 = 734,400,000</span></td></tr>
+      <tr><td><div class="tk">caption 12 / 400</div><div class="tf pr">Pretendard</div></td>
+        <td><span style="font-size:12px;color:var(--gray-500)">거래일 2026.07.28 · 공시일 2026.07.31 · DART 기준</span></td></tr>
+      <tr><td><div class="tk">micro 11 / 400</div><div class="tf pr">Pretendard</div></td>
+        <td><span style="font-size:11px;color:var(--gray-400)">3거래일 만인데 말이죠,</span></td></tr>
+    </table>
+    <p class="note">Paperlogy 사용 비율은 화면 텍스트의 1% 미만이 된다. 웹폰트도 800 한 종만 로드하면 되므로 약 155KB로 끝난다 — 9종 전부 로드할 때 대비 1/9.</p>
+  </div>
+
+  <div class="hr"></div>
+
+  <!-- 목업 -->
+  <div class="sec">
+    <div class="sec-t">4. 적용 — 실제 화면</div>
+    <p class="sec-d">확정값을 그대로 적용한 세 화면. 카드는 borderless(헤어라인 디바이더), 절대 위치는 티커 바에만, 위트는 micro 레이어에 화면당 1회.</p>
+    <div class="phones">
+
+      <!-- S1 속보 -->
+      <div class="phone">
+        <div class="appbar">
+          <svg width="24" height="24" viewBox="0 0 40 40"><rect x="2" y="7" width="36" height="26" rx="4" fill="#17191C"/><rect x="7" y="13" width="9" height="6" rx="1.5" fill="#86DFA2"/><rect x="19" y="13" width="9" height="6" rx="1.5" fill="#fff" opacity=".3"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#fff" opacity=".3"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#fff" opacity=".3"/></svg>
+          <div class="wm">빅보드</div>
+        </div>
+        <div class="ticker"><span class="dot"></span><span class="t">09:41 OO전자 김OO 매도 7.3억 · OO바이오 이OO 매수 2.1억 · OO화학 예고 D-6</span></div>
+        <div class="seg"><span class="on">속보</span><span>팔로우</span></div>
+        <div class="chips"><span class="chip on">전체</span><span class="chip">매수</span><span class="chip">매도</span><span class="chip">대형</span><span class="chip">예고</span></div>
+        <div class="feed">
+          <div class="dcard">
+            <div class="drow">
+              <div class="avatar">김</div>
+              <div><div class="dname">김OO · 대표이사</div><div class="dmeta">OO전자</div></div>
+              <span class="badge sell">매도</span>
+            </div>
+            <div class="dline">보통주 <span class="mk">12,000주</span>를 주당 <span class="mk">61,200원</span>에, 총 <span class="mk">7억 3,440만원</span>.</div>
+            <div class="dfoot"><span class="micro">3거래일 만인데 말이죠,</span><span class="when">07.31</span></div>
+          </div>
+          <div class="dcard">
+            <div class="drow">
+              <div class="avatar">이</div>
+              <div><div class="dname">이OO · 사내이사</div><div class="dmeta">OO바이오</div></div>
+              <span class="badge buy">매수</span>
+            </div>
+            <div class="dline">보통주 <span class="mk">4,500주</span>를 주당 <span class="mk">47,800원</span>에, 총 <span class="mk">2억 1,510만원</span>.</div>
+            <div class="dfoot"><span class="micro">취임 후 첫 장내 매수입니다,</span><span class="when">07.31</span></div>
+          </div>
+        </div>
+        <div class="tabbar">
+          <div class="tb on"><i></i>속보</div><div class="tb"><i></i>탐색</div><div class="tb"><i></i>예고</div><div class="tb"><i></i>보드</div><div class="tb"><i></i>마이</div>
+        </div>
+      </div>
+
+      <!-- S7 보드 -->
+      <div class="phone">
+        <div class="rk-h">
+          <div class="rk-t">이번 주 순매수 보드</div>
+          <div class="rk-s">2026.07.25 ~ 07.31 · DART 공시 집계 · 07.31 09:40 기준</div>
+        </div>
+        <div class="rk-tabs"><span class="on">7일</span><span>30일</span><span>90일</span></div>
+        <div class="rk-list">
+          <div class="rrow"><div class="rno one">1</div><div class="rnm">OO전자</div><div class="rbar win"><i style="width:100%"></i></div><div class="ramt buy">+842억</div></div>
+          <div class="rrow"><div class="rno">2</div><div class="rnm">OO바이오</div><div class="rbar"><i style="width:61%"></i></div><div class="ramt buy">+514억</div></div>
+          <div class="rrow"><div class="rno">3</div><div class="rnm">OO화학</div><div class="rbar"><i style="width:44%"></i></div><div class="ramt buy">+371억</div></div>
+          <div class="rrow"><div class="rno">4</div><div class="rnm">OO건설</div><div class="rbar"><i style="width:38%"></i></div><div class="ramt sell">-322억</div></div>
+          <div class="rrow"><div class="rno">5</div><div class="rnm">OO에너지</div><div class="rbar"><i style="width:29%"></i></div><div class="ramt sell">-244억</div></div>
+          <div class="rrow"><div class="rno">6</div><div class="rnm">OO소재</div><div class="rbar"><i style="width:21%"></i></div><div class="ramt sell">-178억</div></div>
+        </div>
+        <div style="padding:2px 20px 18px"><span class="micro">1위는 아직 개표 중입니다만,</span></div>
+        <div class="tabbar">
+          <div class="tb"><i></i>속보</div><div class="tb"><i></i>탐색</div><div class="tb"><i></i>예고</div><div class="tb on"><i></i>보드</div><div class="tb"><i></i>마이</div>
+        </div>
+      </div>
+
+      <!-- S6 예고 -->
+      <div class="phone">
+        <div class="cal-h">
+          <div style="font-size:20px;font-weight:700;color:var(--ink);line-height:1.25">예고</div>
+          <div class="rk-s">사전공시 제도 · 지분 1% 또는 50억원 이상 거래는 개시 30일 전 공시</div>
+        </div>
+        <div class="week">
+          <div class="day"><div class="d">월</div><div class="n">27</div></div>
+          <div class="day"><div class="d">화</div><div class="n">28</div><div class="pip"></div></div>
+          <div class="day"><div class="d">수</div><div class="n">29</div></div>
+          <div class="day"><div class="d">목</div><div class="n">30</div><div class="pip"></div></div>
+          <div class="day on"><div class="d">금</div><div class="n">31</div><div class="pip"></div></div>
+          <div class="day"><div class="d">토</div><div class="n">01</div></div>
+          <div class="day"><div class="d">일</div><div class="n">02</div></div>
+        </div>
+        <div class="evt">
+          <div class="erow"><div class="ebar"></div><div class="eday">D-6</div><div><div class="ett">OO화학 박OO · 매도 예고</div><div class="esub">보통주 180,000주 · 개시 예정 08.06</div></div></div>
+          <div class="erow"><div class="ebar"></div><div class="eday">D-13</div><div><div class="ett">OO전자 김OO · 매도 예고</div><div class="esub">보통주 95,000주 · 개시 예정 08.13</div></div></div>
+          <div class="erow"><div class="ebar"></div><div class="eday">D-21</div><div><div class="ett">OO건설 정OO · 매수 예고</div><div class="esub">보통주 240,000주 · 개시 예정 08.21</div></div></div>
+          <div style="padding-top:12px"><span class="micro">달력에 적어두시는 분들이 있더군요,</span></div>
+        </div>
+        <div class="tabbar">
+          <div class="tb"><i></i>속보</div><div class="tb"><i></i>탐색</div><div class="tb on"><i></i>예고</div><div class="tb"><i></i>보드</div><div class="tb"><i></i>마이</div>
+        </div>
+      </div>
+
+    </div>
+    <p class="note">화면 안 문구는 전부 사실 서술이다. 추천·시그널·타이밍 워딩 없음, 느낌표·이모지 없음, 평가 형용사 없음. 고지문(BSR-CMN-01)은 상세·마이 화면에 배치되며 이 시안에는 미표시.</p>
+  </div>
+
+  <div class="hr"></div>
+
+  <!-- 규칙 -->
+  <div class="sec">
+    <div class="sec-t">5. 확정 규칙</div>
+    <div class="sec-d"></div>
+    <div class="rules">
+      <div class="rule">
+        <h4>서체</h4>
+        <p><span class="ok">Paperlogy</span> — 로고 워드마크, 화면당 최대 1회 display(24px/800). 그 외 전면 금지.<br>
+        <span class="ok">Pretendard</span> — 제목·본문·라벨·캡션·micro 전부.<br>
+        <span class="ok">IBM Plex Mono</span> — 모든 숫자. <code>font-variant-numeric: tabular-nums</code> 필수.</p>
+        <div class="spec">--font-display: 'Paperlogy'<br>--font-body: 'Pretendard'<br>--font-numeric: 'IBM Plex Mono'</div>
+      </div>
+      <div class="rule">
+        <h4>마커 하이라이트</h4>
+        <p>배경 ink #17191C, 글자 흰색, radius 3px, padding 2px 5px. 숫자에만 건다.<br>
+        <span class="no">금지</span> — 액센트 색을 마커 면으로 사용, 마커 위 흰색 외 텍스트, 한 문장에 마커 4개 이상.</p>
+        <div class="spec">대비 17.61:1 (AAA)</div>
+      </div>
+      <div class="rule">
+        <h4>액센트</h4>
+        <p>흰 배경 위에는 <span class="ok">accent-600 이상</span>만. accent-300 이하는 ink 면 위에서만.<br>
+        <span class="no">금지</span> — 등락·손익·수치 표현에 액센트 사용. 방향성은 semantic-buy/sell만 담당한다.</p>
+        <div class="spec">accent-600 on white 4.84:1 · accent-300 on ink 10.98:1</div>
+      </div>
+      <div class="rule">
+        <h4>위트</h4>
+        <p>micro(11px / gray-400) 레이어에만, 화면당 1회. 숫자를 담지 않고, 인물이 아니라 상황을 향하며, 쉼표로 여운을 남긴다.</p>
+        <div class="spec">테스트 — 개표방송 캐스터가<br>생방송 중에 할 수 있는 말인가</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

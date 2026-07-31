@@ -1,0 +1,182 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>빅보드 로고 — 복잡도 중간 지점</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--sec:#F6F7F8;--g200:#E9EBED;--g300:#D6DADD;--g400:#B0B6BC;--g500:#8A9199;--g700:#3F454C;--g800:#26292E;--ink:#17191C;--coral:#FF7355}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-font-smoothing:antialiased}
+body{font-family:Pretendard,-apple-system,sans-serif;color:var(--g800);font-size:15px;line-height:1.5;background:#fff;padding:44px 20px 90px}
+.wrap{max-width:1140px;margin:0 auto}
+h1{font-size:24px;font-weight:800;color:var(--ink);letter-spacing:-.02em;line-height:1.25}
+.sub{font-size:13px;color:var(--g500);margin-top:6px;line-height:1.7}
+h2{font-size:17px;font-weight:600;color:var(--ink);margin-top:44px}
+.hd{font-size:13px;color:var(--g500);margin-top:5px;margin-bottom:20px;max-width:840px;line-height:1.75}
+.ladder{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+@media(max-width:860px){.ladder{grid-template-columns:repeat(2,1fr)}}
+.lv{border:1px solid var(--g200);border-radius:12px;padding:16px 12px;text-align:center}
+.lv.target{border-color:var(--ink);border-width:2px;background:#FFF7F4}
+.art{display:flex;justify-content:center;align-items:center;height:112px}
+.lk{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--g400);margin-top:6px}
+.lt{font-size:13px;font-weight:600;color:var(--ink);margin-top:3px}
+.ls{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--g500);margin-top:6px;line-height:1.6}
+.ln{font-size:11px;color:var(--g500);margin-top:8px;line-height:1.6;text-align:left}
+.rules{background:var(--sec);border-radius:10px;padding:15px 17px;margin-top:20px;font-size:12.5px;color:var(--g700);line-height:1.9}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px}
+@media(max-width:860px){.cards{grid-template-columns:1fr}}
+.card{border:1px solid var(--g200);border-radius:12px;padding:16px 18px}
+.ch{display:flex;align-items:center;gap:9px}
+.badge{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;background:var(--ink);color:#fff;padding:2px 7px;border-radius:5px}
+h3{font-size:15px;font-weight:700;color:var(--ink)}
+.sizes{display:flex;gap:16px;align-items:flex-end;margin-top:14px;flex-wrap:wrap}
+.s{display:flex;flex-direction:column;align-items:center;gap:6px}
+.s span{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--g400)}
+.hold{display:flex;align-items:center;justify-content:center}
+.hold.onc{background:var(--coral);padding:8px;border-radius:10px}
+dl{margin-top:14px;display:grid;grid-template-columns:70px 1fr;gap:7px 14px;font-size:12.5px;line-height:1.7}
+dt{font-weight:700;color:var(--ink);font-size:11.5px;padding-top:1px}
+dd{color:var(--g700)}
+.foot{margin-top:40px;padding-top:22px;border-top:1px solid var(--g200);font-size:12px;color:var(--g500);line-height:1.9}
+</style></head><body><div class="wrap">
+<h1>빅보드 로고 — 복잡도의 중간 지점</h1>
+<p class="sub">2026-07-31 · v1(아이콘)과 v2(일러스트) 사이를 정량으로 정의한다. 아래 스케치는 <b>목표 지점을 보여주는 참고용</b>이며 최종 로고 후보가 아니다.</p>
+
+<h2>1. 복잡도 사다리 — 같은 모티브를 5단계로</h2>
+<p class="hd">같은 전광판 모티브를 복잡도만 바꿔 그렸다. <b>L3가 목표</b>다. L1·L2는 표정이 없고, L4부터는 부속물이 붙어 32px에서 무너진다.</p>
+<div class="ladder"><div class="lv"><div class="art"><svg viewBox="0 0 64 64" width="104" height="104"><rect x="6" y="14" width="52" height="36" fill="#FF7355"/><rect x="14" y="22" width="30" height="5" fill="#17191C"/><rect x="14" y="31" width="20" height="5" fill="#17191C"/><rect x="14" y="40" width="12" height="5" fill="#17191C"/></svg></div><div class="lk">L1</div><div class="lt">순수 아이콘</div><div class="ls">도형 3~4 · 단색 1 · 각도 0</div><div class="ln">v1이 여기 있었다. 정보는 명확하나 표정이 없다.</div></div><div class="lv"><div class="art"><svg viewBox="0 0 64 64" width="104" height="104"><rect x="5" y="13" width="54" height="38" rx="9" fill="#FF7355"/><rect x="14" y="22" width="32" height="6" rx="3" fill="#17191C"/><rect x="14" y="31" width="21" height="6" rx="3" fill="#17191C"/><rect x="14" y="40" width="12" height="6" rx="3" fill="#17191C"/></svg></div><div class="lk">L2</div><div class="lt">아이콘 +</div><div class="ls">도형 3~4 · 단색 1 · 라운드</div><div class="ln">L1에 곡률만 더한 수준.</div></div><div class="lv target"><div class="art"><svg viewBox="0 0 64 64" width="104" height="104"><defs><linearGradient id="g3" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><path d="M6 18 L58 11 A5 5 0 0 1 58 16 L58 48 A5 5 0 0 1 52 53 L11 53 A5 5 0 0 1 6 48 Z" fill="url(#g3)"/><rect x="14" y="24" width="32" height="6" rx="3" fill="#17191C" transform="rotate(-3.5 14 24)"/><rect x="14" y="34" width="21" height="6" rx="3" fill="#17191C" transform="rotate(-3.5 14 34)"/><rect x="14" y="44" width="12" height="6" rx="3" fill="#17191C" transform="rotate(-3.5 14 44)"/></svg></div><div class="lk">L3</div><div class="lt"><b>마크 — 목표 지점</b></div><div class="ls">도형 3~5 · 그라데이션 1 · 기울기 3~8°</div><div class="ln">단일 오브젝트에 <b>각도와 빛</b>만 들어간다. 장면이 아니다.</div></div><div class="lv"><div class="art"><svg viewBox="0 0 64 64" width="104" height="104"><defs><linearGradient id="g4" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><rect x="28" y="44" width="8" height="14" rx="2" fill="#17191C"/><rect x="18" y="55" width="28" height="5" rx="2.5" fill="#17191C"/><rect x="5" y="6" width="54" height="38" rx="8" fill="url(#g4)"/><rect x="13" y="14" width="30" height="5" rx="2.5" fill="#17191C"/><rect x="13" y="22" width="20" height="5" rx="2.5" fill="#17191C"/><rect x="13" y="30" width="12" height="5" rx="2.5" fill="#17191C"/><circle cx="50" cy="33" r="4" fill="#17191C"/></svg></div><div class="lk">L4</div><div class="lt">일러스트 마크</div><div class="ls">도형 6~9 · 부속물 등장</div><div class="ln">스탠드·표시등 같은 부속이 붙기 시작한다. 32px에서 무너진다.</div></div><div class="lv"><div class="art"><svg viewBox="0 0 64 64" width="104" height="104"><defs><linearGradient id="g5" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><path d="M0 46 A32 32 0 0 1 64 46 Z" fill="url(#g5)" opacity="1"/><rect x="0" y="46" width="64" height="3" fill="#17191C"/><rect x="14" y="12" width="36" height="26" rx="4" fill="#17191C"/><rect x="20" y="18" width="20" height="4" rx="2" fill="#FFB964"/><rect x="20" y="25" width="13" height="4" rx="2" fill="#FFB964"/><path d="M4 40 L10 34 M54 34 L60 40" stroke="#17191C" stroke-width="3" stroke-linecap="round"/><circle cx="8" cy="14" r="2.5" fill="#17191C"/><circle cx="56" cy="18" r="2" fill="#17191C"/><rect x="24" y="49" width="16" height="11" rx="2" fill="#17191C"/></svg></div><div class="lk">L5</div><div class="lt">일러스트</div><div class="ls">도형 10+ · 배경·환경</div><div class="ln">v2가 여기 있었다. 로고가 아니라 삽화다.</div></div></div>
+<div class="rules">
+<b>L3의 정량 기준 — 미드저니 결과를 이 조건으로 거르시면 된다</b><br>
+도형 개수 <b>3~5개</b> (부속물·배경 요소 0개) · 색 면 <b>3개 이하</b>(coral 단색 1 + 그라데이션 1 + ink) · 기울기 <b>3~8°</b> 또는 접힘 1회 · 그라데이션은 <b>한 면에만</b> · 인물·환경·지형·광선 <b>없음</b> · 32px에서 실루엣이 한 덩어리로 뭉치지 않을 것
+</div>
+
+<h2>2. L3 지점 스케치 8종</h2>
+<p class="hd">각 스케치는 104 / 48 / 32 / 16px과 coral 면 위 역상을 함께 렌더했다. 마음에 드는 방향을 고르시면 그 번호의 프롬프트로 미드저니를 돌리시면 된다. 프롬프트는 <code>logo_brief_v3.md</code>에 있다.</p>
+<div class="cards"><section class="card">
+  <div class="ch"><span class="badge">A</span><h3>기울어진 전광판</h3></div>
+  <div class="sizes">
+    <div class="s"><div class="hold"><svg viewBox="0 0 64 64" width="104" height="104"><defs><linearGradient id="ga" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><path d="M7 19 L57 12 L57 49 L7 56 Z" fill="url(#ga)"/><path d="M15 26 L47 21.5 L47 27 L15 31.5 Z" fill="#17191C"/><path d="M15 35 L36 32 L36 37.5 L15 40.5 Z" fill="#17191C"/><path d="M15 44 L27 42.3 L27 47.8 L15 49.5 Z" fill="#17191C"/></svg></div><span>104</span></div>
+    <div class="s"><div class="hold"><svg viewBox="0 0 64 64" width="48" height="48"><defs><linearGradient id="ga" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><path d="M7 19 L57 12 L57 49 L7 56 Z" fill="url(#ga)"/><path d="M15 26 L47 21.5 L47 27 L15 31.5 Z" fill="#17191C"/><path d="M15 35 L36 32 L36 37.5 L15 40.5 Z" fill="#17191C"/><path d="M15 44 L27 42.3 L27 47.8 L15 49.5 Z" fill="#17191C"/></svg></div><span>48</span></div>
+    <div class="s"><div class="hold"><svg viewBox="0 0 64 64" width="32" height="32"><defs><linearGradient id="ga" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><path d="M7 19 L57 12 L57 49 L7 56 Z" fill="url(#ga)"/><path d="M15 26 L47 21.5 L47 27 L15 31.5 Z" fill="#17191C"/><path d="M15 35 L36 32 L36 37.5 L15 40.5 Z" fill="#17191C"/><path d="M15 44 L27 42.3 L27 47.8 L15 49.5 Z" fill="#17191C"/></svg></div><span>32</span></div>
+    <div class="s"><div class="hold"><svg viewBox="0 0 64 64" width="16" height="16"><defs><linearGradient id="ga" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><path d="M7 19 L57 12 L57 49 L7 56 Z" fill="url(#ga)"/><path d="M15 26 L47 21.5 L47 27 L15 31.5 Z" fill="#17191C"/><path d="M15 35 L36 32 L36 37.5 L15 40.5 Z" fill="#17191C"/><path d="M15 44 L27 42.3 L27 47.8 L15 49.5 Z" fill="#17191C"/></svg></div><span>16</span></div>
+    <div class="s"><div class="hold onc"><svg viewBox="0 0 64 64" width="48" height="48"><defs><linearGradient id="ga" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><path d="M7 19 L57 12 L57 49 L7 56 Z" fill="url(#ga)"/><path d="M15 26 L47 21.5 L47 27 L15 31.5 Z" fill="#17191C"/><path d="M15 35 L36 32 L36 37.5 L15 40.5 Z" fill="#17191C"/><path d="M15 44 L27 42.3 L27 47.8 L15 49.5 Z" fill="#17191C"/></svg></div><span>coral 면</span></div>
+  </div>
+  <dl><dt>논리</dt><dd>판을 3~8° 기울이고 바를 원근에 맞춰 눕힌다. 정면 아이콘과 결정적으로 갈리는 최소 개입.</dd><dt>축소 내성</dt><dd>상 — 기울어진 사각 실루엣이 16px에서도 유지된다.</dd><dt>리스크</dt><dd>기울기가 8°를 넘으면 "잘못 붙은 스티커"로 보인다.</dd></dl>
+</section><section class="card">
+  <div class="ch"><span class="badge">B</span><h3>반쯤 접힌 플랩</h3></div>
+  <div class="sizes">
+    <div class="s"><div class="hold"><svg viewBox="0 0 64 64" width="104" height="104"><defs><linearGradient id="gb" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><path d="M9 32 L55 32 L55 52 A4 4 0 0 1 51 56 L13 56 A4 4 0 0 1 9 52 Z" fill="#FF7355"/><path d="M13 8 L51 8 A4 4 0 0 1 55 12 L55 29 L9 29 L9 12 A4 4 0 0 1 13 8 Z" fill="url(#gb)"/><rect x="9" y="29.5" width="46" height="2" fill="#17191C"/><rect x="19" y="38" width="26" height="6" rx="3" fill="#17191C"/></svg></div><span>104</span></div>
+    <div class="s"><div class="hold"><svg viewBox="0 0 64 64" width="48" height="48"><defs><linearGradient id="gb" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><path d="M9 32 L55 32 L55 52 A4 4 0 0 1 51 56 L13 56 A4 4 0 0 1 9 52 Z" fill="#FF7355"/><path d="M13 8 L51 8 A4 4 0 0 1 55 12 L55 29 L9 29 L9 12 A4 4 0 0 1 13 8 Z" fill="url(#gb)"/><rect x="9" y="29.5" width="46" height="2" fill="#17191C"/><rect x="19" y="38" width="26" height="6" rx="3" fill="#17191C"/></svg></div><span>48</span></div>
+    <div class="s"><div class="hold"><svg viewBox="0 0 64 64" width="32" height="32"><defs><linearGradient id="gb" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><path d="M9 32 L55 32 L55 52 A4 4 0 0 1 51 56 L13 56 A4 4 0 0 1 9 52 Z" fill="#FF7355"/><path d="M13 8 L51 8 A4 4 0 0 1 55 12 L55 29 L9 29 L9 12 A4 4 0 0 1 13 8 Z" fill="url(#gb)"/><rect x="9" y="29.5" width="46" height="2" fill="#17191C"/><rect x="19" y="38" width="26" height="6" rx="3" fill="#17191C"/></svg></div><span>32</span></div>
+    <div class="s"><div class="hold"><svg viewBox="0 0 64 64" width="16" height="16"><defs><linearGradient id="gb" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><path d="M9 32 L55 32 L55 52 A4 4 0 0 1 51 56 L13 56 A4 4 0 0 1 9 52 Z" fill="#FF7355"/><path d="M13 8 L51 8 A4 4 0 0 1 55 12 L55 29 L9 29 L9 12 A4 4 0 0 1 13 8 Z" fill="url(#gb)"/><rect x="9" y="29.5" width="46" height="2" fill="#17191C"/><rect x="19" y="38" width="26" height="6" rx="3" fill="#17191C"/></svg></div><span>16</span></div>
+    <div class="s"><div class="hold onc"><svg viewBox="0 0 64 64" width="48" height="48"><defs><linearGradient id="gb" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><path d="M9 32 L55 32 L55 52 A4 4 0 0 1 51 56 L13 56 A4 4 0 0 1 9 52 Z" fill="#FF7355"/><path d="M13 8 L51 8 A4 4 0 0 1 55 12 L55 29 L9 29 L9 12 A4 4 0 0 1 13 8 Z" fill="url(#gb)"/><rect x="9" y="29.5" width="46" height="2" fill="#17191C"/><rect x="19" y="38" width="26" height="6" rx="3" fill="#17191C"/></svg></div><span>coral 면</span></div>
+  </div>
+  <dl><dt>논리</dt><dd>스플릿플랩이 넘어가는 순간을 <b>두 면</b>으로만 표현. 윗면에만 그라데이션을 얹어 빛의 각도를 만든다.</dd><dt>축소 내성</dt><dd>상 — 가로 분할선 하나가 핵심이라 축소에 강하다.</dd><dt>리스크</dt><dd>두 면의 명도 차가 작으면 그냥 줄 그어진 사각이 된다.</dd></dl>
+</section><section class="card">
+  <div class="ch"><span class="badge">C</span><h3>지평선 위 판</h3></div>
+  <div class="sizes">
+    <div class="s"><div class="hold"><svg viewBox="0 0 64 64" width="104" height="104"><defs><linearGradient id="gc" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><path d="M4 44 A28 28 0 0 1 60 44 Z" fill="url(#gc)"/><rect x="18" y="20" width="28" height="20" rx="4" fill="#17191C"/><rect x="2" y="45" width="60" height="4" rx="2" fill="#17191C"/></svg></div><span>104</span></div>
+    <div class="s"><div class="hold"><svg viewBox="0 0 64 64" width="48" height="48"><defs><linearGradient id="gc" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><path d="M4 44 A28 28 0 0 1 60 44 Z" fill="url(#gc)"/><rect x="18" y="20" width="28" height="20" rx="4" fill="#17191C"/><rect x="2" y="45" width="60" height="4" rx="2" fill="#17191C"/></svg></div><span>48</span></div>
+    <div class="s"><div class="hold"><svg viewBox="0 0 64 64" width="32" height="32"><defs><linearGradient id="gc" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><path d="M4 44 A28 28 0 0 1 60 44 Z" fill="url(#gc)"/><rect x="18" y="20" width="28" height="20" rx="4" fill="#17191C"/><rect x="2" y="45" width="60" height="4" rx="2" fill="#17191C"/></svg></div><span>32</span></div>
+    <div class="s"><div class="hold"><svg viewBox="0 0 64 64" width="16" height="16"><defs><linearGradient id="gc" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><path d="M4 44 A28 28 0 0 1 60 44 Z" fill="url(#gc)"/><rect x="18" y="20" width="28" height="20" rx="4" fill="#17191C"/><rect x="2" y="45" width="60" height="4" rx="2" fill="#17191C"/></svg></div><span>16</span></div>
+    <div class="s"><div class="hold onc"><svg viewBox="0 0 64 64" width="48" height="48"><defs><linearGradient id="gc" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><path d="M4 44 A28 28 0 0 1 60 44 Z" fill="url(#gc)"/><rect x="18" y="20" width="28" height="20" rx="4" fill="#17191C"/><rect x="2" y="45" width="60" height="4" rx="2" fill="#17191C"/></svg></div><span>coral 면</span></div>
+  </div>
+  <dl><dt>논리</dt><dd>반원(지평선) + 사각(판). v2 선셋 보드를 <b>도형 2개로 압축</b>한 형태.</dd><dt>축소 내성</dt><dd>상 — 실루엣이 단순해 16px 안전.</dd><dt>리스크</dt><dd>현재 스케치는 <b>안전모처럼 읽힌다.</b> 판을 반원 밖으로 더 띄우거나 폭을 좁혀야 한다.</dd></dl>
+</section><section class="card">
+  <div class="ch"><span class="badge">D</span><h3>겹친 두 판</h3></div>
+  <div class="sizes">
+    <div class="s"><div class="hold"><svg viewBox="0 0 64 64" width="104" height="104"><defs><linearGradient id="gd" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><rect x="16" y="8" width="42" height="34" rx="7" fill="url(#gd)"/><rect x="6" y="20" width="42" height="34" rx="7" fill="#FF7355"/><rect x="14" y="29" width="26" height="6" rx="3" fill="#17191C"/><rect x="14" y="39" width="16" height="6" rx="3" fill="#17191C"/></svg></div><span>104</span></div>
+    <div class="s"><div class="hold"><svg viewBox="0 0 64 64" width="48" height="48"><defs><linearGradient id="gd" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><rect x="16" y="8" width="42" height="34" rx="7" fill="url(#gd)"/><rect x="6" y="20" width="42" height="34" rx="7" fill="#FF7355"/><rect x="14" y="29" width="26" height="6" rx="3" fill="#17191C"/><rect x="14" y="39" width="16" height="6" rx="3" fill="#17191C"/></svg></div><span>48</span></div>
+    <div class="s"><div class="hold"><svg viewBox="0 0 64 64" width="32" height="32"><defs><linearGradient id="gd" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><rect x="16" y="8" width="42" height="34" rx="7" fill="url(#gd)"/><rect x="6" y="20" width="42" height="34" rx="7" fill="#FF7355"/><rect x="14" y="29" width="26" height="6" rx="3" fill="#17191C"/><rect x="14" y="39" width="16" height="6" rx="3" fill="#17191C"/></svg></div><span>32</span></div>
+    <div class="s"><div class="hold"><svg viewBox="0 0 64 64" width="16" height="16"><defs><linearGradient id="gd" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><rect x="16" y="8" width="42" height="34" rx="7" fill="url(#gd)"/><rect x="6" y="20" width="42" height="34" rx="7" fill="#FF7355"/><rect x="14" y="29" width="26" height="6" rx="3" fill="#17191C"/><rect x="14" y="39" width="16" height="6" rx="3" fill="#17191C"/></svg></div><span>16</span></div>
+    <div class="s"><div class="hold onc"><svg viewBox="0 0 64 64" width="48" height="48"><defs><linearGradient id="gd" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><rect x="16" y="8" width="42" height="34" rx="7" fill="url(#gd)"/><rect x="6" y="20" width="42" height="34" rx="7" fill="#FF7355"/><rect x="14" y="29" width="26" height="6" rx="3" fill="#17191C"/><rect x="14" y="39" width="16" height="6" rx="3" fill="#17191C"/></svg></div><span>coral 면</span></div>
+  </div>
+  <dl><dt>논리</dt><dd>앞뒤로 어긋난 판 2장 = 공시가 쌓인다. 뒤 판에만 그라데이션.</dd><dt>축소 내성</dt><dd>중상 — 겹침이 16px에서 한 덩어리로 뭉칠 수 있다. 어긋난 폭을 크게.</dd><dt>리스크</dt><dd>"복사·중복" 아이콘과 형태가 겹친다.</dd></dl>
+</section><section class="card">
+  <div class="ch"><span class="badge">E</span><h3>넘치는 바</h3></div>
+  <div class="sizes">
+    <div class="s"><div class="hold"><svg viewBox="0 0 64 64" width="104" height="104"><defs><linearGradient id="ge" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><rect x="5" y="14" width="42" height="36" rx="8" fill="url(#ge)"/><rect x="13" y="22" width="20" height="6.5" rx="3.25" fill="#17191C"/><rect x="13" y="32.5" width="47" height="6.5" rx="3.25" fill="#17191C"/><rect x="13" y="43" width="13" height="6.5" rx="3.25" fill="#17191C"/></svg></div><span>104</span></div>
+    <div class="s"><div class="hold"><svg viewBox="0 0 64 64" width="48" height="48"><defs><linearGradient id="ge" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><rect x="5" y="14" width="42" height="36" rx="8" fill="url(#ge)"/><rect x="13" y="22" width="20" height="6.5" rx="3.25" fill="#17191C"/><rect x="13" y="32.5" width="47" height="6.5" rx="3.25" fill="#17191C"/><rect x="13" y="43" width="13" height="6.5" rx="3.25" fill="#17191C"/></svg></div><span>48</span></div>
+    <div class="s"><div class="hold"><svg viewBox="0 0 64 64" width="32" height="32"><defs><linearGradient id="ge" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><rect x="5" y="14" width="42" height="36" rx="8" fill="url(#ge)"/><rect x="13" y="22" width="20" height="6.5" rx="3.25" fill="#17191C"/><rect x="13" y="32.5" width="47" height="6.5" rx="3.25" fill="#17191C"/><rect x="13" y="43" width="13" height="6.5" rx="3.25" fill="#17191C"/></svg></div><span>32</span></div>
+    <div class="s"><div class="hold"><svg viewBox="0 0 64 64" width="16" height="16"><defs><linearGradient id="ge" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><rect x="5" y="14" width="42" height="36" rx="8" fill="url(#ge)"/><rect x="13" y="22" width="20" height="6.5" rx="3.25" fill="#17191C"/><rect x="13" y="32.5" width="47" height="6.5" rx="3.25" fill="#17191C"/><rect x="13" y="43" width="13" height="6.5" rx="3.25" fill="#17191C"/></svg></div><span>16</span></div>
+    <div class="s"><div class="hold onc"><svg viewBox="0 0 64 64" width="48" height="48"><defs><linearGradient id="ge" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><rect x="5" y="14" width="42" height="36" rx="8" fill="url(#ge)"/><rect x="13" y="22" width="20" height="6.5" rx="3.25" fill="#17191C"/><rect x="13" y="32.5" width="47" height="6.5" rx="3.25" fill="#17191C"/><rect x="13" y="43" width="13" height="6.5" rx="3.25" fill="#17191C"/></svg></div><span>coral 면</span></div>
+  </div>
+  <dl><dt>논리</dt><dd>1위 바가 판 밖으로 뚫고 나간다. <b>압도적 1위</b>라는 의미가 형태에 들어간다.</dd><dt>축소 내성</dt><dd>상 — 삐져나온 바가 실루엣을 특징적으로 만든다.</dd><dt>리스크</dt><dd>정사각 앱 아이콘에서 튀어나온 부분이 잘린다. 별도 조정 필요.</dd></dl>
+</section><section class="card">
+  <div class="ch"><span class="badge">F</span><h3>꺾인 띠</h3></div>
+  <div class="sizes">
+    <div class="s"><div class="hold"><svg viewBox="0 0 64 64" width="104" height="104"><defs><linearGradient id="gf" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><path d="M4 22 L60 14 L60 28 L4 36 Z" fill="url(#gf)"/><path d="M4 38 L60 30 L60 42 L4 50 Z" fill="#FF7355"/><rect x="12" y="25" width="18" height="4" rx="2" fill="#17191C" transform="rotate(-8 12 25)"/></svg></div><span>104</span></div>
+    <div class="s"><div class="hold"><svg viewBox="0 0 64 64" width="48" height="48"><defs><linearGradient id="gf" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><path d="M4 22 L60 14 L60 28 L4 36 Z" fill="url(#gf)"/><path d="M4 38 L60 30 L60 42 L4 50 Z" fill="#FF7355"/><rect x="12" y="25" width="18" height="4" rx="2" fill="#17191C" transform="rotate(-8 12 25)"/></svg></div><span>48</span></div>
+    <div class="s"><div class="hold"><svg viewBox="0 0 64 64" width="32" height="32"><defs><linearGradient id="gf" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><path d="M4 22 L60 14 L60 28 L4 36 Z" fill="url(#gf)"/><path d="M4 38 L60 30 L60 42 L4 50 Z" fill="#FF7355"/><rect x="12" y="25" width="18" height="4" rx="2" fill="#17191C" transform="rotate(-8 12 25)"/></svg></div><span>32</span></div>
+    <div class="s"><div class="hold"><svg viewBox="0 0 64 64" width="16" height="16"><defs><linearGradient id="gf" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><path d="M4 22 L60 14 L60 28 L4 36 Z" fill="url(#gf)"/><path d="M4 38 L60 30 L60 42 L4 50 Z" fill="#FF7355"/><rect x="12" y="25" width="18" height="4" rx="2" fill="#17191C" transform="rotate(-8 12 25)"/></svg></div><span>16</span></div>
+    <div class="s"><div class="hold onc"><svg viewBox="0 0 64 64" width="48" height="48"><defs><linearGradient id="gf" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><path d="M4 22 L60 14 L60 28 L4 36 Z" fill="url(#gf)"/><path d="M4 38 L60 30 L60 42 L4 50 Z" fill="#FF7355"/><rect x="12" y="25" width="18" height="4" rx="2" fill="#17191C" transform="rotate(-8 12 25)"/></svg></div><span>coral 면</span></div>
+  </div>
+  <dl><dt>논리</dt><dd>티커 자막 띠를 두 겹으로. 흐름과 속보감이 형태에 있다.</dd><dt>축소 내성</dt><dd>중 — 가로로 길어 정사각 슬롯에서 여백이 크게 남는다.</dd><dt>리스크</dt><dd>오픈이슈 O1(티커 제거 권고)과 묶인다. 결정 후 진입할 것.</dd></dl>
+</section><section class="card">
+  <div class="ch"><span class="badge">G</span><h3>스코프 겹침</h3></div>
+  <div class="sizes">
+    <div class="s"><div class="hold"><svg viewBox="0 0 64 64" width="104" height="104"><defs><linearGradient id="gg" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><circle cx="26" cy="30" r="21" fill="url(#gg)"/><rect x="26" y="24" width="34" height="26" rx="6" fill="#FF7355"/><rect x="33" y="31" width="18" height="5.5" rx="2.75" fill="#17191C"/><rect x="33" y="40" width="11" height="5.5" rx="2.75" fill="#17191C"/><circle cx="18" cy="22" r="4.5" fill="#17191C"/></svg></div><span>104</span></div>
+    <div class="s"><div class="hold"><svg viewBox="0 0 64 64" width="48" height="48"><defs><linearGradient id="gg" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><circle cx="26" cy="30" r="21" fill="url(#gg)"/><rect x="26" y="24" width="34" height="26" rx="6" fill="#FF7355"/><rect x="33" y="31" width="18" height="5.5" rx="2.75" fill="#17191C"/><rect x="33" y="40" width="11" height="5.5" rx="2.75" fill="#17191C"/><circle cx="18" cy="22" r="4.5" fill="#17191C"/></svg></div><span>48</span></div>
+    <div class="s"><div class="hold"><svg viewBox="0 0 64 64" width="32" height="32"><defs><linearGradient id="gg" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><circle cx="26" cy="30" r="21" fill="url(#gg)"/><rect x="26" y="24" width="34" height="26" rx="6" fill="#FF7355"/><rect x="33" y="31" width="18" height="5.5" rx="2.75" fill="#17191C"/><rect x="33" y="40" width="11" height="5.5" rx="2.75" fill="#17191C"/><circle cx="18" cy="22" r="4.5" fill="#17191C"/></svg></div><span>32</span></div>
+    <div class="s"><div class="hold"><svg viewBox="0 0 64 64" width="16" height="16"><defs><linearGradient id="gg" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><circle cx="26" cy="30" r="21" fill="url(#gg)"/><rect x="26" y="24" width="34" height="26" rx="6" fill="#FF7355"/><rect x="33" y="31" width="18" height="5.5" rx="2.75" fill="#17191C"/><rect x="33" y="40" width="11" height="5.5" rx="2.75" fill="#17191C"/><circle cx="18" cy="22" r="4.5" fill="#17191C"/></svg></div><span>16</span></div>
+    <div class="s"><div class="hold onc"><svg viewBox="0 0 64 64" width="48" height="48"><defs><linearGradient id="gg" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><circle cx="26" cy="30" r="21" fill="url(#gg)"/><rect x="26" y="24" width="34" height="26" rx="6" fill="#FF7355"/><rect x="33" y="31" width="18" height="5.5" rx="2.75" fill="#17191C"/><rect x="33" y="40" width="11" height="5.5" rx="2.75" fill="#17191C"/><circle cx="18" cy="22" r="4.5" fill="#17191C"/></svg></div><span>coral 면</span></div>
+  </div>
+  <dl><dt>논리</dt><dd>원(관측) + 사각(판)이 겹친다. 두 은유를 도형 2개로 합친 최소 구성.</dd><dt>축소 내성</dt><dd>중상 — 겹침 경계가 16px에서 흐려진다.</dd><dt>리스크</dt><dd>원+사각 조합은 범용 앱 아이콘 문법이라 고유성이 낮다.</dd></dl>
+</section><section class="card">
+  <div class="ch"><span class="badge">H</span><h3>열린 틈</h3></div>
+  <div class="sizes">
+    <div class="s"><div class="hold"><svg viewBox="0 0 64 64" width="104" height="104"><defs><linearGradient id="gh" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><path d="M8 10 L56 10 A4 4 0 0 1 60 14 L60 26 L4 26 L4 14 A4 4 0 0 1 8 10 Z" fill="#FF7355"/><rect x="4" y="28" width="56" height="8" fill="url(#gh)"/><path d="M4 38 L60 38 L60 50 A4 4 0 0 1 56 54 L8 54 A4 4 0 0 1 4 50 Z" fill="#FF7355"/><rect x="16" y="30" width="20" height="4" rx="2" fill="#17191C"/></svg></div><span>104</span></div>
+    <div class="s"><div class="hold"><svg viewBox="0 0 64 64" width="48" height="48"><defs><linearGradient id="gh" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><path d="M8 10 L56 10 A4 4 0 0 1 60 14 L60 26 L4 26 L4 14 A4 4 0 0 1 8 10 Z" fill="#FF7355"/><rect x="4" y="28" width="56" height="8" fill="url(#gh)"/><path d="M4 38 L60 38 L60 50 A4 4 0 0 1 56 54 L8 54 A4 4 0 0 1 4 50 Z" fill="#FF7355"/><rect x="16" y="30" width="20" height="4" rx="2" fill="#17191C"/></svg></div><span>48</span></div>
+    <div class="s"><div class="hold"><svg viewBox="0 0 64 64" width="32" height="32"><defs><linearGradient id="gh" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><path d="M8 10 L56 10 A4 4 0 0 1 60 14 L60 26 L4 26 L4 14 A4 4 0 0 1 8 10 Z" fill="#FF7355"/><rect x="4" y="28" width="56" height="8" fill="url(#gh)"/><path d="M4 38 L60 38 L60 50 A4 4 0 0 1 56 54 L8 54 A4 4 0 0 1 4 50 Z" fill="#FF7355"/><rect x="16" y="30" width="20" height="4" rx="2" fill="#17191C"/></svg></div><span>32</span></div>
+    <div class="s"><div class="hold"><svg viewBox="0 0 64 64" width="16" height="16"><defs><linearGradient id="gh" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><path d="M8 10 L56 10 A4 4 0 0 1 60 14 L60 26 L4 26 L4 14 A4 4 0 0 1 8 10 Z" fill="#FF7355"/><rect x="4" y="28" width="56" height="8" fill="url(#gh)"/><path d="M4 38 L60 38 L60 50 A4 4 0 0 1 56 54 L8 54 A4 4 0 0 1 4 50 Z" fill="#FF7355"/><rect x="16" y="30" width="20" height="4" rx="2" fill="#17191C"/></svg></div><span>16</span></div>
+    <div class="s"><div class="hold onc"><svg viewBox="0 0 64 64" width="48" height="48"><defs><linearGradient id="gh" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FF7355"/><stop offset="1" stop-color="#FFB964"/></linearGradient></defs><path d="M8 10 L56 10 A4 4 0 0 1 60 14 L60 26 L4 26 L4 14 A4 4 0 0 1 8 10 Z" fill="#FF7355"/><rect x="4" y="28" width="56" height="8" fill="url(#gh)"/><path d="M4 38 L60 38 L60 50 A4 4 0 0 1 56 54 L8 54 A4 4 0 0 1 4 50 Z" fill="#FF7355"/><rect x="16" y="30" width="20" height="4" rx="2" fill="#17191C"/></svg></div><span>coral 면</span></div>
+  </div>
+  <dl><dt>논리</dt><dd>판 가운데가 벌어지며 안쪽 그라데이션이 드러난다. 공시(公示)의 문자적 의미.</dd><dt>축소 내성</dt><dd>중상 — 틈의 폭을 충분히 확보하면 32px까지 간다.</dd><dt>리스크</dt><dd>설명 없이는 안 읽힌다. 초기 인지 비용이 크다.</dd></dl>
+</section></div>
+
+<div class="foot">
+이 스케치들은 <b>복잡도 기준선을 눈으로 합의하기 위한 것</b>이지 완성된 안이 아니다. 비율·곡률·간격은 전혀 다듬지 않았다.<br>
+미드저니 결과를 고르실 때는 위 정량 기준 6개를 그대로 체크리스트로 쓰시면 된다.
+</div>
+</div></body></html>

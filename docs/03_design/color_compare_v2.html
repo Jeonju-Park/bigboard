@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>빅보드 — 메인 컬러 재검토 (정치 중립 축)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-primary:#FFFFFF; --bg-secondary:#F6F7F8;
+    --gray-200:#E9EBED; --gray-300:#D6DADD; --gray-400:#B0B6BC;
+    --gray-500:#8A9199; --gray-700:#3F454C; --gray-800:#26292E; --ink:#17191C;
+    --buy:#D93B3B; --sell:#2563A8;
+    --c-mint:#3ECFB2; --c-lime:#C6E82E;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+    background:#fff;color:var(--gray-800);font-size:15px;line-height:1.5;padding:40px 20px 80px}
+  .wrap{max-width:1180px;margin:0 auto}
+  h1{font-size:24px;font-weight:800;color:var(--ink);line-height:1.25;margin-bottom:8px}
+  .sub{font-size:13px;color:var(--gray-500);margin-bottom:40px}
+  h2{font-size:17px;font-weight:600;color:var(--ink);line-height:1.25;margin-bottom:4px}
+  .h2note{font-size:12px;color:var(--gray-500);margin-bottom:20px}
+  section{margin-bottom:48px;padding-bottom:40px;border-bottom:1px solid var(--gray-200)}
+  section:last-child{border-bottom:0}
+  .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  @media(max-width:860px){.cols{grid-template-columns:1fr}}
+  .name{font-size:12px;font-weight:600;color:var(--gray-700);margin-bottom:12px;display:flex;align-items:center;gap:6px}
+  .dot{width:12px;height:12px;border-radius:3px;display:inline-block}
+  .cap{font-size:11px;color:var(--gray-400);margin-top:8px}
+  .mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+
+  /* 정치색 거리 스트립 */
+  .polstrip{display:flex;gap:0;border-radius:6px;overflow:hidden;margin-bottom:6px}
+  .polstrip div{flex:1;height:44px;display:flex;align-items:flex-end;justify-content:center;padding-bottom:4px;font-size:10px;color:#fff;font-weight:600;text-shadow:0 1px 2px rgba(0,0,0,.4)}
+  .candstrip{display:flex;gap:8px;margin-top:14px}
+  .candstrip .c{flex:1;border:1px solid var(--gray-200);border-radius:6px;overflow:hidden}
+  .candstrip .c b{display:block;height:40px}
+  .candstrip .c span{display:block;font-size:11px;padding:6px 8px;color:var(--gray-700)}
+
+  /* 마커 */
+  .card{padding:16px 0;border-bottom:1px solid var(--gray-200)}
+  .card:last-child{border-bottom:0}
+  .who{font-size:15px;font-weight:600;color:var(--ink)}
+  .meta{font-size:12px;color:var(--gray-500);margin-top:4px}
+  .line{font-size:15px;color:var(--gray-800);margin-top:12px;line-height:1.9}
+  mark{background:transparent;color:var(--ink);font-weight:600;padding:1px 3px;box-shadow:inset 0 -9px 0 var(--mk)}
+  .inkmark{background:var(--ink);color:#fff;font-weight:600;padding:2px 5px;border-radius:2px}
+  .micro{font-size:11px;color:var(--gray-400);margin-top:10px}
+
+  /* 랭킹 */
+  .rowr{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--gray-200)}
+  .rank{width:20px;font-size:13px;font-weight:700;color:var(--gray-400);font-family:"IBM Plex Mono",monospace}
+  .rank.one{color:var(--ink)}
+  .rname{flex:0 0 88px;font-size:13px;color:var(--gray-800);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .bar{flex:1;height:14px;background:var(--bg-secondary);border-radius:2px;overflow:hidden}
+  .bar i{display:block;height:100%;background:var(--gray-300)}
+  .bar.win i{background:var(--mk)}
+  .bar.winink i{background:var(--ink)}
+  .amt{flex:0 0 66px;text-align:right;font-size:13px;font-weight:600;font-family:"IBM Plex Mono",monospace}
+  .amt.buy{color:var(--buy)} .amt.sell{color:var(--sell)}
+
+  /* 로고 */
+  .logobox{background:#fff;border:1px solid var(--gray-200);border-radius:12px;padding:26px;display:flex;flex-direction:column;align-items:center;gap:20px}
+  .logobox.sec{background:var(--bg-secondary)}
+  .lg{display:flex;align-items:center;gap:10px}
+  .wordmark{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.02em}
+  .sizes{display:flex;align-items:flex-end;gap:16px}
+  .sizes .s{display:flex;flex-direction:column;align-items:center;gap:6px}
+  .sizes .s span{font-size:10px;color:var(--gray-400);font-family:"IBM Plex Mono",monospace}
+  .appicon{width:60px;height:60px;border-radius:14px;display:flex;align-items:center;justify-content:center}
+
+  table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
+  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--gray-200)}
+  th{font-size:12px;color:var(--gray-500);font-weight:600}
+  td.n{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums}
+  .ok{color:#1F7A4D;font-weight:600} .no{color:var(--buy);font-weight:600} .warn{color:#A8681F;font-weight:600}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>빅보드 — 메인 컬러 재검토 (정치 중립 축 추가)</h1>
+  <p class="sub">2026-07-31 · 기존 옐로우 #FFD338은 열린우리당·노무현·정의당 노랑 #FFD918과 색차 dE 9.6 — 육안 구분이 어려운 거리라 후보에서 제외</p>
+
+  <!-- 정치색 지도 -->
+  <section>
+    <h2>한국 정당 상징색 지도 — 어느 색이 비어 있는가</h2>
+    <p class="h2note">색상명은 언론 보도로 확인. HEX는 대표값 근사 [추정] — 정확한 CI 값은 각 당 공식 자료 확인 필요.</p>
+    <div class="polstrip">
+      <div style="background:#E61E2B">국민의힘</div>
+      <div style="background:#FF7210">개혁신당</div>
+      <div style="background:#FFD918;color:#17191C;text-shadow:none">정의·열린우리</div>
+      <div style="background:#3CB44A">국민의당</div>
+      <div style="background:#00B3E5">바른정당</div>
+      <div style="background:#152484">더불어민주당</div>
+      <div style="background:#8B4A9C">평등보라</div>
+      <div style="background:#EA5D8B">해피핑크</div>
+    </div>
+    <p class="cap">색상환에서 정당이 점유하지 않은 구간은 <b>청록(teal/mint)</b>과 <b>황록(lime)</b> 두 곳뿐이다. 빨강·파랑은 시맨틱으로도 이미 점유돼 있고, 보라는 안티 AI 규칙(§8)에서 이미 금지다.</p>
+    <div class="candstrip">
+      <div class="c"><b style="background:#3ECFB2"></b><span>민트 #3ECFB2 · H168<br>가장 가까운 정당색까지 dE 42.8</span></div>
+      <div class="c"><b style="background:#C6E82E"></b><span>라임 #C6E82E · H71<br>가장 가까운 정당색까지 dE 31.2</span></div>
+      <div class="c"><b style="background:#17191C"></b><span>ink 무채색 #17191C<br>가장 가까운 정당색까지 dE 61.6</span></div>
+      <div class="c"><b style="background:#FFD338"></b><span style="color:#D93B3B">기존 옐로우 #FFD338<br>정의·열린우리 노랑까지 dE 9.6 — 제외</span></div>
+    </div>
+  </section>
+
+  <!-- 맥락 1 -->
+  <section>
+    <h2>맥락 1. 마커 하이라이트 — 공시 카드 본문</h2>
+    <p class="h2note">A·B는 형광펜(하단 9px inset), C는 ink 면 + 흰 글자(방송 자막바 원형).</p>
+    <div class="cols">
+      <div style="--mk:var(--c-mint)">
+        <div class="name"><i class="dot" style="background:var(--c-mint)"></i>A. 민트 #3ECFB2</div>
+        <div class="card">
+          <div class="who">김OO · 대표이사</div><div class="meta">OO전자 · 거래일 07.28 · 공시일 07.31</div>
+          <div class="line">보통주 <mark>12,000주</mark>를 주당 <mark>61,200원</mark>에 매도, 총 <mark>7억 3,440만원</mark>.</div>
+          <div class="micro">3거래일 만인데 말이죠,</div>
+        </div>
+      </div>
+      <div style="--mk:var(--c-lime)">
+        <div class="name"><i class="dot" style="background:var(--c-lime)"></i>B. 라임 #C6E82E</div>
+        <div class="card">
+          <div class="who">김OO · 대표이사</div><div class="meta">OO전자 · 거래일 07.28 · 공시일 07.31</div>
+          <div class="line">보통주 <mark>12,000주</mark>를 주당 <mark>61,200원</mark>에 매도, 총 <mark>7억 3,440만원</mark>.</div>
+          <div class="micro">3거래일 만인데 말이죠,</div>
+        </div>
+      </div>
+      <div>
+        <div class="name"><i class="dot" style="background:var(--ink)"></i>C. ink 무채색 #17191C</div>
+        <div class="card">
+          <div class="who">김OO · 대표이사</div><div class="meta">OO전자 · 거래일 07.28 · 공시일 07.31</div>
+          <div class="line">보통주 <span class="inkmark">12,000주</span>를 주당 <span class="inkmark">61,200원</span>에 매도, 총 <span class="inkmark">7억 3,440만원</span>.</div>
+          <div class="micro">3거래일 만인데 말이죠,</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 맥락 2 -->
+  <section>
+    <h2>맥락 2. 랭킹 1위 강조 — S7 보드</h2>
+    <p class="h2note">1위 바만 포인트 색. 같은 행에 매수 레드·매도 블루가 함께 선다.</p>
+    <div class="cols">
+      <div style="--mk:var(--c-mint)">
+        <div class="name"><i class="dot" style="background:var(--c-mint)"></i>A. 민트</div>
+        <div class="rowr"><div class="rank one">1</div><div class="rname">OO전자</div><div class="bar win"><i style="width:100%"></i></div><div class="amt buy">+842억</div></div>
+        <div class="rowr"><div class="rank">2</div><div class="rname">OO바이오</div><div class="bar"><i style="width:61%"></i></div><div class="amt buy">+514억</div></div>
+        <div class="rowr"><div class="rank">3</div><div class="rname">OO화학</div><div class="bar"><i style="width:38%"></i></div><div class="amt sell">-322억</div></div>
+      </div>
+      <div style="--mk:var(--c-lime)">
+        <div class="name"><i class="dot" style="background:var(--c-lime)"></i>B. 라임</div>
+        <div class="rowr"><div class="rank one">1</div><div class="rname">OO전자</div><div class="bar win"><i style="width:100%"></i></div><div class="amt buy">+842억</div></div>
+        <div class="rowr"><div class="rank">2</div><div class="rname">OO바이오</div><div class="bar"><i style="width:61%"></i></div><div class="amt buy">+514억</div></div>
+        <div class="rowr"><div class="rank">3</div><div class="rname">OO화학</div><div class="bar"><i style="width:38%"></i></div><div class="amt sell">-322억</div></div>
+      </div>
+      <div>
+        <div class="name"><i class="dot" style="background:var(--ink)"></i>C. ink 무채색</div>
+        <div class="rowr"><div class="rank one">1</div><div class="rname">OO전자</div><div class="bar winink"><i style="width:100%"></i></div><div class="amt buy">+842억</div></div>
+        <div class="rowr"><div class="rank">2</div><div class="rname">OO바이오</div><div class="bar"><i style="width:61%"></i></div><div class="amt buy">+514억</div></div>
+        <div class="rowr"><div class="rank">3</div><div class="rname">OO화학</div><div class="bar"><i style="width:38%"></i></div><div class="amt sell">-322억</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 맥락 3 -->
+  <section>
+    <h2>맥락 3. 로고 포인트 · 앱 아이콘</h2>
+    <p class="h2note">심볼은 전광판 그리드(색 비교용 임시 형태). 32px·16px 축소와 앱 아이콘 인지성 동시 확인.</p>
+    <div class="cols">
+      <div style="--mk:var(--c-mint)">
+        <div class="name"><i class="dot" style="background:var(--c-mint)"></i>A. 민트</div>
+        <div class="logobox">
+          <div class="lg"><svg width="40" height="40" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="var(--mk)"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#fff" opacity=".28"/></svg><span class="wordmark">빅보드</span></div>
+          <div class="sizes">
+            <div class="s"><svg width="32" height="32" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="var(--mk)"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#fff" opacity=".28"/></svg><span>32</span></div>
+            <div class="s"><svg width="16" height="16" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="var(--mk)"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#fff" opacity=".28"/></svg><span>16</span></div>
+            <div class="s"><div class="appicon" style="background:var(--ink)"><svg width="36" height="36" viewBox="0 0 40 40"><rect x="4" y="9" width="32" height="22" rx="3" fill="none" stroke="var(--mk)" stroke-width="2.5"/><rect x="9" y="14" width="8" height="4.5" rx="1" fill="var(--mk)"/><rect x="20" y="14" width="8" height="4.5" rx="1" fill="#fff" opacity=".35"/><rect x="9" y="22" width="8" height="4.5" rx="1" fill="#fff" opacity=".35"/><rect x="20" y="22" width="8" height="4.5" rx="1" fill="#fff" opacity=".35"/></svg></div><span>app</span></div>
+          </div>
+        </div>
+        <div class="logobox sec" style="margin-top:12px"><div class="lg"><svg width="40" height="40" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="var(--mk)"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#fff" opacity=".28"/></svg><span class="wordmark">빅보드</span></div><div class="cap">bg-secondary</div></div>
+      </div>
+
+      <div style="--mk:var(--c-lime)">
+        <div class="name"><i class="dot" style="background:var(--c-lime)"></i>B. 라임</div>
+        <div class="logobox">
+          <div class="lg"><svg width="40" height="40" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="var(--mk)"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#fff" opacity=".28"/></svg><span class="wordmark">빅보드</span></div>
+          <div class="sizes">
+            <div class="s"><svg width="32" height="32" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="var(--mk)"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#fff" opacity=".28"/></svg><span>32</span></div>
+            <div class="s"><svg width="16" height="16" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="var(--mk)"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#fff" opacity=".28"/></svg><span>16</span></div>
+            <div class="s"><div class="appicon" style="background:var(--ink)"><svg width="36" height="36" viewBox="0 0 40 40"><rect x="4" y="9" width="32" height="22" rx="3" fill="none" stroke="var(--mk)" stroke-width="2.5"/><rect x="9" y="14" width="8" height="4.5" rx="1" fill="var(--mk)"/><rect x="20" y="14" width="8" height="4.5" rx="1" fill="#fff" opacity=".35"/><rect x="9" y="22" width="8" height="4.5" rx="1" fill="#fff" opacity=".35"/><rect x="20" y="22" width="8" height="4.5" rx="1" fill="#fff" opacity=".35"/></svg></div><span>app</span></div>
+          </div>
+        </div>
+        <div class="logobox sec" style="margin-top:12px"><div class="lg"><svg width="40" height="40" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="var(--mk)"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#fff" opacity=".28"/></svg><span class="wordmark">빅보드</span></div><div class="cap">bg-secondary</div></div>
+      </div>
+
+      <div>
+        <div class="name"><i class="dot" style="background:var(--ink)"></i>C. ink 무채색</div>
+        <div class="logobox">
+          <div class="lg"><svg width="40" height="40" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="#fff"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#fff" opacity=".28"/></svg><span class="wordmark">빅보드</span></div>
+          <div class="sizes">
+            <div class="s"><svg width="32" height="32" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="#fff"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#fff" opacity=".28"/></svg><span>32</span></div>
+            <div class="s"><svg width="16" height="16" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="#fff"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#fff" opacity=".28"/></svg><span>16</span></div>
+            <div class="s"><div class="appicon" style="background:var(--ink)"><svg width="36" height="36" viewBox="0 0 40 40"><rect x="4" y="9" width="32" height="22" rx="3" fill="none" stroke="#fff" stroke-width="2.5"/><rect x="9" y="14" width="8" height="4.5" rx="1" fill="#fff"/><rect x="20" y="14" width="8" height="4.5" rx="1" fill="#fff" opacity=".35"/><rect x="9" y="22" width="8" height="4.5" rx="1" fill="#fff" opacity=".35"/><rect x="20" y="22" width="8" height="4.5" rx="1" fill="#fff" opacity=".35"/></svg></div><span>app</span></div>
+          </div>
+        </div>
+        <div class="logobox sec" style="margin-top:12px"><div class="lg"><svg width="40" height="40" viewBox="0 0 40 40"><rect x="2" y="6" width="36" height="28" rx="4" fill="#17191C"/><rect x="7" y="12" width="9" height="6" rx="1.5" fill="#fff"/><rect x="19" y="12" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="7" y="22" width="9" height="6" rx="1.5" fill="#fff" opacity=".28"/><rect x="19" y="22" width="14" height="6" rx="1.5" fill="#fff" opacity=".28"/></svg><span class="wordmark">빅보드</span></div><div class="cap">bg-secondary</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 수치 -->
+  <section>
+    <h2>측정값</h2>
+    <table>
+      <tr><th>후보</th><th>HSL</th><th>마커 위 텍스트 대비</th><th>가장 가까운 정당색까지 dE</th><th>dE 매수레드</th><th>dE 매도블루</th></tr>
+      <tr><td>A. 민트 #3ECFB2</td><td class="n">H168 S60 L53</td><td class="n"><span class="ok">9.04</span> AAA (ink)</td><td class="n"><span class="ok">42.8</span> 초록</td><td class="n">113.7</td><td class="n"><span class="warn">76.0</span></td></tr>
+      <tr><td>B. 라임 #C6E82E</td><td class="n">H71 S80 L55</td><td class="n"><span class="ok">12.57</span> AAA (ink)</td><td class="n"><span class="warn">31.2</span> 노랑</td><td class="n">115.6</td><td class="n">162.4</td></tr>
+      <tr><td>C. ink #17191C</td><td class="n">무채색 L*9</td><td class="n"><span class="ok">17.61</span> AAA (흰글자)</td><td class="n"><span class="ok">61.6</span> 보라</td><td class="n">95.7</td><td class="n">62.5</td></tr>
+      <tr><td style="color:var(--gray-400)">(제외) 옐로우 #FFD338</td><td class="n" style="color:var(--gray-400)">H47 S100 L61</td><td class="n" style="color:var(--gray-400)">12.27</td><td class="n"><span class="no">9.6</span> 정의·열린우리 노랑</td><td class="n" style="color:var(--gray-400)">80.1</td><td class="n" style="color:var(--gray-400)">127.2</td></tr>
+    </table>
+    <p class="cap">dE는 CIE76 색차. 일반적으로 dE 10 미만은 같은 색으로 인지되고, 30~50이면 명확히 다른 색으로 구분된다. 기존 옐로우의 9.6은 "같은 색" 구간이다.</p>
+  </section>
+</div>
+</body>
+</html>
