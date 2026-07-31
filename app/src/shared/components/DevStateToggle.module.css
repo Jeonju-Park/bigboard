@@ -1,0 +1,21 @@
+/* 개발 전용 UI — 배포 빌드에서는 렌더되지 않으므로 브랜드 규칙보다 식별성을 우선한다 */
+.wrap {
+  display: flex;
+  gap: var(--space-1);
+  flex: none;
+}
+
+.btn {
+  border: var(--hairline);
+  border-radius: var(--radius-field);
+  background: var(--bg-primary);
+  color: var(--text-caption);
+  padding: var(--space-1) var(--space-2);
+  cursor: pointer;
+}
+
+.btn[aria-pressed='true'] {
+  background: var(--bg-secondary);
+  color: var(--ink);
+  font-weight: 600;
+}
