@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- 모바일 전용. 사용자 확대는 막지 않는다(접근성) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light" />
+    <!-- §2 브랜드 면 coral(coral-500). meta 태그는 CSS 변수를 받지 못해 raw 값이 불가피한
+         유일한 자리다. tokens.ts 의 coral[500] 을 바꾸면 여기도 같이 고칠 것. -->
+    <meta name="theme-color" content="#FF7355" /> <!-- check-tokens-ignore -->
+    <meta
+      name="description"
+      content="빅보드 — 내부자·고위공직자 주식 거래 공시를 모아 보여주는 정보 서비스. 투자자문이 아닙니다."
+    />
+    <title>빅보드 BIG board</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

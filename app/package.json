@@ -1,0 +1,29 @@
+{
+  "name": "bigboard-app",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "description": "빅보드(BIG board) 모바일 웹앱 — 데이터는 public/data/*.json fetch 전용. 외부 API 직접 호출 금지(CLAUDE.md 규칙 5)",
+  "scripts": {
+    "build:tokens": "node scripts/build-tokens.mjs",
+    "predev": "npm run build:tokens",
+    "dev": "vite",
+    "prebuild": "npm run build:tokens",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -b --noEmit"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-router": "^8.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.2",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.1",
+    "@vitejs/plugin-react": "^5.0.4",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.9"
+  }
+}

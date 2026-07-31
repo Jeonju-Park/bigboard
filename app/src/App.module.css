@@ -1,0 +1,51 @@
+/* STEP 0 스모크 화면 — STEP 1 에서 라우팅 뼈대로 교체된다.
+   목적: 3서체 로딩 · CSS 변수 주입 · 480px 셸 정렬을 눈으로 확인. */
+
+.smoke {
+  padding-block: var(--space-10);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-section);
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-intra);
+}
+
+.groupTitle {
+  margin: 0 0 var(--space-3);
+}
+
+.swatches {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.swatch {
+  flex: 1;
+  height: var(--touch-min);
+  border-radius: var(--radius-field);
+  border: var(--hairline);
+}
+
+/* coral 은 면으로만 (§2). 이 블록이 규칙을 지킨 유일한 사용례다 */
+.brandSurface {
+  background: var(--brand-surface);
+  color: var(--on-brand);
+  border-radius: var(--radius-card);
+  padding: var(--space-4);
+}
+
+.divider {
+  border: 0;
+  border-top: var(--hairline);
+}
+
+.icons {
+  display: flex;
+  gap: var(--space-4);
+  align-items: center;
+  color: var(--icon-default);
+}

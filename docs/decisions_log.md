@@ -1,5 +1,30 @@
 # decisions_log.md — 결정 기록
 
+---
+## 🔖 재개용 인계 노트 (세션이 끊기면 여기부터 읽을 것)
+
+**현재 STEP: 1 (라우팅 + 5탭 뼈대) 시작 전 — STEP 0 완료·커밋됨**
+
+직전 3줄:
+1. STEP 0 완료 — `app/`(Vite+React19+TS+CSS Modules) · `pipeline/`(빈 스캐폴드) · `tokens.ts`(디자인시스템 §2~4 전량 이식, CSS 변수 79개 자동 생성) 구성, 빌드·토큰검사·브라우저 렌더 전부 자체 검증 통과
+2. `react-router-dom` → **`react-router` v8.3.0** 으로 변경 (7.x 전 버전이 GHSA-qwww-vcr4-c8h2 취약 범위. 현재 audit 0건)
+3. 폰트 스택 버그 1건 수정 — CDN 이 선언하는 이름은 `Pretendard Variable` 인데 토큰이 `Pretendard` 만 요구해, 로컬에 폰트가 설치된 기기에서만 정상으로 보였음
+
+다음 할 일:
+- STEP 1 (라우팅 뼈대) → STEP 2-A 는 **`pipeline/.env` 에 유저가 키를 넣어야** 시작 가능
+- 미해결 게이트: ①API 키 입력 ②GitHub 저장소·Secrets ③GA4 측정 ID
+
+---
+
+## 2026-07-31 (STEP 0 — 셋업)
+- **스타일 방식 = CSS Modules + CSS 변수** (vanilla-extract 탈락). 클로드 디자인 프로젝트가 이미 순수 CSS 변수로 작성돼 있어 재작성·동기화 비용이 없고, Vite 내장이라 의존성 0. 토큰 강제는 `npm run check:tokens` 로 보완
+- **tokens.ts 가 유일 소스, CSS 는 생성물**. `scripts/build-tokens.mjs` 가 tokens.ts → `tokens.generated.css` 를 만들고 predev/prebuild 에 연결. Node 24 네이티브 TS 실행이라 빌드 의존성 0개. CSS 를 직접 고치면 덮어써짐
+- **폰트 = 하이브리드 조달**. Pretendard 는 jsdelivr 동적 서브셋 woff2, Paperlogy 800·IBM Plex Mono·Material Symbols 는 CDN. 4종 모두 실제 로드 확인
+- **라우터 = `react-router` v8.3.0** (`react-router-dom` 아님). v2 문서는 react-router-dom 을 지정했으나 해당 패키지의 7.12.0~8.2.0 이 CSRF 권고(GHSA-qwww-vcr4-c8h2) 범위이고 7.x 최신(7.18.2)도 포함된다. 우리는 RSC·서버 액션을 안 쓰므로 실제 노출은 없지만, STEP 1 착수 전이라 전환 비용이 0이어서 옮김
+- **tsconfig 3분할** (app/node/솔루션). 브라우저 코드에 Node 타입을 넣지 않아 `process.env` 사용이 타입 단계에서 막힌다 = 규칙 5의 구조적 방어
+- 아이콘 규격(20/24px)을 `iconSize` 토큰으로 신설 — §6 이 정한 값인데 토큰이 없어 하드코딩되고 있었음
+- 검사기 자체 버그 1건: 경로에 공백이 있으면(`07_1bigshot-radar 2`) `import.meta.url.pathname` 이 `%20` 을 남겨 **아무 파일도 스캔하지 않고 "통과"** 로 보였음. `fileURLToPath` 로 수정 + 스캔 0건이면 실패하도록 가드 추가
+
 ## 2026-07-31 (데이터 전략 v2)
 - M1부터 실데이터 사용으로 변경 (목데이터 폐기) — 유저 지시
 - 아키텍처: GitHub Actions cron(30분~1시간) → DART OpenAPI+공공데이터포털 수집 → 정적 JSON 커밋 → 웹앱 fetch. 브라우저 직접 API 호출 금지(CORS·키 노출), 키는 Secrets만

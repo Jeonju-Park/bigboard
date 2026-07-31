@@ -1,0 +1,17 @@
+{
+  "name": "bigboard-pipeline",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "description": "DART·공공데이터포털 수집 → app/public/data/*.json 생산. app 과 의존성을 분리한다(브라우저 번들에 절대 섞이지 않게).",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "fetch": "node --env-file=.env src/fetch.ts",
+    "stocks": "node --env-file=.env src/stocks.ts",
+    "explore": "node --env-file=.env src/explore.ts"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

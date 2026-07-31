@@ -1,0 +1,17 @@
+{
+  "name": "bigboard",
+  "private": true,
+  "version": "0.0.1",
+  "description": "빅보드(BIG board) — 루트 스크립트 프록시. 실제 의존성은 app/ 과 pipeline/ 이 각각 따로 가진다.",
+  "type": "module",
+  "scripts": {
+    "setup": "npm --prefix app install && npm --prefix pipeline install",
+    "dev": "npm --prefix app run dev",
+    "build": "npm --prefix app run build",
+    "preview": "npm --prefix app run preview",
+    "typecheck": "npm --prefix app run typecheck",
+    "pipeline": "npm --prefix pipeline run fetch",
+    "check:tokens": "node scripts/check-tokens.mjs",
+    "check": "npm run check:tokens && npm run typecheck"
+  }
+}

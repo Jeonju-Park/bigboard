@@ -11,3 +11,6 @@ build/
 coverage/
 # 대용량 원본 애셋은 git 제외 (내보내기 결과물만 커밋)
 assets/figma-exports/raw/
+
+# 생성물 — tokens.ts 에서 자동 생성되므로 커밋하지 않는다
+app/src/theme/tokens.generated.css

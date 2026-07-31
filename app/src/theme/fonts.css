@@ -1,0 +1,52 @@
+/* §3 — 3서체 역할 분리. Inter/Roboto 기본값 회피가 규칙이므로 폴백에도 두 서체를 넣지 않는다.
+   조달 방식(하이브리드): Pretendard 는 동적 서브셋 woff2(한글 청크 분할 — 초기 로드 수십 KB),
+   Paperlogy·IBM Plex Mono·Material Symbols 는 디자인 시스템과 동일한 CDN. */
+
+/* Body/UI — Pretendard. 화면 텍스트의 사실상 전량 */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
+
+/* Numeric — IBM Plex Mono (tabular). §3: Roboto Mono 회피, 자릿수 정렬용 */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap");
+
+/* 아이콘 — Material Symbols Rounded (§6). 이모지 전면 금지의 대체재 */
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..24,400,0..1,0&display=block");
+
+/* Display — Paperlogy 800 단일 weight (§3 최소 사용 원칙, 약 155KB).
+   §9-3 에서 확정된 서체다. 로고 워드마크 + 화면당 1회 display(24px) 외 사용 금지.
+   TODO: 자체 호스팅으로 전환 시 assets/brand/fonts/ 에 woff2 를 두고 아래 src 를 로컬 경로로 교체 */
+@font-face {
+  font-family: "Paperlogy";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2") format("woff2");
+}
+
+/* Material Symbols Rounded 사용 클래스 (§6) — 20/24px, weight 400, 색은 ink 또는 gray-500 */
+.msr {
+  font-family: "Material Symbols Rounded";
+  font-weight: normal;
+  font-style: normal;
+  font-size: var(--icon-size-md);
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  user-select: none;
+}
+
+.msr[data-size="20"] {
+  font-size: var(--icon-size-sm);
+  /* opsz 는 폰트 가변축 값이라 CSS 변수가 아니라 숫자여야 한다 */
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 20;
+}
+
+.msr[data-fill="1"] {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+}
