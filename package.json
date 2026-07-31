@@ -12,6 +12,7 @@
     "typecheck": "npm --prefix app run typecheck",
     "pipeline": "npm --prefix pipeline run fetch",
     "check:tokens": "node scripts/check-tokens.mjs",
-    "check": "npm run check:tokens && npm run typecheck"
+    "check": "npm run check:tokens && npm run typecheck",
+    "qr": "node scripts/qr.mjs"
   }
 }

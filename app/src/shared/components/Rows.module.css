@@ -29,6 +29,21 @@
   min-width: 0;
 }
 
+/* 레이스 바 행 안의 인물 링크 — 두 줄이라 높이가 39px 로 모자랐다.
+   여백으로 44pt 를 채운다(§4 터치 타깃). */
+a.grow {
+  display: block;
+  padding-block: var(--space-1);
+  min-height: var(--touch-min);
+  color: inherit;
+  text-decoration: none;
+}
+
+a.grow:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
 .ellipsis {
   margin: 0;
   white-space: nowrap;

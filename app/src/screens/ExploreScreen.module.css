@@ -14,6 +14,8 @@
 .input {
   flex: 1;
   min-width: 0;
+  /* 감싼 label 이 44pt 를 갖지만, 입력창 자체도 그 높이를 채워야 어디를 눌러도 포커스된다 */
+  align-self: stretch;
   border: 0;
   background: none;
   color: var(--text-body);

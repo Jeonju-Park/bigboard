@@ -97,6 +97,14 @@ output {
   min-height: var(--touch-min);
 }
 
+/* 본문 사이에 끼는 텍스트 링크용 — 글자 크기는 그대로 두고 탭 영역만 44pt 로 넓힌다.
+   inline-flex 라 줄 흐름을 깨지 않는다. */
+.tap-safe {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--touch-min);
+}
+
 /* 스크린 리더 전용 */
 .sr-only {
   position: absolute;

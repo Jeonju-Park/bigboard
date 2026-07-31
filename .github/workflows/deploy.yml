@@ -1,0 +1,56 @@
+# main 푸시 → 빌드 → GitHub Pages 배포
+#
+# pipeline.yml 이 data 를 커밋하면 그 푸시가 이 워크플로를 다시 트리거해
+# 새 데이터가 자동으로 반영된다(별도 연결 설정 불필요).
+name: deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 배포는 하나씩. 진행 중인 배포는 취소하지 않는다(중간 상태로 남는 걸 피한다)
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+
+      - run: npm --prefix app ci
+
+      # 규칙 위반(raw hex·이모지·금지 워딩·키 유출)이 있으면 배포를 막는다
+      - name: 토큰·카피 검사
+        run: node scripts/check-tokens.mjs
+
+      - run: npm --prefix app run build
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: app/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

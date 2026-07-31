@@ -133,8 +133,19 @@ for (const d of picks.slice(0, count)) {
       const collectedPrices = [...new Set(d.details.map((r) => r.price).filter((p) => p !== null))]
       check('단가 집합 일치', JSON.stringify(indepPrices.sort()) === JSON.stringify(collectedPrices.sort()), `독립파서 [${indepPrices}] vs 수집 [${collectedPrices}]`)
 
-      const indepFirstDate = rows.map((r) => toIsoDate(r.date)).filter(Boolean).sort()[0]
-      check('거래일 일치', indepFirstDate === d.tradeDate, `독립파서 ${indepFirstDate} vs 수집 ${d.tradeDate}`)
+      // 대표 거래일 규칙(설계 문서 §2 · fetch.ts 주석)을 **독립적으로 다시 적용**한다.
+      // 수집기 코드를 부르지 않고 규칙만 따라 계산해야 검증이 의미가 있다.
+      //   "공시일 이하인 변동일 중 가장 최근. 후보가 없으면 가장 이른 날."
+      // (제출자 오타로 미래 날짜가 섞이는 실제 사례가 있어 이렇게 정했다)
+      const indepDates = rows.map((r) => toIsoDate(r.date)).filter((x): x is string => Boolean(x)).sort()
+      const indepNotFuture = indepDates.filter((x) => x <= d.discloseDate)
+      const indepTradeDate = indepNotFuture.at(-1) ?? indepDates[0]
+      check(
+        '대표 거래일 일치',
+        indepTradeDate === d.tradeDate,
+        `독립파서 ${indepTradeDate} vs 수집 ${d.tradeDate}` +
+          (indepDates.length !== indepNotFuture.length ? ` (원문에 공시일 이후 날짜 ${indepDates.length - indepNotFuture.length}건 — 제출자 오타로 대표값에서 제외)` : ''),
+      )
     }
 
   }

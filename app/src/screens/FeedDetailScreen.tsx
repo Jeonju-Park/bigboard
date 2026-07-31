@@ -221,7 +221,7 @@ export default function FeedDetailScreen() {
               </span>
             </Link>
           ))}
-          <Link to={`/person/${encodeURIComponent(pKey)}`} className="ty-label">
+          <Link to={`/person/${encodeURIComponent(pKey)}`} className="ty-label tap-safe">
             인물 프로필 보기
           </Link>
         </section>
@@ -231,7 +231,7 @@ export default function FeedDetailScreen() {
       <section>
         <SectionHeader
           title="종목 정보"
-          note={<Link to={`/stock/${d.stockCode}`} className="ty-caption">종목 페이지</Link>}
+          note={<Link to={`/stock/${d.stockCode}`} className="ty-caption tap-safe">종목 페이지</Link>}
         />
         <StockInfoList
           items={[
