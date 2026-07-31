@@ -1,0 +1,51 @@
+/* 하단 탭 — sticky(플로우) 로 붙인다. absolute·fixed 금지(§4).
+   활성 표시는 ink + 아이콘 채움으로만 한다.
+   coral 은 면 전용이라 아이콘·텍스트 색으로 쓸 수 없다(§2, 흰 배경 대비 2.68 → WCAG 1.4.11).
+   디자인 시스템의 활성 탭 coral '면' 처리는 STEP 3 에서 스펙을 보고 적용한다. */
+
+.bar {
+  position: sticky;
+  bottom: 0;
+  z-index: 20;
+  display: flex;
+  background: var(--bg-primary);
+  border-top: var(--hairline);
+  /* 홈 인디케이터 영역 확보 */
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.tab {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  min-height: var(--touch-min);
+  padding-block: var(--space-2);
+  border: 0;
+  background: none;
+  color: var(--icon-muted);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.tab:hover {
+  text-decoration: none;
+  color: var(--icon-muted);
+}
+
+.tab[aria-current='page'],
+.tab[aria-current='page']:hover {
+  color: var(--ink);
+}
+
+.label {
+  /* 라벨 12px = caption 레이어 */
+  font-size: var(--size-caption);
+  line-height: 1.2;
+}
+
+.tab[aria-current='page'] .label {
+  font-weight: 600;
+}

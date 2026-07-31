@@ -1,101 +1,68 @@
-import styles from './App.module.css'
-import { coral } from './theme/tokens'
+import { HashRouter, Navigate, Route, Routes, useLocation } from 'react-router'
+import { useEffect } from 'react'
+import { hasOnboarded } from '@/lib/visit'
+import TabLayout from '@/screens/TabLayout'
+import HomeScreen from '@/screens/HomeScreen'
+import ExploreScreen from '@/screens/ExploreScreen'
+import CalendarScreen from '@/screens/CalendarScreen'
+import RankingScreen from '@/screens/RankingScreen'
+import MyScreen from '@/screens/MyScreen'
+import FeedDetailScreen from '@/screens/FeedDetailScreen'
+import PersonScreen from '@/screens/PersonScreen'
+import StockScreen from '@/screens/StockScreen'
+import LandingScreen from '@/screens/LandingScreen'
+import OnboardingScreen from '@/screens/OnboardingScreen'
+import NotFoundScreen from '@/screens/NotFoundScreen'
 
 /**
- * STEP 0 스모크 화면.
- * 확인 목적: ①3서체가 실제로 로드되는가 ②CSS 변수가 :root 에 주입됐는가
- * ③480px 셸이 중앙 정렬되고 바깥이 bg-secondary 인가.
- * STEP 1 에서 라우팅 뼈대로 통째로 교체된다.
+ * 라우트 진입점.
+ * HashRouter 를 쓰는 이유: GitHub Pages 는 SPA 폴백(rewrite)을 지원하지 않아서
+ * BrowserRouter 로는 /ranking 을 새로고침하면 404 가 난다. 해시는 서버로 안 간다.
  */
+
+/** 첫 방문이면 랜딩으로, 아니면 홈으로 */
+function RootRedirect() {
+  return <Navigate to={hasOnboarded() ? '/home' : '/landing'} replace />
+}
+
+/** 화면 전환 시 스크롤 위치를 맨 위로. 해시 라우팅은 이걸 자동으로 해주지 않는다 */
+function ScrollToTop() {
+  const { pathname } = useLocation()
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+  return null
+}
+
 export default function App() {
   return (
-    <div className="app-shell">
-      <main className={`${styles.smoke} gutter`}>
-        <section className={styles.group}>
-          <p className="ty-caption">L1 display — Paperlogy 800 · 화면당 1회 이하</p>
-          <h1 className="ty-display" style={{ margin: 0 }}>
-            빅보드
-          </h1>
-          <h2 className="ty-title" style={{ margin: 0 }}>
-            L1 title — Pretendard 700
-          </h2>
-          <h3 className="ty-title-s" style={{ margin: 0 }}>
-            L2 섹션 제목 — titleS / 600
-          </h3>
-          <p className="ty-body" style={{ margin: 0 }}>
-            L3 본문 — 내부자·고위공직자 거래 공시를 모아 보여주는 정보 서비스입니다.
-          </p>
-          <p className="ty-caption" style={{ margin: 0 }}>
-            L4 보조 설명 — 데이터 출처는 DART 전자공시시스템입니다.
-          </p>
-          <p className="ty-micro" style={{ margin: 0 }}>
-            L5 위트 자막 — 여기서만 농담이 허용됩니다
-          </p>
-        </section>
+    <HashRouter>
+      <ScrollToTop />
+      <div className="app-shell">
+        <Routes>
+          <Route path="/" element={<RootRedirect />} />
 
-        <hr className={styles.divider} />
+          {/* W0 / W1 — 탭 없이 단독 화면 */}
+          <Route path="/landing" element={<LandingScreen />} />
+          <Route path="/onboarding" element={<OnboardingScreen />} />
 
-        <section className={styles.group}>
-          <p className="ty-caption">Numeric — IBM Plex Mono tabular</p>
-          <p className="ty-num" style={{ margin: 0, fontSize: 'var(--size-body)' }}>
-            1,234,567,890 / 0011223344
-          </p>
-          <p className="ty-promote-label" style={{ margin: 0 }}>
-            총 거래금액
-          </p>
-          <p className="ty-promote" style={{ margin: 0 }}>
-            1,482,300,000
-          </p>
-        </section>
+          {/* 하단 탭 5개 */}
+          <Route element={<TabLayout />}>
+            <Route path="/home" element={<HomeScreen />} />
+            <Route path="/explore" element={<ExploreScreen />} />
+            <Route path="/calendar" element={<CalendarScreen />} />
+            <Route path="/ranking" element={<RankingScreen />} />
+            <Route path="/my" element={<MyScreen />} />
+          </Route>
 
-        <hr className={styles.divider} />
+          {/* 상세 — 탭 없이 뒤로가기 */}
+          <Route path="/feed/:id" element={<FeedDetailScreen />} />
+          <Route path="/person/:id" element={<PersonScreen />} />
+          <Route path="/stock/:code" element={<StockScreen />} />
 
-        <section className={styles.group}>
-          <p className="ty-caption">Coral Scale — 면 전용 (§2)</p>
-          <div className={styles.swatches}>
-            {Object.entries(coral).map(([step, hex]) => (
-              <div
-                key={step}
-                className={styles.swatch}
-                style={{ background: `var(--coral-${step})` }}
-                title={`coral-${step} ${hex}`}
-              />
-            ))}
-          </div>
-          <div className={styles.brandSurface}>
-            <p className="ty-label" style={{ margin: 0 }}>
-              브랜드 면 위에는 ink 만 얹습니다
-            </p>
-            <p className="ty-caption" style={{ margin: 0, color: 'var(--gray-700)' }}>
-              흰 글자는 대비 2.68 이라 금지입니다
-            </p>
-          </div>
-        </section>
-
-        <hr className={styles.divider} />
-
-        <section className={styles.group}>
-          <p className="ty-caption">Material Symbols Rounded — 이모지 대체 (§6)</p>
-          <div className={styles.icons}>
-            <span className="msr" aria-hidden="true">
-              radar
-            </span>
-            <span className="msr" aria-hidden="true">
-              trending_up
-            </span>
-            <span className="msr" data-size="20" aria-hidden="true">
-              calendar_month
-            </span>
-            <span className="msr" data-size="20" aria-hidden="true">
-              leaderboard
-            </span>
-          </div>
-        </section>
-
-        <p className="ty-caption" style={{ margin: 0 }}>
-          이 서비스는 투자자문·투자권유가 아니며, 공개된 공시 정보를 정리해 보여줍니다.
-        </p>
-      </main>
-    </div>
+          <Route path="*" element={<NotFoundScreen />} />
+        </Routes>
+      </div>
+    </HashRouter>
   )
 }

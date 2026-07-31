@@ -1,0 +1,88 @@
+/* W1 온보딩 3스텝 — STEP 1 에서는 빈 껍데기(진행 이동만 동작) */
+
+.wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-block: var(--space-6);
+  padding-top: calc(var(--space-6) + env(safe-area-inset-top));
+  padding-bottom: calc(var(--space-6) + env(safe-area-inset-bottom));
+  gap: var(--gap-group);
+}
+
+.topRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: var(--touch-min);
+}
+
+/* 진행 표시 — 3칸 중 현재까지를 ink 로 채운다. coral 은 면 전용이라 여기 쓰지 않는다 */
+.progress {
+  display: flex;
+  gap: var(--space-1);
+  flex: 1;
+}
+
+.dot {
+  flex: 1;
+  height: 2px;
+  background: var(--gray-200);
+}
+
+.dotActive {
+  background: var(--ink);
+}
+
+.skip {
+  border: 0;
+  background: none;
+  color: var(--text-caption);
+  cursor: pointer;
+  min-height: var(--touch-min);
+  padding-inline: var(--space-2);
+  margin-inline-end: calc(var(--space-2) * -1);
+}
+
+.body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.next {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--touch-min);
+  border: 0;
+  border-radius: var(--radius-field);
+  background: var(--brand-surface);
+  color: var(--on-brand);
+  cursor: pointer;
+  transition: transform var(--motion-press);
+}
+
+.next:active {
+  transform: scale(0.98);
+}
+
+.prev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--touch-min);
+  min-height: var(--touch-min);
+  border: var(--hairline);
+  border-radius: var(--radius-field);
+  background: none;
+  color: var(--icon-default);
+  cursor: pointer;
+}

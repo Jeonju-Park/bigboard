@@ -1,0 +1,52 @@
+/* W0 랜딩 — 첫 방문 1스크린. 플로우 레이아웃만 (§4 absolute 금지) */
+
+.wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-block: var(--space-12);
+  padding-top: calc(var(--space-12) + env(safe-area-inset-top));
+  padding-bottom: calc(var(--space-6) + env(safe-area-inset-bottom));
+  gap: var(--gap-section);
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.spacer {
+  flex: 1;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* CTA — coral 면 위에 ink 글자 (§2). 흰 글자는 대비 2.68 이라 금지 */
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--touch-min);
+  padding-inline: var(--space-5);
+  border: 0;
+  border-radius: var(--radius-field);
+  background: var(--brand-surface);
+  color: var(--on-brand);
+  cursor: pointer;
+  transition: transform var(--motion-press);
+}
+
+.cta:hover {
+  background: var(--brand-surface-hover);
+  color: var(--on-brand);
+  text-decoration: none;
+}
+
+.cta:active {
+  transform: scale(0.98);
+}

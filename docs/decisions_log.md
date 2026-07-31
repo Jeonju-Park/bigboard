@@ -3,15 +3,15 @@
 ---
 ## 🔖 재개용 인계 노트 (세션이 끊기면 여기부터 읽을 것)
 
-**현재 STEP: 1 (라우팅 + 5탭 뼈대) 시작 전 — STEP 0 완료·커밋됨**
+**현재 STEP: 2-A 대기 — STEP 0·1 완료·커밋됨. `pipeline/.env` 키 입력이 있어야 진행 가능**
 
 직전 3줄:
-1. STEP 0 완료 — `app/`(Vite+React19+TS+CSS Modules) · `pipeline/`(빈 스캐폴드) · `tokens.ts`(디자인시스템 §2~4 전량 이식, CSS 변수 79개 자동 생성) 구성, 빌드·토큰검사·브라우저 렌더 전부 자체 검증 통과
-2. `react-router-dom` → **`react-router` v8.3.0** 으로 변경 (7.x 전 버전이 GHSA-qwww-vcr4-c8h2 취약 범위. 현재 audit 0건)
-3. 폰트 스택 버그 1건 수정 — CDN 이 선언하는 이름은 `Pretendard Variable` 인데 토큰이 `Pretendard` 만 요구해, 로컬에 폰트가 설치된 기기에서만 정상으로 보였음
+1. STEP 0·1 완료 — 셋업·토큰 이식 + 라우팅 9개 라우트·5탭·랜딩·온보딩 3스텝. 타입체크·토큰검사·브라우저 실동작 전부 자체 검증 통과
+2. **하위 경로 배포를 미리 검증함** — `dist/` 를 `/bigshot-radar/` 아래에 서빙해 `#/ranking` 렌더와 `data/meta.json` 200 확인. STEP 6 의 base 경로 리스크 해소
+3. 콘솔 오류 0건 (검증 중 뜬 "Invalid hook call" 4건은 Vite HMR 잔재로 확인 — 클린 로드에서 재현 안 됨)
 
 다음 할 일:
-- STEP 1 (라우팅 뼈대) → STEP 2-A 는 **`pipeline/.env` 에 유저가 키를 넣어야** 시작 가능
+- **STEP 2-A 는 유저가 `pipeline/.env` 에 키를 넣어야 시작 가능** (`cp pipeline/.env.example pipeline/.env`)
 - 미해결 게이트: ①API 키 입력 ②GitHub 저장소·Secrets ③GA4 측정 ID
 
 ---
