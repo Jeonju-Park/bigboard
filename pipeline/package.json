@@ -12,7 +12,8 @@
     "stocks": "node --env-file=.env src/stocks.ts",
     "explore": "node --env-file=.env src/explore.ts",
     "verify": "node --env-file=.env src/verify.ts",
-    "officials": "node --env-file=.env src/officials.ts"
+    "officials": "node --env-file=.env src/officials.ts",
+    "explore:stocks": "node --env-file=.env src/explore-stocks.ts"
   },
   "dependencies": {},
   "devDependencies": {}
