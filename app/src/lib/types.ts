@@ -242,8 +242,14 @@ export interface Institution {
   periodOfReport: string
   /** 실제 제출일 (ISO). periodOfReport 와의 시차가 곧 지연이다 */
   filedAt: string
-  /** 신고 포지션 합계(달러) */
+  /** 신고 포지션 합계(달러). 잘라내기 전 **전체** 기준이다 */
   totalValue: number
+  /**
+   * 신고된 전체 종목 수. holdings 는 상위 일부만 담는다 —
+   * 시타델은 12,857종목이라 전부 실으면 파일이 수십 MB 가 된다.
+   * 화면이 "상위 50 / 전체 12,857"이라고 말할 수 있어야 잘라낸 사실이 숨지 않는다.
+   */
+  holdingCount: number
   holdings: InstitutionHolding[]
   /** SEC 원문 링크 — 실명 데이터 책임 */
   sourceUrl: string

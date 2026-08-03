@@ -128,3 +128,72 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* 기관 보유(13F) — 접었다 펴는 목록 */
+.instList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.inst {
+  border-bottom: var(--hairline);
+}
+
+.instList li:last-child .inst {
+  border-bottom: 0;
+}
+
+.instHead {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: var(--touch-min);
+  padding-block: var(--space-3);
+  cursor: pointer;
+  /* 기본 삼각형 마커를 없애고 오른쪽 아이콘으로 대체한다 */
+  list-style: none;
+}
+
+.instHead::-webkit-details-marker {
+  display: none;
+}
+
+.instName {
+  margin: 0;
+  color: var(--ink);
+}
+
+.instValue {
+  margin-left: auto;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+/* 펼쳤을 때 아이콘을 뒤집는다 */
+.inst[open] .instHead :global(.material-symbols-rounded) {
+  transform: rotate(180deg);
+}
+
+.holdingList {
+  margin: 0 0 var(--space-2);
+  padding: 0 0 0 var(--space-4);
+}
+
+.holding {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  padding-block: var(--space-1);
+}
+
+.holdingName {
+  color: var(--text-body);
+  text-decoration: none;
+}
+
+.holdingValue {
+  margin-left: auto;
+  color: var(--text-sub);
+  white-space: nowrap;
+}

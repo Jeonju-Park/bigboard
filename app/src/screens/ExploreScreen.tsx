@@ -7,12 +7,13 @@ import Icon from '@/shared/components/Icon'
 import {
   Disclaimer, EmptyState, ErrorState, FreshnessLabel, LoadingState, SectionHeader,
 } from '@/shared/components/Feedback'
-import { getDisclosures, getGazette, getMeta, getPersons } from '@/lib/data'
+import { getDisclosures, getGazette, getInstitutions, getMeta, getPersons } from '@/lib/data'
 import { useAsync } from '@/lib/useData'
 import { toggleFollowPerson, useFollowedPersons } from '@/lib/follow'
 import { formatAmountShort, formatDate } from '@/lib/format'
 import { officialStockValue, personHeadline } from '@/lib/person'
 import { daysAgoKey, todayKey } from '@/lib/date'
+import { useMarket } from '@/lib/market'
 import homeStyles from './HomeScreen.module.css'
 import styles from './ExploreScreen.module.css'
 
@@ -25,13 +26,19 @@ import styles from './ExploreScreen.module.css'
  *    마찬가지로 "주가와 연관 깊은 큰손"은 주가 데이터가 있어야 계산되므로 넣지 않았다.
  */
 export default function ExploreScreen() {
+  const market = useMarket()
   const followed = useFollowedPersons()
 
   const { state, data, error, retry } = useAsync(async () => {
-    const [disclosures, persons, meta, gazette] = await Promise.all([
-      getDisclosures(), getPersons(), getMeta(), getGazette().catch(() => []),
+    const [disclosures, persons, meta, gazette, institutions] = await Promise.all([
+      getDisclosures(),
+      getPersons(),
+      getMeta(),
+      // 시장마다 없는 파일이 있다 (관보는 국장만, 13F 는 미장만)
+      getGazette().catch(() => []),
+      getInstitutions().catch(() => []),
     ])
-    return { disclosures, persons, meta, gazette }
+    return { disclosures, persons, meta, gazette, institutions }
   })
 
   const insight = useMemo(() => {
@@ -197,6 +204,74 @@ export default function ExploreScreen() {
             )}
           </section>
 
+          {data?.institutions.length ? (
+            <section>
+              <SectionHeader
+                title="기관 보유"
+                note="13F · 분기말 기준"
+              />
+              {/* ⚠️ 13F 는 '지금 보유'가 아니다. 분기말 스냅샷 + 최대 45일 지연.
+                  기준일을 행마다 붙이고, 섹션 아래에 한 번 더 설명한다 */}
+              <ul className={styles.instList}>
+                {data!.institutions.map((inst) => (
+                  <li key={inst.id}>
+                    <details className={styles.inst}>
+                      <summary className={styles.instHead}>
+                        <div className={styles.rowBody}>
+                          <p className={`ty-body ${styles.instName}`}>{inst.name}</p>
+                          <p className="ty-caption">
+                            {formatDate(inst.periodOfReport)} 기준 · {inst.holdingCount.toLocaleString()}종목
+                          </p>
+                        </div>
+                        <span className={`ty-num ${styles.instValue}`}>
+                          {formatAmountShort(inst.totalValue)}
+                        </span>
+                        <Icon name="expand_more" size="sm" />
+                      </summary>
+
+                      <ol className={styles.holdingList}>
+                        {inst.holdings.slice(0, 10).map((h) => (
+                          <li key={`${h.cusip}-${h.putCall ?? 'share'}`} className={styles.holding}>
+                            {/* 티커를 못 찾은 종목은 링크를 걸지 않는다 —
+                                엉뚱한 종목으로 보내느니 이름만 두는 게 낫다 */}
+                            {h.ticker ? (
+                              <Link to={`/stock/${h.ticker}`} className={`ty-body-s ${styles.holdingName}`}>
+                                {h.name}
+                              </Link>
+                            ) : (
+                              <span className={`ty-body-s ${styles.holdingName}`}>{h.name}</span>
+                            )}
+                            {h.putCall && <span className="ty-micro"> · {h.putCall === 'put' ? '풋' : '콜'}옵션</span>}
+                            <span className={`ty-num ${styles.holdingValue}`}>
+                              {formatAmountShort(h.value)}
+                            </span>
+                          </li>
+                        ))}
+                      </ol>
+
+                      <p className="ty-micro" style={{ margin: 'var(--space-2) 0 0' }}>
+                        상위 {Math.min(10, inst.holdings.length)}종목 · 전체 {inst.holdingCount.toLocaleString()}종목 중
+                        {' · '}
+                        <a href={inst.sourceUrl} target="_blank" rel="noopener noreferrer">
+                          SEC 원문
+                        </a>
+                      </p>
+                    </details>
+                  </li>
+                ))}
+              </ul>
+
+              <p className="ty-micro" style={{ marginTop: 'var(--space-3)' }}>
+                13F는 분기가 끝난 뒤 최대 45일 안에 제출됩니다. <b>지금 보유 중인 목록이 아닙니다.</b>
+                공매도 포지션·채권·해외 상장 주식은 신고 대상이 아니라 여기에 없습니다.
+              </p>
+            </section>
+          ) : null}
+
+          {/* 고위공직자 재산공개는 **국장 전용**이다. 미장에 빈 섹션을 남기면
+              '아직 수집 안 된 것'처럼 보이지만 실제로는 그 시장에 없는 자료다.
+              미장의 대응물은 하원의원 거래(STOCK Act)로 따로 붙는다. */}
+          {market === 'kr' && (
           <section>
             <SectionHeader
               title="고위공직자"
@@ -265,6 +340,7 @@ export default function ExploreScreen() {
               </>
             )}
           </section>
+          )}
         </>
       )}
 

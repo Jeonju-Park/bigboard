@@ -52,6 +52,8 @@
 
 .title {
   margin: 0;
+  /* 제목 옆에 시장 칩이 붙으므로 간격을 준다 */
+  margin-inline-end: var(--space-3);
   min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;

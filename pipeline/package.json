@@ -16,7 +16,8 @@
     "explore:stocks": "node --env-file=.env src/explore-stocks.ts",
     "gazette": "node --env-file=.env src/gazette.ts",
     "form4": "node --env-file=.env src/form4.ts",
-    "typecheck": "tsc -p tsconfig.json"
+    "typecheck": "tsc -p tsconfig.json",
+    "13f": "node --env-file=.env src/thirteenf.ts"
   },
   "dependencies": {
     "unpdf": "^1.8.0"

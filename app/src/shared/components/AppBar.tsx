@@ -39,14 +39,21 @@ export default function AppBar({ title, wordmark = false, showBack = false, cent
           <div className={styles.logo}>
             <Logotype height={22} />
             <span className="sr-only">{title}</span>
-            {/* 시장 전환은 로고 바로 옆이다 — '지금 어느 시장을 보고 있나'는
-                워드마크만큼 자주 확인해야 하는 정보라서 */}
             <MarketChip />
           </div>
         ) : (
           <h1 className={`ty-title-s ${styles.title}`}>{title}</h1>
         )
       )}
+
+      {/*
+        시장 칩은 **탭 최상위 화면 전부**에 붙인다.
+        처음엔 홈(워드마크)에만 뒀는데, 탐색·캘린더에서는 지금 어느 시장을 보고 있는지
+        알 수도 바꿀 수도 없었다. 국장 목록과 미장 목록은 겉모습이 비슷해서
+        표시가 없으면 잘못 읽기 쉽다.
+        뒤로가기가 있거나(하위 화면) 검색창이 앱바를 차지한 화면은 제외한다.
+      */}
+      {!wordmark && !showBack && !center && <MarketChip />}
 
       {!center && <div className={styles.spacer} />}
       {actions && <div className={`${styles.actions} ${styles.trailing}`}>{actions}</div>}
