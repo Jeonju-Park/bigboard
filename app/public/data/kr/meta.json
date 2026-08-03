@@ -4,21 +4,25 @@
  "sources": [
   "금융감독원 전자공시시스템(DART) OpenAPI — 임원·주요주주 특정증권등 소유상황보고서, 거래계획보고서",
   "공공데이터포털 금융위원회_주식시세정보",
-  "행정안전부 관보 — 공직자 재산 공개"
+  "행정안전부 관보 — 공직자 재산 공개",
+  "행정안전부 관보 원문 — 공직자 재산공개 (증권 항목)"
  ],
  "counts": {
   "disclosures": 2624,
-  "persons": 2154,
+  "persons": 2274,
   "stocks": 672
  },
- "officialsAsOf": null,
+ "officialsAsOf": "2026-07-24",
  "priceDataAvailable": true,
  "skipped": {
-  "total": 19,
+  "total": 177,
   "reasons": {
    "순증감 0 (매수·매도 상쇄)": 12,
    "변동일 파싱 실패": 3,
-   "거래계획 철회됨": 4
+   "거래계획 철회됨": 4,
+   "증권 종류 기타(채권)": 10,
+   "증권 종류 비상장주식": 52,
+   "종목 파싱 실패": 17
   }
  },
  "sparklineAvailable": true

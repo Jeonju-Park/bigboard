@@ -101,7 +101,7 @@ export default function ExploreScreen() {
     return { busiest, netBought, movers, officials, officialsNoStock, upcoming, consensus }
   }, [data])
 
-  const officialNote = data?.meta.officialsAsOf ? `${formatDate(data.meta.officialsAsOf)} 기준` : null
+  const officialNote = data?.meta.officialsAsOf ? `${formatDate(data.meta.officialsAsOf)} 공개` : null
 
   return (
     <Screen title="탐색" actions={<AppBarAction icon="search" label="검색" to="/search" />}>

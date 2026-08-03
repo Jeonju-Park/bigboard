@@ -122,9 +122,11 @@ export default function PersonScreen() {
           )}
           <div className={styles.noticeBox} style={{ marginTop: 'var(--space-4)' }}>
             <p className="ty-body-s" style={{ margin: 0 }}>
-              고위공직자 재산은 <b>연 1회</b>만 공개됩니다. 실시간 거래 내역이 아니라{' '}
-              {asOf ? <b>{formatDate(asOf)} 기준</b> : '공개 시점 기준'}의 신고 자료이며, 그 사이의
-              매매 시점은 공개되지 않습니다.
+              {/* 관보에 적힌 날짜는 **공개일**이다. '기준'이라고 쓰면 그 날짜의 시세로
+                  평가했다는 뜻이 되는데, 실제 평가 기준일은 관보에 적혀 있지 않다 */}
+              고위공직자 재산은 <b>연 1회 정기공개</b>와 임용·퇴직 시 수시공개로만 알려집니다.
+              실시간 거래 내역이 아니라 {asOf ? <b>{formatDate(asOf)}에 공개된</b> : '공개된'} 신고
+              자료이며, 언제 사고팔았는지는 공개되지 않습니다.
             </p>
             {person.sourceNote && (
               <p className="ty-micro" style={{ margin: 'var(--space-2) 0 0' }}>출처: {person.sourceNote}</p>
@@ -135,20 +137,43 @@ export default function PersonScreen() {
 
       {/* ── 보유 현황 ── */}
       <section>
-        <SectionHeader title="보유 현황" note={`종목 ${person.holdings.length}개 · 최근 공시 기준`} />
+        <SectionHeader
+          title="보유 현황"
+          note={
+            person.type === 'official'
+              ? `종목 ${person.holdings.length}개 · 재산공개 기준`
+              : `종목 ${person.holdings.length}개 · 최근 공시 기준`
+          }
+        />
         {person.holdings.length ? (
           <ul className={styles.holdings}>
-            {person.holdings.map((h) => (
-              <li key={h.stockCode} className={styles.holdingRow}>
-                <Link to={`/stock/${h.stockCode}`} className={styles.holdingLink}>
+            {person.holdings.map((h, i) => {
+              const body = (
+                <>
                   <div className={styles.holdingBody}>
                     <p className={`ty-label ${styles.ellipsis}`}>{h.stockName}</p>
-                    <p className="ty-num ty-caption">{h.stockCode}</p>
+                    <p className="ty-num ty-caption">
+                      {/* 공직자 재산공개는 가족 재산까지 함께 공개된다.
+                          명의를 안 쓰면 배우자 보유가 본인 것으로 읽힌다 */}
+                      {h.owner ? h.owner : h.stockCode}
+                      {h.owner && h.stockCode ? ` · ${h.stockCode}` : ''}
+                    </p>
                   </div>
                   <span className="ty-amount">{formatQuantity(h.quantity)}</span>
-                </Link>
-              </li>
-            ))}
+                </>
+              )
+              return (
+                <li key={`${h.stockCode ?? h.stockName}-${h.owner ?? ''}-${i}`} className={styles.holdingRow}>
+                  {/* 코드를 못 이은 종목(주로 해외 주식)은 링크를 걸지 않는다 —
+                      엉뚱한 종목 화면으로 보내는 것보다 낫다 */}
+                  {h.stockCode ? (
+                    <Link to={`/stock/${h.stockCode}`} className={styles.holdingLink}>{body}</Link>
+                  ) : (
+                    <div className={styles.holdingLink}>{body}</div>
+                  )}
+                </li>
+              )
+            })}
           </ul>
         ) : (
           <p className="ty-body-s" style={{ margin: 0 }}>공시에서 확인된 보유 수량이 없습니다.</p>

@@ -76,9 +76,17 @@ export interface AmountRange {
 export type OwnerType = 'self' | 'spouse' | 'child' | 'joint'
 
 export interface PersonHolding {
-  stockCode: string
+  /** 종목코드. 이름을 코드로 잇지 못하면 null — 종목 화면으로 링크하지 않는다 */
+  stockCode: string | null
   stockName: string
   quantity: number
+  /**
+   * 누구 명의인가 (본인·배우자·장남 …).
+   * 공직자 재산공개는 **가족 재산까지 함께 공개**한다. 배우자 보유를
+   * 본인 것으로 표시하면 실명 데이터에서 명백한 오보다.
+   * 국장 내부자·미장 데이터에는 이 구분이 없어 null.
+   */
+  owner?: string | null
 }
 
 /**

@@ -18,7 +18,8 @@
     "form4": "node --env-file=.env src/form4.ts",
     "typecheck": "tsc -p tsconfig.json",
     "13f": "node --env-file=.env src/thirteenf.ts",
-    "house": "node --env-file=.env src/house.ts"
+    "house": "node --env-file=.env src/house.ts",
+    "gazette:pdf": "node --env-file=.env src/gazette-pdf.ts"
   },
   "dependencies": {
     "unpdf": "^1.8.0"

@@ -35,12 +35,13 @@ export function personHeadline(p: Person): PersonHeadline {
     //    주식이 적고 부동산이 많은 사람이 상위로 올라가 헤더가 거짓말이 된다.
     //    자료에 증권 항목이 없으면 '모른다'고 말한다.
     if (latest.stockValue === null) {
-      return { amount: null, note: `${formatDate(latest.asOf)} 기준 · 증권 항목 미기재`, kind: null }
+      return { amount: null, note: `${formatDate(latest.asOf)} 공개 · 증권 항목 미기재`, kind: null }
     }
     return {
       amount: latest.stockValue,
-      // 연 1회 자료라 '언제 시점인지'를 반드시 함께 보여준다
-      note: `${formatDate(latest.asOf)} 기준`,
+      // 관보에 적힌 건 **공개일**이지 평가 기준일이 아니다. '기준'이라고 쓰면
+      // 그 날짜의 시세로 평가했다는 뜻이 되어 사실과 다르다
+      note: `${formatDate(latest.asOf)} 공개`,
       kind: '주식 평가액',
     }
   }
