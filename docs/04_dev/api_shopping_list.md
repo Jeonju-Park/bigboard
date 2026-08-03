@@ -172,10 +172,25 @@ npm --prefix pipeline run explore:stocks
 또 하나: 포털에 적힌 **시간범위가 1993~2023년**이다. 최근 연도가 빠져 있으면 "연 1회 최신 자료"라는
 서비스 약속을 못 지킨다 — 이것도 호출해서 확인해야 한다.
 
-→ `npm --prefix pipeline run explore:stocks` 의 ⑥번 단계가 이걸 확인한다.
+**⚠️ 엔드포인트를 아직 모른다.** 포털 상세 페이지가 요청주소를 노출하지 않아
+`apis.data.go.kr/1741000/gwanbo` 등을 추측해 봤지만 전부 `NO_OPENAPI_SERVICE_ERROR`(서비스 없음)였다.
+odcloud 명세 경로(`infuser.odcloud.kr/oas/docs?namespace=15109164/v1`)도 없다.
 
-**폴백**: 구조화 데이터가 아니면 지금 방식대로 **공개 자료를 내려받아 CSV 로** 넣는다
-(`pipeline/src/officials.ts` 는 이미 준비돼 있고 기준일 없는 행은 거부한다).
+→ **필요한 것**: 포털 페이지의 **[참고문서] / [가이드 다운로드]** 를 열어
+   `요청주소`(엔드포인트 URL)와 오퍼레이션 이름만 알려주면 바로 붙인다.
+
+**지금 동작하는 경로 (권장)**: 공직윤리시스템에서 자료를 내려받아 `pipeline/data/` 에 넣는다.
+
+```bash
+# https://www.peti.go.kr/prptOptp.do 에서 자료를 받아 pipeline/data/ 에 그대로 두고
+npm --prefix pipeline run officials
+```
+
+- **.xlsx 를 CSV 로 변환할 필요가 없다.** 엑셀을 직접 읽는다(ZIP+XML 파싱, 의존성 0)
+- EUC-KR CSV, BOM, 제목 행이 위에 붙은 파일도 처리한다
+- 열 이름은 '성명/이름', '소속/기관', '재산총액/총재산', '증권/주식' 등을 자동으로 찾는다
+- **단위(원/천원)를 자동 판정하고 근거를 출력한다** — 1,000배 틀린 금액이 실명과 함께 뜨면 안 되므로
+- 기준일 없는 행·합계 행은 받지 않고 사유별로 집계해 보고한다
 
 ---
 

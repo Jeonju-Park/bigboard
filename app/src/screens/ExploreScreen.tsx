@@ -11,6 +11,7 @@ import { getDisclosures, getMeta, getPersons } from '@/lib/data'
 import { useAsync } from '@/lib/useData'
 import { toggleFollowPerson, useFollowedPersons } from '@/lib/follow'
 import { formatAmountShort, formatDate } from '@/lib/format'
+import { officialStockValue, personHeadline } from '@/lib/person'
 import { daysAgoKey, todayKey } from '@/lib/date'
 import homeStyles from './HomeScreen.module.css'
 import styles from './ExploreScreen.module.css'
@@ -52,11 +53,22 @@ export default function ExploreScreen() {
     // ② 내부자가 가장 많이 사들인 종목 — 순매수 금액
     const netBought = [...byStock.values()].filter((s) => s.net > 0).sort((a, b) => b.net - a.net).slice(0, 5)
 
-    // ③ 많이 움직인 큰손 — 12개월 순매수 절댓값
+    // ③ 많이 움직인 큰손 — 12개월 순매수 절댓값 (내부자만. 공직자는 순매수를 계산할 수 없다)
     const movers = data.persons
-      .filter((p) => p.totalNetBuy12m !== 0)
+      .filter((p) => p.type === 'insider' && p.totalNetBuy12m !== 0)
       .sort((a, b) => Math.abs(b.totalNetBuy12m) - Math.abs(a.totalNetBuy12m))
       .slice(0, 8)
+
+    // ③-2 공직자 — 성격이 달라 별도 섹션. 거래 흐름이 아니라 연 1회 잔액이라
+    //      같은 목록에 섞으면 '순매수 0' 으로 밀려 영원히 안 보인다
+    // 증권 항목이 없는 공직자는 이 목록에서 뺀다 — 총재산으로 대체하면 '주식 평가액 순'이 거짓이 된다.
+    // 대신 몇 명이 빠졌는지 화면에 밝힌다.
+    const allOfficials = data.persons.filter((p) => p.type === 'official')
+    const officials = allOfficials
+      .filter((p) => officialStockValue(p) !== null)
+      .sort((a, b) => (officialStockValue(b) ?? 0) - (officialStockValue(a) ?? 0))
+      .slice(0, 8)
+    const officialsNoStock = allOfficials.length - allOfficials.filter((p) => officialStockValue(p) !== null).length
 
     // ④ 곧 있을 예고 거래 — 사전공시라 '앞으로 벌어질 일'을 미리 보는 유일한 창
     const upcoming = data.disclosures
@@ -77,7 +89,7 @@ export default function ExploreScreen() {
       .sort((a, b) => b.buyers - a.buyers)
       .slice(0, 5)
 
-    return { busiest, netBought, movers, upcoming, consensus }
+    return { busiest, netBought, movers, officials, officialsNoStock, upcoming, consensus }
   }, [data])
 
   const officialNote = data?.meta.officialsAsOf ? `${formatDate(data.meta.officialsAsOf)} 기준` : null
@@ -163,20 +175,59 @@ export default function ExploreScreen() {
           )}
 
           <section>
-            <SectionHeader title="많이 움직인 큰손" note="최근 12개월 순매수" />
+            <SectionHeader title="많이 움직인 큰손" note="내부자 · 최근 12개월 순매수" />
             {insight.movers.length ? (
-              insight.movers.map((p) => (
-                <PersonRow
-                  key={p.id}
-                  person={p}
-                  amount={Math.abs(p.totalNetBuy12m)}
-                  amountNote={p.type === 'official' ? officialNote : null}
-                  bookmarked={followed.includes(p.id)}
-                  onToggleBookmark={() => toggleFollowPerson(p.id)}
-                />
-              ))
+              insight.movers.map((p) => {
+                const h = personHeadline(p)
+                return (
+                  <PersonRow
+                    key={p.id}
+                    person={p}
+                    amount={h.amount}
+                    amountNote={h.note}
+                    bookmarked={followed.includes(p.id)}
+                    onToggleBookmark={() => toggleFollowPerson(p.id)}
+                  />
+                )
+              })
             ) : (
               <EmptyState icon="person_search" title="표시할 인물이 없습니다" />
+            )}
+          </section>
+
+          <section>
+            <SectionHeader
+              title="고위공직자"
+              note={officialNote ? `주식 평가액 · ${officialNote}` : '재산공개'}
+            />
+            {insight.officials.length ? (
+              <>
+                {insight.officials.map((p) => {
+                  const h = personHeadline(p)
+                  return (
+                    <PersonRow
+                      key={p.id}
+                      person={p}
+                      amount={h.amount}
+                      amountNote={h.note}
+                      bookmarked={followed.includes(p.id)}
+                      onToggleBookmark={() => toggleFollowPerson(p.id)}
+                    />
+                  )
+                })}
+                <p className="ty-micro" style={{ marginTop: 'var(--space-2)' }}>
+                  공직자 재산은 <b>연 1회</b>만 공개됩니다. 거래 시점은 공개되지 않아 매매 내역을 알 수 없고,
+                  위 금액은 신고 기준일의 증권 평가액입니다.
+                  {insight.officialsNoStock > 0 &&
+                    ` 자료에 증권 항목이 없는 ${insight.officialsNoStock}명은 총재산으로 대체하지 않고 제외했습니다.`}
+                </p>
+              </>
+            ) : (
+              <EmptyState
+                icon="how_to_reg"
+                title="공직자 재산 자료가 아직 없습니다"
+                micro="재산공개는 매년 3월에 이뤄집니다"
+              />
             )}
           </section>
         </>

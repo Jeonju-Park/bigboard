@@ -7,7 +7,7 @@ import { EmptyState, ErrorState, LoadingState, SectionHeader } from '@/shared/co
 import { getMeta, getPersons, getStocks } from '@/lib/data'
 import { useAsync } from '@/lib/useData'
 import { toggleFollowPerson, useFollowedPersons, useRecent } from '@/lib/follow'
-import { formatDate } from '@/lib/format'
+import { personHeadline } from '@/lib/person'
 import styles from './SearchScreen.module.css'
 
 /**
@@ -134,8 +134,8 @@ export default function SearchScreen() {
                   <PersonRow
                     key={p.id}
                     person={p}
-                    amount={p.totalNetBuy12m === 0 ? null : Math.abs(p.totalNetBuy12m)}
-                    amountNote={p.type === 'official' && data.meta.officialsAsOf ? `${formatDate(data.meta.officialsAsOf)} 기준` : null}
+                    amount={personHeadline(p).amount}
+                    amountNote={personHeadline(p).note}
                     bookmarked={followed.includes(p.id)}
                     onToggleBookmark={() => toggleFollowPerson(p.id)}
                   />

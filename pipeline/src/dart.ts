@@ -98,7 +98,7 @@ export async function elestock(corpCode: string): Promise<ElestockItem[]> {
  * ZIP 최소 리더. 필요한 압축방식은 저장(0)과 deflate(8) 둘뿐이고 zlib 은 내장이라
  * 외부 의존성을 추가하지 않는다.
  */
-function unzip(buf: Buffer): { name: string; data: Buffer }[] {
+export function unzip(buf: Buffer): { name: string; data: Buffer }[] {
   const files: { name: string; data: Buffer }[] = []
   let eocd = -1
   for (let i = buf.length - 22; i >= 0; i--) {
