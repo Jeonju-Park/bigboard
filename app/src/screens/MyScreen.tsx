@@ -11,6 +11,7 @@ import {
 } from '@/shared/components/Feedback'
 import { getMeta, getPersons, getStocks } from '@/lib/data'
 import { useAsync } from '@/lib/useData'
+import { useMarket } from '@/lib/market'
 import { toggleFollowPerson, toggleFollowStock, useBroker, useFollowedPersons, useFollowedStocks } from '@/lib/follow'
 import { BROKERS } from '@/lib/broker'
 import { formatDate } from '@/lib/format'
@@ -24,6 +25,7 @@ import styles from './MyScreen.module.css'
  * 지금도 앱이 온전히 동작한다는 사실을 함께 적는다 — 로그인을 강요하지 않는다.
  */
 export default function MyScreen() {
+  const market = useMarket()
   const followedPersons = useFollowedPersons()
   const followedStocks = useFollowedStocks()
   const brokerId = useBroker()
@@ -118,7 +120,9 @@ export default function MyScreen() {
         )}
       </section>
 
-      {/* ── 거래 바로가기 설정 요약 ── */}
+      {/* ── 거래 바로가기 설정 요약 ──
+          국내 증권사 목록이라 미장에서는 의미가 없다. FeedDetail 의 CTA 와 같은 이유로 감춘다 */}
+      {market === 'kr' && (
       <section>
         <SectionHeader title="거래 바로가기" />
         <Link to="/settings" className={styles.brokerRow}>
@@ -135,6 +139,7 @@ export default function MyScreen() {
           링크로 이동만 하며, 주문은 증권사 앱에서 직접 하셔야 합니다
         </p>
       </section>
+      )}
 
       <footer className={styles.footer}>
         {data?.meta && <FreshnessLabel lastUpdated={data.meta.lastUpdated} />}

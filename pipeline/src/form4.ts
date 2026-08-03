@@ -146,6 +146,22 @@ async function collectIndex(): Promise<IdxRow[]> {
   return rows
 }
 
+/**
+ * 신고서의 티커 칸을 믿을 수 없다. 실제로 들어 있던 값들:
+ *   'NONE'(25건) · 'N/A'(6) · 'NA'(3) · 'NYSE: VTEX'(2)
+ * 'NONE' 을 그대로 두면 탐색 화면에 **종목명 NONE** 이 1위로 올라온다.
+ * 거래소 접두는 떼어내고, 의미 없는 값은 null 로 돌려 CIK 매핑에 맡긴다.
+ */
+function cleanTicker(raw: string | null): string | null {
+  if (!raw) return null
+  // 'NYSE: VTEX' → 'VTEX'
+  const v = raw.replace(/^[A-Z]+\s*:\s*/i, '').trim().toUpperCase()
+  if (!v || /^(NONE|N\/A|NA|-|\.)$/.test(v)) return null
+  // 미국 티커는 최대 5자(+클래스 접미). 그보다 길면 티커가 아니다
+  if (!/^[A-Z][A-Z0-9.\-]{0,5}$/.test(v)) return null
+  return v
+}
+
 /** 보고자의 직위 — 임원 직함이 있으면 그것, 없으면 관계 */
 function ownerTitle(xml: string): string {
   const officer = tag(xml, 'officerTitle')
@@ -169,7 +185,7 @@ function buildFromForm4(xml: string, row: IdxRow, tickers: Map<string, string>):
   const issuerName = tag(xml, 'issuerName') ?? row.company
   const issuerCik = (tag(xml, 'issuerCik') ?? row.cik).padStart(10, '0')
   // 티커는 신고서에 적힌 값이 1순위. 비어 있으면 CIK 매핑으로 보완한다
-  const symbol = tag(xml, 'issuerTradingSymbol') ?? tickers.get(issuerCik) ?? null
+  const symbol = cleanTicker(tag(xml, 'issuerTradingSymbol')) ?? tickers.get(issuerCik) ?? null
   // 한 신고서에 보고자가 여럿일 수 있다 (펀드 + 운용사 + GP 가 같은 주식을 함께 신고).
   // 이때 사람 수만큼 건을 만들면 **같은 거래를 N배로 세게 된다.** 한 건으로 두고 이름만 합친다.
   const owners = tagAll(xml, 'reportingOwner')

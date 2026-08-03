@@ -4,7 +4,8 @@
  * M1 은 로그인이 없으므로 전부 기기에만 저장한다.
  * 노션 오픈이슈 O5(팔로우 저장 방식)가 정해지면 여기가 마이그레이션 지점이 된다.
  */
-import { useSyncExternalStore } from 'react'
+import { useMemo, useSyncExternalStore } from 'react'
+import { getMarket, useMarket, type Market } from './market'
 import type { BrokerId } from './broker'
 
 export type { BrokerId }
@@ -102,19 +103,42 @@ export function toggleFollowStock(code: string): void {
 
 // ── 최근 본 항목 (S5 탐색) ────────────────────────────────────────────────────
 
-export type RecentItem = { kind: 'person' | 'stock'; id: string; label: string }
+/**
+ * 최근 본 항목.
+ *
+ * `market` 은 나중에 붙었다. 시장을 안 넣었더니 검색 화면에서
+ * '김월용 · 삼성전자 · Intel Corporation' 이 한 목록에 섞여 나왔다 —
+ * 미장에서 국장 종목을 누르면 데이터가 없어 빈 화면으로 간다.
+ * 예전에 저장된 항목은 market 이 없으므로 국장으로 본다(그때는 국장뿐이었다).
+ */
+export type RecentItem = {
+  kind: 'person' | 'stock'
+  id: string
+  label: string
+  market?: Market
+}
 
 export function useRecent(): RecentItem[] {
-  return useSyncExternalStore(
+  const market = useMarket()
+  const all = useSyncExternalStore(
     subscribe,
     () => snapshot<RecentItem[]>(KEYS.recent, [] as RecentItem[]),
     () => [] as RecentItem[],
   )
+  return useMemo(() => all.filter((x) => (x.market ?? 'kr') === market), [all, market])
 }
 
-export function pushRecent(item: RecentItem): void {
+export function pushRecent(item: Omit<RecentItem, 'market'>): void {
   const cur = read<RecentItem[]>(KEYS.recent, [])
-  const next = [item, ...cur.filter((x) => !(x.kind === item.kind && x.id === item.id))].slice(0, 10)
+  const withMarket: RecentItem = { ...item, market: getMarket() }
+  // 같은 항목은 같은 시장 안에서만 중복으로 본다
+  const next = [
+    withMarket,
+    ...cur.filter(
+      (x) =>
+        !(x.kind === item.kind && x.id === item.id && (x.market ?? 'kr') === withMarket.market),
+    ),
+  ].slice(0, 20)
   write(KEYS.recent, next)
 }
 
