@@ -4,7 +4,8 @@
  "sources": [
   "미국 증권거래위원회(SEC) EDGAR — Form 4 임원·주요주주 소유변동 신고",
   "미국 증권거래위원회(SEC) EDGAR — 13F-HR 기관투자자 분기 보유 신고",
-  "미 하원 사무처(Clerk of the House) — STOCK Act 정기거래보고서(PTR)"
+  "미 하원 사무처(Clerk of the House) — STOCK Act 정기거래보고서(PTR)",
+  "Finnhub — 미국 주식 시세·기업정보 (PER·PBR 은 Finnhub 산출값)"
  ],
  "counts": {
   "disclosures": 2531,
@@ -12,7 +13,7 @@
   "stocks": 861
  },
  "officialsAsOf": null,
- "priceDataAvailable": false,
+ "priceDataAvailable": true,
  "sparklineAvailable": false,
  "skipped": {
   "total": 2974,

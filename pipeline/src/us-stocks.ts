@@ -38,6 +38,8 @@ FINNHUB_KEY 가 없습니다.
 }
 
 const full = process.argv.includes('--full')
+/** 소규모 확인용. 52분짜리 작업을 통째로 돌리기 전에 로직을 검증한다 */
+const limit = Number(process.argv[process.argv.indexOf('--limit') + 1]) || Infinity
 
 /**
  * 무료 티어는 분당 60회다. 안전하게 분당 50회(=1.2초 간격)로 잡는다.
@@ -88,7 +90,10 @@ interface Quote {
 }
 
 interface Profile {
-  marketCapitalization?: number // 백만 달러
+  /** 백만 단위. **통화가 달러라는 보장이 없다** — 아래 검산 참고 */
+  marketCapitalization?: number
+  /** 백만 주 */
+  shareOutstanding?: number
   exchange?: string
   currency?: string
 }
@@ -109,21 +114,22 @@ async function main() {
     process.exit(1)
   }
 
+  const targets = stocks.slice(0, limit === Infinity ? stocks.length : limit)
   const perSymbol = full ? 3 : 1
-  const estMin = Math.ceil((stocks.length * perSymbol * INTERVAL_MS) / 60_000)
-  console.log(`\n미국 시세 수집 — ${stocks.length}종목 · ${full ? '전체(시세+지표+기업정보)' : '시세만'}`)
+  const estMin = Math.ceil((targets.length * perSymbol * INTERVAL_MS) / 60_000)
+  console.log(`\n미국 시세 수집 — ${targets.length}종목 · ${full ? '전체(시세+지표+기업정보)' : '시세만'}`)
   console.log(`예상 소요 약 ${estMin}분 (분당 50회 제한)\n`)
 
   const save = () => writeFileSync(stocksPath, JSON.stringify(stocks, null, 1) + '\n', 'utf8')
 
   let done = 0
-  for (const s of stocks) {
+  for (const s of targets) {
     done++
     if (done % 50 === 0) {
       // 중간 저장. 끝에서 한 번만 쓰면 도중에 죽었을 때 전부 잃는다
       save()
       const got = stocks.filter((x) => x.prevClose !== null).length
-      console.log(`  ${done}/${stocks.length} … (시세 확보 ${got})`)
+      console.log(`  ${done}/${targets.length} … (시세 확보 ${got})`)
     }
 
     const q = await call<Quote>(`quote?symbol=${encodeURIComponent(s.code)}`)
@@ -143,17 +149,25 @@ async function main() {
     if (p) {
       stats.profile++
       s.market = p.exchange ?? null
-      // marketCapitalization 은 **백만 단위**인데, 통화가 달러가 아닐 수 있다.
+
+      // ── 시가총액은 **검산해서** 받는다 ──────────────────────────────────────
       //
-      // ⚠️ 실제로 걸렸다: VTMX(Vesta, 멕시코 리츠)의 시총이 52,993(백만) 으로 와서
-      //    그대로 쓰면 "$53.0B" 가 된다. 실제 가치는 약 \$2.6B 이고, 저 숫자는 **페소**다.
-      //    (주가 자체는 미국 상장분이라 달러로 온다 — 시총만 현지 통화다)
+      // ⚠️ VTMX(Vesta, 멕시코 리츠)의 시총이 52,993(백만) 으로 와서 그대로 쓰면
+      //    "\$53.0B" 가 된다. 실제 가치는 약 \$2.6B 다.
+      //    처음엔 profile2 의 `currency` 로 거르려 했는데 **Finnhub 은 이 종목에도
+      //    currency='USD' 라고 답한다.** 통화 필드로는 못 잡는다.
       //
-      //    환율을 끌어와 환산하지 않는다. 환산 시점·환율 출처를 화면이 설명할 수 없고,
-      //    우리가 만든 수를 원문인 척 보여주게 된다. 모르면 null 로 둔다(규칙 2).
+      //    대신 스스로 검산한다: 시가총액 ≈ 상장주식수 x 주가.
+      //    ISRG·MBIN 은 비율이 정확히 1.00 인데 VTMX 는 1.74 다 (ADR 과 원주가 섞인다).
+      //    숫자끼리 안 맞으면 어느 쪽이 맞는지 알 수 없으므로 **보여주지 않는다**.
+      //    환율을 끌어와 환산하지도 않는다 — 우리가 만든 수를 원문인 척 보여주게 된다(규칙 2).
       const cap = num(p.marketCapitalization)
-      const isUsd = !p.currency || p.currency.toUpperCase() === 'USD'
-      if (cap !== null && isUsd) {
+      const shares = num(p.shareOutstanding)
+      const price = s.prevClose
+      const implied = shares !== null && price !== null ? shares * price : null
+      const consistent = cap !== null && implied !== null && Math.abs(cap / implied - 1) <= 0.15
+
+      if (cap !== null && consistent) {
         s.marketCap = Math.round(cap * 1_000_000)
       } else {
         if (cap !== null) stats.foreignCap++
@@ -192,7 +206,9 @@ async function main() {
     console.log(`지표 ${stats.metric}종목 · 기업정보 ${stats.profile}종목`)
   }
   if (stats.foreignCap) {
-    console.log(`시가총액 제외 ${stats.foreignCap}종목 — 신고 통화가 달러가 아니라 환산하지 않았습니다`)
+    console.log(
+      `시가총액 제외 ${stats.foreignCap}종목 — 시총과 (주식수 x 주가)가 안 맞아 신뢰할 수 없습니다`,
+    )
   }
   if (stats.rateLimited) console.log(`호출 제한에 걸려 대기 ${stats.rateLimited}회`)
   if (stats.failed) console.log(`실패 ${stats.failed}건 (해당 항목은 null 로 남습니다)`)
