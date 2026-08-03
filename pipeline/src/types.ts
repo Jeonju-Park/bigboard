@@ -4,7 +4,7 @@
  * (별도 패키지라 import 로 공유하지 않고 의도적으로 복제한다 — app 과 의존성 분리 원칙)
  */
 
-export type PersonType = 'insider' | 'official'
+export type PersonType = 'insider' | 'official' | 'politician' | 'institution'
 export type Direction = 'buy' | 'sell'
 
 export interface TradeDetail {
@@ -34,7 +34,40 @@ export interface Disclosure {
   details: TradeDetail[]
   dartUrl: string
   isAmended: boolean
+
+  // ── 미장 전용 (국장에서는 전부 undefined) ──────────────────────────────────
+  /**
+   * 미국 의회 신고는 **정확한 금액을 요구하지 않는다.** 11개 구간 중 하나로만 신고한다.
+   * 그래서 totalAmount 는 null 이고 대신 이 구간이 채워진다.
+   * 화면은 구간을 **구간 그대로** 보여준다 — 중간값으로 바꿔 단일 숫자처럼 보이게 하면 거짓이다.
+   */
+  amountRange?: AmountRange | null
+  /**
+   * 누구의 계좌인가. 의원 본인이 아닌 경우가 흔하다.
+   * 배우자 거래를 의원 본인 거래로 표시하면 실명 데이터에서 명백한 오보다.
+   */
+  ownerType?: OwnerType | null
+  /**
+   * SEC Form 4 거래 코드 원본. **P/S 만 시장 거래**이고
+   * A(보상)·M(옵션행사)·F(세금 원천징수)·G(증여)는 매수·매도가 아니다.
+   * direction 만 보고 "샀다"고 쓰면 안 되므로 원본 코드를 끝까지 들고 간다.
+   */
+  transactionCode?: string | null
+  /** 하원 PTR 의 자산 종류 코드 — ST(주식)·OP(옵션)만 우리 대상 */
+  assetType?: string | null
+  /** 거래일 → 신고일 지연 일수. 미장 의회는 30~45일이 법정 기한이라 시차가 크다 */
+  filingLagDays?: number | null
 }
+
+/** 신고 금액 구간 (미국 의회). 경계값 포함 */
+export interface AmountRange {
+  min: number
+  /** 최상단 구간($50,000,000 초과)은 상한이 없어 null */
+  max: number | null
+}
+
+/** 거래 계좌의 주체 — SP(배우자)·DC(자녀)·JT(공동) */
+export type OwnerType = 'self' | 'spouse' | 'child' | 'joint'
 
 export interface PersonHolding {
   stockCode: string
@@ -135,7 +168,44 @@ export interface RankingEntry {
 
 export type Rankings = Record<RankingKind, Record<RankingPeriod, RankingEntry[]>>
 
+/** 13F 보유 1행 */
+export interface InstitutionHolding {
+  /** 13F 는 CUSIP 으로 신고한다. 티커 매핑에 실패하면 null (종목 링크를 걸지 않는다) */
+  ticker: string | null
+  cusip: string
+  name: string
+  /** 평가액(달러). 2023년 이후 13F 는 천 달러가 아니라 **달러 단위**다 */
+  value: number
+  shares: number
+  /** 옵션 포지션이면 채워진다. 현물 보유와 섞어 세면 안 된다 */
+  putCall: 'put' | 'call' | null
+}
+
+/**
+ * 13F 를 제출한 기관의 분기 보유 현황.
+ *
+ * ⚠️ **"지금 들고 있는 것"이 아니다.** 13F 는 분기 종료 후 45일 이내 제출이라
+ *    우리가 보는 건 최대 4.5개월 묵은 스냅샷이고, 공매도·채권·해외주식은 아예 빠진다.
+ *    공직자 재산공개에 "연 1회 공개"를 붙였듯 여기엔 기준일과 제출일이 둘 다 필요하다.
+ */
+export interface Institution {
+  /** SEC CIK */
+  id: string
+  name: string
+  /** 보고 기준일 = 분기 말 (ISO) */
+  periodOfReport: string
+  /** 실제 제출일 (ISO). periodOfReport 와의 시차가 곧 지연이다 */
+  filedAt: string
+  /** 신고 포지션 합계(달러) */
+  totalValue: number
+  holdings: InstitutionHolding[]
+  /** SEC 원문 링크 — 실명 데이터 책임 */
+  sourceUrl: string
+}
+
 export interface Meta {
+  /** 이 파일이 어느 시장 것인지. data/kr, data/us 를 섞어 읽는 사고를 막는다 */
+  market: 'kr' | 'us'
   lastUpdated: string | null
   sources: string[]
   counts: { disclosures: number; persons: number; stocks: number }
@@ -146,6 +216,8 @@ export interface Meta {
   officialsAsOf: string | null
   /** 시세 소스 미연결 상태를 화면이 알 수 있게 — 값을 추정하지 않고 사실을 노출한다 */
   priceDataAvailable: boolean
+  /** 스파크라인(과거 시계열) 확보 여부. 미장 무료 티어엔 시계열이 없어 차트를 숨긴다 */
+  sparklineAvailable: boolean
   /** 수집 시 건너뛴 건수와 사유 — 조용한 누락을 만들지 않는다 */
   skipped: { total: number; reasons: Record<string, number> }
 }

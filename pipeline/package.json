@@ -16,6 +16,7 @@
     "explore:stocks": "node --env-file=.env src/explore-stocks.ts",
     "gazette": "node --env-file=.env src/gazette.ts"
   },
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "unpdf": "^1.8.0"
+  }
 }

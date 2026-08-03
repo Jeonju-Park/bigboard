@@ -2,6 +2,7 @@ import type { ReactNode } from 'react'
 import { useNavigate } from 'react-router'
 import Icon from './Icon'
 import Logotype from './Logotype'
+import { MarketChip } from './MarketSwitch'
 import styles from './AppBar.module.css'
 
 type Props = {
@@ -38,6 +39,9 @@ export default function AppBar({ title, wordmark = false, showBack = false, cent
           <div className={styles.logo}>
             <Logotype height={22} />
             <span className="sr-only">{title}</span>
+            {/* 시장 전환은 로고 바로 옆이다 — '지금 어느 시장을 보고 있나'는
+                워드마크만큼 자주 확인해야 하는 정보라서 */}
+            <MarketChip />
           </div>
         ) : (
           <h1 className={`ty-title-s ${styles.title}`}>{title}</h1>

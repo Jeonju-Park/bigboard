@@ -1,0 +1,68 @@
+/* 헤더용 작은 토글 — 세그먼트 컨트롤 */
+.chip {
+  display: inline-flex;
+  border: var(--hairline);
+  border-radius: var(--radius-chip);
+  overflow: hidden;
+  /* 헤더 높이(56)를 넘기지 않도록 터치 최소치보다 낮게 잡고,
+     대신 좌우 여백으로 누를 면적을 확보한다 */
+  background: var(--bg-primary);
+}
+
+.chipItem {
+  border: 0;
+  background: none;
+  color: var(--text-sub);
+  padding: var(--space-1) var(--space-3);
+  min-height: var(--space-8);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.chipItem[aria-checked='true'] {
+  /* coral-500 은 면(surface)으로만 쓴다 — 글자·아이콘색으로 쓰면 대비 2.68 로 WCAG 미달 */
+  background: var(--brand-surface);
+  color: var(--on-brand);
+  font-weight: 600;
+}
+
+/* 온보딩·설정용 큰 선택 카드 */
+.choice {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  align-items: flex-start;
+  text-align: start;
+  border: var(--hairline);
+  border-radius: var(--radius-card);
+  background: var(--bg-primary);
+  padding: var(--space-4);
+  cursor: pointer;
+  transition: transform var(--motion-press);
+}
+
+.card:active {
+  transform: scale(0.99);
+}
+
+.card[aria-checked='true'] {
+  border-color: var(--brand-surface);
+  /* 선택 표시를 테두리 색 하나에만 걸면 색각 이상에서 안 보인다.
+     왼쪽 굵은 바를 함께 넣어 형태로도 구분되게 한다 */
+  box-shadow: inset var(--accent-bar) 0 0 0 var(--brand-surface);
+  padding-left: calc(var(--space-4) + var(--accent-bar));
+}
+
+.cardTitle {
+  color: var(--ink);
+}
+
+.cardActors {
+  color: var(--text-sub);
+}

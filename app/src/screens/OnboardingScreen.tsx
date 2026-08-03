@@ -10,13 +10,18 @@ import {
   useBroker, useFollowedPersons, useFollowedStocks, type BrokerId,
 } from '@/lib/follow'
 import { BROKERS } from '@/lib/broker'
+import { MarketChoice } from '@/shared/components/MarketSwitch'
+import { MARKETS, useMarket } from '@/lib/market'
 import { markOnboarded } from '@/lib/visit'
 import { formatAmountShort } from '@/lib/format'
 import styles from './OnboardingScreen.module.css'
 
 /**
- * W1 온보딩 3스텝 — 관심 종목 → 큰손 팔로우 → 증권사 선택. 전 스텝 건너뛰기 가능.
+ * W1 온보딩 4스텝 — 시장 → 관심 종목 → 큰손 팔로우 → 증권사 선택. 전 스텝 건너뛰기 가능.
  * 여기서 고른 값은 그대로 localStorage 에 들어가 홈의 '팔로우' 탭을 채운다.
+ *
+ * 시장이 **첫 스텝**인 이유: 뒤의 세 스텝이 전부 시장에 딸린 데이터라서다.
+ * 국장 종목을 고르고 미장으로 바꾸면 그 선택이 통째로 무의미해진다.
  */
 export default function OnboardingScreen() {
   const navigate = useNavigate()
@@ -26,6 +31,7 @@ export default function OnboardingScreen() {
   const followedStocks = useFollowedStocks()
   const followedPersons = useFollowedPersons()
   const brokerId = useBroker()
+  const market = useMarket()
 
   const { state, data } = useAsync(async () => {
     const [stocks, persons, disclosures] = await Promise.all([getStocks(), getPersons(), getDisclosures()])
@@ -61,7 +67,7 @@ export default function OnboardingScreen() {
     navigate('/home', { replace: true })
   }
 
-  const STEPS = ['관심 종목 고르기', '큰손 팔로우', '증권사 선택'] as const
+  const STEPS = ['시장 고르기', '관심 종목 고르기', '큰손 팔로우', '증권사 선택'] as const
   const isLast = step === STEPS.length - 1
 
   return (
@@ -80,9 +86,21 @@ export default function OnboardingScreen() {
       <div className={styles.body}>
         <h1 className="ty-title" style={{ margin: 0 }}>{STEPS[step]}</h1>
 
-        {state === 'loading' && <LoadingState rows={2} />}
+        {state === 'loading' && step > 0 && <LoadingState rows={2} />}
 
-        {state === 'ready' && step === 0 && (
+        {step === 0 && (
+          <>
+            <p className="ty-caption" style={{ margin: 0 }}>
+              먼저 어느 시장을 보실지 고르세요. 언제든 홈 상단에서 바꿀 수 있습니다.
+            </p>
+            <MarketChoice />
+            <p className="ty-micro" style={{ margin: 0 }}>
+              {MARKETS[market].label}은 {MARKETS[market].actors}의 공시를 다룹니다.
+            </p>
+          </>
+        )}
+
+        {state === 'ready' && step === 1 && (
           <>
             <p className="ty-caption" style={{ margin: 0 }}>
               고른 종목의 공시를 홈 '팔로우' 탭에서 모아 봅니다. 나중에 바꿀 수 있습니다.
@@ -111,7 +129,7 @@ export default function OnboardingScreen() {
           </>
         )}
 
-        {state === 'ready' && step === 1 && (
+        {state === 'ready' && step === 2 && (
           <>
             <p className="ty-caption" style={{ margin: 0 }}>
               최근 12개월 거래 규모가 큰 순서입니다. 집계 기준은 단가가 확인된 공시만입니다.
@@ -133,7 +151,7 @@ export default function OnboardingScreen() {
           </>
         )}
 
-        {step === 2 && (
+        {step === 3 && (
           <>
             <p className="ty-caption" style={{ margin: 0 }}>
               '거래 바로가기'를 누르면 선택한 증권사 페이지로 이동합니다. 주문은 직접 하셔야 합니다.

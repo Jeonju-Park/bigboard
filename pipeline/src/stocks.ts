@@ -24,7 +24,7 @@ import { mkdirSync, readFileSync, writeFileSync, existsSync } from 'node:fs'
 import { join } from 'node:path'
 import type { Sparkline, Sparklines, Stock } from './types.ts'
 
-const DATA_DIR = join(import.meta.dirname, '..', '..', 'app', 'public', 'data')
+const DATA_DIR = join(import.meta.dirname, '..', '..', 'app', 'public', 'data', 'kr')
 const CACHE_DIR = join(import.meta.dirname, '..', '.cache', 'prices')
 const BASE = 'https://apis.data.go.kr/1160100/service/GetStockSecuritiesInfoService'
 
@@ -297,6 +297,7 @@ async function main() {
   const metaPath = join(DATA_DIR, 'meta.json')
   const meta = JSON.parse(readFileSync(metaPath, 'utf8'))
   meta.priceDataAvailable = true
+  meta.sparklineAvailable = true
   if (!meta.sources.includes(SOURCE_NOTE)) meta.sources.push(SOURCE_NOTE)
   writeFileSync(metaPath, JSON.stringify(meta, null, 1) + '\n', 'utf8')
 

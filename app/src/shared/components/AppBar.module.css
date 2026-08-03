@@ -58,10 +58,11 @@
   white-space: nowrap;
 }
 
-/* 로고를 제목 자리에 놓을 때 — 세로 중앙 정렬만 담당 */
+/* 로고를 제목 자리에 놓을 때 — 세로 중앙 정렬 + 시장 칩 간격 */
 .logo {
   display: flex;
   align-items: center;
+  gap: var(--space-3);
   min-width: 0;
 }
 

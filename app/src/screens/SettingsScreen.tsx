@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Screen from '@/shared/components/Screen'
+import { MarketChoice } from '@/shared/components/MarketSwitch'
 import { ListGroup, ListRow } from '@/shared/components/ListSection'
 import { OptionSheet } from '@/shared/components/BottomSheet'
 import { ErrorState, LoadingState, SectionHeader, Disclaimer } from '@/shared/components/Feedback'
@@ -35,6 +36,15 @@ export default function SettingsScreen() {
 
   return (
     <Screen title="설정" showBack>
+      <section>
+        <SectionHeader title="시장" />
+        <MarketChoice />
+        <p className="ty-micro" style={{ marginTop: 'var(--space-2)' }}>
+          시장마다 데이터의 성격이 다릅니다. 국내장은 공시에 정확한 금액이 나오지만,
+          미국장의 의회 신고는 금액이 구간으로만 공개되고 기관 보유는 분기말 기준입니다.
+        </p>
+      </section>
+
       <section>
         <SectionHeader title="계정" />
         <ListGroup>

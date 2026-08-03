@@ -19,7 +19,7 @@ import { readFileSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 import type { GazetteNotice, Meta } from './types.ts'
 
-const DATA_DIR = join(import.meta.dirname, '..', '..', 'app', 'public', 'data')
+const DATA_DIR = join(import.meta.dirname, '..', '..', 'app', 'public', 'data', 'kr')
 const ENDPOINT = 'https://apis.data.go.kr/1741000/ApiPetyService/getApiPetyList'
 /** pdfFilePath 가 상대경로로 와서 붙여야 한다 (open.gwanbo.go.kr 은 404, gwanbo.go.kr 이 정답) */
 const GWANBO_BASE = 'https://gwanbo.go.kr'

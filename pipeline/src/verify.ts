@@ -13,7 +13,7 @@ import { join } from 'node:path'
 import { fetchDocument, num, toIsoDate } from './dart.ts'
 import type { Disclosure } from './types.ts'
 
-const DATA = join(import.meta.dirname, '..', '..', 'app', 'public', 'data')
+const DATA = join(import.meta.dirname, '..', '..', 'app', 'public', 'data', 'kr')
 const disclosures: Disclosure[] = JSON.parse(readFileSync(join(DATA, 'disclosures.json'), 'utf8'))
 
 /**

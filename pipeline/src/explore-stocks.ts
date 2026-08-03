@@ -138,7 +138,7 @@ async function main() {
   // ── 3) 종목코드로 단건 조회가 되는가 ───────────────────────────────────────
   console.log(`\n③ 우리가 가진 종목코드로 조회되는가`)
   const stocks = JSON.parse(
-    readFileSync(join(import.meta.dirname, '..', '..', 'app', 'public', 'data', 'stocks.json'), 'utf8'),
+    readFileSync(join(import.meta.dirname, '..', '..', 'app', 'public', 'data', 'kr', 'stocks.json'), 'utf8'),
   ) as { code: string; name: string }[]
   const targets = stocks.slice(0, 3)
 

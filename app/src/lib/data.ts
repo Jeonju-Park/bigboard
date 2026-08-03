@@ -5,15 +5,35 @@
  *    (CORS·API 키 노출 때문) pipeline/ 이 커밋해 둔 정적 JSON 만 읽는다.
  *    화면 코드는 fetch 를 직접 쓰지 말고 반드시 이 모듈을 거친다.
  */
-import type { Disclosure, GazetteNotice, Meta, Person, Rankings, Sparklines, Stock } from './types'
+import { getMarket, onMarketChange } from './market'
+import type {
+  Disclosure,
+  GazetteNotice,
+  Institution,
+  Meta,
+  Person,
+  Rankings,
+  Sparklines,
+  Stock,
+} from './types'
 
 /** Vite base('./')와 GitHub Pages 하위 경로를 모두 처리한다 */
 function dataUrl(file: string): string {
-  return new URL(`data/${file}`, new URL(import.meta.env.BASE_URL, document.baseURI)).href
+  // 시장별로 디렉터리가 갈린다 — data/kr/*.json, data/us/*.json
+  return new URL(`data/${getMarket()}/${file}`, new URL(import.meta.env.BASE_URL, document.baseURI))
+    .href
 }
 
-/** 같은 파일을 화면마다 다시 받지 않도록 in-flight 프라미스를 공유한다 */
+/**
+ * 같은 파일을 화면마다 다시 받지 않도록 in-flight 프라미스를 공유한다.
+ * 키에 시장을 넣는다 — 안 넣으면 국장에서 받은 disclosures.json 이
+ * 미장으로 바꾼 뒤에도 그대로 나온다.
+ */
 const cache = new Map<string, Promise<unknown>>()
+
+function cacheKey(file: string): string {
+  return `${getMarket()}/${file}`
+}
 
 /** 화면의 '에러' 상태(재시도 버튼)가 잡는 예외 */
 export class DataError extends Error {
@@ -28,7 +48,8 @@ export class DataError extends Error {
 }
 
 async function loadJson<T>(file: string): Promise<T> {
-  const existing = cache.get(file)
+  const key = cacheKey(file)
+  const existing = cache.get(key)
   if (existing) return existing as Promise<T>
 
   const promise = (async () => {
@@ -47,8 +68,8 @@ async function loadJson<T>(file: string): Promise<T> {
   })()
 
   // 실패한 요청은 캐시에 남기지 않는다 — 재시도 버튼이 동작해야 하므로
-  promise.catch(() => cache.delete(file))
-  cache.set(file, promise)
+  promise.catch(() => cache.delete(key))
+  cache.set(key, promise)
   return promise
 }
 
@@ -66,10 +87,22 @@ export const getSparklines = () => loadJson<Sparklines>('sparklines.json')
  * API 가 개인별 금액을 주지 않아 '언제 어떤 공개가 있었고 원문은 여기'까지만 담는다.
  */
 export const getGazette = () => loadJson<GazetteNotice[]>('gazette.json')
+/**
+ * 미장 전용 — 13F 를 낸 기관의 분기 보유 현황.
+ * 국장에는 대응물이 없어 파일이 없다. 호출부는 `.catch(() => [])` 로 감싼다.
+ */
+export const getInstitutions = () => loadJson<Institution[]>('institutions.json')
 export const getMeta = () => loadJson<Meta>('meta.json')
 
 /** 재시도 화면에서 호출 — 캐시를 비워 다음 요청이 실제로 나가게 한다 */
 export function invalidate(file?: string): void {
-  if (file) cache.delete(file)
+  if (file) cache.delete(cacheKey(file))
   else cache.clear()
 }
+
+/**
+ * 시장이 바뀌면 캐시를 통째로 버린다.
+ * 키에 시장이 들어 있어 섞이지는 않지만, 안 쓰는 시장의 데이터를 메모리에 들고 있을 이유가 없다.
+ * 모듈 최상위에서 등록해 **화면이 다시 그려지기 전에** 실행되게 한다.
+ */
+onMarketChange(() => cache.clear())

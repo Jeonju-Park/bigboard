@@ -20,7 +20,7 @@ import { join } from 'node:path'
 import { readSheet } from './sheet.ts'
 import type { Meta, OfficialAssetYear, Person } from './types.ts'
 
-const DATA_DIR = join(import.meta.dirname, '..', '..', 'app', 'public', 'data')
+const DATA_DIR = join(import.meta.dirname, '..', '..', 'app', 'public', 'data', 'kr')
 const SOURCE_DIR = join(import.meta.dirname, '..', 'data')
 const SOURCE_NOTE = '공직자윤리위원회 정기 재산공개'
 
