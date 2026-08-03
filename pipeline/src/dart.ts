@@ -230,6 +230,6 @@ export function toIsoDate(v: string | undefined): string | null {
 }
 
 /** DART 원문 뷰어 링크. 실명 데이터라 모든 건에 원문 링크가 붙어야 한다 */
-export function dartUrl(rceptNo: string): string {
+export function dartDocUrl(rceptNo: string): string {
   return `https://dart.fss.or.kr/dsaf001/main.do?rcpNo=${rceptNo}`
 }

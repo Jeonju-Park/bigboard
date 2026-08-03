@@ -14,9 +14,15 @@
     "verify": "node --env-file=.env src/verify.ts",
     "officials": "node --env-file=.env src/officials.ts",
     "explore:stocks": "node --env-file=.env src/explore-stocks.ts",
-    "gazette": "node --env-file=.env src/gazette.ts"
+    "gazette": "node --env-file=.env src/gazette.ts",
+    "form4": "node --env-file=.env src/form4.ts",
+    "typecheck": "tsc -p tsconfig.json"
   },
   "dependencies": {
     "unpdf": "^1.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.2",
+    "typescript": "^7.0.2"
   }
 }

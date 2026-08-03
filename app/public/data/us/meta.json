@@ -1,17 +1,33 @@
 {
  "market": "us",
- "lastUpdated": null,
- "sources": [],
+ "lastUpdated": "2026-08-03T16:28:31.060Z",
+ "sources": [
+  "미국 증권거래위원회(SEC) EDGAR — Form 4 임원·주요주주 소유변동 신고"
+ ],
  "counts": {
-  "disclosures": 0,
-  "persons": 0,
-  "stocks": 0
+  "disclosures": 627,
+  "persons": 567,
+  "stocks": 364
  },
  "officialsAsOf": null,
  "priceDataAvailable": false,
  "sparklineAvailable": false,
  "skipped": {
-  "total": 0,
-  "reasons": {}
+  "total": 1841,
+  "reasons": {
+   "시장 거래(P/S) 없음": 295,
+   "순증감 0 (매수·매도 상쇄)": 1,
+   "단가 이상치 (제출자 오타 의심)": 1,
+   "시장 거래 아님 — 코드 L": 12,
+   "시장 거래 아님 — 주식 보상(grant)": 534,
+   "시장 거래 아님 — 옵션 행사": 398,
+   "시장 거래 아님 — 세금 원천징수": 266,
+   "시장 거래 아님 — 증여": 56,
+   "시장 거래 아님 — 기타": 97,
+   "시장 거래 아님 — 회사에 반납": 113,
+   "시장 거래 아님 — 전환": 54,
+   "시장 거래 아님 — 코드 U": 9,
+   "시장 거래 아님 — 옵션 행사(만기)": 5
+  }
  }
 }

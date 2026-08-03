@@ -9,7 +9,7 @@
     "dev": "npm --prefix app run dev",
     "build": "npm --prefix app run build",
     "preview": "npm --prefix app run preview",
-    "typecheck": "npm --prefix app run typecheck",
+    "typecheck": "npm --prefix app run typecheck && npm --prefix pipeline run typecheck",
     "pipeline": "npm --prefix pipeline run fetch",
     "check:tokens": "node scripts/check-tokens.mjs",
     "check": "npm run check:tokens && npm run check:schema && npm run typecheck",

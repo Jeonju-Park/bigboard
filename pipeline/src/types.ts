@@ -32,7 +32,7 @@ export interface Disclosure {
   holdingBefore: number
   holdingAfter: number
   details: TradeDetail[]
-  dartUrl: string
+  sourceUrl: string
   isAmended: boolean
 
   // ── 미장 전용 (국장에서는 전부 undefined) ──────────────────────────────────
@@ -135,6 +135,9 @@ export interface Sparkline {
   m3: number[]
   y1: number[]
 }
+
+/** 종목코드 → 스파크라인 (sparklines.json) */
+export type Sparklines = Record<string, Sparkline>
 
 export interface Stock {
   code: string

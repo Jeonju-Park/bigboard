@@ -8,7 +8,7 @@
  * 원칙 (docs/04_dev/pipeline_design.md):
  *  - 실명 공시 데이터다. 원문 그대로 옮기고, 확보 못 한 값은 추정하지 않고 null 로 둔다
  *  - 개별 건 실패는 스킵+집계, 전체 중단 금지
- *  - 모든 건에 DART 원문 링크(dartUrl)를 붙인다
+ *  - 모든 건에 DART 원문 링크(sourceUrl)를 붙인다
  */
 import { mkdirSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
@@ -19,12 +19,13 @@ import {
   parseRows,
   num,
   toIsoDate,
-  dartUrl,
+  dartDocUrl,
   requireKey,
   type DartListItem,
   type ElestockItem,
 } from './dart.ts'
-import type { Disclosure, Direction, Meta, Person, Rankings, Stock, TradeDetail } from './types.ts'
+import { derivePersons, deriveRankings, deriveStocks } from './derive.ts'
+import type { Disclosure, Direction, Meta, TradeDetail } from './types.ts'
 
 const OUT_DIR = join(import.meta.dirname, '..', '..', 'app', 'public', 'data', 'kr')
 
@@ -230,7 +231,7 @@ function buildFromOwnership(item: DartListItem, xml: string, ele?: ElestockItem)
     holdingBefore,
     holdingAfter,
     details,
-    dartUrl: dartUrl(item.rcept_no),
+    sourceUrl: dartDocUrl(item.rcept_no),
     isAmended: /정정/.test(item.report_nm),
   }
 }
@@ -280,7 +281,7 @@ function buildFromPlan(item: DartListItem, xml: string, todayIso: string): Discl
     holdingBefore: 0,
     holdingAfter: 0,
     details: [{ date: startDate, price, qty: Math.abs(qty) }],
-    dartUrl: dartUrl(item.rcept_no),
+    sourceUrl: dartDocUrl(item.rcept_no),
     isAmended: /정정/.test(item.report_nm),
   }
 }
@@ -313,117 +314,6 @@ function upsertAmendments(list: Disclosure[]): Disclosure[] {
 }
 
 // ── 파생 집계 ─────────────────────────────────────────────────────────────────
-
-function personId(name: string, company: string): string {
-  return `${company}-${name}`.replace(/\s+/g, '')
-}
-
-function derivePersons(list: Disclosure[]): Person[] {
-  const map = new Map<string, Person>()
-  const cutoff = daysAgoKey(365)
-
-  for (const d of list) {
-    if (d.isPlanned) continue // 계획은 아직 일어난 거래가 아니다
-    const id = personId(d.personName, d.company)
-    let p = map.get(id)
-    if (!p) {
-      p = {
-        id,
-        name: d.personName,
-        type: d.personType,
-        title: d.title,
-        company: d.company,
-        holdings: [],
-        totalNetBuy12m: 0,
-      }
-      map.set(id, p)
-    }
-    if (!p.title && d.title) p.title = d.title
-
-    // 종목별 보유는 가장 최근 공시의 변동후 잔량
-    const h = p.holdings.find((x) => x.stockCode === d.stockCode)
-    if (!h) p.holdings.push({ stockCode: d.stockCode, stockName: d.company, quantity: d.holdingAfter })
-    else h.quantity = d.holdingAfter
-
-    if (d.tradeDate >= cutoff && d.totalAmount !== null) {
-      p.totalNetBuy12m += d.direction === 'buy' ? d.totalAmount : -d.totalAmount
-    }
-  }
-  return [...map.values()]
-}
-
-function deriveRankings(list: Disclosure[]): Rankings {
-  const periods = ['7', '30', '90'] as const
-  const out: Rankings = { netBuy: { 7: [], 30: [], 90: [] }, netSell: { 7: [], 30: [], 90: [] } } as Rankings
-
-  for (const period of periods) {
-    const cutoff = daysAgoKey(Number(period))
-    const net = new Map<string, { d: Disclosure; amount: number }>()
-
-    for (const d of list) {
-      // 금액을 모르는 건(단가 없음)은 집계에서 제외한다 — 0 으로 넣으면 순위가 거짓이 된다
-      if (d.isPlanned || d.totalAmount === null || d.tradeDate < cutoff) continue
-      const id = personId(d.personName, d.company)
-      const cur = net.get(id) ?? { d, amount: 0 }
-      cur.amount += d.direction === 'buy' ? d.totalAmount : -d.totalAmount
-      net.set(id, cur)
-    }
-
-    const entries = [...net.entries()]
-    out.netBuy[period] = entries
-      .filter(([, v]) => v.amount > 0)
-      .sort((a, b) => b[1].amount - a[1].amount)
-      .slice(0, 20)
-      .map(([id, v], i) => ({
-        rank: i + 1,
-        personId: id,
-        personName: v.d.personName,
-        personType: v.d.personType,
-        company: v.d.company,
-        amount: v.amount,
-      }))
-    out.netSell[period] = entries
-      .filter(([, v]) => v.amount < 0)
-      .sort((a, b) => a[1].amount - b[1].amount)
-      .slice(0, 20)
-      .map(([id, v], i) => ({
-        rank: i + 1,
-        personId: id,
-        personName: v.d.personName,
-        personType: v.d.personType,
-        company: v.d.company,
-        amount: Math.abs(v.amount),
-      }))
-  }
-  return out
-}
-
-/**
- * 종목은 이름·코드만 채운다.
- * 시세(전일종가·시총·PER 등)는 공공데이터포털 키가 없어 전부 null 이며,
- * 화면은 null 인 행을 숨긴다. 값을 지어내지 않는다.
- */
-function deriveStocks(list: Disclosure[]): Stock[] {
-  const map = new Map<string, Stock>()
-  for (const d of list) {
-    if (!d.stockCode || map.has(d.stockCode)) continue
-    map.set(d.stockCode, {
-      code: d.stockCode,
-      name: d.company,
-      prevClose: null,
-      change: null,
-      marketCap: null,
-      volume: null,
-      per: null,
-      pbr: null,
-      divYield: null,
-      high52: null,
-      low52: null,
-      sparkline: { m1: [], m3: [], y1: [] },
-    })
-  }
-  return [...map.values()]
-}
 
 // ── 메인 ──────────────────────────────────────────────────────────────────────
 

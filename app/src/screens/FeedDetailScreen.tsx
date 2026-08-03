@@ -305,7 +305,7 @@ export default function FeedDetailScreen() {
           </Button>
         )}
         <Disclaimer />
-        <Button variant="secondary" block href={d.dartUrl}>
+        <Button variant="secondary" block href={d.sourceUrl}>
           DART 원문 보기
         </Button>
         <Button

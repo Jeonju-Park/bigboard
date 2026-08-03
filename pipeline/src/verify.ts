@@ -27,7 +27,7 @@ function parseByColumnPosition(xml: string) {
   for (const table of tables) {
     const trs = table.match(/<TR[\s\S]*?<\/TR>/gi) ?? []
     if (trs.length < 3) continue
-    const headerCells = (trs[0].match(/<TH[\s\S]*?<\/TH>/gi) ?? []).map(strip)
+    const headerCells = (trs[0]?.match(/<TH[\s\S]*?<\/TH>/gi) ?? []).map(strip)
     if (!headerCells.some((h) => h.includes('보고사유'))) continue
 
     // 헤더 순서: 보고사유 | 변동일 | 종류 | [변동전 증감 변동후] | 단가 | 비고 | ...
@@ -84,7 +84,7 @@ console.log(`\n${'='.repeat(78)}\nDART 원문 대조 — ${picks.length}건\n${'
 for (const d of picks.slice(0, count)) {
   console.log(`\n■ ${d.company} (${d.stockCode}) / ${d.personName}${d.title ? ` ${d.title}` : ''}`)
   console.log(`  접수번호 ${d.id}${d.isPlanned ? '  [거래계획 사전공시]' : ''}${d.isAmended ? '  [정정]' : ''}`)
-  console.log(`  원문: ${d.dartUrl}`)
+  console.log(`  원문: ${d.sourceUrl}`)
   console.log(`\n  수집값:`)
   console.log(`    방향        ${d.direction === 'buy' ? '매수' : '매도'}`)
   console.log(`    단가        ${d.unitPrice === null ? 'null (공시에 단가 없음/복수단가)' : d.unitPrice.toLocaleString() + '원'}`)
@@ -163,4 +163,4 @@ if (problems.length) {
   problems.forEach((p) => console.log(`  ✗ ${p}`))
   process.exit(1)
 }
-console.log(`\n※ 위 dartUrl 을 브라우저로 열어 눈으로도 확인해 주세요 — 실명 데이터라 기계 검증만으로 끝내지 않습니다.`)
+console.log(`\n※ 위 sourceUrl 을 브라우저로 열어 눈으로도 확인해 주세요 — 실명 데이터라 기계 검증만으로 끝내지 않습니다.`)

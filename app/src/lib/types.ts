@@ -6,7 +6,7 @@
  * pipeline 쪽 변환 로직을 고칠 때 반드시 여기도 같이 고친다.
  *
  * ⚠️ 이 파일은 pipeline/src/types.ts 와 **같은 모양**이어야 한다. 한쪽만 고치면 화면이 조용히 깨진다.
- * ⚠️ 실명 공시 데이터다. 가공·추정값을 넣지 않는다 — 원문 그대로 + dartUrl 원문 링크가 원칙.
+ * ⚠️ 실명 공시 데이터다. 가공·추정값을 넣지 않는다 — 원문 그대로 + sourceUrl 원문 링크가 원칙.
  *    확보되지 않는 값은 임의 채우기 대신 null 로 두고 화면에서 행을 숨긴다.
  */
 
@@ -53,8 +53,12 @@ export interface Disclosure {
   holdingBefore: number
   holdingAfter: number
   details: TradeDetail[]
-  /** DART 원문 링크 — 모든 상세에 필수 (실명 데이터 책임) */
-  dartUrl: string
+  /**
+   * 원문 링크 — 모든 상세에 필수 (실명 데이터 책임).
+   * 국장은 DART, 미장은 SEC EDGAR 또는 하원 공시 PDF.
+   * 예전 이름은 dartUrl 이었는데 미장에서는 거짓이라 바꿨다.
+   */
+  sourceUrl: string
   /** 정정공시로 대체된 건이면 true. upsert 시 표시용 */
   isAmended: boolean
 

@@ -1,12 +1,978 @@
 {
  "netBuy": {
-  "7": [],
-  "30": [],
-  "90": []
+  "7": [
+   {
+    "rank": 1,
+    "personId": "TPGTwinBrookCapitalIncomeFund-TPGGPA,LLC외4인",
+    "personName": "TPG GP A, LLC 외 4인",
+    "personType": "insider",
+    "company": "TPG Twin Brook Capital Income Fund",
+    "amount": 49999999.99253
+   },
+   {
+    "rank": 2,
+    "personId": "ScribeTherapeutics,Inc.-AghazadehBehzad외2인",
+    "personName": "Aghazadeh Behzad 외 2인",
+    "personType": "insider",
+    "company": "Scribe Therapeutics, Inc.",
+    "amount": 36259761.25
+   },
+   {
+    "rank": 3,
+    "personId": "OverlandAdvantage-AbuDhabiInvestmentAuthority외2인",
+    "personName": "Abu Dhabi Investment Authority 외 2인",
+    "personType": "insider",
+    "company": "Overland Advantage",
+    "amount": 22935758.667525
+   },
+   {
+    "rank": 4,
+    "personId": "MapLightTherapeutics,Inc.-Catalyst4,Inc.",
+    "personName": "Catalyst4, Inc.",
+    "personType": "insider",
+    "company": "MapLight Therapeutics, Inc.",
+    "amount": 15314793.7675
+   },
+   {
+    "rank": 5,
+    "personId": "ScribeTherapeutics,Inc.-GORDONCARLL",
+    "personName": "GORDON CARL L",
+    "personType": "insider",
+    "company": "Scribe Therapeutics, Inc.",
+    "amount": 15000000
+   },
+   {
+    "rank": 6,
+    "personId": "ScribeTherapeutics,Inc.-ORBIMEDADVISORSLLC외1인",
+    "personName": "ORBIMED ADVISORS LLC 외 1인",
+    "personType": "insider",
+    "company": "Scribe Therapeutics, Inc.",
+    "amount": 15000000
+   },
+   {
+    "rank": 7,
+    "personId": "51TalkOnlineEducationGroup-HuangJackJiajia",
+    "personName": "Huang Jack Jiajia",
+    "personType": "insider",
+    "company": "51Talk Online Education Group",
+    "amount": 10681309.2
+   },
+   {
+    "rank": 8,
+    "personId": "GooseheadInsurance,Inc.-DurableCapitalPartnersLP",
+    "personName": "Durable Capital Partners LP",
+    "personType": "insider",
+    "company": "Goosehead Insurance, Inc.",
+    "amount": 9104027.280000001
+   },
+   {
+    "rank": 9,
+    "personId": "VISTACREDITSTRATEGICLENDINGCORP.-VEPGroup,LLC외2인",
+    "personName": "VEP Group, LLC 외 2인",
+    "personType": "insider",
+    "company": "VISTA CREDIT STRATEGIC LENDING CORP.",
+    "amount": 6229806.77896
+   },
+   {
+    "rank": 10,
+    "personId": "ScribeTherapeutics,Inc.-AHBioFundII,L.P.외5인",
+    "personName": "AH Bio Fund II, L.P. 외 5인",
+    "personType": "insider",
+    "company": "Scribe Therapeutics, Inc.",
+    "amount": 4999995
+   },
+   {
+    "rank": 11,
+    "personId": "MarketTechnologyAcquisitionCorp-MarketTechnologyAcquisitionSponsorLLC외1인",
+    "personName": "Market Technology Acquisition Sponsor LLC 외 1인",
+    "personType": "insider",
+    "company": "Market Technology Acquisition Corp",
+    "amount": 4525000
+   },
+   {
+    "rank": 12,
+    "personId": "CatalystAcquisitionCorp.-CatalystSponsorLLC",
+    "personName": "Catalyst Sponsor LLC",
+    "personType": "insider",
+    "company": "Catalyst Acquisition Corp.",
+    "amount": 2700000
+   },
+   {
+    "rank": 13,
+    "personId": "AlbertsonsCompanies,Inc.-MoriartyThomasM",
+    "personName": "Moriarty Thomas M",
+    "personType": "insider",
+    "company": "Albertsons Companies, Inc.",
+    "amount": 1962284.5
+   },
+   {
+    "rank": 14,
+    "personId": "DiameterDynamicCreditFund-GreenJoshuaMichael",
+    "personName": "Green Joshua Michael",
+    "personType": "insider",
+    "company": "Diameter Dynamic Credit Fund",
+    "amount": 1249999.99968
+   },
+   {
+    "rank": 15,
+    "personId": "WillowTreeCapitalCorp-HERSHEYTRUSTCOTRUSTEEINTRUSTFORMILTONHERSHEYSCHOOL",
+    "personName": "HERSHEY TRUST CO TRUSTEE IN TRUST FOR MILTON HERSHEY SCHOOL",
+    "personType": "insider",
+    "company": "Willow Tree Capital Corp",
+    "amount": 1197272.7336000002
+   },
+   {
+    "rank": 16,
+    "personId": "IONISPHARMACEUTICALSINC-HaydenMichaelR",
+    "personName": "Hayden Michael R",
+    "personType": "insider",
+    "company": "IONIS PHARMACEUTICALS INC",
+    "amount": 1058700
+   },
+   {
+    "rank": 17,
+    "personId": "AMGBBHAsset-BackedCreditFund,LLC-AMGNewYorkHoldingsCorp.",
+    "personName": "AMG New York Holdings Corp.",
+    "personType": "insider",
+    "company": "AMG BBH Asset-Backed Credit Fund, LLC",
+    "amount": 897183.682
+   },
+   {
+    "rank": 18,
+    "personId": "BETTERWAREDEMEXICO,S.A.P.I.DEC.V-CamposLuis",
+    "personName": "Campos Luis",
+    "personType": "insider",
+    "company": "BETTERWARE DE MEXICO, S.A.P.I. DE C.V",
+    "amount": 768480.3
+   },
+   {
+    "rank": 19,
+    "personId": "WillowTreeCapitalCorp-LIBERTYMUTUALHOLDINGCoINC.",
+    "personName": "LIBERTY MUTUAL HOLDING Co INC.",
+    "personType": "insider",
+    "company": "Willow Tree Capital Corp",
+    "amount": 681194.1
+   },
+   {
+    "rank": 20,
+    "personId": "ArtivaBiotherapeutics,Inc.-RACAPITALMANAGEMENT,L.P.외5인",
+    "personName": "RA CAPITAL MANAGEMENT, L.P. 외 5인",
+    "personType": "insider",
+    "company": "Artiva Biotherapeutics, Inc.",
+    "amount": 455725.68
+   }
+  ],
+  "30": [
+   {
+    "rank": 1,
+    "personId": "TPGTwinBrookCapitalIncomeFund-TPGGPA,LLC외4인",
+    "personName": "TPG GP A, LLC 외 4인",
+    "personType": "insider",
+    "company": "TPG Twin Brook Capital Income Fund",
+    "amount": 49999999.99253
+   },
+   {
+    "rank": 2,
+    "personId": "ScribeTherapeutics,Inc.-AghazadehBehzad외2인",
+    "personName": "Aghazadeh Behzad 외 2인",
+    "personType": "insider",
+    "company": "Scribe Therapeutics, Inc.",
+    "amount": 36259761.25
+   },
+   {
+    "rank": 3,
+    "personId": "5CLendingPartnersCorp.-MSDCAPITAL,L.P.외3인",
+    "personName": "MSD CAPITAL, L.P. 외 3인",
+    "personType": "insider",
+    "company": "5C Lending Partners Corp.",
+    "amount": 30950172.259999998
+   },
+   {
+    "rank": 4,
+    "personId": "51TalkOnlineEducationGroup-HuangJackJiajia",
+    "personName": "Huang Jack Jiajia",
+    "personType": "insider",
+    "company": "51Talk Online Education Group",
+    "amount": 28546295.4
+   },
+   {
+    "rank": 5,
+    "personId": "JefferiesCreditPartnersBDCInc.-AbuDhabiInvestmentAuthority외2인",
+    "personName": "Abu Dhabi Investment Authority 외 2인",
+    "personType": "insider",
+    "company": "Jefferies Credit Partners BDC Inc.",
+    "amount": 25000017.483737603
+   },
+   {
+    "rank": 6,
+    "personId": "OverlandAdvantage-AbuDhabiInvestmentAuthority외2인",
+    "personName": "Abu Dhabi Investment Authority 외 2인",
+    "personType": "insider",
+    "company": "Overland Advantage",
+    "amount": 22935758.667525
+   },
+   {
+    "rank": 7,
+    "personId": "MapLightTherapeutics,Inc.-Catalyst4,Inc.",
+    "personName": "Catalyst4, Inc.",
+    "personType": "insider",
+    "company": "MapLight Therapeutics, Inc.",
+    "amount": 15314793.7675
+   },
+   {
+    "rank": 8,
+    "personId": "ScribeTherapeutics,Inc.-GORDONCARLL",
+    "personName": "GORDON CARL L",
+    "personType": "insider",
+    "company": "Scribe Therapeutics, Inc.",
+    "amount": 15000000
+   },
+   {
+    "rank": 9,
+    "personId": "ScribeTherapeutics,Inc.-ORBIMEDADVISORSLLC외1인",
+    "personName": "ORBIMED ADVISORS LLC 외 1인",
+    "personType": "insider",
+    "company": "Scribe Therapeutics, Inc.",
+    "amount": 15000000
+   },
+   {
+    "rank": 10,
+    "personId": "5CLendingPartnersCorp.-LIBERTYMUTUALHOLDINGCoINC.외1인",
+    "personName": "LIBERTY MUTUAL HOLDING Co INC. 외 1인",
+    "personType": "insider",
+    "company": "5C Lending Partners Corp.",
+    "amount": 13681974.04
+   },
+   {
+    "rank": 11,
+    "personId": "GooseheadInsurance,Inc.-DurableCapitalPartnersLP",
+    "personName": "Durable Capital Partners LP",
+    "personType": "insider",
+    "company": "Goosehead Insurance, Inc.",
+    "amount": 9104027.280000001
+   },
+   {
+    "rank": 12,
+    "personId": "VISTACREDITSTRATEGICLENDINGCORP.-VEPGroup,LLC외2인",
+    "personName": "VEP Group, LLC 외 2인",
+    "personType": "insider",
+    "company": "VISTA CREDIT STRATEGIC LENDING CORP.",
+    "amount": 6229806.77896
+   },
+   {
+    "rank": 13,
+    "personId": "ScribeTherapeutics,Inc.-AHBioFundII,L.P.외5인",
+    "personName": "AH Bio Fund II, L.P. 외 5인",
+    "personType": "insider",
+    "company": "Scribe Therapeutics, Inc.",
+    "amount": 4999995
+   },
+   {
+    "rank": 14,
+    "personId": "MarketTechnologyAcquisitionCorp-MarketTechnologyAcquisitionSponsorLLC외1인",
+    "personName": "Market Technology Acquisition Sponsor LLC 외 1인",
+    "personType": "insider",
+    "company": "Market Technology Acquisition Corp",
+    "amount": 4525000
+   },
+   {
+    "rank": 15,
+    "personId": "CatalystAcquisitionCorp.-CatalystSponsorLLC",
+    "personName": "Catalyst Sponsor LLC",
+    "personType": "insider",
+    "company": "Catalyst Acquisition Corp.",
+    "amount": 2700000
+   },
+   {
+    "rank": 16,
+    "personId": "StarFashionCultureHoldingsLtd-ZHANGPINGTING",
+    "personName": "ZHANG PINGTING",
+    "personType": "insider",
+    "company": "Star Fashion Culture Holdings Ltd",
+    "amount": 2600000
+   },
+   {
+    "rank": 17,
+    "personId": "ENERGIZERHOLDINGS,INC.-AquaCapital,Ltd.외5인",
+    "personName": "Aqua Capital, Ltd. 외 5인",
+    "personType": "insider",
+    "company": "ENERGIZER HOLDINGS, INC.",
+    "amount": 2473994
+   },
+   {
+    "rank": 18,
+    "personId": "AlbertsonsCompanies,Inc.-MoriartyThomasM",
+    "personName": "Moriarty Thomas M",
+    "personType": "insider",
+    "company": "Albertsons Companies, Inc.",
+    "amount": 1962284.5
+   },
+   {
+    "rank": 19,
+    "personId": "CalamosAksiaHedgedStrategiesFund-CalamosAksiaHedgedStrategiesFund(Offshore),Ltd.",
+    "personName": "Calamos Aksia Hedged Strategies Fund (Offshore), Ltd.",
+    "personType": "insider",
+    "company": "Calamos Aksia Hedged Strategies Fund",
+    "amount": 1894299.9959600002
+   },
+   {
+    "rank": 20,
+    "personId": "DiameterDynamicCreditFund-GreenJoshuaMichael",
+    "personName": "Green Joshua Michael",
+    "personType": "insider",
+    "company": "Diameter Dynamic Credit Fund",
+    "amount": 1249999.99968
+   }
+  ],
+  "90": [
+   {
+    "rank": 1,
+    "personId": "TPGTwinBrookCapitalIncomeFund-TPGGPA,LLC외4인",
+    "personName": "TPG GP A, LLC 외 4인",
+    "personType": "insider",
+    "company": "TPG Twin Brook Capital Income Fund",
+    "amount": 49999999.99253
+   },
+   {
+    "rank": 2,
+    "personId": "ScribeTherapeutics,Inc.-AghazadehBehzad외2인",
+    "personName": "Aghazadeh Behzad 외 2인",
+    "personType": "insider",
+    "company": "Scribe Therapeutics, Inc.",
+    "amount": 36259761.25
+   },
+   {
+    "rank": 3,
+    "personId": "5CLendingPartnersCorp.-MSDCAPITAL,L.P.외3인",
+    "personName": "MSD CAPITAL, L.P. 외 3인",
+    "personType": "insider",
+    "company": "5C Lending Partners Corp.",
+    "amount": 30950172.259999998
+   },
+   {
+    "rank": 4,
+    "personId": "51TalkOnlineEducationGroup-HuangJackJiajia",
+    "personName": "Huang Jack Jiajia",
+    "personType": "insider",
+    "company": "51Talk Online Education Group",
+    "amount": 28546295.4
+   },
+   {
+    "rank": 5,
+    "personId": "JefferiesCreditPartnersBDCInc.-AbuDhabiInvestmentAuthority외2인",
+    "personName": "Abu Dhabi Investment Authority 외 2인",
+    "personType": "insider",
+    "company": "Jefferies Credit Partners BDC Inc.",
+    "amount": 25000017.483737603
+   },
+   {
+    "rank": 6,
+    "personId": "OverlandAdvantage-AbuDhabiInvestmentAuthority외2인",
+    "personName": "Abu Dhabi Investment Authority 외 2인",
+    "personType": "insider",
+    "company": "Overland Advantage",
+    "amount": 22935758.667525
+   },
+   {
+    "rank": 7,
+    "personId": "MapLightTherapeutics,Inc.-Catalyst4,Inc.",
+    "personName": "Catalyst4, Inc.",
+    "personType": "insider",
+    "company": "MapLight Therapeutics, Inc.",
+    "amount": 15314793.7675
+   },
+   {
+    "rank": 8,
+    "personId": "ScribeTherapeutics,Inc.-GORDONCARLL",
+    "personName": "GORDON CARL L",
+    "personType": "insider",
+    "company": "Scribe Therapeutics, Inc.",
+    "amount": 15000000
+   },
+   {
+    "rank": 9,
+    "personId": "ScribeTherapeutics,Inc.-ORBIMEDADVISORSLLC외1인",
+    "personName": "ORBIMED ADVISORS LLC 외 1인",
+    "personType": "insider",
+    "company": "Scribe Therapeutics, Inc.",
+    "amount": 15000000
+   },
+   {
+    "rank": 10,
+    "personId": "5CLendingPartnersCorp.-LIBERTYMUTUALHOLDINGCoINC.외1인",
+    "personName": "LIBERTY MUTUAL HOLDING Co INC. 외 1인",
+    "personType": "insider",
+    "company": "5C Lending Partners Corp.",
+    "amount": 13681974.04
+   },
+   {
+    "rank": 11,
+    "personId": "GooseheadInsurance,Inc.-DurableCapitalPartnersLP",
+    "personName": "Durable Capital Partners LP",
+    "personType": "insider",
+    "company": "Goosehead Insurance, Inc.",
+    "amount": 9104027.280000001
+   },
+   {
+    "rank": 12,
+    "personId": "VISTACREDITSTRATEGICLENDINGCORP.-VEPGroup,LLC외2인",
+    "personName": "VEP Group, LLC 외 2인",
+    "personType": "insider",
+    "company": "VISTA CREDIT STRATEGIC LENDING CORP.",
+    "amount": 6229806.77896
+   },
+   {
+    "rank": 13,
+    "personId": "ScribeTherapeutics,Inc.-AHBioFundII,L.P.외5인",
+    "personName": "AH Bio Fund II, L.P. 외 5인",
+    "personType": "insider",
+    "company": "Scribe Therapeutics, Inc.",
+    "amount": 4999995
+   },
+   {
+    "rank": 14,
+    "personId": "MarketTechnologyAcquisitionCorp-MarketTechnologyAcquisitionSponsorLLC외1인",
+    "personName": "Market Technology Acquisition Sponsor LLC 외 1인",
+    "personType": "insider",
+    "company": "Market Technology Acquisition Corp",
+    "amount": 4525000
+   },
+   {
+    "rank": 15,
+    "personId": "CatalystAcquisitionCorp.-CatalystSponsorLLC",
+    "personName": "Catalyst Sponsor LLC",
+    "personType": "insider",
+    "company": "Catalyst Acquisition Corp.",
+    "amount": 2700000
+   },
+   {
+    "rank": 16,
+    "personId": "StarFashionCultureHoldingsLtd-ZHANGPINGTING",
+    "personName": "ZHANG PINGTING",
+    "personType": "insider",
+    "company": "Star Fashion Culture Holdings Ltd",
+    "amount": 2600000
+   },
+   {
+    "rank": 17,
+    "personId": "ENERGIZERHOLDINGS,INC.-AquaCapital,Ltd.외5인",
+    "personName": "Aqua Capital, Ltd. 외 5인",
+    "personType": "insider",
+    "company": "ENERGIZER HOLDINGS, INC.",
+    "amount": 2473994
+   },
+   {
+    "rank": 18,
+    "personId": "AlbertsonsCompanies,Inc.-MoriartyThomasM",
+    "personName": "Moriarty Thomas M",
+    "personType": "insider",
+    "company": "Albertsons Companies, Inc.",
+    "amount": 1962284.5
+   },
+   {
+    "rank": 19,
+    "personId": "CalamosAksiaHedgedStrategiesFund-CalamosAksiaHedgedStrategiesFund(Offshore),Ltd.",
+    "personName": "Calamos Aksia Hedged Strategies Fund (Offshore), Ltd.",
+    "personType": "insider",
+    "company": "Calamos Aksia Hedged Strategies Fund",
+    "amount": 1894299.9959600002
+   },
+   {
+    "rank": 20,
+    "personId": "DiameterDynamicCreditFund-GreenJoshuaMichael",
+    "personName": "Green Joshua Michael",
+    "personType": "insider",
+    "company": "Diameter Dynamic Credit Fund",
+    "amount": 1249999.99968
+   }
+  ]
  },
  "netSell": {
-  "7": [],
-  "30": [],
-  "90": []
+  "7": [
+   {
+    "rank": 1,
+    "personId": "Airbnb,Inc.-GebbiaJoseph",
+    "personName": "Gebbia Joseph",
+    "personType": "insider",
+    "company": "Airbnb, Inc.",
+    "amount": 315911788.7693
+   },
+   {
+    "rank": 2,
+    "personId": "IntuitiveMachines,Inc.-ADVENTINTERNATIONAL,L.P.외2인",
+    "personName": "ADVENT INTERNATIONAL, L.P. 외 2인",
+    "personType": "insider",
+    "company": "Intuitive Machines, Inc.",
+    "amount": 147602399.76
+   },
+   {
+    "rank": 3,
+    "personId": "SAFETYINSURANCEGROUPINC-SRBCORP외1인",
+    "personName": "SRB CORP 외 1인",
+    "personType": "insider",
+    "company": "SAFETY INSURANCE GROUP INC",
+    "amount": 127837224.42999999
+   },
+   {
+    "rank": 4,
+    "personId": "Victoria'sSecret&Co.-BBRCINTERNATIONALPTELTD",
+    "personName": "BBRC INTERNATIONAL PTE LTD",
+    "personType": "insider",
+    "company": "Victoria's Secret & Co.",
+    "amount": 71224318.88
+   },
+   {
+    "rank": 5,
+    "personId": "NeptuneInsuranceHoldingsInc.-FTVVII,L.P.외3인",
+    "personName": "FTV VII, L.P. 외 3인",
+    "personType": "insider",
+    "company": "Neptune Insurance Holdings Inc.",
+    "amount": 62049644.8
+   },
+   {
+    "rank": 6,
+    "personId": "NeptuneInsuranceHoldingsInc.-BSIVHold101,LP외4인",
+    "personName": "BSIV Hold 101, LP 외 4인",
+    "personType": "insider",
+    "company": "Neptune Insurance Holdings Inc.",
+    "amount": 54220355.199999996
+   },
+   {
+    "rank": 7,
+    "personId": "COCACOLACO-QuinceyJames",
+    "personName": "Quincey James",
+    "personType": "insider",
+    "company": "COCA COLA CO",
+    "amount": 47468615.165400006
+   },
+   {
+    "rank": 8,
+    "personId": "ReformationInc.-RefoSCSp외3인",
+    "personName": "Refo SCSp 외 3인",
+    "personType": "insider",
+    "company": "Reformation Inc.",
+    "amount": 41671426.05
+   },
+   {
+    "rank": 9,
+    "personId": "GeneralMotorsCo-BarraMaryT",
+    "personName": "Barra Mary T",
+    "personType": "insider",
+    "company": "General Motors Co",
+    "amount": 37685905.70999999
+   },
+   {
+    "rank": 10,
+    "personId": "FREQUENCYELECTRONICSINC-EdenbrookCapital,LLC외2인",
+    "personName": "Edenbrook Capital, LLC 외 2인",
+    "personType": "insider",
+    "company": "FREQUENCY ELECTRONICS INC",
+    "amount": 37500005
+   },
+   {
+    "rank": 11,
+    "personId": "SCHWABCHARLESCORP-BettingerWalterW",
+    "personName": "Bettinger Walter W",
+    "personType": "insider",
+    "company": "SCHWAB CHARLES CORP",
+    "amount": 29773914.744000003
+   },
+   {
+    "rank": 12,
+    "personId": "IQVIAHOLDINGSINC.-BOUSBIBARI",
+    "personName": "BOUSBIB ARI",
+    "personType": "insider",
+    "company": "IQVIA HOLDINGS INC.",
+    "amount": 26092072
+   },
+   {
+    "rank": 13,
+    "personId": "VISAINC.-MAHONTULLIERKELLY",
+    "personName": "MAHON TULLIER KELLY",
+    "personType": "insider",
+    "company": "VISA INC.",
+    "amount": 20902339.924399998
+   },
+   {
+    "rank": 14,
+    "personId": "CoreWeave,Inc.-IntratorMichaelN",
+    "personName": "Intrator Michael N",
+    "personType": "insider",
+    "company": "CoreWeave, Inc.",
+    "amount": 20497641.1966
+   },
+   {
+    "rank": 15,
+    "personId": "UNITEDTHERAPEUTICSCorp-ROTHBLATTMARTINEA",
+    "personName": "ROTHBLATT MARTINE A",
+    "personType": "insider",
+    "company": "UNITED THERAPEUTICS Corp",
+    "amount": 19992028.190700002
+   },
+   {
+    "rank": 16,
+    "personId": "CoreWeave,Inc.-McBeeBrannin",
+    "personName": "McBee Brannin",
+    "personType": "insider",
+    "company": "CoreWeave, Inc.",
+    "amount": 17759613.550499998
+   },
+   {
+    "rank": 17,
+    "personId": "ReformationInc.-AflaloYael",
+    "personName": "Aflalo Yael",
+    "personType": "insider",
+    "company": "Reformation Inc.",
+    "amount": 16796204.55
+   },
+   {
+    "rank": 18,
+    "personId": "SCHWABCHARLESCORP-SchwabCharlesR.",
+    "personName": "Schwab Charles R.",
+    "personType": "insider",
+    "company": "SCHWAB CHARLES CORP",
+    "amount": 15168688.04
+   },
+   {
+    "rank": 19,
+    "personId": "BANCFIRSTCORP/OK/-RAINBOLTDAVIDE",
+    "personName": "RAINBOLT DAVID E",
+    "personType": "insider",
+    "company": "BANCFIRST CORP /OK/",
+    "amount": 14438563.6626
+   },
+   {
+    "rank": 20,
+    "personId": "SnowflakeInc.-DagevilleBenoit",
+    "personName": "Dageville Benoit",
+    "personType": "insider",
+    "company": "Snowflake Inc.",
+    "amount": 14000000
+   }
+  ],
+  "30": [
+   {
+    "rank": 1,
+    "personId": "Airbnb,Inc.-GebbiaJoseph",
+    "personName": "Gebbia Joseph",
+    "personType": "insider",
+    "company": "Airbnb, Inc.",
+    "amount": 315911788.7693
+   },
+   {
+    "rank": 2,
+    "personId": "IntuitiveMachines,Inc.-ADVENTINTERNATIONAL,L.P.외2인",
+    "personName": "ADVENT INTERNATIONAL, L.P. 외 2인",
+    "personType": "insider",
+    "company": "Intuitive Machines, Inc.",
+    "amount": 147602399.76
+   },
+   {
+    "rank": 3,
+    "personId": "SAFETYINSURANCEGROUPINC-SRBCORP외1인",
+    "personName": "SRB CORP 외 1인",
+    "personType": "insider",
+    "company": "SAFETY INSURANCE GROUP INC",
+    "amount": 131840243.026
+   },
+   {
+    "rank": 4,
+    "personId": "Victoria'sSecret&Co.-BBRCINTERNATIONALPTELTD",
+    "personName": "BBRC INTERNATIONAL PTE LTD",
+    "personType": "insider",
+    "company": "Victoria's Secret & Co.",
+    "amount": 71224318.88
+   },
+   {
+    "rank": 5,
+    "personId": "NeptuneInsuranceHoldingsInc.-FTVVII,L.P.외3인",
+    "personName": "FTV VII, L.P. 외 3인",
+    "personType": "insider",
+    "company": "Neptune Insurance Holdings Inc.",
+    "amount": 62049644.8
+   },
+   {
+    "rank": 6,
+    "personId": "NeptuneInsuranceHoldingsInc.-BSIVHold101,LP외4인",
+    "personName": "BSIV Hold 101, LP 외 4인",
+    "personType": "insider",
+    "company": "Neptune Insurance Holdings Inc.",
+    "amount": 54220355.199999996
+   },
+   {
+    "rank": 7,
+    "personId": "COCACOLACO-QuinceyJames",
+    "personName": "Quincey James",
+    "personType": "insider",
+    "company": "COCA COLA CO",
+    "amount": 47468615.165400006
+   },
+   {
+    "rank": 8,
+    "personId": "ReformationInc.-RefoSCSp외3인",
+    "personName": "Refo SCSp 외 3인",
+    "personType": "insider",
+    "company": "Reformation Inc.",
+    "amount": 41671426.05
+   },
+   {
+    "rank": 9,
+    "personId": "GeneralMotorsCo-BarraMaryT",
+    "personName": "Barra Mary T",
+    "personType": "insider",
+    "company": "General Motors Co",
+    "amount": 37685905.70999999
+   },
+   {
+    "rank": 10,
+    "personId": "FREQUENCYELECTRONICSINC-EdenbrookCapital,LLC외2인",
+    "personName": "Edenbrook Capital, LLC 외 2인",
+    "personType": "insider",
+    "company": "FREQUENCY ELECTRONICS INC",
+    "amount": 37500005
+   },
+   {
+    "rank": 11,
+    "personId": "MICRONTECHNOLOGYINC-MEHROTRASANJAY",
+    "personName": "MEHROTRA SANJAY",
+    "personType": "insider",
+    "company": "MICRON TECHNOLOGY INC",
+    "amount": 37290090.64
+   },
+   {
+    "rank": 12,
+    "personId": "SCHWABCHARLESCORP-BettingerWalterW",
+    "personName": "Bettinger Walter W",
+    "personType": "insider",
+    "company": "SCHWAB CHARLES CORP",
+    "amount": 29773914.744000003
+   },
+   {
+    "rank": 13,
+    "personId": "IQVIAHOLDINGSINC.-BOUSBIBARI",
+    "personName": "BOUSBIB ARI",
+    "personType": "insider",
+    "company": "IQVIA HOLDINGS INC.",
+    "amount": 26092072
+   },
+   {
+    "rank": 14,
+    "personId": "UNITEDTHERAPEUTICSCorp-ROTHBLATTMARTINEA",
+    "personName": "ROTHBLATT MARTINE A",
+    "personType": "insider",
+    "company": "UNITED THERAPEUTICS Corp",
+    "amount": 25043546.714500003
+   },
+   {
+    "rank": 15,
+    "personId": "VISAINC.-MAHONTULLIERKELLY",
+    "personName": "MAHON TULLIER KELLY",
+    "personType": "insider",
+    "company": "VISA INC.",
+    "amount": 20902339.924399998
+   },
+   {
+    "rank": 16,
+    "personId": "CoreWeave,Inc.-IntratorMichaelN",
+    "personName": "Intrator Michael N",
+    "personType": "insider",
+    "company": "CoreWeave, Inc.",
+    "amount": 20497641.1966
+   },
+   {
+    "rank": 17,
+    "personId": "SCHWABCHARLESCORP-SchwabCharlesR.",
+    "personName": "Schwab Charles R.",
+    "personType": "insider",
+    "company": "SCHWAB CHARLES CORP",
+    "amount": 19796879.79
+   },
+   {
+    "rank": 18,
+    "personId": "CoreWeave,Inc.-McBeeBrannin",
+    "personName": "McBee Brannin",
+    "personType": "insider",
+    "company": "CoreWeave, Inc.",
+    "amount": 17759613.550499998
+   },
+   {
+    "rank": 19,
+    "personId": "ReformationInc.-AflaloYael",
+    "personName": "Aflalo Yael",
+    "personType": "insider",
+    "company": "Reformation Inc.",
+    "amount": 16796204.55
+   },
+   {
+    "rank": 20,
+    "personId": "BANCFIRSTCORP/OK/-RAINBOLTDAVIDE",
+    "personName": "RAINBOLT DAVID E",
+    "personType": "insider",
+    "company": "BANCFIRST CORP /OK/",
+    "amount": 14438563.6626
+   }
+  ],
+  "90": [
+   {
+    "rank": 1,
+    "personId": "Airbnb,Inc.-GebbiaJoseph",
+    "personName": "Gebbia Joseph",
+    "personType": "insider",
+    "company": "Airbnb, Inc.",
+    "amount": 315911788.7693
+   },
+   {
+    "rank": 2,
+    "personId": "IntuitiveMachines,Inc.-ADVENTINTERNATIONAL,L.P.외2인",
+    "personName": "ADVENT INTERNATIONAL, L.P. 외 2인",
+    "personType": "insider",
+    "company": "Intuitive Machines, Inc.",
+    "amount": 147602399.76
+   },
+   {
+    "rank": 3,
+    "personId": "SAFETYINSURANCEGROUPINC-SRBCORP외1인",
+    "personName": "SRB CORP 외 1인",
+    "personType": "insider",
+    "company": "SAFETY INSURANCE GROUP INC",
+    "amount": 131840243.026
+   },
+   {
+    "rank": 4,
+    "personId": "Victoria'sSecret&Co.-BBRCINTERNATIONALPTELTD",
+    "personName": "BBRC INTERNATIONAL PTE LTD",
+    "personType": "insider",
+    "company": "Victoria's Secret & Co.",
+    "amount": 71224318.88
+   },
+   {
+    "rank": 5,
+    "personId": "NeptuneInsuranceHoldingsInc.-FTVVII,L.P.외3인",
+    "personName": "FTV VII, L.P. 외 3인",
+    "personType": "insider",
+    "company": "Neptune Insurance Holdings Inc.",
+    "amount": 62049644.8
+   },
+   {
+    "rank": 6,
+    "personId": "NeptuneInsuranceHoldingsInc.-BSIVHold101,LP외4인",
+    "personName": "BSIV Hold 101, LP 외 4인",
+    "personType": "insider",
+    "company": "Neptune Insurance Holdings Inc.",
+    "amount": 54220355.199999996
+   },
+   {
+    "rank": 7,
+    "personId": "COCACOLACO-QuinceyJames",
+    "personName": "Quincey James",
+    "personType": "insider",
+    "company": "COCA COLA CO",
+    "amount": 47468615.165400006
+   },
+   {
+    "rank": 8,
+    "personId": "ReformationInc.-RefoSCSp외3인",
+    "personName": "Refo SCSp 외 3인",
+    "personType": "insider",
+    "company": "Reformation Inc.",
+    "amount": 41671426.05
+   },
+   {
+    "rank": 9,
+    "personId": "GeneralMotorsCo-BarraMaryT",
+    "personName": "Barra Mary T",
+    "personType": "insider",
+    "company": "General Motors Co",
+    "amount": 37685905.70999999
+   },
+   {
+    "rank": 10,
+    "personId": "FREQUENCYELECTRONICSINC-EdenbrookCapital,LLC외2인",
+    "personName": "Edenbrook Capital, LLC 외 2인",
+    "personType": "insider",
+    "company": "FREQUENCY ELECTRONICS INC",
+    "amount": 37500005
+   },
+   {
+    "rank": 11,
+    "personId": "MICRONTECHNOLOGYINC-MEHROTRASANJAY",
+    "personName": "MEHROTRA SANJAY",
+    "personType": "insider",
+    "company": "MICRON TECHNOLOGY INC",
+    "amount": 37290090.64
+   },
+   {
+    "rank": 12,
+    "personId": "SCHWABCHARLESCORP-BettingerWalterW",
+    "personName": "Bettinger Walter W",
+    "personType": "insider",
+    "company": "SCHWAB CHARLES CORP",
+    "amount": 29773914.744000003
+   },
+   {
+    "rank": 13,
+    "personId": "IQVIAHOLDINGSINC.-BOUSBIBARI",
+    "personName": "BOUSBIB ARI",
+    "personType": "insider",
+    "company": "IQVIA HOLDINGS INC.",
+    "amount": 26092072
+   },
+   {
+    "rank": 14,
+    "personId": "UNITEDTHERAPEUTICSCorp-ROTHBLATTMARTINEA",
+    "personName": "ROTHBLATT MARTINE A",
+    "personType": "insider",
+    "company": "UNITED THERAPEUTICS Corp",
+    "amount": 25043546.714500003
+   },
+   {
+    "rank": 15,
+    "personId": "VISAINC.-MAHONTULLIERKELLY",
+    "personName": "MAHON TULLIER KELLY",
+    "personType": "insider",
+    "company": "VISA INC.",
+    "amount": 20902339.924399998
+   },
+   {
+    "rank": 16,
+    "personId": "CoreWeave,Inc.-IntratorMichaelN",
+    "personName": "Intrator Michael N",
+    "personType": "insider",
+    "company": "CoreWeave, Inc.",
+    "amount": 20497641.1966
+   },
+   {
+    "rank": 17,
+    "personId": "SCHWABCHARLESCORP-SchwabCharlesR.",
+    "personName": "Schwab Charles R.",
+    "personType": "insider",
+    "company": "SCHWAB CHARLES CORP",
+    "amount": 19796879.79
+   },
+   {
+    "rank": 18,
+    "personId": "CoreWeave,Inc.-McBeeBrannin",
+    "personName": "McBee Brannin",
+    "personType": "insider",
+    "company": "CoreWeave, Inc.",
+    "amount": 17759613.550499998
+   },
+   {
+    "rank": 19,
+    "personId": "ReformationInc.-AflaloYael",
+    "personName": "Aflalo Yael",
+    "personType": "insider",
+    "company": "Reformation Inc.",
+    "amount": 16796204.55
+   },
+   {
+    "rank": 20,
+    "personId": "BANCFIRSTCORP/OK/-RAINBOLTDAVIDE",
+    "personName": "RAINBOLT DAVID E",
+    "personType": "insider",
+    "company": "BANCFIRST CORP /OK/",
+    "amount": 14438563.6626
+   }
+  ]
  }
 }

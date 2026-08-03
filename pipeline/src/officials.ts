@@ -50,7 +50,7 @@ function findHeader(rows: string[][]): { headerRow: number; cols: Partial<Record
   for (let r = 0; r < Math.min(rows.length, 12); r++) {
     const cells = rows[r].map((c) => c.replace(/\s+/g, ' ').trim())
     const cols: Partial<Record<Field, number>> = {}
-    for (const [field, patterns] of Object.entries(COLUMN_PATTERNS) as [Field, RegExp[]][]) {
+    for (const [field, patterns] of Object.entries(COLUMN_PATTERNS) as [Field, readonly RegExp[]][]) {
       const idx = cells.findIndex((c) => c && patterns.some((p) => p.test(c)))
       if (idx >= 0) cols[field] = idx
     }
@@ -170,7 +170,6 @@ function main() {
   console.log(`\n금액 단위: x${unit.multiplier.toLocaleString()} (${unit.reason})`)
 
   // 파일 전체에 공통으로 적용할 연도·기준일 (열이 없을 때)
-  const fileYearMatch = /20\d{2}/.exec(source.split('/').pop() ?? '')
 
   const byPerson = new Map<string, { name: string; office: string; title: string; years: OfficialAssetYear[] }>()
 
@@ -187,8 +186,10 @@ function main() {
     const asOf = isoDate(get('asOf'))
     if (!asOf) { skip('기준일 없음 (연 1회 자료라 기준일이 없으면 받지 않는다)'); continue }
 
-    const year = num(get('year')) ?? Number(asOf.slice(0, 4)) + 1 ?? (fileYearMatch ? Number(fileYearMatch[0]) : null)
-    if (!year) { skip('공개연도 없음'); continue }
+    // 공개연도: 자료에 적혀 있으면 그것, 없으면 기준일 다음 해(재산은 전년 12/31 기준으로 이듬해 공개된다).
+    // 예전엔 뒤에 파일명 연도를 ?? 로 더 붙였는데, 앞 식이 절대 null 이 될 수 없어 죽은 코드였다.
+    const year = num(get('year')) ?? Number(asOf.slice(0, 4)) + 1
+    if (!Number.isFinite(year)) { skip('공개연도 없음'); continue }
 
     const office = get('office') ?? ''
     const key = `${office || '-'}-${name}`.replace(/\s+/g, '')

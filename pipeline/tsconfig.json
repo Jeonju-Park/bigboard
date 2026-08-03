@@ -1,0 +1,21 @@
+{
+  // pipeline 은 Node 24 의 네이티브 타입 스트리핑으로 실행된다 (빌드 단계가 없다).
+  // 그래서 타입 오류가 **런타임까지 조용히 살아남는다** — 실제로 Stock 타입에서
+  // 지운 sparkline 필드를 fetch.ts 가 계속 쓰고 있었는데 아무도 몰랐다.
+  // 이 설정은 실행이 아니라 검사 전용이다 (noEmit).
+  "compilerOptions": {
+    "target": "ES2023",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    // 타입 스트리핑은 런타임 의미를 바꾸는 문법을 허용하지 않는다
+    "allowImportingTsExtensions": true,
+    "erasableSyntaxOnly": true,
+    "verbatimModuleSyntax": true,
+    "noEmit": true,
+    "strict": true,
+    "noUncheckedIndexedAccess": false,
+    "skipLibCheck": true,
+    "types": ["node"]
+  },
+  "include": ["src/**/*.ts"]
+}
