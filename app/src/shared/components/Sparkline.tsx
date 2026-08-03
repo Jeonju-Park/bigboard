@@ -1,6 +1,6 @@
 import { useId, useMemo, useState } from 'react'
 import type { Sparkline as SparklineData } from '@/lib/types'
-import { formatWon } from '@/lib/format'
+import { formatPrice } from '@/lib/format'
 import styles from './Sparkline.module.css'
 
 const RANGES = [
@@ -85,8 +85,8 @@ export default function Sparkline({ data, priceAsOf }: { data: SparklineData; pr
           </svg>
 
           <div className={styles.axis}>
-            <span className="ty-micro">최저 {formatWon(shape.min)}</span>
-            <span className="ty-micro">최고 {formatWon(shape.max)}</span>
+            <span className="ty-micro">최저 {formatPrice(shape.min)}</span>
+            <span className="ty-micro">최고 {formatPrice(shape.max)}</span>
           </div>
           <p className="ty-micro" style={{ margin: 0 }}>
             종가 기준{priceAsOf ? ` · ${priceAsOf} 까지` : ''} · 세로축은 기간 내 최저~최고 범위입니다

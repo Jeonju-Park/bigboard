@@ -12,7 +12,7 @@ import { useAsync } from '@/lib/useData'
 import { pushRecent, toggleFollowStock, useBroker, useFollowedStocks } from '@/lib/follow'
 import { brokerActionLabel, brokerHref, findBroker } from '@/lib/broker'
 import Sparkline from '@/shared/components/Sparkline'
-import { formatAmountShort, formatDate, formatWon } from '@/lib/format'
+import { formatAmountShort, formatDate, formatPrice } from '@/lib/format'
 import homeStyles from './HomeScreen.module.css'
 import styles from './FeedDetailScreen.module.css'
 
@@ -73,7 +73,7 @@ export default function StockScreen() {
         {/* 주가는 이 화면의 주인공이라 목록보다 위에 승격한다 */}
         {stock.prevClose !== null && (
           <div className={styles.priceBlock}>
-            <span className="ty-promote">{formatWon(stock.prevClose)}</span>
+            <span className="ty-promote">{formatPrice(stock.prevClose)}</span>
             {stock.change !== null && (
               <span className={`ty-label ${stock.change >= 0 ? styles.buy : styles.sell}`}>
                 {stock.change >= 0 ? '+' : ''}{stock.change}%
@@ -94,8 +94,8 @@ export default function StockScreen() {
             { term: '시장', value: stock.market },
             { term: '시가총액', value: formatAmountShort(stock.marketCap) },
             { term: '거래량', value: stock.volume === null ? null : `${stock.volume.toLocaleString()}주` },
-            { term: '52주 최고', value: formatWon(stock.high52) },
-            { term: '52주 최저', value: formatWon(stock.low52) },
+            { term: '52주 최고', value: formatPrice(stock.high52) },
+            { term: '52주 최저', value: formatPrice(stock.low52) },
             { term: 'PER', value: stock.per?.toString() ?? null },
             { term: 'PBR', value: stock.pbr?.toString() ?? null },
             { term: '배당수익률', value: stock.divYield === null ? null : `${stock.divYield}%` },

@@ -6,11 +6,29 @@
  *
  * ⚠️ 값이 없으면 0 이나 '-' 를 지어내지 말고 null 을 그대로 흘려보낸다(규칙 2).
  *    화면이 "행 숨김"을 선택할 수 있어야 하기 때문이다.
+ *
+ * ⚠️ **통화는 시장을 따른다.** 미장 데이터는 달러인데 '원'을 붙이면 그냥 거짓말이다.
+ *    실제로 \$55.2 짜리 단가가 "55.2원"으로, \$496,800 이 "50만"으로 찍혔다.
+ *    그래서 금액 함수는 전부 현재 시장을 읽어 단위를 고른다.
+ *    (인자로 넘기게 하면 호출부 한 곳만 빠져도 거짓이 되므로 기본값을 시장에서 가져온다)
  */
+import { getMarket, MARKETS, type Market } from './market'
 
 const 조 = 1_000_000_000_000
 const 억 = 100_000_000
 const 만 = 10_000
+
+/** 달러 압축 단위. 한국식 만/억과 자릿수가 달라 따로 둔다 */
+const USD_UNITS = [
+  { v: 1_000_000_000_000, s: 'T' },
+  { v: 1_000_000_000, s: 'B' },
+  { v: 1_000_000, s: 'M' },
+  { v: 1_000, s: 'K' },
+] as const
+
+function currencyOf(market: Market = getMarket()) {
+  return MARKETS[market].currency
+}
 
 /**
  * 리스트용 압축 표기 — "1,535조", "82.4억", "3,440만", "5,120원"
@@ -18,9 +36,20 @@ const 만 = 10_000
  * 조 단위가 없으면 시가총액이 "15,346,481억" 처럼 읽을 수 없는 숫자가 된다.
  * 대기업 시총은 조 단위가 기본이라 여기서 끊는다.
  */
-export function formatAmountShort(v: number | null): string | null {
+export function formatAmountShort(v: number | null, market?: Market): string | null {
   if (v === null || !Number.isFinite(v)) return null
   const abs = Math.abs(v)
+
+  if (currencyOf(market) === 'USD') {
+    for (const u of USD_UNITS) {
+      if (abs >= u.v) {
+        const n = v / u.v
+        return `$${Math.abs(n) >= 100 ? Math.round(n).toLocaleString() : n.toFixed(1)}${u.s}`
+      }
+    }
+    // 1,000달러 미만은 센트까지 의미가 있다 (단가가 여기 들어온다)
+    return `$${v.toLocaleString(undefined, { maximumFractionDigits: 2 })}`
+  }
   if (abs >= 조) {
     const n = v / 조
     return `${Math.abs(n) >= 100 ? Math.round(n).toLocaleString() : n.toFixed(1)}조`
@@ -35,8 +64,17 @@ export function formatAmountShort(v: number | null): string | null {
 }
 
 /** 승격 값(22px Mono 700)용 정밀 표기 — "7억 3,440만원" */
-export function formatAmountFull(v: number | null): string | null {
+export function formatAmountFull(v: number | null, market?: Market): string | null {
   if (v === null || !Number.isFinite(v)) return null
+
+  if (currencyOf(market) === 'USD') {
+    // 달러는 한국식으로 자리를 끊지 않는다. 천 단위 구분 + 센터 두 자리가 원문 표기다
+    return `${v < 0 ? '-' : ''}$${Math.abs(v).toLocaleString(undefined, {
+      minimumFractionDigits: Math.abs(v) < 1000 ? 2 : 0,
+      maximumFractionDigits: 2,
+    })}`
+  }
+
   const sign = v < 0 ? '-' : ''
   let rest = Math.abs(Math.round(v))
   const parts: string[] = []
@@ -65,9 +103,16 @@ export function formatQuantity(v: number | null): string | null {
   return `${Math.abs(v).toLocaleString()}주`
 }
 
-/** "5,120원" — 단가처럼 원 단위를 그대로 보여야 하는 값 */
-export function formatWon(v: number | null): string | null {
+/**
+ * "5,120원" / "$55.20" — 단가처럼 단위를 그대로 보여야 하는 값.
+ * 이름은 formatPrice 이었지만 미장에서 거짓이 되어 formatPrice 로 바꿨다.
+ */
+export function formatPrice(v: number | null, market?: Market): string | null {
   if (v === null || !Number.isFinite(v)) return null
+  if (currencyOf(market) === 'USD') {
+    // 미국 주가는 소수점 둘째 자리까지가 표준 표기다
+    return `$${v.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 4 })}`
+  }
   return `${v.toLocaleString()}원`
 }
 

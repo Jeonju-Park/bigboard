@@ -17,7 +17,7 @@ import Placeholder from '@/shared/components/Placeholder'
 import Icon from '@/shared/components/Icon'
 import { getDisclosures, getMeta, getPersons, getRankings } from '@/lib/data'
 import type { Disclosure, Meta, Person, Rankings } from '@/lib/types'
-import { formatAmountFull, formatAmountShort, formatWon } from '@/lib/format'
+import { formatAmountFull, formatAmountShort, formatPrice } from '@/lib/format'
 
 /**
  * /dev-gallery — 개발용 컴포넌트 갤러리 (STEP 3).
@@ -166,7 +166,7 @@ export default function DevGalleryScreen() {
       <section>
         <SectionHeader title="타이포 강조 3단계" />
         <p className="ty-body" style={{ margin: 0 }}>
-          본문 안 최대 강조는 <Emph>{formatWon(biggestAmount?.unitPrice ?? 5120)}</Emph> 까지입니다.
+          본문 안 최대 강조는 <Emph>{formatPrice(biggestAmount?.unitPrice ?? 5120)}</Emph> 까지입니다.
         </p>
         <p className="ty-body" style={{ margin: 'var(--space-2) 0' }}>
           리스트 표기: <Num>{formatAmountShort(biggestAmount?.totalAmount ?? null)}</Num>

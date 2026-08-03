@@ -1,6 +1,6 @@
 import { Link } from 'react-router'
 import type { Disclosure } from '@/lib/types'
-import { formatAmountShort, formatDate, formatQuantity, formatWon, daysBetween } from '@/lib/format'
+import { formatAmountShort, formatDate, formatQuantity, formatPrice, daysBetween } from '@/lib/format'
 import styles from './DisclosureCard.module.css'
 
 /**
@@ -19,7 +19,7 @@ import styles from './DisclosureCard.module.css'
  */
 export default function DisclosureCard({ d }: { d: Disclosure }) {
   const amount = formatAmountShort(d.totalAmount)
-  const price = formatWon(d.unitPrice)
+  const price = formatPrice(d.unitPrice)
   const qty = formatQuantity(d.quantity)
   const lag = daysBetween(d.tradeDate, d.discloseDate)
   const isBuy = d.direction === 'buy'

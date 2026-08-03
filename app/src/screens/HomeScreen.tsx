@@ -9,6 +9,7 @@ import {
 } from '@/shared/components/Feedback'
 import { getDisclosures, getMeta } from '@/lib/data'
 import { useAsync } from '@/lib/useData'
+import { useMarket, type Market } from '@/lib/market'
 import { useFollowedPersons, useFollowedStocks } from '@/lib/follow'
 import { formatDateGroup } from '@/lib/format'
 import { personKey } from '@/lib/keys'
@@ -29,16 +30,26 @@ type Segment = (typeof SEGMENTS)[number]['value']
 const FILTERS = [
   { value: 'buy', label: '매수만' },
   { value: 'sell', label: '매도만' },
-  { value: 'big', label: '대형 10억+' },
+  { value: 'big', label: '대형' },
   { value: 'planned', label: '예고' },
 ] as const
 type Filter = (typeof FILTERS)[number]['value']
 
-const BIG_THRESHOLD = 1_000_000_000
+/**
+ * '대형' 기준은 시장마다 다르다. 원화 10억을 달러 데이터에 그대로 대면
+ * \$10억(=1.3조원) 이상만 걸려 사실상 아무것도 안 남는다.
+ * 라벨도 값과 함께 바뀌어야 한다 — 칩에 '10억+'라 써 놓고 달러로 거르면 거짓말이다.
+ */
+const BIG_THRESHOLD: Record<Market, { value: number; label: string }> = {
+  kr: { value: 1_000_000_000, label: '10억+' },
+  us: { value: 1_000_000, label: '$1M+' },
+}
+
 const PAGE = 20
 
 /** S1 홈 — 세그먼트 + 기간·유형 필터 + 정렬 + 날짜 그룹 리스트 */
 export default function HomeScreen() {
+  const market = useMarket()
   const [segment, setSegment] = useState<Segment>('breaking')
   const [filters, setFilters] = useState<Filter[]>([])
   const [period, setPeriod] = useState<PeriodKey>('all')
@@ -68,7 +79,8 @@ export default function HomeScreen() {
     if (filters.includes('buy')) list = list.filter((d) => d.direction === 'buy')
     if (filters.includes('sell')) list = list.filter((d) => d.direction === 'sell')
     // 금액을 모르는 건은 '대형'에서 제외한다 — 0 으로 간주하면 거짓이 된다
-    if (filters.includes('big')) list = list.filter((d) => d.totalAmount !== null && d.totalAmount >= BIG_THRESHOLD)
+    if (filters.includes('big'))
+      list = list.filter((d) => d.totalAmount !== null && d.totalAmount >= BIG_THRESHOLD[market].value)
     if (filters.includes('planned')) list = list.filter((d) => d.isPlanned)
     return sortDisclosures(list, sort)
   }, [data, segment, filters, period, sort, followedPersons, followedStocks])
@@ -104,7 +116,11 @@ export default function HomeScreen() {
           <DropdownChip label={periodLabel(period)} active={period !== 'all'} onOpen={() => setSheet('period')} />
           <FilterChips
             label="공시 필터"
-            options={FILTERS}
+            /* '대형'의 기준 금액은 시장마다 다르므로 라벨에 실제 기준을 붙인다.
+               기준을 숨기면 이용자가 무엇으로 걸러졌는지 알 수 없다 */
+            options={FILTERS.map((f) =>
+              f.value === 'big' ? { ...f, label: `대형 ${BIG_THRESHOLD[market].label}` } : f,
+            )}
             selected={filters}
             onToggle={(v) => {
               setFilters((f) => (f.includes(v) ? f.filter((x) => x !== v) : [...f, v]))

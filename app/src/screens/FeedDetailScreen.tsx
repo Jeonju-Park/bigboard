@@ -26,7 +26,7 @@ import {
   formatAmountShort,
   formatDate,
   formatQuantity,
-  formatWon,
+  formatPrice,
 } from '@/lib/format'
 import homeStyles from './HomeScreen.module.css'
 import styles from './FeedDetailScreen.module.css'
@@ -145,7 +145,7 @@ export default function FeedDetailScreen() {
           </span>{' '}
           {d.unitPrice !== null ? (
             <>
-              <Emph>{formatWon(d.unitPrice)}</Emph> × <Emph>{formatQuantity(d.quantity)}</Emph>
+              <Emph>{formatPrice(d.unitPrice)}</Emph> × <Emph>{formatQuantity(d.quantity)}</Emph>
             </>
           ) : (
             <Emph>{formatQuantity(d.quantity)}</Emph>
@@ -198,7 +198,7 @@ export default function FeedDetailScreen() {
                 {d.details.map((t, i) => (
                   <tr key={`${t.date}-${i}`}>
                     <td className="ty-num">{formatDate(t.date)}</td>
-                    <td className="ty-num">{t.price === null ? '미기재' : formatWon(t.price)}</td>
+                    <td className="ty-num">{t.price === null ? '미기재' : formatPrice(t.price)}</td>
                     <td className={`ty-num ${t.qty < 0 ? styles.sell : styles.buy}`}>
                       {t.qty > 0 ? '+' : ''}
                       {t.qty.toLocaleString()}
@@ -241,7 +241,7 @@ export default function FeedDetailScreen() {
         {/* 현재가 — 공시 단가와 비교하는 기준점이라 위로 올린다 */}
         {context?.stock?.prevClose != null && (
           <div className={styles.priceBlock}>
-            <span className="ty-amount">{formatWon(context.stock.prevClose)}</span>
+            <span className="ty-amount">{formatPrice(context.stock.prevClose)}</span>
             {context.stock.change !== null && (
               <span className={`ty-body-s ${context.stock.change >= 0 ? styles.buy : styles.sell}`}>
                 {context.stock.change >= 0 ? '+' : ''}{context.stock.change}%
@@ -268,8 +268,8 @@ export default function FeedDetailScreen() {
             { term: '종목코드', value: d.stockCode },
             { term: '시장', value: context?.stock?.market ?? null },
             { term: '시가총액', value: formatAmountShort(context?.stock?.marketCap ?? null) },
-            { term: '52주 최고', value: formatWon(context?.stock?.high52 ?? null) },
-            { term: '52주 최저', value: formatWon(context?.stock?.low52 ?? null) },
+            { term: '52주 최고', value: formatPrice(context?.stock?.high52 ?? null) },
+            { term: '52주 최저', value: formatPrice(context?.stock?.low52 ?? null) },
           ]}
         />
       </section>
