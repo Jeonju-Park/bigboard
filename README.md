@@ -1,20 +1,49 @@
 # 빅보드 (BIG board)
 
-내부자·고위공직자의 주식 거래 공시를 모아 보여주는 정보 서비스. **투자자문이 아닙니다.**
+큰손들이 주식을 사고판 기록을, 공시가 올라온 순서대로 보여주는 **정보 서비스**.
 
-데이터 출처: 금융감독원 전자공시시스템(DART) OpenAPI
+**https://jeonju-park.github.io/bigboard/**
+
+> 이 서비스는 투자자문·투자권유가 아닙니다. 공개된 공시·공공데이터를 정리해 보여줄 뿐이며,
+> 투자 판단과 그 결과는 이용자 본인에게 있습니다.
 
 > 기획 문서: `docs/00_brief/PROJECT_BRIEF.md` → `docs/01_research/` → `docs/02_idea/idea_bigshot_radar.md`
 > 작업 규칙: `CLAUDE.md` · 개발 순서: `docs/04_dev/dev_prompts_webapp.md`
+> 배포·운영: `docs/04_dev/deploy_guide.md`
 
 ---
 
-## 지금 상태
+## 다루는 데이터
 
-- ✅ 웹앱 9개 화면 구현 (실데이터)
-- ✅ DART 수집 파이프라인 — 최근 30일 공시 2,700여 건
-- ⏳ **GitHub 저장소 생성 + Secrets 등록** ← 유저가 할 차례
-- ⛔ 시세 정보 — 공공데이터포털 키 미발급 (해당 항목은 화면에서 숨김)
+| 시장 | 대상 | 출처 |
+|---|---|---|
+| **국내장** | 임원·주요주주 소유변동, 거래계획 | 금융감독원 DART |
+| | 고위공직자 보유 주식 | 행정안전부 관보 (원문 PDF) |
+| | 시세·시가총액·52주 | 공공데이터포털 |
+| **미국장** | 내부자 거래 (Form 4) | SEC EDGAR |
+| | 하원의원 거래 (STOCK Act) | 미 하원 사무처 |
+| | 기관 분기 보유 (13F) | SEC EDGAR |
+| | 시세·지표 | Finnhub |
+
+상원의원 거래는 포함돼 있지 않습니다 — 소스가 자동 수집을 막고 있어
+자동화하지 않았습니다 (`docs/04_dev/api_shopping_list_us.md` §U4).
+
+---
+
+## 데이터를 다루는 원칙
+
+이 저장소의 코드가 반복해서 지키는 규칙입니다. 대부분 **실제로 한 번 틀리고 나서** 생겼습니다.
+
+- **모르는 값은 지어내지 않는다.** 단가가 공시에 없으면 `null` 로 두고 화면이 그 줄을 숨깁니다.
+  0 으로 채우면 합계와 순위가 조용히 거짓이 됩니다.
+- **원문을 고치지 않는다.** 제출자 오타(2030년 거래일, 주당 \$748,119 단가)는 실제로 있습니다.
+  원문은 그대로 두고 우리가 계산한 **대표값만** 버립니다.
+- **건너뛴 것은 세어서 남긴다.** `meta.skipped` 에 사유별 건수가 들어갑니다.
+- **기준 시점을 항상 붙인다.** 13F 는 분기말 + 최대 45일 지연, 공직자 재산은 연 1회 공개입니다.
+  "지금 보유"가 아닌 것을 지금인 척 보여주지 않습니다.
+- **성격이 다른 데이터를 섞지 않는다.** 공직자 재산공개는 거래가 아니라 보유 스냅샷이라
+  시간순 피드에 카드로 넣지 않습니다.
+- **숫자끼리 안 맞으면 안 보여준다.** 시가총액이 (주식수 x 주가)와 어긋나면 null 로 둡니다.
 
 ---
 
@@ -35,62 +64,35 @@ npm run dev            # http://localhost:5173
 | `npm run pipeline` | 최근 30일 수집. `-- --days 90` 으로 기간 조정 |
 | `npm run check` | 규칙 검사(색·간격·이모지·금지워딩·키유출) + 타입 검사 |
 | `npm --prefix pipeline run verify` | 수집 데이터를 DART 원문과 대조 |
+| `npm --prefix pipeline run gazette:pdf` | 공직자 재산 (관보 PDF 를 `pipeline/data/` 에 두고) |
+| `npm --prefix pipeline run form4` | 미장 내부자 (SEC Form 4) |
+| `npm --prefix pipeline run house` | 미 하원의원 (STOCK Act PTR) |
+| `npm --prefix pipeline run 13f` | 기관 분기 보유 (13F) |
+| `npm --prefix pipeline run us:stocks` | 미장 시세. `-- --full` 로 지표까지 |
 | `npm run qr <URL>` | 배포 URL QR (qrencode 필요) |
 
 개발용 화면: `#/dev-gallery` (컴포넌트 갤러리). 각 화면 우상단에 상태 토글(정상/로딩/빈/에러)이 있습니다.
 
 ---
 
-## GitHub Pages 배포 — 클릭 단위 안내
+## 배포
 
-### 1단계. GitHub 저장소 만들기 (웹에서)
+이미 배포돼 있습니다 — **https://jeonju-park.github.io/bigboard/**
 
-1. https://github.com/new 접속
-2. **Repository name** 에 `bigshot-radar` 입력 (다른 이름을 쓰면 아래 URL 도 바뀝니다)
-3. **Public** 선택 — Pages 무료 배포는 공개 저장소여야 합니다
-4. "Add a README file" 등 체크박스는 **전부 해제** (이미 파일이 있습니다)
-5. 초록색 **Create repository** 클릭
+`main` 에 푸시하면 `deploy` 워크플로가 검사(토큰·카피·스키마·타입)를 통과한 뒤 자동 배포합니다.
+데이터는 `pipeline` 워크플로가 평일 30분 간격으로 수집해 커밋하고, 그 커밋이 다시 배포를 트리거합니다.
 
-### 2단계. 이 폴더를 저장소에 연결 (터미널에서)
+저장소를 새로 만들거나 Secrets 를 다시 넣어야 하면 **[docs/04_dev/deploy_guide.md](docs/04_dev/deploy_guide.md)** 를 보세요.
 
-저장소를 만들면 나오는 주소를 `<주소>` 자리에 넣으세요.
+필요한 Secrets (저장소 Settings > Secrets and variables > Actions):
 
-```bash
-git branch -M main
-git remote add origin <주소>     # 예: https://github.com/내아이디/bigshot-radar.git
-git push -u origin main
-```
+| 이름 | 없으면 |
+|---|---|
+| `DART_KEY` | 워크플로 실패 (필수) |
+| `DATA_GO_KR_KEY` | 국장 시세·관보 색인 건너뜀 |
+| `FINNHUB_KEY` | 미장 시세 건너뜀 |
 
-### 3단계. API 키를 Secrets 에 등록 (웹에서)
-
-공개 저장소이므로 키를 코드에 넣으면 그대로 노출됩니다. 반드시 Secrets 를 쓰세요.
-
-1. 저장소 페이지 상단 **Settings** 탭
-2. 왼쪽 메뉴 **Secrets and variables** → **Actions**
-3. 초록색 **New repository secret**
-4. **Name** 에 `DART_KEY`, **Secret** 에 발급받은 키 붙여넣기 → **Add secret**
-5. 공공데이터포털 키를 받으면 같은 방법으로 `DATA_GO_KR_KEY` 도 추가
-
-### 4단계. Pages 켜기 (웹에서)
-
-1. **Settings** → 왼쪽 메뉴 **Pages**
-2. **Source** 를 **GitHub Actions** 로 변경 (Deploy from a branch 아님)
-3. 저장
-
-### 5단계. 배포 확인
-
-1. 저장소 상단 **Actions** 탭 → `deploy` 워크플로가 도는지 확인
-2. 초록 체크가 뜨면 `https://<내아이디>.github.io/bigshot-radar/` 접속
-3. 휴대폰에서 열려면: `npm run qr https://<내아이디>.github.io/bigshot-radar/`
-
-### 6단계. 자동 수집 확인
-
-1. **Actions** 탭 → 왼쪽에서 `pipeline` 선택 → **Run workflow** 로 수동 1회 실행
-2. 성공하면 `app/public/data/` 에 새 커밋이 생기고, 그 푸시가 `deploy` 를 다시 돌려 사이트가 갱신됩니다
-3. 이후 평일 장중에는 30분 간격으로 자동 실행됩니다
-
-> GitHub Actions 의 예약 실행은 정시를 보장하지 않고 수 분~수십 분 밀립니다.
-> 그래서 화면이 "공시 수집 N분 전"으로 실제 시각을 표시하고, 6시간을 넘기면 지연 배너를 띄웁니다.
+키가 없어도 앱은 동작합니다 — 해당 항목을 **숨기고** 이유를 설정 화면에 적습니다.
 
 ---
 
