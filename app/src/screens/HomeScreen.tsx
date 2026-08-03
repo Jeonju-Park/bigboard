@@ -80,7 +80,11 @@ export default function HomeScreen() {
     if (filters.includes('sell')) list = list.filter((d) => d.direction === 'sell')
     // 금액을 모르는 건은 '대형'에서 제외한다 — 0 으로 간주하면 거짓이 된다
     if (filters.includes('big'))
-      list = list.filter((d) => d.totalAmount !== null && d.totalAmount >= BIG_THRESHOLD[market].value)
+      list = list.filter((d) => {
+        // 구간 신고(미장 의회)는 하한으로 판정한다 — 정렬과 같은 기준
+        const v = d.totalAmount ?? d.amountRange?.min ?? null
+        return v !== null && v >= BIG_THRESHOLD[market].value
+      })
     if (filters.includes('planned')) list = list.filter((d) => d.isPlanned)
     return sortDisclosures(list, sort)
   }, [data, segment, filters, period, sort, followedPersons, followedStocks])

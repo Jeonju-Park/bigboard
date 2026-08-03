@@ -1,6 +1,14 @@
 import { Link } from 'react-router'
 import type { Disclosure } from '@/lib/types'
-import { formatAmountShort, formatDate, formatQuantity, formatPrice, daysBetween } from '@/lib/format'
+import {
+  daysBetween,
+  formatAmountRange,
+  formatAmountShort,
+  formatDate,
+  formatPrice,
+  formatQuantity,
+} from '@/lib/format'
+import { ownerLabel } from '@/lib/owner'
 import styles from './DisclosureCard.module.css'
 
 /**
@@ -18,7 +26,10 @@ import styles from './DisclosureCard.module.css'
  * 표기 원칙: 단가·총액이 없는 건(무상증여·복수단가·혼합보고서)은 줄을 숨긴다. 0 을 지어내지 않는다.
  */
 export default function DisclosureCard({ d }: { d: Disclosure }) {
-  const amount = formatAmountShort(d.totalAmount)
+  // 미장 의회 거래는 정확한 금액이 없고 **구간**만 있다.
+  // 금액이 없다고 수량으로 대체할 수도 없다 — 주식 수도 신고 대상이 아니라서 null 이다.
+  const amount = formatAmountShort(d.totalAmount) ?? formatAmountRange(d.amountRange)
+  const isRange = d.totalAmount === null && Boolean(d.amountRange)
   const price = formatPrice(d.unitPrice)
   const qty = formatQuantity(d.quantity)
   const lag = daysBetween(d.tradeDate, d.discloseDate)
@@ -53,8 +64,14 @@ export default function DisclosureCard({ d }: { d: Disclosure }) {
           <span className="ty-num">
             {price} × {qty}
           </span>
+        ) : isRange ? (
+          /* 구간이라는 사실을 반드시 밝힌다. 안 밝히면 정확한 금액으로 읽힌다 */
+          <span>
+            신고 구간
+            {d.ownerType && d.ownerType !== 'self' ? ` · ${ownerLabel(d.ownerType)} 명의` : ''}
+          </span>
         ) : (
-          <span>단가 미기재 · {qty}</span>
+          <span>단가 미기재{qty ? ` · ${qty}` : ''}</span>
         )}
       </p>
 

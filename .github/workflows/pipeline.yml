@@ -1,7 +1,11 @@
-# DART 수집 → app/public/data/*.json 커밋
+# 공시 수집 → app/public/data/{kr,us}/*.json 커밋
+#
+# 국장  DART(공시) · 공공데이터포털(시세) · 행정안전부(관보 색인)
+# 미장  SEC(Form 4 · 13F) · 미 하원 사무처(STOCK Act PTR) · Finnhub(시세)
 #
 # 스케줄은 UTC 다. 한국 장 운영시간(09:00~18:00 KST)은 UTC 00:00~09:00 이므로
 # 평일 UTC 0~9시에 30분 간격으로 돈다.
+# 미장 단계는 호출량이 커서 대부분 UTC 0시대(하루 1회)에만 돈다.
 #
 # ⚠️ GitHub Actions 의 cron 은 정시 실행을 보장하지 않는다. 무료 러너가 붐비면
 #    수 분~수십 분 밀린다. 그래서 화면이 meta.lastUpdated 실값으로 신선도를 표시한다.
@@ -34,8 +38,12 @@ jobs:
         with:
           node-version: '24'
 
-      # pipeline 은 의존성이 없다(zlib·fetch 내장, Node 네이티브 TS 실행).
-      # npm ci 를 부를 lockfile 도 없으므로 설치 단계 자체가 필요 없다.
+      # pipeline 은 오랫동안 의존성이 0 이었지만, 미 하원 PTR 이 PDF 라
+      # unpdf 를 하나 추가했다. 그래서 이제 설치 단계가 필요하다.
+      # (app 번들에는 영향이 없다 — 별도 패키지다)
+      - name: pipeline 의존성 설치
+        run: npm --prefix pipeline ci || npm --prefix pipeline install
+
       - name: 공시 수집 (DART)
         env:
           DART_KEY: ${{ secrets.DART_KEY }}
@@ -91,6 +99,46 @@ jobs:
           fi
           node pipeline/src/gazette.ts || echo "::warning::관보 색인 수집 실패 — 기존 gazette.json 을 유지합니다"
 
+      # ── 미장 ──────────────────────────────────────────────────────────────
+      # SEC 는 키가 필요 없다. User-Agent 와 초당 10회 제한만 지키면 된다(sec.ts).
+      - name: 미국 내부자 거래 (SEC Form 4)
+        run: node pipeline/src/form4.ts --days 2 || echo "::warning::Form 4 수집 실패 — 기존 데이터를 유지합니다"
+
+      # 하원 PTR 은 이미 받은 DocID 를 건너뛰므로 매일 돌아도 신규분만 받는다
+      - name: 미 하원의원 거래 (STOCK Act PTR)
+        run: node pipeline/src/house.ts || echo "::warning::하원 PTR 수집 실패 — 기존 데이터를 유지합니다"
+
+      # 13F 는 분기당 한 번 갱신된다. 매일 부를 이유가 없어 UTC 0시대에만.
+      - name: 기관 보유 (SEC 13F)
+        run: |
+          HOUR=$(date -u +%H)
+          if [ "$HOUR" != "00" ] && [ "${{ github.event_name }}" = "schedule" ]; then
+            echo "13F 는 하루 한 번만 갱신 — 건너뜁니다"; exit 0
+          fi
+          node pipeline/src/thirteenf.ts || echo "::warning::13F 수집 실패 — 기존 데이터를 유지합니다"
+
+      # 미국 시세는 **심볼당 1회**라 종목 수만큼 호출한다 (국장처럼 날짜 하나로
+      # 전 종목을 받을 수 없다). 시세만 받으면 ~18분, 지표·기업정보까지면 ~52분.
+      # 그래서 시세는 하루 한 번, 전체 갱신은 월요일에만 돈다.
+      - name: 미국 시세 (Finnhub)
+        env:
+          FINNHUB_KEY: ${{ secrets.FINNHUB_KEY }}
+        run: |
+          if [ -z "$FINNHUB_KEY" ]; then
+            echo "::notice::FINNHUB_KEY 가 없어 미국 시세를 건너뜁니다. 시세 항목은 화면에서 숨겨집니다."
+            exit 0
+          fi
+          HOUR=$(date -u +%H); DOW=$(date -u +%u)
+          if [ "$HOUR" != "00" ] && [ "${{ github.event_name }}" = "schedule" ]; then
+            echo "시세는 하루 한 번만 — 건너뜁니다"; exit 0
+          fi
+          if [ "$DOW" = "1" ]; then
+            echo "월요일 — 지표·기업정보까지 전체 갱신"
+            node pipeline/src/us-stocks.ts --full || echo "::warning::미국 시세 수집 실패"
+          else
+            node pipeline/src/us-stocks.ts || echo "::warning::미국 시세 수집 실패"
+          fi
+
       - name: 변경이 있을 때만 커밋
         run: |
           git config user.name  "bigboard-bot"
@@ -99,7 +147,10 @@ jobs:
           if git diff --staged --quiet; then
             echo "새 공시 없음 — 커밋 생략"
           else
-            COUNT=$(node -p "require('./app/public/data/meta.json').counts.disclosures")
-            git commit -m "data: 공시 ${COUNT}건 (자동 수집)"
+            # 데이터가 시장별로 갈렸다. 예전 경로(app/public/data/meta.json)를 그대로
+            # 두면 이 단계가 매번 죽는다
+            KR=$(node -p "require('./app/public/data/kr/meta.json').counts.disclosures")
+            US=$(node -p "try{require('./app/public/data/us/meta.json').counts.disclosures}catch(e){0}")
+            git commit -m "data: 국장 ${KR}건 · 미장 ${US}건 (자동 수집)"
             git push
           fi

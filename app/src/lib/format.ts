@@ -13,6 +13,7 @@
  *    (인자로 넘기게 하면 호출부 한 곳만 빠져도 거짓이 되므로 기본값을 시장에서 가져온다)
  */
 import { getMarket, MARKETS, type Market } from './market'
+import type { AmountRange } from './types'
 
 const 조 = 1_000_000_000_000
 const 억 = 100_000_000
@@ -162,4 +163,29 @@ export function formatDateGroup(iso: string, todayIso: string): string {
   if (diff === 1) return '어제'
   const dt = new Date(iso + 'T00:00:00')
   return `${formatDate(iso)} (${WEEKDAYS[dt.getDay()]})`
+}
+
+/**
+ * 신고 금액 **구간** — 미국 의회 거래 전용.
+ *
+ * 의원은 정확한 금액을 신고하지 않고 11개 구간 중 하나를 고른다.
+ * 그래서 중간값 같은 단일 숫자로 바꾸지 않고 **구간 그대로** 보여준다.
+ * 구간을 하나의 수처럼 표시하면 있지도 않은 정밀도를 지어내는 것이다.
+ *
+ *   { min: 1001,    max: 15000 }   → "$1K–15K"
+ *   { min: 1000001, max: 5000000 } → "$1M–5M"
+ *   { min: 50000000, max: null }   → "$50M+"    (최상단 구간은 상한이 없다)
+ */
+export function formatAmountRange(r: AmountRange | null | undefined): string | null {
+  if (!r || !Number.isFinite(r.min)) return null
+  // 구간 경계는 $1,001 / $15,000 처럼 1 만큼 어긋나 있다. 읽는 사람에게 그 1은 의미가 없다
+  const unit = (v: number) =>
+    v >= 1_000_000
+      ? `${Math.round(v / 1_000_000)}M`
+      : v >= 1_000
+        ? `${Math.round(v / 1_000)}K`
+        : `${Math.round(v)}`
+  const lo = unit(r.min)
+  if (r.max === null || !Number.isFinite(r.max)) return `$${lo}+`
+  return `$${lo}\u2013${unit(r.max)}`
 }

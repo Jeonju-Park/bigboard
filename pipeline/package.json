@@ -19,7 +19,8 @@
     "typecheck": "tsc -p tsconfig.json",
     "13f": "node --env-file=.env src/thirteenf.ts",
     "house": "node --env-file=.env src/house.ts",
-    "gazette:pdf": "node --env-file=.env src/gazette-pdf.ts"
+    "gazette:pdf": "node --env-file=.env src/gazette-pdf.ts",
+    "us:stocks": "node --env-file=.env src/us-stocks.ts"
   },
   "dependencies": {
     "unpdf": "^1.8.0"

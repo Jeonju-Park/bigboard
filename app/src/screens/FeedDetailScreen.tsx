@@ -18,11 +18,15 @@ import { getDisclosures, getMeta, getSparklines, getStocks } from '@/lib/data'
 import { useAsync } from '@/lib/useData'
 import { pushRecent, toggleFollowPerson, useBroker, useFollowedPersons } from '@/lib/follow'
 import { brokerActionLabel, brokerHref, findBroker } from '@/lib/broker'
+import { ownerLabel } from '@/lib/owner'
+import { useMarket } from '@/lib/market'
+import { sourceLabel } from '@/lib/source'
 import { personKey } from '@/lib/keys'
 import { daysAgoKey } from '@/lib/date'
 import {
   daysBetween,
   formatAmountFull,
+  formatAmountRange,
   formatAmountShort,
   formatDate,
   formatQuantity,
@@ -37,6 +41,7 @@ import styles from './FeedDetailScreen.module.css'
  *  ⑤내부자 동향 ⑥예고 배너 ⑦거래 바로가기 + 고지문 + DART 원문 + 공유
  */
 export default function FeedDetailScreen() {
+  const market = useMarket()
   const { id } = useParams()
   const [openDetails, setOpenDetails] = useState(false)
   const followed = useFollowedPersons()
@@ -154,6 +159,16 @@ export default function FeedDetailScreen() {
 
         {d.totalAmount !== null ? (
           <Promote label={d.isPlanned ? '계획 금액' : '총 거래금액'} value={formatAmountFull(d.totalAmount)} />
+        ) : d.amountRange ? (
+          <>
+            {/* 미 의회 신고는 정확한 금액이 없다. 구간을 **구간 그대로** 승격해 보여주고,
+                무엇인지 라벨로 못박는다. 중간값 하나로 바꾸면 없는 정밀도를 지어내는 것이다 */}
+            <Promote label="신고 금액 구간" value={formatAmountRange(d.amountRange)} />
+            <p className="ty-caption" style={{ margin: 'var(--space-2) 0 0' }}>
+              미 의회 신고는 정확한 금액을 요구하지 않습니다. 11개 구간 중 하나로만 공개되며,
+              거래 주식 수도 신고 대상이 아닙니다.
+            </p>
+          </>
         ) : (
           <p className="ty-caption" style={{ margin: 0 }}>
             공시에 단가가 없거나 매수·매도가 섞여 있어 총액을 계산하지 않았습니다. 아래 세부변동내역을 확인하세요.
@@ -167,6 +182,11 @@ export default function FeedDetailScreen() {
               { term: '공시일', value: formatDate(d.discloseDate) },
               { term: '시차', value: lag !== null && lag >= 0 ? `${lag}일` : null },
               { term: '보고사유', value: d.reportReason || null },
+              // 본인 거래가 아니면 반드시 밝힌다 — 배우자 거래를 본인 것으로 읽히게 두면 오보다
+              {
+                term: '계좌 명의',
+                value: d.ownerType && d.ownerType !== 'self' ? `${ownerLabel(d.ownerType)} 명의` : null,
+              },
               {
                 term: '보유 변화',
                 // 의회 신고에는 보유량이 없어 둘 다 null 이다. 그때는 행 자체를 숨긴다
@@ -179,7 +199,8 @@ export default function FeedDetailScreen() {
         </div>
       </section>
 
-      {/* ② 세부변동내역 — 접힘 */}
+      {/* ② 세부변동내역 — 접힘. 미 의회 신고는 세부내역 자체가 없어 섹션을 숨긴다 */}
+      {d.details.length > 0 && (
       <section>
         <button type="button" className={styles.disclosureToggle} onClick={() => setOpenDetails((o) => !o)}>
           <span className="ty-title-s">세부 변동내역 ({d.details.length}건)</span>
@@ -211,6 +232,7 @@ export default function FeedDetailScreen() {
           </div>
         )}
       </section>
+      )}
 
       {/* ③ 인물 컨텍스트 */}
       {context && context.samePerson.length > 0 && (
@@ -296,18 +318,25 @@ export default function FeedDetailScreen() {
 
       {/* ⑦ 액션 + 고지문 + 원문 */}
       <section className={styles.actions}>
-        {brokerLink ? (
-          <Button block href={brokerLink}>
-            {brokerActionLabel(broker)}
-          </Button>
-        ) : (
-          <Button block to="/settings">
-            거래할 증권사 선택하기
-          </Button>
-        )}
+        {/*
+          증권사 바로가기는 **국장에만** 붙인다.
+          BROKERS 는 국내 증권사 목록이라 미국 종목을 들고 그 앱을 열어도 할 수 있는 게 없다.
+          없는 기능을 버튼으로 두면 신뢰를 잃는다. (규칙 1 — 아웃링크만, 주문 정보 전달 금지)
+        */}
+        {market === 'kr' &&
+          (brokerLink ? (
+            <Button block href={brokerLink}>
+              {brokerActionLabel(broker)}
+            </Button>
+          ) : (
+            <Button block to="/settings">
+              거래할 증권사 선택하기
+            </Button>
+          ))}
         <Disclaimer />
         <Button variant="secondary" block href={d.sourceUrl}>
-          DART 원문 보기
+          {/* 출처가 시장마다 다르다. '미장인데 DART' 는 그냥 거짓말이다 */}
+          {sourceLabel(d.sourceUrl)} 원문 보기
         </Button>
         <Button
           variant="text"

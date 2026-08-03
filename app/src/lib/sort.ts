@@ -49,13 +49,28 @@ export function sortDisclosures(list: Disclosure[], key: SortKey): Disclosure[] 
     )
   }
   // 금액 미상은 순위에서 빼고 뒤에 붙인다 — 0 으로 넣으면 "적은 순" 상위가 전부 미상이 된다
-  const known = copy.filter((d) => d.totalAmount !== null)
-  const unknown = copy.filter((d) => d.totalAmount === null)
-  known.sort((a, b) => (key === 'amountDesc' ? b.totalAmount! - a.totalAmount! : a.totalAmount! - b.totalAmount!))
+  const known = copy.filter((d) => sortValue(d) !== null)
+  const unknown = copy.filter((d) => sortValue(d) === null)
+  known.sort((a, b) =>
+    key === 'amountDesc' ? sortValue(b)! - sortValue(a)! : sortValue(a)! - sortValue(b)!,
+  )
   return [...known, ...unknown]
+}
+
+/**
+ * 정렬에 쓸 금액.
+ *
+ * 미장 의회 거래는 정확한 금액이 없고 구간만 있다. 그렇다고 전부 '미상'으로
+ * 밀어내면 미장에서 금액 정렬이 통째로 무의미해진다.
+ * **구간의 하한**을 쓴다 — 중간값은 우리가 만들어낸 수지만 하한은 신고서에 적힌 수다.
+ * (그래서 표시는 여전히 구간 그대로 하고, 정렬만 하한으로 한다)
+ */
+function sortValue(d: Disclosure): number | null {
+  if (d.totalAmount !== null) return d.totalAmount
+  return d.amountRange ? d.amountRange.min : null
 }
 
 /** 금액 미상 건이 정렬에서 제외됐음을 화면이 알릴 수 있게 */
 export function unknownAmountCount(list: Disclosure[]): number {
-  return list.filter((d) => d.totalAmount === null).length
+  return list.filter((d) => sortValue(d) === null).length
 }
