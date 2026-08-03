@@ -39,7 +39,9 @@ FINNHUB_KEY 가 없습니다.
 
 const full = process.argv.includes('--full')
 /** 소규모 확인용. 52분짜리 작업을 통째로 돌리기 전에 로직을 검증한다 */
-const limit = Number(process.argv[process.argv.indexOf('--limit') + 1]) || Infinity
+const limitArg = process.argv.indexOf('--limit')
+/** 소규모 확인용. `--limit 0` 이면 API 호출 없이 정합성 점검만 다시 돌린다 */
+const limit = limitArg >= 0 ? Number(process.argv[limitArg + 1]) : Infinity
 
 /**
  * 무료 티어는 분당 60회다. 안전하게 분당 50회(=1.2초 간격)로 잡는다.
@@ -47,7 +49,7 @@ const limit = Number(process.argv[process.argv.indexOf('--limit') + 1]) || Infin
  */
 const INTERVAL_MS = 1200
 
-const stats = { quote: 0, metric: 0, profile: 0, failed: 0, rateLimited: 0, foreignCap: 0 }
+const stats = { quote: 0, metric: 0, profile: 0, failed: 0, rateLimited: 0, foreignCap: 0, badRange: 0 }
 
 async function call<T>(path: string): Promise<T | null> {
   for (let attempt = 0; attempt < 3; attempt++) {
@@ -114,7 +116,7 @@ async function main() {
     process.exit(1)
   }
 
-  const targets = stocks.slice(0, limit === Infinity ? stocks.length : limit)
+  const targets = Number.isFinite(limit) ? stocks.slice(0, limit) : stocks
   const perSymbol = full ? 3 : 1
   const estMin = Math.ceil((targets.length * perSymbol * INTERVAL_MS) / 60_000)
   console.log(`\n미국 시세 수집 — ${targets.length}종목 · ${full ? '전체(시세+지표+기업정보)' : '시세만'}`)
@@ -188,6 +190,28 @@ async function main() {
     }
   }
 
+  // ── 마지막 정합성 점검 ────────────────────────────────────────────────────
+  //
+  // 시가총액과 같은 문제가 52주 범위에도 있다. 해외 ADR 은 quote 가 **미국 상장분의
+  // 달러 가격**을 주는데 metric 의 52주 최고/최저는 **원주 기준**으로 온다.
+  //   SOUHY  현재가 \$16.21  vs  52주 최고 \$4.95   (3.27배)
+  //   DBVT   현재가 \$13.50  vs  52주 최고 \$4.50   (3.00배)
+  // 이걸 그대로 두면 화면에 '현재가가 52주 최고보다 3배 높음'이 나란히 뜬다.
+  //
+  // 현재가가 자기 52주 범위를 벗어나는 건 원래 있을 수 없다(벗어나면 그게 새 최고가다).
+  // 다만 metric 갱신이 느려 신고가 당일엔 몇 % 어긋날 수 있으므로 5% 를 허용한다.
+  // 그보다 크게 어긋나면 두 수가 같은 종목을 말하는 게 아니므로 **범위를 지운다**.
+  for (const s of stocks) {
+    if (s.prevClose === null || s.high52 === null || s.low52 === null) continue
+    const above = s.prevClose > s.high52 * 1.05
+    const below = s.prevClose < s.low52 * 0.95
+    if (above || below) {
+      stats.badRange++
+      s.high52 = null
+      s.low52 = null
+    }
+  }
+
   save()
 
   const metaPath = join(DATA_DIR, 'meta.json')
@@ -209,6 +233,9 @@ async function main() {
     console.log(
       `시가총액 제외 ${stats.foreignCap}종목 — 시총과 (주식수 x 주가)가 안 맞아 신뢰할 수 없습니다`,
     )
+  }
+  if (stats.badRange) {
+    console.log(`52주 범위 제외 ${stats.badRange}종목 — 현재가가 그 범위를 벗어나 서로 다른 종목을 가리킵니다`)
   }
   if (stats.rateLimited) console.log(`호출 제한에 걸려 대기 ${stats.rateLimited}회`)
   if (stats.failed) console.log(`실패 ${stats.failed}건 (해당 항목은 null 로 남습니다)`)
