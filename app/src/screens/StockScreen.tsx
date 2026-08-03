@@ -16,7 +16,7 @@ import { pushRecent, toggleFollowStock, useBroker, useFollowedStocks } from '@/l
 import { brokerActionLabel, brokerHref, findBroker } from '@/lib/broker'
 import { useMarket } from '@/lib/market'
 import Sparkline from '@/shared/components/Sparkline'
-import { formatAmountShort, formatDate, formatPrice } from '@/lib/format'
+import { formatAmountShort, formatDate, formatPercent, formatPrice, formatRatio } from '@/lib/format'
 import homeStyles from './HomeScreen.module.css'
 import styles from './FeedDetailScreen.module.css'
 
@@ -47,6 +47,14 @@ export default function StockScreen() {
   )
   const planned = list.filter((d) => d.isPlanned)
   const traded = list.filter((d) => !d.isPlanned)
+  /**
+   * 미장에서는 한 종목에 내부자(Form 4)와 하원의원(STOCK Act)이 함께 나온다.
+   * 둘을 '내부자 거래' 한 섹션에 담으면 제목이 거짓이 된다 —
+   * 실제로 NVDA 화면에서 '내부자 거래 27건' 아래에 하원의원이 줄줄이 나왔다.
+   * 성격도 다르다: 내부자는 정확한 금액, 의원은 구간 신고다.
+   */
+  const insiderTrades = traded.filter((d) => d.personType !== 'politician')
+  const politicianTrades = traded.filter((d) => d.personType === 'politician')
 
   useEffect(() => {
     if (stock) pushRecent({ kind: 'stock', id: stock.code, label: stock.name })
@@ -86,7 +94,7 @@ export default function StockScreen() {
             <span className="ty-promote">{formatPrice(stock.prevClose)}</span>
             {stock.change !== null && (
               <span className={`ty-label ${stock.change >= 0 ? styles.buy : styles.sell}`}>
-                {stock.change >= 0 ? '+' : ''}{stock.change}%
+                {formatPercent(stock.change)}
               </span>
             )}
             {stock.priceAsOf && <span className="ty-micro">{formatDate(stock.priceAsOf)} 종가</span>}
@@ -106,9 +114,14 @@ export default function StockScreen() {
             { term: '거래량', value: stock.volume === null ? null : `${stock.volume.toLocaleString()}주` },
             { term: '52주 최고', value: formatPrice(stock.high52) },
             { term: '52주 최저', value: formatPrice(stock.low52) },
-            { term: 'PER', value: stock.per?.toString() ?? null },
-            { term: 'PBR', value: stock.pbr?.toString() ?? null },
-            { term: '배당수익률', value: stock.divYield === null ? null : `${stock.divYield}%` },
+            { term: 'PER', value: formatRatio(stock.per) },
+            { term: 'PBR', value: formatRatio(stock.pbr) },
+            // 배당수익률은 '변화'가 아니라 수준이라 부호를 붙이지 않는다.
+            // formatPercent 는 등락률 전용이다 ('+0.02%' 는 배당이 늘었다는 뜻으로 읽힌다)
+            {
+              term: '배당수익률',
+              value: stock.divYield === null ? null : `${formatRatio(stock.divYield)}%`,
+            },
           ]}
         />
         {stock.prevClose === null && (
@@ -162,20 +175,43 @@ export default function StockScreen() {
         </section>
       )}
 
-      <section>
-        <SectionHeader title="내부자 거래" note={`${traded.length}건`} />
-        {traded.length ? (
-          <ShowMore items={traded} initial={5} step={20}>
+      {politicianTrades.length > 0 && (
+        <section>
+          <SectionHeader title="의원 거래" note={`${politicianTrades.length}건 · STOCK Act 신고`} />
+          <ShowMore items={politicianTrades} initial={5} step={20}>
             {(visible) => (
               <div className={homeStyles.cards}>
                 {visible.map((d) => <DisclosureCard key={d.id} d={d} />)}
               </div>
             )}
           </ShowMore>
-        ) : (
+          <p className="ty-micro" style={{ marginTop: 'var(--space-3)' }}>
+            의원은 정확한 금액을 신고하지 않습니다. 11개 구간 중 하나로만 공개되며,
+            거래 후 30~45일 안에 신고합니다.
+          </p>
+        </section>
+      )}
+
+      {/* 빈 섹션은 숨긴다. '내부자 거래 0건'은 정보가 아니라 잡음이다.
+          단, 어느 섹션도 없으면 화면이 통째로 비므로 그때만 안내를 남긴다 */}
+      {insiderTrades.length > 0 && (
+        <section>
+          <SectionHeader title="내부자 거래" note={`${insiderTrades.length}건`} />
+          <ShowMore items={insiderTrades} initial={5} step={20}>
+            {(visible) => (
+              <div className={homeStyles.cards}>
+                {visible.map((d) => <DisclosureCard key={d.id} d={d} />)}
+              </div>
+            )}
+          </ShowMore>
+        </section>
+      )}
+
+      {traded.length === 0 && planned.length === 0 && officialHolders.length === 0 && (
+        <section>
           <p className="ty-caption" style={{ margin: 0 }}>수집 범위 내 거래 공시가 없습니다.</p>
-        )}
-      </section>
+        </section>
+      )}
 
       <section className={styles.actions}>
         {/* 국내 증권사 목록이라 미장에서는 열어도 할 수 있는 게 없다 (FeedDetail·마이와 동일) */}

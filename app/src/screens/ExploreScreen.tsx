@@ -13,7 +13,7 @@ import { toggleFollowPerson, useFollowedPersons } from '@/lib/follow'
 import { formatAmountShort, formatDate } from '@/lib/format'
 import { officialStockValue, personHeadline } from '@/lib/person'
 import { daysAgoKey, todayKey } from '@/lib/date'
-import { useMarket } from '@/lib/market'
+import { MARKETS, useMarket } from '@/lib/market'
 import homeStyles from './HomeScreen.module.css'
 import styles from './ExploreScreen.module.css'
 
@@ -27,6 +27,7 @@ import styles from './ExploreScreen.module.css'
  */
 export default function ExploreScreen() {
   const market = useMarket()
+  const filer = MARKETS[market].filerLabel
   const followed = useFollowedPersons()
 
   const { state, data, error, retry } = useAsync(async () => {
@@ -130,7 +131,7 @@ export default function ExploreScreen() {
           )}
 
           <section>
-            <SectionHeader title="내부자 거래가 잦은 종목" note="최근 30일 공시 건수" />
+            <SectionHeader title="공시가 잦은 종목" note={`최근 30일 · ${filer} 공시 건수`} />
             {insight.busiest.map((s, i) => (
               <Link key={s.code} to={`/stock/${s.code}`} className={styles.rankRow}>
                 <span className={`ty-num ${styles.rankNo}`}>{i + 1}</span>
@@ -143,13 +144,13 @@ export default function ExploreScreen() {
               </Link>
             ))}
             <p className="ty-micro" style={{ marginTop: 'var(--space-2)' }}>
-              시장 거래량이 아니라 <b>내부자 공시 건수</b>입니다. 시세 소스가 아직 연결되지 않았습니다.
+              시장 거래량이 아니라 <b>{filer} 공시 건수</b>입니다. 시세 소스가 아직 연결되지 않았습니다.
             </p>
           </section>
 
           {insight.netBought.length > 0 && (
             <section>
-              <SectionHeader title="내부자가 사들인 종목" note="최근 30일 순매수" />
+              <SectionHeader title="많이 사들인 종목" note={`최근 30일 · ${filer} 순매수`} />
               {insight.netBought.map((s, i) => (
                 <Link key={s.code} to={`/stock/${s.code}`} className={styles.rankRow}>
                   <span className={`ty-num ${styles.rankNo}`}>{i + 1}</span>
@@ -169,7 +170,7 @@ export default function ExploreScreen() {
 
           {insight.consensus.length > 0 && (
             <section>
-              <SectionHeader title="여러 내부자가 함께 산 종목" note="최근 30일 · 매수자 3인 이상" />
+              <SectionHeader title="여럿이 함께 산 종목" note="최근 30일 · 매수자 3인 이상" />
               {insight.consensus.map((s) => (
                 <Link key={s.code} to={`/stock/${s.code}`} className={styles.rankRow}>
                   <div className={styles.rowBody}>
@@ -184,7 +185,7 @@ export default function ExploreScreen() {
           )}
 
           <section>
-            <SectionHeader title="많이 움직인 큰손" note="내부자 · 최근 12개월 순매수" />
+            <SectionHeader title="많이 움직인 큰손" note={`${filer} · 최근 12개월 순매수`} />
             {insight.movers.length ? (
               insight.movers.map((p) => {
                 const h = personHeadline(p)

@@ -21,7 +21,7 @@ export default function LandingScreen() {
           빅보드
         </h1>
         <p className="ty-body" style={{ margin: 0 }}>
-          내부자와 고위공직자가 자기 회사 주식을 사고판 기록을, 공시가 올라온 순서대로 보여드립니다.
+          큰손들이 주식을 사고판 기록을, 공시가 올라온 순서대로 보여드립니다.
         </p>
         <p className="ty-micro" style={{ margin: 0 }}>
           숫자는 정색, 자막은 위트

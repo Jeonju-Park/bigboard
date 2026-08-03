@@ -30,6 +30,12 @@ export interface MarketMeta {
   currency: 'KRW' | 'USD'
   /** 이 시장에서 추적하는 '큰손'의 종류 — 카피에 그대로 쓴다 */
   actors: string
+  /**
+   * 집계 문구에 쓰는 신고 주체.
+   * 미장 공시에는 내부자와 하원의원이 함께 들어 있어서 '내부자 공시 건수'라고 쓰면
+   * 거짓이 된다 (실제로 NVDA 화면에 '내부자 거래 27건' 아래 의원이 줄줄이 나왔다).
+   */
+  filerLabel: string
 }
 
 export const MARKETS: Record<Market, MarketMeta> = {
@@ -39,6 +45,7 @@ export const MARKETS: Record<Market, MarketMeta> = {
     description: '코스피·코스닥 상장사의 임원·주요주주 공시',
     currency: 'KRW',
     actors: '내부자 · 고위공직자',
+    filerLabel: '내부자',
   },
   us: {
     id: 'us',
@@ -46,6 +53,7 @@ export const MARKETS: Record<Market, MarketMeta> = {
     description: '뉴욕·나스닥 상장사의 내부자·의회·기관 공시',
     currency: 'USD',
     actors: '내부자 · 하원의원 · 기관',
+    filerLabel: '내부자·의원',
   },
 }
 

@@ -189,3 +189,21 @@ export function formatAmountRange(r: AmountRange | null | undefined): string | n
   if (r.max === null || !Number.isFinite(r.max)) return `$${lo}+`
   return `$${lo}\u2013${unit(r.max)}`
 }
+
+/**
+ * 비율 표기 — 등락률·배당수익률·PER·PBR.
+ *
+ * 소스가 주는 정밀도를 그대로 쓰면 "+2.8344%", "PER 30.4371" 이 된다.
+ * 소수 넷째 자리는 읽는 사람에게 의미가 없고, 있지도 않은 정밀도를 주장한다
+ * (시세는 15분 지연에 하루 단위 스냅샷이다).
+ */
+export function formatRatio(v: number | null, digits = 2): string | null {
+  if (v === null || !Number.isFinite(v)) return null
+  return v.toFixed(digits)
+}
+
+/** "+2.83%" · "-1.24%" — 부호를 붙인다 */
+export function formatPercent(v: number | null, digits = 2): string | null {
+  if (v === null || !Number.isFinite(v)) return null
+  return `${v > 0 ? '+' : ''}${v.toFixed(digits)}%`
+}

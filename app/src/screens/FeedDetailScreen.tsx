@@ -19,7 +19,7 @@ import { useAsync } from '@/lib/useData'
 import { pushRecent, toggleFollowPerson, useBroker, useFollowedPersons } from '@/lib/follow'
 import { brokerActionLabel, brokerHref, findBroker } from '@/lib/broker'
 import { ownerLabel } from '@/lib/owner'
-import { useMarket } from '@/lib/market'
+import { MARKETS, useMarket } from '@/lib/market'
 import { sourceLabel } from '@/lib/source'
 import { personKey } from '@/lib/keys'
 import { daysAgoKey } from '@/lib/date'
@@ -300,7 +300,7 @@ export default function FeedDetailScreen() {
       {/* ⑤ 내부자 동향 */}
       {context && context.sameStock90.length > 1 && (
         <section>
-          <SectionHeader title="이 종목 내부자 동향" note="최근 90일" />
+          <SectionHeader title={`이 종목 ${MARKETS[market].filerLabel} 동향`} note="최근 90일" />
           <StockInfoList
             items={[
               { term: '공시 건수', value: `${context.sameStock90.length}건` },
