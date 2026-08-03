@@ -3,23 +3,30 @@
 ---
 ## 🔖 재개용 인계 노트 (세션이 끊기면 여기부터)
 
-**현재: 미장(US) 붙였다. 공직자 재산도 관보 PDF 에서 뽑았다. 배포만 남았다.**
+**현재: 배포 완료. https://jeonju-park.github.io/bigboard/**
 
 직전 3줄:
-1. **미장 전체 연결** — 시장 선택(kr/us) + SEC Form 4 2,531건 + 하원의원 1,941건 +
-   13F 기관 13곳 + Finnhub 시세. 데이터는 `app/public/data/{kr,us}/` 로 분리
-2. **공직자 재산을 뽑아냈다** — 관보 API 는 문서 목록만 주지만 **관보 PDF 본문에
-   종목·주식수가 다 있다**(유저가 발견). 120명 1,919건, 명의(본인·배우자·자녀)까지 보존
-3. 미장 데이터가 드러낸 거짓 표기를 대거 수정 — 달러를 '원'으로 쓰던 것,
-   'DART 원문'을 미 하원 PDF 에 붙이던 것, 구간 금액을 아예 안 보여주던 것
+1. **배포됐다** — Jeonju-Park/bigboard (public), Pages source=GitHub Actions.
+   푸시하면 deploy 워크플로가 검사 통과 후 자동 배포된다
+2. **미국 시세 861종목 수집 완료** (시세 840 · 시총 783 · 52주 817 · PER 675).
+   AAPL \$4.54T · NVDA \$4.86T — 실제와 일치 확인
+3. 배포본을 직접 눌러보며 4건 수정 — 의원이 '내부자 거래'로 묶여 있던 것,
+   PER 소수 넷째 자리, 배당수익률 '+' 부호, 빈 섹션
 
 다음 할 일:
-- **① 배포** — GitHub 저장소 생성 → Secrets(DART_KEY, DATA_GO_KR_KEY, FINNHUB_KEY)
-  → Pages 'GitHub Actions'. 워크플로는 국장·미장 단계가 모두 준비돼 있다
-- **② 상원의원** — efdsearch.senate.gov 는 403 + 약관 동의가 필요해 자동화하지 않았다.
-  (A) 하원만 유지 (B) 유저가 CSV 를 pipeline/data/ 에 투입 (C) 유료 API 중 선택 필요
+- **① 🔑 Secrets 등록 (유저)** — 저장소 Settings > Secrets and variables > Actions 에
+  `DART_KEY` `DATA_GO_KR_KEY` `FINNHUB_KEY`. **키 입력은 내가 하지 않는다.**
+  등록 전까지 자동 수집이 돌지 않는다 (현재 데이터는 로컬 수집분을 커밋한 것)
+- **② 상원의원** — efdsearch 는 403 + 약관 동의라 자동화 안 함.
+  (A) 하원만 유지 (B) CSV 를 pipeline/data/ 에 투입 (C) 유료 API 중 선택 필요
 - **③ Supabase 로그인** — PKCE 플로우로 HashRouter 해시 충돌 회피
 - **④ GA4 계측** (STEP 7) — measurement ID 필요
+
+### 배포 중 걸린 것
+- 푸시가 Pages 를 켜기 **전에** deploy 를 트리거해 'Pages not enabled' 로 실패했다.
+  `gh api -X POST repos/OWNER/REPO/pages -f build_type=workflow` 후 재실행하면 된다
+- 공개 저장소라 푸시 전에 **추적 파일 + 전체 커밋 히스토리**에 키가 없는지 확인했다.
+  공개는 되돌리기 어렵다
 
 ### 미장에서 배운 것 (같은 실수 반복 방지)
 - **SEC 는 없는 경로에 403 을 준다** (404 아님). allowMissing 이 403 도 받아야 한다
