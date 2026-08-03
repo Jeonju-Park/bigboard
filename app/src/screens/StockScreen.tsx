@@ -11,6 +11,7 @@ import { getDisclosures, getMeta, getSparklines, getStocks } from '@/lib/data'
 import { useAsync } from '@/lib/useData'
 import { pushRecent, toggleFollowStock, useBroker, useFollowedStocks } from '@/lib/follow'
 import { brokerActionLabel, brokerHref, findBroker } from '@/lib/broker'
+import { useMarket } from '@/lib/market'
 import Sparkline from '@/shared/components/Sparkline'
 import { formatAmountShort, formatDate, formatPrice } from '@/lib/format'
 import homeStyles from './HomeScreen.module.css'
@@ -18,6 +19,7 @@ import styles from './FeedDetailScreen.module.css'
 
 /** S4 종목 — 종목 정보 + 이 종목 전체 내부자 거래 + 예고 + 팔로우 + 거래 바로가기 */
 export default function StockScreen() {
+  const market = useMarket()
   const { code } = useParams()
   const followedStocks = useFollowedStocks()
   const brokerId = useBroker()
@@ -142,11 +144,13 @@ export default function StockScreen() {
       </section>
 
       <section className={styles.actions}>
-        {brokerLink ? (
-          <Button block href={brokerLink}>{brokerActionLabel(broker)}</Button>
-        ) : (
-          <Button block to="/settings">거래할 증권사 선택하기</Button>
-        )}
+        {/* 국내 증권사 목록이라 미장에서는 열어도 할 수 있는 게 없다 (FeedDetail·마이와 동일) */}
+        {market === 'kr' &&
+          (brokerLink ? (
+            <Button block href={brokerLink}>{brokerActionLabel(broker)}</Button>
+          ) : (
+            <Button block to="/settings">거래할 증권사 선택하기</Button>
+          ))}
         <Disclaimer />
       </section>
 

@@ -45,28 +45,35 @@ const full = process.argv.includes('--full')
  */
 const INTERVAL_MS = 1200
 
-const stats = { quote: 0, metric: 0, profile: 0, failed: 0, rateLimited: 0 }
+const stats = { quote: 0, metric: 0, profile: 0, failed: 0, rateLimited: 0, foreignCap: 0 }
 
 async function call<T>(path: string): Promise<T | null> {
   for (let attempt = 0; attempt < 3; attempt++) {
-    const res = await fetch(`https://finnhub.io/api/v1/${path}&token=${KEY}`, {
-      signal: AbortSignal.timeout(30_000),
-    })
-    if (res.status === 429) {
-      stats.rateLimited++
-      // 분당 창이 지나갈 때까지 기다린다
-      await sleep(20_000)
-      continue
+    // ⚠️ fetch 를 try 로 감싸지 않았다가 866종목 중 400번째에서 죽었다.
+    //    AbortSignal.timeout 은 **예외를 던진다.** 한 번의 네트워크 딸꾹질이
+    //    8분치 작업을 통째로 날렸다. 개별 실패는 세고 넘어가야 한다.
+    try {
+      const res = await fetch(`https://finnhub.io/api/v1/${path}&token=${KEY}`, {
+        signal: AbortSignal.timeout(30_000),
+      })
+      if (res.status === 429) {
+        stats.rateLimited++
+        // 분당 창이 지나갈 때까지 기다린다
+        await sleep(20_000)
+        continue
+      }
+      if (res.status === 403) {
+        // 무료 티어에서 막힌 엔드포인트. 재시도해도 같다
+        return null
+      }
+      if (!res.ok) {
+        await sleep(2000)
+        continue
+      }
+      return (await res.json()) as T
+    } catch {
+      await sleep(2000 * (attempt + 1))
     }
-    if (res.status === 403) {
-      // 무료 티어에서 막힌 엔드포인트. 재시도해도 같다
-      return null
-    }
-    if (!res.ok) {
-      await sleep(2000)
-      continue
-    }
-    return (await res.json()) as T
   }
   stats.failed++
   return null
@@ -107,10 +114,17 @@ async function main() {
   console.log(`\n미국 시세 수집 — ${stocks.length}종목 · ${full ? '전체(시세+지표+기업정보)' : '시세만'}`)
   console.log(`예상 소요 약 ${estMin}분 (분당 50회 제한)\n`)
 
+  const save = () => writeFileSync(stocksPath, JSON.stringify(stocks, null, 1) + '\n', 'utf8')
+
   let done = 0
   for (const s of stocks) {
     done++
-    if (done % 50 === 0) console.log(`  ${done}/${stocks.length} …`)
+    if (done % 50 === 0) {
+      // 중간 저장. 끝에서 한 번만 쓰면 도중에 죽었을 때 전부 잃는다
+      save()
+      const got = stocks.filter((x) => x.prevClose !== null).length
+      console.log(`  ${done}/${stocks.length} … (시세 확보 ${got})`)
+    }
 
     const q = await call<Quote>(`quote?symbol=${encodeURIComponent(s.code)}`)
     await sleep(INTERVAL_MS)
@@ -128,10 +142,23 @@ async function main() {
     await sleep(INTERVAL_MS)
     if (p) {
       stats.profile++
-      // marketCapitalization 은 **백만 달러** 단위다. 달러로 환산한다
-      const cap = num(p.marketCapitalization)
-      s.marketCap = cap === null ? null : Math.round(cap * 1_000_000)
       s.market = p.exchange ?? null
+      // marketCapitalization 은 **백만 단위**인데, 통화가 달러가 아닐 수 있다.
+      //
+      // ⚠️ 실제로 걸렸다: VTMX(Vesta, 멕시코 리츠)의 시총이 52,993(백만) 으로 와서
+      //    그대로 쓰면 "$53.0B" 가 된다. 실제 가치는 약 \$2.6B 이고, 저 숫자는 **페소**다.
+      //    (주가 자체는 미국 상장분이라 달러로 온다 — 시총만 현지 통화다)
+      //
+      //    환율을 끌어와 환산하지 않는다. 환산 시점·환율 출처를 화면이 설명할 수 없고,
+      //    우리가 만든 수를 원문인 척 보여주게 된다. 모르면 null 로 둔다(규칙 2).
+      const cap = num(p.marketCapitalization)
+      const isUsd = !p.currency || p.currency.toUpperCase() === 'USD'
+      if (cap !== null && isUsd) {
+        s.marketCap = Math.round(cap * 1_000_000)
+      } else {
+        if (cap !== null) stats.foreignCap++
+        s.marketCap = null
+      }
     }
 
     const m = await call<Metric>(`stock/metric?symbol=${encodeURIComponent(s.code)}&metric=all`)
@@ -147,7 +174,7 @@ async function main() {
     }
   }
 
-  writeFileSync(stocksPath, JSON.stringify(stocks, null, 1) + '\n', 'utf8')
+  save()
 
   const metaPath = join(DATA_DIR, 'meta.json')
   const meta: Meta = JSON.parse(readFileSync(metaPath, 'utf8'))
@@ -163,6 +190,9 @@ async function main() {
   console.log(`시세 확보 ${withPrice}/${stocks.length}종목 (${((withPrice / stocks.length) * 100).toFixed(0)}%)`)
   if (full) {
     console.log(`지표 ${stats.metric}종목 · 기업정보 ${stats.profile}종목`)
+  }
+  if (stats.foreignCap) {
+    console.log(`시가총액 제외 ${stats.foreignCap}종목 — 신고 통화가 달러가 아니라 환산하지 않았습니다`)
   }
   if (stats.rateLimited) console.log(`호출 제한에 걸려 대기 ${stats.rateLimited}회`)
   if (stats.failed) console.log(`실패 ${stats.failed}건 (해당 항목은 null 로 남습니다)`)
