@@ -23,3 +23,6 @@ pipeline/.cache/
 
 # 공직자 원본 자료 (유저가 내려받아 넣는 파일 — 커밋하지 않는다)
 pipeline/data/
+
+# 시세 일자별 캐시
+pipeline/.cache/prices/

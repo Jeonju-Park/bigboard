@@ -82,6 +82,8 @@ export interface Sparkline {
 export interface Stock {
   code: string
   name: string
+  /** 시장 구분 (KOSPI/KOSDAQ/KONEX). 시세 API 의 mrktCtg */
+  market: string | null
   prevClose: number | null
   change: number | null
   marketCap: number | null
@@ -91,7 +93,8 @@ export interface Stock {
   divYield: number | null
   high52: number | null
   low52: number | null
-  sparkline: Sparkline
+  /** 시세 기준일 (거래일, ISO). 규칙 2 — 언제 시점의 값인지 화면에 붙일 수 있어야 한다 */
+  priceAsOf: string | null
 }
 
 export type RankingPeriod = '7' | '30' | '90'

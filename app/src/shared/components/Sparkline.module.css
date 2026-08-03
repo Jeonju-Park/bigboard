@@ -1,0 +1,58 @@
+/* 종가 추이 — 경량 SVG. 차트 라이브러리 없음 */
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.tabs {
+  display: flex;
+  gap: var(--space-1);
+  align-self: flex-start;
+}
+
+.tab {
+  min-height: var(--touch-min);
+  padding-inline: var(--space-3);
+  border: 0;
+  border-radius: var(--radius-chip);
+  background: none;
+  color: var(--text-caption);
+  cursor: pointer;
+}
+
+/* 선택은 bg-secondary 면 — coral 은 브랜드 전용이라 데이터 UI 에 반복해서 쓰지 않는다 */
+.tab[aria-pressed='true'] {
+  background: var(--bg-secondary);
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.tab:disabled {
+  color: var(--disabled-fg);
+  cursor: not-allowed;
+}
+
+.chart {
+  width: 100%;
+  /* 세로는 고정, 가로는 컨테이너에 맞춘다 */
+  height: var(--space-12);
+  display: block;
+  overflow: visible;
+}
+
+/* 국장 관습 (§2) — 상승 빨강, 하락 파랑. currentColor 로 선·면에 동시 적용된다 */
+.up {
+  color: var(--semantic-buy);
+}
+
+.down {
+  color: var(--semantic-sell);
+}
+
+.axis {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-2);
+}

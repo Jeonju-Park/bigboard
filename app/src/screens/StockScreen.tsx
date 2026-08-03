@@ -7,11 +7,12 @@ import { FollowChip, StockInfoList } from '@/shared/components/Rows'
 import {
   Disclaimer, EmptyState, ErrorState, FreshnessLabel, LoadingState, SectionHeader,
 } from '@/shared/components/Feedback'
-import { getDisclosures, getMeta, getStocks } from '@/lib/data'
+import { getDisclosures, getMeta, getSparklines, getStocks } from '@/lib/data'
 import { useAsync } from '@/lib/useData'
 import { pushRecent, toggleFollowStock, useBroker, useFollowedStocks } from '@/lib/follow'
 import { brokerActionLabel, brokerHref, findBroker } from '@/lib/broker'
-import { formatAmountShort, formatDate } from '@/lib/format'
+import Sparkline from '@/shared/components/Sparkline'
+import { formatAmountShort, formatDate, formatWon } from '@/lib/format'
 import homeStyles from './HomeScreen.module.css'
 import styles from './FeedDetailScreen.module.css'
 
@@ -22,11 +23,14 @@ export default function StockScreen() {
   const brokerId = useBroker()
 
   const { state, data, error, retry } = useAsync(async () => {
-    const [stocks, disclosures, meta] = await Promise.all([getStocks(), getDisclosures(), getMeta()])
-    return { stocks, disclosures, meta }
+    const [stocks, disclosures, meta, sparklines] = await Promise.all([
+      getStocks(), getDisclosures(), getMeta(), getSparklines().catch(() => ({})),
+    ])
+    return { stocks, disclosures, meta, sparklines }
   })
 
   const stock = useMemo(() => data?.stocks.find((s) => s.code === code) ?? null, [data, code])
+  const spark = code && data?.sparklines ? (data.sparklines as Record<string, any>)[code] ?? null : null
   const list = useMemo(
     () => (data ? data.disclosures.filter((d) => d.stockCode === code) : []),
     [data, code],
@@ -66,22 +70,45 @@ export default function StockScreen() {
           />
         </div>
 
+        {/* 주가는 이 화면의 주인공이라 목록보다 위에 승격한다 */}
+        {stock.prevClose !== null && (
+          <div className={styles.priceBlock}>
+            <span className="ty-promote">{formatWon(stock.prevClose)}</span>
+            {stock.change !== null && (
+              <span className={`ty-label ${stock.change >= 0 ? styles.buy : styles.sell}`}>
+                {stock.change >= 0 ? '+' : ''}{stock.change}%
+              </span>
+            )}
+            {stock.priceAsOf && <span className="ty-micro">{formatDate(stock.priceAsOf)} 종가</span>}
+          </div>
+        )}
+
+        {spark && (
+          <div style={{ marginBlock: 'var(--space-4)' }}>
+            <Sparkline data={spark} priceAsOf={stock.priceAsOf ? formatDate(stock.priceAsOf) : null} />
+          </div>
+        )}
+
         <StockInfoList
           items={[
-            { term: '전일종가', value: stock.prevClose?.toLocaleString() ?? null },
-            { term: '등락률', value: stock.change === null ? null : `${stock.change}%` },
+            { term: '시장', value: stock.market },
             { term: '시가총액', value: formatAmountShort(stock.marketCap) },
-            { term: '거래량', value: stock.volume?.toLocaleString() ?? null },
+            { term: '거래량', value: stock.volume === null ? null : `${stock.volume.toLocaleString()}주` },
+            { term: '52주 최고', value: formatWon(stock.high52) },
+            { term: '52주 최저', value: formatWon(stock.low52) },
             { term: 'PER', value: stock.per?.toString() ?? null },
             { term: 'PBR', value: stock.pbr?.toString() ?? null },
             { term: '배당수익률', value: stock.divYield === null ? null : `${stock.divYield}%` },
-            { term: '52주 최고', value: stock.high52?.toLocaleString() ?? null },
-            { term: '52주 최저', value: stock.low52?.toLocaleString() ?? null },
           ]}
         />
-        {!data?.meta.priceDataAvailable && (
+        {stock.prevClose === null && (
           <p className="ty-micro" style={{ marginTop: 'var(--space-2)' }}>
-            시세 정보는 아직 연결되지 않았습니다. 없는 값을 지어내지 않으려고 해당 항목은 표시하지 않습니다.
+            이 종목의 시세를 찾지 못했습니다. 상장폐지되었거나 비상장일 수 있습니다.
+          </p>
+        )}
+        {(stock.per === null || stock.divYield === null) && stock.prevClose !== null && (
+          <p className="ty-micro" style={{ marginTop: 'var(--space-2)' }}>
+            PER·PBR·배당수익률은 아직 연결되지 않아 표시하지 않습니다. 없는 값을 지어내지 않습니다.
           </p>
         )}
       </section>

@@ -13,7 +13,8 @@ import {
   SectionHeader,
 } from '@/shared/components/Feedback'
 import Icon from '@/shared/components/Icon'
-import { getDisclosures, getMeta, getStocks } from '@/lib/data'
+import Sparkline from '@/shared/components/Sparkline'
+import { getDisclosures, getMeta, getSparklines, getStocks } from '@/lib/data'
 import { useAsync } from '@/lib/useData'
 import { pushRecent, toggleFollowPerson, useBroker, useFollowedPersons } from '@/lib/follow'
 import { brokerActionLabel, brokerHref, findBroker } from '@/lib/broker'
@@ -42,8 +43,10 @@ export default function FeedDetailScreen() {
   const brokerId = useBroker()
 
   const { state, data, error, retry } = useAsync(async () => {
-    const [disclosures, stocks, meta] = await Promise.all([getDisclosures(), getStocks(), getMeta()])
-    return { disclosures, stocks, meta }
+    const [disclosures, stocks, meta, sparklines] = await Promise.all([
+      getDisclosures(), getStocks(), getMeta(), getSparklines().catch(() => ({})),
+    ])
+    return { disclosures, stocks, meta, sparklines }
   })
 
   const d = useMemo(() => data?.disclosures.find((x) => x.id === id) ?? null, [data, id])
@@ -98,6 +101,7 @@ export default function FeedDetailScreen() {
   }
 
   const pKey = personKey(d.personName, d.company)
+  const spark = data?.sparklines ? (data.sparklines as Record<string, any>)[d.stockCode] ?? null : null
   const lag = daysBetween(d.tradeDate, d.discloseDate)
   const broker = findBroker(brokerId)
   const brokerLink = brokerHref(broker)
@@ -234,21 +238,40 @@ export default function FeedDetailScreen() {
           title="종목 정보"
           note={<Link to={`/stock/${d.stockCode}`} className="ty-caption tap-safe">종목 페이지</Link>}
         />
+        {/* 현재가 — 공시 단가와 비교하는 기준점이라 위로 올린다 */}
+        {context?.stock?.prevClose != null && (
+          <div className={styles.priceBlock}>
+            <span className="ty-amount">{formatWon(context.stock.prevClose)}</span>
+            {context.stock.change !== null && (
+              <span className={`ty-body-s ${context.stock.change >= 0 ? styles.buy : styles.sell}`}>
+                {context.stock.change >= 0 ? '+' : ''}{context.stock.change}%
+              </span>
+            )}
+            {context.stock.priceAsOf && (
+              <span className="ty-micro">{formatDate(context.stock.priceAsOf)} 종가</span>
+            )}
+          </div>
+        )}
+
+        {spark && (
+          <div style={{ marginBottom: 'var(--space-4)' }}>
+            <Sparkline
+              data={spark}
+              priceAsOf={context?.stock?.priceAsOf ? formatDate(context.stock.priceAsOf) : null}
+            />
+          </div>
+        )}
+
         <StockInfoList
           items={[
             { term: '종목명', value: context?.stock?.name ?? d.company },
             { term: '종목코드', value: d.stockCode },
-            { term: '전일종가', value: context?.stock?.prevClose?.toLocaleString() ?? null },
+            { term: '시장', value: context?.stock?.market ?? null },
             { term: '시가총액', value: formatAmountShort(context?.stock?.marketCap ?? null) },
-            { term: 'PER', value: context?.stock?.per?.toString() ?? null },
-            { term: 'PBR', value: context?.stock?.pbr?.toString() ?? null },
+            { term: '52주 최고', value: formatWon(context?.stock?.high52 ?? null) },
+            { term: '52주 최저', value: formatWon(context?.stock?.low52 ?? null) },
           ]}
         />
-        {!data?.meta.priceDataAvailable && (
-          <p className="ty-micro" style={{ marginTop: 'var(--space-2)' }}>
-            시세 정보는 아직 연결되지 않았습니다. 없는 값을 지어내지 않으려고 해당 항목은 표시하지 않습니다.
-          </p>
-        )}
       </section>
 
       {/* ⑤ 내부자 동향 */}

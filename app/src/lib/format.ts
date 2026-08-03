@@ -8,13 +8,23 @@
  *    화면이 "행 숨김"을 선택할 수 있어야 하기 때문이다.
  */
 
+const 조 = 1_000_000_000_000
 const 억 = 100_000_000
 const 만 = 10_000
 
-/** 리스트용 압축 표기 — "82.4억", "3,440만", "5,120원" */
+/**
+ * 리스트용 압축 표기 — "1,535조", "82.4억", "3,440만", "5,120원"
+ *
+ * 조 단위가 없으면 시가총액이 "15,346,481억" 처럼 읽을 수 없는 숫자가 된다.
+ * 대기업 시총은 조 단위가 기본이라 여기서 끊는다.
+ */
 export function formatAmountShort(v: number | null): string | null {
   if (v === null || !Number.isFinite(v)) return null
   const abs = Math.abs(v)
+  if (abs >= 조) {
+    const n = v / 조
+    return `${Math.abs(n) >= 100 ? Math.round(n).toLocaleString() : n.toFixed(1)}조`
+  }
   if (abs >= 억) {
     const n = v / 억
     // 100억 넘으면 소수점이 의미 없다
@@ -30,6 +40,11 @@ export function formatAmountFull(v: number | null): string | null {
   const sign = v < 0 ? '-' : ''
   let rest = Math.abs(Math.round(v))
   const parts: string[] = []
+  const jo = Math.floor(rest / 조)
+  if (jo) {
+    parts.push(`${jo.toLocaleString()}조`)
+    rest -= jo * 조
+  }
   const eok = Math.floor(rest / 억)
   if (eok) {
     parts.push(`${eok.toLocaleString()}억`)

@@ -97,12 +97,21 @@ export interface Person {
   totalNetBuy12m: number
 }
 
-/** 스파크라인 종가 시계열 — 1개월/3개월/1년 */
+/**
+ * 스파크라인 종가 시계열 — 1개월/3개월/1년.
+ *
+ * **stocks.json 이 아니라 sparklines.json 으로 분리했다.** 종목당 100여 개의 숫자라
+ * 합치면 gzip 200KB 가 넘는데, 정작 필요한 곳은 종목·피드 상세 두 화면뿐이다.
+ * 탐색·검색·마이가 그 무게를 같이 지불할 이유가 없다.
+ */
 export interface Sparkline {
   m1: number[]
   m3: number[]
   y1: number[]
 }
+
+/** 종목코드 → 스파크라인 (sparklines.json) */
+export type Sparklines = Record<string, Sparkline>
 
 /**
  * 시세 항목은 전부 nullable 이다.
@@ -112,6 +121,8 @@ export interface Sparkline {
 export interface Stock {
   code: string
   name: string
+  /** 시장 구분 (KOSPI/KOSDAQ/KONEX). 시세 API 의 mrktCtg */
+  market: string | null
   prevClose: number | null
   /** 전일 대비 등락률(%) */
   change: number | null
@@ -122,7 +133,8 @@ export interface Stock {
   divYield: number | null
   high52: number | null
   low52: number | null
-  sparkline: Sparkline
+  /** 시세 기준일 (거래일, ISO). 규칙 2 — 언제 시점의 값인지 화면에 붙일 수 있어야 한다 */
+  priceAsOf: string | null
 }
 
 export type RankingPeriod = '7' | '30' | '90'

@@ -36,10 +36,9 @@ jobs:
 
       # pipeline 은 의존성이 없다(zlib·fetch 내장, Node 네이티브 TS 실행).
       # npm ci 를 부를 lockfile 도 없으므로 설치 단계 자체가 필요 없다.
-      - name: 수집 실행
+      - name: 공시 수집 (DART)
         env:
           DART_KEY: ${{ secrets.DART_KEY }}
-          DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
         run: |
           if [ -z "$DART_KEY" ]; then
             echo "::error::DART_KEY Secret 이 없습니다. 저장소 Settings > Secrets and variables > Actions 에서 등록하세요."
@@ -49,6 +48,29 @@ jobs:
             node pipeline/src/fetch.ts --days ${{ inputs.days }}
           else
             node pipeline/src/fetch.ts --incremental
+          fi
+
+      # 시세는 공시가 정한 종목 목록 위에 덧씌우므로 반드시 공시 수집 뒤에 온다.
+      #
+      # --history(1년치 훑기)는 약 865회를 쓰므로 **하루 한 번**만 돈다.
+      # 그 판단 기준은 '첫 실행 시간대'다 — cron 은 UTC 0~9시에 30분 간격으로 도는데
+      # UTC 0시대(= KST 오전 9시대)에만 전체를 다시 계산한다.
+      # 나머지 실행은 최근 영업일 시세만(3회) 갱신한다.
+      - name: 시세 수집 (공공데이터포털)
+        env:
+          DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
+        run: |
+          if [ -z "$DATA_GO_KR_KEY" ]; then
+            echo "::notice::DATA_GO_KR_KEY 가 없어 시세 수집을 건너뜁니다. 시세 항목은 화면에서 숨겨집니다."
+            exit 0
+          fi
+          HOUR=$(date -u +%H)
+          if [ "$HOUR" = "00" ] || [ -n "${{ inputs.days }}" ]; then
+            echo "1년치 훑기 (52주·스파크라인 재계산)"
+            node pipeline/src/stocks.ts --history
+          else
+            echo "최근 영업일 시세만 갱신"
+            node pipeline/src/stocks.ts
           fi
 
       - name: 변경이 있을 때만 커밋

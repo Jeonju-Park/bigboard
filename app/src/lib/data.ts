@@ -5,7 +5,7 @@
  *    (CORS·API 키 노출 때문) pipeline/ 이 커밋해 둔 정적 JSON 만 읽는다.
  *    화면 코드는 fetch 를 직접 쓰지 말고 반드시 이 모듈을 거친다.
  */
-import type { Disclosure, Meta, Person, Rankings, Stock } from './types'
+import type { Disclosure, Meta, Person, Rankings, Sparklines, Stock } from './types'
 
 /** Vite base('./')와 GitHub Pages 하위 경로를 모두 처리한다 */
 function dataUrl(file: string): string {
@@ -56,6 +56,11 @@ export const getDisclosures = () => loadJson<Disclosure[]>('disclosures.json')
 export const getPersons = () => loadJson<Person[]>('persons.json')
 export const getStocks = () => loadJson<Stock[]>('stocks.json')
 export const getRankings = () => loadJson<Rankings>('rankings.json')
+/**
+ * 스파크라인은 무겁다(gzip 155KB). 종목·피드 상세에서만 부른다 —
+ * 탐색·검색·마이가 이 무게를 지불하지 않도록 stocks.json 에서 분리했다.
+ */
+export const getSparklines = () => loadJson<Sparklines>('sparklines.json')
 export const getMeta = () => loadJson<Meta>('meta.json')
 
 /** 재시도 화면에서 호출 — 캐시를 비워 다음 요청이 실제로 나가게 한다 */
