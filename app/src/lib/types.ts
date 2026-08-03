@@ -34,7 +34,11 @@ export interface Disclosure {
   direction: Direction
   /** 무상증여·상속 등 단가가 공시에 없는 경우 null */
   unitPrice: number | null
-  quantity: number
+  /**
+   * 순증감 주식 수. **미국 의회 신고는 주식 수를 공개하지 않는다** — 금액 구간만 낸다.
+   * 그래서 null 이 될 수 있고, 화면은 0 대신 해당 표시를 숨긴다.
+   */
+  quantity: number | null
   /**
    * 단가x수량 합. **null 이 흔하다** — 단가 미기재(무상증여·권리행사)이거나
    * 한 보고서에 매수·매도가 섞여 순증감 수량과 단위가 안 맞는 경우.
@@ -50,8 +54,10 @@ export interface Disclosure {
   isPlanned: boolean
   /** 사전공시일 때 남은 일수 */
   dDay: number | null
-  holdingBefore: number
-  holdingAfter: number
+  /** 변동 전 보유량. 의회 신고에는 없어서 null */
+  holdingBefore: number | null
+  /** 변동 후 보유량. 의회 신고에는 없어서 null */
+  holdingAfter: number | null
   details: TradeDetail[]
   /**
    * 원문 링크 — 모든 상세에 필수 (실명 데이터 책임).

@@ -88,10 +88,10 @@ for (const d of picks.slice(0, count)) {
   console.log(`\n  수집값:`)
   console.log(`    방향        ${d.direction === 'buy' ? '매수' : '매도'}`)
   console.log(`    단가        ${d.unitPrice === null ? 'null (공시에 단가 없음/복수단가)' : d.unitPrice.toLocaleString() + '원'}`)
-  console.log(`    수량        ${d.quantity.toLocaleString()}주`)
+  console.log(`    수량        ${d.quantity === null ? 'null (신고에 주식 수 없음)' : d.quantity.toLocaleString() + '주'}`)
   console.log(`    총액        ${d.totalAmount === null ? 'null' : d.totalAmount.toLocaleString() + '원'}`)
   console.log(`    거래일      ${d.tradeDate}   공시일 ${d.discloseDate}`)
-  console.log(`    보유 ${d.holdingBefore.toLocaleString()} → ${d.holdingAfter.toLocaleString()}`)
+  console.log(`    보유 ${d.holdingBefore?.toLocaleString() ?? 'null'} → ${d.holdingAfter?.toLocaleString() ?? 'null'}`)
   console.log(`    세부내역    ${d.details.length}행`)
 
   const check = (label: string, ok: boolean, detail: string) => {
@@ -109,8 +109,12 @@ for (const d of picks.slice(0, count)) {
     check('단가x수량=총액', expect === d.totalAmount, `${d.unitPrice.toLocaleString()} x ${Math.abs(d.details[0].qty).toLocaleString()} = ${expect.toLocaleString()} vs 수집 ${d.totalAmount.toLocaleString()}`)
   }
   const detailSum = d.details.reduce((a, r) => a + r.qty, 0)
-  check('세부내역 합 = 대표수량', Math.abs(detailSum) === d.quantity, `Σ${detailSum} vs ${d.quantity}`)
-  if (!d.isPlanned) {
+  // verify 는 국장(DART) 원문 대조용이다. 수량·보유량이 없는 시장(미 의회 신고)은
+  // 이 검사 자체가 성립하지 않으므로 건너뛴다
+  if (d.quantity !== null) {
+    check('세부내역 합 = 대표수량', Math.abs(detailSum) === d.quantity, `Σ${detailSum} vs ${d.quantity}`)
+  }
+  if (!d.isPlanned && d.holdingBefore !== null && d.holdingAfter !== null) {
     check('변동전 + 순증감 = 변동후', d.holdingBefore + detailSum === d.holdingAfter, `${d.holdingBefore} + ${detailSum} = ${d.holdingBefore + detailSum} vs ${d.holdingAfter}`)
   }
 

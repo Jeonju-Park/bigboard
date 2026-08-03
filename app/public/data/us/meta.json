@@ -1,20 +1,21 @@
 {
  "market": "us",
- "lastUpdated": "2026-08-03T16:28:31.060Z",
+ "lastUpdated": "2026-08-03T18:28:54.607Z",
  "sources": [
   "미국 증권거래위원회(SEC) EDGAR — Form 4 임원·주요주주 소유변동 신고",
-  "미국 증권거래위원회(SEC) EDGAR — 13F-HR 기관투자자 분기 보유 신고"
+  "미국 증권거래위원회(SEC) EDGAR — 13F-HR 기관투자자 분기 보유 신고",
+  "미 하원 사무처(Clerk of the House) — STOCK Act 정기거래보고서(PTR)"
  ],
  "counts": {
-  "disclosures": 627,
-  "persons": 567,
-  "stocks": 364
+  "disclosures": 2568,
+  "persons": 1539,
+  "stocks": 866
  },
  "officialsAsOf": null,
  "priceDataAvailable": false,
  "sparklineAvailable": false,
  "skipped": {
-  "total": 1841,
+  "total": 2634,
   "reasons": {
    "시장 거래(P/S) 없음": 295,
    "순증감 0 (매수·매도 상쇄)": 1,
@@ -28,7 +29,21 @@
    "시장 거래 아님 — 회사에 반납": 113,
    "시장 거래 아님 — 전환": 54,
    "시장 거래 아님 — 코드 U": 9,
-   "시장 거래 아님 — 옵션 행사(만기)": 5
+   "시장 거래 아님 — 옵션 행사(만기)": 5,
+   "주식·옵션 거래 없음": 113,
+   "자산 종류 OT": 27,
+   "자산 종류 GS": 113,
+   "자산 종류 PS": 4,
+   "자산 종류 HN": 16,
+   "자산 종류 CS": 22,
+   "거래 코드 E": 25,
+   "티커 없음": 4,
+   "자산 종류 OI": 2,
+   "자산 종류 AB": 1,
+   "자산 종류 RS": 2,
+   "자산 종류 VA": 6,
+   "PDF 에 텍스트 없음 (스캔 제출)": 33,
+   "거래일이 신고일보다 뒤 (제출자 오타 의심)": 2
   }
  }
 }

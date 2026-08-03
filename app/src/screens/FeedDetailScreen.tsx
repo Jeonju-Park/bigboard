@@ -169,8 +169,9 @@ export default function FeedDetailScreen() {
               { term: '보고사유', value: d.reportReason || null },
               {
                 term: '보유 변화',
-                value: d.holdingAfter || d.holdingBefore
-                  ? `${d.holdingBefore.toLocaleString()} → ${d.holdingAfter.toLocaleString()}주`
+                // 의회 신고에는 보유량이 없어 둘 다 null 이다. 그때는 행 자체를 숨긴다
+                value: d.holdingAfter !== null || d.holdingBefore !== null
+                  ? `${(d.holdingBefore ?? 0).toLocaleString()} → ${(d.holdingAfter ?? 0).toLocaleString()}주`
                   : null,
               },
             ]}

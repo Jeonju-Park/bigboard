@@ -46,8 +46,11 @@ export function derivePersons(list: Disclosure[]): Person[] {
 
     // 종목별 보유는 가장 최근 공시의 변동후 잔량
     const h = p.holdings.find((x) => x.stockCode === d.stockCode)
-    if (!h) p.holdings.push({ stockCode: d.stockCode, stockName: d.company, quantity: d.holdingAfter })
-    else h.quantity = d.holdingAfter
+    // 보유량을 모르는 시장(의회 신고)은 보유 목록을 만들지 않는다 — 0 으로 채우면 '0주 보유'라는 거짓이 된다
+    if (d.holdingAfter !== null) {
+      if (!h) p.holdings.push({ stockCode: d.stockCode, stockName: d.company, quantity: d.holdingAfter })
+      else h.quantity = d.holdingAfter
+    }
 
     if (d.tradeDate >= cutoff && d.totalAmount !== null) {
       p.totalNetBuy12m += d.direction === 'buy' ? d.totalAmount : -d.totalAmount
