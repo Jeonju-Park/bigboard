@@ -34,6 +34,8 @@ mkdirSync(OUT, { recursive: true })
 
 const BASE = 'https://apis.data.go.kr/1160100/service/GetStockSecuritiesInfoService'
 const KRX_BASE = 'https://apis.data.go.kr/1160100/service/GetKrxListedInfoService'
+/** 행정안전부_관보_공직자 재산 공개 (15109164) — 구조화된 금액이 오는지 확인용 */
+const GWANBO_BASE = 'https://apis.data.go.kr/1741000/gwanbo'
 
 /**
  * 포털은 인증키를 쿼리로 받는다.
@@ -188,7 +190,53 @@ async function main() {
     console.log(`   실패: ${(e as Error).message.slice(0, 120)}`)
   }
 
-  console.log(`\n원본 샘플: pipeline/.explore/stocks-sample.json, krx-sample.json\n`)
+  // ── 6) 공직자 재산공개 관보 ────────────────────────────────────────────────
+  console.log(`\n⑥ 공직자 재산공개 관보 (15109164) — 무엇이 오는가`)
+  console.log(`   확인 목적: 개인별 재산 금액이 **구조화된 값**으로 오는가,`)
+  console.log(`             아니면 관보 문서 목록(제목·발행일자·원문링크)만 오는가`)
+
+  // 오퍼레이션 이름을 모르므로 흔한 후보를 순서대로 시도한다
+  const candidates = [
+    { op: 'getGwanboPrptOptpList', params: { numOfRows: '3', pageNo: '1' } },
+    { op: 'getPrptOptpList', params: { numOfRows: '3', pageNo: '1' } },
+    { op: 'getGwanboList', params: { numOfRows: '3', pageNo: '1' } },
+  ]
+
+  let found = false
+  for (const c of candidates) {
+    try {
+      const json = await call(GWANBO_BASE, c.op, c.params)
+      const list = items(json)
+      console.log(`   ${c.op}: header=${header(json)} items=${list.length}`)
+      if (list.length) {
+        found = true
+        const keys = Object.keys(list[0])
+        keys.forEach((k) => console.log(`      ${k.padEnd(18)} = ${String(list[0][k]).slice(0, 50)}`))
+
+        const hasAmount = keys.some((k) => /amt|재산|asset|prpt.*amt/i.test(k))
+        const hasName = keys.some((k) => /nm|name|성명|인물/i.test(k))
+        console.log(`\n      ${hasAmount ? '✓' : '✗'} 재산 금액 필드로 보이는 것`)
+        console.log(`      ${hasName ? '✓' : '✗'} 인물 이름 필드로 보이는 것`)
+        console.log(
+          hasAmount && hasName
+            ? `      → 구조화 데이터. officials.ts 를 이 응답에 맞춰 고치면 바로 붙는다`
+            : `      → 문서 메타데이터로 보인다. 관보 원문을 파싱해야 개인별 금액을 얻는다.`,
+        )
+        writeFileSync(join(OUT, 'gwanbo-sample.json'), JSON.stringify(list[0], null, 2), 'utf8')
+        break
+      }
+    } catch (e) {
+      console.log(`   ${c.op}: ${(e as Error).message.slice(0, 110)}`)
+    }
+  }
+  if (!found) {
+    console.log(`
+   오퍼레이션 이름을 못 맞혔습니다. 포털 페이지의 '참고문서'(Swagger/명세서)를 열어
+   오퍼레이션 이름을 알려주시면 그걸로 다시 찔러보겠습니다.
+   (15109164 활용신청이 아직 승인 전이면 이 결과가 정상입니다)`)
+  }
+
+  console.log(`\n원본 샘플: pipeline/.explore/ (stocks-sample.json, krx-sample.json, gwanbo-sample.json)\n`)
 }
 
 await main()
