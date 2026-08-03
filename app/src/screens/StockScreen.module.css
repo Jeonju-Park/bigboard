@@ -1,0 +1,35 @@
+
+/* 이 종목을 보유한 공직자 — 거래가 아니라 보유 스냅샷이라 카드가 아닌 목록으로 둔다 */
+.holderList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.holderRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: var(--touch-min);
+  padding-block: var(--space-3);
+  border-bottom: var(--hairline);
+  color: inherit;
+  text-decoration: none;
+}
+
+.holderList li:last-child .holderRow {
+  border-bottom: 0;
+}
+
+.holderBody {
+  min-width: 0;
+  flex: 1;
+}
+
+.holderBody p {
+  margin: 0;
+}
+
+.holderName {
+  color: var(--ink);
+}

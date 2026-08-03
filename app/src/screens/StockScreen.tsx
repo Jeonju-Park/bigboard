@@ -7,7 +7,9 @@ import { FollowChip, StockInfoList } from '@/shared/components/Rows'
 import {
   Disclaimer, EmptyState, ErrorState, FreshnessLabel, LoadingState, SectionHeader,
 } from '@/shared/components/Feedback'
-import { getDisclosures, getMeta, getSparklines, getStocks } from '@/lib/data'
+import { getDisclosures, getMeta, getPersons, getSparklines, getStocks } from '@/lib/data'
+import { officialsHoldingStock } from '@/lib/officials'
+import { formatQuantity } from '@/lib/format'
 import { useAsync } from '@/lib/useData'
 import { pushRecent, toggleFollowStock, useBroker, useFollowedStocks } from '@/lib/follow'
 import { brokerActionLabel, brokerHref, findBroker } from '@/lib/broker'
@@ -25,16 +27,21 @@ export default function StockScreen() {
   const brokerId = useBroker()
 
   const { state, data, error, retry } = useAsync(async () => {
-    const [stocks, disclosures, meta, sparklines] = await Promise.all([
-      getStocks(), getDisclosures(), getMeta(), getSparklines().catch(() => ({})),
+    const [stocks, disclosures, meta, sparklines, persons] = await Promise.all([
+      getStocks(), getDisclosures(), getMeta(), getSparklines().catch(() => ({})), getPersons(),
     ])
-    return { stocks, disclosures, meta, sparklines }
+    return { stocks, disclosures, meta, sparklines, persons }
   })
 
   const stock = useMemo(() => data?.stocks.find((s) => s.code === code) ?? null, [data, code])
   const spark = code && data?.sparklines ? (data.sparklines as Record<string, any>)[code] ?? null : null
   const list = useMemo(
     () => (data ? data.disclosures.filter((d) => d.stockCode === code) : []),
+    [data, code],
+  )
+  // 이 종목을 보유한 공직자. 거래가 아니라 **보유 스냅샷**이라 내부자 거래와 섞지 않는다
+  const officialHolders = useMemo(
+    () => (data && code ? officialsHoldingStock(data.persons, code) : []),
     [data, code],
   )
   const planned = list.filter((d) => d.isPlanned)
@@ -129,6 +136,43 @@ export default function StockScreen() {
               </span>
             </Link>
           ))}
+        </section>
+      )}
+
+      {officialHolders.length > 0 && (
+        <section>
+          <SectionHeader
+            title="이 종목을 보유한 공직자"
+            note={`${officialHolders.length}명 · 재산공개`}
+          />
+          <ul className={styles.holderList}>
+            {officialHolders.map(({ person, lots, total }) => (
+              <li key={person.id}>
+                <Link to={`/person/${encodeURIComponent(person.id)}`} className={styles.holderRow}>
+                  <div className={styles.holderBody}>
+                    <p className={`ty-label ${styles.holderName}`}>{person.name}</p>
+                    <p className="ty-caption">
+                      {person.company}
+                      {person.title ? ` · ${person.title}` : ''}
+                    </p>
+                    {/* 명의를 합쳐 보여주면 배우자 보유가 본인 것으로 읽힌다.
+                        본인 외 명의가 섞여 있을 때만 내역을 편다 */}
+                    {lots.length > 1 || lots[0]?.owner !== '본인' ? (
+                      <p className="ty-micro">
+                        {lots.map((l) => `${l.owner ?? '명의 미상'} ${formatQuantity(l.quantity)}`).join(' · ')}
+                      </p>
+                    ) : null}
+                  </div>
+                  <span className="ty-amount">{formatQuantity(total)}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <p className="ty-micro" style={{ marginTop: 'var(--space-2)' }}>
+            {data?.meta.officialsAsOf ? `${formatDate(data.meta.officialsAsOf)}에 공개된 ` : ''}
+            재산 신고 자료입니다. 거래 내역이 아니라 <b>보유 현황</b>이며, 언제 사고팔았는지는
+            공개되지 않습니다.
+          </p>
         </section>
       )}
 

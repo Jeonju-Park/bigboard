@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react'
+import { Link } from 'react-router'
 import Screen from '@/shared/components/Screen'
 import { AppBarAction } from '@/shared/components/AppBar'
 import DisclosureCard from '@/shared/components/DisclosureCard'
@@ -7,11 +8,13 @@ import { OptionSheet } from '@/shared/components/BottomSheet'
 import {
   Disclaimer, EmptyState, ErrorState, FreshnessLabel, LoadingState, StaleBanner,
 } from '@/shared/components/Feedback'
-import { getDisclosures, getMeta } from '@/lib/data'
+import { getDisclosures, getMeta, getPersons } from '@/lib/data'
+import { officialsByStockValue } from '@/lib/officials'
+import { personHeadline } from '@/lib/person'
 import { useAsync } from '@/lib/useData'
 import { useMarket, type Market } from '@/lib/market'
 import { useFollowedPersons, useFollowedStocks } from '@/lib/follow'
-import { formatDateGroup } from '@/lib/format'
+import { formatAmountShort, formatDate, formatDateGroup } from '@/lib/format'
 import { personKey } from '@/lib/keys'
 import {
   PERIOD_OPTIONS, SORT_OPTIONS, filterByPeriod, periodLabel, sortDisclosures, sortLabel,
@@ -61,9 +64,25 @@ export default function HomeScreen() {
   const followedStocks = useFollowedStocks()
 
   const { state, data, error, retry } = useAsync(async () => {
-    const [disclosures, meta] = await Promise.all([getDisclosures(), getMeta()])
-    return { disclosures, meta }
+    const [disclosures, meta, persons] = await Promise.all([
+      getDisclosures(),
+      getMeta(),
+      getPersons(),
+    ])
+    return { disclosures, meta, persons }
   })
+
+  /**
+   * 공직자 재산공개.
+   *
+   * 피드에 카드로 섞지 않는다 — 재산공개는 **보유 스냅샷**이고 피드는 시간순
+   * 거래 중계다. 섞으면 거래한 적 없는 사람이 오늘 거래한 것처럼 보인다.
+   * 대신 피드 위에 별도 블록을 두고 공개일을 항상 붙인다.
+   */
+  const officials = useMemo(
+    () => (data ? officialsByStockValue(data.persons).slice(0, 8) : []),
+    [data],
+  )
 
   const filtered = useMemo(() => {
     if (!data) return []
@@ -142,6 +161,43 @@ export default function HomeScreen() {
 
       {state === 'loading' && <LoadingState rows={4} />}
       {state === 'error' && <ErrorState message={error?.message} onRetry={retry} />}
+
+      {/* 공직자 재산공개 — 피드가 아니라 그 위의 독립 블록.
+          거래 기록이 아니라 보유 스냅샷이라 시간순 피드에 섞을 수 없다 */}
+      {state === 'ready' && segment === 'breaking' && officials.length > 0 && (
+        <section className={styles.officials}>
+          <div className={styles.officialsHead}>
+            <h2 className="ty-title-s" style={{ margin: 0 }}>고위공직자 재산공개</h2>
+            <Link to="/explore" className={`ty-caption ${styles.officialsMore}`}>
+              전체 보기
+            </Link>
+          </div>
+          <p className="ty-caption" style={{ margin: 0 }}>
+            {data?.meta.officialsAsOf ? `${formatDate(data.meta.officialsAsOf)}에 공개된 ` : ''}
+            보유 주식입니다. 거래 내역이 아닙니다.
+          </p>
+          <ul className={styles.officialsRow}>
+            {officials.map((p) => {
+              const h = personHeadline(p)
+              return (
+                <li key={p.id}>
+                  <Link to={`/person/${encodeURIComponent(p.id)}`} className={styles.officialCard}>
+                    <span className={`ty-micro ${styles.officialBadge}`}>공직자</span>
+                    <span className={`ty-label ${styles.officialName}`}>{p.name}</span>
+                    <span className="ty-caption">{p.company}</span>
+                    {h.amount !== null && (
+                      <span className={`ty-num ${styles.officialAmount}`}>
+                        {formatAmountShort(h.amount)}
+                      </span>
+                    )}
+                    <span className="ty-micro">{p.holdings.length}종목</span>
+                  </Link>
+                </li>
+              )
+            })}
+          </ul>
+        </section>
+      )}
 
       {state === 'ready' && isEmpty && (segment === 'following' ? (
         <EmptyState
