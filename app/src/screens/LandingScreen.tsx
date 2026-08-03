@@ -35,8 +35,8 @@ export default function LandingScreen() {
           시작하기
         </button>
         <p className="ty-caption" style={{ margin: 0 }}>
-          이 서비스는 투자자문·투자권유가 아닙니다. 공개된 공시 정보를 정리해 보여줄 뿐이며, 투자 판단과 그 결과는
-          이용자 본인에게 있습니다. 출처: 금융감독원 전자공시시스템(DART).
+          이 서비스는 투자자문·투자권유가 아닙니다. 공개된 공시·공공데이터를 정리해 보여줄 뿐이며, 투자 판단과 그
+          결과는 이용자 본인에게 있습니다.
         </p>
       </div>
     </main>

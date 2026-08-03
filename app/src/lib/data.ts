@@ -5,7 +5,7 @@
  *    (CORS·API 키 노출 때문) pipeline/ 이 커밋해 둔 정적 JSON 만 읽는다.
  *    화면 코드는 fetch 를 직접 쓰지 말고 반드시 이 모듈을 거친다.
  */
-import type { Disclosure, Meta, Person, Rankings, Sparklines, Stock } from './types'
+import type { Disclosure, GazetteNotice, Meta, Person, Rankings, Sparklines, Stock } from './types'
 
 /** Vite base('./')와 GitHub Pages 하위 경로를 모두 처리한다 */
 function dataUrl(file: string): string {
@@ -61,6 +61,11 @@ export const getRankings = () => loadJson<Rankings>('rankings.json')
  * 탐색·검색·마이가 이 무게를 지불하지 않도록 stocks.json 에서 분리했다.
  */
 export const getSparklines = () => loadJson<Sparklines>('sparklines.json')
+/**
+ * 재산공개 관보 색인. **금액이 아니라 문서 목록**이다 —
+ * API 가 개인별 금액을 주지 않아 '언제 어떤 공개가 있었고 원문은 여기'까지만 담는다.
+ */
+export const getGazette = () => loadJson<GazetteNotice[]>('gazette.json')
 export const getMeta = () => loadJson<Meta>('meta.json')
 
 /** 재시도 화면에서 호출 — 캐시를 비워 다음 요청이 실제로 나가게 한다 */

@@ -16,7 +16,7 @@ import { fileURLToPath } from 'node:url'
 const ROOT = dirname(dirname(fileURLToPath(import.meta.url)))
 
 /** 두 파일이 공유해야 하는 인터페이스 */
-const SHARED = ['Disclosure', 'TradeDetail', 'Person', 'PersonHolding', 'Stock', 'Sparkline', 'RankingEntry', 'Meta']
+const SHARED = ['Disclosure', 'TradeDetail', 'Person', 'PersonHolding', 'Stock', 'Sparkline', 'RankingEntry', 'Meta', 'GazetteNotice', 'OfficialAssetYear']
 
 /** 공백·구분자 차이를 지워 타입을 비교 가능한 형태로 만든다 */
 function normalizeType(t) {

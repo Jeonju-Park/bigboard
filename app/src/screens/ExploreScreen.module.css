@@ -92,3 +92,39 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+/* 재산공개 관보 색인 — 금액이 아니라 원문 링크 목록이다 */
+.gazetteList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.gazetteRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: var(--touch-min);
+  padding-block: var(--space-3);
+  border-bottom: var(--hairline);
+  color: inherit;
+  text-decoration: none;
+}
+
+.gazetteList li:last-child .gazetteRow {
+  border-bottom: 0;
+}
+
+.gazetteRow:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.gazetteTitle {
+  margin: 0;
+  /* 관보 제목이 길어 두 줄까지만 */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

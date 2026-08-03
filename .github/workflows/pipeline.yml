@@ -73,6 +73,24 @@ jobs:
             node pipeline/src/stocks.ts
           fi
 
+      # 재산공개 관보는 연 1회 정기 + 수시(월 1~2건) 수준이라 자주 볼 이유가 없다.
+      # 시세와 같은 조건(UTC 0시대 = KST 오전 9시대)에 하루 한 번만 갱신한다.
+      # 실패해도 나머지 데이터는 살려야 하므로 `|| true` 로 워크플로를 세우지 않는다.
+      - name: 재산공개 관보 색인 (행정안전부)
+        env:
+          DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
+        run: |
+          if [ -z "$DATA_GO_KR_KEY" ]; then
+            echo "::notice::DATA_GO_KR_KEY 가 없어 관보 색인을 건너뜁니다."
+            exit 0
+          fi
+          HOUR=$(date -u +%H)
+          if [ "$HOUR" != "00" ] && [ "${{ github.event_name }}" = "schedule" ]; then
+            echo "관보는 하루 한 번만 갱신 — 이번 실행은 건너뜁니다"
+            exit 0
+          fi
+          node pipeline/src/gazette.ts || echo "::warning::관보 색인 수집 실패 — 기존 gazette.json 을 유지합니다"
+
       - name: 변경이 있을 때만 커밋
         run: |
           git config user.name  "bigboard-bot"

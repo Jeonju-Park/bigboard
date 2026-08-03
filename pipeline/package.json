@@ -13,7 +13,8 @@
     "explore": "node --env-file=.env src/explore.ts",
     "verify": "node --env-file=.env src/verify.ts",
     "officials": "node --env-file=.env src/officials.ts",
-    "explore:stocks": "node --env-file=.env src/explore-stocks.ts"
+    "explore:stocks": "node --env-file=.env src/explore-stocks.ts",
+    "gazette": "node --env-file=.env src/gazette.ts"
   },
   "dependencies": {},
   "devDependencies": {}

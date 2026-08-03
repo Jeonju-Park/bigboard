@@ -89,10 +89,12 @@ export default function SettingsScreen() {
           <ListRow
             icon="how_to_reg"
             label="고위공직자 재산공개"
+            /* 관보 색인(문서 목록)과 재산 금액은 다른 자료다. 둘을 뭉뚱그리면
+               "재산공개 있음"으로 읽혀 실제로는 없는 금액을 기대하게 만든다. */
             note={
               data?.officialsAsOf
                 ? `${formatDate(data.officialsAsOf)} 기준 · 연 1회 공개`
-                : '아직 포함되지 않았습니다'
+                : '관보 목록·원문 링크만 있고 개인별 금액은 없습니다'
             }
             isStatic
           />

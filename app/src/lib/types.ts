@@ -65,6 +65,30 @@ export interface PersonHolding {
   quantity: number
 }
 
+/**
+ * 재산공개 관보 1건 — **문서 색인이지 재산 내용이 아니다.**
+ *
+ * 행정안전부_관보_공직자 재산 공개 API(15109164)가 주는 건 관보의 제목·발행일·발행기관과
+ * 원문 뷰어 링크뿐이다. 개인별 금액·이름은 응답에 없고 관보 PDF 안에 있다.
+ * 그래서 이 목록은 "언제 어떤 공개가 있었고 원문은 여기"까지만 말한다.
+ */
+export interface GazetteNotice {
+  /** 관보번호 (cntntSeqNo) */
+  id: string
+  /** 관보 제목 — 예: 정부공직자윤리위원회공고제2026-8호(재산공개목록(수시)) */
+  title: string
+  /** 발행일 (ISO) */
+  publishedAt: string
+  /** 발행기관 — 인사혁신처 / 대법원 / 중앙선관위 */
+  institution: string
+  /** 근거법령 */
+  law: string
+  /** 정정 관보인지 */
+  isCorrection: boolean
+  /** 원문 뷰어 링크 (gwanbo.go.kr) */
+  sourceUrl: string
+}
+
 /** 공직자 재산공개 1개 연도 — 연 1회 공개라 연도가 곧 기준시점이다 */
 export interface OfficialAssetYear {
   /** 공개 연도 (예: 2026) */

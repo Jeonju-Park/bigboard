@@ -7,7 +7,7 @@ import Icon from '@/shared/components/Icon'
 import {
   Disclaimer, EmptyState, ErrorState, FreshnessLabel, LoadingState, SectionHeader,
 } from '@/shared/components/Feedback'
-import { getDisclosures, getMeta, getPersons } from '@/lib/data'
+import { getDisclosures, getGazette, getMeta, getPersons } from '@/lib/data'
 import { useAsync } from '@/lib/useData'
 import { toggleFollowPerson, useFollowedPersons } from '@/lib/follow'
 import { formatAmountShort, formatDate } from '@/lib/format'
@@ -28,8 +28,10 @@ export default function ExploreScreen() {
   const followed = useFollowedPersons()
 
   const { state, data, error, retry } = useAsync(async () => {
-    const [disclosures, persons, meta] = await Promise.all([getDisclosures(), getPersons(), getMeta()])
-    return { disclosures, persons, meta }
+    const [disclosures, persons, meta, gazette] = await Promise.all([
+      getDisclosures(), getPersons(), getMeta(), getGazette().catch(() => []),
+    ])
+    return { disclosures, persons, meta, gazette }
   })
 
   const insight = useMemo(() => {
@@ -223,11 +225,44 @@ export default function ExploreScreen() {
                 </p>
               </>
             ) : (
-              <EmptyState
-                icon="how_to_reg"
-                title="공직자 재산 자료가 아직 없습니다"
-                micro="재산공개는 매년 3월에 이뤄집니다"
-              />
+              /* 금액 자료가 없을 때는 빈 화면 대신 **관보 색인**을 보여준다.
+                 API 가 개인별 금액을 주지 않아 목록은 못 채우지만,
+                 "언제 공개가 있었고 원문은 여기"는 지금도 사실대로 말할 수 있다. */
+              <>
+                {data?.gazette?.length ? (
+                  <>
+                    <p className="ty-body-s" style={{ margin: '0 0 var(--space-3)' }}>
+                      개인별 재산 내역은 관보 원문에 있습니다. 최근 공개된 관보를 모았습니다.
+                    </p>
+                    <ul className={styles.gazetteList}>
+                      {data.gazette.slice(0, 6).map((g) => (
+                        <li key={g.id}>
+                          <a href={g.sourceUrl} target="_blank" rel="noopener noreferrer" className={styles.gazetteRow}>
+                            <div className={styles.rowBody}>
+                              <p className={`ty-body-s ${styles.gazetteTitle}`}>{g.title}</p>
+                              <p className="ty-caption">
+                                {formatDate(g.publishedAt)} · {g.institution}
+                                {g.isCorrection ? ' · 정정' : ''}
+                              </p>
+                            </div>
+                            <Icon name="open_in_new" size="sm" />
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                    <p className="ty-micro" style={{ marginTop: 'var(--space-3)' }}>
+                      출처: 행정안전부 관보. 공직자 재산은 <b>연 1회 정기공개</b>와 퇴직·신규 임용 시 수시공개로
+                      이뤄집니다. 거래 시점은 공개되지 않습니다.
+                    </p>
+                  </>
+                ) : (
+                  <EmptyState
+                    icon="how_to_reg"
+                    title="공직자 재산 자료가 아직 없습니다"
+                    micro="재산공개는 매년 3월에 이뤄집니다"
+                  />
+                )}
+              </>
             )}
           </section>
         </>
