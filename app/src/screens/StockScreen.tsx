@@ -9,7 +9,8 @@ import {
 } from '@/shared/components/Feedback'
 import { getDisclosures, getMeta, getPersons, getSparklines, getStocks } from '@/lib/data'
 import { officialsHoldingStock } from '@/lib/officials'
-import { formatQuantity } from '@/lib/format'
+import HoldingCard from '@/shared/components/HoldingCard'
+import ShowMore from '@/shared/components/ShowMore'
 import { useAsync } from '@/lib/useData'
 import { pushRecent, toggleFollowStock, useBroker, useFollowedStocks } from '@/lib/follow'
 import { brokerActionLabel, brokerHref, findBroker } from '@/lib/broker'
@@ -145,31 +146,16 @@ export default function StockScreen() {
             title="이 종목을 보유한 공직자"
             note={`${officialHolders.length}명 · 재산공개`}
           />
-          <ul className={styles.holderList}>
-            {officialHolders.map(({ person, lots, total }) => (
-              <li key={person.id}>
-                <Link to={`/person/${encodeURIComponent(person.id)}`} className={styles.holderRow}>
-                  <div className={styles.holderBody}>
-                    <p className={`ty-label ${styles.holderName}`}>{person.name}</p>
-                    <p className="ty-caption">
-                      {person.company}
-                      {person.title ? ` · ${person.title}` : ''}
-                    </p>
-                    {/* 명의를 합쳐 보여주면 배우자 보유가 본인 것으로 읽힌다.
-                        본인 외 명의가 섞여 있을 때만 내역을 편다 */}
-                    {lots.length > 1 || lots[0]?.owner !== '본인' ? (
-                      <p className="ty-micro">
-                        {lots.map((l) => `${l.owner ?? '명의 미상'} ${formatQuantity(l.quantity)}`).join(' · ')}
-                      </p>
-                    ) : null}
-                  </div>
-                  <span className="ty-amount">{formatQuantity(total)}</span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <p className="ty-micro" style={{ marginTop: 'var(--space-2)' }}>
-            {data?.meta.officialsAsOf ? `${formatDate(data.meta.officialsAsOf)}에 공개된 ` : ''}
+          <ShowMore items={officialHolders} initial={3} step={20} label="명">
+            {(visible) => (
+              <div className={homeStyles.cards}>
+                {visible.map((h) => (
+                  <HoldingCard key={h.person.id} holder={h} />
+                ))}
+              </div>
+            )}
+          </ShowMore>
+          <p className="ty-micro" style={{ marginTop: 'var(--space-3)' }}>
             재산 신고 자료입니다. 거래 내역이 아니라 <b>보유 현황</b>이며, 언제 사고팔았는지는
             공개되지 않습니다.
           </p>
@@ -178,13 +164,17 @@ export default function StockScreen() {
 
       <section>
         <SectionHeader title="내부자 거래" note={`${traded.length}건`} />
-        <div className={homeStyles.cards}>
-          {traded.length ? (
-            traded.map((d) => <DisclosureCard key={d.id} d={d} />)
-          ) : (
-            <p className="ty-caption" style={{ margin: 0 }}>수집 범위 내 거래 공시가 없습니다.</p>
-          )}
-        </div>
+        {traded.length ? (
+          <ShowMore items={traded} initial={5} step={20}>
+            {(visible) => (
+              <div className={homeStyles.cards}>
+                {visible.map((d) => <DisclosureCard key={d.id} d={d} />)}
+              </div>
+            )}
+          </ShowMore>
+        ) : (
+          <p className="ty-caption" style={{ margin: 0 }}>수집 범위 내 거래 공시가 없습니다.</p>
+        )}
       </section>
 
       <section className={styles.actions}>
