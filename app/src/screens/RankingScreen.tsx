@@ -12,6 +12,7 @@ import {
 } from '@/shared/components/Feedback'
 import { getMeta, getOfficials, getRankings } from '@/lib/data'
 import { officialsByStockValue } from '@/lib/officials'
+import ShareButton from '@/shared/components/ShareButton'
 import { useMarket } from '@/lib/market'
 import { formatDate } from '@/lib/format'
 import { useAsync } from '@/lib/useData'
@@ -44,10 +45,24 @@ const PERIODS = [
  * 파생 집계이므로 "집계 기준"을 반드시 병기한다(법적 메모: DART 원문이 아니라 우리 계산값).
  * 단가가 없어 금액을 모르는 공시는 집계에서 제외했다 — 0 으로 넣으면 순위가 거짓이 된다.
  */
+/** 공유 링크로 들어왔을 때 그 사람이 보던 화면을 그대로 연다 */
+function initialFromUrl<T extends string>(key: string, allowed: readonly T[], fallback: T): T {
+  try {
+    const v = new URL(location.href).searchParams.get(key)
+    return allowed.includes(v as T) ? (v as T) : fallback
+  } catch {
+    return fallback
+  }
+}
+
 export default function RankingScreen() {
   const market = useMarket()
-  const [kind, setKind] = useState<Kind>('netBuy')
-  const [period, setPeriod] = useState<RankingPeriod>('30')
+  const [kind, setKind] = useState<Kind>(() =>
+    initialFromUrl('k', KINDS.map((x) => x.value), 'netBuy'),
+  )
+  const [period, setPeriod] = useState<RankingPeriod>(() =>
+    initialFromUrl('p', PERIODS.map((x) => x.value), '30'),
+  )
 
   const { state, data, error, retry } = useAsync(async () => {
     const [rankings, meta, officials] = await Promise.all([
@@ -146,6 +161,18 @@ export default function RankingScreen() {
           )}
         </section>
       )}
+
+      <section className={styles.shareRow}>
+        <ShareButton
+          text={
+            activeKind === 'official'
+              ? '고위공직자 보유 주식 순위 — 빅보드'
+              : `${period}일 ${activeKind === 'netBuy' ? '순매수' : '순매도'} 순위 — 빅보드`
+          }
+          // 보고 있던 탭·기간을 그대로 실어야 상대가 같은 화면을 본다
+          params={{ k: activeKind, p: period }}
+        />
+      </section>
 
       <footer className={styles.footer}>
         {data?.meta && <FreshnessLabel lastUpdated={data.meta.lastUpdated} />}

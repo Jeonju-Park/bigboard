@@ -135,3 +135,10 @@
 .officialAmount {
   color: var(--ink);
 }
+
+/* 공유 버튼 줄 — 목록 끝, 고지문 위 */
+.shareRow {
+  display: flex;
+  justify-content: center;
+  padding-block: var(--space-2);
+}
