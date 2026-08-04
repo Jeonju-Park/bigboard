@@ -19,6 +19,7 @@ import { useAsync } from '@/lib/useData'
 import { pushRecent, toggleFollowPerson, useBroker, useFollowedPersons } from '@/lib/follow'
 import { brokerActionLabel, brokerHref, findBroker } from '@/lib/broker'
 import { ownerLabel } from '@/lib/owner'
+import ShareButton from '@/shared/components/ShareButton'
 import { MARKETS, useMarket } from '@/lib/market'
 import { sourceLabel } from '@/lib/source'
 import { personKey } from '@/lib/keys'
@@ -338,16 +339,9 @@ export default function FeedDetailScreen() {
           {/* 출처가 시장마다 다르다. '미장인데 DART' 는 그냥 거짓말이다 */}
           {sourceLabel(d.sourceUrl)} 원문 보기
         </Button>
-        <Button
-          variant="text"
-          onClick={() => {
-            const text = `${d.personName} · ${d.company} ${d.direction === 'buy' ? '매수' : '매도'} — 빅보드`
-            if (navigator.share) void navigator.share({ title: '빅보드', text, url: location.href })
-            else void navigator.clipboard?.writeText(`${text}\n${location.href}`)
-          }}
-        >
-          <Icon name="share" size="sm" /> 공유
-        </Button>
+        <ShareButton
+          text={`${d.personName} · ${d.company} ${d.direction === 'buy' ? '매수' : '매도'} — 빅보드`}
+        />
       </section>
 
       <footer className={homeStyles.footer}>

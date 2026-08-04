@@ -64,6 +64,23 @@ function isMarket(v: unknown): v is Market {
 }
 
 let current: Market = (() => {
+  // 공유 링크가 시장을 실어 온다 (?m=us). 저장된 값보다 **링크가 우선**이다 —
+  // 남이 보낸 미장 종목 링크를 열었는데 국장으로 뜨면 빈 화면이 되고,
+  // 받는 쪽은 무엇이 잘못됐는지 알 수가 없다.
+  try {
+    const fromUrl = new URL(location.href).searchParams.get('m')
+    if (isMarket(fromUrl)) {
+      // 링크로 들어온 시장을 그대로 저장해 둔다. 새로고침해도 유지되도록
+      try {
+        localStorage.setItem(KEY, fromUrl)
+      } catch {
+        // 저장 실패해도 이번 세션은 동작한다
+      }
+      return fromUrl
+    }
+  } catch {
+    // URL 파싱 실패는 무시하고 저장값으로 간다
+  }
   try {
     const raw = localStorage.getItem(KEY)
     return isMarket(raw) ? raw : DEFAULT

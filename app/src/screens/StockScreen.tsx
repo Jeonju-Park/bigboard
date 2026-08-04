@@ -11,6 +11,7 @@ import { getDisclosures, getMeta, getPersons, getSparklines, getStocks } from '@
 import { officialsHoldingStock } from '@/lib/officials'
 import HoldingCard from '@/shared/components/HoldingCard'
 import ShowMore from '@/shared/components/ShowMore'
+import ShareButton from '@/shared/components/ShareButton'
 import { useAsync } from '@/lib/useData'
 import { pushRecent, toggleFollowStock, useBroker, useFollowedStocks } from '@/lib/follow'
 import { brokerActionLabel, brokerHref, findBroker } from '@/lib/broker'
@@ -222,6 +223,9 @@ export default function StockScreen() {
             <Button block to="/settings">거래할 증권사 선택하기</Button>
           ))}
         <Disclaimer />
+        <ShareButton
+          text={`${stock.name}${stock.code ? ` (${stock.code})` : ''} — 빅보드`}
+        />
       </section>
 
       <footer className={homeStyles.footer}>
