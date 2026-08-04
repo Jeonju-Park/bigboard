@@ -9,20 +9,21 @@
  ],
  "counts": {
   "disclosures": 2624,
-  "persons": 3945,
+  "persons": 5274,
   "stocks": 672
  },
  "officialsAsOf": "2026-07-24",
  "priceDataAvailable": true,
  "skipped": {
-  "total": 4178,
+  "total": 13015,
   "reasons": {
    "순증감 0 (매수·매도 상쇄)": 12,
    "변동일 파싱 실패": 3,
    "거래계획 철회됨": 4,
-   "증권 종류 기타(채권)": 271,
-   "증권 종류 비상장주식": 734,
-   "종목 파싱 실패": 297
+   "증권 종류 기타(채권)": 786,
+   "증권 종류 비상장주식": 2462,
+   "종목 파싱 실패": 1172,
+   "PDF 다운로드 실패": 1
   }
  },
  "sparklineAvailable": true

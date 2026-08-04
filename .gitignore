@@ -26,3 +26,6 @@ pipeline/data/
 
 # 시세 일자별 캐시
 pipeline/.cache/prices/
+
+# 관보 PDF 캐시 — 재파싱할 때 남의 서버를 다시 두드리지 않으려고 둔다 (커밋하지 않음)
+pipeline/.gazette-cache/

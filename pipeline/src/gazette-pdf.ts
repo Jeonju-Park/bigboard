@@ -34,7 +34,7 @@
  *   4) 금액 단위는 **천원**이다. 원 단위로 환산해서 저장한다.
  *   5) 공고마다 스냅샷을 **쌓는다**. 덮어쓰면 추이가 사라진다.
  */
-import { readFileSync, readdirSync, writeFileSync } from 'node:fs'
+import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { extractText, getDocumentProxy } from 'unpdf'
 import { sleep } from './sec.ts'
@@ -50,6 +50,13 @@ import type {
 const DATA_DIR = join(import.meta.dirname, '..', '..', 'app', 'public', 'data', 'kr')
 /** 손으로 넣은 PDF 도 계속 읽는다 (색인에 없는 과거 관보를 넣을 수 있게) */
 const PDF_DIR = join(import.meta.dirname, '..', 'data')
+
+/**
+ * 받은 PDF 를 캐시한다 (gitignore 대상).
+ * 296건을 다시 받는 데 25분이 걸린다. 파서를 고쳐 재파싱할 때마다 관보 서버를
+ * 다시 두드릴 이유가 없다 — 공개 문서지만 남의 서버다.
+ */
+const CACHE_DIR = join(import.meta.dirname, '..', '.gazette-cache')
 
 const UA = 'bigboard/0.1 (jjsa6316@ajou.ac.kr)'
 const DOWNLOAD = 'https://gwanbo.go.kr/user/common/ofcttCntntDownload.do'
@@ -270,14 +277,29 @@ function parseHoldingsBody(body: string): {
   return { items, value }
 }
 
-function noticeInfo(label: string, text: string): { label: string; publishedAt: string | null } {
-  const no = /제\s*(\d{4})-(\d+)\s*호/.exec(label) ?? /제\s*(\d{4})-(\d+)\s*호/.exec(text)
+/**
+ * 공고 라벨과 공개일.
+ *
+ * ⚠️ 라벨은 **파일마다 유일해야 한다.** 이걸로 '이미 처리한 공고'를 판별하기 때문이다.
+ *    정기공개는 같은 공고번호가 **기관별로 쪼개져** 나온다:
+ *      정부공직자윤리위원회공고제2026-4호(2026년도 정기재산변동신고사항 공개, 감사원)
+ *      정부공직자윤리위원회공고제2026-4호(…, 국가정보원)   ← 242개 파일이 같은 번호
+ *    번호만 쓰면 첫 파일을 처리한 뒤 나머지 241개가 전부 '이미 처리'로 건너뛰어진다.
+ *    그래서 괄호 안 꼬리(기관명)를 라벨에 함께 넣는다.
+ */
+function noticeInfo(title: string, text: string): { label: string; publishedAt: string | null } {
+  const no = /제\s*(\d{4})-(\d+)\s*호/.exec(title) ?? /제\s*(\d{4})-(\d+)\s*호/.exec(text)
   const date = /(\d{4})년\s*(\d{1,2})월\s*(\d{1,2})일/.exec(text)
   const org = /(정부공직자윤리위원회|대법원공직자윤리위원회|중앙선거관리위원회[가-힣]*|헌법재판소[가-힣]*|국회공직자윤리위원회)/.exec(
     text,
   )
+  // 제목 괄호 안의 마지막 조각이 기관명이다. '…공개, 감사원)' → '감사원'
+  const paren = /\(([^()]*)\)\s*$/.exec(title.trim())?.[1] ?? ''
+  const suffix = paren.includes(',') ? paren.split(',').pop()!.trim() : ''
+
+  const base = no ? `${org?.[1] ?? '공직자윤리위원회'}공고 제${no[1]}-${no[2]}호` : title
   return {
-    label: no ? `${org?.[1] ?? '공직자윤리위원회'}공고 제${no[1]}-${no[2]}호` : label,
+    label: suffix ? `${base} (${suffix})` : base,
     publishedAt: date
       ? `${date[1]}-${date[2]!.padStart(2, '0')}-${date[3]!.padStart(2, '0')}`
       : null,
@@ -291,9 +313,22 @@ interface Source {
   key: string
   label: string
   bytes: Uint8Array
+  /**
+   * 색인이 알려준 발행일.
+   *
+   * ⚠️ PDF 본문에서 'YYYY년 M월 D일' 을 뽑는 게 1순위지만, 정기공개 본편에는
+   *    그 문장이 없는 파일이 많다. 그때 공개일이 빈 문자열이 되고,
+   *    같은 사람의 여러 공고가 전부 asOf='' 로 겹쳐 보유 내역이 덮어써졌다
+   *    (실제로 스냅샷의 절반 가까이가 그랬다).
+   *    색인(gazette.json)에는 발행일이 늘 있으므로 그걸 받아 둔다.
+   */
+  publishedAt: string | null
 }
 
 async function downloadNotice(n: GazetteNotice): Promise<Uint8Array | null> {
+  const cached = join(CACHE_DIR, `${n.id}.pdf`)
+  if (existsSync(cached)) return new Uint8Array(readFileSync(cached))
+
   const res = await fetch(DOWNLOAD, {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'User-Agent': UA },
@@ -304,6 +339,8 @@ async function downloadNotice(n: GazetteNotice): Promise<Uint8Array | null> {
   const buf = new Uint8Array(await res.arrayBuffer())
   // 뷰어 HTML 이 돌아오는 경우가 있다. PDF 가 아니면 파싱하지 않는다
   if (String.fromCharCode(...buf.subarray(0, 4)) !== '%PDF') return null
+  mkdirSync(CACHE_DIR, { recursive: true })
+  writeFileSync(cached, buf)
   return buf
 }
 
@@ -315,6 +352,8 @@ async function main() {
   const personsPath = join(DATA_DIR, 'persons.json')
   const officialsPath = join(DATA_DIR, 'officials.json')
   const holdingsPath = join(DATA_DIR, 'officials-holdings.json')
+
+  const doneListPath = join(DATA_DIR, 'officials-notices.json')
 
   const persons = JSON.parse(readFileSync(personsPath, 'utf8')) as Person[]
   // 예전엔 공직자가 persons.json 에 섞여 있었다. 남아 있으면 걷어낸다
@@ -328,12 +367,19 @@ async function main() {
     // 첫 실행
   }
 
-  // 이미 처리한 공고는 다시 받지 않는다. 어떤 공고를 처리했는지는
-  // 인물들의 officialAssets[].notice 에 남아 있다 — 별도 상태 파일을 두지 않는다
-  const doneNotices = new Set<string>()
+  // 이미 처리한 관보는 다시 받지 않는다.
+  //
+  // ⚠️ 판정 기준은 **관보 고유 id** 다. 처음엔 공고 라벨로 판정했는데,
+  //    정기공개가 같은 공고번호로 기관별 242개 파일로 쪼개져 나오고
+  //    (제2026-4호(…, 감사원) / (…, 국가정보원) …), 서로 다른 위원회가
+  //    같은 번호를 쓰는 경우까지 있어 라벨은 유일하지 않다.
+  //    라벨로 판정하면 첫 파일만 처리하고 나머지를 통째로 건너뛴다.
+  let doneIds = new Set<string>()
   if (!redoAll) {
-    for (const p of existing) {
-      for (const a of p.officialAssets ?? []) if (a.notice) doneNotices.add(a.notice)
+    try {
+      doneIds = new Set(JSON.parse(readFileSync(doneListPath, 'utf8')) as string[])
+    } catch {
+      // 첫 실행
     }
   }
 
@@ -346,26 +392,32 @@ async function main() {
   } catch {
     console.log('  gazette.json 이 없습니다 — 먼저 `npm --prefix pipeline run gazette` 를 돌리세요')
   }
+  // ⚠️ 처음엔 `/재산공개|재산등록/` 로 좁혀 놨다가 **정기공개 본편을 통째로 빼먹었다.**
+  //    매년 3월 공고 제목이 '정기재산변동신고사항 공개' 라 저 두 단어에 안 걸린다.
+  //    296건 중 244건이 그렇게 빠졌고, 그게 수시공개보다 훨씬 큰 자료였다.
+  //    색인(gazette.ts)이 이미 '재산' 으로 걸러 두므로 여기서 더 좁힐 이유가 없다.
   const assetNotices = notices
-    .filter((n) => /재산공개|재산등록/.test(n.title))
+    .filter((n) => /재산/.test(n.title))
     .sort((a, b) => a.publishedAt.localeCompare(b.publishedAt))
 
-  console.log(`색인의 재산 관보 ${assetNotices.length}건 · 이미 처리 ${doneNotices.size}건`)
+  console.log(`색인의 재산 관보 ${assetNotices.length}건 · 이미 처리 ${doneIds.size}건`)
 
   let fetched = 0
+  const processedIds = new Set<string>(doneIds)
   for (const n of assetNotices) {
     if (fetched >= limit) break
-    // 라벨을 미리 만들어 이미 처리했는지 본다 (다운로드 전에 걸러야 의미가 있다)
-    const guess = noticeInfo(n.title, n.title).label
-    if (!redoAll && doneNotices.has(guess)) continue
+    if (!redoAll && doneIds.has(n.id)) continue
     try {
       const bytes = await downloadNotice(n)
       if (!bytes) {
         skip('PDF 다운로드 실패')
         continue
       }
-      sources.push({ key: n.id, label: n.title, bytes })
+      const fromCache = existsSync(join(CACHE_DIR, `${n.id}.pdf`))
+      sources.push({ key: n.id, label: n.title, bytes, publishedAt: n.publishedAt })
+      processedIds.add(n.id)
       fetched++
+      if (fromCache) continue // 캐시에서 읽었으면 서버를 안 두드렸으므로 쉴 이유가 없다
       console.log(`  ↓ ${n.publishedAt} ${n.title.slice(0, 44)} (${(bytes.length / 1024 / 1024).toFixed(2)}MB)`)
     } catch {
       skip('PDF 다운로드 실패')
@@ -377,7 +429,12 @@ async function main() {
   // ② 손으로 넣은 PDF 도 읽는다 (색인에 없는 과거 관보용)
   try {
     for (const f of readdirSync(PDF_DIR).filter((x) => x.toLowerCase().endsWith('.pdf'))) {
-      sources.push({ key: `file:${f}`, label: f, bytes: new Uint8Array(readFileSync(join(PDF_DIR, f))) })
+      sources.push({
+        key: `file:${f}`,
+        label: f,
+        bytes: new Uint8Array(readFileSync(join(PDF_DIR, f))),
+        publishedAt: null,
+      })
     }
   } catch {
     // pipeline/data 가 없으면 그냥 넘어간다
@@ -408,7 +465,9 @@ async function main() {
   for (const src of sources) {
     const pdf = await getDocumentProxy(src.bytes)
     const { text, totalPages } = await extractText(pdf, { mergePages: true })
-    const notice = noticeInfo(src.label, text)
+    const parsedNotice = noticeInfo(src.label, text)
+    // 본문에서 못 뽑으면 색인의 발행일을 쓴다. 공개일 없는 스냅샷은 쌓을 수가 없다
+    const notice = { ...parsedNotice, publishedAt: parsedNotice.publishedAt ?? src.publishedAt }
     const parsed = splitPersons(text)
     let withStock = 0
 
@@ -441,8 +500,13 @@ async function main() {
       }
 
       if (!holdings.length) continue
+      const asOf = notice.publishedAt
+      if (!asOf) {
+        // 시점을 모르면 추이에 놓을 자리가 없다. 억지로 넣으면 다른 시점과 겹쳐 덮어쓴다
+        skip('공개일을 알 수 없음')
+        continue
+      }
       withStock++
-      const asOf = notice.publishedAt ?? ''
       snaps.push({
         name: p.name,
         office: p.office,
@@ -544,6 +608,8 @@ async function main() {
   writeFileSync(personsPath, JSON.stringify(insiders, null, 1) + '\n', 'utf8')
   writeFileSync(officialsPath, JSON.stringify(officials, null, 1) + '\n', 'utf8')
   writeFileSync(holdingsPath, JSON.stringify(holdingsById, null, 1) + '\n', 'utf8')
+  // 처리한 관보 id — 다음 실행이 여기서 증분을 판단한다
+  writeFileSync(doneListPath, JSON.stringify([...processedIds].sort(), null, 1) + '\n', 'utf8')
 
   // ── meta ──────────────────────────────────────────────────────────────────
   const metaPath = join(DATA_DIR, 'meta.json')
