@@ -3,9 +3,16 @@
 # 국장  DART(공시) · 공공데이터포털(시세) · 행정안전부(관보 색인)
 # 미장  SEC(Form 4 · 13F) · 미 하원 사무처(STOCK Act PTR) · Finnhub(시세)
 #
-# 스케줄은 UTC 다. 한국 장 운영시간(09:00~18:00 KST)은 UTC 00:00~09:00 이므로
-# 평일 UTC 0~9시에 30분 간격으로 돈다.
-# 미장 단계는 호출량이 커서 대부분 UTC 0시대(하루 1회)에만 돈다.
+# 스케줄은 **UTC** 다. 세 종류가 돈다 (github.event.schedule 로 구분한다):
+#
+#   */30 0-9 * * 1-5   KST 09:00~18:30 · 30분 간격 — 국장 장중 증분 수집
+#   40 6 * * 1-5       KST 15:40        — **한국장 마감 직후** 전체 갱신
+#   0 21 * * 1-5       ET  17:00        — **미국장 마감 직후** 미장 수집
+#
+# 한국 정규장 마감은 15:00 이 아니라 **15:30** 이다. 마감 전에 돌리면 그날 종가가
+# 안 잡히므로 10분 여유를 두고 15:40 에 돈다.
+# 미국장은 16:00 ET 마감이라 UTC 21:00(서머타임 기준 17:00 ET)에 돈다.
+# SEC 일별 인덱스는 하루 늦게 나오므로 그날 것을 기대하지 않고 최근 영업일을 훑는다.
 #
 # ⚠️ GitHub Actions 의 cron 은 정시 실행을 보장하지 않는다. 무료 러너가 붐비면
 #    수 분~수십 분 밀린다. 그래서 화면이 meta.lastUpdated 실값으로 신선도를 표시한다.
@@ -13,7 +20,12 @@ name: pipeline
 
 on:
   schedule:
+    # 국장 장중 증분 (KST 09:00~18:30, 30분 간격)
     - cron: '*/30 0-9 * * 1-5'
+    # 한국장 마감 직후 (KST 15:40) — 정규장 마감 15:30 + 10분
+    - cron: '40 6 * * 1-5'
+    # 미국장 마감 직후 (UTC 21:00 = ET 17:00)
+    - cron: '0 21 * * 1-5'
   workflow_dispatch:
     inputs:
       days:
@@ -44,7 +56,31 @@ jobs:
       - name: pipeline 의존성 설치
         run: npm --prefix pipeline ci || npm --prefix pipeline install
 
+      # 어떤 스케줄로 깨어났는지 한 번만 판정해 아래 단계들이 공유한다.
+      # 예전엔 각 단계가 `date -u +%H` 로 시간을 재서 '하루 한 번'을 흉내 냈는데,
+      # cron 이 밀리면 그 판정이 통째로 어긋났다 (UTC 0시대를 놓치면 그날은 안 돈다).
+      # 트리거한 cron 식을 직접 읽는 편이 정확하다.
+      - name: 실행 종류 판정
+        id: mode
+        run: |
+          SCHED='${{ github.event.schedule }}'
+          MANUAL='${{ github.event_name == 'workflow_dispatch' }}'
+          KR_CLOSE=false; US_CLOSE=false; INTRADAY=false
+          case "$SCHED" in
+            '40 6 * * 1-5')      KR_CLOSE=true ;;
+            '0 21 * * 1-5')      US_CLOSE=true ;;
+            '*/30 0-9 * * 1-5')  INTRADAY=true ;;
+          esac
+          if [ "$MANUAL" = "true" ]; then KR_CLOSE=true; US_CLOSE=true; fi
+          {
+            echo "kr_close=$KR_CLOSE"
+            echo "us_close=$US_CLOSE"
+            echo "intraday=$INTRADAY"
+          } >> "$GITHUB_OUTPUT"
+          echo "schedule='$SCHED' manual=$MANUAL → 한국장마감=$KR_CLOSE 미국장마감=$US_CLOSE 장중=$INTRADAY"
+
       - name: 공시 수집 (DART)
+        if: steps.mode.outputs.us_close != 'true' || steps.mode.outputs.kr_close == 'true'
         env:
           DART_KEY: ${{ secrets.DART_KEY }}
         run: |
@@ -60,11 +96,10 @@ jobs:
 
       # 시세는 공시가 정한 종목 목록 위에 덧씌우므로 반드시 공시 수집 뒤에 온다.
       #
-      # --history(1년치 훑기)는 약 865회를 쓰므로 **하루 한 번**만 돈다.
-      # 그 판단 기준은 '첫 실행 시간대'다 — cron 은 UTC 0~9시에 30분 간격으로 도는데
-      # UTC 0시대(= KST 오전 9시대)에만 전체를 다시 계산한다.
-      # 나머지 실행은 최근 영업일 시세만(3회) 갱신한다.
+      # --history(1년치 훑기)는 약 865회를 쓰므로 **한국장 마감 직후 한 번**만 돈다.
+      # 그때가 그날 종가가 확정된 시점이라 52주·스파크라인을 다시 계산할 최적기다.
       - name: 시세 수집 (공공데이터포털)
+        if: steps.mode.outputs.us_close != 'true' || steps.mode.outputs.kr_close == 'true'
         env:
           DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
         run: |
@@ -72,19 +107,18 @@ jobs:
             echo "::notice::DATA_GO_KR_KEY 가 없어 시세 수집을 건너뜁니다. 시세 항목은 화면에서 숨겨집니다."
             exit 0
           fi
-          HOUR=$(date -u +%H)
-          if [ "$HOUR" = "00" ] || [ -n "${{ inputs.days }}" ]; then
-            echo "1년치 훑기 (52주·스파크라인 재계산)"
+          if [ "${{ steps.mode.outputs.kr_close }}" = "true" ]; then
+            echo "한국장 마감 — 1년치 훑기 (52주·스파크라인 재계산)"
             node pipeline/src/stocks.ts --history
           else
-            echo "최근 영업일 시세만 갱신"
+            echo "장중 — 최근 영업일 시세만 갱신"
             node pipeline/src/stocks.ts
           fi
 
-      # 재산공개 관보는 연 1회 정기 + 수시(월 1~2건) 수준이라 자주 볼 이유가 없다.
-      # 시세와 같은 조건(UTC 0시대 = KST 오전 9시대)에 하루 한 번만 갱신한다.
-      # 실패해도 나머지 데이터는 살려야 하므로 `|| true` 로 워크플로를 세우지 않는다.
+      # 재산공개 관보는 연 1회 정기 + 수시(월 1~2건) 수준이라 하루 한 번이면 충분하다.
+      # 실패해도 나머지 데이터는 살려야 하므로 워크플로를 세우지 않는다.
       - name: 재산공개 관보 색인 (행정안전부)
+        if: steps.mode.outputs.kr_close == 'true'
         env:
           DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
         run: |
@@ -92,35 +126,30 @@ jobs:
             echo "::notice::DATA_GO_KR_KEY 가 없어 관보 색인을 건너뜁니다."
             exit 0
           fi
-          HOUR=$(date -u +%H)
-          if [ "$HOUR" != "00" ] && [ "${{ github.event_name }}" = "schedule" ]; then
-            echo "관보는 하루 한 번만 갱신 — 이번 실행은 건너뜁니다"
-            exit 0
-          fi
           node pipeline/src/gazette.ts || echo "::warning::관보 색인 수집 실패 — 기존 gazette.json 을 유지합니다"
 
-      # ── 미장 ──────────────────────────────────────────────────────────────
+      # ── 미장 (미국장 마감 직후에만) ────────────────────────────────────────
       # SEC 는 키가 필요 없다. User-Agent 와 초당 10회 제한만 지키면 된다(sec.ts).
       - name: 미국 내부자 거래 (SEC Form 4)
+        if: steps.mode.outputs.us_close == 'true'
         run: node pipeline/src/form4.ts --days 2 || echo "::warning::Form 4 수집 실패 — 기존 데이터를 유지합니다"
 
       # 하원 PTR 은 이미 받은 DocID 를 건너뛰므로 매일 돌아도 신규분만 받는다
       - name: 미 하원의원 거래 (STOCK Act PTR)
+        if: steps.mode.outputs.us_close == 'true'
         run: node pipeline/src/house.ts || echo "::warning::하원 PTR 수집 실패 — 기존 데이터를 유지합니다"
 
-      # 13F 는 분기당 한 번 갱신된다. 매일 부를 이유가 없어 UTC 0시대에만.
+      # 13F 는 분기당 한 번 갱신된다. 매일 부를 이유는 없지만 호출이 13번뿐이라
+      # 미국장 마감 때 같이 돈다 (분기 제출일을 놓치지 않으려면 매일 보는 게 안전하다)
       - name: 기관 보유 (SEC 13F)
-        run: |
-          HOUR=$(date -u +%H)
-          if [ "$HOUR" != "00" ] && [ "${{ github.event_name }}" = "schedule" ]; then
-            echo "13F 는 하루 한 번만 갱신 — 건너뜁니다"; exit 0
-          fi
-          node pipeline/src/thirteenf.ts || echo "::warning::13F 수집 실패 — 기존 데이터를 유지합니다"
+        if: steps.mode.outputs.us_close == 'true'
+        run: node pipeline/src/thirteenf.ts || echo "::warning::13F 수집 실패 — 기존 데이터를 유지합니다"
 
       # 미국 시세는 **심볼당 1회**라 종목 수만큼 호출한다 (국장처럼 날짜 하나로
-      # 전 종목을 받을 수 없다). 시세만 받으면 ~18분, 지표·기업정보까지면 ~52분.
-      # 그래서 시세는 하루 한 번, 전체 갱신은 월요일에만 돈다.
+      # 전 종목을 받을 수 없다). 시세만 ~18분, 지표·기업정보까지면 ~52분.
+      # 그래서 매일은 시세만, 지표·기업정보 전체 갱신은 월요일에만.
       - name: 미국 시세 (Finnhub)
+        if: steps.mode.outputs.us_close == 'true'
         env:
           FINNHUB_KEY: ${{ secrets.FINNHUB_KEY }}
         run: |
@@ -128,11 +157,7 @@ jobs:
             echo "::notice::FINNHUB_KEY 가 없어 미국 시세를 건너뜁니다. 시세 항목은 화면에서 숨겨집니다."
             exit 0
           fi
-          HOUR=$(date -u +%H); DOW=$(date -u +%u)
-          if [ "$HOUR" != "00" ] && [ "${{ github.event_name }}" = "schedule" ]; then
-            echo "시세는 하루 한 번만 — 건너뜁니다"; exit 0
-          fi
-          if [ "$DOW" = "1" ]; then
+          if [ "$(date -u +%u)" = "1" ]; then
             echo "월요일 — 지표·기업정보까지 전체 갱신"
             node pipeline/src/us-stocks.ts --full || echo "::warning::미국 시세 수집 실패"
           else
