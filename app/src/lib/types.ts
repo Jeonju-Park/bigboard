@@ -140,7 +140,12 @@ export interface GazetteNotice {
   sourceUrl: string
 }
 
-/** 공직자 재산공개 1개 연도 — 연 1회 공개라 연도가 곧 기준시점이다 */
+/**
+ * 공직자 재산공개 **한 시점**의 스냅샷.
+ *
+ * 이름은 'Year' 지만 실제로는 공고 단위다 — 정기공개(연 1회)와 수시공개(임용·퇴직)가
+ * 섞여 있어 한 해에 여러 번 나올 수 있다. 이 배열이 쌓여야 '추이'가 보인다.
+ */
 export interface OfficialAssetYear {
   /** 공개 연도 (예: 2026) */
   year: number
@@ -150,7 +155,22 @@ export interface OfficialAssetYear {
   totalAssets: number
   /** 그 중 주식 평가액(원). 자료에 없으면 null */
   stockValue: number | null
+  /**
+   * 이 시점의 보유 **종목 수**.
+   * 종목 내역 자체는 officials-holdings.json 으로 분리했다 — 전체를 합치면 2.3MB 라
+   * 목록만 보는 홈·랭킹·탐색이 그 무게를 지불할 이유가 없다 (스파크라인과 같은 이유).
+   */
+  holdingCount: number
+  /** 어느 공고에서 나왔는지 — 실명 데이터라 출처가 시점마다 추적돼야 한다 */
+  notice: string
 }
+
+/**
+ * 공직자별·시점별 보유 종목 (officials-holdings.json).
+ * `{ 인물id: { '2026-07-24': [...보유] } }`
+ * 인물 상세와 종목 상세에서만 부른다.
+ */
+export type OfficialHoldings = Record<string, Record<string, PersonHolding[]>>
 
 export interface Person {
   id: string

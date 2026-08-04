@@ -9,7 +9,7 @@
  * 또 하나 — 재산공개는 **가족 재산까지 함께 공개**한다. 명의(본인·배우자·장남)를
  * 지우면 배우자 보유가 본인 것으로 읽히므로 어디서든 명의를 들고 다닌다.
  */
-import type { Person } from './types'
+import type { OfficialHoldings, Person } from './types'
 
 export interface OfficialHolder {
   person: Person
@@ -24,14 +24,22 @@ export interface OfficialHolder {
  * 한 사람이 본인·배우자 명의로 나눠 들고 있으면 lots 로 갈라서 보여준다 —
  * 합계만 보여주면 "본인이 다 갖고 있다"로 읽힌다.
  */
-export function officialsHoldingStock(persons: Person[], stockCode: string): OfficialHolder[] {
+export function officialsHoldingStock(
+  persons: Person[],
+  holdings: OfficialHoldings,
+  stockCode: string,
+): OfficialHolder[] {
   const out: OfficialHolder[] = []
   for (const p of persons) {
     if (p.type !== 'official') continue
+    // 보유 내역은 별도 파일에 시점별로 있다. **가장 최근 공개 시점**만 쓴다 —
+    // 과거 시점까지 합치면 이미 판 종목이 '보유'로 잡힌다
+    const latestAsOf = p.officialAssets?.[0]?.asOf
+    const lotsRaw = latestAsOf ? (holdings[p.id]?.[latestAsOf] ?? []) : []
     // 같은 명의가 여러 줄로 나뉘어 오는 경우가 있다 (관보에 상장주식 행이 둘일 때).
     // 그대로 두면 '본인 177주 · 본인 2주' 처럼 읽혀 오해를 부른다 → 명의별로 합친다
     const byOwner = new Map<string | null, number>()
-    for (const h of p.holdings) {
+    for (const h of lotsRaw) {
       if (h.stockCode !== stockCode) continue
       const owner = h.owner ?? null
       byOwner.set(owner, (byOwner.get(owner) ?? 0) + h.quantity)

@@ -11,6 +11,7 @@ import type {
   GazetteNotice,
   Institution,
   Meta,
+  OfficialHoldings,
   Person,
   Rankings,
   Sparklines,
@@ -74,7 +75,16 @@ async function loadJson<T>(file: string): Promise<T> {
 }
 
 export const getDisclosures = () => loadJson<Disclosure[]>('disclosures.json')
+/** 내부자·의원·기관. **공직자는 여기 없다** — officials.json 으로 분리했다 */
 export const getPersons = () => loadJson<Person[]>('persons.json')
+/**
+ * 공직자 목록 (국장 전용). 보유 종목 **내역은 빠져 있다** — 시점별 내역을 다 합치면
+ * 2.3MB 라, 목록만 보는 홈·랭킹·탐색이 그 무게를 지불할 이유가 없다.
+ * 종목 내역이 필요하면 getOfficialHoldings() 를 따로 부른다 (스파크라인과 같은 구조).
+ */
+export const getOfficials = () => loadJson<Person[]>('officials.json')
+/** 공직자별·시점별 보유 종목. 인물 상세와 종목 상세에서만 부른다 */
+export const getOfficialHoldings = () => loadJson<OfficialHoldings>('officials-holdings.json')
 export const getStocks = () => loadJson<Stock[]>('stocks.json')
 export const getRankings = () => loadJson<Rankings>('rankings.json')
 /**

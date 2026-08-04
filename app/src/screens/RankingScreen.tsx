@@ -10,12 +10,12 @@ import {
   LoadingState,
   SectionHeader,
 } from '@/shared/components/Feedback'
-import { getMeta, getPersons, getRankings } from '@/lib/data'
+import { getMeta, getOfficials, getRankings } from '@/lib/data'
 import { officialsByStockValue } from '@/lib/officials'
 import { useMarket } from '@/lib/market'
 import { formatDate } from '@/lib/format'
 import { useAsync } from '@/lib/useData'
-import type { RankingPeriod } from '@/lib/types'
+import type { Person, RankingPeriod } from '@/lib/types'
 import styles from './HomeScreen.module.css'
 
 /**
@@ -50,8 +50,12 @@ export default function RankingScreen() {
   const [period, setPeriod] = useState<RankingPeriod>('30')
 
   const { state, data, error, retry } = useAsync(async () => {
-    const [rankings, meta, persons] = await Promise.all([getRankings(), getMeta(), getPersons()])
-    return { rankings, meta, persons }
+    const [rankings, meta, officials] = await Promise.all([
+      getRankings(),
+      getMeta(),
+      getOfficials().catch(() => [] as Person[]),
+    ])
+    return { rankings, meta, officials }
   })
 
   // 공직자 랭킹은 미장에 없다 (대응물이 하원의원 거래인데 그건 거래라 순매수 축에 들어간다)
@@ -63,7 +67,7 @@ export default function RankingScreen() {
   const activeKind: Kind = market === 'us' && kind === 'official' ? 'netBuy' : kind
 
   const officials = useMemo(
-    () => (data ? officialsByStockValue(data.persons).slice(0, 30) : []),
+    () => (data ? officialsByStockValue(data.officials).slice(0, 30) : []),
     [data],
   )
 

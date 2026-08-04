@@ -9,11 +9,12 @@ import { Promote } from '@/shared/components/Num'
 import {
   Disclaimer, EmptyState, ErrorState, FreshnessLabel, LoadingState, SectionHeader,
 } from '@/shared/components/Feedback'
-import { getDisclosures, getMeta, getPersons } from '@/lib/data'
+import { getDisclosures, getMeta, getOfficialHoldings, getOfficials, getPersons } from '@/lib/data'
 import { useAsync } from '@/lib/useData'
 import { pushRecent, toggleFollowPerson, useFollowedPersons } from '@/lib/follow'
 import { personKey } from '@/lib/keys'
 import { formatAmountFull, formatAmountShort, formatDate, formatQuantity } from '@/lib/format'
+import type { OfficialHoldings, Person } from '@/lib/types'
 import styles from './PersonScreen.module.css'
 
 /** S3 인물 프로필 — 정체성 → 요약 수치 → 보유 → 타임라인 */
@@ -22,11 +23,36 @@ export default function PersonScreen() {
   const followed = useFollowedPersons()
 
   const { state, data, error, retry } = useAsync(async () => {
-    const [persons, disclosures, meta] = await Promise.all([getPersons(), getDisclosures(), getMeta()])
-    return { persons, disclosures, meta }
+    const [persons, officials, officialHoldings, disclosures, meta] = await Promise.all([
+      getPersons(),
+      // 공직자는 별도 파일이다 (국장 전용)
+      getOfficials().catch(() => [] as Person[]),
+      getOfficialHoldings().catch(() => ({}) as OfficialHoldings),
+      getDisclosures(),
+      getMeta(),
+    ])
+    return { persons, officials, officialHoldings, disclosures, meta }
   })
 
-  const person = useMemo(() => data?.persons.find((p) => p.id === id) ?? null, [data, id])
+  const person = useMemo(
+    () => data?.persons.find((p) => p.id === id) ?? data?.officials.find((p) => p.id === id) ?? null,
+    [data, id],
+  )
+
+  /**
+   * 공직자의 시점별 보유. 공고가 여러 번이면 여기서 **추이**가 나온다.
+   * 최신이 앞이다 (officialAssets 가 그렇게 정렬돼 있다).
+   */
+  const snapshots = useMemo(() => {
+    if (!data || !person || person.type !== 'official') return []
+    return (person.officialAssets ?? []).map((a) => ({
+      ...a,
+      holdings: data.officialHoldings[person.id]?.[a.asOf] ?? [],
+    }))
+  }, [data, person])
+
+  /** 화면에 보여줄 대표 보유 = 가장 최근 공개 시점 */
+  const holdings = person?.type === 'official' ? (snapshots[0]?.holdings ?? []) : (person?.holdings ?? [])
 
   const timeline = useMemo(() => {
     if (!data || !person) return []
@@ -141,13 +167,13 @@ export default function PersonScreen() {
           title="보유 현황"
           note={
             person.type === 'official'
-              ? `종목 ${person.holdings.length}개 · 재산공개 기준`
-              : `종목 ${person.holdings.length}개 · 최근 공시 기준`
+              ? `종목 ${holdings.length}개 · ${snapshots[0]?.asOf ? formatDate(snapshots[0].asOf) + ' 공개' : '재산공개'}`
+              : `종목 ${holdings.length}개 · 최근 공시 기준`
           }
         />
-        {person.holdings.length ? (
+        {holdings.length ? (
           <ul className={styles.holdings}>
-            {person.holdings.map((h, i) => {
+            {holdings.map((h, i) => {
               const body = (
                 <>
                   <div className={styles.holdingBody}>

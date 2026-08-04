@@ -7,7 +7,14 @@ import { FollowChip, StockInfoList } from '@/shared/components/Rows'
 import {
   Disclaimer, EmptyState, ErrorState, FreshnessLabel, LoadingState, SectionHeader,
 } from '@/shared/components/Feedback'
-import { getDisclosures, getMeta, getPersons, getSparklines, getStocks } from '@/lib/data'
+import {
+  getDisclosures,
+  getMeta,
+  getOfficialHoldings,
+  getOfficials,
+  getSparklines,
+  getStocks,
+} from '@/lib/data'
 import { officialsHoldingStock } from '@/lib/officials'
 import HoldingCard from '@/shared/components/HoldingCard'
 import ShowMore from '@/shared/components/ShowMore'
@@ -29,10 +36,17 @@ export default function StockScreen() {
   const brokerId = useBroker()
 
   const { state, data, error, retry } = useAsync(async () => {
-    const [stocks, disclosures, meta, sparklines, persons] = await Promise.all([
-      getStocks(), getDisclosures(), getMeta(), getSparklines().catch(() => ({})), getPersons(),
-    ])
-    return { stocks, disclosures, meta, sparklines, persons }
+    const [stocks, disclosures, meta, sparklines, officials, officialHoldings] =
+      await Promise.all([
+        getStocks(),
+        getDisclosures(),
+        getMeta(),
+        getSparklines().catch(() => ({})),
+        // 공직자는 국장에만 있다
+        getOfficials().catch(() => []),
+        getOfficialHoldings().catch(() => ({})),
+      ])
+    return { stocks, disclosures, meta, sparklines, officials, officialHoldings }
   })
 
   const stock = useMemo(() => data?.stocks.find((s) => s.code === code) ?? null, [data, code])
@@ -43,7 +57,7 @@ export default function StockScreen() {
   )
   // 이 종목을 보유한 공직자. 거래가 아니라 **보유 스냅샷**이라 내부자 거래와 섞지 않는다
   const officialHolders = useMemo(
-    () => (data && code ? officialsHoldingStock(data.persons, code) : []),
+    () => (data && code ? officialsHoldingStock(data.officials, data.officialHoldings, code) : []),
     [data, code],
   )
   const planned = list.filter((d) => d.isPlanned)

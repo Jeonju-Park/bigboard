@@ -128,6 +128,15 @@ jobs:
           fi
           node pipeline/src/gazette.ts || echo "::warning::관보 색인 수집 실패 — 기존 gazette.json 을 유지합니다"
 
+      # 관보 색인이 갱신된 직후에 돌린다. 새 재산공개 관보가 색인에 뜨면
+      # PDF 를 자동으로 받아 파싱하고, 이미 처리한 공고는 건너뛴다.
+      # 인물별로 공고 시점 스냅샷이 쌓여 '추이'가 된다.
+      - name: 공직자 재산 (관보 PDF 파싱)
+        if: steps.mode.outputs.kr_close == 'true'
+        env:
+          DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
+        run: node pipeline/src/gazette-pdf.ts || echo "::warning::관보 PDF 파싱 실패 — 기존 공직자 데이터를 유지합니다"
+
       # ── 미장 (미국장 마감 직후에만) ────────────────────────────────────────
       # SEC 는 키가 필요 없다. User-Agent 와 초당 10회 제한만 지키면 된다(sec.ts).
       - name: 미국 내부자 거래 (SEC Form 4)

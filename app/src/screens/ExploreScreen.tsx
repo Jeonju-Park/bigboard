@@ -7,13 +7,14 @@ import Icon from '@/shared/components/Icon'
 import {
   Disclaimer, EmptyState, ErrorState, FreshnessLabel, LoadingState, SectionHeader,
 } from '@/shared/components/Feedback'
-import { getDisclosures, getGazette, getInstitutions, getMeta, getPersons } from '@/lib/data'
+import { getDisclosures, getGazette, getInstitutions, getMeta, getOfficials, getPersons } from '@/lib/data'
 import { useAsync } from '@/lib/useData'
 import { toggleFollowPerson, useFollowedPersons } from '@/lib/follow'
 import { formatAmountShort, formatDate } from '@/lib/format'
 import { officialStockValue, personHeadline } from '@/lib/person'
 import { daysAgoKey, todayKey } from '@/lib/date'
 import { MARKETS, useMarket } from '@/lib/market'
+import type { Person } from '@/lib/types'
 import homeStyles from './HomeScreen.module.css'
 import styles from './ExploreScreen.module.css'
 
@@ -31,15 +32,16 @@ export default function ExploreScreen() {
   const followed = useFollowedPersons()
 
   const { state, data, error, retry } = useAsync(async () => {
-    const [disclosures, persons, meta, gazette, institutions] = await Promise.all([
+    const [disclosures, persons, officials, meta, gazette, institutions] = await Promise.all([
       getDisclosures(),
       getPersons(),
+      // 시장마다 없는 파일이 있다 (공직자·관보는 국장만, 13F 는 미장만)
+      getOfficials().catch(() => [] as Person[]),
       getMeta(),
-      // 시장마다 없는 파일이 있다 (관보는 국장만, 13F 는 미장만)
       getGazette().catch(() => []),
       getInstitutions().catch(() => []),
     ])
-    return { disclosures, persons, meta, gazette, institutions }
+    return { disclosures, persons, officials, meta, gazette, institutions }
   })
 
   const insight = useMemo(() => {
@@ -73,7 +75,7 @@ export default function ExploreScreen() {
     //      같은 목록에 섞으면 '순매수 0' 으로 밀려 영원히 안 보인다
     // 증권 항목이 없는 공직자는 이 목록에서 뺀다 — 총재산으로 대체하면 '주식 평가액 순'이 거짓이 된다.
     // 대신 몇 명이 빠졌는지 화면에 밝힌다.
-    const allOfficials = data.persons.filter((p) => p.type === 'official')
+    const allOfficials = data.officials
     const officials = allOfficials
       .filter((p) => officialStockValue(p) !== null)
       .sort((a, b) => (officialStockValue(b) ?? 0) - (officialStockValue(a) ?? 0))

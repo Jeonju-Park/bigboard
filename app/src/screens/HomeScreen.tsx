@@ -8,7 +8,7 @@ import { OptionSheet } from '@/shared/components/BottomSheet'
 import {
   Disclaimer, EmptyState, ErrorState, FreshnessLabel, LoadingState, StaleBanner,
 } from '@/shared/components/Feedback'
-import { getDisclosures, getMeta, getPersons } from '@/lib/data'
+import { getDisclosures, getMeta, getOfficials } from '@/lib/data'
 import { officialsByStockValue } from '@/lib/officials'
 import { personHeadline } from '@/lib/person'
 import { useAsync } from '@/lib/useData'
@@ -20,7 +20,7 @@ import {
   PERIOD_OPTIONS, SORT_OPTIONS, filterByPeriod, periodLabel, sortDisclosures, sortLabel,
   unknownAmountCount, type PeriodKey, type SortKey,
 } from '@/lib/sort'
-import type { Disclosure } from '@/lib/types'
+import type { Disclosure, Person } from '@/lib/types'
 import { todayKey } from '@/lib/date'
 import styles from './HomeScreen.module.css'
 
@@ -64,12 +64,13 @@ export default function HomeScreen() {
   const followedStocks = useFollowedStocks()
 
   const { state, data, error, retry } = useAsync(async () => {
-    const [disclosures, meta, persons] = await Promise.all([
+    const [disclosures, meta, officials] = await Promise.all([
       getDisclosures(),
       getMeta(),
-      getPersons(),
+      // 미장에는 공직자 파일이 없다. 없으면 빈 목록으로 두고 블록을 숨긴다
+      getOfficials().catch(() => [] as Person[]),
     ])
-    return { disclosures, meta, persons }
+    return { disclosures, meta, officials }
   })
 
   /**
@@ -80,7 +81,7 @@ export default function HomeScreen() {
    * 대신 피드 위에 별도 블록을 두고 공개일을 항상 붙인다.
    */
   const officials = useMemo(
-    () => (data ? officialsByStockValue(data.persons).slice(0, 8) : []),
+    () => (data ? officialsByStockValue(data.officials).slice(0, 8) : []),
     [data],
   )
 

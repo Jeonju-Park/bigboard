@@ -199,6 +199,9 @@ function main() {
       asOf,
       totalAssets: totalRaw * unit.multiplier,
       stockValue: (() => { const v = num(get('stock')); return v === null ? null : v * unit.multiplier })(),
+      // 표 자료에는 종목별 내역이 없다 (관보 PDF 에만 있다). 0 이 사실이다
+      holdingCount: 0,
+      notice: `${source.split('/').pop() ?? source} (표 자료)`,
     })
     byPerson.set(key, cur)
   }
