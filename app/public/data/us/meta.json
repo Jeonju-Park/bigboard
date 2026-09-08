@@ -1,6 +1,6 @@
 {
  "market": "us",
- "lastUpdated": "2026-09-07T23:18:45.911Z",
+ "lastUpdated": "2026-09-08T23:12:15.211Z",
  "sources": [
   "미국 증권거래위원회(SEC) EDGAR — Form 4 임원·주요주주 소유변동 신고",
   "미국 증권거래위원회(SEC) EDGAR — 13F-HR 기관투자자 분기 보유 신고",
@@ -16,7 +16,7 @@
  "priceDataAvailable": true,
  "sparklineAvailable": false,
  "skipped": {
-  "total": 40849,
+  "total": 42695,
   "reasons": {
    "시장 거래(P/S) 없음": 116,
    "순증감 0 (매수·매도 상쇄)": 7,
@@ -37,7 +37,7 @@
    "자산 종류 PS": 4,
    "자산 종류 HN": 16,
    "자산 종류 CS": 24,
-   "거래 코드 E": 21,
+   "거래 코드 E": 20,
    "티커 없음": 2,
    "자산 종류 OI": 2,
    "자산 종류 AB": 1,
