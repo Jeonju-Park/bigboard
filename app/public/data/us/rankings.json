@@ -7,7 +7,7 @@
     "personName": "CASCADE INVESTMENT, L.L.C. 외 1인",
     "personType": "insider",
     "company": "REPUBLIC SERVICES, INC.",
-    "amount": 164701666.0411
+    "amount": 324294707.1092
    },
    {
     "rank": 2,
@@ -23,10 +23,26 @@
     "personName": "GOLDENTREE ASSET MANAGEMENT LP 외 2인",
     "personType": "insider",
     "company": "QVC Group, Inc.",
-    "amount": 11844000
+    "amount": 26000000
    },
    {
     "rank": 4,
+    "personId": "GameStopCorp.-CohenRyan",
+    "personName": "Cohen Ryan",
+    "personType": "insider",
+    "company": "GameStop Corp.",
+    "amount": 20375900
+   },
+   {
+    "rank": 5,
+    "personId": "UberTechnologies,Inc-KHOSROWSHAHIDARA",
+    "personName": "KHOSROWSHAHI DARA",
+    "personType": "insider",
+    "company": "Uber Technologies, Inc",
+    "amount": 10005952.200000001
+   },
+   {
+    "rank": 6,
     "personId": "UberTechnologies,Inc-MacdonaldAndrew",
     "personName": "Macdonald Andrew",
     "personType": "insider",
@@ -34,15 +50,7 @@
     "amount": 5308063.682500001
    },
    {
-    "rank": 5,
-    "personId": "Gold.com,Inc.-TetherGlobalInvestmentsFund,S.I.C.A.F.,S.A.외2인",
-    "personName": "Tether Global Investments Fund, S.I.C.A.F., S.A. 외 2인",
-    "personType": "insider",
-    "company": "Gold.com, Inc.",
-    "amount": 3930350
-   },
-   {
-    "rank": 6,
+    "rank": 7,
     "personId": "SUJALIFE,INC.-PAINESCHWARTZFOODCHAINFUNDVGP,LTD.",
     "personName": "PAINE SCHWARTZ FOOD CHAIN FUND V GP, LTD.",
     "personType": "insider",
@@ -50,7 +58,7 @@
     "amount": 3126250
    },
    {
-    "rank": 7,
+    "rank": 8,
     "personId": "PROSPECTCAPITALCORP-BarryJohnF",
     "personName": "Barry John F",
     "personType": "insider",
@@ -58,7 +66,7 @@
     "amount": 2726315.2
    },
    {
-    "rank": 8,
+    "rank": 9,
     "personId": "CIMGROUP,INC.-RESSLERRICHARDS",
     "personName": "RESSLER RICHARD S",
     "personType": "insider",
@@ -66,7 +74,7 @@
     "amount": 2707793.98352
    },
    {
-    "rank": 9,
+    "rank": 10,
     "personId": "InhibrxBiosciences,Inc.-LappeMark",
     "personName": "Lappe Mark",
     "personType": "insider",
@@ -74,7 +82,7 @@
     "amount": 2645399.3134000003
    },
    {
-    "rank": 10,
+    "rank": 11,
     "personId": "AlphaMetallurgicalResources,Inc.-CourtisKennethS.",
     "personName": "Courtis Kenneth S.",
     "personType": "insider",
@@ -82,23 +90,23 @@
     "amount": 2258288.9399999995
    },
    {
-    "rank": 11,
-    "personId": "DestinyTech100Inc.-PrasadSohail",
-    "personName": "Prasad Sohail",
-    "personType": "insider",
-    "company": "Destiny Tech100 Inc.",
-    "amount": 1767343.6
-   },
-   {
     "rank": 12,
-    "personId": "TENAXTHERAPEUTICS,INC.-ADAR1CapitalManagement,LLC외1인",
-    "personName": "ADAR1 Capital Management, LLC 외 1인",
+    "personId": "UpstartHoldings,Inc.-GuPaul",
+    "personName": "Gu Paul",
     "personType": "insider",
-    "company": "TENAX THERAPEUTICS, INC.",
-    "amount": 1604160
+    "company": "Upstart Holdings, Inc.",
+    "amount": 1277500
    },
    {
     "rank": 13,
+    "personId": "CYBININC.-SoEricH.L.",
+    "personName": "So Eric H. L.",
+    "personType": "insider",
+    "company": "CYBIN INC.",
+    "amount": 1208900
+   },
+   {
+    "rank": 14,
     "personId": "GameStopCorp.-ChengLawrence",
     "personName": "Cheng Lawrence",
     "personType": "insider",
@@ -106,15 +114,15 @@
     "amount": 1033956
    },
    {
-    "rank": 14,
-    "personId": "EikonTherapeutics,Inc.-ColumnGroupIVGP,LP외7인",
-    "personName": "Column Group IV GP, LP 외 7인",
+    "rank": 15,
+    "personId": "AlphatecHoldings,Inc.-MilesPatrick",
+    "personName": "Miles Patrick",
     "personType": "insider",
-    "company": "Eikon Therapeutics, Inc.",
-    "amount": 1031044.96
+    "company": "Alphatec Holdings, Inc.",
+    "amount": 1013150
    },
    {
-    "rank": 15,
+    "rank": 16,
     "personId": "TYSONFOODS,INC.-SchomburgerJeffreyK",
     "personName": "Schomburger Jeffrey K",
     "personType": "insider",
@@ -122,7 +130,7 @@
     "amount": 1001616.65
    },
    {
-    "rank": 16,
+    "rank": 17,
     "personId": "AtaraBiotherapeutics,Inc.-CherryBrianN",
     "personName": "Cherry Brian N",
     "personType": "insider",
@@ -130,28 +138,20 @@
     "amount": 999993.6
    },
    {
-    "rank": 17,
+    "rank": 18,
     "personId": "CarParts.com,Inc.-MenianeDavid",
     "personName": "Meniane David",
     "personType": "insider",
     "company": "CarParts.com, Inc.",
-    "amount": 749239.16
+    "amount": 882534.16
    },
    {
-    "rank": 18,
+    "rank": 19,
     "personId": "CarParts.com,Inc.-HuffakerMichael",
     "personName": "Huffaker Michael",
     "personType": "insider",
     "company": "CarParts.com, Inc.",
-    "amount": 748462.1
-   },
-   {
-    "rank": 19,
-    "personId": "DONEGALGROUPINC-DONEGALMUTUALINSURANCECO",
-    "personName": "DONEGAL MUTUAL INSURANCE CO",
-    "personType": "insider",
-    "company": "DONEGAL GROUP INC",
-    "amount": 696612.1958000001
+    "amount": 881757.1
    },
    {
     "rank": 20,
@@ -169,7 +169,7 @@
     "personName": "CASCADE INVESTMENT, L.L.C. 외 1인",
     "personType": "insider",
     "company": "REPUBLIC SERVICES, INC.",
-    "amount": 1091423536.1162999
+    "amount": 1142870814.7485998
    },
    {
     "rank": 2,
@@ -213,19 +213,19 @@
    },
    {
     "rank": 7,
+    "personId": "QVCGroup,Inc.-GOLDENTREEASSETMANAGEMENTLP외2인",
+    "personName": "GOLDENTREE ASSET MANAGEMENT LP 외 2인",
+    "personType": "insider",
+    "company": "QVC Group, Inc.",
+    "amount": 39886651.1646
+   },
+   {
+    "rank": 8,
     "personId": "SUJALIFE,INC.-PAINESCHWARTZFOODCHAINFUNDVGP,LTD.",
     "personName": "PAINE SCHWARTZ FOOD CHAIN FUND V GP, LTD.",
     "personType": "insider",
     "company": "SUJA LIFE, INC.",
     "amount": 29026094.029999997
-   },
-   {
-    "rank": 8,
-    "personId": "QVCGroup,Inc.-GOLDENTREEASSETMANAGEMENTLP외2인",
-    "personName": "GOLDENTREE ASSET MANAGEMENT LP 외 2인",
-    "personType": "insider",
-    "company": "QVC Group, Inc.",
-    "amount": 23873944.165
    },
    {
     "rank": 9,
@@ -261,11 +261,11 @@
    },
    {
     "rank": 13,
-    "personId": "AmericanAssetsTrust,Inc.-RADYERNESTS",
-    "personName": "RADY ERNEST S",
+    "personId": "GameStopCorp.-CohenRyan",
+    "personName": "Cohen Ryan",
     "personType": "insider",
-    "company": "American Assets Trust, Inc.",
-    "amount": 18160319.15
+    "company": "GameStop Corp.",
+    "amount": 20375900
    },
    {
     "rank": 14,
@@ -285,6 +285,14 @@
    },
    {
     "rank": 16,
+    "personId": "AmericanAssetsTrust,Inc.-RADYERNESTS",
+    "personName": "RADY ERNEST S",
+    "personType": "insider",
+    "company": "American Assets Trust, Inc.",
+    "amount": 13815013.8
+   },
+   {
+    "rank": 17,
     "personId": "LibertyCapitalCorp/NV-MALONEJOHNC",
     "personName": "MALONE JOHN C",
     "personType": "insider",
@@ -292,7 +300,7 @@
     "amount": 13583480.2076
    },
    {
-    "rank": 17,
+    "rank": 18,
     "personId": "CalamosGlobalDynamicIncomeFund-MetLifeInvestmentManagement,LLC",
     "personName": "MetLife Investment Management, LLC",
     "personType": "insider",
@@ -300,7 +308,7 @@
     "amount": 11000000
    },
    {
-    "rank": 18,
+    "rank": 19,
     "personId": "AlphaMetallurgicalResources,Inc.-CourtisKennethS.",
     "personName": "Courtis Kenneth S.",
     "personType": "insider",
@@ -308,20 +316,12 @@
     "amount": 10546062.53
    },
    {
-    "rank": 19,
-    "personId": "INTELCORP-TANLIPBU",
-    "personName": "TAN LIP BU",
-    "personType": "insider",
-    "company": "INTEL CORP",
-    "amount": 9999985
-   },
-   {
     "rank": 20,
-    "personId": "LibertyLatinAmericaLtd.-DEANGOITIAALFONSO",
-    "personName": "DE ANGOITIA ALFONSO",
+    "personId": "UberTechnologies,Inc-KHOSROWSHAHIDARA",
+    "personName": "KHOSROWSHAHI DARA",
     "personType": "insider",
-    "company": "Liberty Latin America Ltd.",
-    "amount": 9978488.4694
+    "company": "Uber Technologies, Inc",
+    "amount": 10005952.200000001
    }
   ],
   "90": [
@@ -339,7 +339,7 @@
     "personName": "CASCADE INVESTMENT, L.L.C. 외 1인",
     "personType": "insider",
     "company": "REPUBLIC SERVICES, INC.",
-    "amount": 1091423536.1162999
+    "amount": 1251016577.1843998
    },
    {
     "rank": 3,
@@ -399,6 +399,14 @@
    },
    {
     "rank": 10,
+    "personId": "QVCGroup,Inc.-GOLDENTREEASSETMANAGEMENTLP외2인",
+    "personName": "GOLDENTREE ASSET MANAGEMENT LP 외 2인",
+    "personType": "insider",
+    "company": "QVC Group, Inc.",
+    "amount": 49873944.165
+   },
+   {
+    "rank": 11,
     "personId": "GROUP1AUTOMOTIVEINC-ConiferManagement,L.L.C.",
     "personName": "Conifer Management, L.L.C.",
     "personType": "insider",
@@ -406,7 +414,7 @@
     "amount": 48935219.9905
    },
    {
-    "rank": 11,
+    "rank": 12,
     "personId": "ScribeTherapeutics,Inc.-AghazadehBehzad외2인",
     "personName": "Aghazadeh Behzad 외 2인",
     "personType": "insider",
@@ -414,7 +422,7 @@
     "amount": 36259761.25
    },
    {
-    "rank": 12,
+    "rank": 13,
     "personId": "BraveheartBio,Inc.-ChimovitsErez",
     "personName": "Chimovits Erez",
     "personType": "insider",
@@ -422,7 +430,7 @@
     "amount": 34920000
    },
    {
-    "rank": 13,
+    "rank": 14,
     "personId": "BraveheartBio,Inc.-ORBIMEDADVISORSLLC외2인",
     "personName": "ORBIMED ADVISORS LLC 외 2인",
     "personType": "insider",
@@ -430,20 +438,12 @@
     "amount": 34920000
    },
    {
-    "rank": 14,
+    "rank": 15,
     "personId": "SUJALIFE,INC.-PAINESCHWARTZFOODCHAINFUNDVGP,LTD.",
     "personName": "PAINE SCHWARTZ FOOD CHAIN FUND V GP, LTD.",
     "personType": "insider",
     "company": "SUJA LIFE, INC.",
     "amount": 29026094.029999997
-   },
-   {
-    "rank": 15,
-    "personId": "QVCGroup,Inc.-GOLDENTREEASSETMANAGEMENTLP외2인",
-    "personName": "GOLDENTREE ASSET MANAGEMENT LP 외 2인",
-    "personType": "insider",
-    "company": "QVC Group, Inc.",
-    "amount": 23873944.165
    },
    {
     "rank": 16,
@@ -479,11 +479,11 @@
    },
    {
     "rank": 20,
-    "personId": "BraveheartBio,Inc.-AHBioFundIV,L.P.외3인",
-    "personName": "AH Bio Fund IV, L.P. 외 3인",
+    "personId": "GameStopCorp.-CohenRyan",
+    "personName": "Cohen Ryan",
     "personType": "insider",
-    "company": "Braveheart Bio, Inc.",
-    "amount": 19800000
+    "company": "GameStop Corp.",
+    "amount": 20375900
    }
   ]
  },
@@ -503,26 +503,10 @@
     "personName": "Silver Lake Partners IV, L.P. 외 4인",
     "personType": "insider",
     "company": "Dell Technologies Inc.",
-    "amount": 133453377.64000002
+    "amount": 78443156.56
    },
    {
     "rank": 3,
-    "personId": "DellTechnologiesInc.-SLSPV-2,L.P.외4인",
-    "personName": "SL SPV-2, L.P. 외 4인",
-    "personType": "insider",
-    "company": "Dell Technologies Inc.",
-    "amount": 103764681.33000001
-   },
-   {
-    "rank": 4,
-    "personId": "DellTechnologiesInc.-SilverLakePartnersVDE(AIV),L.P.외4인",
-    "personName": "Silver Lake Partners V DE (AIV), L.P. 외 4인",
-    "personType": "insider",
-    "company": "Dell Technologies Inc.",
-    "amount": 59622789.94
-   },
-   {
-    "rank": 5,
     "personId": "ILLUMINA,INC.-MeisterKeithA.",
     "personName": "Meister Keith A.",
     "personType": "insider",
@@ -530,7 +514,15 @@
     "amount": 57199200.669999994
    },
    {
-    "rank": 6,
+    "rank": 4,
+    "personId": "DellTechnologiesInc.-SLSPV-2,L.P.외4인",
+    "personName": "SL SPV-2, L.P. 외 4인",
+    "personType": "insider",
+    "company": "Dell Technologies Inc.",
+    "amount": 52365459.87
+   },
+   {
+    "rank": 5,
     "personId": "VentureGlobal,Inc.-LarsonKeithD",
     "personName": "Larson Keith D",
     "personType": "insider",
@@ -538,12 +530,20 @@
     "amount": 35677169.330800004
    },
    {
-    "rank": 7,
-    "personId": "AGNT,Inc.-Gratitude2022TrustU/A/D8/26/22",
-    "personName": "Gratitude 2022 Trust U/A/D 8/26/22",
+    "rank": 6,
+    "personId": "CoreWeave,Inc.-IntratorMichaelN",
+    "personName": "Intrator Michael N",
     "personType": "insider",
-    "company": "AGNT, Inc.",
-    "amount": 31991307.200000003
+    "company": "CoreWeave, Inc.",
+    "amount": 30794542.2164
+   },
+   {
+    "rank": 7,
+    "personId": "DellTechnologiesInc.-SilverLakePartnersVDE(AIV),L.P.외4인",
+    "personName": "Silver Lake Partners V DE (AIV), L.P. 외 4인",
+    "personType": "insider",
+    "company": "Dell Technologies Inc.",
+    "amount": 30084657.04
    },
    {
     "rank": 8,
@@ -563,6 +563,14 @@
    },
    {
     "rank": 10,
+    "personId": "QVCGroup,Inc.-SilverPointCapitalL.P.외2인",
+    "personName": "Silver Point Capital L.P. 외 2인",
+    "personType": "insider",
+    "company": "QVC Group, Inc.",
+    "amount": 26000000
+   },
+   {
+    "rank": 11,
     "personId": "BELITEBIO,INC-LinYu-Hsin",
     "personName": "Lin Yu-Hsin",
     "personType": "insider",
@@ -570,7 +578,23 @@
     "amount": 19082548.5046
    },
    {
-    "rank": 11,
+    "rank": 12,
+    "personId": "Datadog,Inc.-PomelOlivier",
+    "personName": "Pomel Olivier",
+    "personType": "insider",
+    "company": "Datadog, Inc.",
+    "amount": 18602602.2995
+   },
+   {
+    "rank": 13,
+    "personId": "ProtagonistTherapeutics,Inc-PATELDINESHVPHD",
+    "personName": "PATEL DINESH V PH D",
+    "personType": "insider",
+    "company": "Protagonist Therapeutics, Inc",
+    "amount": 18240567.82
+   },
+   {
+    "rank": 14,
     "personId": "SnowflakeInc.-SpeiserMichaelL",
     "personName": "Speiser Michael L",
     "personType": "insider",
@@ -578,7 +602,7 @@
     "amount": 17955768.411
    },
    {
-    "rank": 12,
+    "rank": 15,
     "personId": "Workday,Inc.-DUFFIELDDAVIDA",
     "personName": "DUFFIELD DAVID A",
     "personType": "insider",
@@ -586,7 +610,7 @@
     "amount": 17954367.6361
    },
    {
-    "rank": 13,
+    "rank": 16,
     "personId": "SnowflakeInc.-GARRETTMARK",
     "personName": "GARRETT MARK",
     "personType": "insider",
@@ -594,7 +618,15 @@
     "amount": 17500000
    },
    {
-    "rank": 14,
+    "rank": 17,
+    "personId": "SnowflakeInc.-DagevilleBenoit",
+    "personName": "Dageville Benoit",
+    "personType": "insider",
+    "company": "Snowflake Inc.",
+    "amount": 16786000
+   },
+   {
+    "rank": 18,
     "personId": "BioNTechSE-SahinUgur",
     "personName": "Sahin Ugur",
     "personType": "insider",
@@ -602,7 +634,7 @@
     "amount": 15079718.5
    },
    {
-    "rank": 15,
+    "rank": 19,
     "personId": "CarisLifeSciences,Inc.-SpetzlerDavidBaxley",
     "personName": "Spetzler David Baxley",
     "personType": "insider",
@@ -610,44 +642,12 @@
     "amount": 14834106.6324
    },
    {
-    "rank": 16,
+    "rank": 20,
     "personId": "UNITEDTHERAPEUTICSCorp-ROTHBLATTMARTINEA",
     "personName": "ROTHBLATT MARTINE A",
     "personType": "insider",
     "company": "UNITED THERAPEUTICS Corp",
-    "amount": 14019769.2442
-   },
-   {
-    "rank": 17,
-    "personId": "DellTechnologiesInc.-SaavedraJenniferD.",
-    "personName": "Saavedra Jennifer D.",
-    "personType": "insider",
-    "company": "Dell Technologies Inc.",
-    "amount": 13130520
-   },
-   {
-    "rank": 18,
-    "personId": "BELITEBIO,INC-ChuangHao-Yuan",
-    "personName": "Chuang Hao-Yuan",
-    "personType": "insider",
-    "company": "BELITE BIO, INC",
-    "amount": 12803527.8435
-   },
-   {
-    "rank": 19,
-    "personId": "BILLHoldings,Inc.-LacerteReneA.",
-    "personName": "Lacerte Rene A.",
-    "personType": "insider",
-    "company": "BILL Holdings, Inc.",
-    "amount": 12529254.6273
-   },
-   {
-    "rank": 20,
-    "personId": "QVCGroup,Inc.-SilverPointCapitalL.P.외2인",
-    "personName": "Silver Point Capital L.P. 외 2인",
-    "personType": "insider",
-    "company": "QVC Group, Inc.",
-    "amount": 11844000
+    "amount": 14155617.0193
    }
   ],
   "30": [
@@ -797,11 +797,11 @@
    },
    {
     "rank": 19,
-    "personId": "SeaLtd-LiXiaodong",
-    "personName": "Li Xiaodong",
+    "personId": "DellTechnologiesInc.-SilverLakePartnersIV,L.P.외4인",
+    "personName": "Silver Lake Partners IV, L.P. 외 4인",
     "personType": "insider",
-    "company": "Sea Ltd",
-    "amount": 147347753.69
+    "company": "Dell Technologies Inc.",
+    "amount": 163834886.4
    },
    {
     "rank": 20,
