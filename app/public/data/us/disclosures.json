@@ -1,5 +1,5291 @@
 [
  {
+  "id": "0002123975-26-000027",
+  "personName": "Sahin Ugur",
+  "personType": "insider",
+  "title": "Chief Executive Officer",
+  "company": "BioNTech SE",
+  "stockCode": "BNTX",
+  "direction": "sell",
+  "unitPrice": null,
+  "quantity": 66000,
+  "totalAmount": 6480659,
+  "tradeDate": "2026-09-30",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 312209,
+  "holdingAfter": 246209,
+  "details": [
+   {
+    "date": "2026-09-29",
+    "price": 98.2591,
+    "qty": -34000
+   },
+   {
+    "date": "2026-09-30",
+    "price": 98.1203,
+    "qty": -32000
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1776985/000212397526000027/0002123975-26-000027-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 0,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0002102499-26-000002",
+  "personName": "Hartt Steven Knut",
+  "personType": "insider",
+  "title": "",
+  "company": "Primark Meketa Private Equity Investments Fund",
+  "stockCode": "PMPEX",
+  "direction": "buy",
+  "unitPrice": 17.44,
+  "quantity": 573.394,
+  "totalAmount": 9999.99136,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 674.309,
+  "holdingAfter": 1247.703,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 17.44,
+    "qty": 573.394
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/2102499/000210249926000002/0002102499-26-000002-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0002102407-26-000005",
+  "personName": "Woolley Peter Scott",
+  "personType": "insider",
+  "title": "",
+  "company": "Primark Meketa Private Equity Investments Fund",
+  "stockCode": "PMPEX",
+  "direction": "buy",
+  "unitPrice": 17.44,
+  "quantity": 8600.917,
+  "totalAmount": 149999.99248000002,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 3371.544,
+  "holdingAfter": 11972.461,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 17.44,
+    "qty": 8600.917
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1815609/000210240726000005/0002102407-26-000005-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0002102036-26-000003",
+  "personName": "Samson Ethan Isaac",
+  "personType": "insider",
+  "title": "",
+  "company": "Primark Meketa Private Equity Investments Fund",
+  "stockCode": "PMPEX",
+  "direction": "buy",
+  "unitPrice": 17.44,
+  "quantity": 831.422,
+  "totalAmount": 14499.99968,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 708.0239999999999,
+  "holdingAfter": 1539.446,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 17.44,
+    "qty": 831.422
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1815609/000210203626000003/0002102036-26-000003-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0002092936-26-000006",
+  "personName": "Doehner Cobian Mauricio",
+  "personType": "insider",
+  "title": "EVP Corporate Affairs",
+  "company": "CEMEX SAB DE CV",
+  "stockCode": "CX",
+  "direction": "sell",
+  "unitPrice": 9.5705,
+  "quantity": 927900,
+  "totalAmount": 8880466.95,
+  "tradeDate": "2026-09-30",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 1512830,
+  "holdingAfter": 584930,
+  "details": [
+   {
+    "date": "2026-09-30",
+    "price": 9.5705,
+    "qty": -927900
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1076378/000209293626000006/0002092936-26-000006-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 0,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0002088549-26-000012",
+  "personName": "Atay Oguzhan",
+  "personType": "insider",
+  "title": "Chairman and CEO",
+  "company": "BillionToOne, Inc.",
+  "stockCode": "BLLN",
+  "direction": "sell",
+  "unitPrice": 120.64,
+  "quantity": 10999,
+  "totalAmount": 1326919.3599999999,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 19332,
+  "holdingAfter": 8333,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 120.64,
+    "qty": -8333
+   },
+   {
+    "date": "2026-09-28",
+    "price": 120.64,
+    "qty": -2666
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/2088549/000208854926000012/0002088549-26-000012-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0002016863-26-000011",
+  "personName": "Losyev Sergey",
+  "personType": "insider",
+  "title": "Co-Chief Investment Officer",
+  "company": "Armour Residential REIT, Inc.",
+  "stockCode": "ARR",
+  "direction": "buy",
+  "unitPrice": 13.91,
+  "quantity": 725,
+  "totalAmount": 10084.75,
+  "tradeDate": "2026-09-29",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 8951.539,
+  "holdingAfter": 9676.539,
+  "details": [
+   {
+    "date": "2026-09-29",
+    "price": 13.91,
+    "qty": 725
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1428205/000201686326000011/0002016863-26-000011-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 1,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001976408-26-000874",
+  "personName": "Nechmad Yair",
+  "personType": "insider",
+  "title": "CEO, Co Founder & Chairman",
+  "company": "Nayax Ltd.",
+  "stockCode": "NYAX",
+  "direction": "buy",
+  "unitPrice": null,
+  "quantity": 46935,
+  "totalAmount": 2107579.9799,
+  "tradeDate": "2026-09-29",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 7394623,
+  "holdingAfter": 7441558,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 44.71,
+    "qty": 8000
+   },
+   {
+    "date": "2026-09-28",
+    "price": 45.4865,
+    "qty": 1000
+   },
+   {
+    "date": "2026-09-28",
+    "price": 45.0231,
+    "qty": 5504
+   },
+   {
+    "date": "2026-09-28",
+    "price": 45.2055,
+    "qty": 9642
+   },
+   {
+    "date": "2026-09-29",
+    "price": 44.7953,
+    "qty": 19000
+   },
+   {
+    "date": "2026-09-29",
+    "price": 45.49,
+    "qty": 1000
+   },
+   {
+    "date": "2026-09-29",
+    "price": 44.5085,
+    "qty": 2789
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1901279/000197640826000874/0001976408-26-000874-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 1,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001870974-26-000014",
+  "personName": "Ghamsari Nima",
+  "personType": "insider",
+  "title": "HEAD OF BLEND",
+  "company": "Blend Labs, Inc.",
+  "stockCode": "BLND",
+  "direction": "sell",
+  "unitPrice": 1.102,
+  "quantity": 22523,
+  "totalAmount": 24820.346,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 7850361,
+  "holdingAfter": 7827838,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 1.102,
+    "qty": -22523
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1855747/000187097426000014/0001870974-26-000014-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001838139-26-000026",
+  "personName": "Urist Marshall",
+  "personType": "insider",
+  "title": "EVP, Research & Investments",
+  "company": "Royalty Pharma plc",
+  "stockCode": "RPRX",
+  "direction": "sell",
+  "unitPrice": 57.88,
+  "quantity": 4126,
+  "totalAmount": 238812.88,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 8252,
+  "holdingAfter": 4126,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 57.88,
+    "qty": -4126
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1802768/000183813926000026/0001838139-26-000026-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001832612-26-000020",
+  "personName": "Adarkar Prabir",
+  "personType": "insider",
+  "title": "PRESIDENT AND COO",
+  "company": "DoorDash, Inc.",
+  "stockCode": "DASH",
+  "direction": "sell",
+  "unitPrice": null,
+  "quantity": 8738,
+  "totalAmount": 1580251.8440000003,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 937311,
+  "holdingAfter": 928573,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 178.538,
+    "qty": -1638
+   },
+   {
+    "date": "2026-09-28",
+    "price": 179.436,
+    "qty": -1900
+   },
+   {
+    "date": "2026-09-28",
+    "price": 180.677,
+    "qty": -1500
+   },
+   {
+    "date": "2026-09-28",
+    "price": 181.61,
+    "qty": -1900
+   },
+   {
+    "date": "2026-09-28",
+    "price": 182.773,
+    "qty": -1200
+   },
+   {
+    "date": "2026-09-28",
+    "price": 183.647,
+    "qty": -300
+   },
+   {
+    "date": "2026-09-28",
+    "price": 184.49,
+    "qty": -100
+   },
+   {
+    "date": "2026-09-28",
+    "price": 188.95,
+    "qty": -100
+   },
+   {
+    "date": "2026-09-28",
+    "price": 190.38,
+    "qty": -100
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1832612/000183261226000020/0001832612-26-000020-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001784996-26-000097",
+  "personName": "Rosenbaum Michael George",
+  "personType": "insider",
+  "title": "Chief Executive Officer",
+  "company": "Guidewire Software, Inc.",
+  "stockCode": "GWRE",
+  "direction": "sell",
+  "unitPrice": 142.65,
+  "quantity": 1200,
+  "totalAmount": 171180,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 279666,
+  "holdingAfter": 278466,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 142.65,
+    "qty": -1200
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1528396/000178499626000097/0001784996-26-000097-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001778564-26-000175",
+  "personName": "Kurtz George",
+  "personType": "insider",
+  "title": "PRESIDENT AND CEO",
+  "company": "CrowdStrike Holdings, Inc.",
+  "stockCode": "CRWD",
+  "direction": "sell",
+  "unitPrice": null,
+  "quantity": 20000,
+  "totalAmount": 5164034.89,
+  "tradeDate": "2026-09-29",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 7611300,
+  "holdingAfter": 7591300,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 248.24,
+    "qty": -204
+   },
+   {
+    "date": "2026-09-28",
+    "price": 249.81,
+    "qty": -382
+   },
+   {
+    "date": "2026-09-28",
+    "price": 251.76,
+    "qty": -460
+   },
+   {
+    "date": "2026-09-28",
+    "price": 252.56,
+    "qty": -1146
+   },
+   {
+    "date": "2026-09-28",
+    "price": 253.71,
+    "qty": -1234
+   },
+   {
+    "date": "2026-09-28",
+    "price": 254.79,
+    "qty": -459
+   },
+   {
+    "date": "2026-09-28",
+    "price": 255.99,
+    "qty": -293
+   },
+   {
+    "date": "2026-09-28",
+    "price": 256.99,
+    "qty": -256
+   },
+   {
+    "date": "2026-09-28",
+    "price": 258.01,
+    "qty": -565
+   },
+   {
+    "date": "2026-09-28",
+    "price": 259.26,
+    "qty": -3530
+   },
+   {
+    "date": "2026-09-28",
+    "price": 259.88,
+    "qty": -1471
+   },
+   {
+    "date": "2026-09-29",
+    "price": 256.42,
+    "qty": -315
+   },
+   {
+    "date": "2026-09-29",
+    "price": 257.35,
+    "qty": -645
+   },
+   {
+    "date": "2026-09-29",
+    "price": 258.63,
+    "qty": -1440
+   },
+   {
+    "date": "2026-09-29",
+    "price": 259.5,
+    "qty": -3355
+   },
+   {
+    "date": "2026-09-29",
+    "price": 260.41,
+    "qty": -2163
+   },
+   {
+    "date": "2026-09-29",
+    "price": 261.49,
+    "qty": -842
+   },
+   {
+    "date": "2026-09-29",
+    "price": 262.42,
+    "qty": -1240
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1535527/000177856426000175/0001778564-26-000175-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 1,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001773914-26-000031",
+  "personName": "Silbermann Benjamin",
+  "personType": "insider",
+  "title": "Director · 10% Owner",
+  "company": "PINTEREST, INC.",
+  "stockCode": "PINS",
+  "direction": "sell",
+  "unitPrice": null,
+  "quantity": 93750,
+  "totalAmount": 1737004.6875,
+  "tradeDate": "2026-09-30",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 140625,
+  "holdingAfter": 46875,
+  "details": [
+   {
+    "date": "2026-09-29",
+    "price": 18.3336,
+    "qty": -46875
+   },
+   {
+    "date": "2026-09-30",
+    "price": 18.7225,
+    "qty": -46875
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1506293/000177391426000031/0001773914-26-000031-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 0,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001760581-26-000063",
+  "personName": "Malady Kyle",
+  "personType": "insider",
+  "title": "EVP and Group CEO-VZ Business",
+  "company": "VERIZON COMMUNICATIONS INC",
+  "stockCode": "VZ",
+  "direction": "sell",
+  "unitPrice": 46.4,
+  "quantity": 1100,
+  "totalAmount": 51040,
+  "tradeDate": "2026-09-29",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 104366,
+  "holdingAfter": 103266,
+  "details": [
+   {
+    "date": "2026-09-29",
+    "price": 46.4,
+    "qty": -1100
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1760581/000176058126000063/0001760581-26-000063-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 1,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001726903-26-000006",
+  "personName": "Millar Donna",
+  "personType": "insider",
+  "title": "Director · 10% Owner",
+  "company": "ALPHA PRO TECH LTD",
+  "stockCode": "APT",
+  "direction": "sell",
+  "unitPrice": 5.04,
+  "quantity": 6971,
+  "totalAmount": 35133.840000000004,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 1298545,
+  "holdingAfter": 1291574,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 5.04,
+    "qty": -6971
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/884269/000172690326000006/0001726903-26-000006-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001683168-26-007499",
+  "personName": "Plott Ronald Todd",
+  "personType": "insider",
+  "title": "Director",
+  "company": "Phio Pharmaceuticals Corp.",
+  "stockCode": "PHIO",
+  "direction": "buy",
+  "unitPrice": null,
+  "quantity": 10000,
+  "totalAmount": 10350,
+  "tradeDate": "2026-09-29",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 27000,
+  "holdingAfter": 37000,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 1.03,
+    "qty": 5000
+   },
+   {
+    "date": "2026-09-29",
+    "price": 1.04,
+    "qty": 5000
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1533040/000168316826007499/0001683168-26-007499-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 1,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001674236-26-000024",
+  "personName": "CAREY STEPHEN P.",
+  "personType": "insider",
+  "title": "SVP & CFO",
+  "company": "ANI PHARMACEUTICALS INC",
+  "stockCode": "ANIP",
+  "direction": "sell",
+  "unitPrice": 73,
+  "quantity": 2850,
+  "totalAmount": 208050,
+  "tradeDate": "2026-09-29",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 171843,
+  "holdingAfter": 168993,
+  "details": [
+   {
+    "date": "2026-09-29",
+    "price": 73,
+    "qty": -2850
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1023024/000167423626000024/0001674236-26-000024-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 1,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001662982-26-000004",
+  "personName": "Wang Xiaodong",
+  "personType": "insider",
+  "title": "Director",
+  "company": "BeOne Medicines Ltd.",
+  "stockCode": "ONC",
+  "direction": "sell",
+  "unitPrice": null,
+  "quantity": 31028,
+  "totalAmount": 11318557.9668,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 4619141,
+  "holdingAfter": 4588113,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 356.9662,
+    "qty": -160
+   },
+   {
+    "date": "2026-09-28",
+    "price": 358.7067,
+    "qty": -120
+   },
+   {
+    "date": "2026-09-28",
+    "price": 359.16,
+    "qty": -40
+   },
+   {
+    "date": "2026-09-28",
+    "price": 361.0529,
+    "qty": -2241
+   },
+   {
+    "date": "2026-09-28",
+    "price": 362.1675,
+    "qty": -4239
+   },
+   {
+    "date": "2026-09-28",
+    "price": 363.0995,
+    "qty": -3499
+   },
+   {
+    "date": "2026-09-28",
+    "price": 364.0675,
+    "qty": -3419
+   },
+   {
+    "date": "2026-09-28",
+    "price": 365.8479,
+    "qty": -2047
+   },
+   {
+    "date": "2026-09-28",
+    "price": 366.5783,
+    "qty": -14525
+   },
+   {
+    "date": "2026-09-28",
+    "price": 367.2252,
+    "qty": -738
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1651308/000166298226000004/0001662982-26-000004-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001628280-26-064063",
+  "personName": "Chard Daniel R",
+  "personType": "insider",
+  "title": "Director",
+  "company": "MEDIFAST INC",
+  "stockCode": "MED",
+  "direction": "sell",
+  "unitPrice": null,
+  "quantity": 19089,
+  "totalAmount": 226288.766,
+  "tradeDate": "2026-09-29",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 159242.352,
+  "holdingAfter": 140153.352,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 11.9788,
+    "qty": -9545
+   },
+   {
+    "date": "2026-09-29",
+    "price": 11.73,
+    "qty": -9544
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1289557/000162828026064063/0001628280-26-064063-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 1,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001628280-26-064044",
+  "personName": "Komin Robert Patrick Jr.",
+  "personType": "insider",
+  "title": "Chief Financial Officer",
+  "company": "Cerebras Systems Inc.",
+  "stockCode": "CBRS",
+  "direction": "sell",
+  "unitPrice": null,
+  "quantity": 32500,
+  "totalAmount": 6614881.88,
+  "tradeDate": "2026-09-29",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 63170,
+  "holdingAfter": 30670,
+  "details": [
+   {
+    "date": "2026-09-29",
+    "price": 211.79,
+    "qty": -1830
+   },
+   {
+    "date": "2026-09-29",
+    "price": 211.03,
+    "qty": -2771
+   },
+   {
+    "date": "2026-09-29",
+    "price": 210.02,
+    "qty": -2802
+   },
+   {
+    "date": "2026-09-29",
+    "price": 208.98,
+    "qty": -2197
+   },
+   {
+    "date": "2026-09-29",
+    "price": 207.83,
+    "qty": -700
+   },
+   {
+    "date": "2026-09-29",
+    "price": 206.68,
+    "qty": -800
+   },
+   {
+    "date": "2026-09-29",
+    "price": 205.47,
+    "qty": -600
+   },
+   {
+    "date": "2026-09-29",
+    "price": 204.26,
+    "qty": -1600
+   },
+   {
+    "date": "2026-09-29",
+    "price": 203.48,
+    "qty": -800
+   },
+   {
+    "date": "2026-09-29",
+    "price": 201.96,
+    "qty": -400
+   },
+   {
+    "date": "2026-09-29",
+    "price": 201.22,
+    "qty": -11200
+   },
+   {
+    "date": "2026-09-29",
+    "price": 199.8,
+    "qty": -1130
+   },
+   {
+    "date": "2026-09-29",
+    "price": 198.7,
+    "qty": -870
+   },
+   {
+    "date": "2026-09-29",
+    "price": 197.48,
+    "qty": -685
+   },
+   {
+    "date": "2026-09-29",
+    "price": 195.61,
+    "qty": -1115
+   },
+   {
+    "date": "2026-09-29",
+    "price": 194.92,
+    "qty": -3000
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/2021728/000162828026064044/0001628280-26-064044-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 1,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001628280-26-064042",
+  "personName": "Mallick Dhiraj",
+  "personType": "insider",
+  "title": "Chief Operating Officer",
+  "company": "Cerebras Systems Inc.",
+  "stockCode": "CBRS",
+  "direction": "sell",
+  "unitPrice": null,
+  "quantity": 396000,
+  "totalAmount": 80798603.74,
+  "tradeDate": "2026-09-29",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 792000,
+  "holdingAfter": 396000,
+  "details": [
+   {
+    "date": "2026-09-29",
+    "price": 212.93,
+    "qty": -598
+   },
+   {
+    "date": "2026-09-29",
+    "price": 212.2,
+    "qty": -18274
+   },
+   {
+    "date": "2026-09-29",
+    "price": 211.29,
+    "qty": -41391
+   },
+   {
+    "date": "2026-09-29",
+    "price": 210.27,
+    "qty": -46427
+   },
+   {
+    "date": "2026-09-29",
+    "price": 209.33,
+    "qty": -41278
+   },
+   {
+    "date": "2026-09-29",
+    "price": 208.38,
+    "qty": -20714
+   },
+   {
+    "date": "2026-09-29",
+    "price": 207.06,
+    "qty": -9652
+   },
+   {
+    "date": "2026-09-29",
+    "price": 206.13,
+    "qty": -9047
+   },
+   {
+    "date": "2026-09-29",
+    "price": 205.17,
+    "qty": -8729
+   },
+   {
+    "date": "2026-09-29",
+    "price": 204.17,
+    "qty": -27492
+   },
+   {
+    "date": "2026-09-29",
+    "price": 203.37,
+    "qty": -9682
+   },
+   {
+    "date": "2026-09-29",
+    "price": 201.91,
+    "qty": -5637
+   },
+   {
+    "date": "2026-09-29",
+    "price": 200.96,
+    "qty": -22915
+   },
+   {
+    "date": "2026-09-29",
+    "price": 199.89,
+    "qty": -17848
+   },
+   {
+    "date": "2026-09-29",
+    "price": 198.96,
+    "qty": -17000
+   },
+   {
+    "date": "2026-09-29",
+    "price": 197.85,
+    "qty": -5170
+   },
+   {
+    "date": "2026-09-29",
+    "price": 197.05,
+    "qty": -6613
+   },
+   {
+    "date": "2026-09-29",
+    "price": 195.56,
+    "qty": -18703
+   },
+   {
+    "date": "2026-09-29",
+    "price": 194.91,
+    "qty": -68830
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/2021728/000162828026064042/0001628280-26-064042-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 1,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001628280-26-064040",
+  "personName": "Patel Yagnesh",
+  "personType": "insider",
+  "title": "Chief Accounting Officer",
+  "company": "Cerebras Systems Inc.",
+  "stockCode": "CBRS",
+  "direction": "sell",
+  "unitPrice": 204.5,
+  "quantity": 1320,
+  "totalAmount": 269940,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 16676,
+  "holdingAfter": 15356,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 204.5,
+    "qty": -1320
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/2021728/000162828026064040/0001628280-26-064040-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001628280-26-064003",
+  "personName": "TANNENBAUM LEONARD M",
+  "personType": "insider",
+  "title": "Director · 10% Owner",
+  "company": "Advanced Flower Capital Inc.",
+  "stockCode": "AFCG",
+  "direction": "buy",
+  "unitPrice": null,
+  "quantity": 95397,
+  "totalAmount": 344047.49,
+  "tradeDate": "2026-09-30",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 6929493,
+  "holdingAfter": 7024890,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 3.57,
+    "qty": 10673
+   },
+   {
+    "date": "2026-09-29",
+    "price": 3.59,
+    "qty": 40081
+   },
+   {
+    "date": "2026-09-30",
+    "price": 3.63,
+    "qty": 44643
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1822523/000162828026064003/0001628280-26-064003-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 0,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001628280-26-064000",
+  "personName": "VILSACK ROBERT D",
+  "personType": "insider",
+  "title": "Secretary & CLO",
+  "company": "PARK OHIO HOLDINGS CORP",
+  "stockCode": "PKOH",
+  "direction": "sell",
+  "unitPrice": null,
+  "quantity": 9000,
+  "totalAmount": 426925.1,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 185125,
+  "holdingAfter": 176125,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 47.27,
+    "qty": -711
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47.28,
+    "qty": -326
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47.29,
+    "qty": -257
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47.3,
+    "qty": -100
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47.31,
+    "qty": -600
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47.34,
+    "qty": -590
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47.35,
+    "qty": -700
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47.36,
+    "qty": -510
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47.37,
+    "qty": -100
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47.38,
+    "qty": -200
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47.39,
+    "qty": -301
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47.4,
+    "qty": -50
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47.41,
+    "qty": -100
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47.42,
+    "qty": -100
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47.44,
+    "qty": -40
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47.45,
+    "qty": -600
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47.46,
+    "qty": -337
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47.47,
+    "qty": -45
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47.48,
+    "qty": -700
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47.51,
+    "qty": -200
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47.54,
+    "qty": -300
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47.55,
+    "qty": -301
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47.58,
+    "qty": -300
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47.59,
+    "qty": -184
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47.6,
+    "qty": -703
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47.69,
+    "qty": -245
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47.7,
+    "qty": -300
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47.76,
+    "qty": -100
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/76282/000162828026064000/0001628280-26-064000-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001628280-26-063980",
+  "personName": "Frankel Stanley",
+  "personType": "insider",
+  "title": "Director",
+  "company": "PRECISION BIOSCIENCES INC",
+  "stockCode": "DTIL",
+  "direction": "buy",
+  "unitPrice": 6,
+  "quantity": 1000,
+  "totalAmount": 6000,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 40478,
+  "holdingAfter": 41478,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 6,
+    "qty": 1000
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1855726/000162828026063980/0001628280-26-063980-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001628280-26-063969",
+  "personName": "VILSACK ROBERT D",
+  "personType": "insider",
+  "title": "Secretary & CLO",
+  "company": "PARK OHIO HOLDINGS CORP",
+  "stockCode": "PKOH",
+  "direction": "sell",
+  "unitPrice": null,
+  "quantity": 7188,
+  "totalAmount": 337402.44999999995,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 190793,
+  "holdingAfter": 183605,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 46.25,
+    "qty": -419
+   },
+   {
+    "date": "2026-09-28",
+    "price": 46.26,
+    "qty": -220
+   },
+   {
+    "date": "2026-09-28",
+    "price": 46.57,
+    "qty": -300
+   },
+   {
+    "date": "2026-09-28",
+    "price": 46.65,
+    "qty": -210
+   },
+   {
+    "date": "2026-09-28",
+    "price": 46.67,
+    "qty": -967
+   },
+   {
+    "date": "2026-09-28",
+    "price": 46.68,
+    "qty": -76
+   },
+   {
+    "date": "2026-09-28",
+    "price": 46.82,
+    "qty": -5
+   },
+   {
+    "date": "2026-09-28",
+    "price": 46.83,
+    "qty": -103
+   },
+   {
+    "date": "2026-09-28",
+    "price": 46.84,
+    "qty": -10
+   },
+   {
+    "date": "2026-09-28",
+    "price": 46.85,
+    "qty": -85
+   },
+   {
+    "date": "2026-09-28",
+    "price": 46.88,
+    "qty": -53
+   },
+   {
+    "date": "2026-09-28",
+    "price": 46.93,
+    "qty": -8
+   },
+   {
+    "date": "2026-09-28",
+    "price": 46.98,
+    "qty": -78
+   },
+   {
+    "date": "2026-09-28",
+    "price": 46.99,
+    "qty": -400
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47,
+    "qty": -100
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47.05,
+    "qty": -400
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47.07,
+    "qty": -200
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47.1,
+    "qty": -300
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47.11,
+    "qty": -740
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47.12,
+    "qty": -390
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47.13,
+    "qty": -140
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47.15,
+    "qty": -200
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47.17,
+    "qty": -300
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47.19,
+    "qty": -5
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47.2,
+    "qty": -180
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47.22,
+    "qty": -203
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47.23,
+    "qty": -425
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47.24,
+    "qty": -477
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47.25,
+    "qty": -101
+   },
+   {
+    "date": "2026-09-28",
+    "price": 47.26,
+    "qty": -93
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/76282/000162828026063969/0001628280-26-063969-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001536588-26-000037",
+  "personName": "AJB Investment Fund II, LP 외 3인",
+  "personType": "insider",
+  "title": "10% Owner",
+  "company": "JEWETT CAMERON TRADING CO LTD",
+  "stockCode": "JCTC",
+  "direction": "buy",
+  "unitPrice": null,
+  "quantity": 2598,
+  "totalAmount": 7565.73,
+  "tradeDate": "2026-09-29",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 506937,
+  "holdingAfter": 509535,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 2.905,
+    "qty": 466
+   },
+   {
+    "date": "2026-09-29",
+    "price": 2.905,
+    "qty": 278
+   },
+   {
+    "date": "2026-09-29",
+    "price": 2.915,
+    "qty": 1854
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/2141914/000153658826000037/0001536588-26-000037-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 1,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001517413-26-000300",
+  "personName": "Bergman Artur",
+  "personType": "insider",
+  "title": "Chief Technology Officer",
+  "company": "Fastly, Inc.",
+  "stockCode": "FSLY",
+  "direction": "sell",
+  "unitPrice": null,
+  "quantity": 37039,
+  "totalAmount": 918830.36,
+  "tradeDate": "2026-09-29",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 1142519,
+  "holdingAfter": 1105480,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 24.75,
+    "qty": -32878
+   },
+   {
+    "date": "2026-09-28",
+    "price": 25.225,
+    "qty": -200
+   },
+   {
+    "date": "2026-09-29",
+    "price": 25.26,
+    "qty": -3961
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1769490/000151741326000300/0001517413-26-000300-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 1,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001493152-26-045185",
+  "personName": "Higuchi John W.",
+  "personType": "insider",
+  "title": "Director",
+  "company": "Lipocine Inc.",
+  "stockCode": "LPCN",
+  "direction": "buy",
+  "unitPrice": 2.16,
+  "quantity": 12561,
+  "totalAmount": 27131.760000000002,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 203797,
+  "holdingAfter": 216358,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 2.16,
+    "qty": 12561
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1579891/000149315226045185/0001493152-26-045185-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001493152-26-045167",
+  "personName": "SEID PAUL",
+  "personType": "insider",
+  "title": "Director",
+  "company": "INTELLINETICS, INC.",
+  "stockCode": "INLX",
+  "direction": "buy",
+  "unitPrice": 5.15,
+  "quantity": 184,
+  "totalAmount": 947.6,
+  "tradeDate": "2026-09-30",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 192455,
+  "holdingAfter": 192639,
+  "details": [
+   {
+    "date": "2026-09-30",
+    "price": 5.15,
+    "qty": 29
+   },
+   {
+    "date": "2026-09-28",
+    "price": 5.15,
+    "qty": 155
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1081745/000149315226045167/0001493152-26-045167-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 0,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001493152-26-045053",
+  "personName": "Catelani Michael",
+  "personType": "insider",
+  "title": "President, COO, & CFO",
+  "company": "Anixa Biosciences Inc",
+  "stockCode": "ANIX",
+  "direction": "buy",
+  "unitPrice": 2.84,
+  "quantity": 5500,
+  "totalAmount": 15620,
+  "tradeDate": "2026-09-30",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 44500,
+  "holdingAfter": 50000,
+  "details": [
+   {
+    "date": "2026-09-30",
+    "price": 2.84,
+    "qty": 5500
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/715446/000149315226045053/0001493152-26-045053-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 0,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001493152-26-045051",
+  "personName": "Dai Kun",
+  "personType": "insider",
+  "title": "Chief Executive Officer",
+  "company": "Uxin Ltd",
+  "stockCode": "UXIN",
+  "direction": "buy",
+  "unitPrice": 1.2572,
+  "quantity": 8440,
+  "totalAmount": 10610.768,
+  "tradeDate": "2026-09-29",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 0,
+  "holdingAfter": 8440,
+  "details": [
+   {
+    "date": "2026-09-29",
+    "price": 1.2572,
+    "qty": 8440
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1764279/000149315226045051/0001493152-26-045051-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 1,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001493152-26-045031",
+  "personName": "Davy Joseph P.",
+  "personType": "insider",
+  "title": "Chief Executive Officer",
+  "company": "Banzai International, Inc.",
+  "stockCode": "PARA",
+  "direction": "buy",
+  "unitPrice": null,
+  "quantity": 115965,
+  "totalAmount": null,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 33856,
+  "holdingAfter": 149821,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": null,
+    "qty": 115965
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1826011/000149315226045031/0001493152-26-045031-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001493152-26-044992",
+  "personName": "O'HEERON PETE",
+  "personType": "insider",
+  "title": "COB, Secretary, Treasurer",
+  "company": "LIBERTY STAR URANIUM & METALS CORP.",
+  "stockCode": "LBSR",
+  "direction": "buy",
+  "unitPrice": 0.0228,
+  "quantity": 171482,
+  "totalAmount": 3909.7896,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 0,
+  "holdingAfter": 171482,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 0.0228,
+    "qty": 171482
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1172178/000149315226044992/0001493152-26-044992-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001489550-26-000015",
+  "personName": "Wupen Yuen",
+  "personType": "insider",
+  "title": "PRESIDENT, GLOBAL BUS. UNITS",
+  "company": "Lumentum Holdings Inc.",
+  "stockCode": "LITE",
+  "direction": "sell",
+  "unitPrice": null,
+  "quantity": 807,
+  "totalAmount": 764365,
+  "tradeDate": "2026-09-29",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 109434,
+  "holdingAfter": 108627,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 948.5,
+    "qty": -500
+   },
+   {
+    "date": "2026-09-29",
+    "price": 945,
+    "qty": -307
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1633978/000148955026000015/0001489550-26-000015-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 1,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001472420-26-000004",
+  "personName": "Friedman Joel Albert",
+  "personType": "insider",
+  "title": "Exec VP, CAO & Treasurer",
+  "company": "SAUL CENTERS, INC.",
+  "stockCode": "BFS",
+  "direction": "buy",
+  "unitPrice": 18.53,
+  "quantity": 200,
+  "totalAmount": 3706,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 15350,
+  "holdingAfter": 15550,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 18.53,
+    "qty": 200
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1472420/000147242026000004/0001472420-26-000004-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001437749-26-031638",
+  "personName": "Altman Peter",
+  "personType": "insider",
+  "title": "President and CEO",
+  "company": "BioCardia, Inc.",
+  "stockCode": "BCDA",
+  "direction": "buy",
+  "unitPrice": 1.03,
+  "quantity": 1000,
+  "totalAmount": 1030,
+  "tradeDate": "2026-09-29",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 383885,
+  "holdingAfter": 384885,
+  "details": [
+   {
+    "date": "2026-09-29",
+    "price": 1.03,
+    "qty": 1000
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1647542/000143774926031638/0001437749-26-031638-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 1,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001437749-26-031626",
+  "personName": "Bistricer Jacob",
+  "personType": "insider",
+  "title": "Chief Operating Officer",
+  "company": "Clipper Realty Inc.",
+  "stockCode": "CLPR",
+  "direction": "buy",
+  "unitPrice": 3.35,
+  "quantity": 73500,
+  "totalAmount": 246225,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 0,
+  "holdingAfter": 73500,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 3.35,
+    "qty": 73500
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1697378/000143774926031626/0001437749-26-031626-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001437749-26-031619",
+  "personName": "Stewart Laura Lee",
+  "personType": "insider",
+  "title": "Chief Executive Officer",
+  "company": "Sound Financial Bancorp, Inc.",
+  "stockCode": "SFBC",
+  "direction": "sell",
+  "unitPrice": 45.99,
+  "quantity": 900,
+  "totalAmount": 41391,
+  "tradeDate": "2026-09-30",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 15309,
+  "holdingAfter": 14409,
+  "details": [
+   {
+    "date": "2026-09-30",
+    "price": 45.99,
+    "qty": -900
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1541119/000143774926031619/0001437749-26-031619-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 0,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001437749-26-031597",
+  "personName": "Barry Richard",
+  "personType": "insider",
+  "title": "President & CEO",
+  "company": "FILANA THERAPEUTICS, INC.",
+  "stockCode": "FLNA",
+  "direction": "buy",
+  "unitPrice": 0.84,
+  "quantity": 93091,
+  "totalAmount": 78196.44,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 938060,
+  "holdingAfter": 1031151,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 0.84,
+    "qty": 93091
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562371/000143774926031597/0001437749-26-031597-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001437749-26-031596",
+  "personName": "Newton Kiera",
+  "personType": "insider",
+  "title": "Director",
+  "company": "HENNESSY ADVISORS INC",
+  "stockCode": "HNNA",
+  "direction": "sell",
+  "unitPrice": 10.02,
+  "quantity": 504,
+  "totalAmount": 5050.08,
+  "tradeDate": "2026-09-29",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 21102,
+  "holdingAfter": 20598,
+  "details": [
+   {
+    "date": "2026-09-29",
+    "price": 10.02,
+    "qty": -504
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1145255/000143774926031596/0001437749-26-031596-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 1,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001437749-26-031545",
+  "personName": "LARSON KEITH R",
+  "personType": "insider",
+  "title": "Director",
+  "company": "NWPX Infrastructure, Inc.",
+  "stockCode": "NWPX",
+  "direction": "sell",
+  "unitPrice": 102.1953,
+  "quantity": 1000,
+  "totalAmount": 102195.3,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 15633,
+  "holdingAfter": 14633,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 102.1953,
+    "qty": -1000
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1401658/000143774926031545/0001437749-26-031545-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001398344-26-017661",
+  "personName": "KAMFAR RAMIN",
+  "personType": "insider",
+  "title": "Director",
+  "company": "Bluerock Private Real Estate Fund",
+  "stockCode": "BPRE",
+  "direction": "buy",
+  "unitPrice": null,
+  "quantity": 425590,
+  "totalAmount": 5351244.0428,
+  "tradeDate": "2026-09-30",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 190849,
+  "holdingAfter": 616439,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 12.5011,
+    "qty": 135669
+   },
+   {
+    "date": "2026-09-29",
+    "price": 12.6029,
+    "qty": 135817
+   },
+   {
+    "date": "2026-09-30",
+    "price": 12.6119,
+    "qty": 154104
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1551047/000139834426017661/0001398344-26-017661-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 0,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001398344-26-017659",
+  "personName": "Ruddy Jordan B.",
+  "personType": "insider",
+  "title": "President",
+  "company": "Bluerock Private Real Estate Fund",
+  "stockCode": "BPRE",
+  "direction": "buy",
+  "unitPrice": null,
+  "quantity": 4780,
+  "totalAmount": 59963.28,
+  "tradeDate": "2026-09-30",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 8892,
+  "holdingAfter": 13672,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 12.4897,
+    "qty": 2400
+   },
+   {
+    "date": "2026-09-30",
+    "price": 12.6,
+    "qty": 2380
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1551047/000139834426017659/0001398344-26-017659-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 0,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001398344-26-017612",
+  "personName": "SELL MORITZ A",
+  "personType": "insider",
+  "title": "Director",
+  "company": "Total Return Securities Fund",
+  "stockCode": "SWZ",
+  "direction": "buy",
+  "unitPrice": 5.765,
+  "quantity": 2000,
+  "totalAmount": 11530,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 28246,
+  "holdingAfter": 30246,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 5.765,
+    "qty": 2000
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1053116/000139834426017612/0001398344-26-017612-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001371285-26-000203",
+  "personName": "GALLAGHER JOHN R",
+  "personType": "insider",
+  "title": "Chief Operating Officer",
+  "company": "TRUPANION, INC.",
+  "stockCode": "TRUP",
+  "direction": "sell",
+  "unitPrice": 22.92,
+  "quantity": 431,
+  "totalAmount": 9878.52,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 33742,
+  "holdingAfter": 33311,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 22.92,
+    "qty": -431
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1967117/000137128526000203/0001371285-26-000203-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001347444-26-000008",
+  "personName": "MONTGOMERY CHARLES D",
+  "personType": "insider",
+  "title": "Director",
+  "company": "ALPHA PRO TECH LTD",
+  "stockCode": "APT",
+  "direction": "sell",
+  "unitPrice": 5.04,
+  "quantity": 21943,
+  "totalAmount": 110592.72,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 69167,
+  "holdingAfter": 47224,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 5.04,
+    "qty": -21943
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/884269/000134744426000008/0001347444-26-000008-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001294280-26-000007",
+  "personName": "CULP ROBERT GEORGE IV",
+  "personType": "insider",
+  "title": "President & CEO",
+  "company": "CULP INC",
+  "stockCode": "CULP",
+  "direction": "buy",
+  "unitPrice": 3.89,
+  "quantity": 2960,
+  "totalAmount": 11514.4,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 133959,
+  "holdingAfter": 136919,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 3.89,
+    "qty": 2960
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/723603/000129428026000007/0001294280-26-000007-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001292814-26-004756",
+  "personName": "Di Marcello Francesco",
+  "personType": "insider",
+  "title": "Executive Officer",
+  "company": "BANK BRADESCO",
+  "stockCode": "BBD",
+  "direction": "buy",
+  "unitPrice": null,
+  "quantity": 57160,
+  "totalAmount": 1008843.5999999999,
+  "tradeDate": "2026-09-29",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 55484,
+  "holdingAfter": 112644,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 17.65,
+    "qty": 56800
+   },
+   {
+    "date": "2026-09-28",
+    "price": 17.66,
+    "qty": 50
+   },
+   {
+    "date": "2026-09-29",
+    "price": 17.56,
+    "qty": 10
+   },
+   {
+    "date": "2026-09-29",
+    "price": 17.55,
+    "qty": 300
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1160330/000129281426004756/0001292814-26-004756-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 1,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001225208-26-008015",
+  "personName": "FLORNESS DANIEL L",
+  "personType": "insider",
+  "title": "Director",
+  "company": "FULLER H B CO",
+  "stockCode": "FUL",
+  "direction": "buy",
+  "unitPrice": 49.34,
+  "quantity": 2030,
+  "totalAmount": 100160.20000000001,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 1351,
+  "holdingAfter": 3381,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 49.34,
+    "qty": 2030
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1017427/000122520826008015/0001225208-26-008015-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001225208-26-008014",
+  "personName": "HANDLEY THOMAS W",
+  "personType": "insider",
+  "title": "Director",
+  "company": "FULLER H B CO",
+  "stockCode": "FUL",
+  "direction": "buy",
+  "unitPrice": 49.41,
+  "quantity": 2000,
+  "totalAmount": 98820,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 0,
+  "holdingAfter": 2000,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 49.41,
+    "qty": 2000
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/39368/000122520826008014/0001225208-26-008014-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001225208-26-008013",
+  "personName": "Rasmussen Trangsrud Teresa J",
+  "personType": "insider",
+  "title": "Director",
+  "company": "FULLER H B CO",
+  "stockCode": "FUL",
+  "direction": "buy",
+  "unitPrice": null,
+  "quantity": 2042,
+  "totalAmount": 99984.3154,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 1510.873,
+  "holdingAfter": 3552.873,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 48.9587,
+    "qty": 1542
+   },
+   {
+    "date": "2026-09-28",
+    "price": 48.98,
+    "qty": 500
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/39368/000122520826008013/0001225208-26-008013-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001225208-26-008012",
+  "personName": "Lauber Charles T",
+  "personType": "insider",
+  "title": "Director",
+  "company": "FULLER H B CO",
+  "stockCode": "FUL",
+  "direction": "buy",
+  "unitPrice": 49.8676,
+  "quantity": 2005,
+  "totalAmount": 99984.538,
+  "tradeDate": "2026-09-29",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 1351,
+  "holdingAfter": 3356,
+  "details": [
+   {
+    "date": "2026-09-29",
+    "price": 49.8676,
+    "qty": 2005
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/39368/000122520826008012/0001225208-26-008012-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 1,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001225208-26-008011",
+  "personName": "Zaheer Srilata",
+  "personType": "insider",
+  "title": "Director",
+  "company": "FULLER H B CO",
+  "stockCode": "FUL",
+  "direction": "buy",
+  "unitPrice": null,
+  "quantity": 2040,
+  "totalAmount": 100118.904,
+  "tradeDate": "2026-09-29",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 1306,
+  "holdingAfter": 3346,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 49.06,
+    "qty": 2000
+   },
+   {
+    "date": "2026-09-29",
+    "price": 49.9726,
+    "qty": 40
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/39368/000122520826008011/0001225208-26-008011-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 1,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001214659-26-012375",
+  "personName": "Hsing Michael",
+  "personType": "insider",
+  "title": "CEO",
+  "company": "MONOLITHIC POWER SYSTEMS, INC.",
+  "stockCode": "MPWR",
+  "direction": "sell",
+  "unitPrice": null,
+  "quantity": 30000,
+  "totalAmount": 40349046.720000006,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 877668,
+  "holdingAfter": 847668,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 1323.31,
+    "qty": -596
+   },
+   {
+    "date": "2026-09-28",
+    "price": 1328.54,
+    "qty": -2121
+   },
+   {
+    "date": "2026-09-28",
+    "price": 1333.34,
+    "qty": -1111
+   },
+   {
+    "date": "2026-09-28",
+    "price": 1338.66,
+    "qty": -2949
+   },
+   {
+    "date": "2026-09-28",
+    "price": 1343.76,
+    "qty": -5783
+   },
+   {
+    "date": "2026-09-28",
+    "price": 1347.15,
+    "qty": -6343
+   },
+   {
+    "date": "2026-09-28",
+    "price": 1351.43,
+    "qty": -10967
+   },
+   {
+    "date": "2026-09-28",
+    "price": 1356.94,
+    "qty": -130
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1308676/000121465926012375/0001214659-26-012375-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001214659-26-012280",
+  "personName": "Horne William B.",
+  "personType": "insider",
+  "title": "Chief Executive Officer",
+  "company": "Hyperscale Data, Inc.",
+  "stockCode": "GPUS",
+  "direction": "buy",
+  "unitPrice": 0.163,
+  "quantity": 100000,
+  "totalAmount": 16300,
+  "tradeDate": "2026-09-30",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 400000,
+  "holdingAfter": 500000,
+  "details": [
+   {
+    "date": "2026-09-30",
+    "price": 0.163,
+    "qty": 100000
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1333268/000121465926012280/0001214659-26-012280-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 0,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001213900-26-105429",
+  "personName": "Grafiti Group LLC 외 1인",
+  "personType": "insider",
+  "title": "10% Owner",
+  "company": "Game Your Game Inc.",
+  "stockCode": "GYGY",
+  "direction": "sell",
+  "unitPrice": 1.15,
+  "quantity": 4012678,
+  "totalAmount": 4614579.699999999,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 8396773,
+  "holdingAfter": 4384095,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 1.15,
+    "qty": -4012678
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1604405/000121390026105429/0001213900-26-105429-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001213900-26-105323",
+  "personName": "Li Na",
+  "personType": "insider",
+  "title": "CFO and Director",
+  "company": "Linkhome Holdings Inc.",
+  "stockCode": "LHAI",
+  "direction": "sell",
+  "unitPrice": 1.5,
+  "quantity": 30000,
+  "totalAmount": 45000,
+  "tradeDate": "2026-04-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 30000,
+  "holdingAfter": 0,
+  "details": [
+   {
+    "date": "2026-04-28",
+    "price": 1.5,
+    "qty": -30000
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/2027316/000121390026105323/0001213900-26-105323-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 155,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001204816-26-000049",
+  "personName": "BIDZOS D JAMES",
+  "personType": "insider",
+  "title": "Exec. Chairman, Pres, & CEO",
+  "company": "VERISIGN INC/CA",
+  "stockCode": "VRSN",
+  "direction": "sell",
+  "unitPrice": null,
+  "quantity": 3300,
+  "totalAmount": 919975.76,
+  "tradeDate": "2026-09-29",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 388027.4109,
+  "holdingAfter": 384727.4109,
+  "details": [
+   {
+    "date": "2026-09-29",
+    "price": 276.68,
+    "qty": -300
+   },
+   {
+    "date": "2026-09-29",
+    "price": 278.0147,
+    "qty": -800
+   },
+   {
+    "date": "2026-09-29",
+    "price": 279.294,
+    "qty": -2000
+   },
+   {
+    "date": "2026-09-29",
+    "price": 279.86,
+    "qty": -200
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1204816/000120481626000049/0001204816-26-000049-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 1,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001193125-26-409451",
+  "personName": "BERKSHIRE HATHAWAY INC 외 1인",
+  "personType": "insider",
+  "title": "10% Owner",
+  "company": "LENNAR CORP /NEW/",
+  "stockCode": "LEN",
+  "direction": "buy",
+  "unitPrice": null,
+  "quantity": 660410,
+  "totalAmount": 53882588.06,
+  "tradeDate": "2026-09-30",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 24722924,
+  "holdingAfter": 25383334,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 81.96,
+    "qty": 5200
+   },
+   {
+    "date": "2026-09-29",
+    "price": 81.95,
+    "qty": 12289
+   },
+   {
+    "date": "2026-09-30",
+    "price": 81.59,
+    "qty": 638813
+   },
+   {
+    "date": "2026-09-29",
+    "price": 80,
+    "qty": 100
+   },
+   {
+    "date": "2026-09-30",
+    "price": 79.98,
+    "qty": 4008
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1067983/000119312526409451/0001193125-26-409451-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 0,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001193125-26-409262",
+  "personName": "Stocchi Mauro",
+  "personType": "insider",
+  "title": "See Remarks",
+  "company": "Stevanato Group S.p.A.",
+  "stockCode": "STVN",
+  "direction": "sell",
+  "unitPrice": 21.5,
+  "quantity": 13649,
+  "totalAmount": 293453.5,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 413649,
+  "holdingAfter": 400000,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 21.5,
+    "qty": -13649
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1849853/000119312526409262/0001193125-26-409262-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001193125-26-409256",
+  "personName": "BX Buzz ML-1 GP LLC 외 9인",
+  "personType": "insider",
+  "title": "10% Owner",
+  "company": "Bumble Inc.",
+  "stockCode": "BMBL",
+  "direction": "sell",
+  "unitPrice": 2.9381,
+  "quantity": 3767776,
+  "totalAmount": 11070102.6656,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 4220430,
+  "holdingAfter": 452654,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 2.9381,
+    "qty": -91376
+   },
+   {
+    "date": "2026-09-28",
+    "price": 2.9381,
+    "qty": -1257280
+   },
+   {
+    "date": "2026-09-28",
+    "price": 2.9381,
+    "qty": -204109
+   },
+   {
+    "date": "2026-09-28",
+    "price": 2.9381,
+    "qty": -544646
+   },
+   {
+    "date": "2026-09-28",
+    "price": 2.9381,
+    "qty": -1652209
+   },
+   {
+    "date": "2026-09-28",
+    "price": 2.9381,
+    "qty": -14902
+   },
+   {
+    "date": "2026-09-28",
+    "price": 2.9381,
+    "qty": -3254
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1870640/000119312526409256/0001193125-26-409256-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001193125-26-409231",
+  "personName": "Blackstone Holdings III GP Management L.L.C. 외 9인",
+  "personType": "insider",
+  "title": "10% Owner",
+  "company": "Bumble Inc.",
+  "stockCode": "BMBL",
+  "direction": "sell",
+  "unitPrice": 2.9381,
+  "quantity": 3767776,
+  "totalAmount": 11070102.6656,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 4220430,
+  "holdingAfter": 452654,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 2.9381,
+    "qty": -91376
+   },
+   {
+    "date": "2026-09-28",
+    "price": 2.9381,
+    "qty": -1257280
+   },
+   {
+    "date": "2026-09-28",
+    "price": 2.9381,
+    "qty": -204109
+   },
+   {
+    "date": "2026-09-28",
+    "price": 2.9381,
+    "qty": -544646
+   },
+   {
+    "date": "2026-09-28",
+    "price": 2.9381,
+    "qty": -1652209
+   },
+   {
+    "date": "2026-09-28",
+    "price": 2.9381,
+    "qty": -14902
+   },
+   {
+    "date": "2026-09-28",
+    "price": 2.9381,
+    "qty": -3254
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1844987/000119312526409231/0001193125-26-409231-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001193125-26-409206",
+  "personName": "NIPPON LIFE INSURANCE CO",
+  "personType": "insider",
+  "title": "10% Owner",
+  "company": "Corebridge Financial, Inc.",
+  "stockCode": "CRBG",
+  "direction": "buy",
+  "unitPrice": null,
+  "quantity": 805782,
+  "totalAmount": 27519616.211600006,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 124704904,
+  "holdingAfter": 125510686,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 34.0962,
+    "qty": 736814
+   },
+   {
+    "date": "2026-09-28",
+    "price": 34.7561,
+    "qty": 68968
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1889539/000119312526409206/0001193125-26-409206-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001193125-26-409205",
+  "personName": "BTOA - NQ L.L.C. 외 7인",
+  "personType": "insider",
+  "title": "10% Owner",
+  "company": "Bumble Inc.",
+  "stockCode": "BMBL",
+  "direction": "sell",
+  "unitPrice": 2.9381,
+  "quantity": 3767776,
+  "totalAmount": 11070102.6656,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 4220430,
+  "holdingAfter": 452654,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 2.9381,
+    "qty": -91376
+   },
+   {
+    "date": "2026-09-28",
+    "price": 2.9381,
+    "qty": -1257280
+   },
+   {
+    "date": "2026-09-28",
+    "price": 2.9381,
+    "qty": -204109
+   },
+   {
+    "date": "2026-09-28",
+    "price": 2.9381,
+    "qty": -544646
+   },
+   {
+    "date": "2026-09-28",
+    "price": 2.9381,
+    "qty": -1652209
+   },
+   {
+    "date": "2026-09-28",
+    "price": 2.9381,
+    "qty": -14902
+   },
+   {
+    "date": "2026-09-28",
+    "price": 2.9381,
+    "qty": -3254
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1826374/000119312526409205/0001193125-26-409205-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001193125-26-409201",
+  "personName": "Grosh Chasity D",
+  "personType": "insider",
+  "title": "See Remarks",
+  "company": "Performance Food Group Co",
+  "stockCode": "PFGC",
+  "direction": "sell",
+  "unitPrice": 92.4,
+  "quantity": 1005,
+  "totalAmount": 92862,
+  "tradeDate": "2026-09-30",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 6788,
+  "holdingAfter": 5783,
+  "details": [
+   {
+    "date": "2026-09-30",
+    "price": 92.4,
+    "qty": -1005
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1951271/000119312526409201/0001193125-26-409201-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 0,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001193125-26-409200",
+  "personName": "DEVINCENZI ROBERT THOMAS",
+  "personType": "insider",
+  "title": "Director",
+  "company": "UNIVERSAL TECHNICAL INSTITUTE INC",
+  "stockCode": "UTI",
+  "direction": "buy",
+  "unitPrice": 19.6775,
+  "quantity": 1000,
+  "totalAmount": 19677.5,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 152330,
+  "holdingAfter": 153330,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 19.6775,
+    "qty": 1000
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1226186/000119312526409200/0001193125-26-409200-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001193125-26-409193",
+  "personName": "BCP Buzz Holdings L.P. 외 9인",
+  "personType": "insider",
+  "title": "10% Owner",
+  "company": "Bumble Inc.",
+  "stockCode": "BMBL",
+  "direction": "sell",
+  "unitPrice": 2.9381,
+  "quantity": 3767776,
+  "totalAmount": 11070102.6656,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 4220430,
+  "holdingAfter": 452654,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 2.9381,
+    "qty": -91376
+   },
+   {
+    "date": "2026-09-28",
+    "price": 2.9381,
+    "qty": -1257280
+   },
+   {
+    "date": "2026-09-28",
+    "price": 2.9381,
+    "qty": -204109
+   },
+   {
+    "date": "2026-09-28",
+    "price": 2.9381,
+    "qty": -544646
+   },
+   {
+    "date": "2026-09-28",
+    "price": 2.9381,
+    "qty": -1652209
+   },
+   {
+    "date": "2026-09-28",
+    "price": 2.9381,
+    "qty": -14902
+   },
+   {
+    "date": "2026-09-28",
+    "price": 2.9381,
+    "qty": -3254
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1844875/000119312526409193/0001193125-26-409193-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001193125-26-409177",
+  "personName": "BX Buzz ML-1 Holdco L.P. 외 6인",
+  "personType": "insider",
+  "title": "10% Owner",
+  "company": "Bumble Inc.",
+  "stockCode": "BMBL",
+  "direction": "sell",
+  "unitPrice": 2.9381,
+  "quantity": 3767776,
+  "totalAmount": 11070102.6656,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 4220430,
+  "holdingAfter": 452654,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 2.9381,
+    "qty": -91376
+   },
+   {
+    "date": "2026-09-28",
+    "price": 2.9381,
+    "qty": -1257280
+   },
+   {
+    "date": "2026-09-28",
+    "price": 2.9381,
+    "qty": -204109
+   },
+   {
+    "date": "2026-09-28",
+    "price": 2.9381,
+    "qty": -544646
+   },
+   {
+    "date": "2026-09-28",
+    "price": 2.9381,
+    "qty": -1652209
+   },
+   {
+    "date": "2026-09-28",
+    "price": 2.9381,
+    "qty": -14902
+   },
+   {
+    "date": "2026-09-28",
+    "price": 2.9381,
+    "qty": -3254
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1870641/000119312526409177/0001193125-26-409177-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001193125-26-409127",
+  "personName": "BAKER BROS. ADVISORS LP 외 5인",
+  "personType": "insider",
+  "title": "Director · 10% Owner",
+  "company": "Kodiak Sciences Inc.",
+  "stockCode": "KOD",
+  "direction": "buy",
+  "unitPrice": null,
+  "quantity": 715592,
+  "totalAmount": 63397609.0586,
+  "tradeDate": "2026-09-29",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 914036,
+  "holdingAfter": 1629628,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 86.7217,
+    "qty": 186
+   },
+   {
+    "date": "2026-09-28",
+    "price": 86.7217,
+    "qty": 3114
+   },
+   {
+    "date": "2026-09-28",
+    "price": 86.8142,
+    "qty": 957
+   },
+   {
+    "date": "2026-09-28",
+    "price": 86.8142,
+    "qty": 16036
+   },
+   {
+    "date": "2026-09-28",
+    "price": 86.9421,
+    "qty": 3790
+   },
+   {
+    "date": "2026-09-28",
+    "price": 86.9421,
+    "qty": 63539
+   },
+   {
+    "date": "2026-09-28",
+    "price": 87.5065,
+    "qty": 4485
+   },
+   {
+    "date": "2026-09-28",
+    "price": 87.5065,
+    "qty": 75176
+   },
+   {
+    "date": "2026-09-28",
+    "price": 88.5671,
+    "qty": 5880
+   },
+   {
+    "date": "2026-09-28",
+    "price": 88.5671,
+    "qty": 98561
+   },
+   {
+    "date": "2026-09-28",
+    "price": 88.646,
+    "qty": 6428
+   },
+   {
+    "date": "2026-09-28",
+    "price": 88.646,
+    "qty": 107772
+   },
+   {
+    "date": "2026-09-28",
+    "price": 89.6036,
+    "qty": 4932
+   },
+   {
+    "date": "2026-09-28",
+    "price": 89.6036,
+    "qty": 82673
+   },
+   {
+    "date": "2026-09-28",
+    "price": 89.8555,
+    "qty": 11729
+   },
+   {
+    "date": "2026-09-28",
+    "price": 89.8555,
+    "qty": 196608
+   },
+   {
+    "date": "2026-09-29",
+    "price": 84.2421,
+    "qty": 619
+   },
+   {
+    "date": "2026-09-29",
+    "price": 84.2421,
+    "qty": 10381
+   },
+   {
+    "date": "2026-09-29",
+    "price": 85.403,
+    "qty": 1195
+   },
+   {
+    "date": "2026-09-29",
+    "price": 85.403,
+    "qty": 20031
+   },
+   {
+    "date": "2026-09-29",
+    "price": 85.8855,
+    "qty": 84
+   },
+   {
+    "date": "2026-09-29",
+    "price": 85.8855,
+    "qty": 1416
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1551139/000119312526409127/0001193125-26-409127-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 1,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001193125-26-409120",
+  "personName": "Blecharczyk Nathan",
+  "personType": "insider",
+  "title": "Chief Strategy Officer",
+  "company": "Airbnb, Inc.",
+  "stockCode": "ABNB",
+  "direction": "sell",
+  "unitPrice": null,
+  "quantity": 13615,
+  "totalAmount": 2135172.1497,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 51874,
+  "holdingAfter": 38259,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 154.4515,
+    "qty": -481
+   },
+   {
+    "date": "2026-09-28",
+    "price": 155.7389,
+    "qty": -1231
+   },
+   {
+    "date": "2026-09-28",
+    "price": 156.5352,
+    "qty": -5684
+   },
+   {
+    "date": "2026-09-28",
+    "price": 157.4703,
+    "qty": -6085
+   },
+   {
+    "date": "2026-09-28",
+    "price": 158.31,
+    "qty": -134
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1559720/000119312526409120/0001193125-26-409120-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001193125-26-409118",
+  "personName": "BAKER BROS. ADVISORS LP 외 5인",
+  "personType": "insider",
+  "title": "Director · 10% Owner",
+  "company": "Kodiak Sciences Inc.",
+  "stockCode": "KOD",
+  "direction": "buy",
+  "unitPrice": null,
+  "quantity": 418323,
+  "totalAmount": 34963076.746199995,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 1188103,
+  "holdingAfter": 1606426,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 79.4045,
+    "qty": 534
+   },
+   {
+    "date": "2026-09-28",
+    "price": 79.4045,
+    "qty": 8956
+   },
+   {
+    "date": "2026-09-28",
+    "price": 79.63,
+    "qty": 17
+   },
+   {
+    "date": "2026-09-28",
+    "price": 79.63,
+    "qty": 283
+   },
+   {
+    "date": "2026-09-28",
+    "price": 79.7076,
+    "qty": 884
+   },
+   {
+    "date": "2026-09-28",
+    "price": 79.7076,
+    "qty": 14827
+   },
+   {
+    "date": "2026-09-28",
+    "price": 80.2259,
+    "qty": 404
+   },
+   {
+    "date": "2026-09-28",
+    "price": 80.2259,
+    "qty": 6783
+   },
+   {
+    "date": "2026-09-28",
+    "price": 80.52,
+    "qty": 61
+   },
+   {
+    "date": "2026-09-28",
+    "price": 80.52,
+    "qty": 1027
+   },
+   {
+    "date": "2026-09-28",
+    "price": 81.0204,
+    "qty": 1024
+   },
+   {
+    "date": "2026-09-28",
+    "price": 81.0204,
+    "qty": 17159
+   },
+   {
+    "date": "2026-09-28",
+    "price": 81.2019,
+    "qty": 338
+   },
+   {
+    "date": "2026-09-28",
+    "price": 81.2019,
+    "qty": 5654
+   },
+   {
+    "date": "2026-09-28",
+    "price": 81.3139,
+    "qty": 1044
+   },
+   {
+    "date": "2026-09-28",
+    "price": 81.3139,
+    "qty": 17490
+   },
+   {
+    "date": "2026-09-28",
+    "price": 81.8162,
+    "qty": 1672
+   },
+   {
+    "date": "2026-09-28",
+    "price": 81.8162,
+    "qty": 28028
+   },
+   {
+    "date": "2026-09-28",
+    "price": 81.915,
+    "qty": 39
+   },
+   {
+    "date": "2026-09-28",
+    "price": 81.915,
+    "qty": 651
+   },
+   {
+    "date": "2026-09-28",
+    "price": 82.6822,
+    "qty": 101
+   },
+   {
+    "date": "2026-09-28",
+    "price": 82.6822,
+    "qty": 1699
+   },
+   {
+    "date": "2026-09-28",
+    "price": 83.1552,
+    "qty": 1167
+   },
+   {
+    "date": "2026-09-28",
+    "price": 83.1552,
+    "qty": 19554
+   },
+   {
+    "date": "2026-09-28",
+    "price": 83.9512,
+    "qty": 7390
+   },
+   {
+    "date": "2026-09-28",
+    "price": 83.9512,
+    "qty": 123888
+   },
+   {
+    "date": "2026-09-28",
+    "price": 84.8543,
+    "qty": 6553
+   },
+   {
+    "date": "2026-09-28",
+    "price": 84.8543,
+    "qty": 109842
+   },
+   {
+    "date": "2026-09-28",
+    "price": 85.9656,
+    "qty": 2322
+   },
+   {
+    "date": "2026-09-28",
+    "price": 85.9656,
+    "qty": 38932
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1551139/000119312526409118/0001193125-26-409118-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001193125-26-409116",
+  "personName": "BAKER BROS. ADVISORS LP 외 5인",
+  "personType": "insider",
+  "title": "Director · 10% Owner",
+  "company": "Kodiak Sciences Inc.",
+  "stockCode": "KOD",
+  "direction": "buy",
+  "unitPrice": null,
+  "quantity": 807840,
+  "totalAmount": 58625707.9317,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 753430,
+  "holdingAfter": 1561270,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 61.2104,
+    "qty": 856
+   },
+   {
+    "date": "2026-09-28",
+    "price": 61.2104,
+    "qty": 14344
+   },
+   {
+    "date": "2026-09-28",
+    "price": 61.6252,
+    "qty": 2666
+   },
+   {
+    "date": "2026-09-28",
+    "price": 61.6252,
+    "qty": 44690
+   },
+   {
+    "date": "2026-09-28",
+    "price": 62.9623,
+    "qty": 243
+   },
+   {
+    "date": "2026-09-28",
+    "price": 62.9623,
+    "qty": 4067
+   },
+   {
+    "date": "2026-09-28",
+    "price": 64.4276,
+    "qty": 479
+   },
+   {
+    "date": "2026-09-28",
+    "price": 64.4276,
+    "qty": 8021
+   },
+   {
+    "date": "2026-09-28",
+    "price": 67.0967,
+    "qty": 321
+   },
+   {
+    "date": "2026-09-28",
+    "price": 67.0967,
+    "qty": 5382
+   },
+   {
+    "date": "2026-09-28",
+    "price": 68.3736,
+    "qty": 154
+   },
+   {
+    "date": "2026-09-28",
+    "price": 68.3736,
+    "qty": 2585
+   },
+   {
+    "date": "2026-09-28",
+    "price": 68.9578,
+    "qty": 2331
+   },
+   {
+    "date": "2026-09-28",
+    "price": 68.9578,
+    "qty": 39066
+   },
+   {
+    "date": "2026-09-28",
+    "price": 71.4843,
+    "qty": 1056
+   },
+   {
+    "date": "2026-09-28",
+    "price": 71.4843,
+    "qty": 17698
+   },
+   {
+    "date": "2026-09-28",
+    "price": 72.3873,
+    "qty": 16641
+   },
+   {
+    "date": "2026-09-28",
+    "price": 72.3873,
+    "qty": 278978
+   },
+   {
+    "date": "2026-09-28",
+    "price": 73.0777,
+    "qty": 4696
+   },
+   {
+    "date": "2026-09-28",
+    "price": 73.0777,
+    "qty": 78726
+   },
+   {
+    "date": "2026-09-28",
+    "price": 73.9686,
+    "qty": 4577
+   },
+   {
+    "date": "2026-09-28",
+    "price": 73.9686,
+    "qty": 76723
+   },
+   {
+    "date": "2026-09-28",
+    "price": 75.5151,
+    "qty": 1924
+   },
+   {
+    "date": "2026-09-28",
+    "price": 75.5151,
+    "qty": 32261
+   },
+   {
+    "date": "2026-09-28",
+    "price": 76.345,
+    "qty": 3681
+   },
+   {
+    "date": "2026-09-28",
+    "price": 76.345,
+    "qty": 61700
+   },
+   {
+    "date": "2026-09-28",
+    "price": 77.4314,
+    "qty": 2884
+   },
+   {
+    "date": "2026-09-28",
+    "price": 77.4314,
+    "qty": 48350
+   },
+   {
+    "date": "2026-09-28",
+    "price": 78.5681,
+    "qty": 2969
+   },
+   {
+    "date": "2026-09-28",
+    "price": 78.5681,
+    "qty": 49771
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1551139/000119312526409116/0001193125-26-409116-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001193125-26-409100",
+  "personName": "Minaya Jose",
+  "personType": "insider",
+  "title": "Senior Executive VP",
+  "company": "Bank of New York Mellon Corp",
+  "stockCode": "BNY",
+  "direction": "sell",
+  "unitPrice": null,
+  "quantity": 3520,
+  "totalAmount": 523733.3752,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 182021,
+  "holdingAfter": 178501,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 148.3389,
+    "qty": -1843
+   },
+   {
+    "date": "2026-09-28",
+    "price": 149.2735,
+    "qty": -1655
+   },
+   {
+    "date": "2026-09-28",
+    "price": 149.87,
+    "qty": -22
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1390777/000119312526409100/0001193125-26-409100-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001193125-26-408892",
+  "personName": "Swell Michael",
+  "personType": "insider",
+  "title": "Director",
+  "company": "TCW Private Asset Income Fund",
+  "stockCode": "TPYTX",
+  "direction": "buy",
+  "unitPrice": 9.95,
+  "quantity": 1532.034,
+  "totalAmount": 15243.738299999999,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 6042.691999999999,
+  "holdingAfter": 7574.726,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 9.95,
+    "qty": 1532.034
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1803506/000119312526408892/0001193125-26-408892-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001193125-26-408869",
+  "personName": "MCNAMARA KEVIN J",
+  "personType": "insider",
+  "title": "president and CEO",
+  "company": "CHEMED CORP",
+  "stockCode": "CHE",
+  "direction": "sell",
+  "unitPrice": 513.45,
+  "quantity": 2000,
+  "totalAmount": 1026900.0000000001,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 68418,
+  "holdingAfter": 66418,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 513.45,
+    "qty": -2000
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/19584/000119312526408869/0001193125-26-408869-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001193125-26-408652",
+  "personName": "HADEN PATRICK C",
+  "personType": "insider",
+  "title": "Director",
+  "company": "TCW STRATEGIC INCOME FUND INC",
+  "stockCode": "TSI",
+  "direction": "buy",
+  "unitPrice": 4.2419,
+  "quantity": 63000,
+  "totalAmount": 267239.7,
+  "tradeDate": "2026-09-29",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 0,
+  "holdingAfter": 22722.203,
+  "details": [
+   {
+    "date": "2026-09-29",
+    "price": 4.2419,
+    "qty": 63000
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1183870/000119312526408652/0001193125-26-408652-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 1,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001193125-26-408648",
+  "personName": "Tarica Andrew",
+  "personType": "insider",
+  "title": "Director",
+  "company": "TCW Private Asset Income Fund",
+  "stockCode": "TPYTX",
+  "direction": "buy",
+  "unitPrice": 9.95,
+  "quantity": 1292.714,
+  "totalAmount": 12862.504299999999,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 58141.616,
+  "holdingAfter": 59434.33,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 9.95,
+    "qty": 1292.714
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/2036272/000119312526408648/0001193125-26-408648-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001183254-26-000008",
+  "personName": "ROBO JAMES L",
+  "personType": "insider",
+  "title": "Director",
+  "company": "Kayne Anderson BDC, Inc.",
+  "stockCode": "KBDC",
+  "direction": "buy",
+  "unitPrice": 13.033,
+  "quantity": 146755,
+  "totalAmount": 1912657.915,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 619961,
+  "holdingAfter": 766716,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 13.033,
+    "qty": 146755
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1747172/000118325426000008/0001183254-26-000008-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001106578-26-000152",
+  "personName": "ROTHBLATT MARTINE A",
+  "personType": "insider",
+  "title": "Chairperson & CEO",
+  "company": "UNITED THERAPEUTICS Corp",
+  "stockCode": "UTHR",
+  "direction": "sell",
+  "unitPrice": null,
+  "quantity": 9500,
+  "totalAmount": 4535479.9107,
+  "tradeDate": "2026-09-29",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 343443,
+  "holdingAfter": 333943,
+  "details": [
+   {
+    "date": "2026-09-29",
+    "price": 472.0452,
+    "qty": -400
+   },
+   {
+    "date": "2026-09-29",
+    "price": 472.9682,
+    "qty": -449
+   },
+   {
+    "date": "2026-09-29",
+    "price": 473.8553,
+    "qty": -80
+   },
+   {
+    "date": "2026-09-29",
+    "price": 475.115,
+    "qty": -552
+   },
+   {
+    "date": "2026-09-29",
+    "price": 476.1005,
+    "qty": -1395
+   },
+   {
+    "date": "2026-09-29",
+    "price": 477.087,
+    "qty": -2135
+   },
+   {
+    "date": "2026-09-29",
+    "price": 478.0956,
+    "qty": -2309
+   },
+   {
+    "date": "2026-09-29",
+    "price": 479.0745,
+    "qty": -1200
+   },
+   {
+    "date": "2026-09-29",
+    "price": 479.59,
+    "qty": -160
+   },
+   {
+    "date": "2026-09-29",
+    "price": 481.2241,
+    "qty": -500
+   },
+   {
+    "date": "2026-09-29",
+    "price": 482.2806,
+    "qty": -120
+   },
+   {
+    "date": "2026-09-29",
+    "price": 486.77,
+    "qty": -200
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1106578/000110657826000152/0001106578-26-000152-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 1,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001104659-26-112426",
+  "personName": "Horowitz Joshua",
+  "personType": "insider",
+  "title": "Director",
+  "company": "KINGSWAY Corp",
+  "stockCode": "KWY",
+  "direction": "buy",
+  "unitPrice": null,
+  "quantity": 3575,
+  "totalAmount": 33121.4169,
+  "tradeDate": "2026-09-30",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 380245,
+  "holdingAfter": 383820,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 9.2757,
+    "qty": 2717
+   },
+   {
+    "date": "2026-09-30",
+    "price": 9.23,
+    "qty": 858
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1612424/000110465926112426/0001104659-26-112426-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 0,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001104659-26-112364",
+  "personName": "Yanofsky Theresa",
+  "personType": "insider",
+  "title": "Director",
+  "company": "Canopy Growth Corp",
+  "stockCode": "CGC",
+  "direction": "sell",
+  "unitPrice": 0.9268,
+  "quantity": 14920,
+  "totalAmount": 13827.856,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 146415,
+  "holdingAfter": 131495,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 0.9268,
+    "qty": -14920
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1737927/000110465926112364/0001104659-26-112364-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001104659-26-112362",
+  "personName": "Lazzarato David Angelo",
+  "personType": "insider",
+  "title": "Director",
+  "company": "Canopy Growth Corp",
+  "stockCode": "CGC",
+  "direction": "sell",
+  "unitPrice": 0.9268,
+  "quantity": 22380,
+  "totalAmount": 20741.784,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 211859,
+  "holdingAfter": 189479,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 0.9268,
+    "qty": -22380
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1737927/000110465926112362/0001104659-26-112362-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001104659-26-112361",
+  "personName": "BAYERN JOSEPH",
+  "personType": "insider",
+  "title": "Director",
+  "company": "Canopy Growth Corp",
+  "stockCode": "CGC",
+  "direction": "sell",
+  "unitPrice": 0.9268,
+  "quantity": 3096,
+  "totalAmount": 2869.3727999999996,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 145127,
+  "holdingAfter": 142031,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 0.9268,
+    "qty": -3096
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1120302/000110465926112361/0001104659-26-112361-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001104659-26-112355",
+  "personName": "ATKINS M SHAN",
+  "personType": "insider",
+  "title": "Director",
+  "company": "Canopy Growth Corp",
+  "stockCode": "CGC",
+  "direction": "sell",
+  "unitPrice": 0.9268,
+  "quantity": 3096,
+  "totalAmount": 2869.3727999999996,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 146517,
+  "holdingAfter": 143421,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 0.9268,
+    "qty": -3096
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1260096/000110465926112355/0001104659-26-112355-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001104659-26-112212",
+  "personName": "Baird Gordon A",
+  "personType": "insider",
+  "title": "Director",
+  "company": "abrdn Global Infrastructure Income Fund",
+  "stockCode": "ASGI",
+  "direction": "buy",
+  "unitPrice": 19.13,
+  "quantity": 32,
+  "totalAmount": 612.16,
+  "tradeDate": "2026-09-29",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 513,
+  "holdingAfter": 545,
+  "details": [
+   {
+    "date": "2026-09-29",
+    "price": 19.13,
+    "qty": 32
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1335891/000110465926112212/0001104659-26-112212-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 1,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001104659-26-112133",
+  "personName": "Japan Post Holdings Co., Ltd.",
+  "personType": "insider",
+  "title": "10% Owner",
+  "company": "AFLAC INC",
+  "stockCode": "AFL",
+  "direction": "sell",
+  "unitPrice": null,
+  "quantity": 12000,
+  "totalAmount": 1363540.8,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 50469550,
+  "holdingAfter": 50457550,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 113.62,
+    "qty": -11840
+   },
+   {
+    "date": "2026-09-28",
+    "price": 114.25,
+    "qty": -160
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/4977/000110465926112133/0001104659-26-112133-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001104659-26-112076",
+  "personName": "Zhang Jingjing Eason",
+  "personType": "insider",
+  "title": "VP and Chief Financial Officer",
+  "company": "MINISO Group Holding Ltd",
+  "stockCode": "MNSO",
+  "direction": "buy",
+  "unitPrice": 2.2583,
+  "quantity": 150600,
+  "totalAmount": 340099.98000000004,
+  "tradeDate": "2026-09-29",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 243874,
+  "holdingAfter": 394474,
+  "details": [
+   {
+    "date": "2026-09-29",
+    "price": 2.2583,
+    "qty": 150600
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1815846/000110465926112076/0001104659-26-112076-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 1,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001093557-26-000181",
+  "personName": "Stern Sadie",
+  "personType": "insider",
+  "title": "EVP Chief People & Culture Off",
+  "company": "DEXCOM INC",
+  "stockCode": "DXCM",
+  "direction": "sell",
+  "unitPrice": 86.15,
+  "quantity": 2565,
+  "totalAmount": 220974.75000000003,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 126043,
+  "holdingAfter": 123478,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 86.15,
+    "qty": -2565
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1093557/000109355726000181/0001093557-26-000181-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001072627-26-000056",
+  "personName": "Fitzgerald John Taylor Maloney",
+  "personType": "insider",
+  "title": "President and CEO",
+  "company": "KINGSWAY Corp",
+  "stockCode": "KWY",
+  "direction": "buy",
+  "unitPrice": 9.3,
+  "quantity": 269,
+  "totalAmount": 2501.7000000000003,
+  "tradeDate": "2026-09-30",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 1427161,
+  "holdingAfter": 1427430,
+  "details": [
+   {
+    "date": "2026-09-30",
+    "price": 9.3,
+    "qty": 269
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1584349/000107262726000056/0001072627-26-000056-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 0,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001072627-26-000055",
+  "personName": "Hansen Kent A",
+  "personType": "insider",
+  "title": "CFO & EVP",
+  "company": "KINGSWAY Corp",
+  "stockCode": "KWY",
+  "direction": "buy",
+  "unitPrice": 9.3,
+  "quantity": 169,
+  "totalAmount": 1571.7,
+  "tradeDate": "2026-09-30",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 136503,
+  "holdingAfter": 136672,
+  "details": [
+   {
+    "date": "2026-09-30",
+    "price": 9.3,
+    "qty": 169
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1686017/000107262726000055/0001072627-26-000055-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 0,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0001045463-26-000018",
+  "personName": "SCULLY WILLIAM P",
+  "personType": "insider",
+  "title": "10% Owner",
+  "company": "PROTHENA CORP PUBLIC LTD CO",
+  "stockCode": "PRTA",
+  "direction": "buy",
+  "unitPrice": 8.677,
+  "quantity": 162000,
+  "totalAmount": 1405674,
+  "tradeDate": "2026-09-29",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 52000,
+  "holdingAfter": 214000,
+  "details": [
+   {
+    "date": "2026-09-29",
+    "price": 8.677,
+    "qty": 162000
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1559053/000104546326000018/0001045463-26-000018-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 1,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0000950142-26-002643",
+  "personName": "HERSHEY TRUST CO TRUSTEE IN TRUST FOR MILTON HERSHEY SCHOOL",
+  "personType": "insider",
+  "title": "10% Owner",
+  "company": "HERSHEY CO",
+  "stockCode": "HSY",
+  "direction": "sell",
+  "unitPrice": null,
+  "quantity": 30000,
+  "totalAmount": 4855338.1674,
+  "tradeDate": "2026-09-30",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 741968,
+  "holdingAfter": 711968,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 164.4938,
+    "qty": -4151
+   },
+   {
+    "date": "2026-09-28",
+    "price": 165.3367,
+    "qty": -4689
+   },
+   {
+    "date": "2026-09-28",
+    "price": 166.3902,
+    "qty": -1160
+   },
+   {
+    "date": "2026-09-29",
+    "price": 160.8487,
+    "qty": -839
+   },
+   {
+    "date": "2026-09-29",
+    "price": 161.3928,
+    "qty": -7306
+   },
+   {
+    "date": "2026-09-29",
+    "price": 162.637,
+    "qty": -1220
+   },
+   {
+    "date": "2026-09-29",
+    "price": 163.2863,
+    "qty": -635
+   },
+   {
+    "date": "2026-09-30",
+    "price": 157.6868,
+    "qty": -3936
+   },
+   {
+    "date": "2026-09-30",
+    "price": 158.4602,
+    "qty": -2752
+   },
+   {
+    "date": "2026-09-30",
+    "price": 159.245,
+    "qty": -1640
+   },
+   {
+    "date": "2026-09-30",
+    "price": 160.7293,
+    "qty": -352
+   },
+   {
+    "date": "2026-09-30",
+    "price": 161.4885,
+    "qty": -891
+   },
+   {
+    "date": "2026-09-30",
+    "price": 162.4296,
+    "qty": -409
+   },
+   {
+    "date": "2026-09-30",
+    "price": 163,
+    "qty": -20
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/47111/000095014226002643/0000950142-26-002643-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 0,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0000950103-26-014886",
+  "personName": "Olivan Javier",
+  "personType": "insider",
+  "title": "Chief Operating Officer",
+  "company": "Meta Platforms, Inc.",
+  "stockCode": "META",
+  "direction": "sell",
+  "unitPrice": null,
+  "quantity": 1575,
+  "totalAmount": 1180966.44,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 10399,
+  "holdingAfter": 8824,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 750.425,
+    "qty": -946
+   },
+   {
+    "date": "2026-09-28",
+    "price": 748.91,
+    "qty": -82
+   },
+   {
+    "date": "2026-09-28",
+    "price": 748.91,
+    "qty": -57
+   },
+   {
+    "date": "2026-09-28",
+    "price": 748.91,
+    "qty": -82
+   },
+   {
+    "date": "2026-09-28",
+    "price": 748.91,
+    "qty": -408
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000095010326014886/0000950103-26-014886-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0000947871-26-000912",
+  "personName": "Chimovits Erez",
+  "personType": "insider",
+  "title": "Director",
+  "company": "ADARx Pharmaceuticals, Inc.",
+  "stockCode": "ADRX",
+  "direction": "buy",
+  "unitPrice": 17,
+  "quantity": 61516,
+  "totalAmount": 1045772,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 7065503,
+  "holdingAfter": 7127019,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 17,
+    "qty": 61516
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1802369/000094787126000912/0000947871-26-000912-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0000947871-26-000911",
+  "personName": "GORDON CARL L",
+  "personType": "insider",
+  "title": "Director · 10% Owner",
+  "company": "ADARx Pharmaceuticals, Inc.",
+  "stockCode": "ADRX",
+  "direction": "buy",
+  "unitPrice": 17,
+  "quantity": 950000,
+  "totalAmount": 16150000,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 9740530,
+  "holdingAfter": 10690530,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 17,
+    "qty": 300249
+   },
+   {
+    "date": "2026-09-28",
+    "price": 17,
+    "qty": 61516
+   },
+   {
+    "date": "2026-09-28",
+    "price": 17,
+    "qty": 588235
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1802369/000094787126000911/0000947871-26-000911-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0000947871-26-000910",
+  "personName": "ORBIMED ADVISORS LLC 외 4인",
+  "personType": "insider",
+  "title": "Director · 10% Owner",
+  "company": "ADARx Pharmaceuticals, Inc.",
+  "stockCode": "ADRX",
+  "direction": "buy",
+  "unitPrice": 17,
+  "quantity": 950000,
+  "totalAmount": 16150000,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 9740530,
+  "holdingAfter": 10690530,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 17,
+    "qty": 300249
+   },
+   {
+    "date": "2026-09-28",
+    "price": 17,
+    "qty": 61516
+   },
+   {
+    "date": "2026-09-28",
+    "price": 17,
+    "qty": 588235
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1802369/000094787126000910/0000947871-26-000910-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0000938071-26-000061",
+  "personName": "DUFFIELD DAVID A",
+  "personType": "insider",
+  "title": "10% Owner",
+  "company": "Workday, Inc.",
+  "stockCode": "WDAY",
+  "direction": "sell",
+  "unitPrice": null,
+  "quantity": 98971,
+  "totalAmount": 18661306.6703,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 302991,
+  "holdingAfter": 204020,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 182.668,
+    "qty": -2000
+   },
+   {
+    "date": "2026-09-28",
+    "price": 183.8751,
+    "qty": -3496
+   },
+   {
+    "date": "2026-09-28",
+    "price": 184.6661,
+    "qty": -1904
+   },
+   {
+    "date": "2026-09-28",
+    "price": 185.7791,
+    "qty": -1700
+   },
+   {
+    "date": "2026-09-28",
+    "price": 186.7973,
+    "qty": -1100
+   },
+   {
+    "date": "2026-09-28",
+    "price": 188.1294,
+    "qty": -23779
+   },
+   {
+    "date": "2026-09-28",
+    "price": 188.9376,
+    "qty": -37993
+   },
+   {
+    "date": "2026-09-28",
+    "price": 189.8371,
+    "qty": -23095
+   },
+   {
+    "date": "2026-09-28",
+    "price": 190.6031,
+    "qty": -3904
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/938071/000093807126000061/0000938071-26-000061-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0000930413-26-003008",
+  "personName": "Shuman Gregory M.",
+  "personType": "insider",
+  "title": "",
+  "company": "Lord Abbett Municipal Opportunities Fund",
+  "stockCode": "MOALX",
+  "direction": "buy",
+  "unitPrice": 9.62,
+  "quantity": 2079.002,
+  "totalAmount": 19999.999239999997,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 115908.99200000001,
+  "holdingAfter": 117987.994,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 9.62,
+    "qty": 2079.002
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/2029852/000093041326003008/0000930413-26-003008-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0000929638-26-003758",
+  "personName": "BROWN BROTHERS HARRIMAN & CO 외 1인",
+  "personType": "insider",
+  "title": "10% Owner",
+  "company": "AMG BBH Asset-Backed Credit Fund, LLC",
+  "stockCode": "BBASX",
+  "direction": "buy",
+  "unitPrice": 11.4,
+  "quantity": 70175.439,
+  "totalAmount": 800000.0046,
+  "tradeDate": "2026-09-29",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 390440.515,
+  "holdingAfter": 460615.954,
+  "details": [
+   {
+    "date": "2026-09-29",
+    "price": 11.4,
+    "qty": 70175.439
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/2097545/000092963826003758/0000929638-26-003758-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 1,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0000909832-26-000090",
+  "personName": "Frates Caton",
+  "personType": "insider",
+  "title": "Sr. Executive Vice President",
+  "company": "COSTCO WHOLESALE CORP /NEW",
+  "stockCode": "COST",
+  "direction": "sell",
+  "unitPrice": 915.93,
+  "quantity": 800.638,
+  "totalAmount": 733328.36334,
+  "tradeDate": "2026-09-29",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 8712.638,
+  "holdingAfter": 7912,
+  "details": [
+   {
+    "date": "2026-09-29",
+    "price": 915.93,
+    "qty": -800.638
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/909832/000090983226000090/0000909832-26-000090-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 1,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0000909832-26-000088",
+  "personName": "Adamo Claudine",
+  "personType": "insider",
+  "title": "Executive Vice President",
+  "company": "COSTCO WHOLESALE CORP /NEW",
+  "stockCode": "COST",
+  "direction": "sell",
+  "unitPrice": 915.93,
+  "quantity": 2200,
+  "totalAmount": 2015046,
+  "tradeDate": "2026-09-29",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 9333.51,
+  "holdingAfter": 7133.51,
+  "details": [
+   {
+    "date": "2026-09-29",
+    "price": 915.93,
+    "qty": -2200
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1916124/000090983226000088/0000909832-26-000088-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 1,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0000906304-26-000162",
+  "personName": "CLARK CHRISTOPHER D",
+  "personType": "insider",
+  "title": "President",
+  "company": "ROYCE SMALL-CAP TRUST, INC.",
+  "stockCode": "RVT",
+  "direction": "buy",
+  "unitPrice": 17.06,
+  "quantity": 1200,
+  "totalAmount": 20472,
+  "tradeDate": "2026-09-30",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 52640,
+  "holdingAfter": 53840,
+  "details": [
+   {
+    "date": "2026-09-30",
+    "price": 17.06,
+    "qty": 1200
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1619450/000090630426000162/0000906304-26-000162-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 0,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0000905148-26-004310",
+  "personName": "Conifer Management, L.L.C.",
+  "personType": "insider",
+  "title": "10% Owner",
+  "company": "GROUP 1 AUTOMOTIVE INC",
+  "stockCode": "GPI",
+  "direction": "buy",
+  "unitPrice": null,
+  "quantity": 273712,
+  "totalAmount": 66278316.42050001,
+  "tradeDate": "2026-09-30",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매수",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 1377426,
+  "holdingAfter": 1651138,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 239.5001,
+    "qty": 12560
+   },
+   {
+    "date": "2026-09-28",
+    "price": 240.8285,
+    "qty": 1672
+   },
+   {
+    "date": "2026-09-28",
+    "price": 242.2667,
+    "qty": 34446
+   },
+   {
+    "date": "2026-09-28",
+    "price": 243.2334,
+    "qty": 34593
+   },
+   {
+    "date": "2026-09-28",
+    "price": 244.1313,
+    "qty": 15442
+   },
+   {
+    "date": "2026-09-28",
+    "price": 245.5418,
+    "qty": 19257
+   },
+   {
+    "date": "2026-09-28",
+    "price": 246.1898,
+    "qty": 2571
+   },
+   {
+    "date": "2026-09-28",
+    "price": 247.3982,
+    "qty": 7741
+   },
+   {
+    "date": "2026-09-28",
+    "price": 248.3331,
+    "qty": 942
+   },
+   {
+    "date": "2026-09-28",
+    "price": 249.5298,
+    "qty": 4018
+   },
+   {
+    "date": "2026-09-28",
+    "price": 250.3504,
+    "qty": 230
+   },
+   {
+    "date": "2026-09-29",
+    "price": 235.6335,
+    "qty": 2821
+   },
+   {
+    "date": "2026-09-29",
+    "price": 236.4808,
+    "qty": 12942
+   },
+   {
+    "date": "2026-09-29",
+    "price": 237.8379,
+    "qty": 3292
+   },
+   {
+    "date": "2026-09-29",
+    "price": 238.799,
+    "qty": 523
+   },
+   {
+    "date": "2026-09-29",
+    "price": 239.5223,
+    "qty": 14570
+   },
+   {
+    "date": "2026-09-29",
+    "price": 240.8725,
+    "qty": 28791
+   },
+   {
+    "date": "2026-09-29",
+    "price": 241.6866,
+    "qty": 4249
+   },
+   {
+    "date": "2026-09-29",
+    "price": 242.9246,
+    "qty": 980
+   },
+   {
+    "date": "2026-09-29",
+    "price": 243.8588,
+    "qty": 320
+   },
+   {
+    "date": "2026-09-29",
+    "price": 244.83,
+    "qty": 160
+   },
+   {
+    "date": "2026-09-30",
+    "price": 238.3684,
+    "qty": 2133
+   },
+   {
+    "date": "2026-09-30",
+    "price": 239.3659,
+    "qty": 14717
+   },
+   {
+    "date": "2026-09-30",
+    "price": 240.3113,
+    "qty": 12342
+   },
+   {
+    "date": "2026-09-30",
+    "price": 241.0405,
+    "qty": 3151
+   },
+   {
+    "date": "2026-09-30",
+    "price": 242.6513,
+    "qty": 5352
+   },
+   {
+    "date": "2026-09-30",
+    "price": 243.4213,
+    "qty": 16514
+   },
+   {
+    "date": "2026-09-30",
+    "price": 244.6067,
+    "qty": 16343
+   },
+   {
+    "date": "2026-09-30",
+    "price": 245.0998,
+    "qty": 1040
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1773994/000090514826004310/0000905148-26-004310-index.htm",
+  "isAmended": false,
+  "transactionCode": "P",
+  "filingLagDays": 0,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0000905148-26-004306",
+  "personName": "DUCHENE TODD M",
+  "personType": "insider",
+  "title": "See remarks",
+  "company": "Core Scientific, Inc./tx",
+  "stockCode": "CORZ",
+  "direction": "sell",
+  "unitPrice": 16.7586,
+  "quantity": 10000,
+  "totalAmount": 167586,
+  "tradeDate": "2026-09-28",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 1197896,
+  "holdingAfter": 1187896,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 16.7586,
+    "qty": -10000
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1839341/000090514826004306/0000905148-26-004306-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 2,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
+  "id": "0000811589-26-000160",
+  "personName": "MOORE RICHARD H",
+  "personType": "insider",
+  "title": "Chief Executive Officer",
+  "company": "FIRST BANCORP /NC/",
+  "stockCode": "FBNC",
+  "direction": "sell",
+  "unitPrice": null,
+  "quantity": 23343,
+  "totalAmount": 1467171.624,
+  "tradeDate": "2026-09-29",
+  "discloseDate": "2026-09-30",
+  "reportReason": "공개시장 매도",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": 113549,
+  "holdingAfter": 90206,
+  "details": [
+   {
+    "date": "2026-09-28",
+    "price": 63.167,
+    "qty": -16000
+   },
+   {
+    "date": "2026-09-29",
+    "price": 62.168,
+    "qty": -7343
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/811589/000081158926000160/0000811589-26-000160-index.htm",
+  "isAmended": false,
+  "transactionCode": "S",
+  "filingLagDays": 1,
+  "amountRange": null,
+  "ownerType": "self",
+  "assetType": null
+ },
+ {
   "id": "0002147680-26-000012",
   "personName": "Renner Alexandra",
   "personType": "insider",
