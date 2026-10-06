@@ -1,5 +1,2978 @@
 [
  {
+  "id": "WellsFargo&CompanyCommonStock-MichaelRulli",
+  "name": "Michael Rulli",
+  "type": "politician",
+  "title": "하원의원 · OH06",
+  "company": "Wells Fargo & Company Common Stock",
+  "holdings": [],
+  "totalNetBuy12m": 0
+ },
+ {
+  "id": "MicrosoftCorporation-CommonStock-MichaelRulli",
+  "name": "Michael Rulli",
+  "type": "politician",
+  "title": "하원의원 · OH06",
+  "company": "Microsoft Corporation - Common Stock",
+  "holdings": [],
+  "totalNetBuy12m": 0
+ },
+ {
+  "id": "BeyondAir,Inc.-LinYi-Chien",
+  "name": "Lin Yi-Chien",
+  "type": "insider",
+  "title": "10% Owner",
+  "company": "Beyond Air, Inc.",
+  "holdings": [
+   {
+    "stockCode": "XAIR",
+    "stockName": "Beyond Air, Inc.",
+    "quantity": 128000
+   }
+  ],
+  "totalNetBuy12m": 56590.399999999994
+ },
+ {
+  "id": "HawkEye360,Inc.-SerafiniJohnSheldon",
+  "name": "Serafini John Sheldon",
+  "type": "insider",
+  "title": "President and CEO",
+  "company": "HawkEye 360, Inc.",
+  "holdings": [
+   {
+    "stockCode": "HAWK",
+    "stockName": "HawkEye 360, Inc.",
+    "quantity": 647301
+   }
+  ],
+  "totalNetBuy12m": -1364991.936
+ },
+ {
+  "id": "BioNTechSE-SahinUgur",
+  "name": "Sahin Ugur",
+  "type": "insider",
+  "title": "Chief Executive Officer",
+  "company": "BioNTech SE",
+  "holdings": [
+   {
+    "stockCode": "BNTX",
+    "stockName": "BioNTech SE",
+    "quantity": 813209
+   }
+  ],
+  "totalNetBuy12m": -66952115.15
+ },
+ {
+  "id": "Asana,Inc.-ColendichKatieMarie",
+  "name": "Colendich Katie Marie",
+  "type": "insider",
+  "title": "GC, Corporate Secretary",
+  "company": "Asana, Inc.",
+  "holdings": [
+   {
+    "stockCode": "ASAN",
+    "stockName": "Asana, Inc.",
+    "quantity": 170163
+   }
+  ],
+  "totalNetBuy12m": -208282.0704
+ },
+ {
+  "id": "DROPBOX,INC.-SchubachSarahElizabeth",
+  "name": "Schubach Sarah Elizabeth",
+  "type": "insider",
+  "title": "Chief Accounting Officer",
+  "company": "DROPBOX, INC.",
+  "holdings": [
+   {
+    "stockCode": "DBX",
+    "stockName": "DROPBOX, INC.",
+    "quantity": 124266
+   }
+  ],
+  "totalNetBuy12m": -305331.33
+ },
+ {
+  "id": "COGNIZANTTECHNOLOGYSOLUTIONSCORP-KerdmanAlina",
+  "name": "Kerdman Alina",
+  "type": "insider",
+  "title": "SVP, Controller & CAO",
+  "company": "COGNIZANT TECHNOLOGY SOLUTIONS CORP",
+  "holdings": [
+   {
+    "stockCode": "CTSH",
+    "stockName": "COGNIZANT TECHNOLOGY SOLUTIONS CORP",
+    "quantity": 848
+   }
+  ],
+  "totalNetBuy12m": -25388.880000000005
+ },
+ {
+  "id": "MEXICOFUNDINC-GarciaCuellarMariaRegina",
+  "name": "Garcia Cuellar Maria Regina",
+  "type": "insider",
+  "title": "Director",
+  "company": "MEXICO FUND INC",
+  "holdings": [
+   {
+    "stockCode": "MXF",
+    "stockName": "MEXICO FUND INC",
+    "quantity": 1127
+   }
+  ],
+  "totalNetBuy12m": 16945.09
+ },
+ {
+  "id": "TransUnion-AbdelsadekMohamed",
+  "name": "Abdelsadek Mohamed",
+  "type": "insider",
+  "title": "EVP, Chief Global Solutions",
+  "company": "TransUnion",
+  "holdings": [
+   {
+    "stockCode": "TRU",
+    "stockName": "TransUnion",
+    "quantity": 57182
+   }
+  ],
+  "totalNetBuy12m": -2111485
+ },
+ {
+  "id": "Xometry,Inc.-RaghavanVaidyanathan",
+  "name": "Raghavan Vaidyanathan",
+  "type": "insider",
+  "title": "Chief Technology Officer",
+  "company": "Xometry, Inc.",
+  "holdings": [
+   {
+    "stockCode": "XMTR",
+    "stockName": "Xometry, Inc.",
+    "quantity": 135777
+   }
+  ],
+  "totalNetBuy12m": -676550.1828000001
+ },
+ {
+  "id": "Xometry,Inc.-SahniSanjeevSingh",
+  "name": "Sahni Sanjeev Singh",
+  "type": "insider",
+  "title": "Chief Executive Officer",
+  "company": "Xometry, Inc.",
+  "holdings": [
+   {
+    "stockCode": "XMTR",
+    "stockName": "Xometry, Inc.",
+    "quantity": 183521
+   }
+  ],
+  "totalNetBuy12m": -377968.0274
+ },
+ {
+  "id": "MazeTherapeutics,Inc.-BernsteinHarold",
+  "name": "Bernstein Harold",
+  "type": "insider",
+  "title": "President, R&D & CMO",
+  "company": "Maze Therapeutics, Inc.",
+  "holdings": [
+   {
+    "stockCode": "MAZE",
+    "stockName": "Maze Therapeutics, Inc.",
+    "quantity": 16142
+   }
+  ],
+  "totalNetBuy12m": -1830489.2444
+ },
+ {
+  "id": "OpusGenetics,Inc.-FoundationFightingBlindnessRetinalDegenerationFund외1인",
+  "name": "Foundation Fighting Blindness Retinal Degeneration Fund 외 1인",
+  "type": "insider",
+  "title": "Director",
+  "company": "Opus Genetics, Inc.",
+  "holdings": [
+   {
+    "stockCode": "IRD",
+    "stockName": "Opus Genetics, Inc.",
+    "quantity": 3236171
+   }
+  ],
+  "totalNetBuy12m": -2755980.8000000003
+ },
+ {
+  "id": "PampaEnergyInc.-MindlinDamianMiguel",
+  "name": "Mindlin Damian Miguel",
+  "type": "insider",
+  "title": "Vicepresident",
+  "company": "Pampa Energy Inc.",
+  "holdings": [
+   {
+    "stockCode": "PAM",
+    "stockName": "Pampa Energy Inc.",
+    "quantity": 13959067
+   }
+  ],
+  "totalNetBuy12m": 0
+ },
+ {
+  "id": "SummitMidstreamCorp-JohnstonJamesDavid",
+  "name": "Johnston James David",
+  "type": "insider",
+  "title": "Executive VP, GC, CCO and Secy",
+  "company": "Summit Midstream Corp",
+  "holdings": [
+   {
+    "stockCode": "SMC",
+    "stockName": "Summit Midstream Corp",
+    "quantity": 72757
+   }
+  ],
+  "totalNetBuy12m": -79326
+ },
+ {
+  "id": "TectonicTherapeutic,Inc.-McNamaraPeter",
+  "name": "McNamara Peter",
+  "type": "insider",
+  "title": "Chief Scientific Officer",
+  "company": "Tectonic Therapeutic, Inc.",
+  "holdings": [
+   {
+    "stockCode": "TECX",
+    "stockName": "Tectonic Therapeutic, Inc.",
+    "quantity": 55328
+   }
+  ],
+  "totalNetBuy12m": -15424.8
+ },
+ {
+  "id": "Natera,Inc.-MoshkevichSolomon",
+  "name": "Moshkevich Solomon",
+  "type": "insider",
+  "title": "PRESIDENT, CLINICALDIAGNOSTICS",
+  "company": "Natera, Inc.",
+  "holdings": [
+   {
+    "stockCode": "NTRA",
+    "stockName": "Natera, Inc.",
+    "quantity": 133633
+   }
+  ],
+  "totalNetBuy12m": -8635175.5054
+ },
+ {
+  "id": "RocketLabCorp-SpiceAdamC.",
+  "name": "Spice Adam C.",
+  "type": "insider",
+  "title": "Chief Financial Officer",
+  "company": "Rocket Lab Corp",
+  "holdings": [
+   {
+    "stockCode": "RKLB",
+    "stockName": "Rocket Lab Corp",
+    "quantity": 1156692
+   }
+  ],
+  "totalNetBuy12m": -19376959.935700003
+ },
+ {
+  "id": "NEWMONTCorp/DE/-ViljoenNatascha",
+  "name": "Viljoen Natascha",
+  "type": "insider",
+  "title": "President & CEO",
+  "company": "NEWMONT Corp /DE/",
+  "holdings": [
+   {
+    "stockCode": "NEM",
+    "stockName": "NEWMONT Corp /DE/",
+    "quantity": 135235
+   }
+  ],
+  "totalNetBuy12m": -1730634.42
+ },
+ {
+  "id": "PubMatic,Inc.-GimbelLisa",
+  "name": "Gimbel Lisa",
+  "type": "insider",
+  "title": "CHIEF ACCOUNTING OFFICER",
+  "company": "PubMatic, Inc.",
+  "holdings": [
+   {
+    "stockCode": "PUBM",
+    "stockName": "PubMatic, Inc.",
+    "quantity": 14561
+   }
+  ],
+  "totalNetBuy12m": -50247.4212
+ },
+ {
+  "id": "BeOneMedicinesLtd.-LeeChanHenry",
+  "name": "Lee Chan Henry",
+  "type": "insider",
+  "title": "SVP, General Counsel",
+  "company": "BeOne Medicines Ltd.",
+  "holdings": [
+   {
+    "stockCode": "ONC",
+    "stockName": "BeOne Medicines Ltd.",
+    "quantity": 325312
+   }
+  ],
+  "totalNetBuy12m": -1715817.3599999999
+ },
+ {
+  "id": "SnowflakeInc.-KleinermanChristian",
+  "name": "Kleinerman Christian",
+  "type": "insider",
+  "title": "EVP, Product Management",
+  "company": "Snowflake Inc.",
+  "holdings": [
+   {
+    "stockCode": "SNOW",
+    "stockName": "Snowflake Inc.",
+    "quantity": 375379
+   }
+  ],
+  "totalNetBuy12m": -38293715.46
+ },
+ {
+  "id": "NayaxLtd.-NechmadYair",
+  "name": "Nechmad Yair",
+  "type": "insider",
+  "title": "CEO, Co Founder & Chairman",
+  "company": "Nayax Ltd.",
+  "holdings": [
+   {
+    "stockCode": "NYAX",
+    "stockName": "Nayax Ltd.",
+    "quantity": 7433558
+   }
+  ],
+  "totalNetBuy12m": 8827384.931400001
+ },
+ {
+  "id": "StokeTherapeutics,Inc.-AllanJonathan",
+  "name": "Allan Jonathan",
+  "type": "insider",
+  "title": "GENERAL COUNSEL & CORP SEC",
+  "company": "Stoke Therapeutics, Inc.",
+  "holdings": [
+   {
+    "stockCode": "STOK",
+    "stockName": "Stoke Therapeutics, Inc.",
+    "quantity": 24086
+   }
+  ],
+  "totalNetBuy12m": -108148.3397
+ },
+ {
+  "id": "TWILIOINC-ViggianoAidan",
+  "name": "Viggiano Aidan",
+  "type": "insider",
+  "title": "Chief Financial Officer",
+  "company": "TWILIO INC",
+  "holdings": [
+   {
+    "stockCode": "TWLO",
+    "stockName": "TWILIO INC",
+    "quantity": 109114
+   }
+  ],
+  "totalNetBuy12m": -3003487.5696
+ },
+ {
+  "id": "NEWMONTCorp/DE/-TothPeter",
+  "name": "Toth Peter",
+  "type": "insider",
+  "title": "EVP, Chief Sustain & Dev Off",
+  "company": "NEWMONT Corp /DE/",
+  "holdings": [
+   {
+    "stockCode": "NEM",
+    "stockName": "NEWMONT Corp /DE/",
+    "quantity": 40315
+   }
+  ],
+  "totalNetBuy12m": -993780
+ },
+ {
+  "id": "F&GAnnuities&Life,Inc.-MurphyConor",
+  "name": "Murphy Conor",
+  "type": "insider",
+  "title": "CEO and President",
+  "company": "F&G Annuities & Life, Inc.",
+  "holdings": [
+   {
+    "stockCode": "FG",
+    "stockName": "F&G Annuities & Life, Inc.",
+    "quantity": 196991.016
+   }
+  ],
+  "totalNetBuy12m": 5014.64904
+ },
+ {
+  "id": "MineralysTherapeutics,Inc.-CongletonJon",
+  "name": "Congleton Jon",
+  "type": "insider",
+  "title": "Chief Executive Officer",
+  "company": "Mineralys Therapeutics, Inc.",
+  "holdings": [
+   {
+    "stockCode": "MLYS",
+    "stockName": "Mineralys Therapeutics, Inc.",
+    "quantity": 528621
+   }
+  ],
+  "totalNetBuy12m": -1909665
+ },
+ {
+  "id": "Hims&HersHealth,Inc.-OkupeOluyemi",
+  "name": "Okupe Oluyemi",
+  "type": "insider",
+  "title": "Chief Financial Officer",
+  "company": "Hims & Hers Health, Inc.",
+  "holdings": [
+   {
+    "stockCode": "HIMS",
+    "stockName": "Hims & Hers Health, Inc.",
+    "quantity": 228938
+   }
+  ],
+  "totalNetBuy12m": -3644409.8568
+ },
+ {
+  "id": "WarbyParkerInc.-RaiderJeffreyJacob",
+  "name": "Raider Jeffrey Jacob",
+  "type": "insider",
+  "title": "Director",
+  "company": "Warby Parker Inc.",
+  "holdings": [
+   {
+    "stockCode": "WRBY",
+    "stockName": "Warby Parker Inc.",
+    "quantity": 420201
+   }
+  ],
+  "totalNetBuy12m": -415500
+ },
+ {
+  "id": "WarbyParkerInc.-BlumenthalNeilHarris",
+  "name": "Blumenthal Neil Harris",
+  "type": "insider",
+  "title": "Co-Chief Executive Officer",
+  "company": "Warby Parker Inc.",
+  "holdings": [
+   {
+    "stockCode": "WRBY",
+    "stockName": "Warby Parker Inc.",
+    "quantity": 136020
+   }
+  ],
+  "totalNetBuy12m": -2769000
+ },
+ {
+  "id": "TransUnion-SkinnerToddC.",
+  "name": "Skinner Todd C.",
+  "type": "insider",
+  "title": "President, International",
+  "company": "TransUnion",
+  "holdings": [
+   {
+    "stockCode": "TRU",
+    "stockName": "TransUnion",
+    "quantity": 63849.274
+   }
+  ],
+  "totalNetBuy12m": -222672
+ },
+ {
+  "id": "Xometry,Inc.-AltschulerRandolph",
+  "name": "Altschuler Randolph",
+  "type": "insider",
+  "title": "Director",
+  "company": "Xometry, Inc.",
+  "holdings": [
+   {
+    "stockCode": "XMTR",
+    "stockName": "Xometry, Inc.",
+    "quantity": 556663
+   }
+  ],
+  "totalNetBuy12m": -2539722.1176999994
+ },
+ {
+  "id": "XerisBiopharmaHoldings,Inc.-PieperSteven",
+  "name": "Pieper Steven",
+  "type": "insider",
+  "title": "See Remarks",
+  "company": "Xeris Biopharma Holdings, Inc.",
+  "holdings": [
+   {
+    "stockCode": "XERS",
+    "stockName": "Xeris Biopharma Holdings, Inc.",
+    "quantity": 1361053
+   }
+  ],
+  "totalNetBuy12m": -132036.5
+ },
+ {
+  "id": "XerisBiopharmaHoldings,Inc.-McCullochKevin",
+  "name": "McCulloch Kevin",
+  "type": "insider",
+  "title": "See Remarks",
+  "company": "Xeris Biopharma Holdings, Inc.",
+  "holdings": [
+   {
+    "stockCode": "XERS",
+    "stockName": "Xeris Biopharma Holdings, Inc.",
+    "quantity": 1676126
+   }
+  ],
+  "totalNetBuy12m": -638668
+ },
+ {
+  "id": "XerisBiopharmaHoldings,Inc.-HechtBeth",
+  "name": "Hecht Beth",
+  "type": "insider",
+  "title": "See Remarks",
+  "company": "Xeris Biopharma Holdings, Inc.",
+  "holdings": [
+   {
+    "stockCode": "XERS",
+    "stockName": "Xeris Biopharma Holdings, Inc.",
+    "quantity": 1144462
+   }
+  ],
+  "totalNetBuy12m": -431779.3948
+ },
+ {
+  "id": "DOCUSIGN,INC.-HansenPaula",
+  "name": "Hansen Paula",
+  "type": "insider",
+  "title": "Chief Revenue Officer",
+  "company": "DOCUSIGN, INC.",
+  "holdings": [
+   {
+    "stockCode": "DOCU",
+    "stockName": "DOCUSIGN, INC.",
+    "quantity": 106857
+   }
+  ],
+  "totalNetBuy12m": -227061
+ },
+ {
+  "id": "Hims&HersHealth,Inc.-BoughtonSoleil",
+  "name": "Boughton Soleil",
+  "type": "insider",
+  "title": "Chief Legal Officer",
+  "company": "Hims & Hers Health, Inc.",
+  "holdings": [
+   {
+    "stockCode": "HIMS",
+    "stockName": "Hims & Hers Health, Inc.",
+    "quantity": 313964
+   }
+  ],
+  "totalNetBuy12m": -1064465.52
+ },
+ {
+  "id": "PlanetLabsPBC-BrennanItaM",
+  "name": "Brennan Ita M",
+  "type": "insider",
+  "title": "Director",
+  "company": "Planet Labs PBC",
+  "holdings": [
+   {
+    "stockCode": "PL",
+    "stockName": "Planet Labs PBC",
+    "quantity": 250373
+   }
+  ],
+  "totalNetBuy12m": -187478.74999999997
+ },
+ {
+  "id": "JobyAviation,Inc.-SciarraPaulCahill",
+  "name": "Sciarra Paul Cahill",
+  "type": "insider",
+  "title": "Director",
+  "company": "Joby Aviation, Inc.",
+  "holdings": [
+   {
+    "stockCode": "JOBY",
+    "stockName": "Joby Aviation, Inc.",
+    "quantity": 55765557
+   }
+  ],
+  "totalNetBuy12m": -1295625
+ },
+ {
+  "id": "NurixTherapeutics,Inc.-RingChristine",
+  "name": "Ring Christine",
+  "type": "insider",
+  "title": "Chief Legal Officer",
+  "company": "Nurix Therapeutics, Inc.",
+  "holdings": [
+   {
+    "stockCode": "NRIX",
+    "stockName": "Nurix Therapeutics, Inc.",
+    "quantity": 17329
+   }
+  ],
+  "totalNetBuy12m": -755533.1712
+ },
+ {
+  "id": "Vaxcyte,Inc.-WassilJim",
+  "name": "Wassil Jim",
+  "type": "insider",
+  "title": "EVP, Chief Scientific Ofc, COO",
+  "company": "Vaxcyte, Inc.",
+  "holdings": [
+   {
+    "stockCode": "PCVX",
+    "stockName": "Vaxcyte, Inc.",
+    "quantity": 159791
+   }
+  ],
+  "totalNetBuy12m": -624922.744
+ },
+ {
+  "id": "CLOVERHEALTHINVESTMENTS,CORP./DE-ToyAndrew",
+  "name": "Toy Andrew",
+  "type": "insider",
+  "title": "Chief Executive Officer",
+  "company": "CLOVER HEALTH INVESTMENTS, CORP. /DE",
+  "holdings": [
+   {
+    "stockCode": "CLOV",
+    "stockName": "CLOVER HEALTH INVESTMENTS, CORP. /DE",
+    "quantity": 9459316
+   }
+  ],
+  "totalNetBuy12m": -1744057.84
+ },
+ {
+  "id": "StokeTherapeutics,Inc.-TichoBarry",
+  "name": "Ticho Barry",
+  "type": "insider",
+  "title": "CHIEF MEDICAL OFFICER",
+  "company": "Stoke Therapeutics, Inc.",
+  "holdings": [
+   {
+    "stockCode": "STOK",
+    "stockName": "Stoke Therapeutics, Inc.",
+    "quantity": 21691
+   }
+  ],
+  "totalNetBuy12m": -558629.5094
+ },
+ {
+  "id": "LIQUIDITYSERVICESINC-DauntJohn",
+  "name": "Daunt John",
+  "type": "insider",
+  "title": "EVP, Chief Commercial Officer",
+  "company": "LIQUIDITY SERVICES INC",
+  "holdings": [
+   {
+    "stockCode": "LQDT",
+    "stockName": "LIQUIDITY SERVICES INC",
+    "quantity": 38411
+   }
+  ],
+  "totalNetBuy12m": -87959.3
+ },
+ {
+  "id": "MIDPENNBANCORPINC-BrumbaughKimberlyJ",
+  "name": "Brumbaugh Kimberly J",
+  "type": "insider",
+  "title": "Director",
+  "company": "MID PENN BANCORP INC",
+  "holdings": [
+   {
+    "stockCode": "MPB",
+    "stockName": "MID PENN BANCORP INC",
+    "quantity": 12798.513
+   }
+  ],
+  "totalNetBuy12m": 2478
+ },
+ {
+  "id": "CoreWeave,Inc.-VenturoBrianM",
+  "name": "Venturo Brian M",
+  "type": "insider",
+  "title": "Chief Strategy Officer",
+  "company": "CoreWeave, Inc.",
+  "holdings": [
+   {
+    "stockCode": "CRWV",
+    "stockName": "CoreWeave, Inc.",
+    "quantity": 247270
+   }
+  ],
+  "totalNetBuy12m": -6295867.16
+ },
+ {
+  "id": "CoreWeave,Inc.-McVeetyKristenJ",
+  "name": "McVeety Kristen J",
+  "type": "insider",
+  "title": "GC and Secretary",
+  "company": "CoreWeave, Inc.",
+  "holdings": [
+   {
+    "stockCode": "CRWV",
+    "stockName": "CoreWeave, Inc.",
+    "quantity": 126044
+   }
+  ],
+  "totalNetBuy12m": -22443870.743099995
+ },
+ {
+  "id": "CoreWeave,Inc.-McBeeBrannin",
+  "name": "McBee Brannin",
+  "type": "insider",
+  "title": "Chief Development Officer",
+  "company": "CoreWeave, Inc.",
+  "holdings": [
+   {
+    "stockCode": "CRWV",
+    "stockName": "CoreWeave, Inc.",
+    "quantity": 467263
+   }
+  ],
+  "totalNetBuy12m": -113971984.7152
+ },
+ {
+  "id": "CoreWeave,Inc.-JainSachin",
+  "name": "Jain Sachin",
+  "type": "insider",
+  "title": "Chief Operating Officer",
+  "company": "CoreWeave, Inc.",
+  "holdings": [
+   {
+    "stockCode": "CRWV",
+    "stockName": "CoreWeave, Inc.",
+    "quantity": 161393
+   }
+  ],
+  "totalNetBuy12m": -1836048.7999999998
+ },
+ {
+  "id": "CoreWeave,Inc.-IntratorMichaelN",
+  "name": "Intrator Michael N",
+  "type": "insider",
+  "title": "CEO and President",
+  "company": "CoreWeave, Inc.",
+  "holdings": [
+   {
+    "stockCode": "CRWV",
+    "stockName": "CoreWeave, Inc.",
+    "quantity": 2446424
+   }
+  ],
+  "totalNetBuy12m": -275493294.4795
+ },
+ {
+  "id": "CoreWeave,Inc.-GoldbergChen",
+  "name": "Goldberg Chen",
+  "type": "insider",
+  "title": "EVP, Product & Engineering",
+  "company": "CoreWeave, Inc.",
+  "holdings": [
+   {
+    "stockCode": "CRWV",
+    "stockName": "CoreWeave, Inc.",
+    "quantity": 52974
+   }
+  ],
+  "totalNetBuy12m": -5971126.805500001
+ },
+ {
+  "id": "CoreWeave,Inc.-BakerJeff",
+  "name": "Baker Jeff",
+  "type": "insider",
+  "title": "Principal Accounting Officer",
+  "company": "CoreWeave, Inc.",
+  "holdings": [
+   {
+    "stockCode": "CRWV",
+    "stockName": "CoreWeave, Inc.",
+    "quantity": 13622
+   }
+  ],
+  "totalNetBuy12m": -545154.3
+ },
+ {
+  "id": "CoreWeave,Inc.-AgrawalNitin",
+  "name": "Agrawal Nitin",
+  "type": "insider",
+  "title": "Chief Financial Officer",
+  "company": "CoreWeave, Inc.",
+  "holdings": [
+   {
+    "stockCode": "CRWV",
+    "stockName": "CoreWeave, Inc.",
+    "quantity": 140129
+   }
+  ],
+  "totalNetBuy12m": -11827416.906299999
+ },
+ {
+  "id": "MIDPENNBANCORPINC-EvansAlbertJ.",
+  "name": "Evans Albert J.",
+  "type": "insider",
+  "title": "Director",
+  "company": "MID PENN BANCORP INC",
+  "holdings": [
+   {
+    "stockCode": "MPB",
+    "stockName": "MID PENN BANCORP INC",
+    "quantity": 42174.863
+   }
+  ],
+  "totalNetBuy12m": 9982.8
+ },
+ {
+  "id": "MIDPENNBANCORPINC-FrankJoelL.",
+  "name": "Frank Joel L.",
+  "type": "insider",
+  "title": "Director",
+  "company": "MID PENN BANCORP INC",
+  "holdings": [
+   {
+    "stockCode": "MPB",
+    "stockName": "MID PENN BANCORP INC",
+    "quantity": 11559.708
+   }
+  ],
+  "totalNetBuy12m": 2478
+ },
+ {
+  "id": "TWILIOINC-ShipchandlerKhozema",
+  "name": "Shipchandler Khozema",
+  "type": "insider",
+  "title": "Chief Executive Officer",
+  "company": "TWILIO INC",
+  "holdings": [
+   {
+    "stockCode": "TWLO",
+    "stockName": "TWILIO INC",
+    "quantity": 206943
+   }
+  ],
+  "totalNetBuy12m": -4087132.8022
+ },
+ {
+  "id": "PagerDuty,Inc.-TejadaJennifer",
+  "name": "Tejada Jennifer",
+  "type": "insider",
+  "title": "Executive Chair",
+  "company": "PagerDuty, Inc.",
+  "holdings": [
+   {
+    "stockCode": "PD",
+    "stockName": "PagerDuty, Inc.",
+    "quantity": 1670251
+   }
+  ],
+  "totalNetBuy12m": -1736737.9
+ },
+ {
+  "id": "KeysightTechnologies,Inc.-DhanasekaranSatish",
+  "name": "Dhanasekaran Satish",
+  "type": "insider",
+  "title": "President and CEO",
+  "company": "Keysight Technologies, Inc.",
+  "holdings": [
+   {
+    "stockCode": "KEYS",
+    "stockName": "Keysight Technologies, Inc.",
+    "quantity": 118390.578
+   }
+  ],
+  "totalNetBuy12m": -1092390
+ },
+ {
+  "id": "Natera,Inc.-ChapmanStevenLeonard",
+  "name": "Chapman Steven Leonard",
+  "type": "insider",
+  "title": "CEO AND PRESIDENT",
+  "company": "Natera, Inc.",
+  "holdings": [
+   {
+    "stockCode": "NTRA",
+    "stockName": "Natera, Inc.",
+    "quantity": 106553
+   }
+  ],
+  "totalNetBuy12m": -3370662.533
+ },
+ {
+  "id": "WILLIAMSCOMPANIES,INC.-WilsonTerranceLane",
+  "name": "Wilson Terrance Lane",
+  "type": "insider",
+  "title": "SVP & General Counsel",
+  "company": "WILLIAMS COMPANIES, INC.",
+  "holdings": [
+   {
+    "stockCode": "WMB",
+    "stockName": "WILLIAMS COMPANIES, INC.",
+    "quantity": 281159
+   }
+  ],
+  "totalNetBuy12m": -1401436.8
+ },
+ {
+  "id": "MGICINVESTMENTCORP-MiosiSalvatoreA",
+  "name": "Miosi Salvatore A",
+  "type": "insider",
+  "title": "President & COO",
+  "company": "MGIC INVESTMENT CORP",
+  "holdings": [
+   {
+    "stockCode": "MTG",
+    "stockName": "MGIC INVESTMENT CORP",
+    "quantity": 500951.361
+   }
+  ],
+  "totalNetBuy12m": -2594700
+ },
+ {
+  "id": "MazeTherapeutics,Inc.-ColomaJasonV",
+  "name": "Coloma Jason V",
+  "type": "insider",
+  "title": "Chief Executive Officer",
+  "company": "Maze Therapeutics, Inc.",
+  "holdings": [
+   {
+    "stockCode": "MAZE",
+    "stockName": "Maze Therapeutics, Inc.",
+    "quantity": 20898
+   }
+  ],
+  "totalNetBuy12m": -3355528.247
+ },
+ {
+  "id": "DOCUSIGN,INC.-ThygesenAllanC.",
+  "name": "Thygesen Allan C.",
+  "type": "insider",
+  "title": "President and CEO",
+  "company": "DOCUSIGN, INC.",
+  "holdings": [
+   {
+    "stockCode": "DOCU",
+    "stockName": "DOCUSIGN, INC.",
+    "quantity": 185576
+   }
+  ],
+  "totalNetBuy12m": -1818929.31
+ },
+ {
+  "id": "OUTFRONTMediaInc.-SIEGELMATTHEW",
+  "name": "SIEGEL MATTHEW",
+  "type": "insider",
+  "title": "EVP, CFO",
+  "company": "OUTFRONT Media Inc.",
+  "holdings": [
+   {
+    "stockCode": "OUT",
+    "stockName": "OUTFRONT Media Inc.",
+    "quantity": 264925
+   }
+  ],
+  "totalNetBuy12m": -696000
+ },
+ {
+  "id": "GILEADSCIENCES,INC.-O'DayDanielPatrick",
+  "name": "O'Day Daniel Patrick",
+  "type": "insider",
+  "title": "Chairman & CEO",
+  "company": "GILEAD SCIENCES, INC.",
+  "holdings": [
+   {
+    "stockCode": "GILD",
+    "stockName": "GILEAD SCIENCES, INC.",
+    "quantity": 600433
+   }
+  ],
+  "totalNetBuy12m": -6402793.0748
+ },
+ {
+  "id": "SpyreTherapeutics,Inc.-King-JonesHeidy",
+  "name": "King-Jones Heidy",
+  "type": "insider",
+  "title": "See Remarks",
+  "company": "Spyre Therapeutics, Inc.",
+  "holdings": [
+   {
+    "stockCode": "SYRE",
+    "stockName": "Spyre Therapeutics, Inc.",
+    "quantity": 30844
+   }
+  ],
+  "totalNetBuy12m": -5114430.17
+ },
+ {
+  "id": "SpyreTherapeutics,Inc.-TurtleCameron",
+  "name": "Turtle Cameron",
+  "type": "insider",
+  "title": "Chief Executive Officer",
+  "company": "Spyre Therapeutics, Inc.",
+  "holdings": [
+   {
+    "stockCode": "SYRE",
+    "stockName": "Spyre Therapeutics, Inc.",
+    "quantity": 581740
+   }
+  ],
+  "totalNetBuy12m": -4122219.8600000003
+ },
+ {
+  "id": "SpyreTherapeutics,Inc.-BurrowsScottL",
+  "name": "Burrows Scott L",
+  "type": "insider",
+  "title": "Chief Financial Officer",
+  "company": "Spyre Therapeutics, Inc.",
+  "holdings": [
+   {
+    "stockCode": "SYRE",
+    "stockName": "Spyre Therapeutics, Inc.",
+    "quantity": 105494
+   }
+  ],
+  "totalNetBuy12m": -5262422.9
+ },
+ {
+  "id": "RoivantSciencesLtd.-VenkerEric",
+  "name": "Venker Eric",
+  "type": "insider",
+  "title": "President & Immunovant CEO",
+  "company": "Roivant Sciences Ltd.",
+  "holdings": [
+   {
+    "stockCode": "ROIV",
+    "stockName": "Roivant Sciences Ltd.",
+    "quantity": 1813063
+   }
+  ],
+  "totalNetBuy12m": -21467392.58
+ },
+ {
+  "id": "Cactus,Inc.-BenderScott",
+  "name": "Bender Scott",
+  "type": "insider",
+  "title": "Chairman and CEO",
+  "company": "Cactus, Inc.",
+  "holdings": [
+   {
+    "stockCode": "WHD",
+    "stockName": "Cactus, Inc.",
+    "quantity": 9386249
+   }
+  ],
+  "totalNetBuy12m": -25351171.700000003
+ },
+ {
+  "id": "Cactus,Inc.-BenderJoel",
+  "name": "Bender Joel",
+  "type": "insider",
+  "title": "President",
+  "company": "Cactus, Inc.",
+  "holdings": [
+   {
+    "stockCode": "WHD",
+    "stockName": "Cactus, Inc.",
+    "quantity": 9386249
+   }
+  ],
+  "totalNetBuy12m": -25351171.700000003
+ },
+ {
+  "id": "Cardlytics,Inc.-GuptaAmit",
+  "name": "Gupta Amit",
+  "type": "insider",
+  "title": "Chief Executive Officer",
+  "company": "Cardlytics, Inc.",
+  "holdings": [
+   {
+    "stockCode": "CDLX",
+    "stockName": "Cardlytics, Inc.",
+    "quantity": 126350
+   }
+  ],
+  "totalNetBuy12m": -100570.082
+ },
+ {
+  "id": "CredoTechnologyGroupHoldingLtd-LamYatTung",
+  "name": "Lam Yat Tung",
+  "type": "insider",
+  "title": "Chief Operating Officer",
+  "company": "Credo Technology Group Holding Ltd",
+  "holdings": [
+   {
+    "stockCode": "CRDO",
+    "stockName": "Credo Technology Group Holding Ltd",
+    "quantity": 344212
+   }
+  ],
+  "totalNetBuy12m": -53366940.8631
+ },
+ {
+  "id": "GLOBALFOUNDRIESInc.-AzarSamakL",
+  "name": "Azar Samak L",
+  "type": "insider",
+  "title": "Chief Legal Officer",
+  "company": "GLOBALFOUNDRIES Inc.",
+  "holdings": [
+   {
+    "stockCode": "GFS",
+    "stockName": "GLOBALFOUNDRIES Inc.",
+    "quantity": 12144
+   }
+  ],
+  "totalNetBuy12m": -177104.44999999998
+ },
+ {
+  "id": "ExlServiceHoldings,Inc.-BhallaVikas",
+  "name": "Bhalla Vikas",
+  "type": "insider",
+  "title": "President of EXL",
+  "company": "ExlService Holdings, Inc.",
+  "holdings": [
+   {
+    "stockCode": "EXLS",
+    "stockName": "ExlService Holdings, Inc.",
+    "quantity": 130295
+   }
+  ],
+  "totalNetBuy12m": -1155770
+ },
+ {
+  "id": "PARKOHIOHOLDINGSCORP-VILSACKROBERTD",
+  "name": "VILSACK ROBERT D",
+  "type": "insider",
+  "title": "Secretary & CLO",
+  "company": "PARK OHIO HOLDINGS CORP",
+  "holdings": [
+   {
+    "stockCode": "PKOH",
+    "stockName": "PARK OHIO HOLDINGS CORP",
+    "quantity": 195844
+   }
+  ],
+  "totalNetBuy12m": -2470732.71
+ },
+ {
+  "id": "VERISIGNINC/CA-IndelicartoThomasC",
+  "name": "Indelicarto Thomas C",
+  "type": "insider",
+  "title": "EVP, Gen Counsel & Secretary",
+  "company": "VERISIGN INC/CA",
+  "holdings": [
+   {
+    "stockCode": "VRSN",
+    "stockName": "VERISIGN INC/CA",
+    "quantity": 35051.0439
+   }
+  ],
+  "totalNetBuy12m": -724435
+ },
+ {
+  "id": "Amplitude,Inc.-SkatesSpenser",
+  "name": "Skates Spenser",
+  "type": "insider",
+  "title": "CEO and President",
+  "company": "Amplitude, Inc.",
+  "holdings": [
+   {
+    "stockCode": "AMPL",
+    "stockName": "Amplitude, Inc.",
+    "quantity": 185000
+   }
+  ],
+  "totalNetBuy12m": -2346607.972
+ },
+ {
+  "id": "OricPharmaceuticals,Inc.-HeymanRichardA.",
+  "name": "Heyman Richard A.",
+  "type": "insider",
+  "title": "Director",
+  "company": "Oric Pharmaceuticals, Inc.",
+  "holdings": [
+   {
+    "stockCode": "ORIC",
+    "stockName": "Oric Pharmaceuticals, Inc.",
+    "quantity": 45300
+   }
+  ],
+  "totalNetBuy12m": -243986.47
+ },
+ {
+  "id": "WalmartInc.-BartlettDanielJ",
+  "name": "Bartlett Daniel J",
+  "type": "insider",
+  "title": "Executive Vice President",
+  "company": "Walmart Inc.",
+  "holdings": [
+   {
+    "stockCode": "WMT",
+    "stockName": "Walmart Inc.",
+    "quantity": 626298.533
+   }
+  ],
+  "totalNetBuy12m": -1251494.765
+ },
+ {
+  "id": "Intapp,Inc.-HALLJOHNT",
+  "name": "HALL JOHN T",
+  "type": "insider",
+  "title": "Chief Executive Officer",
+  "company": "Intapp, Inc.",
+  "holdings": [
+   {
+    "stockCode": "INTA",
+    "stockName": "Intapp, Inc.",
+    "quantity": 5961482
+   }
+  ],
+  "totalNetBuy12m": -8927691.745099999
+ },
+ {
+  "id": "LumentumHoldingsInc.-AliWajid",
+  "name": "Ali Wajid",
+  "type": "insider",
+  "title": "EVP & CHIEF FINANCIAL OFFICER",
+  "company": "Lumentum Holdings Inc.",
+  "holdings": [
+   {
+    "stockCode": "LITE",
+    "stockName": "Lumentum Holdings Inc.",
+    "quantity": 75074
+   }
+  ],
+  "totalNetBuy12m": -25732287
+ },
+ {
+  "id": "RocketCompanies,Inc.-BrayJesseK",
+  "name": "Bray Jesse K",
+  "type": "insider",
+  "title": "Pres & CEO, Rocket Mortgage",
+  "company": "Rocket Companies, Inc.",
+  "holdings": [
+   {
+    "stockCode": "RKT",
+    "stockName": "Rocket Companies, Inc.",
+    "quantity": 7953027
+   }
+  ],
+  "totalNetBuy12m": -4543477
+ },
+ {
+  "id": "JEWETTCAMERONTRADINGCOLTD-AJBInvestmentFundII,LP외3인",
+  "name": "AJB Investment Fund II, LP 외 3인",
+  "type": "insider",
+  "title": "10% Owner",
+  "company": "JEWETT CAMERON TRADING CO LTD",
+  "holdings": [
+   {
+    "stockCode": "JCTC",
+    "stockName": "JEWETT CAMERON TRADING CO LTD",
+    "quantity": 430532
+   }
+  ],
+  "totalNetBuy12m": 257603.35009999998
+ },
+ {
+  "id": "BJ'sWholesaleClubHoldings,Inc.-MorningstarTimothyPierce",
+  "name": "Morningstar Timothy Pierce",
+  "type": "insider",
+  "title": "EVP, Chief Growth Officer",
+  "company": "BJ's Wholesale Club Holdings, Inc.",
+  "holdings": [
+   {
+    "stockCode": "BJ",
+    "stockName": "BJ's Wholesale Club Holdings, Inc.",
+    "quantity": 33924
+   }
+  ],
+  "totalNetBuy12m": -456901.04000000004
+ },
+ {
+  "id": "BJ'sWholesaleClubHoldings,Inc.-WernerWilliamC.",
+  "name": "Werner William C.",
+  "type": "insider",
+  "title": "EVP, Strategy & Development",
+  "company": "BJ's Wholesale Club Holdings, Inc.",
+  "holdings": [
+   {
+    "stockCode": "BJ",
+    "stockName": "BJ's Wholesale Club Holdings, Inc.",
+    "quantity": 53160
+   }
+  ],
+  "totalNetBuy12m": -285000
+ },
+ {
+  "id": "Alkermesplc.-GaffinDavidJoseph",
+  "name": "Gaffin David Joseph",
+  "type": "insider",
+  "title": "EVP, CLO, Alkermes, Inc.",
+  "company": "Alkermes plc.",
+  "holdings": [
+   {
+    "stockCode": "ALKS",
+    "stockName": "Alkermes plc.",
+    "quantity": 225456
+   }
+  ],
+  "totalNetBuy12m": -279919.07999999996
+ },
+ {
+  "id": "MIDPENNBANCORPINC-AbelRobertA",
+  "name": "Abel Robert A",
+  "type": "insider",
+  "title": "Director",
+  "company": "MID PENN BANCORP INC",
+  "holdings": [
+   {
+    "stockCode": "MPB",
+    "stockName": "MID PENN BANCORP INC",
+    "quantity": 9833.78
+   }
+  ],
+  "totalNetBuy12m": 495.59999999999997
+ },
+ {
+  "id": "MARAHoldings,Inc.-ThielFrederickG",
+  "name": "Thiel Frederick G",
+  "type": "insider",
+  "title": "Chief Executive Officer",
+  "company": "MARA Holdings, Inc.",
+  "holdings": [
+   {
+    "stockCode": "MARA",
+    "stockName": "MARA Holdings, Inc.",
+    "quantity": 4335697
+   }
+  ],
+  "totalNetBuy12m": -876859.4000000001
+ },
+ {
+  "id": "LeefBrandsInc.-MENDOLAROBERTJAMESJR",
+  "name": "MENDOLA ROBERT JAMES JR",
+  "type": "insider",
+  "title": "Director",
+  "company": "Leef Brands Inc.",
+  "holdings": [
+   {
+    "stockCode": "LEEEF",
+    "stockName": "Leef Brands Inc.",
+    "quantity": 357553
+   }
+  ],
+  "totalNetBuy12m": 89388.25
+ },
+ {
+  "id": "QVCGroup,Inc.-GOLDENTREEASSETMANAGEMENTLP외2인",
+  "name": "GOLDENTREE ASSET MANAGEMENT LP 외 2인",
+  "type": "insider",
+  "title": "10% Owner",
+  "company": "QVC Group, Inc.",
+  "holdings": [
+   {
+    "stockCode": "QVCG",
+    "stockName": "QVC Group, Inc.",
+    "quantity": 8117869
+   }
+  ],
+  "totalNetBuy12m": 51100636.0132
+ },
+ {
+  "id": "HepionPharmaceuticals,Inc.-FisherDanina",
+  "name": "Fisher Danina",
+  "type": "insider",
+  "title": "Director",
+  "company": "Hepion Pharmaceuticals, Inc.",
+  "holdings": [
+   {
+    "stockCode": "HEPA",
+    "stockName": "Hepion Pharmaceuticals, Inc.",
+    "quantity": 200000
+   }
+  ],
+  "totalNetBuy12m": 10000
+ },
+ {
+  "id": "AlphaCognitionInc.-OpaleyeManagementInc.",
+  "name": "Opaleye Management Inc.",
+  "type": "insider",
+  "title": "10% Owner",
+  "company": "Alpha Cognition Inc.",
+  "holdings": [
+   {
+    "stockCode": "ACOG",
+    "stockName": "Alpha Cognition Inc.",
+    "quantity": 2995323
+   }
+  ],
+  "totalNetBuy12m": 1922942.4910000002
+ },
+ {
+  "id": "UxinLtd-DaiKun",
+  "name": "Dai Kun",
+  "type": "insider",
+  "title": "Chief Executive Officer",
+  "company": "Uxin Ltd",
+  "holdings": [
+   {
+    "stockCode": "UXIN",
+    "stockName": "Uxin Ltd",
+    "quantity": 8440
+   }
+  ],
+  "totalNetBuy12m": 33349.604600000006
+ },
+ {
+  "id": "SOLITRONDEVICESINC-OlesenValueFundL.P.외3인",
+  "name": "Olesen Value Fund L.P. 외 3인",
+  "type": "insider",
+  "title": "10% Owner",
+  "company": "SOLITRON DEVICES INC",
+  "holdings": [
+   {
+    "stockCode": "SODI",
+    "stockName": "SOLITRON DEVICES INC",
+    "quantity": 215908
+   }
+  ],
+  "totalNetBuy12m": -716664
+ },
+ {
+  "id": "MOODYSCORP/DE/-FauberRobert",
+  "name": "Fauber Robert",
+  "type": "insider",
+  "title": "President and CEO",
+  "company": "MOODYS CORP /DE/",
+  "holdings": [
+   {
+    "stockCode": "MCO",
+    "stockName": "MOODYS CORP /DE/",
+    "quantity": 51963.918
+   }
+  ],
+  "totalNetBuy12m": -1866705.73
+ },
+ {
+  "id": "NeweggCommerce,Inc.-ChenMichael",
+  "name": "Chen Michael",
+  "type": "insider",
+  "title": "Chief Legal Officer",
+  "company": "Newegg Commerce, Inc.",
+  "holdings": [
+   {
+    "stockCode": "NEGG",
+    "stockName": "Newegg Commerce, Inc.",
+    "quantity": 2493
+   }
+  ],
+  "totalNetBuy12m": -2828.74
+ },
+ {
+  "id": "Doximity,Inc.-YangWatkinPhoebeL.",
+  "name": "Yang Watkin Phoebe L.",
+  "type": "insider",
+  "title": "Director",
+  "company": "Doximity, Inc.",
+  "holdings": [
+   {
+    "stockCode": "DOCS",
+    "stockName": "Doximity, Inc.",
+    "quantity": 24744
+   }
+  ],
+  "totalNetBuy12m": -34455.9
+ },
+ {
+  "id": "MGICINVESTMENTCORP-MattkeTimothyJ.",
+  "name": "Mattke Timothy J.",
+  "type": "insider",
+  "title": "Chief Executive Officer",
+  "company": "MGIC INVESTMENT CORP",
+  "holdings": [
+   {
+    "stockCode": "MTG",
+    "stockName": "MGIC INVESTMENT CORP",
+    "quantity": 980892.401
+   }
+  ],
+  "totalNetBuy12m": -7781463.211
+ },
+ {
+  "id": "PennyMacMortgageInvestmentTrust-HendryGregoryL",
+  "name": "Hendry Gregory L",
+  "type": "insider",
+  "title": "Chief Accounting Officer",
+  "company": "PennyMac Mortgage Investment Trust",
+  "holdings": [
+   {
+    "stockCode": "PMT",
+    "stockName": "PennyMac Mortgage Investment Trust",
+    "quantity": 9774
+   }
+  ],
+  "totalNetBuy12m": -64766
+ },
+ {
+  "id": "AUBURNNATIONALBANCORPORATION,INC-O'DONNELLSHANNON",
+  "name": "O'DONNELL SHANNON",
+  "type": "insider",
+  "title": "Senior Vice President",
+  "company": "AUBURN NATIONAL BANCORPORATION, INC",
+  "holdings": [
+   {
+    "stockCode": "AUBN",
+    "stockName": "AUBURN NATIONAL BANCORPORATION, INC",
+    "quantity": 1918
+   }
+  ],
+  "totalNetBuy12m": 743.26
+ },
+ {
+  "id": "AUBURNNATIONALBANCORPORATION,INC-HOUSELDAVIDE",
+  "name": "HOUSEL DAVID E",
+  "type": "insider",
+  "title": "Director",
+  "company": "AUBURN NATIONAL BANCORPORATION, INC",
+  "holdings": [
+   {
+    "stockCode": "AUBN",
+    "stockName": "AUBURN NATIONAL BANCORPORATION, INC",
+    "quantity": 9354
+   }
+  ],
+  "totalNetBuy12m": 1401.97
+ },
+ {
+  "id": "AUBURNNATIONALBANCORPORATION,INC-BarrettJTutt",
+  "name": "Barrett J Tutt",
+  "type": "insider",
+  "title": "Director",
+  "company": "AUBURN NATIONAL BANCORPORATION, INC",
+  "holdings": [
+   {
+    "stockCode": "AUBN",
+    "stockName": "AUBURN NATIONAL BANCORPORATION, INC",
+    "quantity": 9324
+   }
+  ],
+  "totalNetBuy12m": 2007.31
+ },
+ {
+  "id": "AUBURNNATIONALBANCORPORATION,INC-HAMWILLIAMFJR",
+  "name": "HAM WILLIAM F JR",
+  "type": "insider",
+  "title": "Director",
+  "company": "AUBURN NATIONAL BANCORPORATION, INC",
+  "holdings": [
+   {
+    "stockCode": "AUBN",
+    "stockName": "AUBURN NATIONAL BANCORPORATION, INC",
+    "quantity": 5123
+   }
+  ],
+  "totalNetBuy12m": 1288.27
+ },
+ {
+  "id": "AvePoint,Inc.-BrownBrianMichael",
+  "name": "Brown Brian Michael",
+  "type": "insider",
+  "title": "Chief Legal Officer",
+  "company": "AvePoint, Inc.",
+  "holdings": [
+   {
+    "stockCode": "AVPT",
+    "stockName": "AvePoint, Inc.",
+    "quantity": 814840
+   }
+  ],
+  "totalNetBuy12m": -1387496.48
+ },
+ {
+  "id": "GENERACHOLDINGSINC.-JagdfeldAaron",
+  "name": "Jagdfeld Aaron",
+  "type": "insider",
+  "title": "Chief Executive Officer",
+  "company": "GENERAC HOLDINGS INC.",
+  "holdings": [
+   {
+    "stockCode": "GNRC",
+    "stockName": "GENERAC HOLDINGS INC.",
+    "quantity": 554528
+   }
+  ],
+  "totalNetBuy12m": -2915500
+ },
+ {
+  "id": "NWPXInfrastructure,Inc.-StokesEric",
+  "name": "Stokes Eric",
+  "type": "insider",
+  "title": "SVP and Group President of WTS",
+  "company": "NWPX Infrastructure, Inc.",
+  "holdings": [
+   {
+    "stockCode": "NWPX",
+    "stockName": "NWPX Infrastructure, Inc.",
+    "quantity": 25274
+   }
+  ],
+  "totalNetBuy12m": -1277046.9634999998
+ },
+ {
+  "id": "EXTREMENETWORKSINC-MEYERCORDEDWARD",
+  "name": "MEYERCORD EDWARD",
+  "type": "insider",
+  "title": "PRESIDENT AND CEO",
+  "company": "EXTREME NETWORKS INC",
+  "holdings": [
+   {
+    "stockCode": "EXTR",
+    "stockName": "EXTREME NETWORKS INC",
+    "quantity": 1646475
+   }
+  ],
+  "totalNetBuy12m": -3672767.8843
+ },
+ {
+  "id": "FirstGuarantyBancshares,Inc.-SmithEdgarR.III",
+  "name": "Smith Edgar R. III",
+  "type": "insider",
+  "title": "Director · 10% Owner",
+  "company": "First Guaranty Bancshares, Inc.",
+  "holdings": [
+   {
+    "stockCode": "FGBI",
+    "stockName": "First Guaranty Bancshares, Inc.",
+    "quantity": 958523
+   }
+  ],
+  "totalNetBuy12m": 822013.5599999999
+ },
+ {
+  "id": "RGCRESOURCESINC-OliverLawrenceT.",
+  "name": "Oliver Lawrence T.",
+  "type": "insider",
+  "title": "Senior VP and Secretary",
+  "company": "RGC RESOURCES INC",
+  "holdings": [
+   {
+    "stockCode": "RGCO",
+    "stockName": "RGC RESOURCES INC",
+    "quantity": 30146.915
+   }
+  ],
+  "totalNetBuy12m": 600.01423
+ },
+ {
+  "id": "RGCRESOURCESINC-MilesChristenBrooke",
+  "name": "Miles Christen Brooke",
+  "type": "insider",
+  "title": "VP, Human Resources",
+  "company": "RGC RESOURCES INC",
+  "holdings": [
+   {
+    "stockCode": "RGCO",
+    "stockName": "RGC RESOURCES INC",
+    "quantity": 9937.705
+   }
+  ],
+  "totalNetBuy12m": 299.99636999999996
+ },
+ {
+  "id": "SkyHarbourGroupCorp-GonzalezFrancisco",
+  "name": "Gonzalez Francisco",
+  "type": "insider",
+  "title": "Chief Financial Officer",
+  "company": "Sky Harbour Group Corp",
+  "holdings": [
+   {
+    "stockCode": "SKYH",
+    "stockName": "Sky Harbour Group Corp",
+    "quantity": 710588
+   }
+  ],
+  "totalNetBuy12m": 49705
+ },
+ {
+  "id": "SnowflakeInc.-SpeiserMichaelL",
+  "name": "Speiser Michael L",
+  "type": "insider",
+  "title": "Director",
+  "company": "Snowflake Inc.",
+  "holdings": [
+   {
+    "stockCode": "SNOW",
+    "stockName": "Snowflake Inc.",
+    "quantity": 22573
+   }
+  ],
+  "totalNetBuy12m": -51853800.871
+ },
+ {
+  "id": "MIDPENNBANCORPINC-DeSotoMatthewG",
+  "name": "De Soto Matthew G",
+  "type": "insider",
+  "title": "Director",
+  "company": "MID PENN BANCORP INC",
+  "holdings": [
+   {
+    "stockCode": "MPB",
+    "stockName": "MID PENN BANCORP INC",
+    "quantity": 119542.879
+   }
+  ],
+  "totalNetBuy12m": 10018.199999999999
+ },
+ {
+  "id": "VirnetXHoldingCorp-AngeloMichaelF",
+  "name": "Angelo Michael F",
+  "type": "insider",
+  "title": "Director",
+  "company": "VirnetX Holding Corp",
+  "holdings": [
+   {
+    "stockCode": "VHC",
+    "stockName": "VirnetX Holding Corp",
+    "quantity": 28209
+   }
+  ],
+  "totalNetBuy12m": -10255
+ },
+ {
+  "id": "VISAINC.-MCINERNEYRYAN",
+  "name": "MCINERNEY RYAN",
+  "type": "insider",
+  "title": "Chief Executive Officer",
+  "company": "VISA INC.",
+  "holdings": [
+   {
+    "stockCode": "V",
+    "stockName": "VISA INC.",
+    "quantity": 21049
+   }
+  ],
+  "totalNetBuy12m": -6499688.75
+ },
+ {
+  "id": "BUTLERNATIONALCORP-DalyJosephPatrick",
+  "name": "Daly Joseph Patrick",
+  "type": "insider",
+  "title": "Director · 10% Owner",
+  "company": "BUTLER NATIONAL CORP",
+  "holdings": [
+   {
+    "stockCode": "BUKS",
+    "stockName": "BUTLER NATIONAL CORP",
+    "quantity": 4535096
+   }
+  ],
+  "totalNetBuy12m": 109290.70999999999
+ },
+ {
+  "id": "RobloxCorp-BaszuckiGregory",
+  "name": "Baszucki Gregory",
+  "type": "insider",
+  "title": "Director",
+  "company": "Roblox Corp",
+  "holdings": [
+   {
+    "stockCode": "RBLX",
+    "stockName": "Roblox Corp",
+    "quantity": 8954718
+   }
+  ],
+  "totalNetBuy12m": -2013265.1122
+ },
+ {
+  "id": "DOCUSIGN,INC.-ShaughnessyJamesP",
+  "name": "Shaughnessy James P",
+  "type": "insider",
+  "title": "Chief Legal Officer",
+  "company": "DOCUSIGN, INC.",
+  "holdings": [
+   {
+    "stockCode": "DOCU",
+    "stockName": "DOCUSIGN, INC.",
+    "quantity": 50991
+   }
+  ],
+  "totalNetBuy12m": -825552
+ },
+ {
+  "id": "CI&TInc-MartinsFernandoMattBorges",
+  "name": "Martins Fernando Matt Borges",
+  "type": "insider",
+  "title": "Director · 10% Owner",
+  "company": "CI&T Inc",
+  "holdings": [
+   {
+    "stockCode": "CINT",
+    "stockName": "CI&T Inc",
+    "quantity": 4123
+   }
+  ],
+  "totalNetBuy12m": 13111.140000000001
+ },
+ {
+  "id": "MIDPENNBANCORPINC-MOWERYTHEODOREW",
+  "name": "MOWERY THEODORE W",
+  "type": "insider",
+  "title": "Director",
+  "company": "MID PENN BANCORP INC",
+  "holdings": [
+   {
+    "stockCode": "MPB",
+    "stockName": "MID PENN BANCORP INC",
+    "quantity": 42970.704
+   }
+  ],
+  "totalNetBuy12m": 1982.3999999999999
+ },
+ {
+  "id": "FIRSTSOLAR,INC.-GloecklerMarkus",
+  "name": "Gloeckler Markus",
+  "type": "insider",
+  "title": "Chief Technology Officer",
+  "company": "FIRST SOLAR, INC.",
+  "holdings": [
+   {
+    "stockCode": "FSLR",
+    "stockName": "FIRST SOLAR, INC.",
+    "quantity": 10096
+   }
+  ],
+  "totalNetBuy12m": -1254694.5
+ },
+ {
+  "id": "PTCTHERAPEUTICS,INC.-STEELEGLENNJRMDPHD",
+  "name": "STEELE GLENN JR MD PHD",
+  "type": "insider",
+  "title": "Director",
+  "company": "PTC THERAPEUTICS, INC.",
+  "holdings": [
+   {
+    "stockCode": "PTCT",
+    "stockName": "PTC THERAPEUTICS, INC.",
+    "quantity": 34500
+   }
+  ],
+  "totalNetBuy12m": -781920
+ },
+ {
+  "id": "PiedmontRealtyTrust,Inc.-REXROADSHERRYL",
+  "name": "REXROAD SHERRY L",
+  "type": "insider",
+  "title": "EVP-CFO",
+  "company": "Piedmont Realty Trust, Inc.",
+  "holdings": [
+   {
+    "stockCode": "PDM",
+    "stockName": "Piedmont Realty Trust, Inc.",
+    "quantity": 58303
+   }
+  ],
+  "totalNetBuy12m": -39169.26
+ },
+ {
+  "id": "RivianAutomotive,Inc./DE-CALLAHANMICHAELJOHN",
+  "name": "CALLAHAN MICHAEL JOHN",
+  "type": "insider",
+  "title": "Chief Administrative Officer",
+  "company": "Rivian Automotive, Inc. / DE",
+  "holdings": [
+   {
+    "stockCode": "RIVN",
+    "stockName": "Rivian Automotive, Inc. / DE",
+    "quantity": 1016776
+   }
+  ],
+  "totalNetBuy12m": -469390.5
+ },
+ {
+  "id": "SandiskCorp-ShekBernard",
+  "name": "Shek Bernard",
+  "type": "insider",
+  "title": "Chief Legal Officer and Secty",
+  "company": "Sandisk Corp",
+  "holdings": [
+   {
+    "stockCode": "SNDK",
+    "stockName": "Sandisk Corp",
+    "quantity": 30915
+   }
+  ],
+  "totalNetBuy12m": -6732617.64
+ },
+ {
+  "id": "eHealth,Inc.-SOISTMANFRANCISSJR",
+  "name": "SOISTMAN FRANCIS S JR",
+  "type": "insider",
+  "title": "Director",
+  "company": "eHealth, Inc.",
+  "holdings": [
+   {
+    "stockCode": "EHTH",
+    "stockName": "eHealth, Inc.",
+    "quantity": 1052518
+   }
+  ],
+  "totalNetBuy12m": -109883.7049
+ },
+ {
+  "id": "MCGRATHRENTCORP-HANNAJOSEPHF",
+  "name": "HANNA JOSEPH F",
+  "type": "insider",
+  "title": "Director",
+  "company": "MCGRATH RENTCORP",
+  "holdings": [
+   {
+    "stockCode": "MGRC",
+    "stockName": "MCGRATH RENTCORP",
+    "quantity": 144049
+   }
+  ],
+  "totalNetBuy12m": -862824.75
+ },
+ {
+  "id": "H&RBLOCKINC-DarlingMarkJ.",
+  "name": "Darling Mark J.",
+  "type": "insider",
+  "title": "Chief Retail Officer",
+  "company": "H&R BLOCK INC",
+  "holdings": [
+   {
+    "stockCode": "HRB",
+    "stockName": "H&R BLOCK INC",
+    "quantity": 21588.146
+   }
+  ],
+  "totalNetBuy12m": -109852.74
+ },
+ {
+  "id": "ONSEMICONDUCTORCORP-GOPALSWAMYSUDHIR",
+  "name": "GOPALSWAMY SUDHIR",
+  "type": "insider",
+  "title": "Group President, AMG & ISG",
+  "company": "ON SEMICONDUCTOR CORP",
+  "holdings": [
+   {
+    "stockCode": "ON",
+    "stockName": "ON SEMICONDUCTOR CORP",
+    "quantity": 158177
+   }
+  ],
+  "totalNetBuy12m": -1246240
+ },
+ {
+  "id": "PUBLICSERVICEENTERPRISEGROUPINC-LaRossaRalphA",
+  "name": "LaRossa Ralph A",
+  "type": "insider",
+  "title": "Chair, President and CEO",
+  "company": "PUBLIC SERVICE ENTERPRISE GROUP INC",
+  "holdings": [
+   {
+    "stockCode": "PEG",
+    "stockName": "PUBLIC SERVICE ENTERPRISE GROUP INC",
+    "quantity": 283656.4593
+   }
+  ],
+  "totalNetBuy12m": -452870.8624
+ },
+ {
+  "id": "JEWETTCAMERONTRADINGCOLTD-OREGONCOMMUNITYFOUNDATION",
+  "name": "OREGON COMMUNITY FOUNDATION",
+  "type": "insider",
+  "title": "10% Owner",
+  "company": "JEWETT CAMERON TRADING CO LTD",
+  "holdings": [
+   {
+    "stockCode": "JCTC",
+    "stockName": "JEWETT CAMERON TRADING CO LTD",
+    "quantity": 562528
+   }
+  ],
+  "totalNetBuy12m": -651222.2000000001
+ },
+ {
+  "id": "ORAMEDPHARMACEUTICALSINC.-GabayAvraham",
+  "name": "Gabay Avraham",
+  "type": "insider",
+  "title": "Chief Financial Officer",
+  "company": "ORAMED PHARMACEUTICALS INC.",
+  "holdings": [
+   {
+    "stockCode": "ORMP",
+    "stockName": "ORAMED PHARMACEUTICALS INC.",
+    "quantity": 861076
+   }
+  ],
+  "totalNetBuy12m": -90200
+ },
+ {
+  "id": "ORAMEDPHARMACEUTICALSINC.-HexterJoshua",
+  "name": "Hexter Joshua",
+  "type": "insider",
+  "title": "COO & CBO",
+  "company": "ORAMED PHARMACEUTICALS INC.",
+  "holdings": [
+   {
+    "stockCode": "ORMP",
+    "stockName": "ORAMED PHARMACEUTICALS INC.",
+    "quantity": 1328130
+   }
+  ],
+  "totalNetBuy12m": -135330
+ },
+ {
+  "id": "WheelerRealEstateInvestmentTrust,Inc.-StilwellJoseph외5인",
+  "name": "Stilwell Joseph 외 5인",
+  "type": "insider",
+  "title": "Director · 10% Owner",
+  "company": "Wheeler Real Estate Investment Trust, Inc.",
+  "holdings": [
+   {
+    "stockCode": "WHLR",
+    "stockName": "Wheeler Real Estate Investment Trust, Inc.",
+    "quantity": 584578
+   }
+  ],
+  "totalNetBuy12m": -15.149999999999999
+ },
+ {
+  "id": "MartiTechnologies,Inc.-FreifeldDaniel",
+  "name": "Freifeld Daniel",
+  "type": "insider",
+  "title": "Director",
+  "company": "Marti Technologies, Inc.",
+  "holdings": [
+   {
+    "stockCode": "MRT",
+    "stockName": "Marti Technologies, Inc.",
+    "quantity": 6967715
+   }
+  ],
+  "totalNetBuy12m": -2577000
+ },
+ {
+  "id": "RankOneComputingCorp-KlumScottJeffrey",
+  "name": "Klum Scott Jeffrey",
+  "type": "insider",
+  "title": "10% Owner",
+  "company": "Rank One Computing Corp",
+  "holdings": [
+   {
+    "stockCode": "ROC",
+    "stockName": "Rank One Computing Corp",
+    "quantity": 1752560
+   }
+  ],
+  "totalNetBuy12m": -4104000
+ },
+ {
+  "id": "AXIAEnergiaS.A.-BatistadeLimaFilhoPedro",
+  "name": "Batista de Lima Filho Pedro",
+  "type": "insider",
+  "title": "Director",
+  "company": "AXIA Energia S.A.",
+  "holdings": [
+   {
+    "stockCode": "AXIA3",
+    "stockName": "AXIA Energia S.A.",
+    "quantity": 13966119
+   }
+  ],
+  "totalNetBuy12m": -8803327
+ },
+ {
+  "id": "Rubrik,Inc.-THOMPSONJOHNWENDELL",
+  "name": "THOMPSON JOHN WENDELL",
+  "type": "insider",
+  "title": "Director",
+  "company": "Rubrik, Inc.",
+  "holdings": [
+   {
+    "stockCode": "RBRK",
+    "stockName": "Rubrik, Inc.",
+    "quantity": 11000
+   }
+  ],
+  "totalNetBuy12m": -3764176.8999999994
+ },
+ {
+  "id": "WILLAMETTEVALLEYVINEYARDSINC-RICCARDICHRIS",
+  "name": "RICCARDI CHRIS",
+  "type": "insider",
+  "title": "Director",
+  "company": "WILLAMETTE VALLEY VINEYARDS INC",
+  "holdings": [
+   {
+    "stockCode": "WVVI",
+    "stockName": "WILLAMETTE VALLEY VINEYARDS INC",
+    "quantity": 485744
+   }
+  ],
+  "totalNetBuy12m": 11487.15
+ },
+ {
+  "id": "MetallusInc.-WilliamsMichaelS",
+  "name": "Williams Michael S",
+  "type": "insider",
+  "title": "Chief Executive Officer",
+  "company": "Metallus Inc.",
+  "holdings": [
+   {
+    "stockCode": "MTUS",
+    "stockName": "Metallus Inc.",
+    "quantity": 722288
+   }
+  ],
+  "totalNetBuy12m": -251482.962
+ },
+ {
+  "id": "AlphabetInc.-ARNOLDFRANCES",
+  "name": "ARNOLD FRANCES",
+  "type": "insider",
+  "title": "Director",
+  "company": "Alphabet Inc.",
+  "holdings": [
+   {
+    "stockCode": "GOOGL",
+    "stockName": "Alphabet Inc.",
+    "quantity": 18914
+   }
+  ],
+  "totalNetBuy12m": -83287.54999999999
+ },
+ {
+  "id": "Ceribell,Inc.-WooRaymond",
+  "name": "Woo Raymond",
+  "type": "insider",
+  "title": "Chief Technology Officer",
+  "company": "Ceribell, Inc.",
+  "holdings": [
+   {
+    "stockCode": "CBLL",
+    "stockName": "Ceribell, Inc.",
+    "quantity": 194729
+   }
+  ],
+  "totalNetBuy12m": -285581.35
+ },
+ {
+  "id": "Coursera,Inc.-HartGregoryM.",
+  "name": "Hart Gregory M.",
+  "type": "insider",
+  "title": "President & CEO",
+  "company": "Coursera, Inc.",
+  "holdings": [
+   {
+    "stockCode": "COUR",
+    "stockName": "Coursera, Inc.",
+    "quantity": 1539003
+   }
+  ],
+  "totalNetBuy12m": -52643.9868
+ },
+ {
+  "id": "BloomEnergyCorp-JoshiAman",
+  "name": "Joshi Aman",
+  "type": "insider",
+  "title": "Chief Commercial Officer",
+  "company": "Bloom Energy Corp",
+  "holdings": [
+   {
+    "stockCode": "BE",
+    "stockName": "Bloom Energy Corp",
+    "quantity": 159130
+   }
+  ],
+  "totalNetBuy12m": -4441201.98
+ },
+ {
+  "id": "MAXIMUS,INC.-LinkMichelleF.",
+  "name": "Link Michelle F.",
+  "type": "insider",
+  "title": "Chief of Human Resources",
+  "company": "MAXIMUS, INC.",
+  "holdings": [
+   {
+    "stockCode": "MMS",
+    "stockName": "MAXIMUS, INC.",
+    "quantity": 17088.851
+   }
+  ],
+  "totalNetBuy12m": -173969.84
+ },
+ {
+  "id": "CoreCivic,Inc.-Carter,ColeG.",
+  "name": "Carter, Cole G.",
+  "type": "insider",
+  "title": "Chief Administrative Officer",
+  "company": "CoreCivic, Inc.",
+  "holdings": [
+   {
+    "stockCode": "CXW",
+    "stockName": "CoreCivic, Inc.",
+    "quantity": 190883
+   }
+  ],
+  "totalNetBuy12m": -1177500
+ },
+ {
+  "id": "NewAmsterdamPharmaCoN.V.-KasteleinJohannesJacobPieter",
+  "name": "Kastelein Johannes Jacob Pieter",
+  "type": "insider",
+  "title": "Chief Scientific Officer",
+  "company": "NewAmsterdam Pharma Co N.V.",
+  "holdings": [
+   {
+    "stockCode": "NAMS",
+    "stockName": "NewAmsterdam Pharma Co N.V.",
+    "quantity": 194302
+   }
+  ],
+  "totalNetBuy12m": -4621407.38
+ },
+ {
+  "id": "CorebridgeFinancial,Inc.-NIPPONLIFEINSURANCECO",
+  "name": "NIPPON LIFE INSURANCE CO",
+  "type": "insider",
+  "title": "10% Owner",
+  "company": "Corebridge Financial, Inc.",
+  "holdings": [
+   {
+    "stockCode": "CRBG",
+    "stockName": "Corebridge Financial, Inc.",
+    "quantity": 122125993
+   }
+  ],
+  "totalNetBuy12m": 142809046.0588
+ },
+ {
+  "id": "VeriskAnalytics,Inc.-ShavelLee",
+  "name": "Shavel Lee",
+  "type": "insider",
+  "title": "Chief Executive Officer",
+  "company": "Verisk Analytics, Inc.",
+  "holdings": [
+   {
+    "stockCode": "VRSK",
+    "stockName": "Verisk Analytics, Inc.",
+    "quantity": 98490
+   }
+  ],
+  "totalNetBuy12m": -2533382.45
+ },
+ {
+  "id": "NationalCineMedia,Inc.-WoodsMariaVG",
+  "name": "Woods Maria VG",
+  "type": "insider",
+  "title": "Chief Legal Officer",
+  "company": "National CineMedia, Inc.",
+  "holdings": [
+   {
+    "stockCode": "NCMI",
+    "stockName": "National CineMedia, Inc.",
+    "quantity": 188995
+   }
+  ],
+  "totalNetBuy12m": -25523.766
+ },
+ {
+  "id": "REVVITY,INC.-GonzalesAnita",
+  "name": "Gonzales Anita",
+  "type": "insider",
+  "title": "VP and CAO",
+  "company": "REVVITY, INC.",
+  "holdings": [
+   {
+    "stockCode": "RVTY",
+    "stockName": "REVVITY, INC.",
+    "quantity": 7117
+   }
+  ],
+  "totalNetBuy12m": -13060.32
+ },
+ {
+  "id": "BeamTherapeuticsInc.-CavanaghBethanyJ",
+  "name": "Cavanagh Bethany J",
+  "type": "insider",
+  "title": "SVP, Finance and Treasurer",
+  "company": "Beam Therapeutics Inc.",
+  "holdings": [
+   {
+    "stockCode": "BEAM",
+    "stockName": "Beam Therapeutics Inc.",
+    "quantity": 50984
+   }
+  ],
+  "totalNetBuy12m": -4564.67
+ },
+ {
+  "id": "NationalCineMedia,Inc.-NgRonnieY.",
+  "name": "Ng Ronnie Y.",
+  "type": "insider",
+  "title": "Chief Financial Officer",
+  "company": "National CineMedia, Inc.",
+  "holdings": [
+   {
+    "stockCode": "NCMI",
+    "stockName": "National CineMedia, Inc.",
+    "quantity": 204095
+   }
+  ],
+  "totalNetBuy12m": -78317.898
+ },
+ {
+  "id": "NationalCineMedia,Inc.-LesinskiThomasF.",
+  "name": "Lesinski Thomas F.",
+  "type": "insider",
+  "title": "Chief Executive Officer",
+  "company": "National CineMedia, Inc.",
+  "holdings": [
+   {
+    "stockCode": "NCMI",
+    "stockName": "National CineMedia, Inc.",
+    "quantity": 601284
+   }
+  ],
+  "totalNetBuy12m": -360299.8356
+ },
+ {
+  "id": "KaryopharmTherapeuticsInc.-AbateKristin",
+  "name": "Abate Kristin",
+  "type": "insider",
+  "title": "Chief Accounting Officer",
+  "company": "Karyopharm Therapeutics Inc.",
+  "holdings": [
+   {
+    "stockCode": "KPTI",
+    "stockName": "Karyopharm Therapeutics Inc.",
+    "quantity": 23782
+   }
+  ],
+  "totalNetBuy12m": -488.2
+ },
+ {
+  "id": "HeritageGlobalInc.-SklarJamesEdward",
+  "name": "Sklar James Edward",
+  "type": "insider",
+  "title": "EVP, Gen Counsel & Secretary",
+  "company": "Heritage Global Inc.",
+  "holdings": [
+   {
+    "stockCode": "HGBL",
+    "stockName": "Heritage Global Inc.",
+    "quantity": 254891
+   }
+  ],
+  "totalNetBuy12m": -6350
+ },
+ {
+  "id": "AMGPantheonFund,LLC-SassineVictoria",
+  "name": "Sassine Victoria",
+  "type": "insider",
+  "title": "Director",
+  "company": "AMG Pantheon Fund, LLC",
+  "holdings": [
+   {
+    "stockCode": "XPEPX",
+    "stockName": "AMG Pantheon Fund, LLC",
+    "quantity": 1421.187
+   }
+  ],
+  "totalNetBuy12m": -16967.5
+ },
+ {
+  "id": "AMGPantheonFund,LLC-RakowskiEric",
+  "name": "Rakowski Eric",
+  "type": "insider",
+  "title": "Director",
+  "company": "AMG Pantheon Fund, LLC",
+  "holdings": [
+   {
+    "stockCode": "XPEPX",
+    "stockName": "AMG Pantheon Fund, LLC",
+    "quantity": 32581.386
+   }
+  ],
+  "totalNetBuy12m": -645875.7851000001
+ },
+ {
+  "id": "PrincetonBancorp,Inc.-TUCHMANMARTIN",
+  "name": "TUCHMAN MARTIN",
+  "type": "insider",
+  "title": "Director · 10% Owner",
+  "company": "Princeton Bancorp, Inc.",
+  "holdings": [
+   {
+    "stockCode": "BPRN",
+    "stockName": "Princeton Bancorp, Inc.",
+    "quantity": 639141
+   }
+  ],
+  "totalNetBuy12m": 452730.25200000004
+ },
+ {
+  "id": "AlibabaGroupHoldingLtd-JiangFang",
+  "name": "Jiang Fang",
+  "type": "insider",
+  "title": "Chief People Officer",
+  "company": "Alibaba Group Holding Ltd",
+  "holdings": [
+   {
+    "stockCode": "BABA",
+    "stockName": "Alibaba Group Holding Ltd",
+    "quantity": 5561175
+   }
+  ],
+  "totalNetBuy12m": -12061779.330000002
+ },
+ {
+  "id": "ANAPTYSBIO,INC-RENTONHOLLINGS",
+  "name": "RENTON HOLLINGS",
+  "type": "insider",
+  "title": "Director",
+  "company": "ANAPTYSBIO, INC",
+  "holdings": [
+   {
+    "stockCode": "ANAB",
+    "stockName": "ANAPTYSBIO, INC",
+    "quantity": 15995
+   }
+  ],
+  "totalNetBuy12m": -249371.5
+ },
+ {
+  "id": "SouthportAcquisitionCorp.II-SOUTHPORTACQUISITIONSPONSORIILLC",
+  "name": "SOUTHPORT ACQUISITION SPONSOR II LLC",
+  "type": "insider",
+  "title": "10% Owner",
+  "company": "Southport Acquisition Corp. II",
+  "holdings": [
+   {
+    "stockCode": "PORT.U",
+    "stockName": "Southport Acquisition Corp. II",
+    "quantity": 500000
+   }
+  ],
+  "totalNetBuy12m": 5000000
+ },
+ {
+  "id": "SouthportAcquisitionCorp.II-SPENCERJEBS.외1인",
+  "name": "SPENCER JEB S. 외 1인",
+  "type": "insider",
+  "title": "CEO and CFO",
+  "company": "Southport Acquisition Corp. II",
+  "holdings": [
+   {
+    "stockCode": "PORT.U",
+    "stockName": "Southport Acquisition Corp. II",
+    "quantity": 500000
+   }
+  ],
+  "totalNetBuy12m": 5000000
+ },
+ {
+  "id": "DOCUSIGN,INC.-WilderotterMaryAgnes",
+  "name": "Wilderotter Mary Agnes",
+  "type": "insider",
+  "title": "Director",
+  "company": "DOCUSIGN, INC.",
+  "holdings": [
+   {
+    "stockCode": "DOCU",
+    "stockName": "DOCUSIGN, INC.",
+    "quantity": 3199
+   }
+  ],
+  "totalNetBuy12m": -146177.59999999998
+ },
+ {
+  "id": "CompassTherapeutics,Inc.-LernerNeil",
+  "name": "Lerner Neil",
+  "type": "insider",
+  "title": "Chief Accounting Officer",
+  "company": "Compass Therapeutics, Inc.",
+  "holdings": [
+   {
+    "stockCode": "CMPX",
+    "stockName": "Compass Therapeutics, Inc.",
+    "quantity": 400000
+   }
+  ],
+  "totalNetBuy12m": 21250
+ },
+ {
+  "id": "XPO,Inc.-BatesDavidJ.",
+  "name": "Bates David J.",
+  "type": "insider",
+  "title": "Chief Operating Officer",
+  "company": "XPO, Inc.",
+  "holdings": [
+   {
+    "stockCode": "XPO",
+    "stockName": "XPO, Inc.",
+    "quantity": 67150
+   }
+  ],
+  "totalNetBuy12m": -934442.9005
+ },
+ {
+  "id": "XPO,Inc.-WismansKyle",
+  "name": "Wismans Kyle",
+  "type": "insider",
+  "title": "Chief Financial Officer",
+  "company": "XPO, Inc.",
+  "holdings": [
+   {
+    "stockCode": "XPO",
+    "stockName": "XPO, Inc.",
+    "quantity": 48716
+   }
+  ],
+  "totalNetBuy12m": -265492.5
+ },
+ {
+  "id": "HALOZYMETHERAPEUTICS,INC.-PosardMatthewL.",
+  "name": "Posard Matthew L.",
+  "type": "insider",
+  "title": "Director",
+  "company": "HALOZYME THERAPEUTICS, INC.",
+  "holdings": [
+   {
+    "stockCode": "HALO",
+    "stockName": "HALOZYME THERAPEUTICS, INC.",
+    "quantity": 74735
+   }
+  ],
+  "totalNetBuy12m": -2614241.7800000003
+ },
+ {
+  "id": "JETBLUEAIRWAYSCORP-ClementsCarolAnn",
+  "name": "Clements Carol Ann",
+  "type": "insider",
+  "title": "Chief Digital & Tech Officer",
+  "company": "JETBLUE AIRWAYS CORP",
+  "holdings": [
+   {
+    "stockCode": "JBLU",
+    "stockName": "JETBLUE AIRWAYS CORP",
+    "quantity": 183896
+   }
+  ],
+  "totalNetBuy12m": -29500
+ },
+ {
+  "id": "PrairieOperatingCo.-FrommerRichardN.",
+  "name": "Frommer Richard N.",
+  "type": "insider",
+  "title": "Director",
+  "company": "Prairie Operating Co.",
+  "holdings": [
+   {
+    "stockCode": "PROP",
+    "stockName": "Prairie Operating Co.",
+    "quantity": 333372
+   }
+  ],
+  "totalNetBuy12m": 12600
+ },
+ {
+  "id": "GlobalShipLease,Inc.-HelferUlrike",
+  "name": "Helfer Ulrike",
+  "type": "insider",
+  "title": "Director",
+  "company": "Global Ship Lease, Inc.",
+  "holdings": [
+   {
+    "stockCode": "GSL",
+    "stockName": "Global Ship Lease, Inc.",
+    "quantity": 8503
+   }
+  ],
+  "totalNetBuy12m": -179273.59999999998
+ },
+ {
+  "id": "SeagateTechnologyHoldingsplc-MOSLEYWILLIAMD",
+  "name": "MOSLEY WILLIAM D",
+  "type": "insider",
+  "title": "CEO",
+  "company": "Seagate Technology Holdings plc",
+  "holdings": [
+   {
+    "stockCode": "STX",
+    "stockName": "Seagate Technology Holdings plc",
+    "quantity": 325517
+   }
+  ],
+  "totalNetBuy12m": -171577538.937625
+ },
+ {
+  "id": "UNITEDTHERAPEUTICSCorp-ROTHBLATTMARTINEA",
+  "name": "ROTHBLATT MARTINE A",
+  "type": "insider",
+  "title": "Chairperson & CEO",
+  "company": "UNITED THERAPEUTICS Corp",
+  "holdings": [
+   {
+    "stockCode": "UTHR",
+    "stockName": "UNITED THERAPEUTICS Corp",
+    "quantity": 333943
+   }
+  ],
+  "totalNetBuy12m": -237478725.12530005
+ },
+ {
+  "id": "Verastem,Inc.-PatersonDan",
+  "name": "Paterson Dan",
+  "type": "insider",
+  "title": "President and CEO",
+  "company": "Verastem, Inc.",
+  "holdings": [
+   {
+    "stockCode": "VSTM",
+    "stockName": "Verastem, Inc.",
+    "quantity": 589940
+   }
+  ],
+  "totalNetBuy12m": -360532.62
+ },
+ {
+  "id": "Verastem,Inc.-CalkinsDaniel",
+  "name": "Calkins Daniel",
+  "type": "insider",
+  "title": "Chief Financial Officer",
+  "company": "Verastem, Inc.",
+  "holdings": [
+   {
+    "stockCode": "VSTM",
+    "stockName": "Verastem, Inc.",
+    "quantity": 118014
+   }
+  ],
+  "totalNetBuy12m": -20951.5
+ },
+ {
+  "id": "OrchestraBioMedHoldings,Inc.-ShermanDarren",
+  "name": "Sherman Darren",
+  "type": "insider",
+  "title": "See Remarks",
+  "company": "Orchestra BioMed Holdings, Inc.",
+  "holdings": [
+   {
+    "stockCode": "OBIO",
+    "stockName": "Orchestra BioMed Holdings, Inc.",
+    "quantity": 1154327
+   }
+  ],
+  "totalNetBuy12m": -220190
+ },
+ {
+  "id": "LimoneiraCO-HammGregoryC.",
+  "name": "Hamm Gregory C.",
+  "type": "insider",
+  "title": "VP, CFO and Treasurer",
+  "company": "Limoneira CO",
+  "holdings": [
+   {
+    "stockCode": "LMNR",
+    "stockName": "Limoneira CO",
+    "quantity": 86812
+   }
+  ],
+  "totalNetBuy12m": -38681.1
+ },
+ {
+  "id": "ProtagonistTherapeutics,Inc-AliAsif",
+  "name": "Ali Asif",
+  "type": "insider",
+  "title": "Chief Financial Officer",
+  "company": "Protagonist Therapeutics, Inc",
+  "holdings": [
+   {
+    "stockCode": "PTGX",
+    "stockName": "Protagonist Therapeutics, Inc",
+    "quantity": 68232
+   }
+  ],
+  "totalNetBuy12m": -8312293.670000001
+ },
+ {
+  "id": "NOAHHOLDINGSLTD-WuMayYihong",
+  "name": "Wu May Yihong",
+  "type": "insider",
+  "title": "Director",
+  "company": "NOAH HOLDINGS LTD",
+  "holdings": [
+   {
+    "stockCode": "NOAH",
+    "stockName": "NOAH HOLDINGS LTD",
+    "quantity": 35500
+   }
+  ],
+  "totalNetBuy12m": -126214.05
+ },
+ {
+  "id": "CHARLESRIVERLABORATORIESINTERNATIONAL,INC.-ColemanGlenn",
+  "name": "Coleman Glenn",
+  "type": "insider",
+  "title": "EVP & Chief Financial Officer",
+  "company": "CHARLES RIVER LABORATORIES INTERNATIONAL, INC.",
+  "holdings": [
+   {
+    "stockCode": "CRL",
+    "stockName": "CHARLES RIVER LABORATORIES INTERNATIONAL, INC.",
+    "quantity": 27762
+   }
+  ],
+  "totalNetBuy12m": 2974.3
+ },
+ {
+  "id": "BLACKBERRYLtd-FooteTim",
+  "name": "Foote Tim",
+  "type": "insider",
+  "title": "Chief Financial Officer",
+  "company": "BLACKBERRY Ltd",
+  "holdings": [
+   {
+    "stockCode": "BB",
+    "stockName": "BLACKBERRY Ltd",
+    "quantity": 56863
+   }
+  ],
+  "totalNetBuy12m": -152382.08000000002
+ },
+ {
+  "id": "BLACKBERRYLtd-KurtzPhilipS.",
+  "name": "Kurtz Philip S.",
+  "type": "insider",
+  "title": "CLO & Corp. Secretary",
+  "company": "BLACKBERRY Ltd",
+  "holdings": [
+   {
+    "stockCode": "BB",
+    "stockName": "BLACKBERRY Ltd",
+    "quantity": 65158
+   }
+  ],
+  "totalNetBuy12m": -274200
+ },
+ {
+  "id": "LionCopperCorp.-SHARMANMARKBRADY",
+  "name": "SHARMAN MARK BRADY",
+  "type": "insider",
+  "title": "Director",
+  "company": "Lion Copper Corp.",
+  "holdings": [
+   {
+    "stockCode": "LCU",
+    "stockName": "Lion Copper Corp.",
+    "quantity": 169745
+   }
+  ],
+  "totalNetBuy12m": 11817.08
+ },
+ {
+  "id": "EPLUSINC-RAIGUELDARRENS",
+  "name": "RAIGUEL DARREN S",
+  "type": "insider",
+  "title": "CHIEF OPERATING OFFICER",
+  "company": "EPLUS INC",
+  "holdings": [
+   {
+    "stockCode": "PLUS",
+    "stockName": "EPLUS INC",
+    "quantity": 71171
+   }
+  ],
+  "totalNetBuy12m": -391665.36569999997
+ },
+ {
+  "id": "CrowdStrikeHoldings,Inc.-SentonasMichael",
+  "name": "Sentonas Michael",
+  "type": "insider",
+  "title": "PRESIDENT",
+  "company": "CrowdStrike Holdings, Inc.",
+  "holdings": [
+   {
+    "stockCode": "CRWD",
+    "stockName": "CrowdStrike Holdings, Inc.",
+    "quantity": 1475538
+   }
+  ],
+  "totalNetBuy12m": -75780355.89999999
+ },
+ {
+  "id": "CrowdStrikeHoldings,Inc.-KurtzGeorge",
+  "name": "Kurtz George",
+  "type": "insider",
+  "title": "PRESIDENT AND CEO",
+  "company": "CrowdStrike Holdings, Inc.",
+  "holdings": [
+   {
+    "stockCode": "CRWD",
+    "stockName": "CrowdStrike Holdings, Inc.",
+    "quantity": 8139451
+   }
+  ],
+  "totalNetBuy12m": -129672090.49450003
+ },
+ {
+  "id": "AMGBBHAsset-BackedCreditFund,LLC-HohmannNeilMartin",
+  "name": "Hohmann Neil Martin",
+  "type": "insider",
+  "title": "",
+  "company": "AMG BBH Asset-Backed Credit Fund, LLC",
+  "holdings": [
+   {
+    "stockCode": "BBASX",
+    "stockName": "AMG BBH Asset-Backed Credit Fund, LLC",
+    "quantity": 4510.2
+   }
+  ],
+  "totalNetBuy12m": 90000.13896
+ },
+ {
+  "id": "GameStopCorp.-CohenRyan",
+  "name": "Cohen Ryan",
+  "type": "insider",
+  "title": "President, CEO and Chairman",
+  "company": "GameStop Corp.",
+  "holdings": [
+   {
+    "stockCode": "GME",
+    "stockName": "GameStop Corp.",
+    "quantity": 39347842
+   }
+  ],
+  "totalNetBuy12m": 74417688.6
+ },
+ {
+  "id": "PyxisOncology,Inc.-GordonMDGlobalInvestmentsLP외3인",
+  "name": "GordonMD Global Investments LP 외 3인",
+  "type": "insider",
+  "title": "10% Owner",
+  "company": "Pyxis Oncology, Inc.",
+  "holdings": [
+   {
+    "stockCode": "PYXS",
+    "stockName": "Pyxis Oncology, Inc.",
+    "quantity": 15541909
+   }
+  ],
+  "totalNetBuy12m": 0
+ },
+ {
+  "id": "OrukaTherapeutics,Inc.-KleinLawrenceOtto",
+  "name": "Klein Lawrence Otto",
+  "type": "insider",
+  "title": "Chief Executive Officer",
+  "company": "Oruka Therapeutics, Inc.",
+  "holdings": [
+   {
+    "stockCode": "ORKA",
+    "stockName": "Oruka Therapeutics, Inc.",
+    "quantity": 1000580
+   }
+  ],
+  "totalNetBuy12m": -9212758.667800002
+ },
+ {
+  "id": "TERADYNE,INC-JOHNSONMERCEDES",
+  "name": "JOHNSON MERCEDES",
+  "type": "insider",
+  "title": "Director",
+  "company": "TERADYNE, INC",
+  "holdings": [
+   {
+    "stockCode": "TER",
+    "stockName": "TERADYNE, INC",
+    "quantity": 6531
+   }
+  ],
+  "totalNetBuy12m": -183734.3
+ },
+ {
+  "id": "LIGHTBRIDGECorp-GoodmanSherri",
+  "name": "Goodman Sherri",
+  "type": "insider",
+  "title": "Director",
+  "company": "LIGHTBRIDGE Corp",
+  "holdings": [
+   {
+    "stockCode": "LTBR",
+    "stockName": "LIGHTBRIDGE Corp",
+    "quantity": 69130
+   }
+  ],
+  "totalNetBuy12m": -7019.64
+ },
+ {
+  "id": "QUALCOMMINC/DE-GrechPatriciaY",
+  "name": "Grech Patricia Y",
+  "type": "insider",
+  "title": "SVP, Chief Accounting Officer",
+  "company": "QUALCOMM INC/DE",
+  "holdings": [
+   {
+    "stockCode": "QCOM",
+    "stockName": "QUALCOMM INC/DE",
+    "quantity": 427
+   }
+  ],
+  "totalNetBuy12m": -155423.15
+ },
+ {
+  "id": "STANDEXINTERNATIONALCORP/DE/-CHORMANTHOMASE",
+  "name": "CHORMAN THOMAS E",
+  "type": "insider",
+  "title": "Director",
+  "company": "STANDEX INTERNATIONAL CORP/DE/",
+  "holdings": [
+   {
+    "stockCode": "SXI",
+    "stockName": "STANDEX INTERNATIONAL CORP/DE/",
+    "quantity": 12366
+   }
+  ],
+  "totalNetBuy12m": -43092
+ },
+ {
+  "id": "POWELLINDUSTRIESINC-MauneyWilliamMarshallJr",
+  "name": "Mauney William Marshall Jr",
+  "type": "insider",
+  "title": "Vice President, R&D",
+  "company": "POWELL INDUSTRIES INC",
+  "holdings": [
+   {
+    "stockCode": "POWL",
+    "stockName": "POWELL INDUSTRIES INC",
+    "quantity": 10552
+   }
+  ],
+  "totalNetBuy12m": -56488.67
+ },
+ {
+  "id": "POWELLINDUSTRIESINC-COPEBRETTALAN",
+  "name": "COPE BRETT ALAN",
+  "type": "insider",
+  "title": "President & CEO",
+  "company": "POWELL INDUSTRIES INC",
+  "holdings": [
+   {
+    "stockCode": "POWL",
+    "stockName": "POWELL INDUSTRIES INC",
+    "quantity": 512733
+   }
+  ],
+  "totalNetBuy12m": -1832173.33
+ },
+ {
   "id": "MarathonPetroleumCorporationCommonStock-DavidJ.Taylor",
   "name": "David J. Taylor",
   "type": "politician",
@@ -474,21 +3447,6 @@
   "totalNetBuy12m": -3060738
  },
  {
-  "id": "CoreWeave,Inc.-IntratorMichaelN",
-  "name": "Intrator Michael N",
-  "type": "insider",
-  "title": "CEO and President",
-  "company": "CoreWeave, Inc.",
-  "holdings": [
-   {
-    "stockCode": "CRWV",
-    "stockName": "CoreWeave, Inc.",
-    "quantity": 2446424
-   }
-  ],
-  "totalNetBuy12m": -268605069.5995
- },
- {
   "id": "SIMONPROPERTYGROUPINC.-SELIGSTEFANM",
   "name": "SELIG STEFAN M",
   "type": "insider",
@@ -562,21 +3520,6 @@
    }
   ],
   "totalNetBuy12m": -31747603.4532
- },
- {
-  "id": "PARKOHIOHOLDINGSCORP-VILSACKROBERTD",
-  "name": "VILSACK ROBERT D",
-  "type": "insider",
-  "title": "Secretary & CLO",
-  "company": "PARK OHIO HOLDINGS CORP",
-  "holdings": [
-   {
-    "stockCode": "PKOH",
-    "stockName": "PARK OHIO HOLDINGS CORP",
-    "quantity": 195844
-   }
-  ],
-  "totalNetBuy12m": -2115550.34
  },
  {
   "id": "CASTLEBIOSCIENCESINC-JuvenalTobinW",
@@ -819,21 +3762,6 @@
   "totalNetBuy12m": 104193.1284
  },
  {
-  "id": "UxinLtd-DaiKun",
-  "name": "Dai Kun",
-  "type": "insider",
-  "title": "Chief Executive Officer",
-  "company": "Uxin Ltd",
-  "holdings": [
-   {
-    "stockCode": "UXIN",
-    "stockName": "Uxin Ltd",
-    "quantity": 8440
-   }
-  ],
-  "totalNetBuy12m": 20556.1046
- },
- {
   "id": "VIVOSINC-KorenkoMichaelK",
   "name": "Korenko Michael K",
   "type": "insider",
@@ -892,21 +3820,6 @@
    }
   ],
   "totalNetBuy12m": 18317.030000000002
- },
- {
-  "id": "SkyHarbourGroupCorp-GonzalezFrancisco",
-  "name": "Gonzalez Francisco",
-  "type": "insider",
-  "title": "Chief Financial Officer",
-  "company": "Sky Harbour Group Corp",
-  "holdings": [
-   {
-    "stockCode": "SKYH",
-    "stockName": "Sky Harbour Group Corp",
-    "quantity": 710588
-   }
-  ],
-  "totalNetBuy12m": 34665
  },
  {
   "id": "FILANATHERAPEUTICS,INC.-BarryRichard",
@@ -1419,21 +4332,6 @@
   "totalNetBuy12m": -331856.33999999997
  },
  {
-  "id": "CorebridgeFinancial,Inc.-NIPPONLIFEINSURANCECO",
-  "name": "NIPPON LIFE INSURANCE CO",
-  "type": "insider",
-  "title": "10% Owner",
-  "company": "Corebridge Financial, Inc.",
-  "holdings": [
-   {
-    "stockCode": "CRBG",
-    "stockName": "Corebridge Financial, Inc.",
-    "quantity": 122125993
-   }
-  ],
-  "totalNetBuy12m": 131092969.34730001
- },
- {
   "id": "SOUTHERNCO-KimMatthewM.",
   "name": "Kim Matthew M.",
   "type": "insider",
@@ -1582,21 +4480,6 @@
    }
   ],
   "totalNetBuy12m": 13180.7
- },
- {
-  "id": "UNITEDTHERAPEUTICSCorp-ROTHBLATTMARTINEA",
-  "name": "ROTHBLATT MARTINE A",
-  "type": "insider",
-  "title": "Chairperson & CEO",
-  "company": "UNITED THERAPEUTICS Corp",
-  "holdings": [
-   {
-    "stockCode": "UTHR",
-    "stockName": "UNITED THERAPEUTICS Corp",
-    "quantity": 333943
-   }
-  ],
-  "totalNetBuy12m": -232002262.68050003
  },
  {
   "id": "SLScienceHoldingLtd-WangChing-Dong",
@@ -1914,21 +4797,6 @@
   "totalNetBuy12m": 50005.48
  },
  {
-  "id": "BioNTechSE-SahinUgur",
-  "name": "Sahin Ugur",
-  "type": "insider",
-  "title": "Chief Executive Officer",
-  "company": "BioNTech SE",
-  "holdings": [
-   {
-    "stockCode": "BNTX",
-    "stockName": "BioNTech SE",
-    "quantity": 813209
-   }
-  ],
-  "totalNetBuy12m": -63651046.65
- },
- {
   "id": "PrimarkMeketaPrivateEquityInvestmentsFund-HarttStevenKnut",
   "name": "Hartt Steven Knut",
   "type": "insider",
@@ -2019,21 +4887,6 @@
   "totalNetBuy12m": 10084.75
  },
  {
-  "id": "NayaxLtd.-NechmadYair",
-  "name": "Nechmad Yair",
-  "type": "insider",
-  "title": "CEO, Co Founder & Chairman",
-  "company": "Nayax Ltd.",
-  "holdings": [
-   {
-    "stockCode": "NYAX",
-    "stockName": "Nayax Ltd.",
-    "quantity": 7433558
-   }
-  ],
-  "totalNetBuy12m": 6715302.7523
- },
- {
   "id": "BlendLabs,Inc.-GhamsariNima",
   "name": "Ghamsari Nima",
   "type": "insider",
@@ -2092,21 +4945,6 @@
    }
   ],
   "totalNetBuy12m": -12397262.422
- },
- {
-  "id": "CrowdStrikeHoldings,Inc.-KurtzGeorge",
-  "name": "Kurtz George",
-  "type": "insider",
-  "title": "PRESIDENT AND CEO",
-  "company": "CrowdStrike Holdings, Inc.",
-  "holdings": [
-   {
-    "stockCode": "CRWD",
-    "stockName": "CrowdStrike Holdings, Inc.",
-    "quantity": 8139451
-   }
-  ],
-  "totalNetBuy12m": -124362988.53450005
  },
  {
   "id": "PINTEREST,INC.-SilbermannBenjamin",
@@ -2287,21 +5125,6 @@
    }
   ],
   "totalNetBuy12m": 6000
- },
- {
-  "id": "JEWETTCAMERONTRADINGCOLTD-AJBInvestmentFundII,LP외3인",
-  "name": "AJB Investment Fund II, LP 외 3인",
-  "type": "insider",
-  "title": "10% Owner",
-  "company": "JEWETT CAMERON TRADING CO LTD",
-  "holdings": [
-   {
-    "stockCode": "JCTC",
-    "stockName": "JEWETT CAMERON TRADING CO LTD",
-    "quantity": 430532
-   }
-  ],
-  "totalNetBuy12m": 234536.48109999998
  },
  {
   "id": "Fastly,Inc.-BergmanArtur",
@@ -3624,21 +6447,6 @@
   "totalNetBuy12m": -822060.3414
  },
  {
-  "id": "XerisBiopharmaHoldings,Inc.-McCullochKevin",
-  "name": "McCulloch Kevin",
-  "type": "insider",
-  "title": "See Remarks",
-  "company": "Xeris Biopharma Holdings, Inc.",
-  "holdings": [
-   {
-    "stockCode": "XERS",
-    "stockName": "Xeris Biopharma Holdings, Inc.",
-    "quantity": 1676126
-   }
-  ],
-  "totalNetBuy12m": -497548
- },
- {
   "id": "VeraBradley,Inc.-BrockmanIvan",
   "name": "Brockman Ivan",
   "type": "insider",
@@ -3847,21 +6655,6 @@
    }
   ],
   "totalNetBuy12m": 133166.21099999998
- },
- {
-  "id": "CredoTechnologyGroupHoldingLtd-LamYatTung",
-  "name": "Lam Yat Tung",
-  "type": "insider",
-  "title": "Chief Operating Officer",
-  "company": "Credo Technology Group Holding Ltd",
-  "holdings": [
-   {
-    "stockCode": "CRDO",
-    "stockName": "Credo Technology Group Holding Ltd",
-    "quantity": 344212
-   }
-  ],
-  "totalNetBuy12m": -43106065.8631
  },
  {
   "id": "BKVCorp-HinojosaJavier",
@@ -4434,21 +7227,6 @@
   "totalNetBuy12m": -91855.12
  },
  {
-  "id": "AlibabaGroupHoldingLtd-JiangFang",
-  "name": "Jiang Fang",
-  "type": "insider",
-  "title": "Chief People Officer",
-  "company": "Alibaba Group Holding Ltd",
-  "holdings": [
-   {
-    "stockCode": "BABA",
-    "stockName": "Alibaba Group Holding Ltd",
-    "quantity": 5561175
-   }
-  ],
-  "totalNetBuy12m": -66343.73
- },
- {
   "id": "AlibabaGroupHoldingLtd-XuHong",
   "name": "Xu Hong",
   "type": "insider",
@@ -4704,21 +7482,6 @@
   "totalNetBuy12m": 11355072.2138
  },
  {
-  "id": "GameStopCorp.-CohenRyan",
-  "name": "Cohen Ryan",
-  "type": "insider",
-  "title": "President, CEO and Chairman",
-  "company": "GameStop Corp.",
-  "holdings": [
-   {
-    "stockCode": "GME",
-    "stockName": "GameStop Corp.",
-    "quantity": 39347842
-   }
-  ],
-  "totalNetBuy12m": 57333418.6
- },
- {
   "id": "EOGRESOURCESINC-LeitzellJeffreyR.",
   "name": "Leitzell Jeffrey R.",
   "type": "insider",
@@ -4959,21 +7722,6 @@
   "totalNetBuy12m": 290510.8342
  },
  {
-  "id": "PagerDuty,Inc.-TejadaJennifer",
-  "name": "Tejada Jennifer",
-  "type": "insider",
-  "title": "Executive Chair",
-  "company": "PagerDuty, Inc.",
-  "holdings": [
-   {
-    "stockCode": "PD",
-    "stockName": "PagerDuty, Inc.",
-    "quantity": 1670251
-   }
-  ],
-  "totalNetBuy12m": -120000
- },
- {
   "id": "Zscaler,Inc.-RUBINKEVIN",
   "name": "RUBIN KEVIN",
   "type": "insider",
@@ -5182,36 +7930,6 @@
    }
   ],
   "totalNetBuy12m": 75654.7
- },
- {
-  "id": "AlphaCognitionInc.-OpaleyeManagementInc.",
-  "name": "Opaleye Management Inc.",
-  "type": "insider",
-  "title": "10% Owner",
-  "company": "Alpha Cognition Inc.",
-  "holdings": [
-   {
-    "stockCode": "ACOG",
-    "stockName": "Alpha Cognition Inc.",
-    "quantity": 2995323
-   }
-  ],
-  "totalNetBuy12m": 1757308.4560000002
- },
- {
-  "id": "QVCGroup,Inc.-GOLDENTREEASSETMANAGEMENTLP외2인",
-  "name": "GOLDENTREE ASSET MANAGEMENT LP 외 2인",
-  "type": "insider",
-  "title": "10% Owner",
-  "company": "QVC Group, Inc.",
-  "holdings": [
-   {
-    "stockCode": "QVCG",
-    "stockName": "QVC Group, Inc.",
-    "quantity": 8117869
-   }
-  ],
-  "totalNetBuy12m": 51021944.165
  },
  {
   "id": "EvaLiveInc-BouletteDavid",
@@ -6420,21 +9138,6 @@
   "totalNetBuy12m": -103480.56
  },
  {
-  "id": "GLOBALFOUNDRIESInc.-AzarSamakL",
-  "name": "Azar Samak L",
-  "type": "insider",
-  "title": "Chief Legal Officer",
-  "company": "GLOBALFOUNDRIES Inc.",
-  "holdings": [
-   {
-    "stockCode": "GFS",
-    "stockName": "GLOBALFOUNDRIES Inc.",
-    "quantity": 12144
-   }
-  ],
-  "totalNetBuy12m": -161051.25
- },
- {
   "id": "RushStreetInteractive,Inc.-MarkellJackA.",
   "name": "Markell Jack A.",
   "type": "insider",
@@ -6765,21 +9468,6 @@
   "totalNetBuy12m": -5117980
  },
  {
-  "id": "AvePoint,Inc.-BrownBrianMichael",
-  "name": "Brown Brian Michael",
-  "type": "insider",
-  "title": "Chief Legal Officer",
-  "company": "AvePoint, Inc.",
-  "holdings": [
-   {
-    "stockCode": "AVPT",
-    "stockName": "AvePoint, Inc.",
-    "quantity": 814840
-   }
-  ],
-  "totalNetBuy12m": -1246396.48
- },
- {
   "id": "HENNESSYADVISORSINC-STEADMANDANIELB",
   "name": "STEADMAN DANIEL B",
   "type": "insider",
@@ -7063,21 +9751,6 @@
    }
   ],
   "totalNetBuy12m": 44400.00000000001
- },
- {
-  "id": "CompassTherapeutics,Inc.-LernerNeil",
-  "name": "Lerner Neil",
-  "type": "insider",
-  "title": "Chief Accounting Officer",
-  "company": "Compass Therapeutics, Inc.",
-  "holdings": [
-   {
-    "stockCode": "CMPX",
-    "stockName": "Compass Therapeutics, Inc.",
-    "quantity": 400000
-   }
-  ],
-  "totalNetBuy12m": 2849.9999999999995
  },
  {
   "id": "AdageneInc.-TamManKin",
@@ -7453,21 +10126,6 @@
    }
   ],
   "totalNetBuy12m": 999983.25
- },
- {
-  "id": "CoreWeave,Inc.-AgrawalNitin",
-  "name": "Agrawal Nitin",
-  "type": "insider",
-  "title": "Chief Financial Officer",
-  "company": "CoreWeave, Inc.",
-  "holdings": [
-   {
-    "stockCode": "CRWV",
-    "stockName": "CoreWeave, Inc.",
-    "quantity": 140129
-   }
-  ],
-  "totalNetBuy12m": -11826978.4563
  },
  {
   "id": "RevolutionMedicines,Inc.-ANDERSONELIZABETHM",
@@ -8295,21 +10953,6 @@
   "totalNetBuy12m": 996852.043
  },
  {
-  "id": "EPLUSINC-RAIGUELDARRENS",
-  "name": "RAIGUEL DARREN S",
-  "type": "insider",
-  "title": "CHIEF OPERATING OFFICER",
-  "company": "EPLUS INC",
-  "holdings": [
-   {
-    "stockCode": "PLUS",
-    "stockName": "EPLUS INC",
-    "quantity": 71171
-   }
-  ],
-  "totalNetBuy12m": -391107.3057
- },
- {
   "id": "SASOLLTD-PillaySarushenDhanapalan",
   "name": "Pillay Sarushen Dhanapalan",
   "type": "insider",
@@ -8698,21 +11341,6 @@
    }
   ],
   "totalNetBuy12m": -325920
- },
- {
-  "id": "Hims&HersHealth,Inc.-OkupeOluyemi",
-  "name": "Okupe Oluyemi",
-  "type": "insider",
-  "title": "Chief Financial Officer",
-  "company": "Hims & Hers Health, Inc.",
-  "holdings": [
-   {
-    "stockCode": "HIMS",
-    "stockName": "Hims & Hers Health, Inc.",
-    "quantity": 228938
-   }
-  ],
-  "totalNetBuy12m": -3585009.8568
  },
  {
   "id": "ArcherAviationInc.-LyonBenjamin",
@@ -9180,21 +11808,6 @@
   "totalNetBuy12m": -2044239
  },
  {
-  "id": "Intapp,Inc.-HALLJOHNT",
-  "name": "HALL JOHN T",
-  "type": "insider",
-  "title": "Chief Executive Officer",
-  "company": "Intapp, Inc.",
-  "holdings": [
-   {
-    "stockCode": "INTA",
-    "stockName": "Intapp, Inc.",
-    "quantity": 5961482
-   }
-  ],
-  "totalNetBuy12m": -8817589.745099999
- },
- {
   "id": "Datadog,Inc.-OBSTLERDAVIDM",
   "name": "OBSTLER DAVID M",
   "type": "insider",
@@ -9253,21 +11866,6 @@
    }
   ],
   "totalNetBuy12m": 185000
- },
- {
-  "id": "Asana,Inc.-ColendichKatieMarie",
-  "name": "Colendich Katie Marie",
-  "type": "insider",
-  "title": "GC, Corporate Secretary",
-  "company": "Asana, Inc.",
-  "holdings": [
-   {
-    "stockCode": "ASAN",
-    "stockName": "Asana, Inc.",
-    "quantity": 170163
-   }
-  ],
-  "totalNetBuy12m": -153626.316
  },
  {
   "id": "PRIMEENERGYRESOURCESCORP-FONGGIFFORD",
@@ -9493,21 +12091,6 @@
    }
   ],
   "totalNetBuy12m": 5000000
- },
- {
-  "id": "AXIAEnergiaS.A.-BatistadeLimaFilhoPedro",
-  "name": "Batista de Lima Filho Pedro",
-  "type": "insider",
-  "title": "Director",
-  "company": "AXIA Energia S.A.",
-  "holdings": [
-   {
-    "stockCode": "AXIA3",
-    "stockName": "AXIA Energia S.A.",
-    "quantity": 13966119
-   }
-  ],
-  "totalNetBuy12m": -4484567
  },
  {
   "id": "NEXSTARMEDIAGROUP,INC.-ALFORDANDREW",
@@ -9838,21 +12421,6 @@
    }
   ],
   "totalNetBuy12m": -92548.92
- },
- {
-  "id": "Verastem,Inc.-CalkinsDaniel",
-  "name": "Calkins Daniel",
-  "type": "insider",
-  "title": "Chief Financial Officer",
-  "company": "Verastem, Inc.",
-  "holdings": [
-   {
-    "stockCode": "VSTM",
-    "stockName": "Verastem, Inc.",
-    "quantity": 118014
-   }
-  ],
-  "totalNetBuy12m": -423.5
  },
  {
   "id": "Swarmer,Inc-FinkAlexander",
@@ -10219,21 +12787,6 @@
    }
   ],
   "totalNetBuy12m": -271373.3596
- },
- {
-  "id": "CrowdStrikeHoldings,Inc.-SentonasMichael",
-  "name": "Sentonas Michael",
-  "type": "insider",
-  "title": "PRESIDENT",
-  "company": "CrowdStrike Holdings, Inc.",
-  "holdings": [
-   {
-    "stockCode": "CRWD",
-    "stockName": "CrowdStrike Holdings, Inc.",
-    "quantity": 1475538
-   }
-  ],
-  "totalNetBuy12m": -11555358.489999998
  },
  {
   "id": "CrowdStrikeHoldings,Inc.-SahaAnurag",
@@ -10626,21 +13179,6 @@
   "totalNetBuy12m": -200379521.63799998
  },
  {
-  "id": "SnowflakeInc.-KleinermanChristian",
-  "name": "Kleinerman Christian",
-  "type": "insider",
-  "title": "EVP, Product Management",
-  "company": "Snowflake Inc.",
-  "holdings": [
-   {
-    "stockCode": "SNOW",
-    "stockName": "Snowflake Inc.",
-    "quantity": 375379
-   }
-  ],
-  "totalNetBuy12m": -33170165.46
- },
- {
   "id": "BullFrogAIHoldings,Inc.-BlacherJoshua",
   "name": "Blacher Joshua",
   "type": "insider",
@@ -11016,21 +13554,6 @@
   "totalNetBuy12m": -505963.75
  },
  {
-  "id": "BUTLERNATIONALCORP-DalyJosephPatrick",
-  "name": "Daly Joseph Patrick",
-  "type": "insider",
-  "title": "Director · 10% Owner",
-  "company": "BUTLER NATIONAL CORP",
-  "holdings": [
-   {
-    "stockCode": "BUKS",
-    "stockName": "BUTLER NATIONAL CORP",
-    "quantity": 4535096
-   }
-  ],
-  "totalNetBuy12m": 47903.61
- },
- {
   "id": "BANKBRADESCO-CaffarelliPauloRogerio",
   "name": "Caffarelli Paulo Rogerio",
   "type": "insider",
@@ -11344,21 +13867,6 @@
    }
   ],
   "totalNetBuy12m": -2150499.45
- },
- {
-  "id": "WILLAMETTEVALLEYVINEYARDSINC-RICCARDICHRIS",
-  "name": "RICCARDI CHRIS",
-  "type": "insider",
-  "title": "Director",
-  "company": "WILLAMETTE VALLEY VINEYARDS INC",
-  "holdings": [
-   {
-    "stockCode": "WVVI",
-    "stockName": "WILLAMETTE VALLEY VINEYARDS INC",
-    "quantity": 485744
-   }
-  ],
-  "totalNetBuy12m": 6769.41
  },
  {
   "id": "NVIDIACORP-STEVENSMARKA",
@@ -14439,21 +16947,6 @@
   "totalNetBuy12m": 24015.74
  },
  {
-  "id": "MARAHoldings,Inc.-ThielFrederickG",
-  "name": "Thiel Frederick G",
-  "type": "insider",
-  "title": "Chief Executive Officer",
-  "company": "MARA Holdings, Inc.",
-  "holdings": [
-   {
-    "stockCode": "MARA",
-    "stockName": "MARA Holdings, Inc.",
-    "quantity": 4335697
-   }
-  ],
-  "totalNetBuy12m": -568253.3
- },
- {
   "id": "MARAHoldings,Inc.-NowaidZabi",
   "name": "Nowaid Zabi",
   "type": "insider",
@@ -14932,21 +17425,6 @@
    }
   ],
   "totalNetBuy12m": -323400.61250000005
- },
- {
-  "id": "BloomEnergyCorp-JoshiAman",
-  "name": "Joshi Aman",
-  "type": "insider",
-  "title": "Chief Commercial Officer",
-  "company": "Bloom Energy Corp",
-  "holdings": [
-   {
-    "stockCode": "BE",
-    "stockName": "Bloom Energy Corp",
-    "quantity": 159130
-   }
-  ],
-  "totalNetBuy12m": -2102718.69
  },
  {
   "id": "BloomEnergyCorp-KurzymskiMaciej",
@@ -15514,21 +17992,6 @@
    }
   ],
   "totalNetBuy12m": -4155659.7614999996
- },
- {
-  "id": "DROPBOX,INC.-SchubachSarahElizabeth",
-  "name": "Schubach Sarah Elizabeth",
-  "type": "insider",
-  "title": "Chief Accounting Officer",
-  "company": "DROPBOX, INC.",
-  "holdings": [
-   {
-    "stockCode": "DBX",
-    "stockName": "DROPBOX, INC.",
-    "quantity": 124266
-   }
-  ],
-  "totalNetBuy12m": -239437.83
  },
  {
   "id": "CarisLifeSciences,Inc.-BrilleBrianJ",
@@ -16099,21 +18562,6 @@
    }
   ],
   "totalNetBuy12m": -3981080.067
- },
- {
-  "id": "Hims&HersHealth,Inc.-BoughtonSoleil",
-  "name": "Boughton Soleil",
-  "type": "insider",
-  "title": "Chief Legal Officer",
-  "company": "Hims & Hers Health, Inc.",
-  "holdings": [
-   {
-    "stockCode": "HIMS",
-    "stockName": "Hims & Hers Health, Inc.",
-    "quantity": 313964
-   }
-  ],
-  "totalNetBuy12m": -963508.15
  },
  {
   "id": "908DevicesInc.-KennewegJohn",
@@ -18111,21 +20559,6 @@
   "totalNetBuy12m": -89277.44
  },
  {
-  "id": "HALOZYMETHERAPEUTICS,INC.-PosardMatthewL.",
-  "name": "Posard Matthew L.",
-  "type": "insider",
-  "title": "Director",
-  "company": "HALOZYME THERAPEUTICS, INC.",
-  "holdings": [
-   {
-    "stockCode": "HALO",
-    "stockName": "HALOZYME THERAPEUTICS, INC.",
-    "quantity": 74735
-   }
-  ],
-  "totalNetBuy12m": -2046581.04
- },
- {
   "id": "TALOSENERGYINC.-ControlEmpresarialdeCapitalesS.A.deC.V.",
   "name": "Control Empresarial de Capitales S.A. de C.V.",
   "type": "insider",
@@ -18709,51 +21142,6 @@
    }
   ],
   "totalNetBuy12m": -211615.91999999998
- },
- {
-  "id": "COGNIZANTTECHNOLOGYSOLUTIONSCORP-KerdmanAlina",
-  "name": "Kerdman Alina",
-  "type": "insider",
-  "title": "SVP, Controller & CAO",
-  "company": "COGNIZANT TECHNOLOGY SOLUTIONS CORP",
-  "holdings": [
-   {
-    "stockCode": "CTSH",
-    "stockName": "COGNIZANT TECHNOLOGY SOLUTIONS CORP",
-    "quantity": 848
-   }
-  ],
-  "totalNetBuy12m": -17482.56
- },
- {
-  "id": "TransUnion-AbdelsadekMohamed",
-  "name": "Abdelsadek Mohamed",
-  "type": "insider",
-  "title": "EVP, Chief Global Solutions",
-  "company": "TransUnion",
-  "holdings": [
-   {
-    "stockCode": "TRU",
-    "stockName": "TransUnion",
-    "quantity": 57182
-   }
-  ],
-  "totalNetBuy12m": -2095912.5
- },
- {
-  "id": "Xometry,Inc.-SahniSanjeevSingh",
-  "name": "Sahni Sanjeev Singh",
-  "type": "insider",
-  "title": "Chief Executive Officer",
-  "company": "Xometry, Inc.",
-  "holdings": [
-   {
-    "stockCode": "XMTR",
-    "stockName": "Xometry, Inc.",
-    "quantity": 183521
-   }
-  ],
-  "totalNetBuy12m": -263116.8482
  },
  {
   "id": "IBEXLtd-ZhuangMingzhe",
@@ -19354,21 +21742,6 @@
    }
   ],
   "totalNetBuy12m": -555528
- },
- {
-  "id": "RocketCompanies,Inc.-BrayJesseK",
-  "name": "Bray Jesse K",
-  "type": "insider",
-  "title": "Pres & CEO, Rocket Mortgage",
-  "company": "Rocket Companies, Inc.",
-  "holdings": [
-   {
-    "stockCode": "RKT",
-    "stockName": "Rocket Companies, Inc.",
-    "quantity": 7953027
-   }
-  ],
-  "totalNetBuy12m": -2949750
  },
  {
   "id": "GERMANAMERICANBANCORP,INC.-RyanChristinaM",
@@ -20511,21 +22884,6 @@
   "totalNetBuy12m": -74559.03
  },
  {
-  "id": "RivianAutomotive,Inc./DE-CALLAHANMICHAELJOHN",
-  "name": "CALLAHAN MICHAEL JOHN",
-  "type": "insider",
-  "title": "Chief Administrative Officer",
-  "company": "Rivian Automotive, Inc. / DE",
-  "holdings": [
-   {
-    "stockCode": "RIVN",
-    "stockName": "Rivian Automotive, Inc. / DE",
-    "quantity": 1016776
-   }
-  ],
-  "totalNetBuy12m": -244390.5
- },
- {
   "id": "QUICKLOGICCorp-TAUSSGARYH",
   "name": "TAUSS GARY H",
   "type": "insider",
@@ -21306,21 +23664,6 @@
   "totalNetBuy12m": -1207000.4492
  },
  {
-  "id": "DOCUSIGN,INC.-WilderotterMaryAgnes",
-  "name": "Wilderotter Mary Agnes",
-  "type": "insider",
-  "title": "Director",
-  "company": "DOCUSIGN, INC.",
-  "holdings": [
-   {
-    "stockCode": "DOCU",
-    "stockName": "DOCUSIGN, INC.",
-    "quantity": 3199
-   }
-  ],
-  "totalNetBuy12m": -77377.59999999999
- },
- {
   "id": "FIVEBELOW,INC-SPECTERERICM",
   "name": "SPECTER ERIC M",
   "type": "insider",
@@ -21394,21 +23737,6 @@
    }
   ],
   "totalNetBuy12m": -108073270.36519997
- },
- {
-  "id": "SeagateTechnologyHoldingsplc-MOSLEYWILLIAMD",
-  "name": "MOSLEY WILLIAM D",
-  "type": "insider",
-  "title": "CEO",
-  "company": "Seagate Technology Holdings plc",
-  "holdings": [
-   {
-    "stockCode": "STX",
-    "stockName": "Seagate Technology Holdings plc",
-    "quantity": 325517
-   }
-  ],
-  "totalNetBuy12m": -143907086.781125
  },
  {
   "id": "SeagateTechnologyHoldingsplc-TehBanSeng",
@@ -23613,36 +25941,6 @@
   "totalNetBuy12m": -137821.32
  },
  {
-  "id": "XPO,Inc.-BatesDavidJ.",
-  "name": "Bates David J.",
-  "type": "insider",
-  "title": "Chief Operating Officer",
-  "company": "XPO, Inc.",
-  "holdings": [
-   {
-    "stockCode": "XPO",
-    "stockName": "XPO, Inc.",
-    "quantity": 67150
-   }
-  ],
-  "totalNetBuy12m": -469159.6925
- },
- {
-  "id": "XPO,Inc.-WismansKyle",
-  "name": "Wismans Kyle",
-  "type": "insider",
-  "title": "Chief Financial Officer",
-  "company": "XPO, Inc.",
-  "holdings": [
-   {
-    "stockCode": "XPO",
-    "stockName": "XPO, Inc.",
-    "quantity": 48716
-   }
-  ],
-  "totalNetBuy12m": -133890
- },
- {
   "id": "ROCKETPHARMACEUTICALS,INC.-WilsonMartin",
   "name": "Wilson Martin",
   "type": "insider",
@@ -24091,21 +26389,6 @@
    }
   ],
   "totalNetBuy12m": -1517026.9685999998
- },
- {
-  "id": "OrukaTherapeutics,Inc.-KleinLawrenceOtto",
-  "name": "Klein Lawrence Otto",
-  "type": "insider",
-  "title": "Chief Executive Officer",
-  "company": "Oruka Therapeutics, Inc.",
-  "holdings": [
-   {
-    "stockCode": "ORKA",
-    "stockName": "Oruka Therapeutics, Inc.",
-    "quantity": 1000580
-   }
-  ],
-  "totalNetBuy12m": -7122165.402000001
  },
  {
   "id": "OrukaTherapeutics,Inc.-SandlerLauraLee",
@@ -24628,21 +26911,6 @@
    }
   ],
   "totalNetBuy12m": -14507642.087499999
- },
- {
-  "id": "Amplitude,Inc.-SkatesSpenser",
-  "name": "Skates Spenser",
-  "type": "insider",
-  "title": "CEO and President",
-  "company": "Amplitude, Inc.",
-  "holdings": [
-   {
-    "stockCode": "AMPL",
-    "stockName": "Amplitude, Inc.",
-    "quantity": 185000
-   }
-  ],
-  "totalNetBuy12m": -2275611
  },
  {
   "id": "AngelStudios,Inc.-SarowitzStevenI",
@@ -29691,36 +31959,6 @@
   "totalNetBuy12m": -169507.09999999998
  },
  {
-  "id": "CoreWeave,Inc.-McVeetyKristenJ",
-  "name": "McVeety Kristen J",
-  "type": "insider",
-  "title": "GC and Secretary",
-  "company": "CoreWeave, Inc.",
-  "holdings": [
-   {
-    "stockCode": "CRWV",
-    "stockName": "CoreWeave, Inc.",
-    "quantity": 126044
-   }
-  ],
-  "totalNetBuy12m": -22443432.2931
- },
- {
-  "id": "CoreWeave,Inc.-GoldbergChen",
-  "name": "Goldberg Chen",
-  "type": "insider",
-  "title": "EVP, Product & Engineering",
-  "company": "CoreWeave, Inc.",
-  "holdings": [
-   {
-    "stockCode": "CRWV",
-    "stockName": "CoreWeave, Inc.",
-    "quantity": 52974
-   }
-  ],
-  "totalNetBuy12m": -5970688.3555000005
- },
- {
   "id": "AngelOakMortgageREIT,Inc.-MINAMIWD",
   "name": "MINAMI W D",
   "type": "insider",
@@ -30754,21 +32992,6 @@
    }
   ],
   "totalNetBuy12m": -98464.40479999999
- },
- {
-  "id": "Ceribell,Inc.-WooRaymond",
-  "name": "Woo Raymond",
-  "type": "insider",
-  "title": "Chief Technology Officer",
-  "company": "Ceribell, Inc.",
-  "holdings": [
-   {
-    "stockCode": "CBLL",
-    "stockName": "Ceribell, Inc.",
-    "quantity": 194729
-   }
-  ],
-  "totalNetBuy12m": -166436.28999999998
  },
  {
   "id": "QVCGroup,Inc.-SilverPointCapitalL.P.외2인",
@@ -32283,21 +34506,6 @@
   "totalNetBuy12m": -33216364.240000002
  },
  {
-  "id": "Vaxcyte,Inc.-WassilJim",
-  "name": "Wassil Jim",
-  "type": "insider",
-  "title": "EVP, Chief Scientific Ofc, COO",
-  "company": "Vaxcyte, Inc.",
-  "holdings": [
-   {
-    "stockCode": "PCVX",
-    "stockName": "Vaxcyte, Inc.",
-    "quantity": 159791
-   }
-  ],
-  "totalNetBuy12m": -497409.444
- },
- {
   "id": "MedalistDiversified,Inc.-WinnCharlesBrentJr.",
   "name": "Winn Charles Brent Jr.",
   "type": "insider",
@@ -32671,21 +34879,6 @@
    }
   ],
   "totalNetBuy12m": -250000
- },
- {
-  "id": "VERISIGNINC/CA-IndelicartoThomasC",
-  "name": "Indelicarto Thomas C",
-  "type": "insider",
-  "title": "EVP, Gen Counsel & Secretary",
-  "company": "VERISIGN INC/CA",
-  "holdings": [
-   {
-    "stockCode": "VRSN",
-    "stockName": "VERISIGN INC/CA",
-    "quantity": 35051.0439
-   }
-  ],
-  "totalNetBuy12m": -582245
  },
  {
   "id": "KeysightTechnologies,Inc.-EstradaIngridA",
@@ -33226,21 +35419,6 @@
    }
   ],
   "totalNetBuy12m": -3600469.67
- },
- {
-  "id": "SnowflakeInc.-SpeiserMichaelL",
-  "name": "Speiser Michael L",
-  "type": "insider",
-  "title": "Director",
-  "company": "Snowflake Inc.",
-  "holdings": [
-   {
-    "stockCode": "SNOW",
-    "stockName": "Snowflake Inc.",
-    "quantity": 22573
-   }
-  ],
-  "totalNetBuy12m": -34398896.871
  },
  {
   "id": "NRGENERGY,INC.-SpencerGeraldAlfred",
@@ -34351,21 +36529,6 @@
    }
   ],
   "totalNetBuy12m": -908166.3705000002
- },
- {
-  "id": "MazeTherapeutics,Inc.-BernsteinHarold",
-  "name": "Bernstein Harold",
-  "type": "insider",
-  "title": "President, R&D & CMO",
-  "company": "Maze Therapeutics, Inc.",
-  "holdings": [
-   {
-    "stockCode": "MAZE",
-    "stockName": "Maze Therapeutics, Inc.",
-    "quantity": 16142
-   }
-  ],
-  "totalNetBuy12m": -1395745.9363000002
  },
  {
   "id": "Lemonade,Inc.-ProsorMaya",
@@ -35626,21 +37789,6 @@
    }
   ],
   "totalNetBuy12m": -7884748.181399999
- },
- {
-  "id": "SandiskCorp-ShekBernard",
-  "name": "Shek Bernard",
-  "type": "insider",
-  "title": "Chief Legal Officer & Secty",
-  "company": "Sandisk Corp",
-  "holdings": [
-   {
-    "stockCode": "SNDK",
-    "stockName": "Sandisk Corp",
-    "quantity": 30915
-   }
-  ],
-  "totalNetBuy12m": -5691653.64
  },
  {
   "id": "InhibrxBiosciences,Inc.-FORSYTHDOUGLAS",
@@ -37008,21 +39156,6 @@
   "totalNetBuy12m": -1567397.28
  },
  {
-  "id": "RocketLabCorp-SpiceAdamC.",
-  "name": "Spice Adam C.",
-  "type": "insider",
-  "title": "Chief Financial Officer",
-  "company": "Rocket Lab Corp",
-  "holdings": [
-   {
-    "stockCode": "RKLB",
-    "stockName": "Rocket Lab Corp",
-    "quantity": 1156692
-   }
-  ],
-  "totalNetBuy12m": -9451511.3158
- },
- {
   "id": "LogisticPropertiesoftheAmericas-MarquinaJavier",
   "name": "Marquina Javier",
   "type": "insider",
@@ -37486,21 +39619,6 @@
    }
   ],
   "totalNetBuy12m": -11769
- },
- {
-  "id": "MazeTherapeutics,Inc.-ColomaJasonV",
-  "name": "Coloma Jason V",
-  "type": "insider",
-  "title": "Chief Executive Officer",
-  "company": "Maze Therapeutics, Inc.",
-  "holdings": [
-   {
-    "stockCode": "MAZE",
-    "stockName": "Maze Therapeutics, Inc.",
-    "quantity": 20898
-   }
-  ],
-  "totalNetBuy12m": -2423268.6877
  },
  {
   "id": "Adientplc-CarlinPeter",
@@ -39407,21 +41525,6 @@
   "totalNetBuy12m": -369512.21719999996
  },
  {
-  "id": "Natera,Inc.-MoshkevichSolomon",
-  "name": "Moshkevich Solomon",
-  "type": "insider",
-  "title": "PRESIDENT, CLINICALDIAGNOSTICS",
-  "company": "Natera, Inc.",
-  "holdings": [
-   {
-    "stockCode": "NTRA",
-    "stockName": "Natera, Inc.",
-    "quantity": 133633
-   }
-  ],
-  "totalNetBuy12m": -7392530.250399999
- },
- {
   "id": "indieSemiconductor,Inc.-WittmannMichael",
   "name": "Wittmann Michael",
   "type": "insider",
@@ -39465,21 +41568,6 @@
    }
   ],
   "totalNetBuy12m": -4206613.349400001
- },
- {
-  "id": "NEWMONTCorp/DE/-ViljoenNatascha",
-  "name": "Viljoen Natascha",
-  "type": "insider",
-  "title": "President & CEO",
-  "company": "NEWMONT Corp /DE/",
-  "holdings": [
-   {
-    "stockCode": "NEM",
-    "stockName": "NEWMONT Corp /DE/",
-    "quantity": 135235
-   }
-  ],
-  "totalNetBuy12m": -1284942
  },
  {
   "id": "REGENERONPHARMACEUTICALS,INC.-GuariniKathryn",
@@ -39602,21 +41690,6 @@
   "totalNetBuy12m": -2358657.36
  },
  {
-  "id": "NEWMONTCorp/DE/-TothPeter",
-  "name": "Toth Peter",
-  "type": "insider",
-  "title": "EVP, Chief Sustain & Dev Off",
-  "company": "NEWMONT Corp /DE/",
-  "holdings": [
-   {
-    "stockCode": "NEM",
-    "stockName": "NEWMONT Corp /DE/",
-    "quantity": 40315
-   }
-  ],
-  "totalNetBuy12m": -649350
- },
- {
   "id": "AMAZONCOMINC-HerringtonDouglasJ",
   "name": "Herrington Douglas J",
   "type": "insider",
@@ -39707,21 +41780,6 @@
   "totalNetBuy12m": -654705
  },
  {
-  "id": "TransUnion-SkinnerToddC.",
-  "name": "Skinner Todd C.",
-  "type": "insider",
-  "title": "President, International",
-  "company": "TransUnion",
-  "holdings": [
-   {
-    "stockCode": "TRU",
-    "stockName": "TransUnion",
-    "quantity": 63849.274
-   }
-  ],
-  "totalNetBuy12m": -160382
- },
- {
   "id": "CircleInternetGroup,Inc.-Fox-GeenJeremy",
   "name": "Fox-Geen Jeremy",
   "type": "insider",
@@ -39780,21 +41838,6 @@
    }
   ],
   "totalNetBuy12m": -7582241.84
- },
- {
-  "id": "Xometry,Inc.-AltschulerRandolph",
-  "name": "Altschuler Randolph",
-  "type": "insider",
-  "title": "Director",
-  "company": "Xometry, Inc.",
-  "holdings": [
-   {
-    "stockCode": "XMTR",
-    "stockName": "Xometry, Inc.",
-    "quantity": 556663
-   }
-  ],
-  "totalNetBuy12m": -908216.5902
  },
  {
   "id": "iRhythmHoldings,Inc.-WilsonDanielG.",
@@ -39947,21 +41990,6 @@
   "totalNetBuy12m": -22089332.82
  },
  {
-  "id": "JobyAviation,Inc.-SciarraPaulCahill",
-  "name": "Sciarra Paul Cahill",
-  "type": "insider",
-  "title": "Director",
-  "company": "Joby Aviation, Inc.",
-  "holdings": [
-   {
-    "stockCode": "JOBY",
-    "stockName": "Joby Aviation, Inc.",
-    "quantity": 55765557
-   }
-  ],
-  "totalNetBuy12m": -915000
- },
- {
   "id": "JobyAviation,Inc.-BrumanaRodrigo",
   "name": "Brumana Rodrigo",
   "type": "insider",
@@ -40110,21 +42138,6 @@
    }
   ],
   "totalNetBuy12m": -680242
- },
- {
-  "id": "StokeTherapeutics,Inc.-TichoBarry",
-  "name": "Ticho Barry",
-  "type": "insider",
-  "title": "CHIEF MEDICAL OFFICER",
-  "company": "Stoke Therapeutics, Inc.",
-  "holdings": [
-   {
-    "stockCode": "STOK",
-    "stockName": "Stoke Therapeutics, Inc.",
-    "quantity": 21691
-   }
-  ],
-  "totalNetBuy12m": -531135.98
  },
  {
   "id": "TransUnion-CHAOUKISTEVENM",
@@ -40305,21 +42318,6 @@
    }
   ],
   "totalNetBuy12m": -1726.474
- },
- {
-  "id": "Natera,Inc.-ChapmanStevenLeonard",
-  "name": "Chapman Steven Leonard",
-  "type": "insider",
-  "title": "CEO AND PRESIDENT",
-  "company": "Natera, Inc.",
-  "holdings": [
-   {
-    "stockCode": "NTRA",
-    "stockName": "Natera, Inc.",
-    "quantity": 106553
-   }
-  ],
-  "totalNetBuy12m": -2844518.903
  },
  {
   "id": "LAMRESEARCHCORP-VaradarajanSeshasayee",
@@ -40667,51 +42665,6 @@
   "totalNetBuy12m": -2957.5800000000004
  },
  {
-  "id": "SpyreTherapeutics,Inc.-King-JonesHeidy",
-  "name": "King-Jones Heidy",
-  "type": "insider",
-  "title": "See Remarks",
-  "company": "Spyre Therapeutics, Inc.",
-  "holdings": [
-   {
-    "stockCode": "SYRE",
-    "stockName": "Spyre Therapeutics, Inc.",
-    "quantity": 30844
-   }
-  ],
-  "totalNetBuy12m": -2480528.62
- },
- {
-  "id": "SpyreTherapeutics,Inc.-BurrowsScottL",
-  "name": "Burrows Scott L",
-  "type": "insider",
-  "title": "Chief Financial Officer",
-  "company": "Spyre Therapeutics, Inc.",
-  "holdings": [
-   {
-    "stockCode": "SYRE",
-    "stockName": "Spyre Therapeutics, Inc.",
-    "quantity": 105494
-   }
-  ],
-  "totalNetBuy12m": -3000591.92
- },
- {
-  "id": "SpyreTherapeutics,Inc.-TurtleCameron",
-  "name": "Turtle Cameron",
-  "type": "insider",
-  "title": "Chief Executive Officer",
-  "company": "Spyre Therapeutics, Inc.",
-  "holdings": [
-   {
-    "stockCode": "SYRE",
-    "stockName": "Spyre Therapeutics, Inc.",
-    "quantity": 581740
-   }
-  ],
-  "totalNetBuy12m": -2742115.05
- },
- {
   "id": "DirectDigitalHoldings,Inc.-WalkerMarkD",
   "name": "Walker Mark D",
   "type": "insider",
@@ -41025,21 +42978,6 @@
    }
   ],
   "totalNetBuy12m": -12260
- },
- {
-  "id": "ExlServiceHoldings,Inc.-BhallaVikas",
-  "name": "Bhalla Vikas",
-  "type": "insider",
-  "title": "President of EXL",
-  "company": "ExlService Holdings, Inc.",
-  "holdings": [
-   {
-    "stockCode": "EXLS",
-    "stockName": "ExlService Holdings, Inc.",
-    "quantity": 130295
-   }
-  ],
-  "totalNetBuy12m": -766590
  },
  {
   "id": "BorrDrillingLtd-CroweJasonPhilip",
@@ -41400,21 +43338,6 @@
    }
   ],
   "totalNetBuy12m": -5042823.32
- },
- {
-  "id": "Alkermesplc.-GaffinDavidJoseph",
-  "name": "Gaffin David Joseph",
-  "type": "insider",
-  "title": "EVP, CLO, Alkermes, Inc.",
-  "company": "Alkermes plc.",
-  "holdings": [
-   {
-    "stockCode": "ALKS",
-    "stockName": "Alkermes plc.",
-    "quantity": 225456
-   }
-  ],
-  "totalNetBuy12m": -196464.06
  },
  {
   "id": "NanoNuclearEnergyInc.-WalkerJamesJohn",
@@ -41955,21 +43878,6 @@
    }
   ],
   "totalNetBuy12m": -36865.6384
- },
- {
-  "id": "Rubrik,Inc.-THOMPSONJOHNWENDELL",
-  "name": "THOMPSON JOHN WENDELL",
-  "type": "insider",
-  "title": "Director",
-  "company": "Rubrik, Inc.",
-  "holdings": [
-   {
-    "stockCode": "RBRK",
-    "stockName": "Rubrik, Inc.",
-    "quantity": 11000
-   }
-  ],
-  "totalNetBuy12m": -2202353.8
  },
  {
   "id": "CORVELCORP-JESSUPRJUDD",
@@ -42992,21 +44900,6 @@
   "totalNetBuy12m": -164650
  },
  {
-  "id": "STANDEXINTERNATIONALCORP/DE/-CHORMANTHOMASE",
-  "name": "CHORMAN THOMAS E",
-  "type": "insider",
-  "title": "Director",
-  "company": "STANDEX INTERNATIONAL CORP/DE/",
-  "holdings": [
-   {
-    "stockCode": "SXI",
-    "stockName": "STANDEX INTERNATIONAL CORP/DE/",
-    "quantity": 12366
-   }
-  ],
-  "totalNetBuy12m": -29522.5
- },
- {
   "id": "UMBFINANCIALCORP-PetermanTamara",
   "name": "Peterman Tamara",
   "type": "insider",
@@ -43319,21 +45212,6 @@
   "totalNetBuy12m": 202.01011
  },
  {
-  "id": "PubMatic,Inc.-GimbelLisa",
-  "name": "Gimbel Lisa",
-  "type": "insider",
-  "title": "CHIEF ACCOUNTING OFFICER",
-  "company": "PubMatic, Inc.",
-  "holdings": [
-   {
-    "stockCode": "PUBM",
-    "stockName": "PubMatic, Inc.",
-    "quantity": 14561
-   }
-  ],
-  "totalNetBuy12m": -40752.4212
- },
- {
   "id": "Qorvo,Inc.-StewartFrankP.",
   "name": "Stewart Frank P.",
   "type": "insider",
@@ -43469,21 +45347,6 @@
   "totalNetBuy12m": -689925.5802
  },
  {
-  "id": "JETBLUEAIRWAYSCORP-ClementsCarolAnn",
-  "name": "Clements Carol Ann",
-  "type": "insider",
-  "title": "Chief Digital & Tech Officer",
-  "company": "JETBLUE AIRWAYS CORP",
-  "holdings": [
-   {
-    "stockCode": "JBLU",
-    "stockName": "JETBLUE AIRWAYS CORP",
-    "quantity": 183896
-   }
-  ],
-  "totalNetBuy12m": -20920
- },
- {
   "id": "HaywardHoldings,Inc.-HOLLERANKEVIN",
   "name": "HOLLERAN KEVIN",
   "type": "insider",
@@ -43557,21 +45420,6 @@
    }
   ],
   "totalNetBuy12m": -1504358.4
- },
- {
-  "id": "NurixTherapeutics,Inc.-RingChristine",
-  "name": "Ring Christine",
-  "type": "insider",
-  "title": "Chief Legal Officer",
-  "company": "Nurix Therapeutics, Inc.",
-  "holdings": [
-   {
-    "stockCode": "NRIX",
-    "stockName": "Nurix Therapeutics, Inc.",
-    "quantity": 17329
-   }
-  ],
-  "totalNetBuy12m": -621384.1826
  },
  {
   "id": "HARLEY-DAVIDSON,INC.-RootJonathanR",
@@ -43692,21 +45540,6 @@
    }
   ],
   "totalNetBuy12m": -524265.7102
- },
- {
-  "id": "LIQUIDITYSERVICESINC-DauntJohn",
-  "name": "Daunt John",
-  "type": "insider",
-  "title": "EVP, Chief Commercial Officer",
-  "company": "LIQUIDITY SERVICES INC",
-  "holdings": [
-   {
-    "stockCode": "LQDT",
-    "stockName": "LIQUIDITY SERVICES INC",
-    "quantity": 38411
-   }
-  ],
-  "totalNetBuy12m": -57393.05
  },
  {
   "id": "DEERE&CO-CAMPBELLRYAND",
@@ -43844,36 +45677,6 @@
   "totalNetBuy12m": -650000
  },
  {
-  "id": "WILLIAMSCOMPANIES,INC.-WilsonTerranceLane",
-  "name": "Wilson Terrance Lane",
-  "type": "insider",
-  "title": "SVP & General Counsel",
-  "company": "WILLIAMS COMPANIES, INC.",
-  "holdings": [
-   {
-    "stockCode": "WMB",
-    "stockName": "WILLIAMS COMPANIES, INC.",
-    "quantity": 281159
-   }
-  ],
-  "totalNetBuy12m": -1265736.8
- },
- {
-  "id": "MGICINVESTMENTCORP-MiosiSalvatoreA",
-  "name": "Miosi Salvatore A",
-  "type": "insider",
-  "title": "President & COO",
-  "company": "MGIC INVESTMENT CORP",
-  "holdings": [
-   {
-    "stockCode": "MTG",
-    "stockName": "MGIC INVESTMENT CORP",
-    "quantity": 500951.361
-   }
-  ],
-  "totalNetBuy12m": -1812900
- },
- {
   "id": "BridgerAerospaceGroupHoldings,Inc.-KELTERJEFFREYE",
   "name": "KELTER JEFFREY E",
   "type": "insider",
@@ -43979,21 +45782,6 @@
   "totalNetBuy12m": -172245
  },
  {
-  "id": "GILEADSCIENCES,INC.-O'DayDanielPatrick",
-  "name": "O'Day Daniel Patrick",
-  "type": "insider",
-  "title": "Chairman & CEO",
-  "company": "GILEAD SCIENCES, INC.",
-  "holdings": [
-   {
-    "stockCode": "GILD",
-    "stockName": "GILEAD SCIENCES, INC.",
-    "quantity": 600433
-   }
-  ],
-  "totalNetBuy12m": -4184285.5747999996
- },
- {
   "id": "Camp4TherapeuticsCorp-GoldKelly",
   "name": "Gold Kelly",
   "type": "insider",
@@ -44052,36 +45840,6 @@
    }
   ],
   "totalNetBuy12m": -115015.69079999998
- },
- {
-  "id": "Cactus,Inc.-BenderJoel",
-  "name": "Bender Joel",
-  "type": "insider",
-  "title": "President",
-  "company": "Cactus, Inc.",
-  "holdings": [
-   {
-    "stockCode": "WHD",
-    "stockName": "Cactus, Inc.",
-    "quantity": 9386249
-   }
-  ],
-  "totalNetBuy12m": -19153871.700000003
- },
- {
-  "id": "Cactus,Inc.-BenderScott",
-  "name": "Bender Scott",
-  "type": "insider",
-  "title": "Chairman and CEO",
-  "company": "Cactus, Inc.",
-  "holdings": [
-   {
-    "stockCode": "WHD",
-    "stockName": "Cactus, Inc.",
-    "quantity": 9386249
-   }
-  ],
-  "totalNetBuy12m": -19153871.700000003
  },
  {
   "id": "CAVAGROUP,INC.-ThompsonDouglasW.",
@@ -44159,21 +45917,6 @@
   "totalNetBuy12m": 312000
  },
  {
-  "id": "MOODYSCORP/DE/-FauberRobert",
-  "name": "Fauber Robert",
-  "type": "insider",
-  "title": "President and CEO",
-  "company": "MOODYS CORP /DE/",
-  "holdings": [
-   {
-    "stockCode": "MCO",
-    "stockName": "MOODYS CORP /DE/",
-    "quantity": 51963.918
-   }
-  ],
-  "totalNetBuy12m": -1446740.73
- },
- {
   "id": "JushiHoldingsInc.-BarackLouisJon",
   "name": "Barack Louis Jon",
   "type": "insider",
@@ -44247,21 +45990,6 @@
    }
   ],
   "totalNetBuy12m": -197700
- },
- {
-  "id": "WalmartInc.-BartlettDanielJ",
-  "name": "Bartlett Daniel J",
-  "type": "insider",
-  "title": "Executive Vice President",
-  "company": "Walmart Inc.",
-  "holdings": [
-   {
-    "stockCode": "WMT",
-    "stockName": "Walmart Inc.",
-    "quantity": 626298.533
-   }
-  ],
-  "totalNetBuy12m": -834898.865
  },
  {
   "id": "IRONMOUNTAININC-MeaneyWilliamL",
@@ -44414,36 +46142,6 @@
   "totalNetBuy12m": -1992.2299999999996
  },
  {
-  "id": "NeweggCommerce,Inc.-ChenMichael",
-  "name": "Chen Michael",
-  "type": "insider",
-  "title": "Chief Legal Officer",
-  "company": "Newegg Commerce, Inc.",
-  "holdings": [
-   {
-    "stockCode": "NEGG",
-    "stockName": "Newegg Commerce, Inc.",
-    "quantity": 2493
-   }
-  ],
-  "totalNetBuy12m": -1944.3400000000001
- },
- {
-  "id": "PennyMacMortgageInvestmentTrust-HendryGregoryL",
-  "name": "Hendry Gregory L",
-  "type": "insider",
-  "title": "Chief Accounting Officer",
-  "company": "PennyMac Mortgage Investment Trust",
-  "holdings": [
-   {
-    "stockCode": "PMT",
-    "stockName": "PennyMac Mortgage Investment Trust",
-    "quantity": 9774
-   }
-  ],
-  "totalNetBuy12m": -45556.159999999996
- },
- {
   "id": "EXAGENINC.-BlackJeffreyG.",
   "name": "Black Jeffrey G.",
   "type": "insider",
@@ -44489,36 +46187,6 @@
   "totalNetBuy12m": 199936.51
  },
  {
-  "id": "GENERACHOLDINGSINC.-JagdfeldAaron",
-  "name": "Jagdfeld Aaron",
-  "type": "insider",
-  "title": "Chief Executive Officer",
-  "company": "GENERAC HOLDINGS INC.",
-  "holdings": [
-   {
-    "stockCode": "GNRC",
-    "stockName": "GENERAC HOLDINGS INC.",
-    "quantity": 554528
-   }
-  ],
-  "totalNetBuy12m": -1885500
- },
- {
-  "id": "EXTREMENETWORKSINC-MEYERCORDEDWARD",
-  "name": "MEYERCORD EDWARD",
-  "type": "insider",
-  "title": "PRESIDENT AND CEO",
-  "company": "EXTREME NETWORKS INC",
-  "holdings": [
-   {
-    "stockCode": "EXTR",
-    "stockName": "EXTREME NETWORKS INC",
-    "quantity": 1646475
-   }
-  ],
-  "totalNetBuy12m": -2584182.8843
- },
- {
   "id": "NATIONALHEALTHCARECORP-FLATTBENANDERSONSR",
   "name": "FLATT BEN ANDERSON SR",
   "type": "insider",
@@ -44532,36 +46200,6 @@
    }
   ],
   "totalNetBuy12m": -1593000
- },
- {
-  "id": "RGCRESOURCESINC-OliverLawrenceT.",
-  "name": "Oliver Lawrence T.",
-  "type": "insider",
-  "title": "Senior VP and Secretary",
-  "company": "RGC RESOURCES INC",
-  "holdings": [
-   {
-    "stockCode": "RGCO",
-    "stockName": "RGC RESOURCES INC",
-    "quantity": 30146.915
-   }
-  ],
-  "totalNetBuy12m": 400.00446999999997
- },
- {
-  "id": "RGCRESOURCESINC-MilesChristenBrooke",
-  "name": "Miles Christen Brooke",
-  "type": "insider",
-  "title": "VP, Human Resources",
-  "company": "RGC RESOURCES INC",
-  "holdings": [
-   {
-    "stockCode": "RGCO",
-    "stockName": "RGC RESOURCES INC",
-    "quantity": 9937.705
-   }
-  ],
-  "totalNetBuy12m": 199.99149
  },
  {
   "id": "NWPXInfrastructure,Inc.-MONTROSSSCOTTJ",
@@ -44592,21 +46230,6 @@
    }
   ],
   "totalNetBuy12m": 32450.000000000004
- },
- {
-  "id": "VISAINC.-MCINERNEYRYAN",
-  "name": "MCINERNEY RYAN",
-  "type": "insider",
-  "title": "Chief Executive Officer",
-  "company": "VISA INC.",
-  "holdings": [
-   {
-    "stockCode": "V",
-    "stockName": "VISA INC.",
-    "quantity": 21049
-   }
-  ],
-  "totalNetBuy12m": -4391680
  },
  {
   "id": "InteractiveBrokersGroup,Inc.-ConklingLoriA",
@@ -44669,21 +46292,6 @@
   "totalNetBuy12m": -140845.30000000002
  },
  {
-  "id": "RobloxCorp-BaszuckiGregory",
-  "name": "Baszucki Gregory",
-  "type": "insider",
-  "title": "Director",
-  "company": "Roblox Corp",
-  "holdings": [
-   {
-    "stockCode": "RBLX",
-    "stockName": "Roblox Corp",
-    "quantity": 8954718
-   }
-  ],
-  "totalNetBuy12m": -1298823.7342000003
- },
- {
   "id": "AGIInc-ALOEVINICIUSBIRKELAND",
   "name": "ALOE VINICIUS BIRKELAND",
   "type": "insider",
@@ -44697,21 +46305,6 @@
    }
   ],
   "totalNetBuy12m": -3076487.9
- },
- {
-  "id": "FIRSTSOLAR,INC.-GloecklerMarkus",
-  "name": "Gloeckler Markus",
-  "type": "insider",
-  "title": "Chief Technology Officer",
-  "company": "FIRST SOLAR, INC.",
-  "holdings": [
-   {
-    "stockCode": "FSLR",
-    "stockName": "FIRST SOLAR, INC.",
-    "quantity": 10096
-   }
-  ],
-  "totalNetBuy12m": -1115494.5
  },
  {
   "id": "VistraCorp.-BURKEJAMESA",
@@ -44759,21 +46352,6 @@
   "totalNetBuy12m": -32518293.5041
  },
  {
-  "id": "eHealth,Inc.-SOISTMANFRANCISSJR",
-  "name": "SOISTMAN FRANCIS S JR",
-  "type": "insider",
-  "title": "Director",
-  "company": "eHealth, Inc.",
-  "holdings": [
-   {
-    "stockCode": "EHTH",
-    "stockName": "eHealth, Inc.",
-    "quantity": 1052518
-   }
-  ],
-  "totalNetBuy12m": -81709.1299
- },
- {
   "id": "ICFInternational,Inc.-WassonJohn",
   "name": "Wasson John",
   "type": "insider",
@@ -44787,21 +46365,6 @@
    }
   ],
   "totalNetBuy12m": -565251.7209999999
- },
- {
-  "id": "PUBLICSERVICEENTERPRISEGROUPINC-LaRossaRalphA",
-  "name": "LaRossa Ralph A",
-  "type": "insider",
-  "title": "Chair, President and CEO",
-  "company": "PUBLIC SERVICE ENTERPRISE GROUP INC",
-  "holdings": [
-   {
-    "stockCode": "PEG",
-    "stockName": "PUBLIC SERVICE ENTERPRISE GROUP INC",
-    "quantity": 283656.4593
-   }
-  ],
-  "totalNetBuy12m": -312300.024
  },
  {
   "id": "UNITEDBANKSHARESINC/WV-NESSELROADMARKR",
@@ -45074,21 +46637,6 @@
   "totalNetBuy12m": 11601.94
  },
  {
-  "id": "VeriskAnalytics,Inc.-ShavelLee",
-  "name": "Shavel Lee",
-  "type": "insider",
-  "title": "Chief Executive Officer",
-  "company": "Verisk Analytics, Inc.",
-  "holdings": [
-   {
-    "stockCode": "VRSK",
-    "stockName": "Verisk Analytics, Inc.",
-    "quantity": 98490
-   }
-  ],
-  "totalNetBuy12m": -1929957.9500000002
- },
- {
   "id": "AGILYSYSINC-AbdelrahmanJoeAhmedYoussef",
   "name": "Abdelrahman Joe Ahmed Youssef",
   "type": "insider",
@@ -45117,21 +46665,6 @@
    }
   ],
   "totalNetBuy12m": -297539
- },
- {
-  "id": "KaryopharmTherapeuticsInc.-AbateKristin",
-  "name": "Abate Kristin",
-  "type": "insider",
-  "title": "Chief Accounting Officer",
-  "company": "Karyopharm Therapeutics Inc.",
-  "holdings": [
-   {
-    "stockCode": "KPTI",
-    "stockName": "Karyopharm Therapeutics Inc.",
-    "quantity": 23782
-   }
-  ],
-  "totalNetBuy12m": -38.38
  },
  {
   "id": "BRINKERINTERNATIONAL,INC-WareMichaelaM",
@@ -45284,21 +46817,6 @@
   "totalNetBuy12m": -502884
  },
  {
-  "id": "HeritageGlobalInc.-SklarJamesEdward",
-  "name": "Sklar James Edward",
-  "type": "insider",
-  "title": "EVP, Gen Counsel & Secretary",
-  "company": "Heritage Global Inc.",
-  "holdings": [
-   {
-    "stockCode": "HGBL",
-    "stockName": "Heritage Global Inc.",
-    "quantity": 254891
-   }
-  ],
-  "totalNetBuy12m": -3175
- },
- {
   "id": "EmmausLifeSciences,Inc.-LEEWILLISC",
   "name": "LEE WILLIS C",
   "type": "insider",
@@ -45402,21 +46920,6 @@
    }
   ],
   "totalNetBuy12m": 2000000
- },
- {
-  "id": "OrchestraBioMedHoldings,Inc.-ShermanDarren",
-  "name": "Sherman Darren",
-  "type": "insider",
-  "title": "See Remarks",
-  "company": "Orchestra BioMed Holdings, Inc.",
-  "holdings": [
-   {
-    "stockCode": "OBIO",
-    "stockName": "Orchestra BioMed Holdings, Inc.",
-    "quantity": 1154327
-   }
-  ],
-  "totalNetBuy12m": -124790
  },
  {
   "id": "OCULARTHERAPEUTIX,INC-NotmanDonald",
@@ -45552,21 +47055,6 @@
    }
   ],
   "totalNetBuy12m": -8516356.5779
- },
- {
-  "id": "TERADYNE,INC-JOHNSONMERCEDES",
-  "name": "JOHNSON MERCEDES",
-  "type": "insider",
-  "title": "Director",
-  "company": "TERADYNE, INC",
-  "holdings": [
-   {
-    "stockCode": "TER",
-    "stockName": "TERADYNE, INC",
-    "quantity": 6531
-   }
-  ],
-  "totalNetBuy12m": -116450
  },
  {
   "id": "COHERENTCORP.-SKAGGSSTEPHENA",
@@ -46148,21 +47636,6 @@
   "totalNetBuy12m": -804725
  },
  {
-  "id": "XerisBiopharmaHoldings,Inc.-PieperSteven",
-  "name": "Pieper Steven",
-  "type": "insider",
-  "title": "See Remarks",
-  "company": "Xeris Biopharma Holdings, Inc.",
-  "holdings": [
-   {
-    "stockCode": "XERS",
-    "stockName": "Xeris Biopharma Holdings, Inc.",
-    "quantity": 1361053
-   }
-  ],
-  "totalNetBuy12m": -85000
- },
- {
   "id": "indieSemiconductor,Inc.-schillerThomas",
   "name": "schiller Thomas",
   "type": "insider",
@@ -46401,21 +47874,6 @@
    }
   ],
   "totalNetBuy12m": -91967.41
- },
- {
-  "id": "XerisBiopharmaHoldings,Inc.-HechtBeth",
-  "name": "Hecht Beth",
-  "type": "insider",
-  "title": "See Remarks",
-  "company": "Xeris Biopharma Holdings, Inc.",
-  "holdings": [
-   {
-    "stockCode": "XERS",
-    "stockName": "Xeris Biopharma Holdings, Inc.",
-    "quantity": 1144462
-   }
-  ],
-  "totalNetBuy12m": -274987.3334
  },
  {
   "id": "RHYTHMPHARMACEUTICALS,INC.-SmithHunterC",
@@ -47263,21 +48721,6 @@
   "totalNetBuy12m": -138561.5
  },
  {
-  "id": "CoreCivic,Inc.-Carter,ColeG.",
-  "name": "Carter, Cole G.",
-  "type": "insider",
-  "title": "Chief Administrative Officer",
-  "company": "CoreCivic, Inc.",
-  "holdings": [
-   {
-    "stockCode": "CXW",
-    "stockName": "CoreCivic, Inc.",
-    "quantity": 190883
-   }
-  ],
-  "totalNetBuy12m": -777250
- },
- {
   "id": "MarathonPetroleumCorp-LyonShawnM",
   "name": "Lyon Shawn M",
   "type": "insider",
@@ -47458,21 +48901,6 @@
   "totalNetBuy12m": -3661953.2319999994
  },
  {
-  "id": "RoivantSciencesLtd.-VenkerEric",
-  "name": "Venker Eric",
-  "type": "insider",
-  "title": "President & Immunovant CEO",
-  "company": "Roivant Sciences Ltd.",
-  "holdings": [
-   {
-    "stockCode": "ROIV",
-    "stockName": "Roivant Sciences Ltd.",
-    "quantity": 1813063
-   }
-  ],
-  "totalNetBuy12m": -14143392.580000002
- },
- {
   "id": "NCSMultistageHoldings,Inc.-ADVENTINTERNATIONAL,L.P.외2인",
   "name": "ADVENT INTERNATIONAL, L.P. 외 2인",
   "type": "insider",
@@ -47591,21 +49019,6 @@
    }
   ],
   "totalNetBuy12m": 131591.05000000002
- },
- {
-  "id": "LimoneiraCO-HammGregoryC.",
-  "name": "Hamm Gregory C.",
-  "type": "insider",
-  "title": "VP, CFO and Treasurer",
-  "company": "Limoneira CO",
-  "holdings": [
-   {
-    "stockCode": "LMNR",
-    "stockName": "Limoneira CO",
-    "quantity": 86812
-   }
-  ],
-  "totalNetBuy12m": -26776.1
  },
  {
   "id": "CATERPILLARINC-CreedJosephE",
@@ -48808,21 +50221,6 @@
   "totalNetBuy12m": -19646313.8919
  },
  {
-  "id": "AlphabetInc.-ARNOLDFRANCES",
-  "name": "ARNOLD FRANCES",
-  "type": "insider",
-  "title": "Director",
-  "company": "Alphabet Inc.",
-  "holdings": [
-   {
-    "stockCode": "GOOGL",
-    "stockName": "Alphabet Inc.",
-    "quantity": 18914
-   }
-  ],
-  "totalNetBuy12m": -55030.2
- },
- {
   "id": "BRINKERINTERNATIONAL,INC-DePintoJosephMichael",
   "name": "DePinto Joseph Michael",
   "type": "insider",
@@ -49198,21 +50596,6 @@
   "totalNetBuy12m": 34923.94
  },
  {
-  "id": "QUALCOMMINC/DE-GrechPatriciaY",
-  "name": "Grech Patricia Y",
-  "type": "insider",
-  "title": "SVP, Chief Accounting Officer",
-  "company": "QUALCOMM INC/DE",
-  "holdings": [
-   {
-    "stockCode": "QCOM",
-    "stockName": "QUALCOMM INC/DE",
-    "quantity": 427
-   }
-  ],
-  "totalNetBuy12m": -137141.25
- },
- {
   "id": "GARTNERINC-KranichRobinB",
   "name": "Kranich Robin B",
   "type": "insider",
@@ -49361,21 +50744,6 @@
    }
   ],
   "totalNetBuy12m": 9949164.451399999
- },
- {
-  "id": "Xometry,Inc.-RaghavanVaidyanathan",
-  "name": "Raghavan Vaidyanathan",
-  "type": "insider",
-  "title": "Chief Technology Officer",
-  "company": "Xometry, Inc.",
-  "holdings": [
-   {
-    "stockCode": "XMTR",
-    "stockName": "Xometry, Inc.",
-    "quantity": 135777
-   }
-  ],
-  "totalNetBuy12m": -483825
  },
  {
   "id": "Natera,Inc.-FeskoJohn",
@@ -52786,21 +54154,6 @@
   "totalNetBuy12m": 186833
  },
  {
-  "id": "TectonicTherapeutic,Inc.-McNamaraPeter",
-  "name": "McNamara Peter",
-  "type": "insider",
-  "title": "Chief Scientific Officer",
-  "company": "Tectonic Therapeutic, Inc.",
-  "holdings": [
-   {
-    "stockCode": "TECX",
-    "stockName": "Tectonic Therapeutic, Inc.",
-    "quantity": 55328
-   }
-  ],
-  "totalNetBuy12m": -3075.36
- },
- {
   "id": "BRISTOLMYERSSQUIBBCO-HolzerPhilM",
   "name": "Holzer Phil M",
   "type": "insider",
@@ -53099,21 +54452,6 @@
    }
   ],
   "totalNetBuy12m": -1178853.76
- },
- {
-  "id": "CoreWeave,Inc.-McBeeBrannin",
-  "name": "McBee Brannin",
-  "type": "insider",
-  "title": "Chief Development Officer",
-  "company": "CoreWeave, Inc.",
-  "holdings": [
-   {
-    "stockCode": "CRWV",
-    "stockName": "CoreWeave, Inc.",
-    "quantity": 467263
-   }
-  ],
-  "totalNetBuy12m": -109014781.32520002
  },
  {
   "id": "TARGETCORP-KremerMelissaK",
@@ -56420,21 +57758,6 @@
    }
   ],
   "totalNetBuy12m": -719208.812
- },
- {
-  "id": "NewAmsterdamPharmaCoN.V.-KasteleinJohannesJacobPieter",
-  "name": "Kastelein Johannes Jacob Pieter",
-  "type": "insider",
-  "title": "Chief Scientific Officer",
-  "company": "NewAmsterdam Pharma Co N.V.",
-  "holdings": [
-   {
-    "stockCode": "NAMS",
-    "stockName": "NewAmsterdam Pharma Co N.V.",
-    "quantity": 194302
-   }
-  ],
-  "totalNetBuy12m": -3363750
  },
  {
   "id": "VTEX-ScannapiecoAlejandroRaul",
@@ -60053,51 +61376,6 @@
    }
   ],
   "totalNetBuy12m": -725077.6751
- },
- {
-  "id": "CoreWeave,Inc.-VenturoBrianM",
-  "name": "Venturo Brian M",
-  "type": "insider",
-  "title": "Chief Strategy Officer",
-  "company": "CoreWeave, Inc.",
-  "holdings": [
-   {
-    "stockCode": "CRWV",
-    "stockName": "CoreWeave, Inc.",
-    "quantity": 247270
-   }
-  ],
-  "totalNetBuy12m": -542000.12
- },
- {
-  "id": "CoreWeave,Inc.-JainSachin",
-  "name": "Jain Sachin",
-  "type": "insider",
-  "title": "Chief Operating Officer",
-  "company": "CoreWeave, Inc.",
-  "holdings": [
-   {
-    "stockCode": "CRWV",
-    "stockName": "CoreWeave, Inc.",
-    "quantity": 161393
-   }
-  ],
-  "totalNetBuy12m": -1835698.04
- },
- {
-  "id": "CoreWeave,Inc.-BakerJeff",
-  "name": "Baker Jeff",
-  "type": "insider",
-  "title": "Principal Accounting Officer",
-  "company": "CoreWeave, Inc.",
-  "holdings": [
-   {
-    "stockCode": "CRWV",
-    "stockName": "CoreWeave, Inc.",
-    "quantity": 13622
-   }
-  ],
-  "totalNetBuy12m": -544715.8500000001
  },
  {
   "id": "CaesarsEntertainment,Inc.-YunkerBret",
@@ -65674,21 +66952,6 @@
   "totalNetBuy12m": -745000
  },
  {
-  "id": "TWILIOINC-ViggianoAidan",
-  "name": "Viggiano Aidan",
-  "type": "insider",
-  "title": "Chief Financial Officer",
-  "company": "TWILIO INC",
-  "holdings": [
-   {
-    "stockCode": "TWLO",
-    "stockName": "TWILIO INC",
-    "quantity": 109114
-   }
-  ],
-  "totalNetBuy12m": -326863.375
- },
- {
   "id": "LIQTECHINTERNATIONALINC-WowkRobert",
   "name": "Wowk Robert",
   "type": "insider",
@@ -67666,21 +68929,6 @@
   "totalNetBuy12m": -161135.85450000002
  },
  {
-  "id": "StokeTherapeutics,Inc.-AllanJonathan",
-  "name": "Allan Jonathan",
-  "type": "insider",
-  "title": "GENERAL COUNSEL & CORP SEC",
-  "company": "Stoke Therapeutics, Inc.",
-  "holdings": [
-   {
-    "stockCode": "STOK",
-    "stockName": "Stoke Therapeutics, Inc.",
-    "quantity": 24086
-   }
-  ],
-  "totalNetBuy12m": -91639.4297
- },
- {
   "id": "NEWSCORP-DeGrazioMarygrace",
   "name": "DeGrazio Marygrace",
   "type": "insider",
@@ -68174,21 +69422,6 @@
    }
   ],
   "totalNetBuy12m": -7280712.68
- },
- {
-  "id": "Cardlytics,Inc.-GuptaAmit",
-  "name": "Gupta Amit",
-  "type": "insider",
-  "title": "Chief Executive Officer",
-  "company": "Cardlytics, Inc.",
-  "holdings": [
-   {
-    "stockCode": "CDLX",
-    "stockName": "Cardlytics, Inc.",
-    "quantity": 126350
-   }
-  ],
-  "totalNetBuy12m": -53820.266
  },
  {
   "id": "PaciraBioSciences,Inc.-SLONINJONATHAN",
@@ -74971,21 +76204,6 @@
   "totalNetBuy12m": -306423
  },
  {
-  "id": "PrincetonBancorp,Inc.-TUCHMANMARTIN",
-  "name": "TUCHMAN MARTIN",
-  "type": "insider",
-  "title": "Director · 10% Owner",
-  "company": "Princeton Bancorp, Inc.",
-  "holdings": [
-   {
-    "stockCode": "BPRN",
-    "stockName": "Princeton Bancorp, Inc.",
-    "quantity": 639141
-   }
-  ],
-  "totalNetBuy12m": 452730.25200000004
- },
- {
   "id": "StepStonePrivateEquityStrategiesFund-StepStoneGroupLP",
   "name": "StepStone Group LP",
   "type": "insider",
@@ -75391,21 +76609,6 @@
   "totalNetBuy12m": -117063
  },
  {
-  "id": "POWELLINDUSTRIESINC-COPEBRETTALAN",
-  "name": "COPE BRETT ALAN",
-  "type": "insider",
-  "title": "President & CEO",
-  "company": "POWELL INDUSTRIES INC",
-  "holdings": [
-   {
-    "stockCode": "POWL",
-    "stockName": "POWELL INDUSTRIES INC",
-    "quantity": 512733
-   }
-  ],
-  "totalNetBuy12m": -931545
- },
- {
   "id": "INTELCORP-TANLIPBU",
   "name": "TAN LIP BU",
   "type": "insider",
@@ -75608,21 +76811,6 @@
    }
   ],
   "totalNetBuy12m": 153200
- },
- {
-  "id": "BeOneMedicinesLtd.-LeeChanHenry",
-  "name": "Lee Chan Henry",
-  "type": "insider",
-  "title": "SVP, General Counsel",
-  "company": "BeOne Medicines Ltd.",
-  "holdings": [
-   {
-    "stockCode": "ONC",
-    "stockName": "BeOne Medicines Ltd.",
-    "quantity": 325312
-   }
-  ],
-  "totalNetBuy12m": -1297692.3599999999
  },
  {
   "id": "KEMPERCorp-McAnenaStephenJ",
@@ -84334,21 +85522,6 @@
   "totalNetBuy12m": -245620.19999999998
  },
  {
-  "id": "CLOVERHEALTHINVESTMENTS,CORP./DE-ToyAndrew",
-  "name": "Toy Andrew",
-  "type": "insider",
-  "title": "Chief Executive Officer",
-  "company": "CLOVER HEALTH INVESTMENTS, CORP. /DE",
-  "holdings": [
-   {
-    "stockCode": "CLOV",
-    "stockName": "CLOVER HEALTH INVESTMENTS, CORP. /DE",
-    "quantity": 9459316
-   }
-  ],
-  "totalNetBuy12m": -408260.7
- },
- {
   "id": "PennantGroup,Inc.-GuerisoliBrent",
   "name": "Guerisoli Brent",
   "type": "insider",
@@ -85429,21 +86602,6 @@
   "totalNetBuy12m": 249446.0155
  },
  {
-  "id": "JEWETTCAMERONTRADINGCOLTD-OREGONCOMMUNITYFOUNDATION",
-  "name": "OREGON COMMUNITY FOUNDATION",
-  "type": "insider",
-  "title": "10% Owner",
-  "company": "JEWETT CAMERON TRADING CO LTD",
-  "holdings": [
-   {
-    "stockCode": "JCTC",
-    "stockName": "JEWETT CAMERON TRADING CO LTD",
-    "quantity": 562528
-   }
-  ],
-  "totalNetBuy12m": -325611.10000000003
- },
- {
   "id": "TerrenoRealtyCorp-COKEMICHAELA",
   "name": "COKE MICHAEL A",
   "type": "insider",
@@ -86454,15 +87612,6 @@
   "type": "politician",
   "title": "하원의원 · OH06",
   "company": "NVIDIA Corporation - Common Stock",
-  "holdings": [],
-  "totalNetBuy12m": 0
- },
- {
-  "id": "MicrosoftCorporation-CommonStock-MichaelRulli",
-  "name": "Michael Rulli",
-  "type": "politician",
-  "title": "하원의원 · OH06",
-  "company": "Microsoft Corporation - Common Stock",
   "holdings": [],
   "totalNetBuy12m": 0
  },
@@ -89390,21 +90539,6 @@
    }
   ],
   "totalNetBuy12m": 80406
- },
- {
-  "id": "MGICINVESTMENTCORP-MattkeTimothyJ.",
-  "name": "Mattke Timothy J.",
-  "type": "insider",
-  "title": "Chief Executive Officer",
-  "company": "MGIC INVESTMENT CORP",
-  "holdings": [
-   {
-    "stockCode": "MTG",
-    "stockName": "MGIC INVESTMENT CORP",
-    "quantity": 980892.401
-   }
-  ],
-  "totalNetBuy12m": -4184277.421
  },
  {
   "id": "MOHAWKINDUSTRIESINC-ThiersBernard",
@@ -92815,21 +93949,6 @@
   "totalNetBuy12m": -20908476
  },
  {
-  "id": "Verastem,Inc.-PatersonDan",
-  "name": "Paterson Dan",
-  "type": "insider",
-  "title": "President and CEO",
-  "company": "Verastem, Inc.",
-  "holdings": [
-   {
-    "stockCode": "VSTM",
-    "stockName": "Verastem, Inc.",
-    "quantity": 589940
-   }
-  ],
-  "totalNetBuy12m": -7564.62
- },
- {
   "id": "AnteroMidstreamCorp-PearceSheri",
   "name": "Pearce Sheri",
   "type": "insider",
@@ -94793,36 +95912,6 @@
    }
   ],
   "totalNetBuy12m": 0
- },
- {
-  "id": "NationalCineMedia,Inc.-NgRonnieY.",
-  "name": "Ng Ronnie Y.",
-  "type": "insider",
-  "title": "Chief Financial Officer",
-  "company": "National CineMedia, Inc.",
-  "holdings": [
-   {
-    "stockCode": "NCMI",
-    "stockName": "National CineMedia, Inc.",
-    "quantity": 204095
-   }
-  ],
-  "totalNetBuy12m": -4050
- },
- {
-  "id": "NationalCineMedia,Inc.-LesinskiThomasF.",
-  "name": "Lesinski Thomas F.",
-  "type": "insider",
-  "title": "Chief Executive Officer",
-  "company": "National CineMedia, Inc.",
-  "holdings": [
-   {
-    "stockCode": "NCMI",
-    "stockName": "National CineMedia, Inc.",
-    "quantity": 601284
-   }
-  ],
-  "totalNetBuy12m": -211766.1336
  },
  {
   "id": "UltragenyxPharmaceuticalInc.-ParschauerKarahHerdman",
@@ -100292,21 +101381,6 @@
    }
   ],
   "totalNetBuy12m": -224137.84
- },
- {
-  "id": "OricPharmaceuticals,Inc.-HeymanRichardA.",
-  "name": "Heyman Richard A.",
-  "type": "insider",
-  "title": "Director",
-  "company": "Oric Pharmaceuticals, Inc.",
-  "holdings": [
-   {
-    "stockCode": "ORIC",
-    "stockName": "Oric Pharmaceuticals, Inc.",
-    "quantity": 45300
-   }
-  ],
-  "totalNetBuy12m": -157462
  },
  {
   "id": "MANHATTANBRIDGECAPITAL,INC-RANASSAF",
