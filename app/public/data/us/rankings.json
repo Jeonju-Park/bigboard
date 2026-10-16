@@ -7,23 +7,23 @@
     "personName": "NIPPON LIFE INSURANCE CO",
     "personType": "insider",
     "company": "Corebridge Financial, Inc.",
-    "amount": 25371100.795199998
+    "amount": 25214238.119400002
    },
    {
     "rank": 2,
+    "personId": "BorrDrillingLtd-TroimTorOlav",
+    "personName": "Troim Tor Olav",
+    "personType": "insider",
+    "company": "Borr Drilling Ltd",
+    "amount": 22787650
+   },
+   {
+    "rank": 3,
     "personId": "GameStopCorp.-CohenRyan",
     "personName": "Cohen Ryan",
     "personType": "insider",
     "company": "GameStop Corp.",
     "amount": 22774727.5
-   },
-   {
-    "rank": 3,
-    "personId": "BorrDrillingLtd-TroimTorOlav",
-    "personName": "Troim Tor Olav",
-    "personType": "insider",
-    "company": "Borr Drilling Ltd",
-    "amount": 19245100
    },
    {
     "rank": 4,
@@ -43,38 +43,30 @@
    },
    {
     "rank": 6,
-    "personId": "PEDEVCOCORP-KUKESSIMONG외1인",
-    "personName": "KUKES SIMON G 외 1인",
-    "personType": "insider",
-    "company": "PEDEVCO CORP",
-    "amount": 1911910
-   },
-   {
-    "rank": 7,
-    "personId": "PROTHENACORPPUBLICLTDCO-SCULLYWILLIAMP",
-    "personName": "SCULLY WILLIAM P",
-    "personType": "insider",
-    "company": "PROTHENA CORP PUBLIC LTD CO",
-    "amount": 1821054
-   },
-   {
-    "rank": 8,
-    "personId": "TRexBio,Inc.-SVLSFVI,LLC외2인",
-    "personName": "SVLSF VI, LLC 외 2인",
-    "personType": "insider",
-    "company": "TRex Bio, Inc.",
-    "amount": 1299998
-   },
-   {
-    "rank": 9,
     "personId": "Gold.com,Inc.-TetherGlobalInvestmentsFund,S.I.C.A.F.,S.A.외2인",
     "personName": "Tether Global Investments Fund, S.I.C.A.F., S.A. 외 2인",
     "personType": "insider",
     "company": "Gold.com, Inc.",
-    "amount": 1280534.7696
+    "amount": 3983018.7236
    },
    {
-    "rank": 10,
+    "rank": 7,
+    "personId": "FrazierLifeSciencesAcquisitionCorp.II-ChaAlbert외4인",
+    "personName": "Cha Albert 외 4인",
+    "personType": "insider",
+    "company": "Frazier Life Sciences Acquisition Corp. II",
+    "amount": 3000000
+   },
+   {
+    "rank": 8,
+    "personId": "TRexBio,Inc.-AlexandriaVentureInvestments,LLC",
+    "personName": "Alexandria Venture Investments, LLC",
+    "personType": "insider",
+    "company": "TRex Bio, Inc.",
+    "amount": 2499994
+   },
+   {
+    "rank": 9,
     "personId": "NewERAEnergy&Digital,Inc.-MCCARTHYKENTC외2인",
     "personName": "MCCARTHY KENT C 외 2인",
     "personType": "insider",
@@ -82,12 +74,20 @@
     "amount": 1192350
    },
    {
-    "rank": 11,
-    "personId": "INNOVATIVEINDUSTRIALPROPERTIESINC-GoldAlanD",
-    "personName": "Gold Alan D",
+    "rank": 10,
+    "personId": "PROTHENACORPPUBLICLTDCO-SCULLYWILLIAMP",
+    "personName": "SCULLY WILLIAM P",
     "personType": "insider",
-    "company": "INNOVATIVE INDUSTRIAL PROPERTIES INC",
-    "amount": 1000000
+    "company": "PROTHENA CORP PUBLIC LTD CO",
+    "amount": 920048.9999999999
+   },
+   {
+    "rank": 11,
+    "personId": "Sprinklr,Inc.-WARDJRSTEPHENM",
+    "personName": "WARD JR STEPHEN M",
+    "personType": "insider",
+    "company": "Sprinklr, Inc.",
+    "amount": 850500
    },
    {
     "rank": 12,
@@ -99,14 +99,22 @@
    },
    {
     "rank": 13,
+    "personId": "ELLSWORTHGROWTH&INCOMEFUNDLTD-SabaCapitalManagement,L.P.",
+    "personName": "Saba Capital Management, L.P.",
+    "personType": "insider",
+    "company": "ELLSWORTH GROWTH & INCOME FUND LTD",
+    "amount": 834052.42
+   },
+   {
+    "rank": 14,
     "personId": "Agora,Inc.-ZhaoBin",
     "personName": "Zhao Bin",
     "personType": "insider",
     "company": "Agora, Inc.",
-    "amount": 695746.9476000001
+    "amount": 797268.155
    },
    {
-    "rank": 14,
+    "rank": 15,
     "personId": "DreamlandLtd-SetoWaiYue",
     "personName": "Seto Wai Yue",
     "personType": "insider",
@@ -114,20 +122,12 @@
     "amount": 600000
    },
    {
-    "rank": 15,
+    "rank": 16,
     "personId": "MissionProduce,Inc.-GonzalezLuisA",
     "personName": "Gonzalez Luis A",
     "personType": "insider",
     "company": "Mission Produce, Inc.",
     "amount": 594785.36
-   },
-   {
-    "rank": 16,
-    "personId": "ELLSWORTHGROWTH&INCOMEFUNDLTD-SabaCapitalManagement,L.P.",
-    "personName": "Saba Capital Management, L.P.",
-    "personType": "insider",
-    "company": "ELLSWORTH GROWTH & INCOME FUND LTD",
-    "amount": 509485.14999999997
    },
    {
     "rank": 17,
@@ -147,19 +147,19 @@
    },
    {
     "rank": 19,
+    "personId": "MEXICOEQUITY&INCOMEFUNDINC-SabaCapitalManagement,L.P.",
+    "personName": "Saba Capital Management, L.P.",
+    "personType": "insider",
+    "company": "MEXICO EQUITY & INCOME FUND INC",
+    "amount": 254285.08
+   },
+   {
+    "rank": 20,
     "personId": "OneMedNetCorp-YuJeffrey",
     "personName": "Yu Jeffrey",
     "personType": "insider",
     "company": "OneMedNet Corp",
     "amount": 249998.04
-   },
-   {
-    "rank": 20,
-    "personId": "RetensionPharmaceuticals,Inc.-KellerEricL.",
-    "personName": "Keller Eric L.",
-    "personType": "insider",
-    "company": "Retension Pharmaceuticals, Inc.",
-    "amount": 249600
    }
   ],
   "30": [
@@ -185,7 +185,7 @@
     "personName": "NIPPON LIFE INSURANCE CO",
     "personType": "insider",
     "company": "Corebridge Financial, Inc.",
-    "amount": 184012060.9957
+    "amount": 185428200.43239996
    },
    {
     "rank": 4,
@@ -225,7 +225,7 @@
     "personName": "Troim Tor Olav",
     "personType": "insider",
     "company": "Borr Drilling Ltd",
-    "amount": 42153075
+    "amount": 45695625
    },
    {
     "rank": 9,
@@ -351,19 +351,19 @@
    },
    {
     "rank": 4,
+    "personId": "CorebridgeFinancial,Inc.-NIPPONLIFEINSURANCECO",
+    "personName": "NIPPON LIFE INSURANCE CO",
+    "personType": "insider",
+    "company": "Corebridge Financial, Inc.",
+    "amount": 219661435.1657
+   },
+   {
+    "rank": 5,
     "personId": "MadisonAirSolutionsCorp-BERTARELLIERNESTO외1인",
     "personName": "BERTARELLI ERNESTO 외 1인",
     "personType": "insider",
     "company": "Madison Air Solutions Corp",
     "amount": 218999984.28
-   },
-   {
-    "rank": 5,
-    "personId": "CorebridgeFinancial,Inc.-NIPPONLIFEINSURANCECO",
-    "personName": "NIPPON LIFE INSURANCE CO",
-    "personType": "insider",
-    "company": "Corebridge Financial, Inc.",
-    "amount": 210859493.75930002
    },
    {
     "rank": 6,
@@ -459,7 +459,7 @@
     "personName": "Troim Tor Olav",
     "personType": "insider",
     "company": "Borr Drilling Ltd",
-    "amount": 51257845
+    "amount": 54800395
    },
    {
     "rank": 18,
@@ -491,14 +491,6 @@
   "7": [
    {
     "rank": 1,
-    "personId": "MedlineInc.-GICPrivateLtd외2인",
-    "personName": "GIC Private Ltd 외 2인",
-    "personType": "insider",
-    "company": "Medline Inc.",
-    "amount": 274767093.05
-   },
-   {
-    "rank": 2,
     "personId": "ElasticN.V.-SchuurmanSteven",
     "personName": "Schuurman Steven",
     "personType": "insider",
@@ -506,23 +498,23 @@
     "amount": 188300000
    },
    {
-    "rank": 3,
+    "rank": 2,
     "personId": "TALOSENERGYINC.-ControlEmpresarialdeCapitalesS.A.deC.V.",
     "personName": "Control Empresarial de Capitales S.A. de C.V.",
     "personType": "insider",
     "company": "TALOS ENERGY INC.",
-    "amount": 106840463
+    "amount": 158710400.0582
+   },
+   {
+    "rank": 3,
+    "personId": "KinetikHoldingsInc.-ISQGlobalFundIIGPLLC외4인",
+    "personName": "ISQ Global Fund II GP LLC 외 4인",
+    "personType": "insider",
+    "company": "Kinetik Holdings Inc.",
+    "amount": 121259523.0223
    },
    {
     "rank": 4,
-    "personId": "Sharplink,Inc.-LubinJosephMichael",
-    "personName": "Lubin Joseph Michael",
-    "personType": "insider",
-    "company": "Sharplink, Inc.",
-    "amount": 47629627.28
-   },
-   {
-    "rank": 5,
     "personId": "AristaNetworks,Inc.-UllalJayshree",
     "personName": "Ullal Jayshree",
     "personType": "insider",
@@ -530,7 +522,7 @@
     "amount": 34417689.8944
    },
    {
-    "rank": 6,
+    "rank": 5,
     "personId": "Everpure,Inc.-ColgroveJohn",
     "personName": "Colgrove John",
     "personType": "insider",
@@ -538,7 +530,7 @@
     "amount": 30852839.09
    },
    {
-    "rank": 7,
+    "rank": 6,
     "personId": "DellTechnologiesInc.-SilverLakePartnersIV,L.P.외4인",
     "personName": "Silver Lake Partners IV, L.P. 외 4인",
     "personType": "insider",
@@ -546,7 +538,7 @@
     "amount": 29386956.25
    },
    {
-    "rank": 8,
+    "rank": 7,
     "personId": "DellTechnologiesInc.-SLSPV-2,L.P.외4인",
     "personName": "SL SPV-2, L.P. 외 4인",
     "personType": "insider",
@@ -554,20 +546,28 @@
     "amount": 25858975.490000002
    },
    {
-    "rank": 9,
+    "rank": 8,
     "personId": "UNITEDTHERAPEUTICSCorp-ROTHBLATTMARTINEA",
     "personName": "ROTHBLATT MARTINE A",
     "personType": "insider",
     "company": "UNITED THERAPEUTICS Corp",
-    "amount": 20666935.3121
+    "amount": 20720889.5002
    },
    {
-    "rank": 10,
+    "rank": 9,
     "personId": "HingeHealth,Inc.-MecklenburgGabrielM.I.",
     "personName": "Mecklenburg Gabriel M.I.",
     "personType": "insider",
     "company": "Hinge Health, Inc.",
     "amount": 20626371.3794
+   },
+   {
+    "rank": 10,
+    "personId": "BJ'sWholesaleClubHoldings,Inc.-EddyRobertW.",
+    "personName": "Eddy Robert W.",
+    "personType": "insider",
+    "company": "BJ's Wholesale Club Holdings, Inc.",
+    "amount": 19669823.44
    },
    {
     "rank": 11,
@@ -595,14 +595,6 @@
    },
    {
     "rank": 14,
-    "personId": "PBFEnergyInc.-ControlEmpresarialdeCapitalesS.A.deC.V.",
-    "personName": "Control Empresarial de Capitales S.A. de C.V.",
-    "personType": "insider",
-    "company": "PBF Energy Inc.",
-    "amount": 14965434
-   },
-   {
-    "rank": 15,
     "personId": "DellTechnologiesInc.-SilverLakePartnersVDE(AIV),L.P.외4인",
     "personName": "Silver Lake Partners V DE (AIV), L.P. 외 4인",
     "personType": "insider",
@@ -610,12 +602,20 @@
     "amount": 14845272.07
    },
    {
-    "rank": 16,
-    "personId": "KinetikHoldingsInc.-ISQGlobalFundIIGPLLC외4인",
-    "personName": "ISQ Global Fund II GP LLC 외 4인",
+    "rank": 15,
+    "personId": "FermiInc.-NEUGEBAUERTOBYR외1인",
+    "personName": "NEUGEBAUER TOBY R 외 1인",
     "personType": "insider",
-    "company": "Kinetik Holdings Inc.",
-    "amount": 11719523.0223
+    "company": "Fermi Inc.",
+    "amount": 14355868.280000001
+   },
+   {
+    "rank": 16,
+    "personId": "CrowdStrikeHoldings,Inc.-KurtzGeorge",
+    "personName": "Kurtz George",
+    "personType": "insider",
+    "company": "CrowdStrike Holdings, Inc.",
+    "amount": 13168954.120000001
    },
    {
     "rank": 17,
@@ -627,27 +627,27 @@
    },
    {
     "rank": 18,
-    "personId": "Everpure,Inc.-GiancarloCharlesH",
-    "personName": "Giancarlo Charles H",
+    "personId": "SamsaraInc.-BiswasSanjit",
+    "personName": "Biswas Sanjit",
     "personType": "insider",
-    "company": "Everpure, Inc.",
-    "amount": 10761313.78
+    "company": "Samsara Inc.",
+    "amount": 10999921.588700002
    },
    {
     "rank": 19,
-    "personId": "BumbleInc.-BXBuzzML-1GPLLC외9인",
-    "personName": "BX Buzz ML-1 GP LLC 외 9인",
+    "personId": "SamsaraInc.-BicketJohn",
+    "personName": "Bicket John",
     "personType": "insider",
-    "company": "Bumble Inc.",
-    "amount": 9789181.473000001
+    "company": "Samsara Inc.",
+    "amount": 10999457.7306
    },
    {
     "rank": 20,
-    "personId": "BumbleInc.-BlackstoneHoldingsIIIGPManagementL.L.C.외9인",
-    "personName": "Blackstone Holdings III GP Management L.L.C. 외 9인",
+    "personId": "BeOneMedicinesLtd.-WangXiaodong",
+    "personName": "Wang Xiaodong",
     "personType": "insider",
-    "company": "Bumble Inc.",
-    "amount": 9789181.473000001
+    "company": "BeOne Medicines Ltd.",
+    "amount": 10890073.926800001
    }
   ],
   "30": [
@@ -733,11 +733,11 @@
    },
    {
     "rank": 11,
-    "personId": "AuroraInnovation,Inc.-UberTechnologies,Inc",
-    "personName": "Uber Technologies, Inc",
+    "personId": "TALOSENERGYINC.-ControlEmpresarialdeCapitalesS.A.deC.V.",
+    "personName": "Control Empresarial de Capitales S.A. de C.V.",
     "personType": "insider",
-    "company": "Aurora Innovation, Inc.",
-    "amount": 182238436.255
+    "company": "TALOS ENERGY INC.",
+    "amount": 166851008.0582
    },
    {
     "rank": 12,
@@ -749,22 +749,14 @@
    },
    {
     "rank": 13,
-    "personId": "DellTechnologiesInc.-SilverLakePartnersIV,L.P.외4인",
-    "personName": "Silver Lake Partners IV, L.P. 외 4인",
+    "personId": "KinetikHoldingsInc.-ISQGlobalFundIIGPLLC외4인",
+    "personName": "ISQ Global Fund II GP LLC 외 4인",
     "personType": "insider",
-    "company": "Dell Technologies Inc.",
-    "amount": 159206387.71
+    "company": "Kinetik Holdings Inc.",
+    "amount": 148905470.6899
    },
    {
     "rank": 14,
-    "personId": "TALOSENERGYINC.-ControlEmpresarialdeCapitalesS.A.deC.V.",
-    "personName": "Control Empresarial de Capitales S.A. de C.V.",
-    "personType": "insider",
-    "company": "TALOS ENERGY INC.",
-    "amount": 140560692.7
-   },
-   {
-    "rank": 15,
     "personId": "CrowdStrikeHoldings,Inc.-PodbereBurtW.",
     "personName": "Podbere Burt W.",
     "personType": "insider",
@@ -772,23 +764,15 @@
     "amount": 133561364.04
    },
    {
-    "rank": 16,
-    "personId": "DellTechnologiesInc.-SLSPV-2,L.P.외4인",
-    "personName": "SL SPV-2, L.P. 외 4인",
+    "rank": 15,
+    "personId": "DellTechnologiesInc.-SilverLakePartnersIV,L.P.외4인",
+    "personName": "Silver Lake Partners IV, L.P. 외 4인",
     "personType": "insider",
     "company": "Dell Technologies Inc.",
-    "amount": 132277175.10000001
+    "amount": 128139035.74000001
    },
    {
-    "rank": 17,
-    "personId": "Workday,Inc.-DUFFIELDDAVIDA",
-    "personName": "DUFFIELD DAVID A",
-    "personType": "insider",
-    "company": "Workday, Inc.",
-    "amount": 130409787.19890001
-   },
-   {
-    "rank": 18,
+    "rank": 16,
     "personId": "MedpaceHoldings,Inc.-TroendleAugustJ.",
     "personName": "Troendle August J.",
     "personType": "insider",
@@ -796,7 +780,7 @@
     "amount": 125857017.13999999
    },
    {
-    "rank": 19,
+    "rank": 17,
     "personId": "NebiusGroupN.V.-NaveOphir",
     "personName": "Nave Ophir",
     "personType": "insider",
@@ -804,12 +788,28 @@
     "amount": 117765467.66
    },
    {
-    "rank": 20,
+    "rank": 18,
+    "personId": "Workday,Inc.-DUFFIELDDAVIDA",
+    "personName": "DUFFIELD DAVID A",
+    "personType": "insider",
+    "company": "Workday, Inc.",
+    "amount": 111846164.45050001
+   },
+   {
+    "rank": 19,
     "personId": "KanzhunLtd-ZhaoPengJonathan",
     "personName": "Zhao Peng Jonathan",
     "personType": "insider",
     "company": "Kanzhun Ltd",
     "amount": 109958228
+   },
+   {
+    "rank": 20,
+    "personId": "MINERALRITECorp-HendricksLloydBernardIII",
+    "personName": "Hendricks Lloyd Bernard III",
+    "personType": "insider",
+    "company": "MINERALRITE Corp",
+    "amount": 106724935.24
    }
   ],
   "90": [
