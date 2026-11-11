@@ -1,6 +1,6 @@
 {
  "market": "us",
- "lastUpdated": "2026-11-10T03:19:49.635Z",
+ "lastUpdated": "2026-11-11T01:07:54.482Z",
  "sources": [
   "미국 증권거래위원회(SEC) EDGAR — Form 4 임원·주요주주 소유변동 신고",
   "미국 증권거래위원회(SEC) EDGAR — 13F-HR 기관투자자 분기 보유 신고",
@@ -8,15 +8,15 @@
   "Finnhub — 미국 주식 시세·기업정보 (PER·PBR 은 Finnhub 산출값)"
  ],
  "counts": {
-  "disclosures": 16669,
-  "persons": 9122,
+  "disclosures": 16670,
+  "persons": 9123,
   "stocks": 3096
  },
  "officialsAsOf": null,
  "priceDataAvailable": true,
  "sparklineAvailable": false,
  "skipped": {
-  "total": 101098,
+  "total": 102480,
   "reasons": {
    "시장 거래(P/S) 없음": 117,
    "순증감 0 (매수·매도 상쇄)": 1,
@@ -31,7 +31,7 @@
    "시장 거래 아님 — 전환": 9,
    "시장 거래 아님 — 코드 U": 18,
    "시장 거래 아님 — 옵션 행사(만기)": 1,
-   "주식·옵션 거래 없음": 153,
+   "주식·옵션 거래 없음": 154,
    "자산 종류 OT": 23,
    "자산 종류 GS": 122,
    "자산 종류 PS": 4,

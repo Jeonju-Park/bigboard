@@ -1,5 +1,35 @@
 [
  {
+  "id": "house-20024921-0",
+  "personName": "David Kustoff",
+  "personType": "politician",
+  "title": "하원의원 · TN08",
+  "company": "Warner Bros. Discovery, Inc. - Series A Common Stock",
+  "stockCode": "WBD",
+  "direction": "sell",
+  "unitPrice": null,
+  "quantity": null,
+  "totalAmount": null,
+  "tradeDate": "2026-10-07",
+  "discloseDate": "2026-11-09",
+  "reportReason": "주식 거래",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": null,
+  "holdingAfter": null,
+  "details": [],
+  "sourceUrl": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20024921.pdf",
+  "isAmended": false,
+  "amountRange": {
+   "min": 1001,
+   "max": 15000
+  },
+  "ownerType": "joint",
+  "transactionCode": "S",
+  "assetType": "ST",
+  "filingLagDays": 33
+ },
+ {
   "id": "0002145730-26-000006",
   "personName": "Hamble International Inc. 외 1인",
   "personType": "insider",
