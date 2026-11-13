@@ -1,5 +1,35 @@
 [
  {
+  "id": "house-20035821-0",
+  "personName": "Richard W. Allen",
+  "personType": "politician",
+  "title": "하원의원 · GA12",
+  "company": "Sherwin-Williams Company",
+  "stockCode": "SHW",
+  "direction": "sell",
+  "unitPrice": null,
+  "quantity": null,
+  "totalAmount": null,
+  "tradeDate": "2026-10-09",
+  "discloseDate": "2026-11-11",
+  "reportReason": "주식 거래",
+  "isPlanned": false,
+  "dDay": null,
+  "holdingBefore": null,
+  "holdingAfter": null,
+  "details": [],
+  "sourceUrl": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035821.pdf",
+  "isAmended": false,
+  "amountRange": {
+   "min": 1001,
+   "max": 15000
+  },
+  "ownerType": "spouse",
+  "transactionCode": "S",
+  "assetType": "ST",
+  "filingLagDays": 33
+ },
+ {
   "id": "house-20035806-0",
   "personName": "Julie Johnson",
   "personType": "politician",
