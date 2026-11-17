@@ -1,5 +1,1078 @@
 [
  {
+  "id": "0001423053",
+  "name": "시타델",
+  "periodOfReport": "2026-09-30",
+  "filedAt": "2026-11-16",
+  "totalValue": 899604780240,
+  "holdingCount": 13843,
+  "holdings": [
+   {
+    "ticker": null,
+    "cusip": "78462F103",
+    "name": "STATE STR SPDR S&P 500 ETF T",
+    "value": 34218674259,
+    "shares": 44869300,
+    "putCall": "call"
+   },
+   {
+    "ticker": null,
+    "cusip": "78462F103",
+    "name": "STATE STR SPDR S&P 500 ETF T",
+    "value": 29535821007,
+    "shares": 38728900,
+    "putCall": "put"
+   },
+   {
+    "ticker": null,
+    "cusip": "46090E103",
+    "name": "INVESCO QQQ TR",
+    "value": 28951194858,
+    "shares": 39135400,
+    "putCall": "put"
+   },
+   {
+    "ticker": null,
+    "cusip": "46090E103",
+    "name": "INVESCO QQQ TR",
+    "value": 19631942283,
+    "shares": 26537900,
+    "putCall": "call"
+   },
+   {
+    "ticker": "META",
+    "cusip": "30303M102",
+    "name": "META PLATFORMS INC",
+    "value": 18333420616,
+    "shares": 25281200,
+    "putCall": "call"
+   },
+   {
+    "ticker": "MU",
+    "cusip": "595112103",
+    "name": "MICRON TECHNOLOGY INC",
+    "value": 16723398621,
+    "shares": 15701100,
+    "putCall": "put"
+   },
+   {
+    "ticker": "MU",
+    "cusip": "595112103",
+    "name": "MICRON TECHNOLOGY INC",
+    "value": 15926163786,
+    "shares": 14952600,
+    "putCall": "call"
+   },
+   {
+    "ticker": "NVDA",
+    "cusip": "67066G104",
+    "name": "NVIDIA CORPORATION",
+    "value": 13451696190,
+    "shares": 58900500,
+    "putCall": "call"
+   },
+   {
+    "ticker": "AMD",
+    "cusip": "007903107",
+    "name": "ADVANCED MICRO DEVICES INC",
+    "value": 11940698736,
+    "shares": 19518600,
+    "putCall": "call"
+   },
+   {
+    "ticker": "AAPL",
+    "cusip": "037833100",
+    "name": "APPLE INC",
+    "value": 11622497906,
+    "shares": 34900300,
+    "putCall": "call"
+   },
+   {
+    "ticker": null,
+    "cusip": "464287200",
+    "name": "ISHARES TR",
+    "value": 11233213626,
+    "shares": 14667642,
+    "putCall": null
+   },
+   {
+    "ticker": "AMD",
+    "cusip": "007903107",
+    "name": "ADVANCED MICRO DEVICES INC",
+    "value": 10494559272,
+    "shares": 17154700,
+    "putCall": "put"
+   },
+   {
+    "ticker": "MSFT",
+    "cusip": "594918104",
+    "name": "MICROSOFT CORP",
+    "value": 9998472600,
+    "shares": 19494000,
+    "putCall": "call"
+   },
+   {
+    "ticker": "SNDK",
+    "cusip": "80004C200",
+    "name": "SANDISK CORP",
+    "value": 9953679285,
+    "shares": 5720867,
+    "putCall": "call"
+   },
+   {
+    "ticker": "TSLA",
+    "cusip": "88160R101",
+    "name": "TESLA INC",
+    "value": 9715088091,
+    "shares": 27381100,
+    "putCall": "call"
+   },
+   {
+    "ticker": "SNDK",
+    "cusip": "80004C200",
+    "name": "SANDISK CORP",
+    "value": 9422635279,
+    "shares": 5415650,
+    "putCall": "put"
+   },
+   {
+    "ticker": "NVDA",
+    "cusip": "67066G104",
+    "name": "NVIDIA CORPORATION",
+    "value": 8667728978,
+    "shares": 37953100,
+    "putCall": "put"
+   },
+   {
+    "ticker": "TSLA",
+    "cusip": "88160R101",
+    "name": "TESLA INC",
+    "value": 8663927985,
+    "shares": 24418500,
+    "putCall": "put"
+   },
+   {
+    "ticker": "GOOGL",
+    "cusip": "02079K305",
+    "name": "ALPHABET INC",
+    "value": 8377040496,
+    "shares": 24346200,
+    "putCall": "call"
+   },
+   {
+    "ticker": null,
+    "cusip": "464287655",
+    "name": "ISHARES TR",
+    "value": 8372770122,
+    "shares": 30129800,
+    "putCall": "put"
+   },
+   {
+    "ticker": "AAPL",
+    "cusip": "037833100",
+    "name": "APPLE INC",
+    "value": 7965838400,
+    "shares": 23920000,
+    "putCall": "put"
+   },
+   {
+    "ticker": "META",
+    "cusip": "30303M102",
+    "name": "META PLATFORMS INC",
+    "value": 7086749032,
+    "shares": 9772400,
+    "putCall": "put"
+   },
+   {
+    "ticker": null,
+    "cusip": "464287655",
+    "name": "ISHARES TR",
+    "value": 7017333858,
+    "shares": 25252200,
+    "putCall": "call"
+   },
+   {
+    "ticker": "MSFT",
+    "cusip": "594918104",
+    "name": "MICROSOFT CORP",
+    "value": 6864858760,
+    "shares": 13384400,
+    "putCall": "put"
+   },
+   {
+    "ticker": "GLD",
+    "cusip": "78463V107",
+    "name": "SPDR GOLD TR",
+    "value": 6182785064,
+    "shares": 16234600,
+    "putCall": "call"
+   },
+   {
+    "ticker": "AMZN",
+    "cusip": "023135106",
+    "name": "AMAZON COM INC",
+    "value": 5377304790,
+    "shares": 21582600,
+    "putCall": "call"
+   },
+   {
+    "ticker": null,
+    "cusip": "92189F676",
+    "name": "VANECK ETF TRUST",
+    "value": 4275606300,
+    "shares": 7020700,
+    "putCall": "call"
+   },
+   {
+    "ticker": null,
+    "cusip": "874039100",
+    "name": "TAIWAN SEMICONDUCTOR MANUFAC",
+    "value": 4256298319,
+    "shares": 9330100,
+    "putCall": "put"
+   },
+   {
+    "ticker": "GOOGL",
+    "cusip": "02079K305",
+    "name": "ALPHABET INC",
+    "value": 4119222536,
+    "shares": 11971700,
+    "putCall": "put"
+   },
+   {
+    "ticker": "AMZN",
+    "cusip": "023135106",
+    "name": "AMAZON COM INC",
+    "value": 4099813080,
+    "shares": 16455200,
+    "putCall": "put"
+   },
+   {
+    "ticker": null,
+    "cusip": "464288513",
+    "name": "ISHARES TR",
+    "value": 3972099334,
+    "shares": 51445400,
+    "putCall": "put"
+   },
+   {
+    "ticker": "GOOGL",
+    "cusip": "02079K107",
+    "name": "ALPHABET INC",
+    "value": 3725753382,
+    "shares": 10934300,
+    "putCall": "call"
+   },
+   {
+    "ticker": null,
+    "cusip": "922908363",
+    "name": "VANGUARD INDEX FDS",
+    "value": 3625618866,
+    "shares": 5173100,
+    "putCall": "put"
+   },
+   {
+    "ticker": "GS",
+    "cusip": "38141G104",
+    "name": "GOLDMAN SACHS GROUP INC",
+    "value": 3583973016,
+    "shares": 3980600,
+    "putCall": "call"
+   },
+   {
+    "ticker": "PLTR",
+    "cusip": "69608A108",
+    "name": "PALANTIR TECHNOLOGIES INC",
+    "value": 3565079475,
+    "shares": 19059500,
+    "putCall": "call"
+   },
+   {
+    "ticker": "AVGO",
+    "cusip": "11135F101",
+    "name": "BROADCOM INC",
+    "value": 3474111956,
+    "shares": 9892400,
+    "putCall": "call"
+   },
+   {
+    "ticker": null,
+    "cusip": "92189F676",
+    "name": "VANECK ETF TRUST",
+    "value": 3426599400,
+    "shares": 5626600,
+    "putCall": "put"
+   },
+   {
+    "ticker": "INTC",
+    "cusip": "458140100",
+    "name": "INTEL CORP",
+    "value": 3378054218,
+    "shares": 28096600,
+    "putCall": "call"
+   },
+   {
+    "ticker": "DELL",
+    "cusip": "24703L202",
+    "name": "DELL TECHNOLOGIES INC",
+    "value": 3324423410,
+    "shares": 6179800,
+    "putCall": "put"
+   },
+   {
+    "ticker": null,
+    "cusip": "464287432",
+    "name": "ISHARES TR",
+    "value": 3287659486,
+    "shares": 42268700,
+    "putCall": "put"
+   },
+   {
+    "ticker": "STX",
+    "cusip": "G7997R103",
+    "name": "SEAGATE TECHNOLOGY HLDNGS PL",
+    "value": 3223670534,
+    "shares": 3495100,
+    "putCall": "put"
+   },
+   {
+    "ticker": null,
+    "cusip": "874039100",
+    "name": "TAIWAN SEMICONDUCTOR MANUFAC",
+    "value": 3192828191,
+    "shares": 6998900,
+    "putCall": "call"
+   },
+   {
+    "ticker": null,
+    "cusip": "464286400",
+    "name": "ISHARES INC",
+    "value": 3166305875,
+    "shares": 85001500,
+    "putCall": "call"
+   },
+   {
+    "ticker": "SPCX",
+    "cusip": "84615Q103",
+    "name": "SPACE EXPLORATION TECHN CORP",
+    "value": 3103250544,
+    "shares": 20570400,
+    "putCall": "call"
+   },
+   {
+    "ticker": "MSFT",
+    "cusip": "594918104",
+    "name": "MICROSOFT CORP",
+    "value": 2995257526,
+    "shares": 5839847,
+    "putCall": null
+   },
+   {
+    "ticker": "INTC",
+    "cusip": "458140100",
+    "name": "INTEL CORP",
+    "value": 2837957012,
+    "shares": 23604400,
+    "putCall": "put"
+   },
+   {
+    "ticker": "AVGO",
+    "cusip": "11135F101",
+    "name": "BROADCOM INC",
+    "value": 2825183074,
+    "shares": 8044600,
+    "putCall": "put"
+   },
+   {
+    "ticker": "GLD",
+    "cusip": "78463V107",
+    "name": "SPDR GOLD TR",
+    "value": 2774495568,
+    "shares": 7285200,
+    "putCall": "put"
+   },
+   {
+    "ticker": null,
+    "cusip": "464287432",
+    "name": "ISHARES TR",
+    "value": 2747228490,
+    "shares": 35320500,
+    "putCall": "call"
+   },
+   {
+    "ticker": "PLTR",
+    "cusip": "69608A108",
+    "name": "PALANTIR TECHNOLOGIES INC",
+    "value": 2729227845,
+    "shares": 14590900,
+    "putCall": "put"
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1423053/000110465926128228/0001104659-26-128228-index.htm"
+ },
+ {
+  "id": "0001067983",
+  "name": "버크셔 해서웨이",
+  "periodOfReport": "2026-09-30",
+  "filedAt": "2026-11-16",
+  "totalValue": 304196581325,
+  "holdingCount": 30,
+  "holdings": [
+   {
+    "ticker": "AAPL",
+    "cusip": "037833100",
+    "name": "APPLE INC",
+    "value": 75901188420,
+    "shares": 227917808,
+    "putCall": null
+   },
+   {
+    "ticker": "AXP",
+    "cusip": "025816109",
+    "name": "AMERICAN EXPRESS CO",
+    "value": 46104813870,
+    "shares": 151610700,
+    "putCall": null
+   },
+   {
+    "ticker": "KO",
+    "cusip": "191216100",
+    "name": "COCA COLA CO",
+    "value": 34432000000,
+    "shares": 400000000,
+    "putCall": null
+   },
+   {
+    "ticker": "GOOGL",
+    "cusip": "02079K305",
+    "name": "ALPHABET INC",
+    "value": 27110464741,
+    "shares": 78791167,
+    "putCall": null
+   },
+   {
+    "ticker": null,
+    "cusip": "060505104",
+    "name": "BANK OF AMER CORP",
+    "value": 24812509222,
+    "shares": 455860908,
+    "putCall": null
+   },
+   {
+    "ticker": "CVX",
+    "cusip": "166764100",
+    "name": "CHEVRON CORPORATION",
+    "value": 17230393553,
+    "shares": 84375856,
+    "putCall": null
+   },
+   {
+    "ticker": "OXY",
+    "cusip": "674599105",
+    "name": "OCCIDENTAL PETE CORP",
+    "value": 14656559963,
+    "shares": 264941431,
+    "putCall": null
+   },
+   {
+    "ticker": "MCO",
+    "cusip": "615369105",
+    "name": "MOODYS CORP",
+    "value": 11203286284,
+    "shares": 24669778,
+    "putCall": null
+   },
+   {
+    "ticker": "CB",
+    "cusip": "H1467J104",
+    "name": "CHUBB LIMITED",
+    "value": 11139546771,
+    "shares": 34249183,
+    "putCall": null
+   },
+   {
+    "ticker": "GOOGL",
+    "cusip": "02079K107",
+    "name": "ALPHABET INC",
+    "value": 9264186660,
+    "shares": 27188433,
+    "putCall": null
+   },
+   {
+    "ticker": "KHC",
+    "cusip": "500754106",
+    "name": "KRAFT HEINZ CO",
+    "value": 7398423065,
+    "shares": 325634818,
+    "putCall": null
+   },
+   {
+    "ticker": "DAL",
+    "cusip": "247361702",
+    "name": "DELTA AIR LINES INC",
+    "value": 5378997000,
+    "shares": 64450000,
+    "putCall": null
+   },
+   {
+    "ticker": "DVA",
+    "cusip": "23918K108",
+    "name": "DAVITA INC",
+    "value": 5019719296,
+    "shares": 28697229,
+    "putCall": null
+   },
+   {
+    "ticker": null,
+    "cusip": "829933100",
+    "name": "SIRIUSXM HOLDINGS INC",
+    "value": 3230008188,
+    "shares": 124807117,
+    "putCall": null
+   },
+   {
+    "ticker": "LEN",
+    "cusip": "526057104",
+    "name": "LENNAR CORP",
+    "value": 2124149633,
+    "shares": 26034436,
+    "putCall": null
+   },
+   {
+    "ticker": "KR",
+    "cusip": "501044101",
+    "name": "KROGER CO",
+    "value": 2051700000,
+    "shares": 35000000,
+    "putCall": null
+   },
+   {
+    "ticker": "VRSN",
+    "cusip": "92343E102",
+    "name": "VERISIGN INC",
+    "value": 1670101573,
+    "shares": 5922136,
+    "putCall": null
+   },
+   {
+    "ticker": "LLYVA",
+    "cusip": "530909308",
+    "name": "LIBERTY LIVE HOLDINGS INC",
+    "value": 1029599657,
+    "shares": 10587143,
+    "putCall": null
+   },
+   {
+    "ticker": "ALLY",
+    "cusip": "02005N100",
+    "name": "ALLY FINL INC",
+    "value": 1015740001,
+    "shares": 27000000,
+    "putCall": null
+   },
+   {
+    "ticker": "NYT",
+    "cusip": "650111107",
+    "name": "NEW YORK TIMES CO MTN BE",
+    "value": 1000090000,
+    "shares": 15700000,
+    "putCall": null
+   },
+   {
+    "ticker": "BSP",
+    "cusip": "T19377109",
+    "name": "BENDING SPOONS SPA",
+    "value": 689379305,
+    "shares": 20689655,
+    "putCall": null
+   },
+   {
+    "ticker": "LLYVA",
+    "cusip": "530909100",
+    "name": "LIBERTY LIVE HOLDINGS INC",
+    "value": 471930689,
+    "shares": 4986588,
+    "putCall": null
+   },
+   {
+    "ticker": "NUE",
+    "cusip": "670346105",
+    "name": "NUCOR CORP",
+    "value": 369506390,
+    "shares": 1580776,
+    "putCall": null
+   },
+   {
+    "ticker": "LPX",
+    "cusip": "546347105",
+    "name": "LOUISIANA PAC CORP",
+    "value": 365662388,
+    "shares": 5664793,
+    "putCall": null
+   },
+   {
+    "ticker": "COF",
+    "cusip": "14040H105",
+    "name": "CAPITAL ONE FINL CORP",
+    "value": 222030500,
+    "shares": 1150000,
+    "putCall": null
+   },
+   {
+    "ticker": "M",
+    "cusip": "55616P104",
+    "name": "MACYS INC",
+    "value": 171658476,
+    "shares": 7538800,
+    "putCall": null
+   },
+   {
+    "ticker": "NVR",
+    "cusip": "62944T105",
+    "name": "NVR INC",
+    "value": 68387582,
+    "shares": 11112,
+    "putCall": null
+   },
+   {
+    "ticker": "LEN",
+    "cusip": "526057302",
+    "name": "LENNAR CORP",
+    "value": 44234470,
+    "shares": 553000,
+    "putCall": null
+   },
+   {
+    "ticker": "JEF",
+    "cusip": "47233W109",
+    "name": "JEFFERIES FINANCIAL GROUP IN",
+    "value": 19826607,
+    "shares": 433558,
+    "putCall": null
+   },
+   {
+    "ticker": "DHI",
+    "cusip": "23331A109",
+    "name": "D R HORTON INC",
+    "value": 487021,
+    "shares": 3564,
+    "putCall": null
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1067983/000119312526463399/0001193125-26-463399-index.htm"
+ },
+ {
+  "id": "0001273087",
+  "name": "밀레니엄",
+  "periodOfReport": "2026-09-30",
+  "filedAt": "2026-11-16",
+  "totalValue": 302248162268,
+  "holdingCount": 6103,
+  "holdings": [
+   {
+    "ticker": null,
+    "cusip": "464287655",
+    "name": "ISHARES TR",
+    "value": 10419152082,
+    "shares": 37493800,
+    "putCall": "put"
+   },
+   {
+    "ticker": null,
+    "cusip": "464287200",
+    "name": "ISHARES TR",
+    "value": 8612684003,
+    "shares": 11245915,
+    "putCall": null
+   },
+   {
+    "ticker": null,
+    "cusip": "46090E103",
+    "name": "INVESCO QQQ TR",
+    "value": 7652624742,
+    "shares": 10344600,
+    "putCall": "put"
+   },
+   {
+    "ticker": "NVDA",
+    "cusip": "67066G104",
+    "name": "NVIDIA CORPORATION",
+    "value": 7105381398,
+    "shares": 31112100,
+    "putCall": "put"
+   },
+   {
+    "ticker": null,
+    "cusip": "78462F103",
+    "name": "STATE STR SPDR S&P 500 ETF T",
+    "value": 5047924233,
+    "shares": 6619100,
+    "putCall": "put"
+   },
+   {
+    "ticker": null,
+    "cusip": "464287655",
+    "name": "ISHARES TR",
+    "value": 4351840767,
+    "shares": 15660300,
+    "putCall": "call"
+   },
+   {
+    "ticker": "AAPL",
+    "cusip": "037833100",
+    "name": "APPLE INC",
+    "value": 4224092284,
+    "shares": 12684200,
+    "putCall": "put"
+   },
+   {
+    "ticker": "MSFT",
+    "cusip": "594918104",
+    "name": "MICROSOFT CORP",
+    "value": 3822797570,
+    "shares": 7453300,
+    "putCall": "put"
+   },
+   {
+    "ticker": null,
+    "cusip": "46090E103",
+    "name": "INVESCO QQQ TR",
+    "value": 3430461444,
+    "shares": 4637200,
+    "putCall": "call"
+   },
+   {
+    "ticker": "MU",
+    "cusip": "595112103",
+    "name": "MICRON TECHNOLOGY INC",
+    "value": 3184572389,
+    "shares": 2989900,
+    "putCall": "put"
+   },
+   {
+    "ticker": "GOOGL",
+    "cusip": "02079K305",
+    "name": "ALPHABET INC",
+    "value": 3092350184,
+    "shares": 8987300,
+    "putCall": "put"
+   },
+   {
+    "ticker": "NVDA",
+    "cusip": "67066G104",
+    "name": "NVIDIA CORPORATION",
+    "value": 3027816364,
+    "shares": 13257800,
+    "putCall": "call"
+   },
+   {
+    "ticker": "NVDA",
+    "cusip": "67066G104",
+    "name": "NVIDIA CORPORATION",
+    "value": 2978481488,
+    "shares": 13041779,
+    "putCall": null
+   },
+   {
+    "ticker": "AMZN",
+    "cusip": "023135106",
+    "name": "AMAZON COM INC",
+    "value": 2839039335,
+    "shares": 11394900,
+    "putCall": "put"
+   },
+   {
+    "ticker": "META",
+    "cusip": "30303M102",
+    "name": "META PLATFORMS INC",
+    "value": 2756771770,
+    "shares": 3801500,
+    "putCall": "put"
+   },
+   {
+    "ticker": "AMD",
+    "cusip": "007903107",
+    "name": "ADVANCED MICRO DEVICES INC",
+    "value": 2733527208,
+    "shares": 4468300,
+    "putCall": "put"
+   },
+   {
+    "ticker": "TSLA",
+    "cusip": "88160R101",
+    "name": "TESLA INC",
+    "value": 2303603925,
+    "shares": 6492500,
+    "putCall": "put"
+   },
+   {
+    "ticker": "AAPL",
+    "cusip": "037833100",
+    "name": "APPLE INC",
+    "value": 1964318470,
+    "shares": 5898500,
+    "putCall": "call"
+   },
+   {
+    "ticker": null,
+    "cusip": "922908363",
+    "name": "VANGUARD INDEX FDS",
+    "value": 1927371308,
+    "shares": 2750009,
+    "putCall": null
+   },
+   {
+    "ticker": "AVGO",
+    "cusip": "11135F101",
+    "name": "BROADCOM INC",
+    "value": 1863835568,
+    "shares": 5307200,
+    "putCall": "put"
+   },
+   {
+    "ticker": "MSFT",
+    "cusip": "594918104",
+    "name": "MICROSOFT CORP",
+    "value": 1854287370,
+    "shares": 3615300,
+    "putCall": "call"
+   },
+   {
+    "ticker": null,
+    "cusip": "78462F103",
+    "name": "STATE STR SPDR S&P 500 ETF T",
+    "value": 1830099989,
+    "shares": 2399722,
+    "putCall": null
+   },
+   {
+    "ticker": null,
+    "cusip": "464288513",
+    "name": "ISHARES TR",
+    "value": 1678916008,
+    "shares": 21744800,
+    "putCall": "put"
+   },
+   {
+    "ticker": null,
+    "cusip": "78462F103",
+    "name": "STATE STR SPDR S&P 500 ETF T",
+    "value": 1657042464,
+    "shares": 2172800,
+    "putCall": "call"
+   },
+   {
+    "ticker": null,
+    "cusip": "934423104",
+    "name": "WARNER BROS DISCOVERY INC",
+    "value": 1501092146,
+    "shares": 48500554,
+    "putCall": null
+   },
+   {
+    "ticker": "AMD",
+    "cusip": "007903107",
+    "name": "ADVANCED MICRO DEVICES INC",
+    "value": 1422953760,
+    "shares": 2326000,
+    "putCall": "call"
+   },
+   {
+    "ticker": null,
+    "cusip": "81369Y506",
+    "name": "SELECT SECTOR SPDR TR",
+    "value": 1334396250,
+    "shares": 21697500,
+    "putCall": "put"
+   },
+   {
+    "ticker": null,
+    "cusip": "46090E103",
+    "name": "INVESCO QQQ TR",
+    "value": 1332642392,
+    "shares": 1801428,
+    "putCall": null
+   },
+   {
+    "ticker": "MSFT",
+    "cusip": "594918104",
+    "name": "MICROSOFT CORP",
+    "value": 1320595430,
+    "shares": 2574762,
+    "putCall": null
+   },
+   {
+    "ticker": "MU",
+    "cusip": "595112103",
+    "name": "MICRON TECHNOLOGY INC",
+    "value": 1311623319,
+    "shares": 1231444,
+    "putCall": null
+   },
+   {
+    "ticker": "META",
+    "cusip": "30303M102",
+    "name": "META PLATFORMS INC",
+    "value": 1270805432,
+    "shares": 1752400,
+    "putCall": "call"
+   },
+   {
+    "ticker": "MU",
+    "cusip": "595112103",
+    "name": "MICRON TECHNOLOGY INC",
+    "value": 1260664196,
+    "shares": 1183600,
+    "putCall": "call"
+   },
+   {
+    "ticker": "AZN",
+    "cusip": "G0593M107",
+    "name": "ASTRAZENECA PLC",
+    "value": 1242548447,
+    "shares": 190100,
+    "putCall": "call"
+   },
+   {
+    "ticker": "INTC",
+    "cusip": "458140100",
+    "name": "INTEL CORP",
+    "value": 1211557710,
+    "shares": 10077000,
+    "putCall": "put"
+   },
+   {
+    "ticker": null,
+    "cusip": "655844108",
+    "name": "NORFOLK SOUTHN CORP",
+    "value": 1206735228,
+    "shares": 3905292,
+    "putCall": null
+   },
+   {
+    "ticker": "TSLA",
+    "cusip": "88160R101",
+    "name": "TESLA INC",
+    "value": 1169919980,
+    "shares": 3297314,
+    "putCall": null
+   },
+   {
+    "ticker": null,
+    "cusip": "874039100",
+    "name": "TAIWAN SEMICONDUCTOR MANUFAC",
+    "value": 1139973191,
+    "shares": 2498900,
+    "putCall": "put"
+   },
+   {
+    "ticker": "AMZN",
+    "cusip": "023135106",
+    "name": "AMAZON COM INC",
+    "value": 1032353025,
+    "shares": 4143500,
+    "putCall": "call"
+   },
+   {
+    "ticker": "GOOGL",
+    "cusip": "02079K107",
+    "name": "ALPHABET INC",
+    "value": 1028251098,
+    "shares": 3017700,
+    "putCall": "put"
+   },
+   {
+    "ticker": null,
+    "cusip": "464287432",
+    "name": "ISHARES TR",
+    "value": 1007087662,
+    "shares": 12947900,
+    "putCall": "call"
+   },
+   {
+    "ticker": "IBIT",
+    "cusip": "46438F101",
+    "name": "ISHARES BITCOIN TRUST ETF",
+    "value": 985507835,
+    "shares": 20817656,
+    "putCall": null
+   },
+   {
+    "ticker": "TSLA",
+    "cusip": "88160R101",
+    "name": "TESLA INC",
+    "value": 960577113,
+    "shares": 2707300,
+    "putCall": "call"
+   },
+   {
+    "ticker": "GOOGL",
+    "cusip": "02079K305",
+    "name": "ALPHABET INC",
+    "value": 876956696,
+    "shares": 2548700,
+    "putCall": "call"
+   },
+   {
+    "ticker": "SNDK",
+    "cusip": "80004C200",
+    "name": "SANDISK CORP",
+    "value": 844890584,
+    "shares": 485600,
+    "putCall": "put"
+   },
+   {
+    "ticker": null,
+    "cusip": "464288513",
+    "name": "ISHARES TR",
+    "value": 832192543,
+    "shares": 10778300,
+    "putCall": "call"
+   },
+   {
+    "ticker": "BRK-B",
+    "cusip": "084670702",
+    "name": "BERKSHIRE HATHAWAY INC DEL",
+    "value": 825451715,
+    "shares": 1657700,
+    "putCall": "put"
+   },
+   {
+    "ticker": null,
+    "cusip": "78467X109",
+    "name": "STATE STR SPDR DOW JONES IND",
+    "value": 815561635,
+    "shares": 1603700,
+    "putCall": "put"
+   },
+   {
+    "ticker": "GLD",
+    "cusip": "78463V107",
+    "name": "SPDR GOLD TR",
+    "value": 786320348,
+    "shares": 2064700,
+    "putCall": "call"
+   },
+   {
+    "ticker": "AVGO",
+    "cusip": "11135F101",
+    "name": "BROADCOM INC",
+    "value": 783715604,
+    "shares": 2231600,
+    "putCall": "call"
+   },
+   {
+    "ticker": null,
+    "cusip": "81369Y605",
+    "name": "SELECT SECTOR SPDR TR",
+    "value": 776003460,
+    "shares": 14531900,
+    "putCall": "put"
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1273087/000127308726000011/0001273087-26-000011-index.htm"
+ },
+ {
   "id": "0001037389",
   "name": "르네상스 테크놀로지스",
   "periodOfReport": "2026-09-30",
@@ -409,6 +1482,1199 @@
    }
   ],
   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1037389/000103738926000062/0001037389-26-000062-index.htm"
+ },
+ {
+  "id": "0001135730",
+  "name": "코투 매니지먼트",
+  "periodOfReport": "2026-09-30",
+  "filedAt": "2026-11-16",
+  "totalValue": 54495247703,
+  "holdingCount": 73,
+  "holdings": [
+   {
+    "ticker": null,
+    "cusip": "874039100",
+    "name": "TAIWAN SEMICONDUCTOR MANUFAC",
+    "value": 4305233363,
+    "shares": 9437369,
+    "putCall": null
+   },
+   {
+    "ticker": "MU",
+    "cusip": "595112103",
+    "name": "MICRON TECHNOLOGY INC",
+    "value": 3488055247,
+    "shares": 3274831,
+    "putCall": null
+   },
+   {
+    "ticker": "MSFT",
+    "cusip": "594918104",
+    "name": "MICROSOFT CORP",
+    "value": 3312369235,
+    "shares": 6458119,
+    "putCall": null
+   },
+   {
+    "ticker": "META",
+    "cusip": "30303M102",
+    "name": "META PLATFORMS INC",
+    "value": 3273811333,
+    "shares": 4514481,
+    "putCall": null
+   },
+   {
+    "ticker": "LRCX",
+    "cusip": "512807306",
+    "name": "LAM RESEARCH CORP",
+    "value": 3260800115,
+    "shares": 9926030,
+    "putCall": null
+   },
+   {
+    "ticker": "SPCX",
+    "cusip": "84615Q103",
+    "name": "SPACE EXPLORATION TECHN CORP",
+    "value": 2935184357,
+    "shares": 19456346,
+    "putCall": null
+   },
+   {
+    "ticker": "AMZN",
+    "cusip": "023135106",
+    "name": "AMAZON COM INC",
+    "value": 2894632923,
+    "shares": 11618033,
+    "putCall": null
+   },
+   {
+    "ticker": "AVGO",
+    "cusip": "11135F101",
+    "name": "BROADCOM INC",
+    "value": 2341190574,
+    "shares": 6666450,
+    "putCall": null
+   },
+   {
+    "ticker": "GEV",
+    "cusip": "36828A101",
+    "name": "GE VERNOVA INC",
+    "value": 2339796521,
+    "shares": 2461674,
+    "putCall": null
+   },
+   {
+    "ticker": null,
+    "cusip": "038222105",
+    "name": "APPLIED MATLS INC",
+    "value": 2309414581,
+    "shares": 4516044,
+    "putCall": null
+   },
+   {
+    "ticker": "INTC",
+    "cusip": "458140100",
+    "name": "INTEL CORP",
+    "value": 1881864606,
+    "shares": 15652205,
+    "putCall": null
+   },
+   {
+    "ticker": "CRM",
+    "cusip": "79466L302",
+    "name": "SALESFORCE INC",
+    "value": 1844015745,
+    "shares": 8032477,
+    "putCall": null
+   },
+   {
+    "ticker": "SKHY",
+    "cusip": "78392B206",
+    "name": "SK HYNIX INC",
+    "value": 1749208071,
+    "shares": 9498822,
+    "putCall": null
+   },
+   {
+    "ticker": "ETN",
+    "cusip": "G29183103",
+    "name": "EATON CORP PLC",
+    "value": 1610284082,
+    "shares": 3747374,
+    "putCall": null
+   },
+   {
+    "ticker": "EQIX",
+    "cusip": "29444U700",
+    "name": "EQUINIX INC",
+    "value": 1509197446,
+    "shares": 1491921,
+    "putCall": null
+   },
+   {
+    "ticker": "GOOGL",
+    "cusip": "02079K305",
+    "name": "ALPHABET INC",
+    "value": 1475303903,
+    "shares": 4287677,
+    "putCall": null
+   },
+   {
+    "ticker": "NVDA",
+    "cusip": "67066G104",
+    "name": "NVIDIA CORPORATION",
+    "value": 1427854597,
+    "shares": 6252100,
+    "putCall": null
+   },
+   {
+    "ticker": "CEG",
+    "cusip": "21037T109",
+    "name": "CONSTELLATION ENERGY CORP",
+    "value": 1176741299,
+    "shares": 4632475,
+    "putCall": null
+   },
+   {
+    "ticker": "SHOP",
+    "cusip": "82509L107",
+    "name": "SHOPIFY INC",
+    "value": 1156201967,
+    "shares": 7796372,
+    "putCall": null
+   },
+   {
+    "ticker": "NTRA",
+    "cusip": "632307104",
+    "name": "NATERA INC",
+    "value": 1004058944,
+    "shares": 2429312,
+    "putCall": null
+   },
+   {
+    "ticker": "ICE",
+    "cusip": "45866F104",
+    "name": "INTERCONTINENTAL EXCHANGE IN",
+    "value": 996825896,
+    "shares": 6556771,
+    "putCall": null
+   },
+   {
+    "ticker": "V",
+    "cusip": "92826C839",
+    "name": "VISA INC",
+    "value": 926232723,
+    "shares": 2577666,
+    "putCall": null
+   },
+   {
+    "ticker": "MA",
+    "cusip": "57636Q104",
+    "name": "MASTERCARD INCORPORATED",
+    "value": 883377734,
+    "shares": 1601860,
+    "putCall": null
+   },
+   {
+    "ticker": "HUT",
+    "cusip": "44812J104",
+    "name": "HUT 8 CORP",
+    "value": 836502484,
+    "shares": 9715476,
+    "putCall": null
+   },
+   {
+    "ticker": "SPOT",
+    "cusip": "L8681T102",
+    "name": "SPOTIFY TECHNOLOGY S A",
+    "value": 638974188,
+    "shares": 1311039,
+    "putCall": null
+   },
+   {
+    "ticker": "CBRS",
+    "cusip": "15675D103",
+    "name": "CEREBRAS SYSTEMS INC",
+    "value": 578393048,
+    "shares": 3255801,
+    "putCall": null
+   },
+   {
+    "ticker": "RDDT",
+    "cusip": "75734B100",
+    "name": "REDDIT INC",
+    "value": 397790764,
+    "shares": 2792690,
+    "putCall": null
+   },
+   {
+    "ticker": "NU",
+    "cusip": "G6683N103",
+    "name": "NU HLDGS LTD",
+    "value": 371363072,
+    "shares": 29333576,
+    "putCall": null
+   },
+   {
+    "ticker": "APP",
+    "cusip": "03831W108",
+    "name": "APPLOVIN CORP",
+    "value": 340148421,
+    "shares": 1171189,
+    "putCall": null
+   },
+   {
+    "ticker": "NFLX",
+    "cusip": "64110L106",
+    "name": "NETFLIX INC.",
+    "value": 327751024,
+    "shares": 4710420,
+    "putCall": null
+   },
+   {
+    "ticker": null,
+    "cusip": "31946M103",
+    "name": "FIRST CTZNS BANCSHARES INC D",
+    "value": 287393780,
+    "shares": 139498,
+    "putCall": null
+   },
+   {
+    "ticker": "GOOGL",
+    "cusip": "02079K107",
+    "name": "ALPHABET INC",
+    "value": 267750426,
+    "shares": 785791,
+    "putCall": null
+   },
+   {
+    "ticker": "QCOM",
+    "cusip": "747525103",
+    "name": "QUALCOMM INC",
+    "value": 255320900,
+    "shares": 1387312,
+    "putCall": null
+   },
+   {
+    "ticker": "ISRG",
+    "cusip": "46120E602",
+    "name": "INTUITIVE SURGICAL INC",
+    "value": 255197328,
+    "shares": 627591,
+    "putCall": null
+   },
+   {
+    "ticker": null,
+    "cusip": "N07059210",
+    "name": "ASML HLDG NV",
+    "value": 253396471,
+    "shares": 139869,
+    "putCall": null
+   },
+   {
+    "ticker": "CVNA",
+    "cusip": "146869102",
+    "name": "CARVANA CO",
+    "value": 205060218,
+    "shares": 3278865,
+    "putCall": null
+   },
+   {
+    "ticker": "VRT",
+    "cusip": "92537N108",
+    "name": "VERTIV HOLDINGS CO",
+    "value": 194639198,
+    "shares": 806594,
+    "putCall": null
+   },
+   {
+    "ticker": "OKTA",
+    "cusip": "679295105",
+    "name": "OKTA INC",
+    "value": 184473496,
+    "shares": 882184,
+    "putCall": null
+   },
+   {
+    "ticker": "DASH",
+    "cusip": "25809K105",
+    "name": "DOORDASH INC",
+    "value": 96325572,
+    "shares": 524792,
+    "putCall": null
+   },
+   {
+    "ticker": "MTZ",
+    "cusip": "576323109",
+    "name": "MASTEC INC",
+    "value": 93797978,
+    "shares": 439088,
+    "putCall": null
+   },
+   {
+    "ticker": "GNRC",
+    "cusip": "368736104",
+    "name": "GENERAC HLDGS INC",
+    "value": 80816665,
+    "shares": 390513,
+    "putCall": null
+   },
+   {
+    "ticker": null,
+    "cusip": "85208M102",
+    "name": "SPROUTS FMRS MKT INC",
+    "value": 79870339,
+    "shares": 1203773,
+    "putCall": null
+   },
+   {
+    "ticker": "BAH",
+    "cusip": "099502106",
+    "name": "BOOZ ALLEN HAMILTON HLDG COR",
+    "value": 75210322,
+    "shares": 1083410,
+    "putCall": null
+   },
+   {
+    "ticker": "PWR",
+    "cusip": "74762E102",
+    "name": "QUANTA SVCS INC",
+    "value": 71160553,
+    "shares": 110754,
+    "putCall": null
+   },
+   {
+    "ticker": "PYPL",
+    "cusip": "70450Y103",
+    "name": "PAYPAL HLDGS INC",
+    "value": 65325783,
+    "shares": 1243590,
+    "putCall": null
+   },
+   {
+    "ticker": "TSLA",
+    "cusip": "88160R101",
+    "name": "TESLA INC",
+    "value": 63842382,
+    "shares": 179934,
+    "putCall": null
+   },
+   {
+    "ticker": "ENPH",
+    "cusip": "29355A107",
+    "name": "ENPHASE ENERGY INC",
+    "value": 51363484,
+    "shares": 1556941,
+    "putCall": null
+   },
+   {
+    "ticker": "NVAX",
+    "cusip": "670002401",
+    "name": "NOVAVAX INC",
+    "value": 41477819,
+    "shares": 3836986,
+    "putCall": null
+   },
+   {
+    "ticker": "BABA",
+    "cusip": "01609W102",
+    "name": "ALIBABA GROUP HLDG LTD",
+    "value": 32749049,
+    "shares": 304529,
+    "putCall": null
+   },
+   {
+    "ticker": "RNG",
+    "cusip": "76680R206",
+    "name": "RINGCENTRAL INC",
+    "value": 30727920,
+    "shares": 411351,
+    "putCall": null
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1135730/000091957426007862/0000919574-26-007862-index.htm"
+ },
+ {
+  "id": "0001350694",
+  "name": "브리지워터",
+  "periodOfReport": "2026-09-30",
+  "filedAt": "2026-11-16",
+  "totalValue": 22985792515,
+  "holdingCount": 974,
+  "holdings": [
+   {
+    "ticker": null,
+    "cusip": "78462F103",
+    "name": "STATE STR SPDR S&P 500 ETF T",
+    "value": 2595471644,
+    "shares": 3403317,
+    "putCall": null
+   },
+   {
+    "ticker": null,
+    "cusip": "464287200",
+    "name": "ISHARES TR",
+    "value": 1154942390,
+    "shares": 1508053,
+    "putCall": null
+   },
+   {
+    "ticker": "NVDA",
+    "cusip": "67066G104",
+    "name": "NVIDIA CORPORATION",
+    "value": 613935912,
+    "shares": 2688221,
+    "putCall": null
+   },
+   {
+    "ticker": "AVGO",
+    "cusip": "11135F101",
+    "name": "BROADCOM INC",
+    "value": 461725648,
+    "shares": 1314746,
+    "putCall": null
+   },
+   {
+    "ticker": "LRCX",
+    "cusip": "512807306",
+    "name": "LAM RESEARCH CORP",
+    "value": 348182821,
+    "shares": 1059885,
+    "putCall": null
+   },
+   {
+    "ticker": "AMD",
+    "cusip": "007903107",
+    "name": "ADVANCED MICRO DEVICES INC",
+    "value": 300580323,
+    "shares": 491337,
+    "putCall": null
+   },
+   {
+    "ticker": null,
+    "cusip": "038222105",
+    "name": "APPLIED MATLS INC",
+    "value": 288100753,
+    "shares": 563379,
+    "putCall": null
+   },
+   {
+    "ticker": "MU",
+    "cusip": "595112103",
+    "name": "MICRON TECHNOLOGY INC",
+    "value": 252557818,
+    "shares": 237119,
+    "putCall": null
+   },
+   {
+    "ticker": "NEM",
+    "cusip": "651639106",
+    "name": "NEWMONT CORP",
+    "value": 242638682,
+    "shares": 2103682,
+    "putCall": null
+   },
+   {
+    "ticker": "AMZN",
+    "cusip": "023135106",
+    "name": "AMAZON COM INC",
+    "value": 241863857,
+    "shares": 970756,
+    "putCall": null
+   },
+   {
+    "ticker": null,
+    "cusip": "464286772",
+    "name": "ISHARES INC",
+    "value": 229577895,
+    "shares": 1256034,
+    "putCall": null
+   },
+   {
+    "ticker": "APP",
+    "cusip": "03831W108",
+    "name": "APPLOVIN CORP",
+    "value": 198375307,
+    "shares": 683040,
+    "putCall": null
+   },
+   {
+    "ticker": "SHEL",
+    "cusip": "780259305",
+    "name": "SHELL PLC",
+    "value": 195929321,
+    "shares": 2061329,
+    "putCall": null
+   },
+   {
+    "ticker": null,
+    "cusip": "922042858",
+    "name": "VANGUARD INTL EQUITY INDEX F",
+    "value": 188419448,
+    "shares": 3176858,
+    "putCall": null
+   },
+   {
+    "ticker": "STX",
+    "cusip": "G7997R103",
+    "name": "SEAGATE TECHNOLOGY HLDNGS PL",
+    "value": 182523707,
+    "shares": 197892,
+    "putCall": null
+   },
+   {
+    "ticker": "ORCL",
+    "cusip": "68389X105",
+    "name": "ORACLE CORP",
+    "value": 162205259,
+    "shares": 1181393,
+    "putCall": null
+   },
+   {
+    "ticker": "QCOM",
+    "cusip": "747525103",
+    "name": "QUALCOMM INC",
+    "value": 161608285,
+    "shares": 878115,
+    "putCall": null
+   },
+   {
+    "ticker": "META",
+    "cusip": "30303M102",
+    "name": "META PLATFORMS INC",
+    "value": 159542501,
+    "shares": 220004,
+    "putCall": null
+   },
+   {
+    "ticker": null,
+    "cusip": "71654V408",
+    "name": "PETROLEO BRASILEIRO S A",
+    "value": 158731418,
+    "shares": 7605722,
+    "putCall": null
+   },
+   {
+    "ticker": "GOOGL",
+    "cusip": "02079K305",
+    "name": "ALPHABET INC",
+    "value": 158356971,
+    "shares": 460233,
+    "putCall": null
+   },
+   {
+    "ticker": "JNJ",
+    "cusip": "478160104",
+    "name": "JOHNSON & JOHNSON",
+    "value": 144953357,
+    "shares": 547531,
+    "putCall": null
+   },
+   {
+    "ticker": "MO",
+    "cusip": "02209S103",
+    "name": "ALTRIA GROUP INC",
+    "value": 141460936,
+    "shares": 2100697,
+    "putCall": null
+   },
+   {
+    "ticker": null,
+    "cusip": "46434G103",
+    "name": "ISHARES INC",
+    "value": 133886324,
+    "shares": 1649659,
+    "putCall": null
+   },
+   {
+    "ticker": "EOG",
+    "cusip": "26875P101",
+    "name": "EOG RES INC",
+    "value": 130643181,
+    "shares": 948339,
+    "putCall": null
+   },
+   {
+    "ticker": "V",
+    "cusip": "92826C839",
+    "name": "VISA INC",
+    "value": 128554260,
+    "shares": 357761,
+    "putCall": null
+   },
+   {
+    "ticker": null,
+    "cusip": "464288588",
+    "name": "ISHARES TR",
+    "value": 126677870,
+    "shares": 1413500,
+    "putCall": null
+   },
+   {
+    "ticker": "PCG",
+    "cusip": "69331C108",
+    "name": "PG&E CORP",
+    "value": 126077723,
+    "shares": 10292059,
+    "putCall": null
+   },
+   {
+    "ticker": null,
+    "cusip": "74736K101",
+    "name": "QORVO INC",
+    "value": 122320277,
+    "shares": 1068486,
+    "putCall": null
+   },
+   {
+    "ticker": null,
+    "cusip": "06849F108",
+    "name": "BARRICK MNG CORP",
+    "value": 120589072,
+    "shares": 2965062,
+    "putCall": null
+   },
+   {
+    "ticker": "SNDK",
+    "cusip": "80004C200",
+    "name": "SANDISK CORP",
+    "value": 116148097,
+    "shares": 66756,
+    "putCall": null
+   },
+   {
+    "ticker": null,
+    "cusip": "49177J102",
+    "name": "KENVUE INC",
+    "value": 115152648,
+    "shares": 6520535,
+    "putCall": null
+   },
+   {
+    "ticker": "MSFT",
+    "cusip": "594918104",
+    "name": "MICROSOFT CORP",
+    "value": 113484767,
+    "shares": 221261,
+    "putCall": null
+   },
+   {
+    "ticker": null,
+    "cusip": "464287242",
+    "name": "ISHARES TR",
+    "value": 111958626,
+    "shares": 1095700,
+    "putCall": null
+   },
+   {
+    "ticker": "EIX",
+    "cusip": "281020107",
+    "name": "EDISON INTL",
+    "value": 111387018,
+    "shares": 2073088,
+    "putCall": null
+   },
+   {
+    "ticker": "GEV",
+    "cusip": "36828A101",
+    "name": "GE VERNOVA INC",
+    "value": 110453591,
+    "shares": 116207,
+    "putCall": null
+   },
+   {
+    "ticker": "LLY",
+    "cusip": "532457108",
+    "name": "ELI LILLY & CO",
+    "value": 109600932,
+    "shares": 94722,
+    "putCall": null
+   },
+   {
+    "ticker": "ED",
+    "cusip": "209115104",
+    "name": "CONSOLIDATED EDISON INC",
+    "value": 104889231,
+    "shares": 1026213,
+    "putCall": null
+   },
+   {
+    "ticker": "TMO",
+    "cusip": "883556102",
+    "name": "THERMO FISHER SCIENTIFIC INC",
+    "value": 104394457,
+    "shares": 154647,
+    "putCall": null
+   },
+   {
+    "ticker": null,
+    "cusip": "29670G102",
+    "name": "ESSENTIAL UTILS INC",
+    "value": 102181067,
+    "shares": 2607325,
+    "putCall": null
+   },
+   {
+    "ticker": "DUK",
+    "cusip": "26441C204",
+    "name": "DUKE ENERGY CORP NEW",
+    "value": 99647248,
+    "shares": 874022,
+    "putCall": null
+   },
+   {
+    "ticker": "WDC",
+    "cusip": "958102105",
+    "name": "WESTERN DIGITAL CORP",
+    "value": 97266256,
+    "shares": 214026,
+    "putCall": null
+   },
+   {
+    "ticker": "VAL",
+    "cusip": "G9460G101",
+    "name": "VALARIS LTD",
+    "value": 92940826,
+    "shares": 1183658,
+    "putCall": null
+   },
+   {
+    "ticker": "MPC",
+    "cusip": "56585A102",
+    "name": "MARATHON PETE CORP",
+    "value": 92031237,
+    "shares": 232743,
+    "putCall": null
+   },
+   {
+    "ticker": "D",
+    "cusip": "25746U109",
+    "name": "DOMINION ENERGY INC",
+    "value": 91758306,
+    "shares": 1516165,
+    "putCall": null
+   },
+   {
+    "ticker": "NI",
+    "cusip": "65473P105",
+    "name": "NISOURCE INC",
+    "value": 91599963,
+    "shares": 2348717,
+    "putCall": null
+   },
+   {
+    "ticker": "DHR",
+    "cusip": "235851102",
+    "name": "DANAHER CORP DEL",
+    "value": 87786529,
+    "shares": 396238,
+    "putCall": null
+   },
+   {
+    "ticker": null,
+    "cusip": "46434G764",
+    "name": "ISHARES INC",
+    "value": 87702941,
+    "shares": 885173,
+    "putCall": null
+   },
+   {
+    "ticker": "RDDT",
+    "cusip": "75734B100",
+    "name": "REDDIT INC",
+    "value": 87540490,
+    "shares": 614578,
+    "putCall": null
+   },
+   {
+    "ticker": "HCA",
+    "cusip": "40412C101",
+    "name": "HCA HEALTHCARE INC",
+    "value": 86261650,
+    "shares": 202141,
+    "putCall": null
+   },
+   {
+    "ticker": "WFC",
+    "cusip": "949746101",
+    "name": "WELLS FARGO & CO",
+    "value": 86241227,
+    "shares": 1077342,
+    "putCall": null
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1350694/000135069426000004/0001350694-26-000004-index.htm"
+ },
+ {
+  "id": "0001167483",
+  "name": "타이거 글로벌",
+  "periodOfReport": "2026-09-30",
+  "filedAt": "2026-11-16",
+  "totalValue": 20173101170,
+  "holdingCount": 45,
+  "holdings": [
+   {
+    "ticker": "NVDA",
+    "cusip": "67066G104",
+    "name": "NVIDIA CORPORATION",
+    "value": 2740560000,
+    "shares": 12000000,
+    "putCall": null
+   },
+   {
+    "ticker": "AMZN",
+    "cusip": "023135106",
+    "name": "AMAZON COM INC",
+    "value": 2311877799,
+    "shares": 9279060,
+    "putCall": null
+   },
+   {
+    "ticker": "META",
+    "cusip": "30303M102",
+    "name": "META PLATFORMS INC",
+    "value": 1630449026,
+    "shares": 2248337,
+    "putCall": null
+   },
+   {
+    "ticker": null,
+    "cusip": "874039100",
+    "name": "TAIWAN SEMICONDUCTOR MANUFAC",
+    "value": 1429664790,
+    "shares": 3133924,
+    "putCall": null
+   },
+   {
+    "ticker": "MSFT",
+    "cusip": "594918104",
+    "name": "MICROSOFT CORP",
+    "value": 1162699678,
+    "shares": 2266913,
+    "putCall": null
+   },
+   {
+    "ticker": "GOOGL",
+    "cusip": "02079K305",
+    "name": "ALPHABET INC",
+    "value": 1152398929,
+    "shares": 3349218,
+    "putCall": null
+   },
+   {
+    "ticker": "CPAY",
+    "cusip": "219948106",
+    "name": "CORPAY INC",
+    "value": 835442202,
+    "shares": 2149877,
+    "putCall": null
+   },
+   {
+    "ticker": "CBRS",
+    "cusip": "15675D103",
+    "name": "CEREBRAS SYSTEMS INC",
+    "value": 789893545,
+    "shares": 4446347,
+    "putCall": null
+   },
+   {
+    "ticker": "LRCX",
+    "cusip": "512807306",
+    "name": "LAM RESEARCH CORP",
+    "value": 720533795,
+    "shares": 2193339,
+    "putCall": null
+   },
+   {
+    "ticker": "SE",
+    "cusip": "81141R100",
+    "name": "SEA LTD",
+    "value": 691997494,
+    "shares": 7107616,
+    "putCall": null
+   },
+   {
+    "ticker": "INTC",
+    "cusip": "458140100",
+    "name": "INTEL CORP",
+    "value": 666599365,
+    "shares": 5544368,
+    "putCall": null
+   },
+   {
+    "ticker": "AVGO",
+    "cusip": "11135F101",
+    "name": "BROADCOM INC",
+    "value": 616009034,
+    "shares": 1754062,
+    "putCall": null
+   },
+   {
+    "ticker": null,
+    "cusip": "038222105",
+    "name": "APPLIED MATLS INC",
+    "value": 614353522,
+    "shares": 1201364,
+    "putCall": null
+   },
+   {
+    "ticker": "GEV",
+    "cusip": "36828A101",
+    "name": "GE VERNOVA INC",
+    "value": 550613154,
+    "shares": 579294,
+    "putCall": null
+   },
+   {
+    "ticker": "CPNG",
+    "cusip": "22266T109",
+    "name": "COUPANG INC",
+    "value": 487414810,
+    "shares": 35141659,
+    "putCall": null
+   },
+   {
+    "ticker": "MELI",
+    "cusip": "58733R102",
+    "name": "MERCADOLIBRE INC",
+    "value": 422843380,
+    "shares": 244626,
+    "putCall": null
+   },
+   {
+    "ticker": "AMD",
+    "cusip": "007903107",
+    "name": "ADVANCED MICRO DEVICES INC",
+    "value": 412770990,
+    "shares": 674727,
+    "putCall": null
+   },
+   {
+    "ticker": "RDDT",
+    "cusip": "75734B100",
+    "name": "REDDIT INC",
+    "value": 323416857,
+    "shares": 2270548,
+    "putCall": null
+   },
+   {
+    "ticker": "V",
+    "cusip": "92826C839",
+    "name": "VISA INC",
+    "value": 286995793,
+    "shares": 798697,
+    "putCall": null
+   },
+   {
+    "ticker": "TTWO",
+    "cusip": "874054109",
+    "name": "TAKE-TWO INTERACTIVE SOFTWAR",
+    "value": 282493198,
+    "shares": 1361413,
+    "putCall": null
+   },
+   {
+    "ticker": "DHR",
+    "cusip": "235851102",
+    "name": "DANAHER CORP DEL",
+    "value": 281102640,
+    "shares": 1268800,
+    "putCall": null
+   },
+   {
+    "ticker": "XYZ",
+    "cusip": "852234103",
+    "name": "BLOCK INC",
+    "value": 268938475,
+    "shares": 3657534,
+    "putCall": null
+   },
+   {
+    "ticker": "RACE",
+    "cusip": "N3167Y103",
+    "name": "FERRARI N V",
+    "value": 236770695,
+    "shares": 602700,
+    "putCall": null
+   },
+   {
+    "ticker": null,
+    "cusip": "03769M106",
+    "name": "APOLLO GLOBAL MGMT INC",
+    "value": 169364617,
+    "shares": 1459285,
+    "putCall": null
+   },
+   {
+    "ticker": "WLTH",
+    "cusip": "947002101",
+    "name": "WEALTHFRONT CORP",
+    "value": 157328383,
+    "shares": 15156877,
+    "putCall": null
+   },
+   {
+    "ticker": "NU",
+    "cusip": "G6683N103",
+    "name": "NU HLDGS LTD",
+    "value": 139672144,
+    "shares": 11032555,
+    "putCall": null
+   },
+   {
+    "ticker": "FWONA",
+    "cusip": "531229755",
+    "name": "LIBERTY MEDIA CORP DEL",
+    "value": 126059102,
+    "shares": 1364276,
+    "putCall": null
+   },
+   {
+    "ticker": "NOW",
+    "cusip": "81762P102",
+    "name": "SERVICENOW INC",
+    "value": 117055725,
+    "shares": 873485,
+    "putCall": null
+   },
+   {
+    "ticker": "UNH",
+    "cusip": "91324P102",
+    "name": "UNITEDHEALTH GROUP INC",
+    "value": 109188679,
+    "shares": 297452,
+    "putCall": null
+   },
+   {
+    "ticker": "STX",
+    "cusip": "G7997R103",
+    "name": "SEAGATE TECHNOLOGY HLDNGS PL",
+    "value": 99612720,
+    "shares": 108000,
+    "putCall": null
+   },
+   {
+    "ticker": "SHW",
+    "cusip": "824348106",
+    "name": "SHERWIN WILLIAMS CO",
+    "value": 83107221,
+    "shares": 257083,
+    "putCall": null
+   },
+   {
+    "ticker": "EQPT",
+    "cusip": "29445S100",
+    "name": "EQUIPMENTSHARE COM INC",
+    "value": 79548451,
+    "shares": 4579646,
+    "putCall": null
+   },
+   {
+    "ticker": "SPCX",
+    "cusip": "84615Q103",
+    "name": "SPACE EXPLORATION TECHN CORP",
+    "value": 56572500,
+    "shares": 375000,
+    "putCall": null
+   },
+   {
+    "ticker": "RERE",
+    "cusip": "00138L108",
+    "name": "ATRENEW INC",
+    "value": 36670443,
+    "shares": 9831218,
+    "putCall": null
+   },
+   {
+    "ticker": "BULL",
+    "cusip": "G9572D103",
+    "name": "WEBULL CORP",
+    "value": 32866296,
+    "shares": 4715394,
+    "putCall": null
+   },
+   {
+    "ticker": "BSP",
+    "cusip": "T19377109",
+    "name": "BENDING SPOONS SPA",
+    "value": 19992000,
+    "shares": 600000,
+    "putCall": null
+   },
+   {
+    "ticker": "UBER",
+    "cusip": "90353T100",
+    "name": "UBER TECHNOLOGIES INC",
+    "value": 10357205,
+    "shares": 151178,
+    "putCall": null
+   },
+   {
+    "ticker": "JD",
+    "cusip": "47215P106",
+    "name": "JD.COM INC",
+    "value": 5359900,
+    "shares": 201500,
+    "putCall": null
+   },
+   {
+    "ticker": "DASH",
+    "cusip": "25809K105",
+    "name": "DOORDASH INC",
+    "value": 4650606,
+    "shares": 25337,
+    "putCall": null
+   },
+   {
+    "ticker": "XNDU",
+    "cusip": "98390R102",
+    "name": "XANADU QUANTUM TECHNOLO LTD",
+    "value": 4534200,
+    "shares": 990000,
+    "putCall": null
+   },
+   {
+    "ticker": "PONY",
+    "cusip": "732908108",
+    "name": "PONY AI INC",
+    "value": 2029277,
+    "shares": 310287,
+    "putCall": null
+   },
+   {
+    "ticker": "ARX",
+    "cusip": "G00894108",
+    "name": "ACCELERANT HOLDINGS",
+    "value": 1479750,
+    "shares": 75000,
+    "putCall": null
+   },
+   {
+    "ticker": "SPOT",
+    "cusip": "L8681T102",
+    "name": "SPOTIFY TECHNOLOGY S A",
+    "value": 1248180,
+    "shares": 2561,
+    "putCall": null
+   },
+   {
+    "ticker": "GEMI",
+    "cusip": "36866J105",
+    "name": "GEMINI SPACE STA INC",
+    "value": 361200,
+    "shares": 70000,
+    "putCall": null
+   },
+   {
+    "ticker": "MNTN",
+    "cusip": "55318A108",
+    "name": "MNTN INC",
+    "value": 203400,
+    "shares": 20000,
+    "putCall": null
+   }
+  ],
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1167483/000091957426008062/0000919574-26-008062-index.htm"
  },
  {
   "id": "0001697748",
@@ -1086,7 +3352,7 @@
     "putCall": null
    },
    {
-    "ticker": "KVUE",
+    "ticker": null,
     "cusip": "49177J102",
     "name": "KENVUE INC",
     "value": 66987665,
@@ -1233,2908 +3499,618 @@
   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1029160/000090266426004530/0000902664-26-004530-index.htm"
  },
  {
-  "id": "0001423053",
-  "name": "시타델",
-  "periodOfReport": "2026-06-30",
-  "filedAt": "2026-08-14",
-  "totalValue": 875096281441,
-  "holdingCount": 13575,
+  "id": "0001656456",
+  "name": "아팔루사",
+  "periodOfReport": "2026-09-30",
+  "filedAt": "2026-11-16",
+  "totalValue": 7559628593,
+  "holdingCount": 24,
   "holdings": [
    {
-    "ticker": null,
-    "cusip": "78462F103",
-    "name": "STATE STR SPDR S&P 500 ETF T",
-    "value": 35656923314,
-    "shares": 47748200,
-    "putCall": "call"
-   },
-   {
-    "ticker": null,
-    "cusip": "46090E103",
-    "name": "INVESCO QQQ TR",
-    "value": 26554510360,
-    "shares": 36059900,
-    "putCall": "put"
-   },
-   {
-    "ticker": null,
-    "cusip": "46090E103",
-    "name": "INVESCO QQQ TR",
-    "value": 23490644520,
-    "shares": 31899300,
-    "putCall": "call"
-   },
-   {
-    "ticker": null,
-    "cusip": "78462F103",
-    "name": "STATE STR SPDR S&P 500 ETF T",
-    "value": 23265469996,
-    "shares": 31154800,
-    "putCall": "put"
-   },
-   {
     "ticker": "MU",
     "cusip": "595112103",
     "name": "MICRON TECHNOLOGY INC",
-    "value": 22249286037,
-    "shares": 19275300,
-    "putCall": "put"
-   },
-   {
-    "ticker": "MU",
-    "cusip": "595112103",
-    "name": "MICRON TECHNOLOGY INC",
-    "value": 16339782953,
-    "shares": 14155700,
-    "putCall": "call"
-   },
-   {
-    "ticker": "TSLA",
-    "cusip": "88160R101",
-    "name": "TESLA INC",
-    "value": 13696712820,
-    "shares": 32564700,
-    "putCall": "call"
-   },
-   {
-    "ticker": null,
-    "cusip": "464287200",
-    "name": "ISHARES TR",
-    "value": 13237745847,
-    "shares": 17676489,
+    "value": 1331387500,
+    "shares": 1250000,
     "putCall": null
-   },
-   {
-    "ticker": "NVDA",
-    "cusip": "67066G104",
-    "name": "NVIDIA CORPORATION",
-    "value": 12185400964,
-    "shares": 60899600,
-    "putCall": "call"
-   },
-   {
-    "ticker": "SNDK",
-    "cusip": "80004C200",
-    "name": "SANDISK CORP",
-    "value": 11723235920,
-    "shares": 5155949,
-    "putCall": "put"
-   },
-   {
-    "ticker": null,
-    "cusip": "92189F676",
-    "name": "VANECK ETF TRUST",
-    "value": 11568194286,
-    "shares": 17637400,
-    "putCall": "put"
-   },
-   {
-    "ticker": "SNDK",
-    "cusip": "80004C200",
-    "name": "SANDISK CORP",
-    "value": 10337513445,
-    "shares": 4546500,
-    "putCall": "call"
-   },
-   {
-    "ticker": "MSFT",
-    "cusip": "594918104",
-    "name": "MICROSOFT CORP",
-    "value": 9695685048,
-    "shares": 25992400,
-    "putCall": "call"
-   },
-   {
-    "ticker": "TSLA",
-    "cusip": "88160R101",
-    "name": "TESLA INC",
-    "value": 9588081720,
-    "shares": 22796200,
-    "putCall": "put"
-   },
-   {
-    "ticker": "AMD",
-    "cusip": "007903107",
-    "name": "ADVANCED MICRO DEVICES INC",
-    "value": 9357879190,
-    "shares": 16109000,
-    "putCall": "put"
-   },
-   {
-    "ticker": "NVDA",
-    "cusip": "67066G104",
-    "name": "NVIDIA CORPORATION",
-    "value": 9183890892,
-    "shares": 45898800,
-    "putCall": "put"
-   },
-   {
-    "ticker": "AAPL",
-    "cusip": "037833100",
-    "name": "APPLE INC",
-    "value": 9037667688,
-    "shares": 31233300,
-    "putCall": "call"
-   },
-   {
-    "ticker": "AMD",
-    "cusip": "007903107",
-    "name": "ADVANCED MICRO DEVICES INC",
-    "value": 9022055119,
-    "shares": 15530900,
-    "putCall": "call"
-   },
-   {
-    "ticker": "META",
-    "cusip": "30303M102",
-    "name": "META PLATFORMS INC",
-    "value": 8675623593,
-    "shares": 15401700,
-    "putCall": "call"
-   },
-   {
-    "ticker": null,
-    "cusip": "464287655",
-    "name": "ISHARES TR",
-    "value": 7837779060,
-    "shares": 26086800,
-    "putCall": "put"
-   },
-   {
-    "ticker": "GOOGL",
-    "cusip": "02079K305",
-    "name": "ALPHABET INC",
-    "value": 7199790442,
-    "shares": 20146600,
-    "putCall": "call"
-   },
-   {
-    "ticker": "MSFT",
-    "cusip": "594918104",
-    "name": "MICROSOFT CORP",
-    "value": 6326232690,
-    "shares": 16959500,
-    "putCall": "put"
-   },
-   {
-    "ticker": "AAPL",
-    "cusip": "037833100",
-    "name": "APPLE INC",
-    "value": 6242681576,
-    "shares": 21574100,
-    "putCall": "put"
    },
    {
     "ticker": "AMZN",
     "cusip": "023135106",
     "name": "AMAZON COM INC",
-    "value": 5931257738,
-    "shares": 24885700,
-    "putCall": "call"
-   },
-   {
-    "ticker": "META",
-    "cusip": "30303M102",
-    "name": "META PLATFORMS INC",
-    "value": 5084424527,
-    "shares": 9026300,
-    "putCall": "put"
-   },
-   {
-    "ticker": null,
-    "cusip": "92189F676",
-    "name": "VANECK ETF TRUST",
-    "value": 4936556085,
-    "shares": 7526500,
-    "putCall": "call"
-   },
-   {
-    "ticker": "GLD",
-    "cusip": "78463V107",
-    "name": "SPDR GOLD TR",
-    "value": 4887886868,
-    "shares": 13268600,
-    "putCall": "call"
-   },
-   {
-    "ticker": null,
-    "cusip": "464287655",
-    "name": "ISHARES TR",
-    "value": 4742092485,
-    "shares": 15783300,
-    "putCall": "call"
-   },
-   {
-    "ticker": null,
-    "cusip": "874039100",
-    "name": "TAIWAN SEMICONDUCTOR MANUFAC",
-    "value": 4649382735,
-    "shares": 9735500,
-    "putCall": "put"
-   },
-   {
-    "ticker": "GOOGL",
-    "cusip": "02079K305",
-    "name": "ALPHABET INC",
-    "value": 4508151076,
-    "shares": 12614800,
-    "putCall": "put"
-   },
-   {
-    "ticker": "INTC",
-    "cusip": "458140100",
-    "name": "INTEL CORP",
-    "value": 4351624802,
-    "shares": 31165400,
-    "putCall": "put"
-   },
-   {
-    "ticker": "GOOGL",
-    "cusip": "02079K107",
-    "name": "ALPHABET INC",
-    "value": 4101525306,
-    "shares": 11608200,
-    "putCall": "call"
-   },
-   {
-    "ticker": "AVGO",
-    "cusip": "11135F101",
-    "name": "BROADCOM INC",
-    "value": 3782033000,
-    "shares": 10012000,
-    "putCall": "call"
-   },
-   {
-    "ticker": null,
-    "cusip": "874039100",
-    "name": "TAIWAN SEMICONDUCTOR MANUFAC",
-    "value": 3733403475,
-    "shares": 7817500,
-    "putCall": "call"
-   },
-   {
-    "ticker": "AMZN",
-    "cusip": "023135106",
-    "name": "AMAZON COM INC",
-    "value": 3725039694,
-    "shares": 15629100,
-    "putCall": "put"
-   },
-   {
-    "ticker": "WDC",
-    "cusip": "958102105",
-    "name": "WESTERN DIGITAL CORP",
-    "value": 3690332544,
-    "shares": 5777700,
-    "putCall": "put"
-   },
-   {
-    "ticker": "GS",
-    "cusip": "38141G104",
-    "name": "GOLDMAN SACHS GROUP INC",
-    "value": 3616861394,
-    "shares": 3576200,
-    "putCall": "call"
-   },
-   {
-    "ticker": "INTC",
-    "cusip": "458140100",
-    "name": "INTEL CORP",
-    "value": 3386655835,
-    "shares": 24254500,
-    "putCall": "call"
-   },
-   {
-    "ticker": null,
-    "cusip": "464288513",
-    "name": "ISHARES TR",
-    "value": 3334780988,
-    "shares": 41700400,
-    "putCall": "put"
-   },
-   {
-    "ticker": "GOOGL",
-    "cusip": "02079K107",
-    "name": "ALPHABET INC",
-    "value": 3059484470,
-    "shares": 8659000,
-    "putCall": "put"
-   },
-   {
-    "ticker": "STX",
-    "cusip": "G7997R103",
-    "name": "SEAGATE TECHNOLOGY HLDNGS PL",
-    "value": 3053935500,
-    "shares": 3164700,
-    "putCall": "put"
-   },
-   {
-    "ticker": "GLD",
-    "cusip": "78463V107",
-    "name": "SPDR GOLD TR",
-    "value": 3010180332,
-    "shares": 8171400,
-    "putCall": "put"
-   },
-   {
-    "ticker": "AVGO",
-    "cusip": "11135F101",
-    "name": "BROADCOM INC",
-    "value": 2958198025,
-    "shares": 7831100,
-    "putCall": "put"
-   },
-   {
-    "ticker": "CAT",
-    "cusip": "149123101",
-    "name": "CATERPILLAR INC",
-    "value": 2908561370,
-    "shares": 2731300,
-    "putCall": "put"
-   },
-   {
-    "ticker": null,
-    "cusip": "464287432",
-    "name": "ISHARES TR",
-    "value": 2862982254,
-    "shares": 33128700,
-    "putCall": "call"
-   },
-   {
-    "ticker": null,
-    "cusip": "N07059210",
-    "name": "ASML HLDG NV",
-    "value": 2858029504,
-    "shares": 1436600,
-    "putCall": "put"
-   },
-   {
-    "ticker": "MRVL",
-    "cusip": "573874104",
-    "name": "MARVELL TECHNOLOGY INC",
-    "value": 2848781648,
-    "shares": 9563200,
-    "putCall": "put"
-   },
-   {
-    "ticker": "LLY",
-    "cusip": "532457108",
-    "name": "ELI LILLY & CO",
-    "value": 2817700956,
-    "shares": 2349200,
-    "putCall": "put"
-   },
-   {
-    "ticker": null,
-    "cusip": "464287432",
-    "name": "ISHARES TR",
-    "value": 2714262076,
-    "shares": 31407800,
-    "putCall": "put"
-   },
-   {
-    "ticker": "UNH",
-    "cusip": "91324P102",
-    "name": "UNITEDHEALTH GROUP INC",
-    "value": 2632849798,
-    "shares": 6334600,
-    "putCall": "call"
-   }
-  ],
-  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1423053/000110465926097200/0001104659-26-097200-index.htm"
- },
- {
-  "id": "0001067983",
-  "name": "버크셔 해서웨이",
-  "periodOfReport": "2026-06-30",
-  "filedAt": "2026-08-14",
-  "totalValue": 299253556246,
-  "holdingCount": 29,
-  "holdings": [
-   {
-    "ticker": "AAPL",
-    "cusip": "037833100",
-    "name": "APPLE INC",
-    "value": 65950296923,
-    "shares": 227917808,
-    "putCall": null
-   },
-   {
-    "ticker": "AXP",
-    "cusip": "025816109",
-    "name": "AMERICAN EXPRESS CO",
-    "value": 51282319275,
-    "shares": 151610700,
-    "putCall": null
-   },
-   {
-    "ticker": "KO",
-    "cusip": "191216100",
-    "name": "COCA COLA CO",
-    "value": 32508000000,
-    "shares": 400000000,
-    "putCall": null
-   },
-   {
-    "ticker": "GOOGL",
-    "cusip": "02079K305",
-    "name": "ALPHABET INC",
-    "value": 28157599351,
-    "shares": 78791167,
-    "putCall": null
-   },
-   {
-    "ticker": null,
-    "cusip": "060505104",
-    "name": "BANK OF AMER CORP",
-    "value": 27543790975,
-    "shares": 483394015,
-    "putCall": null
-   },
-   {
-    "ticker": "CVX",
-    "cusip": "166764100",
-    "name": "CHEVRON CORPORATION",
-    "value": 13986141890,
-    "shares": 84375856,
-    "putCall": null
-   },
-   {
-    "ticker": "OXY",
-    "cusip": "674599105",
-    "name": "OCCIDENTAL PETE CORP",
-    "value": 12868205304,
-    "shares": 264941431,
-    "putCall": null
-   },
-   {
-    "ticker": "CB",
-    "cusip": "H1467J104",
-    "name": "CHUBB LIMITED",
-    "value": 11670066615,
-    "shares": 34249183,
-    "putCall": null
-   },
-   {
-    "ticker": "MCO",
-    "cusip": "615369105",
-    "name": "MOODYS CORP",
-    "value": 11173435852,
-    "shares": 24669778,
-    "putCall": null
-   },
-   {
-    "ticker": "GOOGL",
-    "cusip": "02079K107",
-    "name": "ALPHABET INC",
-    "value": 9606489032,
-    "shares": 27188433,
-    "putCall": null
-   },
-   {
-    "ticker": "KHC",
-    "cusip": "500754106",
-    "name": "KRAFT HEINZ CO",
-    "value": 7691494401,
-    "shares": 325634818,
-    "putCall": null
-   },
-   {
-    "ticker": "DVA",
-    "cusip": "23918K108",
-    "name": "DAVITA INC",
-    "value": 6425268898,
-    "shares": 28880209,
-    "putCall": null
-   },
-   {
-    "ticker": "DAL",
-    "cusip": "247361702",
-    "name": "DELTA AIR LINES INC",
-    "value": 5368591200,
-    "shares": 57320000,
-    "putCall": null
-   },
-   {
-    "ticker": null,
-    "cusip": "829933100",
-    "name": "SIRIUSXM HOLDINGS INC",
-    "value": 3686802237,
-    "shares": 124807117,
-    "putCall": null
-   },
-   {
-    "ticker": "VRSN",
-    "cusip": "92343E102",
-    "name": "VERISIGN INC",
-    "value": 2261494212,
-    "shares": 8989880,
-    "putCall": null
-   },
-   {
-    "ticker": "KR",
-    "cusip": "501044101",
-    "name": "KROGER CO",
-    "value": 2165670000,
-    "shares": 39000000,
-    "putCall": null
-   },
-   {
-    "ticker": "ALLY",
-    "cusip": "02005N100",
-    "name": "ALLY FINL INC",
-    "value": 1240650000,
-    "shares": 27000000,
-    "putCall": null
-   },
-   {
-    "ticker": "LEN",
-    "cusip": "526057104",
-    "name": "LENNAR CORP",
-    "value": 1186481443,
-    "shares": 13111741,
-    "putCall": null
-   },
-   {
-    "ticker": "LLYVA",
-    "cusip": "530909308",
-    "name": "LIBERTY LIVE HOLDINGS INC",
-    "value": 1118425787,
-    "shares": 10587143,
-    "putCall": null
-   },
-   {
-    "ticker": "NYT",
-    "cusip": "650111107",
-    "name": "NEW YORK TIMES CO MTN BE",
-    "value": 1098686000,
-    "shares": 15700000,
-    "putCall": null
-   },
-   {
-    "ticker": "COF",
-    "cusip": "14040H105",
-    "name": "CAPITAL ONE FINL CORP",
-    "value": 601860000,
-    "shares": 3000000,
-    "putCall": null
-   },
-   {
-    "ticker": "LLYVA",
-    "cusip": "530909100",
-    "name": "LIBERTY LIVE HOLDINGS INC",
-    "value": 504941901,
-    "shares": 4986588,
-    "putCall": null
-   },
-   {
-    "ticker": "LPX",
-    "cusip": "546347105",
-    "name": "LOUISIANA PAC CORP",
-    "value": 445592617,
-    "shares": 5664793,
-    "putCall": null
-   },
-   {
-    "ticker": "NUE",
-    "cusip": "670346105",
-    "name": "NUCOR CORP",
-    "value": 413814258,
-    "shares": 1857752,
-    "putCall": null
-   },
-   {
-    "ticker": "M",
-    "cusip": "55616P104",
-    "name": "MACYS INC",
-    "value": 173031882,
-    "shares": 7347426,
-    "putCall": null
-   },
-   {
-    "ticker": "NVR",
-    "cusip": "62944T105",
-    "name": "NVR INC",
-    "value": 75710501,
-    "shares": 11112,
-    "putCall": null
-   },
-   {
-    "ticker": "LEN",
-    "cusip": "526057302",
-    "name": "LENNAR CORP",
-    "value": 26445959,
-    "shares": 298117,
-    "putCall": null
-   },
-   {
-    "ticker": "JEF",
-    "cusip": "47233W109",
-    "name": "JEFFERIES FINANCIAL GROUP IN",
-    "value": 21669229,
-    "shares": 433558,
-    "putCall": null
-   },
-   {
-    "ticker": "DHI",
-    "cusip": "23331A109",
-    "name": "D R HORTON INC",
-    "value": 580504,
-    "shares": 3564,
-    "putCall": null
-   }
-  ],
-  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1067983/000119312526352200/0001193125-26-352200-index.htm"
- },
- {
-  "id": "0001273087",
-  "name": "밀레니엄",
-  "periodOfReport": "2026-06-30",
-  "filedAt": "2026-08-14",
-  "totalValue": 276293649404,
-  "holdingCount": 5796,
-  "holdings": [
-   {
-    "ticker": null,
-    "cusip": "464287200",
-    "name": "ISHARES TR",
-    "value": 10861849635,
-    "shares": 14503932,
-    "putCall": null
-   },
-   {
-    "ticker": null,
-    "cusip": "464287655",
-    "name": "ISHARES TR",
-    "value": 9999877350,
-    "shares": 33283000,
-    "putCall": "put"
-   },
-   {
-    "ticker": "NVDA",
-    "cusip": "67066G104",
-    "name": "NVIDIA CORPORATION",
-    "value": 5095131778,
-    "shares": 25464200,
-    "putCall": "put"
-   },
-   {
-    "ticker": null,
-    "cusip": "464287655",
-    "name": "ISHARES TR",
-    "value": 4362233550,
-    "shares": 14519000,
-    "putCall": "call"
-   },
-   {
-    "ticker": null,
-    "cusip": "46090E103",
-    "name": "INVESCO QQQ TR",
-    "value": 3992908080,
-    "shares": 5422200,
-    "putCall": "put"
-   },
-   {
-    "ticker": null,
-    "cusip": "78462F103",
-    "name": "STATE STR SPDR S&P 500 ETF T",
-    "value": 3627143288,
-    "shares": 4857109,
-    "putCall": null
-   },
-   {
-    "ticker": null,
-    "cusip": "78462F103",
-    "name": "STATE STR SPDR S&P 500 ETF T",
-    "value": 3544319774,
-    "shares": 4746200,
-    "putCall": "call"
-   },
-   {
-    "ticker": "MU",
-    "cusip": "595112103",
-    "name": "MICRON TECHNOLOGY INC",
-    "value": 3259830389,
-    "shares": 2824100,
-    "putCall": "put"
-   },
-   {
-    "ticker": null,
-    "cusip": "78462F103",
-    "name": "STATE STR SPDR S&P 500 ETF T",
-    "value": 3218205315,
-    "shares": 4309500,
-    "putCall": "put"
-   },
-   {
-    "ticker": null,
-    "cusip": "46090E103",
-    "name": "INVESCO QQQ TR",
-    "value": 3000609080,
-    "shares": 4074700,
-    "putCall": "call"
-   },
-   {
-    "ticker": "SPCX",
-    "cusip": "84615Q103",
-    "name": "SPACE EXPLORATION TECHN CORP",
-    "value": 2981723351,
-    "shares": 17604863,
-    "putCall": null
-   },
-   {
-    "ticker": "AMD",
-    "cusip": "007903107",
-    "name": "ADVANCED MICRO DEVICES INC",
-    "value": 2747588118,
-    "shares": 4729800,
-    "putCall": "put"
-   },
-   {
-    "ticker": "AAPL",
-    "cusip": "037833100",
-    "name": "APPLE INC",
-    "value": 2634130888,
-    "shares": 9103300,
-    "putCall": "put"
-   },
-   {
-    "ticker": "AMZN",
-    "cusip": "023135106",
-    "name": "AMAZON COM INC",
-    "value": 2535031908,
-    "shares": 10636200,
-    "putCall": "put"
-   },
-   {
-    "ticker": "NVDA",
-    "cusip": "67066G104",
-    "name": "NVIDIA CORPORATION",
-    "value": 2432616985,
-    "shares": 12157614,
-    "putCall": null
-   },
-   {
-    "ticker": "MSFT",
-    "cusip": "594918104",
-    "name": "MICROSOFT CORP",
-    "value": 2237112846,
-    "shares": 5997300,
-    "putCall": "put"
-   },
-   {
-    "ticker": "GOOGL",
-    "cusip": "02079K305",
-    "name": "ALPHABET INC",
-    "value": 2166591362,
-    "shares": 6062600,
-    "putCall": "put"
-   },
-   {
-    "ticker": "META",
-    "cusip": "30303M102",
-    "name": "META PLATFORMS INC",
-    "value": 1936928994,
-    "shares": 3438600,
-    "putCall": "put"
-   },
-   {
-    "ticker": null,
-    "cusip": "655844108",
-    "name": "NORFOLK SOUTHN CORP",
-    "value": 1636411612,
-    "shares": 5201728,
-    "putCall": null
-   },
-   {
-    "ticker": "MSFT",
-    "cusip": "594918104",
-    "name": "MICROSOFT CORP",
-    "value": 1581942010,
-    "shares": 4240904,
-    "putCall": null
-   },
-   {
-    "ticker": null,
-    "cusip": "934423104",
-    "name": "WARNER BROS DISCOVERY INC",
-    "value": 1537150949,
-    "shares": 57657575,
-    "putCall": null
-   },
-   {
-    "ticker": "NVDA",
-    "cusip": "67066G104",
-    "name": "NVIDIA CORPORATION",
-    "value": 1510239302,
-    "shares": 7547800,
-    "putCall": "call"
-   },
-   {
-    "ticker": "TSLA",
-    "cusip": "88160R101",
-    "name": "TESLA INC",
-    "value": 1474497420,
-    "shares": 3505700,
-    "putCall": "put"
-   },
-   {
-    "ticker": "AAPL",
-    "cusip": "037833100",
-    "name": "APPLE INC",
-    "value": 1401167928,
-    "shares": 4842300,
-    "putCall": "call"
-   },
-   {
-    "ticker": null,
-    "cusip": "92189F676",
-    "name": "VANECK ETF TRUST",
-    "value": 1389175020,
-    "shares": 2118000,
-    "putCall": "put"
-   },
-   {
-    "ticker": "AVGO",
-    "cusip": "11135F101",
-    "name": "BROADCOM INC",
-    "value": 1359673350,
-    "shares": 3599400,
-    "putCall": "put"
-   },
-   {
-    "ticker": null,
-    "cusip": "922908363",
-    "name": "VANGUARD INDEX FDS",
-    "value": 1253428937,
-    "shares": 1825001,
-    "putCall": null
-   },
-   {
-    "ticker": null,
-    "cusip": "81369Y506",
-    "name": "SELECT SECTOR SPDR TR",
-    "value": 1201210114,
-    "shares": 22617400,
-    "putCall": "put"
-   },
-   {
-    "ticker": "MU",
-    "cusip": "595112103",
-    "name": "MICRON TECHNOLOGY INC",
-    "value": 1144940251,
-    "shares": 991900,
-    "putCall": "call"
-   },
-   {
-    "ticker": "MSFT",
-    "cusip": "594918104",
-    "name": "MICROSOFT CORP",
-    "value": 1130810130,
-    "shares": 3031500,
-    "putCall": "call"
-   },
-   {
-    "ticker": "AMD",
-    "cusip": "007903107",
-    "name": "ADVANCED MICRO DEVICES INC",
-    "value": 1106982096,
-    "shares": 1905600,
-    "putCall": "call"
-   },
-   {
-    "ticker": null,
-    "cusip": "78467X109",
-    "name": "STATE STR SPDR DOW JONES IND",
-    "value": 1069123374,
-    "shares": 2046600,
-    "putCall": "put"
-   },
-   {
-    "ticker": null,
-    "cusip": "464288513",
-    "name": "ISHARES TR",
-    "value": 1043600503,
-    "shares": 13049900,
-    "putCall": "put"
-   },
-   {
-    "ticker": "INTC",
-    "cusip": "458140100",
-    "name": "INTEL CORP",
-    "value": 1033108407,
-    "shares": 7398900,
-    "putCall": "put"
-   },
-   {
-    "ticker": "AMZN",
-    "cusip": "023135106",
-    "name": "AMAZON COM INC",
-    "value": 981185003,
-    "shares": 4116745,
-    "putCall": null
-   },
-   {
-    "ticker": "WDC",
-    "cusip": "958102AT2",
-    "name": "WESTERN DIGITAL CORP",
-    "value": 979974730,
-    "shares": 58044000,
-    "putCall": null
-   },
-   {
-    "ticker": "GOOGL",
-    "cusip": "02079K107",
-    "name": "ALPHABET INC",
-    "value": 935087845,
-    "shares": 2646500,
-    "putCall": "put"
-   },
-   {
-    "ticker": "AMZN",
-    "cusip": "023135106",
-    "name": "AMAZON COM INC",
-    "value": 929502166,
-    "shares": 3899900,
-    "putCall": "call"
-   },
-   {
-    "ticker": "META",
-    "cusip": "30303M102",
-    "name": "META PLATFORMS INC",
-    "value": 892195031,
-    "shares": 1583900,
-    "putCall": "call"
-   },
-   {
-    "ticker": null,
-    "cusip": "285512109",
-    "name": "ELECTRONIC ARTS INC",
-    "value": 889363460,
-    "shares": 4337512,
-    "putCall": null
-   },
-   {
-    "ticker": null,
-    "cusip": "464287234",
-    "name": "ISHARES TR",
-    "value": 868287084,
-    "shares": 12692400,
-    "putCall": "put"
-   },
-   {
-    "ticker": null,
-    "cusip": "81369Y605",
-    "name": "SELECT SECTOR SPDR TR",
-    "value": 854452263,
-    "shares": 15938300,
-    "putCall": "put"
-   },
-   {
-    "ticker": "SNDK",
-    "cusip": "80004C200",
-    "name": "SANDISK CORP",
-    "value": 832478491,
-    "shares": 366129,
-    "putCall": null
-   },
-   {
-    "ticker": "BE",
-    "cusip": "093712107",
-    "name": "BLOOM ENERGY CORP",
-    "value": 763548945,
-    "shares": 2522461,
+    "value": 1114946250,
+    "shares": 4475000,
     "putCall": null
    },
    {
     "ticker": null,
     "cusip": "874039100",
     "name": "TAIWAN SEMICONDUCTOR MANUFAC",
-    "value": 760503959,
-    "shares": 1592445,
-    "putCall": null
-   },
-   {
-    "ticker": "META",
-    "cusip": "30303M102",
-    "name": "META PLATFORMS INC",
-    "value": 731851153,
-    "shares": 1299244,
-    "putCall": null
-   },
-   {
-    "ticker": "GOOGL",
-    "cusip": "02079K305",
-    "name": "ALPHABET INC",
-    "value": 722423455,
-    "shares": 2021500,
-    "putCall": "call"
-   },
-   {
-    "ticker": "BRK-B",
-    "cusip": "084670702",
-    "name": "BERKSHIRE HATHAWAY INC DEL",
-    "value": 722312965,
-    "shares": 1443500,
-    "putCall": "put"
-   },
-   {
-    "ticker": "FCX",
-    "cusip": "35671D857",
-    "name": "FREEPORT MCMORAN INC",
-    "value": 720239549,
-    "shares": 11452370,
-    "putCall": null
-   },
-   {
-    "ticker": "KVUE",
-    "cusip": "49177J102",
-    "name": "KENVUE INC",
-    "value": 705904787,
-    "shares": 36939026,
-    "putCall": null
-   }
-  ],
-  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1273087/000127308726000007/0001273087-26-000007-index.htm"
- },
- {
-  "id": "0001135730",
-  "name": "코투 매니지먼트",
-  "periodOfReport": "2026-06-30",
-  "filedAt": "2026-08-14",
-  "totalValue": 48629053706,
-  "holdingCount": 66,
-  "holdings": [
-   {
-    "ticker": null,
-    "cusip": "874039100",
-    "name": "TAIWAN SEMICONDUCTOR MANUFAC",
-    "value": 4257534162,
-    "shares": 8914995,
-    "putCall": null
-   },
-   {
-    "ticker": "LRCX",
-    "cusip": "512807306",
-    "name": "LAM RESEARCH CORP",
-    "value": 4091329827,
-    "shares": 9441603,
-    "putCall": null
-   },
-   {
-    "ticker": "MU",
-    "cusip": "595112103",
-    "name": "MICRON TECHNOLOGY INC",
-    "value": 3627089685,
-    "shares": 3142269,
+    "value": 718499250,
+    "shares": 1575000,
     "putCall": null
    },
    {
     "ticker": "SPCX",
     "cusip": "84615Q103",
     "name": "SPACE EXPLORATION TECHN CORP",
-    "value": 3171465731,
-    "shares": 18561780,
+    "value": 556547062,
+    "shares": 3883329,
     "putCall": null
    },
    {
-    "ticker": null,
-    "cusip": "038222105",
-    "name": "APPLIED MATLS INC",
-    "value": 3046348209,
-    "shares": 4213483,
-    "putCall": null
-   },
-   {
-    "ticker": "GEV",
-    "cusip": "36828A101",
-    "name": "GE VERNOVA INC",
-    "value": 3005484557,
-    "shares": 2558164,
-    "putCall": null
-   },
-   {
-    "ticker": "AMZN",
-    "cusip": "023135106",
-    "name": "AMAZON COM INC",
-    "value": 2820705995,
-    "shares": 11834799,
-    "putCall": null
-   },
-   {
-    "ticker": "AVGO",
-    "cusip": "11135F101",
-    "name": "BROADCOM INC",
-    "value": 2208640410,
-    "shares": 5846831,
-    "putCall": null
-   },
-   {
-    "ticker": "ETN",
-    "cusip": "G29183103",
-    "name": "EATON CORP PLC",
-    "value": 2117140999,
-    "shares": 4968415,
-    "putCall": null
-   },
-   {
-    "ticker": "GOOGL",
-    "cusip": "02079K305",
-    "name": "ALPHABET INC",
-    "value": 1735478421,
-    "shares": 4856251,
-    "putCall": null
-   },
-   {
-    "ticker": "INTC",
-    "cusip": "458140100",
-    "name": "INTEL CORP",
-    "value": 1687292689,
-    "shares": 12084027,
-    "putCall": null
-   },
-   {
-    "ticker": "CBRS",
-    "cusip": "15675D103",
-    "name": "CEREBRAS SYSTEMS INC",
-    "value": 1549437188,
-    "shares": 7011028,
-    "putCall": null
-   },
-   {
-    "ticker": "META",
-    "cusip": "30303M102",
-    "name": "META PLATFORMS INC",
-    "value": 1422897577,
-    "shares": 2526048,
-    "putCall": null
-   },
-   {
-    "ticker": "EQIX",
-    "cusip": "29444U700",
-    "name": "EQUINIX INC",
-    "value": 1327501387,
-    "shares": 1273517,
+    "ticker": "UBER",
+    "cusip": "90353T100",
+    "name": "UBER TECHNOLOGIES INC",
+    "value": 501150650,
+    "shares": 7315000,
     "putCall": null
    },
    {
     "ticker": "NVDA",
     "cusip": "67066G104",
     "name": "NVIDIA CORPORATION",
-    "value": 1211584367,
-    "shares": 6055197,
-    "putCall": null
-   },
-   {
-    "ticker": "CEG",
-    "cusip": "21037T109",
-    "name": "CONSTELLATION ENERGY CORP",
-    "value": 1150567816,
-    "shares": 4632475,
-    "putCall": null
-   },
-   {
-    "ticker": "FPS",
-    "cusip": "34631F102",
-    "name": "FORGENT POWER SOLUTIONS INC",
-    "value": 1145207477,
-    "shares": 20501387,
-    "putCall": null
-   },
-   {
-    "ticker": "HUT",
-    "cusip": "44812J104",
-    "name": "HUT 8 CORP",
-    "value": 1121603127,
-    "shares": 9715476,
-    "putCall": null
-   },
-   {
-    "ticker": "MSFT",
-    "cusip": "594918104",
-    "name": "MICROSOFT CORP",
-    "value": 1095339285,
-    "shares": 2936409,
-    "putCall": null
-   },
-   {
-    "ticker": "NTRA",
-    "cusip": "632307104",
-    "name": "NATERA INC",
-    "value": 680006681,
-    "shares": 2505090,
-    "putCall": null
-   },
-   {
-    "ticker": "APP",
-    "cusip": "03831W108",
-    "name": "APPLOVIN CORP",
-    "value": 603431708,
-    "shares": 1171189,
-    "putCall": null
-   },
-   {
-    "ticker": "SPOT",
-    "cusip": "L8681T102",
-    "name": "SPOTIFY TECHNOLOGY S A",
-    "value": 601750470,
-    "shares": 1310632,
-    "putCall": null
-   },
-   {
-    "ticker": null,
-    "cusip": "N07059210",
-    "name": "ASML HLDG NV",
-    "value": 587692513,
-    "shares": 295406,
-    "putCall": null
-   },
-   {
-    "ticker": "RDDT",
-    "cusip": "75734B100",
-    "name": "REDDIT INC",
-    "value": 484269280,
-    "shares": 2789891,
-    "putCall": null
-   },
-   {
-    "ticker": "NU",
-    "cusip": "G6683N103",
-    "name": "NU HLDGS LTD",
-    "value": 391896575,
-    "shares": 29333576,
-    "putCall": null
-   },
-   {
-    "ticker": "NFLX",
-    "cusip": "64110L106",
-    "name": "NETFLIX INC.",
-    "value": 336323988,
-    "shares": 4710420,
-    "putCall": null
-   },
-   {
-    "ticker": "GOOGL",
-    "cusip": "02079K107",
-    "name": "ALPHABET INC",
-    "value": 320963205,
-    "shares": 908395,
-    "putCall": null
-   },
-   {
-    "ticker": "ISRG",
-    "cusip": "46120E602",
-    "name": "INTUITIVE SURGICAL INC",
-    "value": 315640206,
-    "shares": 793704,
-    "putCall": null
-   },
-   {
-    "ticker": null,
-    "cusip": "31946M103",
-    "name": "FIRST CTZNS BANCSHARES INC D",
-    "value": 290266043,
-    "shares": 139498,
-    "putCall": null
-   },
-   {
-    "ticker": "VRT",
-    "cusip": "92537N108",
-    "name": "VERTIV HOLDINGS CO",
-    "value": 270063803,
-    "shares": 806594,
-    "putCall": null
-   },
-   {
-    "ticker": "QCOM",
-    "cusip": "747525103",
-    "name": "QUALCOMM INC",
-    "value": 256361384,
-    "shares": 1387312,
-    "putCall": null
-   },
-   {
-    "ticker": "CVNA",
-    "cusip": "146869102",
-    "name": "CARVANA CO",
-    "value": 215814895,
-    "shares": 3278865,
-    "putCall": null
-   },
-   {
-    "ticker": "MTZ",
-    "cusip": "576323109",
-    "name": "MASTEC INC",
-    "value": 215207036,
-    "shares": 517250,
-    "putCall": null
-   },
-   {
-    "ticker": "CAI",
-    "cusip": "142152107",
-    "name": "CARIS LIFE SCIENCES INC",
-    "value": 174992258,
-    "shares": 9819992,
-    "putCall": null
-   },
-   {
-    "ticker": "SNPS",
-    "cusip": "871607107",
-    "name": "SYNOPSYS INC",
-    "value": 141611612,
-    "shares": 317465,
-    "putCall": null
-   },
-   {
-    "ticker": "GNRC",
-    "cusip": "368736104",
-    "name": "GENERAC HLDGS INC",
-    "value": 114346112,
-    "shares": 390513,
-    "putCall": null
-   },
-   {
-    "ticker": null,
-    "cusip": "85208M102",
-    "name": "SPROUTS FMRS MKT INC",
-    "value": 101815120,
-    "shares": 1203773,
-    "putCall": null
-   },
-   {
-    "ticker": "DASH",
-    "cusip": "25809K105",
-    "name": "DOORDASH INC",
-    "value": 96839868,
-    "shares": 524792,
-    "putCall": null
-   },
-   {
-    "ticker": "ENPH",
-    "cusip": "29355A107",
-    "name": "ENPHASE ENERGY INC",
-    "value": 76663775,
-    "shares": 1556941,
-    "putCall": null
-   },
-   {
-    "ticker": "BAH",
-    "cusip": "099502106",
-    "name": "BOOZ ALLEN HAMILTON HLDG COR",
-    "value": 65730485,
-    "shares": 1083410,
-    "putCall": null
-   },
-   {
-    "ticker": "AMD",
-    "cusip": "007903107",
-    "name": "ADVANCED MICRO DEVICES INC",
-    "value": 55759808,
-    "shares": 95987,
-    "putCall": null
-   },
-   {
-    "ticker": "PYPL",
-    "cusip": "70450Y103",
-    "name": "PAYPAL HLDGS INC",
-    "value": 53698216,
-    "shares": 1243590,
-    "putCall": null
-   },
-   {
-    "ticker": "NVAX",
-    "cusip": "670002401",
-    "name": "NOVAVAX INC",
-    "value": 36144408,
-    "shares": 3836986,
-    "putCall": null
-   },
-   {
-    "ticker": "FIX",
-    "cusip": "199908104",
-    "name": "COMFORT SYS USA INC",
-    "value": 35264836,
-    "shares": 17793,
-    "putCall": null
-   },
-   {
-    "ticker": "QS",
-    "cusip": "74767V109",
-    "name": "QUANTUMSCAPE CORP",
-    "value": 32470162,
-    "shares": 4294995,
-    "putCall": null
-   },
-   {
-    "ticker": "UPST",
-    "cusip": "91680M107",
-    "name": "UPSTART HLDGS INC",
-    "value": 30857652,
-    "shares": 870947,
-    "putCall": null
-   },
-   {
-    "ticker": "AGX",
-    "cusip": "04010E109",
-    "name": "ARGAN INC",
-    "value": 28828454,
-    "shares": 36101,
-    "putCall": null
-   },
-   {
-    "ticker": "TSLA",
-    "cusip": "88160R101",
-    "name": "TESLA INC",
-    "value": 25220437,
-    "shares": 59963,
-    "putCall": null
-   },
-   {
-    "ticker": "PINS",
-    "cusip": "72352L106",
-    "name": "PINTEREST INC",
-    "value": 25189313,
-    "shares": 1197780,
-    "putCall": null
-   },
-   {
-    "ticker": "TTD",
-    "cusip": "88339J105",
-    "name": "THE TRADE DESK INC",
-    "value": 25078569,
-    "shares": 1387089,
-    "putCall": null
-   }
-  ],
-  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1135730/000091957426005478/0000919574-26-005478-index.htm"
- },
- {
-  "id": "0001350694",
-  "name": "브리지워터",
-  "periodOfReport": "2026-06-30",
-  "filedAt": "2026-08-14",
-  "totalValue": 24376086530,
-  "holdingCount": 997,
-  "holdings": [
-   {
-    "ticker": null,
-    "cusip": "78462F103",
-    "name": "STATE STR SPDR S&P 500 ETF T",
-    "value": 3973046405,
-    "shares": 5320308,
-    "putCall": null
-   },
-   {
-    "ticker": null,
-    "cusip": "464287200",
-    "name": "ISHARES TR",
-    "value": 2248381963,
-    "shares": 3002286,
-    "putCall": null
-   },
-   {
-    "ticker": "NVDA",
-    "cusip": "67066G104",
-    "name": "NVIDIA CORPORATION",
-    "value": 773586958,
-    "shares": 3866195,
-    "putCall": null
-   },
-   {
-    "ticker": "AVGO",
-    "cusip": "11135F101",
-    "name": "BROADCOM INC",
-    "value": 497845413,
-    "shares": 1317923,
-    "putCall": null
-   },
-   {
-    "ticker": "AMZN",
-    "cusip": "023135106",
-    "name": "AMAZON COM INC",
-    "value": 482753142,
-    "shares": 2025481,
-    "putCall": null
-   },
-   {
-    "ticker": "GOOGL",
-    "cusip": "02079K305",
-    "name": "ALPHABET INC",
-    "value": 472506037,
-    "shares": 1322176,
-    "putCall": null
-   },
-   {
-    "ticker": "LRCX",
-    "cusip": "512807306",
-    "name": "LAM RESEARCH CORP",
-    "value": 406560606,
-    "shares": 938224,
-    "putCall": null
-   },
-   {
-    "ticker": null,
-    "cusip": "922908363",
-    "name": "VANGUARD INDEX FDS",
-    "value": 314820655,
-    "shares": 458381,
-    "putCall": null
-   },
-   {
-    "ticker": "AMD",
-    "cusip": "007903107",
-    "name": "ADVANCED MICRO DEVICES INC",
-    "value": 312896715,
-    "shares": 538632,
+    "value": 456760000,
+    "shares": 2000000,
     "putCall": null
    },
    {
     "ticker": null,
     "cusip": "464286772",
     "name": "ISHARES INC",
-    "value": 279585467,
-    "shares": 1384772,
+    "value": 384961914,
+    "shares": 2106149,
     "putCall": null
    },
    {
-    "ticker": "MSFT",
-    "cusip": "594918104",
-    "name": "MICROSOFT CORP",
-    "value": 265551446,
-    "shares": 711896,
+    "ticker": "META",
+    "cusip": "30303M102",
+    "name": "META PLATFORMS INC",
+    "value": 380719500,
+    "shares": 525000,
     "putCall": null
    },
    {
-    "ticker": "NEM",
-    "cusip": "651639106",
-    "name": "NEWMONT CORP",
-    "value": 251728878,
-    "shares": 2695170,
+    "ticker": "GOOGL",
+    "cusip": "02079K107",
+    "name": "ALPHABET INC",
+    "value": 340740000,
+    "shares": 1000000,
     "putCall": null
    },
    {
-    "ticker": null,
-    "cusip": "038222105",
-    "name": "APPLIED MATLS INC",
-    "value": 210700998,
-    "shares": 291426,
+    "ticker": "VST",
+    "cusip": "92840M102",
+    "name": "VISTRA CORP",
+    "value": 292647881,
+    "shares": 2115272,
+    "putCall": null
+   },
+   {
+    "ticker": "LRCX",
+    "cusip": "512807306",
+    "name": "LAM RESEARCH CORP",
+    "value": 205318750,
+    "shares": 625000,
+    "putCall": null
+   },
+   {
+    "ticker": "BABA",
+    "cusip": "01609W102",
+    "name": "ALIBABA GROUP HLDG LTD",
+    "value": 198949000,
+    "shares": 1850000,
     "putCall": null
    },
    {
     "ticker": "ORCL",
     "cusip": "68389X105",
     "name": "ORACLE CORP",
-    "value": 210001314,
-    "shares": 1432967,
-    "putCall": null
-   },
-   {
-    "ticker": "STX",
-    "cusip": "G7997R103",
-    "name": "SEAGATE TECHNOLOGY HLDNGS PL",
-    "value": 192828230,
-    "shares": 199822,
-    "putCall": null
-   },
-   {
-    "ticker": "JNJ",
-    "cusip": "478160104",
-    "name": "JOHNSON & JOHNSON",
-    "value": 169940216,
-    "shares": 669135,
-    "putCall": null
-   },
-   {
-    "ticker": null,
-    "cusip": "922042858",
-    "name": "VANGUARD INTL EQUITY INDEX F",
-    "value": 163957626,
-    "shares": 2746819,
-    "putCall": null
-   },
-   {
-    "ticker": "GEV",
-    "cusip": "36828A101",
-    "name": "GE VERNOVA INC",
-    "value": 144235212,
-    "shares": 122768,
-    "putCall": null
-   },
-   {
-    "ticker": "UNP",
-    "cusip": "907818108",
-    "name": "UNION PAC CORP",
-    "value": 139880352,
-    "shares": 514266,
-    "putCall": null
-   },
-   {
-    "ticker": "MU",
-    "cusip": "595112103",
-    "name": "MICRON TECHNOLOGY INC",
-    "value": 134666397,
-    "shares": 116666,
-    "putCall": null
-   },
-   {
-    "ticker": null,
-    "cusip": "464288588",
-    "name": "ISHARES TR",
-    "value": 131080336,
-    "shares": 1386800,
-    "putCall": null
-   },
-   {
-    "ticker": "MO",
-    "cusip": "02209S103",
-    "name": "ALTRIA GROUP INC",
-    "value": 124273191,
-    "shares": 1727216,
-    "putCall": null
-   },
-   {
-    "ticker": "APH",
-    "cusip": "032095101",
-    "name": "AMPHENOL CORP",
-    "value": 123002948,
-    "shares": 697612,
-    "putCall": null
-   },
-   {
-    "ticker": null,
-    "cusip": "N07059210",
-    "name": "ASML HLDG NV",
-    "value": 122698712,
-    "shares": 61675,
-    "putCall": null
-   },
-   {
-    "ticker": null,
-    "cusip": "06849F108",
-    "name": "BARRICK MNG CORP",
-    "value": 121387233,
-    "shares": 3304836,
-    "putCall": null
-   },
-   {
-    "ticker": "CLS",
-    "cusip": "15101Q207",
-    "name": "CELESTICA INC",
-    "value": 120635278,
-    "shares": 330689,
-    "putCall": null
-   },
-   {
-    "ticker": "VST",
-    "cusip": "92840M102",
-    "name": "VISTRA CORP",
-    "value": 119241378,
-    "shares": 751695,
-    "putCall": null
-   },
-   {
-    "ticker": "SHEL",
-    "cusip": "780259305",
-    "name": "SHELL PLC",
-    "value": 118338679,
-    "shares": 1526163,
-    "putCall": null
-   },
-   {
-    "ticker": "SE",
-    "cusip": "81141R100",
-    "name": "SEA LTD",
-    "value": 115433272,
-    "shares": 1204563,
-    "putCall": null
-   },
-   {
-    "ticker": null,
-    "cusip": "464287242",
-    "name": "ISHARES TR",
-    "value": 114578035,
-    "shares": 1050500,
-    "putCall": null
-   },
-   {
-    "ticker": "NUE",
-    "cusip": "670346105",
-    "name": "NUCOR CORP",
-    "value": 114364973,
-    "shares": 513423,
-    "putCall": null
-   },
-   {
-    "ticker": "PCAR",
-    "cusip": "693718108",
-    "name": "PACCAR INC",
-    "value": 113646373,
-    "shares": 946107,
-    "putCall": null
-   },
-   {
-    "ticker": "WDC",
-    "cusip": "958102105",
-    "name": "WESTERN DIGITAL CORP",
-    "value": 110124909,
-    "shares": 172415,
-    "putCall": null
-   },
-   {
-    "ticker": null,
-    "cusip": "46434G103",
-    "name": "ISHARES INC",
-    "value": 110034384,
-    "shares": 1328276,
-    "putCall": null
-   },
-   {
-    "ticker": "CSX",
-    "cusip": "126408103",
-    "name": "CSX CORP",
-    "value": 105990236,
-    "shares": 2229965,
-    "putCall": null
-   },
-   {
-    "ticker": null,
-    "cusip": "71654V408",
-    "name": "PETROLEO BRASILEIRO S A",
-    "value": 105436776,
-    "shares": 6524553,
-    "putCall": null
-   },
-   {
-    "ticker": "AAPL",
-    "cusip": "037833100",
-    "name": "APPLE INC",
-    "value": 105436129,
-    "shares": 364377,
-    "putCall": null
-   },
-   {
-    "ticker": "LLY",
-    "cusip": "532457108",
-    "name": "ELI LILLY & CO",
-    "value": 104377997,
-    "shares": 87023,
-    "putCall": null
-   },
-   {
-    "ticker": "PCG",
-    "cusip": "69331C108",
-    "name": "PG&E CORP",
-    "value": 99764701,
-    "shares": 5931314,
-    "putCall": null
-   },
-   {
-    "ticker": "KLAC",
-    "cusip": "482480100",
-    "name": "KLA CORP",
-    "value": 98982000,
-    "shares": 328070,
-    "putCall": null
-   },
-   {
-    "ticker": "FIX",
-    "cusip": "199908104",
-    "name": "COMFORT SYS USA INC",
-    "value": 96136467,
-    "shares": 48506,
-    "putCall": null
-   },
-   {
-    "ticker": "NXPI",
-    "cusip": "N6596X109",
-    "name": "NXP SEMICONDUCTORS N V",
-    "value": 94820927,
-    "shares": 337405,
-    "putCall": null
-   },
-   {
-    "ticker": "WFC",
-    "cusip": "949746101",
-    "name": "WELLS FARGO & CO",
-    "value": 94693375,
-    "shares": 1145854,
-    "putCall": null
-   },
-   {
-    "ticker": "EIX",
-    "cusip": "281020107",
-    "name": "EDISON INTL",
-    "value": 91917012,
-    "shares": 1234614,
-    "putCall": null
-   },
-   {
-    "ticker": null,
-    "cusip": "46434G764",
-    "name": "ISHARES INC",
-    "value": 90076787,
-    "shares": 880516,
-    "putCall": null
-   },
-   {
-    "ticker": "MPC",
-    "cusip": "56585A102",
-    "name": "MARATHON PETE CORP",
-    "value": 89286100,
-    "shares": 349224,
-    "putCall": null
-   },
-   {
-    "ticker": "STLD",
-    "cusip": "858119100",
-    "name": "STEEL DYNAMICS INC",
-    "value": 86848315,
-    "shares": 378490,
-    "putCall": null
-   },
-   {
-    "ticker": "ES",
-    "cusip": "30040W108",
-    "name": "EVERSOURCE ENERGY",
-    "value": 86372768,
-    "shares": 1195140,
-    "putCall": null
-   },
-   {
-    "ticker": "TEL",
-    "cusip": "G87052109",
-    "name": "TE CONNECTIVITY PLC",
-    "value": 86030616,
-    "shares": 426718,
-    "putCall": null
-   },
-   {
-    "ticker": "ADI",
-    "cusip": "032654105",
-    "name": "ANALOG DEVICES INC",
-    "value": 80708121,
-    "shares": 203208,
-    "putCall": null
-   }
-  ],
-  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1350694/000135069426000003/0001350694-26-000003-index.htm"
- },
- {
-  "id": "0001167483",
-  "name": "타이거 글로벌",
-  "periodOfReport": "2026-06-30",
-  "filedAt": "2026-08-14",
-  "totalValue": 23981506027,
-  "holdingCount": 46,
-  "holdings": [
-   {
-    "ticker": null,
-    "cusip": "874039100",
-    "name": "TAIWAN SEMICONDUCTOR MANUFAC",
-    "value": 2331022991,
-    "shares": 4881008,
-    "putCall": null
-   },
-   {
-    "ticker": "AMZN",
-    "cusip": "023135106",
-    "name": "AMAZON COM INC",
-    "value": 2307979214,
-    "shares": 9683558,
-    "putCall": null
-   },
-   {
-    "ticker": "NVDA",
-    "cusip": "67066G104",
-    "name": "NVIDIA CORPORATION",
-    "value": 2240762490,
-    "shares": 11198773,
-    "putCall": null
-   },
-   {
-    "ticker": "GOOGL",
-    "cusip": "02079K305",
-    "name": "ALPHABET INC",
-    "value": 2074778363,
-    "shares": 5805687,
-    "putCall": null
-   },
-   {
-    "ticker": "META",
-    "cusip": "30303M102",
-    "name": "META PLATFORMS INC",
-    "value": 1590269062,
-    "shares": 2823180,
-    "putCall": null
-   },
-   {
-    "ticker": "LRCX",
-    "cusip": "512807306",
-    "name": "LAM RESEARCH CORP",
-    "value": 1370837288,
-    "shares": 3163495,
-    "putCall": null
-   },
-   {
-    "ticker": "SE",
-    "cusip": "81141R100",
-    "name": "SEA LTD",
-    "value": 1203543536,
-    "shares": 12559152,
-    "putCall": null
-   },
-   {
-    "ticker": null,
-    "cusip": "038222105",
-    "name": "APPLIED MATLS INC",
-    "value": 1180087830,
-    "shares": 1632210,
-    "putCall": null
-   },
-   {
-    "ticker": "GEV",
-    "cusip": "36828A101",
-    "name": "GE VERNOVA INC",
-    "value": 936963773,
-    "shares": 797511,
-    "putCall": null
-   },
-   {
-    "ticker": "MSFT",
-    "cusip": "594918104",
-    "name": "MICROSOFT CORP",
-    "value": 845603887,
-    "shares": 2266913,
-    "putCall": null
-   },
-   {
-    "ticker": "CPAY",
-    "cusip": "219948106",
-    "name": "CORPAY INC",
-    "value": 716489508,
-    "shares": 2149877,
-    "putCall": null
-   },
-   {
-    "ticker": "CBRS",
-    "cusip": "15675D103",
-    "name": "CEREBRAS SYSTEMS INC",
-    "value": 662779000,
-    "shares": 2999000,
-    "putCall": null
-   },
-   {
-    "ticker": "AVGO",
-    "cusip": "11135F101",
-    "name": "BROADCOM INC",
-    "value": 662596921,
-    "shares": 1754062,
-    "putCall": null
-   },
-   {
-    "ticker": "CPNG",
-    "cusip": "22266T109",
-    "name": "COUPANG INC",
-    "value": 633448674,
-    "shares": 36467972,
-    "putCall": null
-   },
-   {
-    "ticker": "INTC",
-    "cusip": "458140100",
-    "name": "INTEL CORP",
-    "value": 593803105,
-    "shares": 4252690,
-    "putCall": null
-   },
-   {
-    "ticker": "SPOT",
-    "cusip": "L8681T102",
-    "name": "SPOTIFY TECHNOLOGY S A",
-    "value": 537837279,
-    "shares": 1171427,
-    "putCall": null
-   },
-   {
-    "ticker": "TTWO",
-    "cusip": "874054109",
-    "name": "TAKE-TWO INTERACTIVE SOFTWAR",
-    "value": 452300813,
-    "shares": 1809348,
-    "putCall": null
-   },
-   {
-    "ticker": "RDDT",
-    "cusip": "75734B100",
-    "name": "REDDIT INC",
-    "value": 438952402,
-    "shares": 2528819,
-    "putCall": null
-   },
-   {
-    "ticker": "AMD",
-    "cusip": "007903107",
-    "name": "ADVANCED MICRO DEVICES INC",
-    "value": 391955662,
-    "shares": 674727,
-    "putCall": null
-   },
-   {
-    "ticker": "XYZ",
-    "cusip": "852234103",
-    "name": "BLOCK INC",
-    "value": 347776532,
-    "shares": 4576007,
-    "putCall": null
-   },
-   {
-    "ticker": null,
-    "cusip": "03769M106",
-    "name": "APOLLO GLOBAL MGMT INC",
-    "value": 322171145,
-    "shares": 2723110,
-    "putCall": null
-   },
-   {
-    "ticker": "STX",
-    "cusip": "G7997R103",
-    "name": "SEAGATE TECHNOLOGY HLDNGS PL",
-    "value": 275121500,
-    "shares": 285100,
-    "putCall": null
-   },
-   {
-    "ticker": "V",
-    "cusip": "92826C839",
-    "name": "VISA INC",
-    "value": 274024954,
-    "shares": 798697,
-    "putCall": null
-   },
-   {
-    "ticker": "MELI",
-    "cusip": "58733R102",
-    "name": "MERCADOLIBRE INC",
-    "value": 259914541,
-    "shares": 153126,
-    "putCall": null
-   },
-   {
-    "ticker": "FWONA",
-    "cusip": "531229755",
-    "name": "LIBERTY MEDIA CORP DEL",
-    "value": 216781723,
-    "shares": 2278555,
-    "putCall": null
-   },
-   {
-    "ticker": "NU",
-    "cusip": "G6683N103",
-    "name": "NU HLDGS LTD",
-    "value": 147394937,
-    "shares": 11032555,
-    "putCall": null
-   },
-   {
-    "ticker": "WLTH",
-    "cusip": "947002101",
-    "name": "WEALTHFRONT CORP",
-    "value": 135502480,
-    "shares": 15156877,
-    "putCall": null
-   },
-   {
-    "ticker": "UNH",
-    "cusip": "91324P102",
-    "name": "UNITEDHEALTH GROUP INC",
-    "value": 123629974,
-    "shares": 297452,
-    "putCall": null
-   },
-   {
-    "ticker": "CHYM",
-    "cusip": "16935C109",
-    "name": "CHIME FINL INC",
-    "value": 108217240,
-    "shares": 5284045,
-    "putCall": null
-   },
-   {
-    "ticker": "EQPT",
-    "cusip": "29445S100",
-    "name": "EQUIPMENTSHARE COM INC",
-    "value": 90035840,
-    "shares": 4579646,
-    "putCall": null
-   },
-   {
-    "ticker": "SHW",
-    "cusip": "824348106",
-    "name": "SHERWIN WILLIAMS CO",
-    "value": 88518819,
-    "shares": 257083,
-    "putCall": null
-   },
-   {
-    "ticker": "DHR",
-    "cusip": "235851102",
-    "name": "DANAHER CORP DEL",
-    "value": 86858880,
-    "shares": 456000,
-    "putCall": null
-   },
-   {
-    "ticker": "NOW",
-    "cusip": "81762P102",
-    "name": "SERVICENOW INC",
-    "value": 86719591,
-    "shares": 873485,
-    "putCall": null
-   },
-   {
-    "ticker": "SPCX",
-    "cusip": "84615Q103",
-    "name": "SPACE EXPLORATION TECHN CORP",
-    "value": 64072500,
-    "shares": 375000,
-    "putCall": null
-   },
-   {
-    "ticker": "BULL",
-    "cusip": "G9572D103",
-    "name": "WEBULL CORP",
-    "value": 43841373,
-    "shares": 6724137,
-    "putCall": null
-   },
-   {
-    "ticker": "RERE",
-    "cusip": "00138L108",
-    "name": "ATRENEW INC",
-    "value": 38046814,
-    "shares": 9831218,
-    "putCall": null
-   },
-   {
-    "ticker": "APLD",
-    "cusip": "038169207",
-    "name": "APPLIED DIGITAL CORP",
-    "value": 33010500,
-    "shares": 885000,
-    "putCall": null
-   },
-   {
-    "ticker": "CIFR",
-    "cusip": "17253J106",
-    "name": "CIPHER DIGITAL INC",
-    "value": 22711500,
-    "shares": 927000,
-    "putCall": null
-   },
-   {
-    "ticker": "CORZ",
-    "cusip": "21874A106",
-    "name": "CORE SCIENTIFIC INC NEW",
-    "value": 20907030,
-    "shares": 817000,
-    "putCall": null
-   },
-   {
-    "ticker": "UBER",
-    "cusip": "90353T100",
-    "name": "UBER TECHNOLOGIES INC",
-    "value": 10909004,
-    "shares": 151178,
-    "putCall": null
-   },
-   {
-    "ticker": "JD",
-    "cusip": "47215P106",
-    "name": "JD.COM INC",
-    "value": 5134220,
-    "shares": 201500,
-    "putCall": null
-   },
-   {
-    "ticker": "DASH",
-    "cusip": "25809K105",
-    "name": "DOORDASH INC",
-    "value": 4675437,
-    "shares": 25337,
-    "putCall": null
-   },
-   {
-    "ticker": "PONY",
-    "cusip": "732908108",
-    "name": "PONY AI INC",
-    "value": 2156495,
-    "shares": 310287,
-    "putCall": null
-   },
-   {
-    "ticker": "ARX",
-    "cusip": "G00894108",
-    "name": "ACCELERANT HOLDINGS",
-    "value": 879000,
-    "shares": 75000,
-    "putCall": null
-   },
-   {
-    "ticker": "GEMI",
-    "cusip": "36866J105",
-    "name": "GEMINI SPACE STA INC",
-    "value": 298200,
-    "shares": 70000,
-    "putCall": null
-   },
-   {
-    "ticker": "MNTN",
-    "cusip": "55318A108",
-    "name": "MNTN INC",
-    "value": 184000,
-    "shares": 20000,
-    "putCall": null
-   }
-  ],
-  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1167483/000091957426005427/0000919574-26-005427-index.htm"
- },
- {
-  "id": "0001656456",
-  "name": "아팔루사",
-  "periodOfReport": "2026-06-30",
-  "filedAt": "2026-08-14",
-  "totalValue": 7725383349,
-  "holdingCount": 27,
-  "holdings": [
-   {
-    "ticker": "AMZN",
-    "cusip": "023135106",
-    "name": "AMAZON COM INC",
-    "value": 1191700000,
-    "shares": 5000000,
-    "putCall": null
-   },
-   {
-    "ticker": "MU",
-    "cusip": "595112103",
-    "name": "MICRON TECHNOLOGY INC",
-    "value": 1125432750,
-    "shares": 975000,
-    "putCall": null
-   },
-   {
-    "ticker": null,
-    "cusip": "874039100",
-    "name": "TAIWAN SEMICONDUCTOR MANUFAC",
-    "value": 787990500,
-    "shares": 1650000,
-    "putCall": null
-   },
-   {
-    "ticker": "GOOGL",
-    "cusip": "02079K107",
-    "name": "ALPHABET INC",
-    "value": 653660500,
-    "shares": 1850000,
-    "putCall": null
-   },
-   {
-    "ticker": "UBER",
-    "cusip": "90353T100",
-    "name": "UBER TECHNOLOGIES INC",
-    "value": 555204163,
-    "shares": 7694071,
-    "putCall": null
-   },
-   {
-    "ticker": null,
-    "cusip": "464286772",
-    "name": "ISHARES INC",
-    "value": 489607500,
-    "shares": 2425000,
-    "putCall": null
-   },
-   {
-    "ticker": "META",
-    "cusip": "30303M102",
-    "name": "META PLATFORMS INC",
-    "value": 380220750,
-    "shares": 675000,
-    "putCall": null
-   },
-   {
-    "ticker": "VST",
-    "cusip": "92840M102",
-    "name": "VISTRA CORP",
-    "value": 351408597,
-    "shares": 2215272,
-    "putCall": null
-   },
-   {
-    "ticker": "NVDA",
-    "cusip": "67066G104",
-    "name": "NVIDIA CORPORATION",
-    "value": 305137250,
-    "shares": 1525000,
-    "putCall": null
-   },
-   {
-    "ticker": "NRG",
-    "cusip": "629377508",
-    "name": "NRG ENERGY INC",
-    "value": 257065600,
-    "shares": 1760000,
-    "putCall": null
-   },
-   {
-    "ticker": "AAPL",
-    "cusip": "037833100",
-    "name": "APPLE INC",
-    "value": 241615600,
-    "shares": 835000,
-    "putCall": "put"
-   },
-   {
-    "ticker": "BABA",
-    "cusip": "01609W102",
-    "name": "ALIBABA GROUP HLDG LTD",
-    "value": 191960000,
-    "shares": 2000000,
+    "value": 172164864,
+    "shares": 1253932,
     "putCall": null
    },
    {
     "ticker": "BA",
     "cusip": "097023105",
     "name": "BOEING CO",
-    "value": 173176000,
-    "shares": 800000,
+    "value": 141398000,
+    "shares": 760000,
     "putCall": null
    },
    {
-    "ticker": "LRCX",
-    "cusip": "512807306",
-    "name": "LAM RESEARCH CORP",
-    "value": 165748725,
-    "shares": 382500,
-    "putCall": null
-   },
-   {
-    "ticker": "BIDU",
-    "cusip": "056752108",
-    "name": "BAIDU INC",
-    "value": 148005550,
-    "shares": 1295000,
-    "putCall": null
-   },
-   {
-    "ticker": "AAL",
-    "cusip": "02376R102",
-    "name": "AMERICAN AIRLINES GROUP INC",
-    "value": 135525000,
-    "shares": 7500000,
-    "putCall": null
-   },
-   {
-    "ticker": "AMD",
-    "cusip": "007903107",
-    "name": "ADVANCED MICRO DEVICES INC",
-    "value": 114729725,
-    "shares": 197500,
-    "putCall": null
-   },
-   {
-    "ticker": "CRWV",
-    "cusip": "21873S108",
-    "name": "COREWEAVE INC",
-    "value": 107328806,
-    "shares": 1078248,
+    "ticker": "NRG",
+    "cusip": "629377508",
+    "name": "NRG ENERGY INC",
+    "value": 136301250,
+    "shares": 1425000,
     "putCall": null
    },
    {
     "ticker": null,
     "cusip": "N07059210",
     "name": "ASML HLDG NV",
-    "value": 99472000,
-    "shares": 50000,
+    "value": 117758550,
+    "shares": 65000,
     "putCall": null
    },
    {
-    "ticker": "AVGO",
-    "cusip": "11135F101",
-    "name": "BROADCOM INC",
-    "value": 56662500,
-    "shares": 150000,
-    "putCall": null
-   },
-   {
-    "ticker": "QCOM",
-    "cusip": "747525103",
-    "name": "QUALCOMM INC",
-    "value": 46197500,
-    "shares": 250000,
-    "putCall": null
-   },
-   {
-    "ticker": "SPCX",
-    "cusip": "84615Q103",
-    "name": "SPACE EXPLORATION TECHN CORP",
-    "value": 38443500,
+    "ticker": null,
+    "cusip": "038222105",
+    "name": "APPLIED MATLS INC",
+    "value": 115060500,
     "shares": 225000,
+    "putCall": null
+   },
+   {
+    "ticker": "CRWV",
+    "cusip": "21873S108",
+    "name": "COREWEAVE INC",
+    "value": 105850800,
+    "shares": 1215000,
+    "putCall": null
+   },
+   {
+    "ticker": "BIDU",
+    "cusip": "056752108",
+    "name": "BAIDU INC",
+    "value": 95557000,
+    "shares": 1100000,
+    "putCall": null
+   },
+   {
+    "ticker": "MOD",
+    "cusip": "607828100",
+    "name": "MODINE MFG CO",
+    "value": 52969925,
+    "shares": 282959,
+    "putCall": null
+   },
+   {
+    "ticker": "AAL",
+    "cusip": "02376R102",
+    "name": "AMERICAN AIRLINES GROUP INC",
+    "value": 52523176,
+    "shares": 3928435,
+    "putCall": null
+   },
+   {
+    "ticker": "PCG",
+    "cusip": "69331C108",
+    "name": "PG&E CORP",
+    "value": 30931250,
+    "shares": 2525000,
     "putCall": null
    },
    {
     "ticker": "ET",
     "cusip": "29273V100",
     "name": "ENERGY TRANSFER L P",
-    "value": 30135510,
-    "shares": 1576125,
+    "value": 29601957,
+    "shares": 1497317,
     "putCall": null
    },
    {
     "ticker": "MPLX",
     "cusip": "55336V100",
     "name": "MPLX LP",
-    "value": 28303572,
-    "shares": 502460,
-    "putCall": null
-   },
-   {
-    "ticker": "WHR",
-    "cusip": "963320106",
-    "name": "WHIRLPOOL CORP",
-    "value": 28185300,
-    "shares": 715000,
-    "putCall": null
-   },
-   {
-    "ticker": "BRK-B",
-    "cusip": "084670702",
-    "name": "BERKSHIRE HATHAWAY INC DEL",
-    "value": 12509750,
-    "shares": 25000,
-    "putCall": "put"
-   },
-   {
-    "ticker": "GT",
-    "cusip": "382550101",
-    "name": "GOODYEAR TIRE & RUBR CO",
-    "value": 9956701,
-    "shares": 1508591,
+    "value": 26883564,
+    "shares": 477336,
     "putCall": null
    }
   ],
-  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1656456/000165645626000003/0001656456-26-000003-index.htm"
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1656456/000165645626000004/0001656456-26-000004-index.htm"
  },
  {
   "id": "0001536411",
   "name": "듀케인 패밀리오피스",
-  "periodOfReport": "2026-06-30",
-  "filedAt": "2026-08-14",
-  "totalValue": 5210856000,
-  "holdingCount": 95,
+  "periodOfReport": "2026-09-30",
+  "filedAt": "2026-11-16",
+  "totalValue": 4470867000,
+  "holdingCount": 65,
   "holdings": [
    {
     "ticker": "NTRA",
     "cusip": "632307104",
     "name": "Natera Inc",
-    "value": 864923000,
-    "shares": 3186306,
-    "putCall": null
-   },
-   {
-    "ticker": null,
-    "cusip": "874039100",
-    "name": "Taiwan Semiconductor Manufac",
-    "value": 281613000,
-    "shares": 589680,
-    "putCall": null
-   },
-   {
-    "ticker": "STM",
-    "cusip": "861012102",
-    "name": "Stmicroelectronics N V",
-    "value": 232375000,
-    "shares": 3102880,
-    "putCall": null
-   },
-   {
-    "ticker": null,
-    "cusip": "46137V357",
-    "name": "Invesco Exchange Traded Fd T",
-    "value": 174684000,
-    "shares": 821000,
-    "putCall": "call"
-   },
-   {
-    "ticker": "INSM",
-    "cusip": "457669307",
-    "name": "Insmed Inc",
-    "value": 151900000,
-    "shares": 1424690,
-    "putCall": null
-   },
-   {
-    "ticker": null,
-    "cusip": "464286400",
-    "name": "Ishares Inc",
-    "value": 145866000,
-    "shares": 4228000,
-    "putCall": "call"
-   },
-   {
-    "ticker": "INSM",
-    "cusip": "457669307",
-    "name": "Insmed Inc",
-    "value": 143937000,
-    "shares": 1350000,
-    "putCall": "call"
-   },
-   {
-    "ticker": "YPF",
-    "cusip": "984245100",
-    "name": "Ypf Sociedad Anonima",
-    "value": 142726000,
-    "shares": 3138897,
-    "putCall": null
-   },
-   {
-    "ticker": "AMZN",
-    "cusip": "023135106",
-    "name": "Amazon Com Inc",
-    "value": 129085000,
-    "shares": 541600,
-    "putCall": null
-   },
-   {
-    "ticker": "TBBB",
-    "cusip": "G0896C103",
-    "name": "Bbb Foods Inc",
-    "value": 120915000,
-    "shares": 2901733,
-    "putCall": null
-   },
-   {
-    "ticker": "GOOGL",
-    "cusip": "02079K305",
-    "name": "Alphabet Inc",
-    "value": 120184000,
-    "shares": 336300,
-    "putCall": null
-   },
-   {
-    "ticker": null,
-    "cusip": "464286400",
-    "name": "Ishares Inc",
-    "value": 118548000,
-    "shares": 3436170,
+    "value": 1306335000,
+    "shares": 3160666,
     "putCall": null
    },
    {
     "ticker": "STX",
     "cusip": "G7997R103",
     "name": "Seagate Technology Hldngs Pl",
-    "value": 117730000,
-    "shares": 122000,
-    "putCall": null
-   },
-   {
-    "ticker": "FOXA",
-    "cusip": "35137L105",
-    "name": "Fox Corp",
-    "value": 114992000,
-    "shares": 2204600,
+    "value": 315247000,
+    "shares": 341790,
     "putCall": null
    },
    {
     "ticker": "AMZN",
     "cusip": "023135106",
     "name": "Amazon Com Inc",
-    "value": 109470000,
-    "shares": 459300,
-    "putCall": "call"
+    "value": 192493000,
+    "shares": 772600,
+    "putCall": null
    },
    {
-    "ticker": null,
-    "cusip": "910047109",
-    "name": "United Airls Hldgs Inc",
-    "value": 108084000,
-    "shares": 794795,
+    "ticker": "FOXA",
+    "cusip": "35137L105",
+    "name": "Fox Corp",
+    "value": 190835000,
+    "shares": 3046050,
+    "putCall": null
+   },
+   {
+    "ticker": "YPF",
+    "cusip": "984245100",
+    "name": "Ypf Sociedad Anonima",
+    "value": 177555000,
+    "shares": 3541897,
+    "putCall": null
+   },
+   {
+    "ticker": "U",
+    "cusip": "91332U101",
+    "name": "Unity Software Inc",
+    "value": 161935000,
+    "shares": 3956385,
     "putCall": null
    },
    {
     "ticker": "SE",
     "cusip": "81141R100",
     "name": "Sea Ltd",
-    "value": 105404000,
-    "shares": 1099905,
+    "value": 155072000,
+    "shares": 1592765,
     "putCall": null
    },
    {
-    "ticker": "CDW",
-    "cusip": "12514G108",
-    "name": "Cdw Corp",
-    "value": 104629000,
-    "shares": 743950,
+    "ticker": null,
+    "cusip": "464286400",
+    "name": "Ishares Inc",
+    "value": 125814000,
+    "shares": 3377570,
+    "putCall": null
+   },
+   {
+    "ticker": "INSM",
+    "cusip": "457669307",
+    "name": "Insmed Inc",
+    "value": 124715000,
+    "shares": 1092650,
+    "putCall": null
+   },
+   {
+    "ticker": "AMZN",
+    "cusip": "023135106",
+    "name": "Amazon Com Inc",
+    "value": 114435000,
+    "shares": 459300,
+    "putCall": "call"
+   },
+   {
+    "ticker": "STX",
+    "cusip": "G7997R103",
+    "name": "Seagate Technology Hldngs Pl",
+    "value": 90389000,
+    "shares": 98000,
+    "putCall": "call"
+   },
+   {
+    "ticker": "RVMD",
+    "cusip": "76155X100",
+    "name": "Revolution Medicines Inc",
+    "value": 89552000,
+    "shares": 436287,
+    "putCall": null
+   },
+   {
+    "ticker": "TBBB",
+    "cusip": "G0896C103",
+    "name": "Bbb Foods Inc",
+    "value": 86720000,
+    "shares": 1647408,
+    "putCall": null
+   },
+   {
+    "ticker": "STM",
+    "cusip": "861012102",
+    "name": "Stmicroelectronics N V",
+    "value": 86197000,
+    "shares": 1615380,
     "putCall": null
    },
    {
     "ticker": "NAMS",
     "cusip": "N62509109",
     "name": "Newamsterdam Pharma Company",
-    "value": 104047000,
-    "shares": 3070146,
-    "putCall": null
-   },
-   {
-    "ticker": null,
-    "cusip": "464287655",
-    "name": "Ishares Tr",
-    "value": 99149000,
-    "shares": 330000,
-    "putCall": "call"
-   },
-   {
-    "ticker": "SNDK",
-    "cusip": "80004C200",
-    "name": "Sandisk Corp",
-    "value": 79353000,
-    "shares": 34900,
-    "putCall": null
-   },
-   {
-    "ticker": "RVMD",
-    "cusip": "76155X100",
-    "name": "Revolution Medicines Inc",
-    "value": 74835000,
-    "shares": 399587,
-    "putCall": null
-   },
-   {
-    "ticker": null,
-    "cusip": "78462F103",
-    "name": "State Str Spdr S&P 500 Etf T",
-    "value": 67209000,
-    "shares": 90000,
-    "putCall": "call"
-   },
-   {
-    "ticker": "BTDR",
-    "cusip": "G11448100",
-    "name": "Bitdeer Technologies Group",
-    "value": 64670000,
-    "shares": 4074993,
-    "putCall": null
-   },
-   {
-    "ticker": null,
-    "cusip": "G25508105",
-    "name": "Crh Plc",
-    "value": 59230000,
-    "shares": 553555,
-    "putCall": null
-   },
-   {
-    "ticker": "DAL",
-    "cusip": "247361702",
-    "name": "Delta Air Lines Inc",
-    "value": 56477000,
-    "shares": 603000,
-    "putCall": null
-   },
-   {
-    "ticker": "TSLA",
-    "cusip": "88160R101",
-    "name": "Tesla Inc",
-    "value": 52996000,
-    "shares": 126000,
-    "putCall": "call"
-   },
-   {
-    "ticker": "FLR",
-    "cusip": "343412102",
-    "name": "Fluor Corp",
-    "value": 51457000,
-    "shares": 982200,
-    "putCall": null
-   },
-   {
-    "ticker": "DHI",
-    "cusip": "23331A109",
-    "name": "D R Horton Inc",
-    "value": 48701000,
-    "shares": 299000,
-    "putCall": null
-   },
-   {
-    "ticker": "CPNG",
-    "cusip": "22266T109",
-    "name": "Coupang Inc",
-    "value": 46334000,
-    "shares": 2667485,
-    "putCall": null
-   },
-   {
-    "ticker": "AMD",
-    "cusip": "007903107",
-    "name": "Advanced Micro Devices Inc",
-    "value": 42348000,
-    "shares": 72900,
-    "putCall": null
-   },
-   {
-    "ticker": "PANW",
-    "cusip": "697435105",
-    "name": "Palo Alto Networks Inc",
-    "value": 39780000,
-    "shares": 116650,
-    "putCall": null
-   },
-   {
-    "ticker": "CLF",
-    "cusip": "185899101",
-    "name": "Cleveland-Cliffs Inc New",
-    "value": 39590000,
-    "shares": 4216184,
-    "putCall": null
-   },
-   {
-    "ticker": "HUT",
-    "cusip": "44812J104",
-    "name": "Hut 8 Corp",
-    "value": 36267000,
-    "shares": 314150,
+    "value": 81646000,
+    "shares": 3357146,
     "putCall": null
    },
    {
     "ticker": "CDW",
     "cusip": "12514G108",
     "name": "Cdw Corp",
-    "value": 35160000,
-    "shares": 250000,
+    "value": 73788000,
+    "shares": 575750,
+    "putCall": null
+   },
+   {
+    "ticker": "INSM",
+    "cusip": "457669307",
+    "name": "Insmed Inc",
+    "value": 62777000,
+    "shares": 550000,
     "putCall": "call"
    },
    {
-    "ticker": "CAI",
-    "cusip": "142152107",
-    "name": "Caris Life Sciences Inc",
-    "value": 33759000,
-    "shares": 1894450,
+    "ticker": "SGI",
+    "cusip": "88023U101",
+    "name": "Somnigroup International Inc",
+    "value": 61712000,
+    "shares": 993600,
+    "putCall": null
+   },
+   {
+    "ticker": "NEM",
+    "cusip": "651639106",
+    "name": "Newmont Corp",
+    "value": 43875000,
+    "shares": 380400,
     "putCall": null
    },
    {
     "ticker": null,
-    "cusip": "37950E259",
-    "name": "Global X Fds",
-    "value": 30019000,
-    "shares": 328800,
+    "cusip": "06849F108",
+    "name": "Barrick Mng Corp",
+    "value": 42891000,
+    "shares": 1054600,
     "putCall": null
    },
    {
-    "ticker": "FOXA",
-    "cusip": "35137L204",
-    "name": "Fox Corp",
-    "value": 29631000,
-    "shares": 632600,
+    "ticker": "AEM",
+    "cusip": "008474108",
+    "name": "Agnico Eagle Mines Ltd",
+    "value": 42345000,
+    "shares": 231050,
     "putCall": null
    },
    {
-    "ticker": "WWD",
-    "cusip": "980745103",
-    "name": "Woodward Inc",
-    "value": 28587000,
-    "shares": 67194,
+    "ticker": "BTDR",
+    "cusip": "G11448100",
+    "name": "Bitdeer Technologies Group",
+    "value": 39668000,
+    "shares": 3781493,
     "putCall": null
    },
    {
-    "ticker": "META",
-    "cusip": "30303M102",
-    "name": "Meta Platforms Inc",
-    "value": 28165000,
-    "shares": 50000,
-    "putCall": "call"
-   },
-   {
-    "ticker": "NUVB",
-    "cusip": "67080N101",
-    "name": "Nuvation Bio Inc",
-    "value": 25786000,
-    "shares": 4539800,
+    "ticker": "CPNG",
+    "cusip": "22266T109",
+    "name": "Coupang Inc",
+    "value": 36998000,
+    "shares": 2667485,
     "putCall": null
    },
    {
-    "ticker": "PTGX",
-    "cusip": "74366E102",
-    "name": "Protagonist Therapeutics Inc",
-    "value": 25607000,
-    "shares": 208900,
-    "putCall": null
-   },
-   {
-    "ticker": "ROKU",
-    "cusip": "77543R102",
-    "name": "Roku Inc",
-    "value": 25425000,
-    "shares": 184055,
-    "putCall": null
-   },
-   {
-    "ticker": "CVCO",
-    "cusip": "149568107",
-    "name": "Cavco Inds Inc Del",
-    "value": 24268000,
-    "shares": 39500,
-    "putCall": null
-   },
-   {
-    "ticker": "ADMA",
-    "cusip": "000899104",
-    "name": "Adma Biologics Inc",
-    "value": 23303000,
-    "shares": 2784110,
+    "ticker": "WDC",
+    "cusip": "958102105",
+    "name": "Western Digital Corp",
+    "value": 36793000,
+    "shares": 80960,
     "putCall": null
    },
    {
     "ticker": "PURR",
     "cusip": "44916Y106",
     "name": "Hyperliquid Strategies Inc",
-    "value": 23150000,
+    "value": 36092000,
     "shares": 2941500,
     "putCall": null
    },
    {
-    "ticker": "RMBS",
-    "cusip": "750917106",
-    "name": "Rambus Inc Del",
-    "value": 22964000,
-    "shares": 173000,
+    "ticker": "FOXA",
+    "cusip": "35137L204",
+    "name": "Fox Corp",
+    "value": 35615000,
+    "shares": 632600,
     "putCall": null
    },
    {
-    "ticker": "RYTM",
-    "cusip": "76243J105",
-    "name": "Rhythm Pharmaceuticals Inc",
-    "value": 22608000,
-    "shares": 203618,
+    "ticker": "FLR",
+    "cusip": "343412102",
+    "name": "Fluor Corp",
+    "value": 34617000,
+    "shares": 723000,
     "putCall": null
+   },
+   {
+    "ticker": "CDW",
+    "cusip": "12514G108",
+    "name": "Cdw Corp",
+    "value": 32040000,
+    "shares": 250000,
+    "putCall": "call"
    },
    {
     "ticker": "SKY",
     "cusip": "830830105",
     "name": "Champion Homes Inc",
-    "value": 22418000,
-    "shares": 254400,
+    "value": 31812000,
+    "shares": 371200,
+    "putCall": null
+   },
+   {
+    "ticker": "APP",
+    "cusip": "03831W108",
+    "name": "Applovin Corp",
+    "value": 31790000,
+    "shares": 109460,
+    "putCall": null
+   },
+   {
+    "ticker": "CVCO",
+    "cusip": "149568107",
+    "name": "Cavco Inds Inc Del",
+    "value": 31722000,
+    "shares": 56620,
     "putCall": null
    },
    {
     "ticker": "DAKT",
     "cusip": "234264109",
     "name": "Daktronics Inc",
-    "value": 21968000,
-    "shares": 1123109,
+    "value": 31198000,
+    "shares": 1794035,
+    "putCall": null
+   },
+   {
+    "ticker": "SPCX",
+    "cusip": "84615Q103",
+    "name": "Space Exploration Techn Corp",
+    "value": 30493000,
+    "shares": 202125,
+    "putCall": null
+   },
+   {
+    "ticker": "ROKU",
+    "cusip": "77543R102",
+    "name": "Roku Inc",
+    "value": 28028000,
+    "shares": 184055,
+    "putCall": null
+   },
+   {
+    "ticker": "TTMI",
+    "cusip": "87305R109",
+    "name": "Ttm Technologies Inc",
+    "value": 27210000,
+    "shares": 221505,
+    "putCall": null
+   },
+   {
+    "ticker": "RYTM",
+    "cusip": "76243J105",
+    "name": "Rhythm Pharmaceuticals Inc",
+    "value": 25699000,
+    "shares": 269900,
+    "putCall": null
+   },
+   {
+    "ticker": "HUM",
+    "cusip": "444859102",
+    "name": "Humana Inc",
+    "value": 24886000,
+    "shares": 65220,
+    "putCall": null
+   },
+   {
+    "ticker": "TSLA",
+    "cusip": "88160R101",
+    "name": "Tesla Inc",
+    "value": 22353000,
+    "shares": 63000,
+    "putCall": "call"
+   },
+   {
+    "ticker": "ADMA",
+    "cusip": "000899104",
+    "name": "Adma Biologics Inc",
+    "value": 22194000,
+    "shares": 2212810,
+    "putCall": null
+   },
+   {
+    "ticker": "RIOT",
+    "cusip": "767292105",
+    "name": "Riot Platforms Inc",
+    "value": 18248000,
+    "shares": 905600,
+    "putCall": null
+   },
+   {
+    "ticker": "BLTE",
+    "cusip": "07782B104",
+    "name": "Belite Bio Inc Sponsored",
+    "value": 18018000,
+    "shares": 106100,
+    "putCall": null
+   },
+   {
+    "ticker": "BEAM",
+    "cusip": "07373V105",
+    "name": "Beam Therapeutics Inc",
+    "value": 17108000,
+    "shares": 699700,
+    "putCall": null
+   },
+   {
+    "ticker": "JBS",
+    "cusip": "N4732M103",
+    "name": "Jbs N.V.",
+    "value": 15876000,
+    "shares": 1406200,
+    "putCall": null
+   },
+   {
+    "ticker": null,
+    "cusip": "46137V357",
+    "name": "Invesco Exchange Traded Fd T",
+    "value": 15477000,
+    "shares": 74400,
+    "putCall": null
+   },
+   {
+    "ticker": "RLAY",
+    "cusip": "75943R102",
+    "name": "Relay Therapeutics Inc",
+    "value": 15389000,
+    "shares": 852600,
+    "putCall": null
+   },
+   {
+    "ticker": "PLTR",
+    "cusip": "69608A108",
+    "name": "Palantir Technologies Inc",
+    "value": 14983000,
+    "shares": 80100,
+    "putCall": null
+   },
+   {
+    "ticker": null,
+    "cusip": "874039100",
+    "name": "Taiwan Semiconductor Manufac",
+    "value": 14917000,
+    "shares": 32700,
+    "putCall": null
+   },
+   {
+    "ticker": "RGEN",
+    "cusip": "759916109",
+    "name": "Repligen Corp",
+    "value": 14879000,
+    "shares": 77400,
+    "putCall": null
+   },
+   {
+    "ticker": "SNX",
+    "cusip": "87162W100",
+    "name": "Td Synnex Corporation",
+    "value": 14512000,
+    "shares": 56500,
+    "putCall": null
+   },
+   {
+    "ticker": null,
+    "cusip": "G25508105",
+    "name": "Crh Plc",
+    "value": 13195000,
+    "shares": 159355,
     "putCall": null
    }
   ],
-  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1536411/000153641126000006/0001536411-26-000006-index.htm"
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1536411/000153641126000011/0001536411-26-000011-index.htm"
  },
  {
   "id": "0001336528",
