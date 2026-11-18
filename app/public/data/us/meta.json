@@ -1,6 +1,6 @@
 {
  "market": "us",
- "lastUpdated": "2026-11-17T03:57:11.643Z",
+ "lastUpdated": "2026-11-18T02:45:42.100Z",
  "sources": [
   "미국 증권거래위원회(SEC) EDGAR — Form 4 임원·주요주주 소유변동 신고",
   "미국 증권거래위원회(SEC) EDGAR — 13F-HR 기관투자자 분기 보유 신고",
@@ -8,15 +8,15 @@
   "Finnhub — 미국 주식 시세·기업정보 (PER·PBR 은 Finnhub 산출값)"
  ],
  "counts": {
-  "disclosures": 17959,
-  "persons": 9750,
-  "stocks": 3223
+  "disclosures": 17967,
+  "persons": 9752,
+  "stocks": 3224
  },
  "officialsAsOf": null,
  "priceDataAvailable": true,
  "sparklineAvailable": false,
  "skipped": {
-  "total": 108728,
+  "total": 110416,
   "reasons": {
    "시장 거래(P/S) 없음": 154,
    "순증감 0 (매수·매도 상쇄)": 1,
