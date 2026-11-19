@@ -3,6 +3,14 @@
   "7": [
    {
     "rank": 1,
+    "personId": "PepGenInc.-RACAPITALMANAGEMENT,L.P.외4인",
+    "personName": "RA CAPITAL MANAGEMENT, L.P. 외 4인",
+    "personType": "insider",
+    "company": "PepGen Inc.",
+    "amount": 43125000
+   },
+   {
+    "rank": 2,
     "personId": "ClearBridgeEnergyMidstreamOpportunityFundInc.-PRUDENTIALFINANCIALINC외1인",
     "personName": "PRUDENTIAL FINANCIAL INC 외 1인",
     "personType": "insider",
@@ -10,7 +18,7 @@
     "amount": 35000000
    },
    {
-    "rank": 2,
+    "rank": 3,
     "personId": "STARWOODPROPERTYTRUST,INC.-STERNLICHTBARRYS",
     "personName": "STERNLICHT BARRY S",
     "personType": "insider",
@@ -18,7 +26,15 @@
     "amount": 14697681.5
    },
    {
-    "rank": 3,
+    "rank": 4,
+    "personId": "2023ETFSeriesTrust-HarrisonStreetRealAssetsFundLLC",
+    "personName": "Harrison Street Real Assets Fund LLC",
+    "personType": "insider",
+    "company": "2023 ETF Series Trust",
+    "amount": 10799986.65
+   },
+   {
+    "rank": 5,
     "personId": "SixFlagsEntertainmentCorporation/NEW-JAFFERREHAN",
     "personName": "JAFFER REHAN",
     "personType": "insider",
@@ -26,36 +42,20 @@
     "amount": 9246000
    },
    {
-    "rank": 4,
+    "rank": 6,
     "personId": "AtlassianCorp-Cannon-BrookesMichael",
     "personName": "Cannon-Brookes Michael",
     "personType": "insider",
     "company": "Atlassian Corp",
-    "amount": 6029205.3047
+    "amount": 6013981.8601
    },
    {
-    "rank": 5,
+    "rank": 7,
     "personId": "BiglariHoldingsInc.-BIGLARI,SARDAR외2인",
     "personName": "BIGLARI, SARDAR 외 2인",
     "personType": "insider",
     "company": "Biglari Holdings Inc.",
     "amount": 5537124.529999999
-   },
-   {
-    "rank": 6,
-    "personId": "OrthofixMedicalInc.-JuniperInvestmentCompany,LLC외2인",
-    "personName": "Juniper Investment Company, LLC 외 2인",
-    "personType": "insider",
-    "company": "Orthofix Medical Inc.",
-    "amount": 5106708.5806
-   },
-   {
-    "rank": 7,
-    "personId": "LibertyLatinAmericaLtd.-DEANGOITIAALFONSO",
-    "personName": "DE ANGOITIA ALFONSO",
-    "personType": "insider",
-    "company": "Liberty Latin America Ltd.",
-    "amount": 5061968.5348000005
    },
    {
     "rank": 8,
@@ -67,11 +67,11 @@
    },
    {
     "rank": 9,
-    "personId": "PampaEnergyInc.-MindlinDamianMiguel",
-    "personName": "Mindlin Damian Miguel",
+    "personId": "AngelStudios,Inc.-SarowitzStevenI",
+    "personName": "Sarowitz Steven I",
     "personType": "insider",
-    "company": "Pampa Energy Inc.",
-    "amount": 2736648.144
+    "company": "Angel Studios, Inc.",
+    "amount": 4625599.135199999
    },
    {
     "rank": 10,
@@ -83,11 +83,11 @@
    },
    {
     "rank": 11,
-    "personId": "STARWOODPROPERTYTRUST,INC.-PollackJonathanLee",
-    "personName": "Pollack Jonathan Lee",
+    "personId": "StubHubHoldings,Inc.-RaabAndrewJohn",
+    "personName": "Raab Andrew John",
     "personType": "insider",
-    "company": "STARWOOD PROPERTY TRUST, INC.",
-    "amount": 2013450.1
+    "company": "StubHub Holdings, Inc.",
+    "amount": 2048600
    },
    {
     "rank": 12,
@@ -99,14 +99,6 @@
    },
    {
     "rank": 13,
-    "personId": "HORNBECKOFFSHORESERVICES,INC.-HORNBECKTODDM",
-    "personName": "HORNBECK TODD M",
-    "personType": "insider",
-    "company": "HORNBECK OFFSHORE SERVICES, INC.",
-    "amount": 2000010.0822099
-   },
-   {
-    "rank": 14,
     "personId": "SonosInc-KennedyJosephJude",
     "personName": "Kennedy Joseph Jude",
     "personType": "insider",
@@ -114,7 +106,7 @@
     "amount": 1871497.4
    },
    {
-    "rank": 15,
+    "rank": 14,
     "personId": "KuraOncology,Inc.-WILSONTROYEDWARD",
     "personName": "WILSON TROY EDWARD",
     "personType": "insider",
@@ -122,7 +114,23 @@
     "amount": 1504765.01
    },
    {
+    "rank": 15,
+    "personId": "StubHubHoldings,Inc.-BhargavaSameer",
+    "personName": "Bhargava Sameer",
+    "personType": "insider",
+    "company": "StubHub Holdings, Inc.",
+    "amount": 1499171
+   },
+   {
     "rank": 16,
+    "personId": "PampaEnergyInc.-MindlinDamianMiguel",
+    "personName": "Mindlin Damian Miguel",
+    "personType": "insider",
+    "company": "Pampa Energy Inc.",
+    "amount": 1436635.9
+   },
+   {
+    "rank": 17,
     "personId": "IonicDigitalInc.-AbbateMichael",
     "personName": "Abbate Michael",
     "personType": "insider",
@@ -130,36 +138,28 @@
     "amount": 1291578.62
    },
    {
-    "rank": 17,
-    "personId": "MPMaterialsCorp./DE-RosenthalMichaelStuart",
-    "personName": "Rosenthal Michael Stuart",
-    "personType": "insider",
-    "company": "MP Materials Corp. / DE",
-    "amount": 1175090
-   },
-   {
     "rank": 18,
-    "personId": "UpstartHoldings,Inc.-GuPaul",
-    "personName": "Gu Paul",
+    "personId": "HALLADORENERGYCO-WesleyCharlesRayIV",
+    "personName": "Wesley Charles Ray IV",
     "personType": "insider",
-    "company": "Upstart Holdings, Inc.",
-    "amount": 1028400.0000000001
+    "company": "HALLADOR ENERGY CO",
+    "amount": 1069710
    },
    {
     "rank": 19,
+    "personId": "BNYMELLONSTRATEGICMUNICIPALS,INC.-SabaCapitalManagement,L.P.",
+    "personName": "Saba Capital Management, L.P.",
+    "personType": "insider",
+    "company": "BNY MELLON STRATEGIC MUNICIPALS, INC.",
+    "amount": 1067900.73
+   },
+   {
+    "rank": 20,
     "personId": "Orion180InsuranceGroupInc.-GreggKenneth",
     "personName": "Gregg Kenneth",
     "personType": "insider",
     "company": "Orion180 Insurance Group Inc.",
     "amount": 1024689.7799999999
-   },
-   {
-    "rank": 20,
-    "personId": "SkydanceCorp-CardinaleGeraldJ.",
-    "personName": "Cardinale Gerald J.",
-    "personType": "insider",
-    "company": "Skydance Corp",
-    "amount": 1000637.145
    }
   ],
   "30": [
@@ -177,7 +177,7 @@
     "personName": "Harrison Street Real Assets Fund LLC",
     "personType": "insider",
     "company": "2023 ETF Series Trust",
-    "amount": 114162546.8423
+    "amount": 124962533.4923
    },
    {
     "rank": 3,
@@ -185,7 +185,7 @@
     "personName": "NIPPON LIFE INSURANCE CO",
     "personType": "insider",
     "company": "Corebridge Financial, Inc.",
-    "amount": 106465346.0595
+    "amount": 100874108.4507
    },
    {
     "rank": 4,
@@ -229,6 +229,14 @@
    },
    {
     "rank": 9,
+    "personId": "PepGenInc.-RACAPITALMANAGEMENT,L.P.외4인",
+    "personName": "RA CAPITAL MANAGEMENT, L.P. 외 4인",
+    "personType": "insider",
+    "company": "PepGen Inc.",
+    "amount": 43125000
+   },
+   {
+    "rank": 10,
     "personId": "LyciaTherapeutics,Inc.-VenrockHealthcareCapitalPartnersIII,L.P.외8인",
     "personName": "Venrock Healthcare Capital Partners III, L.P. 외 8인",
     "personType": "insider",
@@ -236,7 +244,7 @@
     "amount": 38522394.330000006
    },
    {
-    "rank": 10,
+    "rank": 11,
     "personId": "MADRIGALPHARMACEUTICALS,INC.-BAKERBROS.ADVISORSLP외5인",
     "personName": "BAKER BROS. ADVISORS LP 외 5인",
     "personType": "insider",
@@ -244,7 +252,7 @@
     "amount": 35023032.1012
    },
    {
-    "rank": 11,
+    "rank": 12,
     "personId": "ClearBridgeEnergyMidstreamOpportunityFundInc.-PRUDENTIALFINANCIALINC외1인",
     "personName": "PRUDENTIAL FINANCIAL INC 외 1인",
     "personType": "insider",
@@ -252,7 +260,7 @@
     "amount": 35000000
    },
    {
-    "rank": 12,
+    "rank": 13,
     "personId": "Coursera,Inc.-PaleFireCapitalSE외4인",
     "personName": "Pale Fire Capital SE 외 4인",
     "personType": "insider",
@@ -260,7 +268,7 @@
     "amount": 31450844.1298
    },
    {
-    "rank": 13,
+    "rank": 14,
     "personId": "MSCINDUSTRIALDIRECTCOINC-JACOBSONMITCHELL",
     "personName": "JACOBSON MITCHELL",
     "personType": "insider",
@@ -268,7 +276,7 @@
     "amount": 28984169.7372
    },
    {
-    "rank": 14,
+    "rank": 15,
     "personId": "SIRIUSXMHOLDINGSINC.-BERKSHIREHATHAWAYINC외1인",
     "personName": "BERKSHIRE HATHAWAY INC 외 1인",
     "personType": "insider",
@@ -276,20 +284,12 @@
     "amount": 26894245.1765
    },
    {
-    "rank": 15,
+    "rank": 16,
     "personId": "Stride,Inc.-HaggartDylanG.외2인",
     "personName": "Haggart Dylan G. 외 2인",
     "personType": "insider",
     "company": "Stride, Inc.",
     "amount": 25737386.23
-   },
-   {
-    "rank": 16,
-    "personId": "GlobalXVenture&InnovationFund-GLOBALXMANAGEMENTCOMPANY,INC.",
-    "personName": "GLOBAL X MANAGEMENT COMPANY, INC.",
-    "personType": "insider",
-    "company": "Global X Venture & Innovation Fund",
-    "amount": 25000000.002199996
    },
    {
     "rank": 17,
@@ -403,7 +403,7 @@
     "personName": "Harrison Street Real Assets Fund LLC",
     "personType": "insider",
     "company": "2023 ETF Series Trust",
-    "amount": 114162546.8423
+    "amount": 124962533.4923
    },
    {
     "rank": 11,
@@ -443,7 +443,7 @@
     "personName": "GOLDENTREE ASSET MANAGEMENT LP 외 2인",
     "personType": "insider",
     "company": "QVC Group, Inc.",
-    "amount": 59901984.0256
+    "amount": 59684810.9716
    },
    {
     "rank": 16,
@@ -491,6 +491,22 @@
   "7": [
    {
     "rank": 1,
+    "personId": "IntegerHoldingsCorp-KKRGroupPartnershipL.P.외6인",
+    "personName": "KKR Group Partnership L.P. 외 6인",
+    "personType": "insider",
+    "company": "Integer Holdings Corp",
+    "amount": 603716979
+   },
+   {
+    "rank": 2,
+    "personId": "IntegerHoldingsCorp-TarheelInvestorsIIIL.P.외6인",
+    "personName": "Tarheel Investors III L.P. 외 6인",
+    "personType": "insider",
+    "company": "Integer Holdings Corp",
+    "amount": 603716979
+   },
+   {
+    "rank": 3,
     "personId": "LifeStanceHealthGroup,Inc.-TPGGPA,LLC외2인",
     "personName": "TPG GP A, LLC 외 2인",
     "personType": "insider",
@@ -498,7 +514,7 @@
     "amount": 484775092.2
    },
    {
-    "rank": 2,
+    "rank": 4,
     "personId": "FIRSTADVANTAGECORP-SLTAV(GP),L.L.C.외5인",
     "personName": "SLTA V (GP), L.L.C. 외 5인",
     "personType": "insider",
@@ -506,7 +522,7 @@
     "amount": 324000000
    },
    {
-    "rank": 3,
+    "rank": 5,
     "personId": "Hagerty,Inc.-HagertyHoldingCorp.",
     "personName": "Hagerty Holding Corp.",
     "personType": "insider",
@@ -514,7 +530,7 @@
     "amount": 164795000
    },
    {
-    "rank": 4,
+    "rank": 6,
     "personId": "ROYALCARIBBEANCRUISESLTD-WilhelmsenArneAlexander",
     "personName": "Wilhelmsen Arne Alexander",
     "personType": "insider",
@@ -522,31 +538,7 @@
     "amount": 90532907.60999998
    },
    {
-    "rank": 5,
-    "personId": "Veradermics,Inc-ENRIGHTPATRICKG",
-    "personName": "ENRIGHT PATRICK G",
-    "personType": "insider",
-    "company": "Veradermics, Inc",
-    "amount": 75190000
-   },
-   {
-    "rank": 6,
-    "personId": "Veradermics,Inc-LongitudeCapitalPartnersV,LLC외1인",
-    "personName": "Longitude Capital Partners V, LLC 외 1인",
-    "personType": "insider",
-    "company": "Veradermics, Inc",
-    "amount": 75190000
-   },
-   {
     "rank": 7,
-    "personId": "PalantirTechnologiesInc.-SankarShyam",
-    "personName": "Sankar Shyam",
-    "personType": "insider",
-    "company": "Palantir Technologies Inc.",
-    "amount": 64933199.27950001
-   },
-   {
-    "rank": 8,
     "personId": "LibertyMediaCorp-CAREYCHASE",
     "personName": "CAREY CHASE",
     "personType": "insider",
@@ -554,15 +546,7 @@
     "amount": 62125764.8318
    },
    {
-    "rank": 9,
-    "personId": "ILLUMINA,INC.-MeisterKeithA.",
-    "personName": "Meister Keith A.",
-    "personType": "insider",
-    "company": "ILLUMINA, INC.",
-    "amount": 61093040.50000001
-   },
-   {
-    "rank": 10,
+    "rank": 8,
     "personId": "CapriHoldingsLtd-IDOLJOHND",
     "personName": "IDOL JOHN D",
     "personType": "insider",
@@ -570,7 +554,7 @@
     "amount": 46932874.980000004
    },
    {
-    "rank": 11,
+    "rank": 9,
     "personId": "LiveNationEntertainment,Inc.-RapinoMichael",
     "personName": "Rapino Michael",
     "personType": "insider",
@@ -578,15 +562,15 @@
     "amount": 35405734.230000004
    },
    {
-    "rank": 12,
+    "rank": 10,
     "personId": "CenturiHoldings,Inc.-ICAHNCARLC외1인",
     "personName": "ICAHN CARL C 외 1인",
     "personType": "insider",
     "company": "Centuri Holdings, Inc.",
-    "amount": 30147704.759999998
+    "amount": 33713325
    },
    {
-    "rank": 13,
+    "rank": 11,
     "personId": "DROPBOX,INC.-HoustonAndrew",
     "personName": "Houston Andrew",
     "personType": "insider",
@@ -594,15 +578,7 @@
     "amount": 26735895.5476
    },
    {
-    "rank": 14,
-    "personId": "HingeHealth,Inc.-MecklenburgGabrielM.I.",
-    "personName": "Mecklenburg Gabriel M.I.",
-    "personType": "insider",
-    "company": "Hinge Health, Inc.",
-    "amount": 24482096.6411
-   },
-   {
-    "rank": 15,
+    "rank": 12,
     "personId": "MotorolaSolutions,Inc.-BROWNGREGORYQ",
     "personName": "BROWN GREGORY Q",
     "personType": "insider",
@@ -610,7 +586,7 @@
     "amount": 21607871.313399997
    },
    {
-    "rank": 16,
+    "rank": 13,
     "personId": "FermiInc.-NEUGEBAUERTOBYR외1인",
     "personName": "NEUGEBAUER TOBY R 외 1인",
     "personType": "insider",
@@ -618,7 +594,7 @@
     "amount": 20701000
    },
    {
-    "rank": 17,
+    "rank": 14,
     "personId": "Frontdoor,Inc.-COBBWILLIAMC",
     "personName": "COBB WILLIAM C",
     "personType": "insider",
@@ -626,15 +602,15 @@
     "amount": 20387276.212300003
    },
    {
-    "rank": 18,
+    "rank": 15,
     "personId": "UNITEDTHERAPEUTICSCorp-ROTHBLATTMARTINEA",
     "personName": "ROTHBLATT MARTINE A",
     "personType": "insider",
     "company": "UNITED THERAPEUTICS Corp",
-    "amount": 16909306.3905
+    "amount": 16849937.7889
    },
    {
-    "rank": 19,
+    "rank": 16,
     "personId": "LiveNationEntertainment,Inc.-BerchtoldJoe",
     "personName": "Berchtold Joe",
     "personType": "insider",
@@ -642,12 +618,36 @@
     "amount": 16728556.32
    },
    {
-    "rank": 20,
+    "rank": 17,
     "personId": "Ibotta,Inc.-KDTIbottaHoldings,LLC외1인",
     "personName": "KDT Ibotta Holdings, LLC 외 1인",
     "personType": "insider",
     "company": "Ibotta, Inc.",
     "amount": 16377250.700000001
+   },
+   {
+    "rank": 18,
+    "personId": "TUTORPERINICORP-TUTORRONALDN",
+    "personName": "TUTOR RONALD N",
+    "personType": "insider",
+    "company": "TUTOR PERINI CORP",
+    "amount": 14987443.89
+   },
+   {
+    "rank": 19,
+    "personId": "FAIRISAACCORP-LANSINGWILLIAMJ",
+    "personName": "LANSING WILLIAM J",
+    "personType": "insider",
+    "company": "FAIR ISAAC CORP",
+    "amount": 14986213.472000001
+   },
+   {
+    "rank": 20,
+    "personId": "TYLERTECHNOLOGIESINC-MOOREHLYNNJR",
+    "personName": "MOORE H LYNN JR",
+    "personType": "insider",
+    "company": "TYLER TECHNOLOGIES INC",
+    "amount": 12822048.3578
    }
   ],
   "30": [
@@ -677,6 +677,22 @@
    },
    {
     "rank": 4,
+    "personId": "IntegerHoldingsCorp-KKRGroupPartnershipL.P.외6인",
+    "personName": "KKR Group Partnership L.P. 외 6인",
+    "personType": "insider",
+    "company": "Integer Holdings Corp",
+    "amount": 603716979
+   },
+   {
+    "rank": 5,
+    "personId": "IntegerHoldingsCorp-TarheelInvestorsIIIL.P.외6인",
+    "personName": "Tarheel Investors III L.P. 외 6인",
+    "personType": "insider",
+    "company": "Integer Holdings Corp",
+    "amount": 603716979
+   },
+   {
+    "rank": 6,
     "personId": "LifeStanceHealthGroup,Inc.-TPGGPA,LLC외2인",
     "personName": "TPG GP A, LLC 외 2인",
     "personType": "insider",
@@ -684,7 +700,7 @@
     "amount": 484775092.2
    },
    {
-    "rank": 5,
+    "rank": 7,
     "personId": "ROYALCARIBBEANCRUISESLTD-WilhelmsenArneAlexander",
     "personName": "Wilhelmsen Arne Alexander",
     "personType": "insider",
@@ -692,7 +708,7 @@
     "amount": 332497326.78
    },
    {
-    "rank": 6,
+    "rank": 8,
     "personId": "IngramMicroHoldingCorp-PLATINUMEQUITY,LLC외9인",
     "personName": "PLATINUM EQUITY, LLC 외 9인",
     "personType": "insider",
@@ -700,7 +716,7 @@
     "amount": 325813400
    },
    {
-    "rank": 7,
+    "rank": 9,
     "personId": "FIRSTADVANTAGECORP-SLTAV(GP),L.L.C.외5인",
     "personName": "SLTA V (GP), L.L.C. 외 5인",
     "personType": "insider",
@@ -708,7 +724,7 @@
     "amount": 324000000
    },
    {
-    "rank": 8,
+    "rank": 10,
     "personId": "STRYKERCORP-STRYKERRONDAE",
     "personName": "STRYKER RONDA E",
     "personType": "insider",
@@ -716,7 +732,7 @@
     "amount": 178924730.94099998
    },
    {
-    "rank": 9,
+    "rank": 11,
     "personId": "Hagerty,Inc.-HagertyHoldingCorp.",
     "personName": "Hagerty Holding Corp.",
     "personType": "insider",
@@ -724,7 +740,7 @@
     "amount": 164795000
    },
    {
-    "rank": 10,
+    "rank": 12,
     "personId": "DutchBrosInc.-BoersmaTravis",
     "personName": "Boersma Travis",
     "personType": "insider",
@@ -732,7 +748,7 @@
     "amount": 133326930.21839999
    },
    {
-    "rank": 11,
+    "rank": 13,
     "personId": "AristaNetworks,Inc.-BECHTOLSHEIMANDREAS",
     "personName": "BECHTOLSHEIM ANDREAS",
     "personType": "insider",
@@ -740,7 +756,7 @@
     "amount": 132804253.98369999
    },
    {
-    "rank": 12,
+    "rank": 14,
     "personId": "ILLUMINA,INC.-MeisterKeithA.",
     "personName": "Meister Keith A.",
     "personType": "insider",
@@ -748,23 +764,15 @@
     "amount": 127653252.38
    },
    {
-    "rank": 13,
-    "personId": "TALOSENERGYINC.-ControlEmpresarialdeCapitalesS.A.deC.V.",
-    "personName": "Control Empresarial de Capitales S.A. de C.V.",
-    "personType": "insider",
-    "company": "TALOS ENERGY INC.",
-    "amount": 112087814.38319999
-   },
-   {
-    "rank": 14,
+    "rank": 15,
     "personId": "UNITEDTHERAPEUTICSCorp-ROTHBLATTMARTINEA",
     "personName": "ROTHBLATT MARTINE A",
     "personType": "insider",
     "company": "UNITED THERAPEUTICS Corp",
-    "amount": 110810669.4792
+    "amount": 111232594.69770001
    },
    {
-    "rank": 15,
+    "rank": 16,
     "personId": "CorebridgeFinancial,Inc.-ArgonHoldcoLLC외5인",
     "personName": "Argon Holdco LLC 외 5인",
     "personType": "insider",
@@ -772,20 +780,12 @@
     "amount": 110032293.00000001
    },
    {
-    "rank": 16,
+    "rank": 17,
     "personId": "AMERICANEXPRESSCO-SqueriStephenJ",
     "personName": "Squeri Stephen J",
     "personType": "insider",
     "company": "AMERICAN EXPRESS CO",
     "amount": 99448560.26
-   },
-   {
-    "rank": 17,
-    "personId": "SnowflakeInc.-SlootmanFrank",
-    "personName": "Slootman Frank",
-    "personType": "insider",
-    "company": "Snowflake Inc.",
-    "amount": 94930176.015
    },
    {
     "rank": 18,
@@ -879,14 +879,22 @@
    },
    {
     "rank": 9,
-    "personId": "AllianceLaundryHoldingsInc.-BDTCAPITALPARTNERS,LLC외6인",
-    "personName": "BDT CAPITAL PARTNERS, LLC 외 6인",
+    "personId": "IntegerHoldingsCorp-KKRGroupPartnershipL.P.외6인",
+    "personName": "KKR Group Partnership L.P. 외 6인",
     "personType": "insider",
-    "company": "Alliance Laundry Holdings Inc.",
-    "amount": 589606506.5
+    "company": "Integer Holdings Corp",
+    "amount": 603716979
    },
    {
     "rank": 10,
+    "personId": "IntegerHoldingsCorp-TarheelInvestorsIIIL.P.외6인",
+    "personName": "Tarheel Investors III L.P. 외 6인",
+    "personType": "insider",
+    "company": "Integer Holdings Corp",
+    "amount": 603716979
+   },
+   {
+    "rank": 11,
     "personId": "DellTechnologiesInc.-SilverLakePartnersIV,L.P.외4인",
     "personName": "Silver Lake Partners IV, L.P. 외 4인",
     "personType": "insider",
@@ -894,7 +902,7 @@
     "amount": 416656382.66
    },
    {
-    "rank": 11,
+    "rank": 12,
     "personId": "ILLUMINA,INC.-MeisterKeithA.",
     "personName": "Meister Keith A.",
     "personType": "insider",
@@ -902,7 +910,7 @@
     "amount": 415650515.31999993
    },
    {
-    "rank": 12,
+    "rank": 13,
     "personId": "INNSUITESHOSPITALITYTRUST-BERGMARCE",
     "personName": "BERG MARC E",
     "personType": "insider",
@@ -910,7 +918,7 @@
     "amount": 361497600
    },
    {
-    "rank": 13,
+    "rank": 14,
     "personId": "AccelevationHoldingsCorp.-OGPVIII,LLC외3인",
     "personName": "OGP VIII, LLC 외 3인",
     "personType": "insider",
@@ -918,7 +926,7 @@
     "amount": 360000000
    },
    {
-    "rank": 14,
+    "rank": 15,
     "personId": "TALOSENERGYINC.-ControlEmpresarialdeCapitalesS.A.deC.V.",
     "personName": "Control Empresarial de Capitales S.A. de C.V.",
     "personType": "insider",
@@ -926,7 +934,7 @@
     "amount": 351825985.34139997
    },
    {
-    "rank": 15,
+    "rank": 16,
     "personId": "DellTechnologiesInc.-SLSPV-2,L.P.외4인",
     "personName": "SL SPV-2, L.P. 외 4인",
     "personType": "insider",
@@ -934,7 +942,7 @@
     "amount": 341911315.87
    },
    {
-    "rank": 16,
+    "rank": 17,
     "personId": "ROYALCARIBBEANCRUISESLTD-WilhelmsenArneAlexander",
     "personName": "Wilhelmsen Arne Alexander",
     "personType": "insider",
@@ -942,7 +950,7 @@
     "amount": 332497326.78
    },
    {
-    "rank": 17,
+    "rank": 18,
     "personId": "FIRSTADVANTAGECORP-SLTAV(GP),L.L.C.외5인",
     "personName": "SLTA V (GP), L.L.C. 외 5인",
     "personType": "insider",
@@ -950,7 +958,7 @@
     "amount": 324000000
    },
    {
-    "rank": 18,
+    "rank": 19,
     "personId": "ElasticN.V.-SchuurmanSteven",
     "personName": "Schuurman Steven",
     "personType": "insider",
@@ -958,20 +966,12 @@
     "amount": 323495000
    },
    {
-    "rank": 19,
+    "rank": 20,
     "personId": "UNITEDTHERAPEUTICSCorp-ROTHBLATTMARTINEA",
     "personName": "ROTHBLATT MARTINE A",
     "personType": "insider",
     "company": "UNITED THERAPEUTICS Corp",
-    "amount": 311157149.91110003
-   },
-   {
-    "rank": 20,
-    "personId": "ChimeFinancial,Inc.-DSTGlobalAdvisorsLtd외3인",
-    "personName": "DST Global Advisors Ltd 외 3인",
-    "personType": "insider",
-    "company": "Chime Financial, Inc.",
-    "amount": 287831484.1980001
+    "amount": 311790934.1589999
    }
   ]
  }
