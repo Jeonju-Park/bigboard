@@ -3,14 +3,6 @@
   "7": [
    {
     "rank": 1,
-    "personId": "PepGenInc.-RACAPITALMANAGEMENT,L.P.외4인",
-    "personName": "RA CAPITAL MANAGEMENT, L.P. 외 4인",
-    "personType": "insider",
-    "company": "PepGen Inc.",
-    "amount": 43125000
-   },
-   {
-    "rank": 2,
     "personId": "WINDWARDBIOGROUPAG-StampacchiaOtello",
     "personName": "Stampacchia Otello",
     "personType": "insider",
@@ -18,7 +10,7 @@
     "amount": 29750000
    },
    {
-    "rank": 3,
+    "rank": 2,
     "personId": "WINDWARDBIOGROUPAG-BonitaDavidP",
     "personName": "Bonita David P",
     "personType": "insider",
@@ -26,7 +18,7 @@
     "amount": 20000007
    },
    {
-    "rank": 4,
+    "rank": 3,
     "personId": "WINDWARDBIOGROUPAG-ORBIMEDADVISORSLLC외1인",
     "personName": "ORBIMED ADVISORS LLC 외 1인",
     "personType": "insider",
@@ -34,7 +26,7 @@
     "amount": 20000007
    },
    {
-    "rank": 5,
+    "rank": 4,
     "personId": "ANAPTYSBIO,INC-EcoR1Capital,LLC외1인",
     "personName": "EcoR1 Capital, LLC 외 1인",
     "personType": "insider",
@@ -42,39 +34,31 @@
     "amount": 17224592.779799998
    },
    {
-    "rank": 6,
+    "rank": 5,
     "personId": "SixFlagsEntertainmentCorporation/NEW-JAFFERREHAN",
     "personName": "JAFFER REHAN",
     "personType": "insider",
     "company": "Six Flags Entertainment Corporation/NEW",
-    "amount": 15600000
+    "amount": 6354000
+   },
+   {
+    "rank": 6,
+    "personId": "InsightMolecularDiagnosticsInc.-BROADWOODPARTNERS,L.P.외2인",
+    "personName": "BROADWOOD PARTNERS, L.P. 외 2인",
+    "personType": "insider",
+    "company": "Insight Molecular Diagnostics Inc.",
+    "amount": 5999999.25
    },
    {
     "rank": 7,
-    "personId": "2023ETFSeriesTrust-HarrisonStreetRealAssetsFundLLC",
-    "personName": "Harrison Street Real Assets Fund LLC",
-    "personType": "insider",
-    "company": "2023 ETF Series Trust",
-    "amount": 10799986.65
-   },
-   {
-    "rank": 8,
     "personId": "AtlassianCorp-Cannon-BrookesMichael",
     "personName": "Cannon-Brookes Michael",
     "personType": "insider",
     "company": "Atlassian Corp",
-    "amount": 5970086.990800001
+    "amount": 5841181.7172
    },
    {
-    "rank": 9,
-    "personId": "HUBSPOTINC-HalliganBrian",
-    "personName": "Halligan Brian",
-    "personType": "insider",
-    "company": "HUBSPOT INC",
-    "amount": 4997858.4
-   },
-   {
-    "rank": 10,
+    "rank": 8,
     "personId": "AngelStudios,Inc.-SarowitzStevenI",
     "personName": "Sarowitz Steven I",
     "personType": "insider",
@@ -82,7 +66,7 @@
     "amount": 4625599.135199999
    },
    {
-    "rank": 11,
+    "rank": 9,
     "personId": "PampaEnergyInc.-MindlinMarcosMarcelo",
     "personName": "Mindlin Marcos Marcelo",
     "personType": "insider",
@@ -90,7 +74,7 @@
     "amount": 4012171.75
    },
    {
-    "rank": 12,
+    "rank": 10,
     "personId": "BluerockPrivateRealEstateFund-KAMFARRAMIN",
     "personName": "KAMFAR RAMIN",
     "personType": "insider",
@@ -98,7 +82,7 @@
     "amount": 3224288.9852
    },
    {
-    "rank": 13,
+    "rank": 11,
     "personId": "USARareEarth,Inc.-BLITZERMICHAEL",
     "personName": "BLITZER MICHAEL",
     "personType": "insider",
@@ -106,15 +90,7 @@
     "amount": 2996645
    },
    {
-    "rank": 14,
-    "personId": "PampaEnergyInc.-MindlinDamianMiguel",
-    "personName": "Mindlin Damian Miguel",
-    "personType": "insider",
-    "company": "Pampa Energy Inc.",
-    "amount": 2892867.854
-   },
-   {
-    "rank": 15,
+    "rank": 12,
     "personId": "SANJUANBASINROYALTYTRUST-OLIVERERICL외2인",
     "personName": "OLIVER ERIC L 외 2인",
     "personType": "insider",
@@ -122,15 +98,7 @@
     "amount": 2579768
    },
    {
-    "rank": 16,
-    "personId": "AKAMAITECHNOLOGIESINC-LEIGHTONFTHOMSON",
-    "personName": "LEIGHTON F THOMSON",
-    "personType": "insider",
-    "company": "AKAMAI TECHNOLOGIES INC",
-    "amount": 2552400
-   },
-   {
-    "rank": 17,
+    "rank": 13,
     "personId": "CGOncology,Inc.-KuanArthur",
     "personName": "Kuan Arthur",
     "personType": "insider",
@@ -138,7 +106,7 @@
     "amount": 2366425.2416
    },
    {
-    "rank": 18,
+    "rank": 14,
     "personId": "BiglariHoldingsInc.-BIGLARI,SARDAR외2인",
     "personName": "BIGLARI, SARDAR 외 2인",
     "personType": "insider",
@@ -146,7 +114,15 @@
     "amount": 2152640.2800000003
    },
    {
-    "rank": 19,
+    "rank": 15,
+    "personId": "EllingtonFinancialInc.-VranosMichaelW",
+    "personName": "Vranos Michael W",
+    "personType": "insider",
+    "company": "Ellington Financial Inc.",
+    "amount": 2075344
+   },
+   {
+    "rank": 16,
     "personId": "StubHubHoldings,Inc.-RaabAndrewJohn",
     "personName": "Raab Andrew John",
     "personType": "insider",
@@ -154,12 +130,36 @@
     "amount": 2048600
    },
    {
-    "rank": 20,
+    "rank": 17,
     "personId": "STARWOODPROPERTYTRUST,INC.-ZELNICKSTRAUSS",
     "personName": "ZELNICK STRAUSS",
     "personType": "insider",
     "company": "STARWOOD PROPERTY TRUST, INC.",
     "amount": 2023102.1118
+   },
+   {
+    "rank": 18,
+    "personId": "HMHHoldingInc-McGeeThomasW.",
+    "personName": "McGee Thomas W.",
+    "personType": "insider",
+    "company": "HMH Holding Inc",
+    "amount": 1647972
+   },
+   {
+    "rank": 19,
+    "personId": "GeoParkLtd-GilinskiGabriel",
+    "personName": "Gilinski Gabriel",
+    "personType": "insider",
+    "company": "GeoPark Ltd",
+    "amount": 1565200
+   },
+   {
+    "rank": 20,
+    "personId": "KuraOncology,Inc.-WILSONTROYEDWARD",
+    "personName": "WILSON TROY EDWARD",
+    "personType": "insider",
+    "company": "Kura Oncology, Inc.",
+    "amount": 1504765.01
    }
   ],
   "30": [
@@ -185,7 +185,7 @@
     "personName": "NIPPON LIFE INSURANCE CO",
     "personType": "insider",
     "company": "Corebridge Financial, Inc.",
-    "amount": 94104563.8665
+    "amount": 86420230.3425
    },
    {
     "rank": 4,
@@ -603,19 +603,19 @@
    },
    {
     "rank": 15,
+    "personId": "IntercontinentalExchange,Inc.-SprecherJeffreyC",
+    "personName": "Sprecher Jeffrey C",
+    "personType": "insider",
+    "company": "Intercontinental Exchange, Inc.",
+    "amount": 32002154.8976
+   },
+   {
+    "rank": 16,
     "personId": "AppleInc.-LEVINSONARTHURD",
     "personName": "LEVINSON ARTHUR D",
     "personType": "insider",
     "company": "Apple Inc.",
     "amount": 31765653.36
-   },
-   {
-    "rank": 16,
-    "personId": "ROYALCARIBBEANCRUISESLTD-WilhelmsenArneAlexander",
-    "personName": "Wilhelmsen Arne Alexander",
-    "personType": "insider",
-    "company": "ROYAL CARIBBEAN CRUISES LTD",
-    "amount": 28423654.7
    },
    {
     "rank": 17,
@@ -627,6 +627,14 @@
    },
    {
     "rank": 18,
+    "personId": "EnphaseEnergy,Inc.-RodgersThurmanJ",
+    "personName": "Rodgers Thurman J",
+    "personType": "insider",
+    "company": "Enphase Energy, Inc.",
+    "amount": 23154807.7423
+   },
+   {
+    "rank": 19,
     "personId": "CONSTELLATIONBRANDS,INC.-SSRBusinessHoldingsLP외1인",
     "personName": "SSR Business Holdings LP 외 1인",
     "personType": "insider",
@@ -634,17 +642,9 @@
     "amount": 21750000
    },
    {
-    "rank": 19,
+    "rank": 20,
     "personId": "CONSTELLATIONBRANDS,INC.-SANDSROBERT",
     "personName": "SANDS ROBERT",
-    "personType": "insider",
-    "company": "CONSTELLATION BRANDS, INC.",
-    "amount": 21750000
-   },
-   {
-    "rank": 20,
-    "personId": "CONSTELLATIONBRANDS,INC.-RESBusinessHoldingsLP외1인",
-    "personName": "RES Business Holdings LP 외 1인",
     "personType": "insider",
     "company": "CONSTELLATION BRANDS, INC.",
     "amount": 21750000
@@ -797,19 +797,19 @@
    },
    {
     "rank": 19,
-    "personId": "UNITEDTHERAPEUTICSCorp-ROTHBLATTMARTINEA",
-    "personName": "ROTHBLATT MARTINE A",
-    "personType": "insider",
-    "company": "UNITED THERAPEUTICS Corp",
-    "amount": 111484900.1298
-   },
-   {
-    "rank": 20,
     "personId": "MotorolaSolutions,Inc.-BROWNGREGORYQ",
     "personName": "BROWN GREGORY Q",
     "personType": "insider",
     "company": "Motorola Solutions, Inc.",
     "amount": 110857771.28400001
+   },
+   {
+    "rank": 20,
+    "personId": "CorebridgeFinancial,Inc.-ArgonHoldcoLLC외5인",
+    "personName": "Argon Holdco LLC 외 5인",
+    "personType": "insider",
+    "company": "Corebridge Financial, Inc.",
+    "amount": 110032293.00000001
    }
   ],
   "90": [
@@ -963,7 +963,7 @@
     "personName": "ROTHBLATT MARTINE A",
     "personType": "insider",
     "company": "UNITED THERAPEUTICS Corp",
-    "amount": 312380314.36259997
+    "amount": 315511790.5445999
    },
    {
     "rank": 20,
