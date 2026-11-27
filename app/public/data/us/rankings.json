@@ -47,7 +47,7 @@
     "personName": "Cannon-Brookes Michael",
     "personType": "insider",
     "company": "Atlassian Corp",
-    "amount": 9309231.6502
+    "amount": 7463554.6878
    },
    {
     "rank": 7,
@@ -79,7 +79,7 @@
     "personName": "Williams Gregg",
     "personType": "insider",
     "company": "Vivani Medical, Inc.",
-    "amount": 5583735.313
+    "amount": 5455410.012
    },
    {
     "rank": 11,
@@ -99,14 +99,6 @@
    },
    {
     "rank": 13,
-    "personId": "SoundPointAlternativeIncomeFund-ASSUREDGUARANTYLTD외4인",
-    "personName": "ASSURED GUARANTY LTD 외 4인",
-    "personType": "insider",
-    "company": "Sound Point Alternative Income Fund",
-    "amount": 4999999.995599999
-   },
-   {
-    "rank": 14,
     "personId": "Anthropic,PBC-LIDDELLCHRISTOPHERP",
     "personName": "LIDDELL CHRISTOPHER P",
     "personType": "insider",
@@ -114,7 +106,7 @@
     "amount": 4999920
    },
    {
-    "rank": 15,
+    "rank": 14,
     "personId": "Csquare,Inc.-BROOKFIELDCorp/ON/외2인",
     "personName": "BROOKFIELD Corp /ON/ 외 2인",
     "personType": "insider",
@@ -122,7 +114,7 @@
     "amount": 4299980.2221
    },
    {
-    "rank": 16,
+    "rank": 15,
     "personId": "SixFlagsEntertainmentCorporation/NEW-JAFFERREHAN",
     "personName": "JAFFER REHAN",
     "personType": "insider",
@@ -130,7 +122,7 @@
     "amount": 4286000
    },
    {
-    "rank": 17,
+    "rank": 16,
     "personId": "Playboy,Inc.-DoclerHoldingS.ar.l.외3인",
     "personName": "Docler Holding S.a r.l. 외 3인",
     "personType": "insider",
@@ -138,7 +130,7 @@
     "amount": 2406278.3
    },
    {
-    "rank": 18,
+    "rank": 17,
     "personId": "KodiakAI,Inc.-BurnetteDonaldL.",
     "personName": "Burnette Donald L.",
     "personType": "insider",
@@ -146,20 +138,28 @@
     "amount": 2213400
    },
    {
-    "rank": 19,
-    "personId": "SANJUANBASINROYALTYTRUST-OLIVERERICL외2인",
-    "personName": "OLIVER ERIC L 외 2인",
-    "personType": "insider",
-    "company": "SAN JUAN BASIN ROYALTY TRUST",
-    "amount": 2200450.56
-   },
-   {
-    "rank": 20,
+    "rank": 18,
     "personId": "ANAPTYSBIO,INC-EcoR1Capital,LLC외1인",
     "personName": "EcoR1 Capital, LLC 외 1인",
     "personType": "insider",
     "company": "ANAPTYSBIO, INC",
     "amount": 2176927.7399
+   },
+   {
+    "rank": 19,
+    "personId": "MACHNATURALRESOURCESLP-WARDTOML.",
+    "personName": "WARD TOM L.",
+    "personType": "insider",
+    "company": "MACH NATURAL RESOURCES LP",
+    "amount": 1970866.1199999999
+   },
+   {
+    "rank": 20,
+    "personId": "NATURESSUNSHINEPRODUCTSINC-PRESCOTTGROUPCAPITALMANAGEMENT,L.L.C.외4인",
+    "personName": "PRESCOTT GROUP CAPITAL MANAGEMENT, L.L.C. 외 4인",
+    "personType": "insider",
+    "company": "NATURES SUNSHINE PRODUCTS INC",
+    "amount": 1692124.3399999999
    }
   ],
   "30": [
@@ -197,14 +197,6 @@
    },
    {
     "rank": 5,
-    "personId": "CorebridgeFinancial,Inc.-NIPPONLIFEINSURANCECO",
-    "personName": "NIPPON LIFE INSURANCE CO",
-    "personType": "insider",
-    "company": "Corebridge Financial, Inc.",
-    "amount": 51136325.64249999
-   },
-   {
-    "rank": 6,
     "personId": "ROLLINSINC-R.RandallRollinsVotingTrustU/AdatedAugust25,1994",
     "personName": "R. Randall Rollins Voting Trust U/A dated August 25, 1994",
     "personType": "insider",
@@ -212,7 +204,7 @@
     "amount": 49956665.33279999
    },
    {
-    "rank": 7,
+    "rank": 6,
     "personId": "ROLLINSINC-LORINC",
     "personName": "LOR INC",
     "personType": "insider",
@@ -220,7 +212,7 @@
     "amount": 49956665.33279999
    },
    {
-    "rank": 8,
+    "rank": 7,
     "personId": "COHERENTCORP.-PAGLIUCASTEPHENG",
     "personName": "PAGLIUCA STEPHEN G",
     "personType": "insider",
@@ -228,12 +220,20 @@
     "amount": 49871573.8457
    },
    {
-    "rank": 9,
+    "rank": 8,
     "personId": "BambusaTherapeutics,Inc.-RACAPITALMANAGEMENT,L.P.외4인",
     "personName": "RA CAPITAL MANAGEMENT, L.P. 외 4인",
     "personType": "insider",
     "company": "Bambusa Therapeutics, Inc.",
     "amount": 46639957.19
+   },
+   {
+    "rank": 9,
+    "personId": "CorebridgeFinancial,Inc.-NIPPONLIFEINSURANCECO",
+    "personName": "NIPPON LIFE INSURANCE CO",
+    "personType": "insider",
+    "company": "Corebridge Financial, Inc.",
+    "amount": 44877139.77599999
    },
    {
     "rank": 10,
@@ -245,14 +245,6 @@
    },
    {
     "rank": 11,
-    "personId": "LyciaTherapeutics,Inc.-VenrockHealthcareCapitalPartnersIII,L.P.외8인",
-    "personName": "Venrock Healthcare Capital Partners III, L.P. 외 8인",
-    "personType": "insider",
-    "company": "Lycia Therapeutics, Inc.",
-    "amount": 38522394.330000006
-   },
-   {
-    "rank": 12,
     "personId": "MADRIGALPHARMACEUTICALS,INC.-BAKERBROS.ADVISORSLP외5인",
     "personName": "BAKER BROS. ADVISORS LP 외 5인",
     "personType": "insider",
@@ -260,7 +252,7 @@
     "amount": 35023032.1012
    },
    {
-    "rank": 13,
+    "rank": 12,
     "personId": "ClearBridgeEnergyMidstreamOpportunityFundInc.-PRUDENTIALFINANCIALINC외1인",
     "personName": "PRUDENTIAL FINANCIAL INC 외 1인",
     "personType": "insider",
@@ -268,7 +260,7 @@
     "amount": 35000000
    },
    {
-    "rank": 14,
+    "rank": 13,
     "personId": "SixFlagsEntertainmentCorporation/NEW-JAFFERREHAN",
     "personName": "JAFFER REHAN",
     "personType": "insider",
@@ -276,7 +268,7 @@
     "amount": 34815000
    },
    {
-    "rank": 15,
+    "rank": 14,
     "personId": "BorrDrillingLtd-TroimTorOlav",
     "personName": "Troim Tor Olav",
     "personType": "insider",
@@ -284,7 +276,7 @@
     "amount": 34388800
    },
    {
-    "rank": 16,
+    "rank": 15,
     "personId": "Coursera,Inc.-PaleFireCapitalSE외4인",
     "personName": "Pale Fire Capital SE 외 4인",
     "personType": "insider",
@@ -292,7 +284,7 @@
     "amount": 31450844.1298
    },
    {
-    "rank": 17,
+    "rank": 16,
     "personId": "WINDWARDBIOGROUPAG-StampacchiaOtello",
     "personName": "Stampacchia Otello",
     "personType": "insider",
@@ -300,7 +292,7 @@
     "amount": 29750000
    },
    {
-    "rank": 18,
+    "rank": 17,
     "personId": "SIRIUSXMHOLDINGSINC.-BERKSHIREHATHAWAYINC외1인",
     "personName": "BERKSHIRE HATHAWAY INC 외 1인",
     "personType": "insider",
@@ -308,17 +300,25 @@
     "amount": 26894245.1765
    },
    {
-    "rank": 19,
+    "rank": 18,
     "personId": "Stride,Inc.-HaggartDylanG.외2인",
     "personName": "Haggart Dylan G. 외 2인",
     "personType": "insider",
     "company": "Stride, Inc.",
-    "amount": 25737386.23
+    "amount": 25675198.39
+   },
+   {
+    "rank": 19,
+    "personId": "LyellImmunopharma,Inc.-ARCHVenturePartnersIX,LLC외4인",
+    "personName": "ARCH Venture Partners IX, LLC 외 4인",
+    "personType": "insider",
+    "company": "Lyell Immunopharma, Inc.",
+    "amount": 24999991.74
    },
    {
     "rank": 20,
-    "personId": "LyellImmunopharma,Inc.-ARCHVenturePartnersIX,LLC외4인",
-    "personName": "ARCH Venture Partners IX, LLC 외 4인",
+    "personId": "LyellImmunopharma,Inc.-ARCHVentureFundXIII,L.P.외8인",
+    "personName": "ARCH Venture Fund XIII, L.P. 외 8인",
     "personType": "insider",
     "company": "Lyell Immunopharma, Inc.",
     "amount": 24999991.74
@@ -451,7 +451,7 @@
     "personName": "GOLDENTREE ASSET MANAGEMENT LP 외 2인",
     "personType": "insider",
     "company": "QVC Group, Inc.",
-    "amount": 59603433.604100004
+    "amount": 59230391.8482
    },
    {
     "rank": 17,
@@ -571,22 +571,6 @@
    },
    {
     "rank": 11,
-    "personId": "TronInc.-SUNWeike외1인",
-    "personName": "SUN Weike 외 1인",
-    "personType": "insider",
-    "company": "Tron Inc.",
-    "amount": 115072650
-   },
-   {
-    "rank": 12,
-    "personId": "ArdentHealth,Inc.-CHAITRUSTCOLLC외2인",
-    "personName": "CHAI TRUST CO LLC 외 2인",
-    "personType": "insider",
-    "company": "Ardent Health, Inc.",
-    "amount": 97790892.09750001
-   },
-   {
-    "rank": 13,
     "personId": "Yesway,Inc.-TRKLATHOMASN.외3인",
     "personName": "TRKLA THOMAS N. 외 3인",
     "personType": "insider",
@@ -594,7 +578,7 @@
     "amount": 91199999.99999999
    },
    {
-    "rank": 14,
+    "rank": 12,
     "personId": "Yesway,Inc.-TRKLATHOMASN.외8인",
     "personName": "TRKLA THOMAS N. 외 8인",
     "personType": "insider",
@@ -602,7 +586,7 @@
     "amount": 91199999.99999999
    },
    {
-    "rank": 15,
+    "rank": 13,
     "personId": "CORPAY,INC.-ClarkeRonald",
     "personName": "Clarke Ronald",
     "personType": "insider",
@@ -610,15 +594,7 @@
     "amount": 85286005.37040001
    },
    {
-    "rank": 16,
-    "personId": "SnowflakeInc.-SlootmanFrank",
-    "personName": "Slootman Frank",
-    "personType": "insider",
-    "company": "Snowflake Inc.",
-    "amount": 84365360.073
-   },
-   {
-    "rank": 17,
+    "rank": 14,
     "personId": "PalantirTechnologiesInc.-KarpAlexanderC.",
     "personName": "Karp Alexander C.",
     "personType": "insider",
@@ -626,15 +602,7 @@
     "amount": 75116302.8689
    },
    {
-    "rank": 18,
-    "personId": "PalantirTechnologiesInc.-SankarShyam",
-    "personName": "Sankar Shyam",
-    "personType": "insider",
-    "company": "Palantir Technologies Inc.",
-    "amount": 57531492.0714
-   },
-   {
-    "rank": 19,
+    "rank": 15,
     "personId": "Cloudflare,Inc.-ZatlynMichelle",
     "personName": "Zatlyn Michelle",
     "personType": "insider",
@@ -642,12 +610,44 @@
     "amount": 29508483.267599996
    },
    {
-    "rank": 20,
+    "rank": 16,
     "personId": "GLAUKOSCorp-BurnsThomasWilliam",
     "personName": "Burns Thomas William",
     "personType": "insider",
     "company": "GLAUKOS Corp",
     "amount": 25289205.609999996
+   },
+   {
+    "rank": 17,
+    "personId": "AdaptiveBiotechnologiesCorp-ROBINSCHADM",
+    "personName": "ROBINS CHAD M",
+    "personType": "insider",
+    "company": "Adaptive Biotechnologies Corp",
+    "amount": 19899735.590000004
+   },
+   {
+    "rank": 18,
+    "personId": "ARCHCAPITALGROUPLTD.-PASQUESIJOHNM",
+    "personName": "PASQUESI JOHN M",
+    "personType": "insider",
+    "company": "ARCH CAPITAL GROUP LTD.",
+    "amount": 19504361.432
+   },
+   {
+    "rank": 19,
+    "personId": "TempusAI,Inc.-LEFKOFSKYERICP",
+    "personName": "LEFKOFSKY ERIC P",
+    "personType": "insider",
+    "company": "Tempus AI, Inc.",
+    "amount": 15532341.71
+   },
+   {
+    "rank": 20,
+    "personId": "LINDBLADEXPEDITIONSHOLDINGS,INC.-LindbladSven-Olof",
+    "personName": "Lindblad Sven-Olof",
+    "personType": "insider",
+    "company": "LINDBLAD EXPEDITIONS HOLDINGS, INC.",
+    "amount": 12444092.370000001
    }
   ],
   "30": [
@@ -835,7 +835,7 @@
     "personName": "WIRTH JAMES F",
     "personType": "insider",
     "company": "INNSUITES HOSPITALITY TRUST",
-    "amount": 4987138224.98
+    "amount": 4184576974.98
    },
    {
     "rank": 4,
